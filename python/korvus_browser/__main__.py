@@ -9,6 +9,7 @@ Skia), which korvus loads from beside the executable.
 """
 from __future__ import annotations
 
+import hashlib
 import os
 import platform
 import sys
@@ -18,8 +19,25 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-VERSION = "152.0.0"                    # kept in sync with the engine release tag (v<VERSION>)
+VERSION = "152.0.1"                    # kept in sync with the engine release tag (v<VERSION>)
 REPO = "KorvusBrowser/korvus-browser"
+
+
+def _verify_sha256(data: bytes, asset: str, base: str) -> None:
+    """Check `data` against the release's SHA256SUMS. Skips silently if the release has no SHA256SUMS or does
+    not list this asset (older releases keep working); only a real mismatch aborts."""
+    try:
+        with urllib.request.urlopen(f"{base}/SHA256SUMS") as resp:  # noqa: S310 (fixed, trusted host)
+            sums = resp.read().decode("utf-8", "replace")
+    except Exception:  # pragma: no cover
+        return
+    want = next((p[0].lower() for p in (ln.split() for ln in sums.splitlines())
+                 if len(p) == 2 and p[1].lstrip("*") == asset), None)
+    if want is None:
+        return
+    got = hashlib.sha256(data).hexdigest()
+    if got != want:
+        raise SystemExit(f"korvus: checksum mismatch for {asset}\n  expected {want}\n  got      {got}")
 
 
 def _asset() -> tuple[str, str]:
@@ -45,13 +63,15 @@ def _ensure_binary() -> Path:
     if binary.exists():
         return binary
     root.mkdir(parents=True, exist_ok=True)
-    url = f"https://github.com/{REPO}/releases/download/v{VERSION}/{asset}"
+    base = f"https://github.com/{REPO}/releases/download/v{VERSION}"
+    url = f"{base}/{asset}"
     suffix = asset[asset.rfind("."):]
     try:
         with urllib.request.urlopen(url) as resp:  # noqa: S310 (fixed, trusted host)
             data = resp.read()
     except Exception as e:  # pragma: no cover
         raise SystemExit(f"korvus: could not download {url}: {e}")
+    _verify_sha256(data, asset, base)
     with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
         tmp.write(data)
         archive = tmp.name

@@ -38,6 +38,13 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
 
+## v152.0.1
+
+- The `pip install korvus-browser` launcher now verifies the downloaded archive against the release's
+  `SHA256SUMS` before extracting it.
+- First release cut through the automated one-tag-push build/release pipeline; the engine binary is
+  unchanged from v152.0.0.
+
 ## v152.0.0
 
 The first release. korvus presents itself as Google Chrome 152 (152.0.7977.82) on Linux x86-64: its user agent and
