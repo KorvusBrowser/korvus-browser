@@ -61,7 +61,7 @@ both for that context:
 | `--timezone TZ`, `--locale L` | fixed values instead |
 | `--humanize` / `--no-humanize` | human-like pointer paths |
 | `--host ignore\|strict` | a stealth persona presents a device unlike this machine; `ignore` (the default under stealth) runs anyway, `strict` refuses |
-| `--plugin PATH[:CONFIG]` | load a plugin ([plugins](plugins/README.md)) |
+| `--plugin PATH[:CONFIG]` | load a plugin ([plugin SDK](plugin-sdk/README.md)) |
 | `--fresh` | every named persona starts with no cookies or storage and keeps none (a clean, repeatable run) |
 | `--block KINDS` | drop requests before the network, to spend no bandwidth on what a scrape does not need: a list of Fetch kinds (`image`, `font`, `media`, `script`, `style`, `xhr`, …) and `host:<substr>` (a top-level navigation is never dropped by a kind rule). The page sees what DevTools' blocked-URL list makes it see |
 | `--http-cache-max MB` | cap the in-memory HTTP cache below its 50 MB default (`0` turns it off), so more pages run at once; never above 50 (Chrome's own budget) |
@@ -135,16 +135,18 @@ personas is ever sent. The [binary license](BINARY-LICENSE.md) says exactly what
 
 korvus is built from plugins behind a stable C interface, and you can load your own: a page's Web APIs, its network
 requests, its identity, what it reads back from a canvas, and more. A plugin is a shared library built against
-[`plugins/korvus_plugin.h`](plugins/korvus_plugin.h) alone. See [plugins/README.md](plugins/README.md) and the
-[examples](plugins/examples).
+[`plugin-sdk/korvus_plugin.h`](plugin-sdk/korvus_plugin.h) alone. See [plugin-sdk/README.md](plugin-sdk/README.md)
+and the [examples](plugin-sdk/examples).
 
 **A plugin you load that korvus did not ship runs at your own risk**: it runs inside korvus with korvus's access to
 your machine and your pages.
 
 ## License
 
-- The code and documentation in this repository (including the plugin header and the examples) are under the
-  [MIT License](LICENSE).
+- The engine source and documentation in this repository are under the [Business Source License 1.1](LICENSE)
+  (source-available; see the license for the change date and the additional-use grant).
+- The plugin interface — the C ABI header (`plugin-sdk/korvus_plugin.h`), the SDKs and the examples — is under the
+  [MIT License](LICENSE.plugins), so anyone may write and share plugins.
 - The korvus binary is under the [Korvus Binary License](BINARY-LICENSE.md). Running it on your own machines for your
   own work, including scraping, automation and testing, needs no further license. You need a separate license to
   redistribute the binary, bundle it into a product, or offer it to others as a hosted service. For that, open an issue
