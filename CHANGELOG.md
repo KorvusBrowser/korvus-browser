@@ -4,6 +4,9 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- `korvus serve` says why it cannot listen and what to do: a port another process holds, or, on Windows, one the OS
+  reserves for Hyper-V or WSL (`os error 10013`), with the `netsh` command that lists those ranges; `--port` picks
+  another.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing

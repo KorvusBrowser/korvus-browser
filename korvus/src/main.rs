@@ -795,12 +795,28 @@ async fn probe_url(url: &str) -> anyhow::Result<()> {
 
 
 
+/// Why the endpoint cannot listen on `addr`, with what to do about it: a port another process holds, or one the OS keeps
+/// for itself (Windows reserves ranges for Hyper-V and WSL, and refuses a bind there with WSAEACCES, os error 10013).
+fn bind_error(addr: std::net::SocketAddr, e: std::io::Error) -> anyhow::Error {
+    let port = addr.port();
+    let hint = match e.kind() {
+        std::io::ErrorKind::AddrInUse => format!("port {port} is in use: stop what holds it, or pick another with --port"),
+        std::io::ErrorKind::PermissionDenied if cfg!(windows) => format!(
+            "Windows reserves port {port} (`netsh int ipv4 show excludedportrange protocol=tcp` lists the ranges): pick \
+             another with --port"
+        ),
+        std::io::ErrorKind::PermissionDenied => format!("not allowed to listen on port {port}: pick another with --port"),
+        _ => return anyhow::anyhow!("cannot listen on {addr}: {e}"),
+    };
+    anyhow::anyhow!("cannot listen on {addr}: {e}; {hint}")
+}
+
 /// `korvus serve` (and `korvus browser [port]`): the browser endpoint. Each page target it makes is this binary's own
 /// `serve-page` in a process of its own ([`serve_target_child`]); see `cdp::router`.
 async fn browser_endpoint(addr: std::net::SocketAddr) -> anyhow::Result<()> {
     // No license and no session limit (D153): the endpoint calls no server of korvus's and runs every session it is
     // asked for.
-    let listener = tokio::net::TcpListener::bind(addr).await?;
+    let listener = tokio::net::TcpListener::bind(addr).await.map_err(|e| bind_error(addr, e))?;
     println!("korvus serve on http://{} (WebSocket url: GET /json/version)", listener.local_addr()?);
     let persona: std::sync::Arc<dyn Persona> = std::sync::Arc::from(build_persona());
     // ONE GPU service for every page process of this browser, as Chrome has one GPU process per browser
