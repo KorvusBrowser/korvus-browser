@@ -23,16 +23,18 @@ REPO = "KorvusBrowser/korvus-browser"
 
 
 def _asset() -> tuple[str, str]:
+    # Asset names match the release's install.sh / install.ps1 — unversioned, so install.sh's
+    # /latest/download/<name> works for any version: korvus-linux-x86_64.tar.gz, korvus-macos-arm64.tar.gz,
+    # korvus-windows-x86_64.zip. The launcher downloads them from the version-specific release dir below.
     system, mach = platform.system(), platform.machine().lower()
-    arch = {"x86_64": "x86_64", "amd64": "x86_64", "arm64": "aarch64", "aarch64": "aarch64"}.get(mach)
-    if arch is None:
-        raise SystemExit(f"korvus: unsupported CPU architecture {mach!r}")
     if system == "Linux":
-        return f"korvus-v{VERSION}-linux-{arch}.tar.gz", "korvus"
+        if mach not in ("x86_64", "amd64"):
+            raise SystemExit(f"korvus: no Linux build for {mach!r} yet (linux-x86_64 only)")
+        return "korvus-linux-x86_64.tar.gz", "korvus"
     if system == "Darwin":
-        return f"korvus-v{VERSION}-macos-{arch}.tar.gz", "korvus"
+        return "korvus-macos-arm64.tar.gz", "korvus"  # arm64 build; Rosetta runs it on Intel Macs
     if system == "Windows":
-        return f"korvus-v{VERSION}-windows-{arch}.zip", "korvus.exe"
+        return "korvus-windows-x86_64.zip", "korvus.exe"
     raise SystemExit(f"korvus: unsupported OS {system!r}")
 
 

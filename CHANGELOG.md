@@ -43,8 +43,8 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 The first release. korvus presents itself as Google Chrome 152 (152.0.7977.82) on Linux x86-64: its user agent and
 client hints, its network fingerprint and the web platform a desktop Chrome 152 exposes.
 
-- Unpack `korvus-v152.0.0-linux-x86_64.tar.gz` and run `./korvus`. ANGLE's `libEGL.so` and `libGLESv2.so` and the
+- Unpack `korvus-linux-x86_64.tar.gz` and run `./korvus`. ANGLE's `libEGL.so` and `libGLESv2.so` and the
   `personas/` folder stay next to it.
 - `THIRD-PARTY-NOTICES.md` in the archive lists the components korvus carries and their licenses.
-- Check the download against `korvus-v152.0.0-linux-x86_64.tar.gz.sha256` (`sha256sum -c`).
+- Check the download against `korvus-linux-x86_64.tar.gz.sha256` (`sha256sum -c`).
 - The binary is under the [Korvus Binary License](https://github.com/KorvusBrowser/korvus-browser/blob/main/BINARY-LICENSE.md).
