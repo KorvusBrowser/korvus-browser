@@ -52,6 +52,8 @@ rav1d = { version = "=1.1.0", default-features = false, features = ["bitdepth_8"
 # A `<video>`'s H.264 (`video_decode`): Cisco's OpenH264 decoder, built from the source the crate carries (BSD-2), its
 # assembly through nasm where the machine has one and plain C where it does not. AV1 is the `rav1d` above.
 openh264 = "=0.9.9"
+# A `<video>`'s VP9 and VP8 (`video_decode`): libvpx's decoders — declared in the
+# [target.'cfg(not windows)'.dependencies] section at the end of the file (D144; Linux/macOS, Windows deferred).
 # A page's web fonts (`web_fonts`): WOFF 1.0 and WOFF2 bodies back to the sfnt Skia and skrifa read -- WOFF2's
 # glyf/loca and hmtx transforms included. Pure Rust; its brotli and zlib decoders are already in the lock.
 wuff = "=0.2.9"
@@ -59,3 +61,12 @@ wuff = "=0.2.9"
 [build-dependencies]
 # The vendored fdlibm (third_party/fdlibm): Chrome's math for the dynamics compressor.
 cc = "1.4.3"
+
+# A `<video>`'s VP9 and VP8 (`video_decode`): libvpx's decoders, the decoders Chrome uses, built from the source
+# Chrome pins by scripts/vpx-source.sh. D144 makes these part of the DEFAULT build (YouTube serves VP9), so
+# scripts/vpx-source.sh MUST run before `cargo build` (it links third_party/libvpx-chrome, read via
+# VPX_LIB_DIR/VPX_INCLUDE_DIR in .cargo/config.toml) — a thin raw-FFI shim over the static lib. Linux/macOS
+# only: Windows libvpx is still deferred (vpx-source.sh), so there VP9/VP8 fall back to `None` (the element
+# shows its poster) until it lands — see video_decode.rs.
+[target.'cfg(not(target_os = "windows"))'.dependencies]
+libvpx-sys = { path = "../../vendor/libvpx-sys" }

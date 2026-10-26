@@ -1,7 +1,8 @@
-//! Link the VENDORED static libvpx `scripts/vpx-source.sh` built, and bindgen its public VP8 encoder
-//! surface. There is NO pkg-config / system-libvpx branch by design (J6/I6): `VPX_LIB_DIR` and
-//! `VPX_INCLUDE_DIR` (set by `.cargo/config.toml`, pointing at `third_party/libvpx-chrome`) are REQUIRED,
-//! and this `build.rs` runs only when korvus-runtime's `webrtc-media` feature pulls the crate in.
+//! Link the VENDORED static libvpx `scripts/vpx-source.sh` built, and bindgen its public encoder + decoder
+//! surface (VP8 + VP9). There is NO pkg-config / system-libvpx branch by design (J6/I6): `VPX_LIB_DIR` and
+//! `VPX_INCLUDE_DIR` (set by `.cargo/config.toml`, pointing at `third_party/libvpx-chrome`) are REQUIRED.
+//! This `build.rs` runs in the DEFAULT build now -- korvus-render links libvpx for VP9/VP8 `<video>` decode
+//! (D144) -- as well as under korvus-runtime's `webrtc-media` feature (the VP8 send encoder).
 use std::env;
 use std::path::PathBuf;
 
@@ -12,6 +13,16 @@ fn main() {
     let include_dir = env::var("VPX_INCLUDE_DIR").expect(
         "VPX_INCLUDE_DIR must point at the vendored libvpx headers (run scripts/vpx-source.sh)",
     );
+    // A clear error before the linker's cryptic "cannot find -lvpx": the env vars are set by
+    // .cargo/config.toml, but the library only exists once scripts/vpx-source.sh has built + linked it.
+    let archive = PathBuf::from(&lib_dir).join("libvpx.a");
+    if !archive.exists() {
+        panic!(
+            "libvpx is not built: {} is missing. Run scripts/vpx-source.sh before building \
+             (D144: the default build links libvpx for VP9/VP8 <video> decode).",
+            archive.display()
+        );
+    }
     println!("cargo:rerun-if-env-changed=VPX_LIB_DIR");
     println!("cargo:rerun-if-env-changed=VPX_INCLUDE_DIR");
     println!("cargo:rerun-if-changed=wrapper.h");
@@ -22,7 +33,8 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
         .clang_arg(format!("-I{include_dir}"))
-        // The VP8 encoder surface Slice 1c needs, plus the image/codec types and VPX_* constants.
+        // The encoder AND decoder surface (`vpx_codec_*` covers vpx_codec_decode / get_frame /
+        // dec_init_ver / vp8_dx / vp9_dx), plus the image/codec types and VPX_* constants.
         .allowlist_function("vpx_codec_.*")
         .allowlist_function("vpx_img_.*")
         .allowlist_type("vpx_codec_.*")

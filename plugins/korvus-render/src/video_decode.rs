@@ -1,7 +1,8 @@
 //! A `<video>`'s decoders (`RenderBackend::video_decoder`): H.264 through OpenH264 (Cisco's decoder, built from the
 //! source the `openh264` crate carries), AV1 through `rav1d` (the Rust port of dav1d, Chrome's AV1 decoder, already
-//! here for AVIF). VP8 and VP9 have no decoder in this build -- the vendored libvpx is VP8-only and optional
-//! (`scripts/vpx-source.sh`) -- so their tracks answer `None` and the element shows its poster.
+//! here for AVIF), and VP9 + VP8 through libvpx (the decoders Chrome uses, built from the pinned source by
+//! `scripts/vpx-source.sh`; D144 makes libvpx part of the DEFAULT build, as YouTube serves VP9). A format this
+//! build does not decode (a VP9 profile that is not 8-bit 4:2:0) answers `None` and the element shows its poster.
 //!
 //! Each frame leaves as 8-bit 4:2:0 YUV with the stream's colour description; the media thread turns the one it
 //! shows into RGBA (`YuvFrame::to_rgba`), so the frames a seek decodes and passes over cost no conversion.
@@ -13,8 +14,24 @@ pub fn decoder(codec: &VideoCodec) -> Option<Box<dyn VideoDecoder>> {
     match &codec.fourcc {
         b"avc1" | b"avc3" => H264::new(&codec.config).map(|d| Box::new(d) as Box<dyn VideoDecoder>),
         b"av01" => Av1::new().map(|d| Box::new(d) as Box<dyn VideoDecoder>),
+        b"vp09" => vpx_decoder(true),
+        b"vp08" => vpx_decoder(false),
         _ => None,
     }
+}
+
+/// The libvpx decoder for VP9 (`vp9 == true`) or VP8, on the platforms that build libvpx (Linux/macOS, D144).
+#[cfg(not(target_os = "windows"))]
+fn vpx_decoder(vp9: bool) -> Option<Box<dyn VideoDecoder>> {
+    let d = if vp9 { Vpx::vp9() } else { Vpx::vp8() };
+    d.map(|d| Box::new(d) as Box<dyn VideoDecoder>)
+}
+
+/// Windows libvpx is still deferred (`scripts/vpx-source.sh`), so VP9/VP8 have no decoder there yet and the
+/// element shows its poster, as before D144.
+#[cfg(target_os = "windows")]
+fn vpx_decoder(_vp9: bool) -> Option<Box<dyn VideoDecoder>> {
+    None
 }
 
 // ---- H.264 ----------------------------------------------------------------------------------------
@@ -432,6 +449,166 @@ unsafe fn av1_frame(pic: &rav1d::include::dav1d::picture::Dav1dPicture) -> Optio
     Some(YuvFrame { width: w as u32, height: h as u32, y: y_plane, u, v, matrix, full_range })
 }
 
+// ---- VP8 / VP9 (libvpx) ---------------------------------------------------------------------------
+
+/// A `<video>`'s VP9 or VP8 through libvpx's decoder -- the decoder Chrome uses, built from the pinned
+/// source (`scripts/vpx-source.sh`). One container sample is one compressed frame: `decode` hands the
+/// whole sample to `vpx_codec_decode` and drains the pictures it produces. Only 8-bit planar 4:2:0
+/// (`I420`: VP9 profile 0, and every VP8) is copied out; another profile's picture is skipped (the element
+/// shows its poster), as this build carries no high-bit-depth / 4:2:2 / 4:4:4 conversion.
+#[cfg(not(target_os = "windows"))]
+struct Vpx {
+    ctx: libvpx_sys::vpx_codec_ctx_t,
+}
+
+// SAFETY: the context is only ever touched behind `&mut self`, and libvpx keeps no thread affinity, so
+// running the decoder on its own media thread (as `VideoDecoder: Send` allows) is sound.
+#[cfg(not(target_os = "windows"))]
+unsafe impl Send for Vpx {}
+
+#[cfg(not(target_os = "windows"))]
+impl Vpx {
+    fn new(iface: *const libvpx_sys::vpx_codec_iface_t) -> Option<Self> {
+        // SAFETY: a zeroed context initialised by vpx_codec_dec_init_ver (no cfg, no flags); freed in Drop.
+        unsafe {
+            let mut ctx: libvpx_sys::vpx_codec_ctx_t = std::mem::zeroed();
+            let err = libvpx_sys::vpx_codec_dec_init_ver(
+                &mut ctx,
+                iface,
+                std::ptr::null(),
+                0,
+                libvpx_sys::VPX_DECODER_ABI_VERSION as std::os::raw::c_int,
+            );
+            if err != libvpx_sys::vpx_codec_err_t_VPX_CODEC_OK {
+                return None;
+            }
+            Some(Vpx { ctx })
+        }
+    }
+
+    /// libvpx's static VP9 decoder interface.
+    fn vp9() -> Option<Self> {
+        Self::new(unsafe { libvpx_sys::vpx_codec_vp9_dx() })
+    }
+
+    /// libvpx's static VP8 decoder interface.
+    fn vp8() -> Option<Self> {
+        Self::new(unsafe { libvpx_sys::vpx_codec_vp8_dx() })
+    }
+
+    /// Copy out every picture the decoder has ready.
+    fn drain(&mut self, out: &mut Vec<YuvFrame>) {
+        // SAFETY: a live context; `iter` starts null and libvpx advances it. Each returned image belongs to
+        // the decoder and is valid until the next decode/destroy, so it is copied before the loop continues.
+        unsafe {
+            let mut iter: libvpx_sys::vpx_codec_iter_t = std::ptr::null();
+            loop {
+                let img = libvpx_sys::vpx_codec_get_frame(&mut self.ctx, &mut iter);
+                if img.is_null() {
+                    return;
+                }
+                if let Some(f) = vpx_frame(&*img) {
+                    out.push(f);
+                }
+            }
+        }
+    }
+}
+
+#[cfg(not(target_os = "windows"))]
+impl VideoDecoder for Vpx {
+    fn decode(&mut self, sample: &[u8]) -> Vec<YuvFrame> {
+        let mut out = Vec::new();
+        if sample.is_empty() {
+            return out;
+        }
+        // SAFETY: the whole sample is one compressed frame; the pointer + length describe `sample`, read
+        // only for the call. A decode error drops the sample (the element keeps its last frame).
+        let err = unsafe {
+            libvpx_sys::vpx_codec_decode(
+                &mut self.ctx,
+                sample.as_ptr(),
+                sample.len() as std::os::raw::c_uint,
+                std::ptr::null_mut(),
+                0,
+            )
+        };
+        if err == libvpx_sys::vpx_codec_err_t_VPX_CODEC_OK {
+            self.drain(&mut out);
+        }
+        out
+    }
+
+    fn flush(&mut self) -> Vec<YuvFrame> {
+        let mut out = Vec::new();
+        // SAFETY: a null/zero-length decode is libvpx's documented end-of-stream signal. VP8/VP9 have no
+        // B-frames, so nothing is normally held back, but flushing is part of the decoder contract.
+        unsafe {
+            libvpx_sys::vpx_codec_decode(&mut self.ctx, std::ptr::null(), 0, std::ptr::null_mut(), 0);
+        }
+        self.drain(&mut out);
+        out
+    }
+}
+
+#[cfg(not(target_os = "windows"))]
+impl Drop for Vpx {
+    fn drop(&mut self) {
+        // SAFETY: the context was initialised by vpx_codec_dec_init_ver and is destroyed exactly once.
+        unsafe {
+            libvpx_sys::vpx_codec_destroy(&mut self.ctx);
+        }
+    }
+}
+
+/// Copy a libvpx image out to a tight `YuvFrame`, mapping its colour space + range to the ISO matrix the
+/// renderer uses. Only 8-bit planar 4:2:0 (`I420`) is handled; any other format gives `None`.
+///
+/// SAFETY: `img` is a decoder-owned picture valid for the call; its `planes`/`stride` describe `d_h` luma
+/// rows (and the subsampled chroma) of readable pixels.
+#[cfg(not(target_os = "windows"))]
+unsafe fn vpx_frame(img: &libvpx_sys::vpx_image_t) -> Option<YuvFrame> {
+    if img.fmt != libvpx_sys::vpx_img_fmt_VPX_IMG_FMT_I420 {
+        return None;
+    }
+    let (w, h) = (img.d_w as usize, img.d_h as usize);
+    let (cw, ch) = (w.div_ceil(2), h.div_ceil(2));
+    let plane = |idx: usize, pw: usize, ph: usize| -> Vec<u8> {
+        let stride = img.stride[idx] as usize;
+        let base = img.planes[idx];
+        let mut v = Vec::with_capacity(pw * ph);
+        for row in 0..ph {
+            v.extend_from_slice(std::slice::from_raw_parts(base.add(row * stride), pw));
+        }
+        v
+    };
+    // vpx colour space (vpx_image.h) -> ISO/IEC 23091-2 matrix coefficients (YuvFrame::to_rgba). UNKNOWN
+    // (VP8 always; VP9 when the stream omits it) -> 2 (unspecified), which to_rgba takes as BT.709, as
+    // Chrome does for a MediaSource.
+    let cs = img.cs;
+    let matrix = if cs == libvpx_sys::vpx_color_space_VPX_CS_BT_709 {
+        1
+    } else if cs == libvpx_sys::vpx_color_space_VPX_CS_BT_601 || cs == libvpx_sys::vpx_color_space_VPX_CS_SMPTE_170 {
+        6
+    } else if cs == libvpx_sys::vpx_color_space_VPX_CS_BT_2020 {
+        9
+    } else if cs == libvpx_sys::vpx_color_space_VPX_CS_SRGB {
+        0
+    } else {
+        2
+    };
+    let full_range = img.range == libvpx_sys::vpx_color_range_VPX_CR_FULL_RANGE;
+    Some(YuvFrame {
+        width: w as u32,
+        height: h as u32,
+        y: plane(0, w, h),
+        u: plane(1, cw, ch),
+        v: plane(2, cw, ch),
+        matrix,
+        full_range,
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -542,7 +719,16 @@ mod tests {
     }
 
     #[test]
-    fn vp9_has_no_decoder_here() {
-        assert!(decoder(&VideoCodec { fourcc: *b"vp09", config: Vec::new() }).is_none());
+    fn vp9_and_vp8_have_a_libvpx_decoder() {
+        // D144: VP9 (YouTube's codec) and VP8 decode in the DEFAULT build via libvpx (Linux/macOS; Windows
+        // libvpx is deferred, so there they still answer None). The end-to-end decode round-trip is proven in
+        // vendor/libvpx-sys; here we assert the dispatch wires both codecs up.
+        #[cfg(not(target_os = "windows"))]
+        {
+            assert!(decoder(&VideoCodec { fourcc: *b"vp09", config: Vec::new() }).is_some());
+            assert!(decoder(&VideoCodec { fourcc: *b"vp08", config: Vec::new() }).is_some());
+        }
+        // a codec this build does not decode still answers None (the element shows its poster).
+        assert!(decoder(&VideoCodec { fourcc: *b"hev1", config: Vec::new() }).is_none());
     }
 }

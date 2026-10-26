@@ -1630,6 +1630,7 @@ dependencies = [
  "korvus-kernel",
  "korvus-plugin-host",
  "libloading",
+ "libvpx-sys",
  "openh264",
  "png 0.18.1",
  "rav1d",

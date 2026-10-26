@@ -1,8 +1,9 @@
-# A thin raw-FFI crate over the libvpx (VP8) that `scripts/vpx-source.sh` builds at the revision Chrome
-# pins. It links a VENDORED static libvpx via VPX_LIB_DIR/VPX_INCLUDE_DIR (set in `.cargo/config.toml`)
-# and NOTHING ELSE -- there is no pkg-config / system-libvpx code path, by design (J6/I6): the engine
-# never links a library the machine happened to have. Not a workspace member, so it is compiled only when
-# korvus-runtime's `webrtc-media` feature pulls it in; the default build never touches it.
+# A thin raw-FFI crate over the libvpx (VP8 + VP9) that `scripts/vpx-source.sh` builds at the revision
+# Chrome pins. It links a VENDORED static libvpx via VPX_LIB_DIR/VPX_INCLUDE_DIR (set in `.cargo/config.toml`)
+# and NOTHING ELSE -- there is no pkg-config / system-libvpx code path, by design (J6/I6): the engine never
+# links a library the machine happened to have. A workspace member: korvus-render depends on it for VP9/VP8
+# `<video>` decode (D144), so it is part of the default build (run scripts/vpx-source.sh first); korvus-runtime's
+# `webrtc-media` feature also uses it (the VP8 encoder).
 [package]
 name = "libvpx-sys"
 version = "0.1.0"
@@ -15,3 +16,9 @@ publish = false
 # Already in the graph (skia-bindings uses bindgen); reused here, no new binding version. libvpx's shipped
 # prebuilt bindings stop at 1.13.0, older than Chrome's revision, so we always generate our own.
 bindgen = "0.70"
+
+# Standalone (not an engine workspace member): carries its own [workspace] so it is testable on its
+# own (`cargo test` here) and so `cargo build --workspace` in the engine never builds it as a member
+# (keeping the Windows build green while Windows libvpx is deferred). korvus-render path-deps it on
+# Linux/macOS; see ../../Cargo.toml and plugins/korvus-render/Cargo.toml.
+[workspace]

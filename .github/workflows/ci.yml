@@ -47,10 +47,11 @@ jobs:
 
       # Idempotent: reuses ~/.cache/korvus if the pinned revision is already built, and relinks the
       # per-checkout third_party/{skia-chrome,libvpx-chrome} symlinks the build reads (not tracked).
-      - name: fetch/build Skia + ANGLE
+      - name: fetch/build Skia + ANGLE + libvpx
         run: |
           scripts/skia-source.sh
           scripts/angle-source.sh
+          scripts/vpx-source.sh   # VP9/VP8 <video> decode links libvpx in the default build (D144)
 
       # Compile the whole workspace (incl. integration-test binaries), then run the unit tests only —
       # the *_live / server-backed integration tests need local fixtures servers and are not run in CI.

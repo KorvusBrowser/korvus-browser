@@ -57,10 +57,10 @@ codegen-units = 1
 # (src/partition_alloc/noop). A memory-safety wrapper only: no pixel, no API, no header under include/ changes.
 [env]
 SKIA_SOURCE_DIR = { value = "third_party/skia-chrome", relative = true }
-# The vendored libvpx (VP8) scripts/vpx-source.sh builds, for the WebRTC send path. INERT by default: the
-# only build.rs that reads these (vendor/libvpx-sys) is compiled solely under korvus-runtime's
-# `webrtc-media` feature, which is off by default -- so the normal build never reads them and the link's
-# absence does not matter. relative=true resolves against the workspace root (reaching nested worktrees).
+# The vendored libvpx (VP8 + VP9) scripts/vpx-source.sh builds: korvus-render links it for VP9/VP8 `<video>`
+# decode (D144), so these are read by the DEFAULT build and scripts/vpx-source.sh MUST run first (it creates
+# the third_party/libvpx-chrome link these point into). korvus-runtime's `webrtc-media` feature also uses it
+# (the VP8 encoder). relative=true resolves against the workspace root (reaching nested worktrees).
 VPX_LIB_DIR = { value = "third_party/libvpx-chrome/lib", relative = true }
 VPX_INCLUDE_DIR = { value = "third_party/libvpx-chrome/include", relative = true }
 SKIA_GN_ARGS = 'skia_use_piex=false skia_use_partition_alloc=false extra_cflags_cc=["-DSK_ENABLE_LEGACY_SHADERCONTEXT","-DSK_SUPPORT_LEGACY_CONIC_CHOP","-DSK_USE_PADDED_BLUR_UPSCALE","-DSK_AVOID_SLOW_RASTER_PIPELINE_BLURS","-DSK_SUPPORT_LEGACY_RRECT_TRANSFORM","-DSK_LEGACY_INITWITHPREV_LAYER_SIZING","-DSK_SUPPORT_LEGACY_ANISOTROPIC_MIPMAP_SCALE","-DSK_GAMMA_EXPONENT=1.2","-DSK_GAMMA_CONTRAST=0.2"]'

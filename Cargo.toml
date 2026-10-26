@@ -112,11 +112,13 @@ members = [
     "plugins/korvus-analysis",
     "korvus",
 ]
-# vendor/libvpx-sys links a VENDORED libvpx that its build.rs REQUIRES (built by scripts/vpx-source.sh).
-# EXCLUDED from the workspace so `cargo test --workspace` / `cargo build --workspace` never compile it
-# (an auto-included path-dep member would run its build.rs and demand libvpx on every machine). It is
-# pulled in ONLY as korvus-runtime's optional `webrtc-media` dependency, so the default build -- the gate,
-# every peer worktree, a machine without libvpx -- is untouched.
+# vendor/libvpx-sys is a thin raw-FFI shim over the VENDORED libvpx that scripts/vpx-source.sh builds. NOT a
+# workspace member (it carries its own `[workspace]`), so `cargo build --workspace` never builds it as a
+# member -- which keeps the WINDOWS build green, since Windows libvpx is still deferred (vpx-source.sh). On
+# Linux/macOS korvus-render depends on it (a `cfg(not(windows))` dep) for VP9/VP8 `<video>` decode (D144), so
+# there it IS part of the default build -- run scripts/vpx-source.sh first (it links third_party/libvpx-chrome,
+# read via VPX_LIB_DIR/VPX_INCLUDE_DIR in .cargo/config.toml). korvus-runtime's `webrtc-media` feature also
+# uses its VP8 encoder (Linux/macOS).
 exclude = ["vendor/libvpx-sys"]
 
 [workspace.dependencies]
