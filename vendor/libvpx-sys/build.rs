@@ -26,6 +26,10 @@ fn main() {
     println!("cargo:rerun-if-env-changed=VPX_LIB_DIR");
     println!("cargo:rerun-if-env-changed=VPX_INCLUDE_DIR");
     println!("cargo:rerun-if-changed=wrapper.h");
+    // Rust BUNDLES this static lib into the rlib (static=vpx default is +bundle), so a rebuilt libvpx
+    // (e.g. VP8-only -> VP9, D144) must re-run this build.rs or a `clean: false` CI runner links the stale
+    // bundled copy -> `vpx_codec_vp9_dx` undefined. Tracking the archive (the symlink's target) forces that.
+    println!("cargo:rerun-if-changed={}", archive.display());
     println!("cargo:rustc-link-search=native={lib_dir}");
     // The static lib is named libvpx.a (link name `vpx`), as vpx-source.sh installs it.
     println!("cargo:rustc-link-lib=static=vpx");
