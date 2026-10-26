@@ -120,7 +120,8 @@ client that ships it. For a clean mint each time, give each run its own session:
 korvus has no plans, no accounts and no license key. A release runs as many sessions at once as your machine holds,
 with every feature, the stealth persona included. `korvus serve` calls no server of ours: its traffic is the pages you
 load, your own settings (a proxy, a plugin) and a browser's own work, such as certificate checks. The
-[binary license](BINARY-LICENSE.md) says the same.
+[binary license](BINARY-LICENSE.md) says the same. It is free in production for a company under USD 10 million of
+yearly revenue, and for any non-production use ([License](#license)).
 
 ## Plugins
 
@@ -141,7 +142,9 @@ your machine and your pages.
   is first released.
 - The plugin interface — the C ABI header (`plugin-sdk/korvus_plugin.h`), the SDKs and the examples — is under the
   [MIT License](LICENSE.plugins), so anyone may write and share plugins.
-- The korvus binary is under the [Korvus Binary License](BINARY-LICENSE.md). Running it on your own machines for your
-  own work, including scraping, automation and testing, needs no further license. You need a separate license to
-  redistribute the binary, bundle it into a product, or offer it to others as a hosted service. For that, open an issue
-  that starts with "Licensing:".
+- The korvus binary is under the [Korvus Binary License](BINARY-LICENSE.md), which draws the same line: running it on
+  your own machines for your own work, including scraping, automation and testing, is free in production while your
+  yearly revenue is under USD 10 million (self-attested), and free at any revenue for development, testing, research
+  and education. At or above that revenue in production, you need a commercial license; at any revenue, you need a
+  separate license to redistribute the binary, bundle it into a product, or offer it to others as a hosted service.
+  For either, open an issue that starts with "Licensing:".

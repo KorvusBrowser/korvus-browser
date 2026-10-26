@@ -1,6 +1,9 @@
 # Korvus Binary License
 
-**Version 1.0 — October 2026**
+**Version 1.1 — October 2026**
+
+Version 1.1 applies to korvus 152.0.2 and later. A release you obtained under Version 1.0 (korvus 152.0.0 and 152.0.1)
+stays under Version 1.0.
 
 Copyright (c) 2026 The Base (더베이스). All rights reserved.
 
@@ -31,7 +34,8 @@ document.
 
 ## Free and paid versions
 
-Today every version of the Binary is free to use under this license.
+Every version of the Binary is free to use under this license within the free use it describes (see "Free use,
+internal use, hosted services and bundling").
 
 The Base (더베이스) may later require a paid subscription for some versions, for example the newest major version, or for
 some features or usage limits. If it does, it will announce the change on its official channels at least thirty (30)
@@ -56,11 +60,17 @@ You may not:
 The following are normal use, not modification: running the Binary with command-line flags, driving it through the
 DevTools protocol or an automation library, and using your own profiles or data directories.
 
-## Internal use, hosted services and bundling
+## Free use, internal use, hosted services and bundling
 
-**Internal use is free.** You do not need a separate license for internal use, whatever the size or revenue of your
-organization. Internal use means using the Binary for your own browsing, scraping, data collection, automation,
-testing, research or business workflows, as long as you run the browsing yourself.
+**Free use.** You may use the Binary in production free of charge when, in the most recent 12-month period, the total
+annual revenue of you and your affiliates is less than USD 10,000,000 (ten million US dollars). This is self-attested:
+no audit is required. Non-production use (development, testing, research and education) is free at any revenue.
+Production use at or above that revenue needs a commercial license from The Base (더베이스). This is the same line the
+Business Source License 1.1 draws for the engine source.
+
+**Internal use** means using the Binary for your own browsing, scraping, data collection, automation, testing,
+research or business workflows, as long as you run the browsing yourself. Within the free use above, it needs no
+separate license.
 
 - You may keep and run the unmodified Binary on your own infrastructure for internal purposes, including Docker
   images, CI runners and internal artifact stores.
@@ -70,7 +80,8 @@ testing, research or business workflows, as long as you run the browsing yoursel
 **Listing korvus as a dependency is allowed.** You may name korvus as a dependency in package files, build scripts or
 documentation without a separate license, provided your users get the Binary from the official channels.
 
-**A separate license is needed** when you provide the Binary's browser capability to others. This includes:
+**A separate license is needed**, at any revenue, when you provide the Binary's browser capability to others. This
+includes:
 
 - bundling or embedding the Binary in a product you distribute;
 - exposing it through an API;
@@ -172,5 +183,6 @@ courts of that place have exclusive jurisdiction over disputes about this licens
 
 ## Contact
 
-For licensing questions, including a separate license for redistribution, bundling or hosted use, open an issue at
+For licensing questions, including a commercial license for production use at or above the revenue line, or a
+separate license for redistribution, bundling or hosted use, open an issue at
 https://github.com/KorvusBrowser/korvus-browser/issues with a title that starts with "Licensing:".

@@ -49,6 +49,10 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   licensing@korvusbrowser.com (korvus.dev was never korvus's).
 - The installers install a release whose archive holds korvus at its root, as 152.0.0's and 152.0.1's do (until now
   they stopped with "holds no korvus"), and take its version from the binary.
+- The binary's license is the [Korvus Binary License](BINARY-LICENSE.md) Version 1.1, which draws the source's line:
+  production use is free under USD 10 million of yearly revenue (self-attested), and any non-production use is free;
+  at or above it, a commercial license. Version 1.0 made internal use free at any revenue; 152.0.0 and 152.0.1 stay
+  under it.
 - `korvus --version` prints the release's version (the banner of 152.0.0 and 152.0.1 both said 152.0.0).
 
 ## v152.0.1
