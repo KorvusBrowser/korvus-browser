@@ -1,10 +1,11 @@
 # korvus-browser PyPI publish — Trusted Publishing (OIDC, no tokens).
 #
-# TEMPLATE, dispatch-only. Publishes the Python wrapper for the korvus engine on a release. Finalize
-# before use: (1) the wrapper package (sdist + wheel build) does not exist yet; (2) create a PyPI
-# pending publisher — Owner=KorvusBrowser, Repository=korvus-browser, Workflow=publish.yml,
-# Environment=pypi (see the public-release skill §3 step 3); (3) create the `pypi` environment on the
-# repo. Pin pypa/gh-action-pypi-publish to a commit hash at release time.
+# Publishes the Python launcher (python/, package `korvus-browser`) on a release. DISPATCH-ONLY until:
+#   1. a PyPI pending publisher is created — Owner=KorvusBrowser, Repository=korvus-browser,
+#      Workflow=publish.yml, Environment=pypi (https://pypi.org/manage/account/publishing/); and
+#   2. the `pypi` environment exists on the repo
+#      (`gh api -X PUT repos/KorvusBrowser/korvus-browser/environments/pypi`).
+# Then pin pypa/gh-action-pypi-publish to a commit sha and enable the `release` trigger below.
 name: publish
 
 on:
@@ -21,6 +22,15 @@ jobs:
     environment: pypi
     steps:
       - uses: actions/checkout@v4
-      # TODO: build the korvus-browser wrapper (python -m build -> dist/), then publish:
-      # - uses: pypa/gh-action-pypi-publish@<commit-sha>   # Trusted Publishing; no token
-      - run: echo "publish.yml is a template — wire the wrapper build + pending publisher first"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: build the launcher (sdist + wheel)
+        working-directory: python
+        run: |
+          python -m pip install --upgrade build
+          python -m build
+      - name: publish to PyPI (Trusted Publishing — no token)
+        uses: pypa/gh-action-pypi-publish@release/v1   # TODO: pin to a commit sha before enabling
+        with:
+          packages-dir: python/dist
