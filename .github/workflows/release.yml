@@ -1,0 +1,45 @@
+# korvus-browser release — builds the engine and attaches binaries to a GitHub Release.
+#
+# TEMPLATE, dispatch-only. Finalize before use: the per-OS build matrix, signing, and the release
+# upload by the App bot `korvus-browser[bot]` (a release created with the default GITHUB_TOKEN does NOT
+# trigger downstream workflows like publish.yml — use the App token; see the public-release skill's
+# templates/public-release.sh + app-token.py). Needs var KORVUS_APP_CLIENT_ID + secret KORVUS_APP_KEY.
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "release tag (vX.Y.Z)"
+        required: true
+  # release: { types: [published] }    # enable once the binary build + signing are finalized
+
+jobs:
+  build-linux:
+    runs-on: [self-hosted, Linux]
+    timeout-minutes: 120
+    env:
+      RUSTY_V8_MIRROR: https://github.com/denoland/rusty_v8/releases/download
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libfontconfig1-dev libfreetype6-dev libgl1-mesa-dev pkg-config clang ninja-build
+      - name: build Skia/ANGLE + the engine (release)
+        run: |
+          scripts/skia-source.sh && scripts/angle-source.sh
+          cargo build --release -p korvus
+      - name: package + checksum
+        run: |
+          tag="${{ github.event.inputs.tag || github.ref_name }}"
+          mkdir -p dist
+          tar -C target/release -czf "dist/korvus-$tag-linux-x86_64.tar.gz" korvus
+          (cd dist && sha256sum *.tar.gz > SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: korvus-linux-x86_64
+          path: dist/*
+      # TODO: macOS + Windows matrix; sign; create/attach to the Release via the App bot so publish.yml fires.

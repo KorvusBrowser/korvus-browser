@@ -1,0 +1,8 @@
+{
+  "persona": 1,
+  "name": "minimal",
+  "_doc": "the least a document holds: a name and a device's OS",
+  "device": {
+    "os": "windows"
+  }
+}

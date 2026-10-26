@@ -1,7 +1,7 @@
 //! The viewer channel (D88 step 3): what a person's client may do over a ticket.
 //!
 //! The automation channel is all of CDP -- what Playwright and a server hold -- and a web page never opens it
-//! (`access.rs`). A client in a page (`korvus/public/client`, or one embedded in another site) opens the viewer
+//! (`access.rs`). A client in a page (`client`, or one embedded in another site) opens the viewer
 //! channel instead, with a ticket the automation channel minted (`Korvus.createViewer`) or the one `korvus serve`
 //! prints for its own client. The ticket is the key: one browser context (or, the endpoint's own, any route), an
 //! expiry, view-only or interactive, revocable (`Korvus.revokeViewer`). Over it a connection may do what a person

@@ -1,0 +1,37 @@
+{
+  "persona": 1,
+  "name": "model-on-a-desktop",
+  "device": {
+    "os": "windows",
+    "os_version": "15.0.0",
+    "architecture": "x86",
+    "bitness": "64",
+    "hardware": {
+      "cores": 8,
+      "memory_gb": 8
+    },
+    "screen": {
+      "width": 1536,
+      "height": 864,
+      "avail_width": 1536,
+      "avail_height": 824,
+      "dpr": 1.25,
+      "avail_top": 0,
+      "color_depth": 24,
+      "color_gamut": "srgb",
+      "hdr": false,
+      "refresh_rate": 60
+    },
+    "gpu": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E9B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "noise": [
+      "canvas",
+      "audio",
+      "webgl"
+    ],
+    "model": "Pixel 8"
+  },
+  "_expect": "device.model is a phone's"
+}

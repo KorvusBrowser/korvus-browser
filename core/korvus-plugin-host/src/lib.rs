@@ -1,6 +1,6 @@
 //! The plugin host: korvus's run-time plugins (goal 1020 step 2, D13-D15).
 //!
-//! A plugin is a shared library built standalone against ONE header, `public/plugins/korvus_plugin.h`, which includes
+//! A plugin is a shared library built standalone against ONE header, `plugin-sdk/korvus_plugin.h`, which includes
 //! nothing of korvus's. This crate is that header's other side: the `#[repr(C)]` mirror of its types, the loader
 //! (`dlopen`/`LoadLibrary` through `libloading`), and the dispatch of each slot in the order the header sets. It holds
 //! no V8 and no network code: the crate that owns a point -- webapi a member's exit, transport a request's hop, the

@@ -1,13 +1,13 @@
 //! korvus's own client, served from the endpoint's port at `/client/` (D87, D88 step 4).
 //!
-//! The client is `korvus/public/client` (Apache-2.0, TypeScript, built with Vite); its `build/` is committed, so it is
+//! The client is `client` (Apache-2.0, TypeScript, built with Vite); its `build/` is committed, so it is
 //! compiled into the engine here with no Node in the engine's build. `korvus serve` prints the address with the
 //! endpoint's own viewer ticket in its fragment, which the page reads and no server ever sees. The page connects back
 //! to the same port over the viewer channel (`viewer.rs`), so it needs no `--allow-origin`.
 
-const INDEX: &str = include_str!("../../../public/client/build/index.html");
-const APP: &str = include_str!("../../../public/client/build/app.js");
-const BUNDLE: &str = include_str!("../../../public/client/build/korvus-client.js");
+const INDEX: &str = include_str!("../../../client/build/index.html");
+const APP: &str = include_str!("../../../client/build/app.js");
+const BUNDLE: &str = include_str!("../../../client/build/korvus-client.js");
 
 /// The page's policy: its own scripts only, no other origin's anything, the socket back to this port, frames drawn
 /// from blobs, and the inline styles a shadow root carries.

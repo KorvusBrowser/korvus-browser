@@ -1,0 +1,26 @@
+# korvus-browser PyPI publish — Trusted Publishing (OIDC, no tokens).
+#
+# TEMPLATE, dispatch-only. Publishes the Python wrapper for the korvus engine on a release. Finalize
+# before use: (1) the wrapper package (sdist + wheel build) does not exist yet; (2) create a PyPI
+# pending publisher — Owner=KorvusBrowser, Repository=korvus-browser, Workflow=publish.yml,
+# Environment=pypi (see the public-release skill §3 step 3); (3) create the `pypi` environment on the
+# repo. Pin pypa/gh-action-pypi-publish to a commit hash at release time.
+name: publish
+
+on:
+  workflow_dispatch:
+  # release: { types: [published] }
+
+permissions:
+  id-token: write    # OIDC Trusted Publishing
+  contents: read
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    environment: pypi
+    steps:
+      - uses: actions/checkout@v4
+      # TODO: build the korvus-browser wrapper (python -m build -> dist/), then publish:
+      # - uses: pypa/gh-action-pypi-publish@<commit-sha>   # Trusted Publishing; no token
+      - run: echo "publish.yml is a template — wire the wrapper build + pending publisher first"

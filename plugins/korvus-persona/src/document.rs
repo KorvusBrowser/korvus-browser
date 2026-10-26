@@ -522,9 +522,42 @@ pub fn wear(doc: &Document, base: crate::CapturedPersona, host: &spec::coherence
 mod tests {
     use super::*;
 
-    // NOTE (engine extraction): `the_shared_corpus`, which validated this reader against the shared
-    // persona conformance corpus (../../../shared/personas/fixtures), is omitted from the standalone
-    // engine; vendor that corpus here to restore it. The format rules are still exercised below.
+    fn corpus_dir() -> std::path::PathBuf {
+        std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("corpus")
+    }
+
+    fn corpus(sub: &str) -> Vec<(String, String)> {
+        let mut v: Vec<(String, String)> = std::fs::read_dir(corpus_dir().join("fixtures").join(sub))
+            .expect("the vendored persona corpus")
+            .filter_map(|e| e.ok())
+            .map(|e| e.path())
+            .filter(|p| p.extension().is_some_and(|x| x == "json"))
+            .map(|p| (p.file_name().unwrap().to_string_lossy().into_owned(), std::fs::read_to_string(&p).unwrap()))
+            .collect();
+        v.sort();
+        v
+    }
+
+    /// FORMAT.md section 5: this reader agrees with every fixture of the conformance corpus
+    /// (vendored at `plugins/korvus-persona/corpus/fixtures`).
+    #[test]
+    fn the_shared_corpus() {
+        let valid = corpus("valid");
+        let invalid = corpus("invalid");
+        assert!(valid.len() >= 5 && invalid.len() >= 20, "the corpus is there: {} valid, {} invalid", valid.len(), invalid.len());
+        for (name, text) in &valid {
+            if let Err(e) = read(text) {
+                panic!("refused the valid {name}: {e:?}");
+            }
+        }
+        for (name, text) in &invalid {
+            let want = serde_json::from_str::<Value>(text).unwrap()["_expect"].as_str().unwrap().to_string();
+            match read(text) {
+                Ok(_) => panic!("accepted the invalid {name} (wanted {want:?})"),
+                Err(e) => assert!(e.iter().any(|r| r.contains(&want)), "{name}: wanted a reason with {want:?}, got {e:?}"),
+            }
+        }
+    }
 
     #[test]
     fn a_text_noise_kind_is_accepted_and_kept_while_an_unknown_one_is_refused() {

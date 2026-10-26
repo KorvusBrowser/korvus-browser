@@ -1,0 +1,29 @@
+{
+  "persona": 1,
+  "name": "touch-on-a-desktop",
+  "device": {
+    "os": "windows",
+    "os_version": "15.0.0",
+    "architecture": "x86",
+    "bitness": "64",
+    "hardware": {
+      "cores": 8,
+      "memory_gb": 8
+    },
+    "screen": {
+      "width": 1536,
+      "height": 864,
+      "touch_points": 5
+    },
+    "gpu": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E9B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "noise": [
+      "canvas",
+      "audio",
+      "webgl"
+    ]
+  },
+  "_expect": "touch_points is a phone's"
+}

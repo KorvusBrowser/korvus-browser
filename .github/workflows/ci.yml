@@ -1,0 +1,60 @@
+# korvus-browser CI — the engine's build + unit-test gate.
+#
+# korvus-browser is the engine's source of truth, developed in the open as Trevor Kang (D134), so its
+# CI lives here (not in the private monorepo). The heavy part is Skia + ANGLE, built from source by
+# scripts/{skia,angle}-source.sh and cached per machine under ~/.cache/korvus — so this targets a
+# SELF-HOSTED Linux runner that keeps that cache warm. A from-scratch GitHub-hosted build would be very
+# slow; if you prefer GitHub-hosted, add aggressive caching of ~/.cache/korvus.
+#
+# SETUP before this runs: register a runner to KorvusBrowser/korvus-browser labelled
+# [self-hosted, Linux]. Then add `push`/`pull_request` triggers below. Until then: `gh workflow run ci.yml`.
+name: ci
+
+on:
+  workflow_dispatch:
+  # push: { branches: [main] }         # enable once a [self-hosted, Linux] runner is registered
+  # pull_request: { branches: [main] }
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    runs-on: [self-hosted, Linux]
+    timeout-minutes: 90
+    env:
+      CARGO_TERM_COLOR: always
+      # rusty_v8 pulls a prebuilt V8; building it from source would blow the runner's disk and time.
+      RUSTY_V8_MIRROR: https://github.com/denoland/rusty_v8/releases/download
+    steps:
+      - uses: actions/checkout@v4
+
+      # rust-toolchain.toml pins the channel (1.98.1).
+      - uses: dtolnay/rust-toolchain@stable
+
+      # V8 and Skia dominate the build; a warm cache turns this from a full link into an incremental one.
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: korvus-browser-ci
+          cache-on-failure: true
+
+      - name: system deps for skia-safe + the native build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libfontconfig1-dev libfreetype6-dev libgl1-mesa-dev pkg-config clang ninja-build
+
+      # Idempotent: reuses ~/.cache/korvus if the pinned revision is already built, and relinks the
+      # per-checkout third_party/{skia-chrome,libvpx-chrome} symlinks the build reads (not tracked).
+      - name: fetch/build Skia + ANGLE
+        run: |
+          scripts/skia-source.sh
+          scripts/angle-source.sh
+
+      # Compile the whole workspace (incl. integration-test binaries), then run the unit tests only —
+      # the *_live / server-backed integration tests need local fixtures servers and are not run in CI.
+      - name: build + unit tests
+        run: |
+          cargo test --workspace --no-run
+          cargo test --workspace --lib --bins

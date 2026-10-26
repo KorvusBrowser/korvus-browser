@@ -425,3 +425,6 @@ fn every_test_file_is_in_this_suite() {
          add `#[path = \"<name>.rs\"] mod <name>;` for each, or list it in SEPARATE with a reason."
     );
 }
+#[path = "media_load_live.rs"] mod media_load_live;
+#[path = "realm_globals_live.rs"] mod realm_globals_live;
+#[path = "video_decode_live.rs"] mod video_decode_live;
