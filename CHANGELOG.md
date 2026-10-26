@@ -38,6 +38,13 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
 
+## v152.0.3
+
+- The Windows build (x86-64) is back in the release: `korvus-windows-x86_64.zip`, and
+  `irm https://korvusbrowser.com/install.ps1 | iex` installs it. From this release on, every release ships Linux,
+  macOS and Windows together, or none of them; 152.0.2 shipped Linux and macOS only.
+- Otherwise the engine is 152.0.2's, under the Korvus Binary License Version 1.1.
+
 ## v152.0.2
 
 - No limits: korvus runs as many sessions at once as the machine holds, with no account, plan or license key. The

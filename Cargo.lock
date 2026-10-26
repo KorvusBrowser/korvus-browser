@@ -1505,7 +1505,7 @@ dependencies = [
 
 [[package]]
 name = "korvus"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "anyhow",
  "base64",
@@ -1528,7 +1528,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-analysis"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "korvus-kernel",
  "serde_json",
@@ -1536,7 +1536,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-behavior"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "korvus-kernel",
  "rand 0.8.7",
@@ -1544,7 +1544,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-cdp"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "anyhow",
  "base64",
@@ -1566,7 +1566,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-dom"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "cssparser",
  "html5ever",
@@ -1582,7 +1582,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-kernel"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "serde",
  "serde_json",
@@ -1590,7 +1590,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-page"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "cssparser",
  "korvus-dom",
@@ -1601,7 +1601,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-persona"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "korvus-kernel",
  "serde",
@@ -1611,7 +1611,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-plugin-host"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "libloading",
  "serde_json",
@@ -1619,7 +1619,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-render"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "avif-parse",
  "bincode",
@@ -1643,7 +1643,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-runtime"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "aes",
  "anyhow",
@@ -1683,7 +1683,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-transport"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "anyhow",
  "base64",
@@ -1710,7 +1710,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-webapi"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "aes",
  "base64",
@@ -1752,7 +1752,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-webapi-gen"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "korvus-dom",
  "korvus-persona",
@@ -1764,7 +1764,7 @@ dependencies = [
 
 [[package]]
 name = "korvus-webapi-macros"
-version = "152.0.2"
+version = "152.0.3"
 dependencies = [
  "proc-macro2",
  "quote",
