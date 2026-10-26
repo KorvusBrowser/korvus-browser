@@ -575,16 +575,16 @@ mod tests {
 
     #[test]
     fn a_success_response_yields_its_xor_mapped_address() {
-        // Built the way the captured answers from stun.a challenge provider.com are: XOR-MAPPED-ADDRESS only.
+        // Built the way a STUN server's XOR-MAPPED-ADDRESS answers are. (203.0.113.x is RFC 5737 documentation space.)
         let tid: [u8; 12] = *b"ByByrzAbPNz+";
         let mut m = vec![0x01, 0x01, 0x00, 0x0c, 0x21, 0x12, 0xa4, 0x42];
         m.extend_from_slice(&tid);
         let port = 52690u16 ^ 0x2112;
-        let ip = [210u8 ^ 0x21, 126 ^ 0x12, 14 ^ 0xa4, 238 ^ 0x42];
+        let ip = [203u8 ^ 0x21, 0 ^ 0x12, 113 ^ 0xa4, 7 ^ 0x42];
         m.extend_from_slice(&[0x00, 0x20, 0x00, 0x08, 0x00, 0x01]);
         m.extend_from_slice(&port.to_be_bytes());
         m.extend_from_slice(&ip);
-        assert_eq!(binding_success(&m), Some((tid, "210.126.14.238:52690".parse().unwrap())));
+        assert_eq!(binding_success(&m), Some((tid, "203.0.113.7:52690".parse().unwrap())));
         assert_eq!(binding_success(&m[..19]), None, "a truncated header is not a response");
     }
 }
