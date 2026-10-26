@@ -1,0 +1,8 @@
+<!doctype html><title>t</title>
+<!-- REALWEB T8: Set-Cookie HEADERS. Chrome 150 refuses `SameSite=None` without `Secure` whether a header or
+     document.cookie sets it; the other two arrive. Read after the sub-request that sets them. -->
+<script>
+fetch('set.txt').then(() => {
+  document.title = document.cookie.split('; ').filter(Boolean).sort().join(',') || 'none';
+});
+</script>

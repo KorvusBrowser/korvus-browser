@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Ink",
+    "member": "constructor",
+    "expr": "new Ink()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

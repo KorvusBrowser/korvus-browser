@@ -1,0 +1,176 @@
+[
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRRay(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object XRRay]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "origin",
+    "expr": "(() => { const o = new XRRay(); return Object.prototype.toString.call(o.origin); })()",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "direction",
+    "expr": "(() => { const o = new XRRay(); return Object.prototype.toString.call(o.direction); })()",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "matrix",
+    "expr": "(() => { const o = new XRRay(); return Object.prototype.toString.call(o.matrix); })()",
+    "expected": "[object Float32Array]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new XRRay())",
+    "expected": "[object XRRay]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "new XRRay({x:0,y:0,z:0,w:0})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "new XRRay({}, {x:0,y:0,z:0,w:0})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "new XRRay(new XRRigidTransform()) instanceof XRRay",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "constructor",
+    "expr": "new XRRay(\"nope\")",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "origin",
+    "expr": "Object.prototype.toString.call(new XRRay().origin)",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "origin",
+    "expr": "[new XRRay().origin.x, new XRRay().origin.y, new XRRay().origin.z, new XRRay().origin.w]",
+    "expected": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "origin",
+    "expr": "new XRRay({x:1,y:2,z:3,w:1}).origin.y",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "origin",
+    "expr": "(() => { const r = new XRRay(); return r.origin === r.origin; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "direction",
+    "expr": "[new XRRay().direction.x, new XRRay().direction.y, new XRRay().direction.z, new XRRay().direction.w]",
+    "expected": [
+      0,
+      0,
+      -1,
+      0
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "direction",
+    "expr": "new XRRay({}, {x:0,y:0,z:2,w:0}).direction.z",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "direction",
+    "expr": "new XRRay({}, {x:3,y:4,z:0,w:0}).direction.x",
+    "expected": 0.6000000238418579,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "direction",
+    "expr": "new XRRay({}, {x:0,y:0,z:-1,w:1}).direction.w",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "matrix",
+    "expr": "Object.prototype.toString.call(new XRRay().matrix)",
+    "expected": "[object Float32Array]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "matrix",
+    "expr": "new XRRay().matrix.length",
+    "expected": 16,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "matrix",
+    "expr": "Array.from(new XRRay().matrix)",
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRRay",
+    "member": "matrix",
+    "expr": "new XRRay({x:1,y:2,z:3,w:1}).matrix[12]",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

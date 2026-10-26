@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CountQueuingStrategy",
+    "member": "constructor",
+    "expr": "(() => { const o = new CountQueuingStrategy({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CountQueuingStrategy",
+    "member": "constructor",
+    "expr": "(() => { const o = new CountQueuingStrategy(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CountQueuingStrategy",
+    "member": "highWaterMark",
+    "expr": "(() => { const o = new CountQueuingStrategy({ highWaterMark: 1 }); return o.highWaterMark; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CountQueuingStrategy",
+    "member": "size",
+    "expr": "(() => { const o = new CountQueuingStrategy({ highWaterMark: 1 }); return Object.prototype.toString.call(o.size); })()",
+    "expected": "[object Function]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

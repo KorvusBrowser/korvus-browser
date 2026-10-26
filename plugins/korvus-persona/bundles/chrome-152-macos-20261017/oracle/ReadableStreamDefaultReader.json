@@ -1,0 +1,45 @@
+[
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "constructor",
+    "expr": "new ReadableStreamDefaultReader()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "releaseLock",
+    "expr": "(() => { const o = new ReadableStream().getReader(); return o.releaseLock(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "read",
+    "expr": "(() => { const o = new ReadableStream().getReader(); return Object.prototype.toString.call(o.read()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "closed",
+    "expr": "(() => { const o = new ReadableStream().getReader(); return Object.prototype.toString.call(o.closed); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "cancel",
+    "expr": "(() => { const o = new ReadableStream().getReader(); return Object.prototype.toString.call(o.cancel()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStreamDefaultReader",
+    "member": "cancel",
+    "expr": "(async () => { const o = new ReadableStream().getReader(); return await o.cancel(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

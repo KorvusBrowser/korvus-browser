@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGAnimatedPreserveAspectRatio",
+    "member": "constructor",
+    "expr": "new SVGAnimatedPreserveAspectRatio()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedPreserveAspectRatio",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio; return Object.prototype.toString.call(o.baseVal); })()",
+    "expected": "[object SVGPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedPreserveAspectRatio",
+    "member": "animVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio; return Object.prototype.toString.call(o.animVal); })()",
+    "expected": "[object SVGPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

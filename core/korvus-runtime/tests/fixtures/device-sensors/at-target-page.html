@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><div id="d"></div><iframe id="f"></iframe><script>
+// At-target listener order: the same function and a second one registered bubbling and capturing, in both orders,
+// on each kind of target, for an event dispatched AT that target. Each listener logs [name, eventPhase].
+var r = {hidden: document.hidden};
+function order(target, firstCapture, fire) {
+  var log = [];
+  function L(n) { return function (e) { log.push(n + ':' + e.eventPhase); }; }
+  var a = L('a'), b = L('b');
+  var ty = 'korvus-at-target-' + Math.random().toString(36).slice(2);
+  if (firstCapture) {
+    target.addEventListener(ty, a, true); target.addEventListener(ty, b); target.addEventListener(ty, a); target.addEventListener(ty, L('c'), true);
+  } else {
+    target.addEventListener(ty, a); target.addEventListener(ty, b, true); target.addEventListener(ty, a, true); target.addEventListener(ty, L('c'));
+  }
+  fire(target, ty);
+  return log.join(' ');
+}
+function plain(t, ty) { t.dispatchEvent(new Event(ty)); }
+function bubbling(t, ty) { t.dispatchEvent(new Event(ty, {bubbles: true})); }
+var fw = document.getElementById('f').contentWindow;
+var targets = {
+  window: window, document: document, element: document.getElementById('d'), detachedElement: document.createElement('span'),
+  frameWindow: fw, eventTarget: new EventTarget(), abortSignal: new AbortController().signal, xhr: new XMLHttpRequest()
+};
+r.order = {};
+Object.keys(targets).forEach(function (k) {
+  r.order[k] = [order(targets[k], false, plain), order(targets[k], true, plain), order(targets[k], false, bubbling)];
+});
+// an ENGINE event at the window: `resize` is not used; a trusted one the engine fires at the window -- `message`
+var log = [];
+function M(n) { return function (e) { log.push(n + ':' + e.eventPhase); }; }
+var m = M('m');
+addEventListener('message', m); addEventListener('message', M('n'), true); addEventListener('message', m, true);
+postMessage('x', '*');
+setTimeout(function () {
+  r.engineMessage = log.join(' ');
+  window.__r = JSON.stringify(r);
+  fetch('/report', {method: 'POST', body: window.__r});
+}, 300);
+</script></body></html>

@@ -1,0 +1,233 @@
+[
+  {
+    "iface": "PannerNode",
+    "member": "constructor",
+    "expr": "new PannerNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "panningModel",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.panningModel; })()",
+    "expected": "equalpower",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "panningModel",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.panningModel); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "positionX",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.positionX); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "positionY",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.positionY); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "positionZ",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.positionZ); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "orientationX",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.orientationX); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "orientationY",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.orientationY); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "orientationZ",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.orientationZ); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "distanceModel",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.distanceModel; })()",
+    "expected": "inverse",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "distanceModel",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.distanceModel); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "refDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.refDistance; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "refDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.refDistance = 1, o.refDistance); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "maxDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.maxDistance; })()",
+    "expected": 10000,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "maxDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.maxDistance = 1, o.maxDistance); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "rolloffFactor",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.rolloffFactor; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "rolloffFactor",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.rolloffFactor = 1, o.rolloffFactor); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneInnerAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.coneInnerAngle; })()",
+    "expected": 360,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneInnerAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneInnerAngle = 1, o.coneInnerAngle); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.coneOuterAngle; })()",
+    "expected": 360,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneOuterAngle = 1, o.coneOuterAngle); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterGain",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.coneOuterGain; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterGain",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneOuterGain = 1, o.coneOuterGain); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "setPosition",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.setPosition(1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "setPosition",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.setPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "setOrientation",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.setOrientation(1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "setOrientation",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return o.setOrientation(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "refDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.refDistance = \"1\", o.refDistance); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "maxDistance",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.maxDistance = \"1\", o.maxDistance); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "rolloffFactor",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.rolloffFactor = \"1\", o.rolloffFactor); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneInnerAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneInnerAngle = \"1\", o.coneInnerAngle); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterAngle",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneOuterAngle = \"1\", o.coneOuterAngle); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PannerNode",
+    "member": "coneOuterGain",
+    "expr": "(() => { const o = new PannerNode(new OfflineAudioContext(1, 1, 44100)); return (o.coneOuterGain = \"1\", o.coneOuterGain); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

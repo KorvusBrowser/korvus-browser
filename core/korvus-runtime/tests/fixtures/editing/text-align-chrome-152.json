@@ -1,0 +1,38 @@
+[
+ [
+  "ul li",
+  "start"
+ ],
+ [
+  "ul center li",
+  "center"
+ ],
+ [
+  "rtl ul li",
+  "start"
+ ],
+ [
+  "rtl start parent, li ltr",
+  "start"
+ ],
+ [
+  "end parent",
+  "end"
+ ],
+ [
+  "explicit match-parent",
+  "right"
+ ],
+ [
+  "th",
+  "center"
+ ],
+ [
+  "th in center",
+  "center"
+ ],
+ [
+  "inline start",
+  "start"
+ ]
+]

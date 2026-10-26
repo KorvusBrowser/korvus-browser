@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "EventSource",
+    "member": "CONNECTING",
+    "expr": "EventSource.CONNECTING",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "OPEN",
+    "expr": "EventSource.OPEN",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "CLOSED",
+    "expr": "EventSource.CLOSED",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "constructor",
+    "expr": "(() => { const o = new EventSource(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object EventSource]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "constructor",
+    "expr": "(() => { const o = new EventSource(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "withCredentials",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.withCredentials; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "readyState",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.readyState; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onopen",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.onopen; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onmessage",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onerror",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "close",
+    "expr": "(() => { const o = new EventSource(\"x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onopen",
+    "expr": "(() => { const o = new EventSource(\"x\"); return Object.prototype.toString.call(o.onopen); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onmessage",
+    "expr": "(() => { const o = new EventSource(\"x\"); return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventSource",
+    "member": "onerror",
+    "expr": "(() => { const o = new EventSource(\"x\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

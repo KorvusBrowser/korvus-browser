@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "StorageAccessHandle",
+    "member": "constructor",
+    "expr": "new StorageAccessHandle()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "RTCErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCErrorEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCErrorEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCErrorEvent",
+    "member": "error",
+    "expr": "(() => { const o = new RTCErrorEvent(\"x\", { error: new RTCError({ errorDetail: \"data-channel-failure\" }) }); return Object.prototype.toString.call(o.error); })()",
+    "expected": "[object RTCError]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

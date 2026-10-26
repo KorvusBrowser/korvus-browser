@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_UNKNOWN",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_NONE",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_NONE",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMINYMIN",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMIN",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMIDYMIN",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMIN",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMAXYMIN",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMIN",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMINYMID",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMID",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMIDYMID",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMID",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMAXYMID",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMID",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMINYMAX",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMINYMAX",
+    "expected": 8,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMIDYMAX",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMIDYMAX",
+    "expected": 9,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_PRESERVEASPECTRATIO_XMAXYMAX",
+    "expr": "SVGPreserveAspectRatio.SVG_PRESERVEASPECTRATIO_XMAXYMAX",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_MEETORSLICE_UNKNOWN",
+    "expr": "SVGPreserveAspectRatio.SVG_MEETORSLICE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_MEETORSLICE_MEET",
+    "expr": "SVGPreserveAspectRatio.SVG_MEETORSLICE_MEET",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "SVG_MEETORSLICE_SLICE",
+    "expr": "SVGPreserveAspectRatio.SVG_MEETORSLICE_SLICE",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "constructor",
+    "expr": "new SVGPreserveAspectRatio()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "align",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return o.align; })()",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "align",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return (o.align = 1, o.align); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "meetOrSlice",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return o.meetOrSlice; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "meetOrSlice",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return (o.meetOrSlice = 1, o.meetOrSlice); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "align",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return (o.align = \"1\", o.align); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPreserveAspectRatio",
+    "member": "meetOrSlice",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").preserveAspectRatio.baseVal; return (o.meetOrSlice = \"1\", o.meetOrSlice); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

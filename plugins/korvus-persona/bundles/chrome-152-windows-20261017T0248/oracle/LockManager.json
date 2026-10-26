@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "LockManager",
+    "member": "constructor",
+    "expr": "new LockManager()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

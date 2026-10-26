@@ -1,0 +1,261 @@
+[
+  {
+    "iface": "Request",
+    "member": "constructor",
+    "expr": "new Request()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "method",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.method; })()",
+    "expected": "GET",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "url",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.url; })()",
+    "expected": "http://x/a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "destination",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.destination; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "referrer",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.referrer; })()",
+    "expected": "about:client",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.referrerPolicy; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "mode",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.mode; })()",
+    "expected": "cors",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "credentials",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.credentials; })()",
+    "expected": "same-origin",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "cache",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.cache; })()",
+    "expected": "default",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "redirect",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.redirect; })()",
+    "expected": "follow",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "integrity",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.integrity; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "keepalive",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.keepalive; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "isReloadNavigation",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.isReloadNavigation; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "isHistoryNavigation",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.isHistoryNavigation; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "duplex",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.duplex; })()",
+    "expected": "half",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "targetAddressSpace",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.targetAddressSpace; })()",
+    "expected": "unknown",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "body",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.body; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "bodyUsed",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return o.bodyUsed; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "headers",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.headers); })()",
+    "expected": "[object Headers]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "destination",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.destination); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.referrerPolicy); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "mode",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.mode); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "credentials",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.credentials); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "cache",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.cache); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "redirect",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.redirect); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "signal",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.signal); })()",
+    "expected": "[object AbortSignal]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "duplex",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.duplex); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "clone",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object Request]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "targetAddressSpace",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.targetAddressSpace); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "body",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.body); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "arrayBuffer",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.arrayBuffer()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "blob",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.blob()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "bytes",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.bytes()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "formData",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.formData()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "json",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.json()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "text",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.text()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Request",
+    "member": "textStream",
+    "expr": "(() => { const o = new Request(\"http://x/a\"); return Object.prototype.toString.call(o.textStream()); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

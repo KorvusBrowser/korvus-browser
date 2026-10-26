@@ -1,0 +1,21 @@
+<!doctype html><title>pending</title><body><div id="root"></div><script>
+const R = {}; const N = 20000;
+const time = (k, f) => { const t = performance.now(); try { f(); R[k] = Math.round(performance.now() - t); } catch (e) { R[k] = 'THROW ' + e.message; } };
+const root = document.getElementById('root');
+time('appendChild_attached_20k', () => { for (let i = 0; i < N; i++) { const d = document.createElement('div'); d.className = 'c' + (i % 7); d.textContent = 'item ' + i; root.appendChild(d); } });
+time('qsa_div_20k', () => { R.qsaLen = document.querySelectorAll('#root div.c3').length; });
+time('getElementsByTagName_live_loop_2k', () => { const live = document.getElementsByTagName('div'); let s = 0; for (let i = 0; i < 2000; i++) { root.appendChild(document.createElement('span')); s += live.length; } });
+time('textContent_read_all', () => { let s = 0; for (const d of root.children) s += d.textContent.length; R.tc = s; });
+time('classList_setAttribute_20k', () => { for (const d of root.children) { d.classList.add('x'); d.setAttribute('data-k', '1'); } });
+time('remove_all', () => { root.textContent = ''; });
+let html = ''; for (let i = 0; i < N; i++) html += '<li class="v"><a href="/v/' + i + '">Vendor ' + i + '</a><span>purpose</span></li>';
+time('innerHTML_20k_li', () => { root.innerHTML = '<ul>' + html + '</ul>'; });
+time('cloneNode_deep', () => { R.cloneLen = root.cloneNode(true).getElementsByTagName('*').length; });
+time('insertAdjacentHTML_2k', () => { root.textContent = ''; for (let i = 0; i < 2000; i++) root.insertAdjacentHTML('beforeend', '<div><b>x</b><i>y</i></div>'); });
+let mo = 0; const obs = new MutationObserver(r => { mo += r.length; }); obs.observe(root, {childList: true, subtree: true, attributes: true});
+time('append_with_MO_10k', () => { for (let i = 0; i < 10000; i++) root.appendChild(document.createElement('p')); });
+time('fragment_append_20k', () => { const f = document.createDocumentFragment(); for (let i = 0; i < N; i++) f.appendChild(document.createElement('em')); root.appendChild(f); });
+time('querySelector_in_loop_2k', () => { for (let i = 0; i < 2000; i++) document.querySelector('#root em:last-child'); });
+time('outerHTML_serialize', () => { R.htmlLen = document.documentElement.outerHTML.length; });
+document.title = JSON.stringify(R);
+</script>

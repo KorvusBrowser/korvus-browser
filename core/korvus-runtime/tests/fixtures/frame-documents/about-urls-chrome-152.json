@@ -1,0 +1,148 @@
+[
+ [
+  "modelContext in navigator",
+  [
+   false,
+   "undefined",
+   "[object Undefined]",
+   "undefined"
+  ]
+ ],
+ [
+  "battery",
+  [
+   "[object BatteryManager]",
+   true,
+   1,
+   0,
+   "Infinity",
+   "",
+   true,
+   "charging,chargingTime,dischargingTime,level,onchargingchange,onchargingtimechange,ondischargingtimechange,onlevelchange,constructor",
+   "function",
+   true
+  ]
+ ],
+ [
+  "srcdoc frame",
+  [
+   "about:srcdoc",
+   "about:srcdoc",
+   "about:srcdoc",
+   "ORIGIN/",
+   "ORIGIN",
+   "ORIGIN/",
+   "null",
+   "about:srcdoc",
+   "CSS1Compat",
+   "UTF-8",
+   "text/html"
+  ]
+ ],
+ [
+  "srcdoc frame sync",
+  [
+   "about:blank",
+   "about:blank",
+   "complete",
+   ""
+  ]
+ ],
+ [
+  "blank frame",
+  [
+   "about:blank",
+   "about:blank",
+   "ORIGIN/",
+   "ORIGIN",
+   "ORIGIN/"
+  ]
+ ],
+ [
+  "removed frame cs",
+  [
+   0,
+   "",
+   "",
+   "",
+   "",
+   null,
+   null,
+   "",
+   "",
+   "",
+   "",
+   737
+  ]
+ ],
+ [
+  "removed frame cs pseudo",
+  [
+   0,
+   "",
+   ""
+  ]
+ ],
+ [
+  "removed frame own window cs",
+  [
+   0,
+   ""
+  ]
+ ],
+ [
+  "cs taken before removal",
+  [
+   476,
+   "block",
+   0,
+   "",
+   null
+  ]
+ ],
+ [
+  "display none frame cs",
+  [
+   476,
+   "block",
+   "auto"
+  ]
+ ],
+ [
+  "createDocument element cs",
+  [
+   0,
+   "",
+   "",
+   ""
+  ]
+ ],
+ [
+  "DOMParser doc cs",
+  [
+   0,
+   "",
+   ""
+  ]
+ ],
+ [
+  "template content cs",
+  [
+   0,
+   ""
+  ]
+ ],
+ [
+  "detached cs",
+  [
+   0,
+   "",
+   "",
+   ""
+  ]
+ ],
+ [
+  "not element",
+  "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'."
+ ]
+]

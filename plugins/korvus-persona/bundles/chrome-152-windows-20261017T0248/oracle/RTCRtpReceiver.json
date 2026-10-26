@@ -1,0 +1,122 @@
+[
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getCapabilities",
+    "expr": "RTCRtpReceiver.getCapabilities(\"x\")",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "constructor",
+    "expr": "new RTCRtpReceiver()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "transform",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return o.transform; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "transport",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return o.transport; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getContributingSources",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return o.getContributingSources(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getSynchronizationSources",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return o.getSynchronizationSources(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "jitterBufferTarget",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return o.jitterBufferTarget; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getCapabilities",
+    "expr": "Object.prototype.toString.call(RTCRtpReceiver.getCapabilities(\"x\"))",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "transform",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.transform); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "track",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.track); })()",
+    "expected": "[object MediaStreamTrack]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "transport",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.transport); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getParameters",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.getParameters()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getContributingSources",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.getContributingSources()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getSynchronizationSources",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.getSynchronizationSources()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getStats",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.getStats()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "jitterBufferTarget",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(o.jitterBufferTarget); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpReceiver",
+    "member": "getStats",
+    "expr": "(async () => { const o = new RTCPeerConnection().addTransceiver(\"audio\").receiver; return Object.prototype.toString.call(await o.getStats()); })()",
+    "expected": "[object RTCStatsReport]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

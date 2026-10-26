@@ -1,0 +1,16 @@
+<!doctype html><body><script>
+window.__r=[];
+const mk = (name, src) => { const u = URL.createObjectURL(new Blob([src],{type:'text/javascript'})); const w = new Worker(u);
+  w.onmessage = e => window.__r.push(name + ' msg: ' + e.data);
+  w.onerror = e => window.__r.push(name + ' page onerror: ' + JSON.stringify([e.message, e.filename === u ? 'URL' : e.filename, e.lineno, e.colno, String(e.error)])); return w; };
+// P1 top-level throw, with a timer armed BEFORE it and a message handler
+mk('P1', `setTimeout(() => postMessage('timer after top-level throw'), 50); onmessage = e => postMessage('echo ' + e.data); throw new TypeError('top')`).postMessage('hi');
+// P2 unhandled rejection, then a timer
+mk('P2', `self.addEventListener('unhandledrejection', e => postMessage('unhandledrejection: ' + e.reason.message)); Promise.reject(new Error('rej')); setTimeout(() => postMessage('timer after rejection'), 50)`);
+// P2b unhandled rejection, no listener
+mk('P2b', `Promise.reject(new Error('rej2')); setTimeout(() => postMessage('timer after unlistened rejection'), 50)`);
+// P3 throw in a timer
+mk('P3', `self.onerror = (m, f, l, c, e) => { postMessage('self.onerror ' + JSON.stringify([m, f.slice(0, 5), l, c, e && e.message])) }; setTimeout(() => { throw new Error('later') }, 20); setTimeout(() => postMessage('still alive'), 60)`);
+// P4 throw in onmessage, return true from onerror (handled -> no page event)
+mk('P4', `self.onerror = () => true; onmessage = () => { throw new Error('in onmessage') }; setTimeout(() => postMessage('alive'), 60)`).postMessage(1);
+</script>

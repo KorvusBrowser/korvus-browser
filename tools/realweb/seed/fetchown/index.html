@@ -1,0 +1,19 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B10: Headers and FormData are this engine's own classes (not deno_core op2 classes).
+const t = (f) => { try { const v = f(); return typeof v + ':' + String(v); } catch (e) { return e.name + ': ' + e.message + (e.code !== undefined ? ' [code ' + e.code + ']' : ''); } };
+window.R = JSON.stringify({
+  hGetForeign: t(() => Headers.prototype.get.call({}, 'a')),
+  hAppendCreated: t(() => Headers.prototype.append.call(Object.create(Headers.prototype), 'a', 'b')),
+  hHasOther: t(() => Headers.prototype.has.call(new FormData(), 'a')),
+  fGetForeign: t(() => FormData.prototype.get.call({}, 'a')),
+  fGetAllCreated: t(() => FormData.prototype.getAll.call(Object.create(FormData.prototype), 'a')),
+  fSetOther: t(() => FormData.prototype.set.call(new Headers(), 'a', 'b')),
+  hBasic: t(() => { const h = new Headers([['A', '1']]); h.append('b', '2'); h.set('a', '3'); return [...h].join(';') + '|' + h.get('A') + '|' + h.has('c'); }),
+  hFromObject: t(() => [...new Headers(new Headers({ x: 'y' }))].join()),
+  hCookie: t(() => { const h = new Headers(); h.append('Set-Cookie', 'a=1'); h.append('set-cookie', 'b=2'); return h.getSetCookie().join(); }),
+  fBasic: t(() => { const f = new FormData(); f.append('k', 'v1'); f.append('k', 'v2'); f.set('j', 'w'); return f.getAll('k').join() + '|' + f.get('j') + '|' + f.has('z') + '|' + [...f.keys()].join(); }),
+  noNew: t(() => Headers()),
+  noNewForm: t(() => FormData()),
+  protoLast: t(() => Object.getOwnPropertyNames(Headers.prototype).slice(-2).join()),
+});
+</script>

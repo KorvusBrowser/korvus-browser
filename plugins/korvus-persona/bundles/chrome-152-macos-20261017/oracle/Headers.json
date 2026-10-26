@@ -1,0 +1,205 @@
+[
+  {
+    "iface": "Headers",
+    "member": "append",
+    "expr": "(() => { const h = new Headers(); h.append('X-A', '1'); return h.get('x-a'); })()",
+    "expected": "1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "append",
+    "expr": "(() => { const h = new Headers(); h.append('X-A', '1'); h.append('x-a', '2'); return h.get('X-A'); })()",
+    "expected": "1, 2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "append",
+    "expr": "(() => { const h = new Headers([['a','1'],['b','2'],['a','3']]); return h.get('a'); })()",
+    "expected": "1, 3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "delete",
+    "expr": "(() => { const h = new Headers(); h.append('X-A','1'); h.append('X-A','2'); h.delete('x-a'); return String(h.has('X-A')); })()",
+    "expected": "false",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "get",
+    "expr": "(() => { const h = new Headers({'X-A':'1'}); return h.get('x-a'); })()",
+    "expected": "1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "get",
+    "expr": "(() => { const h = new Headers(); return h.get('nope'); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "get",
+    "expr": "(() => { const h = new Headers([['a','1'],['a','2']]); return h.get('A'); })()",
+    "expected": "1, 2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "getSetCookie",
+    "expr": "(() => { const h = new Headers(); return h.getSetCookie().length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "getSetCookie",
+    "expr": "(() => { const h = new Headers(); h.append('Set-Cookie','a=1'); h.append('set-cookie','b=2'); h.append('X-Other','3'); return h.getSetCookie().join('|'); })()",
+    "expected": "a=1|b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "getSetCookie",
+    "expr": "(() => { const h = new Headers(); h.append('Set-Cookie','a=1'); h.append('Set-Cookie','b=2'); return h.get('set-cookie'); })()",
+    "expected": "a=1, b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "has",
+    "expr": "(() => { const h = new Headers({'X-A':'1'}); return h.has('x-a') + ',' + h.has('x-b'); })()",
+    "expected": "true,false",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "set",
+    "expr": "(() => { const h = new Headers(); h.append('X-A','1'); h.append('X-A','2'); h.set('x-a','3'); return h.get('X-A'); })()",
+    "expected": "3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "forEach",
+    "expr": "(() => { const h = new Headers([['a','1'],['b','2']]); const out = []; h.forEach((v,k) => out.push(k + '=' + v)); return out.join(';'); })()",
+    "expected": "a=1;b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "keys",
+    "expr": "(() => { const h = new Headers([['a','1'],['b','2']]); return [...h.keys()].join(','); })()",
+    "expected": "a,b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "values",
+    "expr": "(() => { const h = new Headers([['a','1'],['b','2']]); return [...h.values()].join(','); })()",
+    "expected": "1,2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "entries",
+    "expr": "(() => { const h = new Headers([['a','1'],['b','2']]); return [...h.entries()].map(p => p.join('=')).join(';'); })()",
+    "expected": "a=1;b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "entries",
+    "expr": "(() => { const h = new Headers([['a','1']]); return [...h][0].join('='); })()",
+    "expected": "a=1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "constructor",
+    "expr": "(() => { const o = new Headers(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Headers]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "append",
+    "expr": "(() => { const o = new Headers(); return o.append(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "append",
+    "expr": "(() => { const o = new Headers(); return o.append(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "delete",
+    "expr": "(() => { const o = new Headers(); return o.delete(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "delete",
+    "expr": "(() => { const o = new Headers(); return o.delete(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "get",
+    "expr": "(() => { const o = new Headers(); return o.get(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "get",
+    "expr": "(() => { const o = new Headers(); return o.get(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "getSetCookie",
+    "expr": "(() => { const o = new Headers(); return o.getSetCookie(); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "has",
+    "expr": "(() => { const o = new Headers(); return o.has(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "has",
+    "expr": "(() => { const o = new Headers(); return o.has(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "set",
+    "expr": "(() => { const o = new Headers(); return o.set(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Headers",
+    "member": "set",
+    "expr": "(() => { const o = new Headers(); return o.set(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

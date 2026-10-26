@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+setTimeout(function () {}, 4000);
+var made = performance.now();
+addEventListener('message', function (e) {
+  if (e.data === 'ask-busy') { e.source.postMessage('busy', '*'); return; }
+  var long = performance.getEntries().filter(function (x) { return x.entryType === 'long-animation-frame' && x.startTime > made && x.duration >= 70; }).length;
+  window.__report = JSON.stringify([JSON.parse(e.data), ['page-long-frames', long]]);
+  fetch('/report', {method: 'POST', body: window.__report});
+});
+var f = document.createElement('iframe');
+f.src = 'http://localhost:' + location.port + '/f';
+document.body.appendChild(f);
+</script></body></html>

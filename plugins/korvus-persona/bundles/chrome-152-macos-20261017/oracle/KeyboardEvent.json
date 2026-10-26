@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "KeyboardEvent",
+    "member": "DOM_KEY_LOCATION_STANDARD",
+    "expr": "KeyboardEvent.DOM_KEY_LOCATION_STANDARD",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "DOM_KEY_LOCATION_LEFT",
+    "expr": "KeyboardEvent.DOM_KEY_LOCATION_LEFT",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "DOM_KEY_LOCATION_RIGHT",
+    "expr": "KeyboardEvent.DOM_KEY_LOCATION_RIGHT",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "DOM_KEY_LOCATION_NUMPAD",
+    "expr": "KeyboardEvent.DOM_KEY_LOCATION_NUMPAD",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object KeyboardEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new KeyboardEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "key",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.key; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "code",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.code; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "location",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.location; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "ctrlKey",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.ctrlKey; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "shiftKey",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.shiftKey; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "altKey",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.altKey; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "metaKey",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.metaKey; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "repeat",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.repeat; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "isComposing",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.isComposing; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.getModifierState(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.getModifierState(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "initKeyboardEvent",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.initKeyboardEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "initKeyboardEvent",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.initKeyboardEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "charCode",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.charCode; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "KeyboardEvent",
+    "member": "keyCode",
+    "expr": "(() => { const o = new KeyboardEvent(\"x\"); return o.keyCode; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  }
+]

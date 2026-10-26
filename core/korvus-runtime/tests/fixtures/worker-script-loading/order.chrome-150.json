@@ -1,0 +1,26 @@
+[
+[
+"blob classic",
+"request none",
+"origin +150",
+"first statement at once"
+],
+[
+"URL classic",
+"request +0",
+"origin +300",
+"first statement at once"
+],
+[
+"URL module",
+"request +0",
+"origin +300",
+"first statement at once"
+],
+[
+"SharedWorker URL",
+"request +0",
+"origin +300",
+"first statement at once"
+]
+]

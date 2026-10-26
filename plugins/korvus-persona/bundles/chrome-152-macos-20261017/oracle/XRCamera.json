@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "XRCamera",
+    "member": "constructor",
+    "expr": "new XRCamera()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "width",
+    "expr": "XRCamera.prototype.width",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(XRCamera.prototype, \"width\").get.call(Object.create(XRCamera.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "height",
+    "expr": "XRCamera.prototype.height",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(XRCamera.prototype, \"height\").get.call(Object.create(XRCamera.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCamera.prototype, \"width\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCamera.prototype, \"width\").get.call(Object.create(XRCamera.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCamera.prototype, \"height\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCamera",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCamera.prototype, \"height\").get.call(Object.create(XRCamera.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

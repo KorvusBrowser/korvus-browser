@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPUPipelineError",
+    "member": "constructor",
+    "expr": "(() => { const o = new GPUPipelineError(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "reason",
+    "expr": "(() => { const o = new GPUPipelineError(\"m\", { reason: \"validation\" }); return o.reason; })()",
+    "expected": "validation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "constructor",
+    "expr": "new GPUPipelineError()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "constructor",
+    "expr": "new GPUPipelineError(\"m\", {reason:\"bogus\"})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "constructor",
+    "expr": "new GPUPipelineError(\"m\", {reason:\"validation\"}) instanceof DOMException",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "constructor",
+    "expr": "new GPUPipelineError(\"m\", {reason:\"validation\"}).name",
+    "expected": "GPUPipelineError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "reason",
+    "expr": "new GPUPipelineError(\"m\", {reason:\"internal\"}).reason",
+    "expected": "internal",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineError",
+    "member": "reason",
+    "expr": "new GPUPipelineError(\"m\", {reason:\"validation\"}).message",
+    "expected": "m",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

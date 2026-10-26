@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "TrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TrackEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TrackEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TrackEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TrackEvent",
+    "member": "track",
+    "expr": "(() => { const o = new TrackEvent(\"x\"); return o.track; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

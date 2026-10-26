@@ -1,0 +1,13 @@
+<!doctype html><body><script>
+window.__r=[];
+const modUrl = URL.createObjectURL(new Blob(['export const v = "mod ok";'],{type:'text/javascript'}));
+const src = `onmessage = async e => {
+  const own = URL.createObjectURL(new Blob(['export const v = "own ok";'],{type:'text/javascript'}));
+  for (const u of [own, e.data, 'data:text/javascript,export const v = "data ok"']) {
+    try { const m = await import(u); postMessage('import: ' + m.v) } catch (x) { postMessage('import failed: ' + x.name + ': ' + x.message) }
+  }
+}`;
+const w = new Worker(URL.createObjectURL(new Blob([src],{type:'text/javascript'})));
+w.onmessage = e => window.__r.push(e.data);
+w.postMessage(modUrl);
+</script>

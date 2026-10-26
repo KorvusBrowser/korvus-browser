@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Bluetooth",
+    "member": "constructor",
+    "expr": "new Bluetooth()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

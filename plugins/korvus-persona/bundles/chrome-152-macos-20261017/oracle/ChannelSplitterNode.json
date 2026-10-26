@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "ChannelSplitterNode",
+    "member": "constructor",
+    "expr": "new ChannelSplitterNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

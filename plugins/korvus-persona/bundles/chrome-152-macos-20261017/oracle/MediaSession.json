@@ -1,0 +1,162 @@
+[
+  {
+    "iface": "MediaSession",
+    "member": "constructor",
+    "expr": "new MediaSession()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "metadata",
+    "expr": "(() => { const o = navigator.mediaSession; return o.metadata; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "playbackState",
+    "expr": "(() => { const o = navigator.mediaSession; return o.playbackState; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setActionHandler",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setActionHandler(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setPositionState",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setPositionState(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setMicrophoneActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setMicrophoneActive(true); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setMicrophoneActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setMicrophoneActive(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setCameraActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setCameraActive(true); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setCameraActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setCameraActive(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setScreenshareActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setScreenshareActive(true); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setScreenshareActive",
+    "expr": "(() => { const o = navigator.mediaSession; return o.setScreenshareActive(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "metadata",
+    "expr": "(() => { const o = navigator.mediaSession; return Object.prototype.toString.call(o.metadata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "playbackState",
+    "expr": "(() => { const o = navigator.mediaSession; return Object.prototype.toString.call(o.playbackState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setMicrophoneActive",
+    "expr": "(() => { const o = navigator.mediaSession; return Object.prototype.toString.call(o.setMicrophoneActive(true)); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setMicrophoneActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setMicrophoneActive(true); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setMicrophoneActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setMicrophoneActive(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setCameraActive",
+    "expr": "(() => { const o = navigator.mediaSession; return Object.prototype.toString.call(o.setCameraActive(true)); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setCameraActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setCameraActive(true); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setCameraActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setCameraActive(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setScreenshareActive",
+    "expr": "(() => { const o = navigator.mediaSession; return Object.prototype.toString.call(o.setScreenshareActive(true)); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setScreenshareActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setScreenshareActive(true); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaSession",
+    "member": "setScreenshareActive",
+    "expr": "(async () => { const o = navigator.mediaSession; return await o.setScreenshareActive(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

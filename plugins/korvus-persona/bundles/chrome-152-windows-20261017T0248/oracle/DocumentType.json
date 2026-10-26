@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "DocumentType",
+    "member": "constructor",
+    "expr": "new DocumentType()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "name",
+    "expr": "(() => { const o = document.doctype; return o.name; })()",
+    "expected": "html",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "publicId",
+    "expr": "(() => { const o = document.doctype; return o.publicId; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "systemId",
+    "expr": "(() => { const o = document.doctype; return o.systemId; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "before",
+    "expr": "(() => { const o = document.doctype; return o.before(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "after",
+    "expr": "(() => { const o = document.doctype; return o.after(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "replaceWith",
+    "expr": "(() => { const o = document.doctype; return o.replaceWith(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DocumentType",
+    "member": "remove",
+    "expr": "(() => { const o = document.doctype; return o.remove(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,6 @@
+[
+ "[\"Uncaught Error: page top\",\"/perr.html\",5,22]",
+ "[\"Uncaught prim\",\"/perr.html\",6,11]",
+ "[\"Uncaught RangeError: built in g\",\"/perr.html\",7,64]",
+ "[\"Uncaught SyntaxError: Unexpected token ';'\",\"/perr.html\",8,18]"
+]

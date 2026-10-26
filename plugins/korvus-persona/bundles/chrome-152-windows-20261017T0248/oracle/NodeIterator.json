@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "NodeIterator",
+    "member": "constructor",
+    "expr": "new NodeIterator()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "pointerBeforeReferenceNode",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return o.pointerBeforeReferenceNode; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "whatToShow",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return o.whatToShow; })()",
+    "expected": 4294967295,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "filter",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return o.filter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "previousNode",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return o.previousNode(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "detach",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return o.detach(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "root",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return Object.prototype.toString.call(o.root); })()",
+    "expected": "[object HTMLHtmlElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "referenceNode",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return Object.prototype.toString.call(o.referenceNode); })()",
+    "expected": "[object HTMLHtmlElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "filter",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return Object.prototype.toString.call(o.filter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "nextNode",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return Object.prototype.toString.call(o.nextNode()); })()",
+    "expected": "[object HTMLHtmlElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "NodeIterator",
+    "member": "previousNode",
+    "expr": "(() => { const o = document.createNodeIterator(document.documentElement); return Object.prototype.toString.call(o.previousNode()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

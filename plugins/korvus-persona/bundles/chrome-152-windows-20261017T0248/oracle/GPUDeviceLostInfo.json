@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "constructor",
+    "expr": "new GPUDeviceLostInfo()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "reason",
+    "expr": "GPUDeviceLostInfo.prototype.reason",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "reason",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"reason\").get.call(Object.create(GPUDeviceLostInfo.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "message",
+    "expr": "GPUDeviceLostInfo.prototype.message",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "message",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"message\").get.call(Object.create(GPUDeviceLostInfo.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "reason",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"reason\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "reason",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"reason\").get.call(Object.create(GPUDeviceLostInfo.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "message",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"message\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUDeviceLostInfo",
+    "member": "message",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDeviceLostInfo.prototype, \"message\").get.call(Object.create(GPUDeviceLostInfo.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,13 @@
+<!doctype html><title>frame-b</title><body><script>
+function probe(w) {
+  var o = {};
+  try { o.evalType = typeof w.parent.eval; } catch (e) { o.evalType = e.name; }
+  try { o.title = w.parent.document.title; } catch (e) { o.title = e.name; }
+  try { o.origin = w.location.origin + '|' + w.origin; } catch (e) { o.origin = e.name; }
+  return o;
+}
+window.report = function (k, v) { top.postMessage({ k: k, v: v }, '*'); };
+var a = document.createElement('iframe'); document.body.appendChild(a);
+a.contentDocument.open(); a.contentDocument.write('<script>parent.report("blank", parent.probe(window))<\/script>'); a.contentDocument.close();
+var s = document.createElement('iframe'); s.srcdoc = '<script>parent.report("srcdoc", parent.probe(window))<\/script>'; document.body.appendChild(s);
+</script>

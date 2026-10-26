@@ -1,0 +1,9 @@
+<!doctype html><title>inline resolved</title>
+<style>.k{padding-left:24px;margin-left:5px;padding-top:3px;border-left:2px solid} .ib{display:inline-block;padding-left:4%;width:50px}</style>
+<div style="width:500px"><p><span class=k id=s>span</span> <b class=k id=b style="padding-right:7%;margin-right:3%">bold</b> <i class=ib id=ib>ib</i> <a class=k id=a href="#"><em class=k id=em>nested</em></a></p>
+<div class=k id=d style="padding-right:10%">block</div></div>
+<script>
+const P = ['paddingLeft', 'paddingTop', 'paddingRight', 'marginLeft', 'marginRight', 'width', 'borderLeftWidth'];
+window.R = {};
+for (const id of ['s', 'b', 'ib', 'a', 'em', 'd']) { const c = getComputedStyle(document.getElementById(id)); R[id] = P.map(p => c[p]).join('/'); }
+</script>

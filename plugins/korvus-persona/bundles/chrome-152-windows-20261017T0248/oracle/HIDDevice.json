@@ -1,0 +1,387 @@
+[
+  {
+    "iface": "HIDDevice",
+    "member": "constructor",
+    "expr": "new HIDDevice()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "HIDDevice.prototype.oninputreport",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "opened",
+    "expr": "HIDDevice.prototype.opened",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "opened",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"opened\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "vendorId",
+    "expr": "HIDDevice.prototype.vendorId",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "vendorId",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"vendorId\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productId",
+    "expr": "HIDDevice.prototype.productId",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productId",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productId\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productName",
+    "expr": "HIDDevice.prototype.productName",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productName",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productName\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "collections",
+    "expr": "HIDDevice.prototype.collections",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "collections",
+    "expr": "Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"collections\").get.call(Object.create(HIDDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.close.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.close.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.forget.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.forget.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.open.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.open.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "receiveFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.receiveFeatureReport.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "receiveFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.receiveFeatureReport.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendFeatureReport.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendFeatureReport.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendReport.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendReport.call(Object.create(HIDDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "receiveFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.receiveFeatureReport.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendFeatureReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendFeatureReport.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendReport",
+    "expr": "Object.prototype.toString.call(HIDDevice.prototype.sendReport.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "oninputreport",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"oninputreport\").set.call(Object.create(HIDDevice.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "opened",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"opened\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "opened",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"opened\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "vendorId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"vendorId\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "vendorId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"vendorId\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productId\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productId\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productName\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "productName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"productName\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "collections",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"collections\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "collections",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDDevice.prototype, \"collections\").get.call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "close",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"close\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "close",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"close\"].call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "forget",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"forget\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "forget",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"forget\"].call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "open",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"open\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "open",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"open\"].call(Object.create(HIDDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "receiveFeatureReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"receiveFeatureReport\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "receiveFeatureReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"receiveFeatureReport\"].call(Object.create(HIDDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendFeatureReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"sendFeatureReport\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendFeatureReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"sendFeatureReport\"].call(Object.create(HIDDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"sendReport\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDDevice",
+    "member": "sendReport",
+    "expr": "(() => { try { const v = HIDDevice.prototype[\"sendReport\"].call(Object.create(HIDDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

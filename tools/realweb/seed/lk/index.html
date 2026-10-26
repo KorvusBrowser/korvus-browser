@@ -1,0 +1,10 @@
+<!doctype html><meta charset=utf-8><script>window.R=null;(async function(){var L=[];
+<!-- H14: Web Locks semantics (supabase.com: a lock re-requested with ifAvailable right after its request settled read null, "immediately failed"); values are stock Chrome 150s. -->
+await navigator.locks.request('a',{mode:'exclusive',ifAvailable:true},function(l){L.push('ifAvail:'+(l&&l.name+'/'+l.mode));});
+await navigator.locks.request('b',{mode:'exclusive',ifAvailable:true},async function(l){L.push('b1:'+(l&&l.name)); await navigator.locks.request('b',{ifAvailable:true},function(l2){L.push('b2 while held:'+(l2===null?'null':l2.name))});});
+await navigator.locks.request('c',function(l){L.push('c:'+l.name)});
+await navigator.locks.request('c',{ifAvailable:true},function(l){L.push('c again:'+(l&&l.name))});
+var q=await navigator.locks.query();L.push('query held='+q.held.length+' pending='+q.pending.length);
+var ac=new AbortController();ac.abort();try{await navigator.locks.request('d',{signal:ac.signal},function(){})}catch(e){L.push('abort:'+e.name)}
+try{await navigator.locks.request('e',{steal:true,ifAvailable:true},function(){})}catch(e){L.push('steal+if:'+e.name)}
+R=L.join(' | ')})();</script>

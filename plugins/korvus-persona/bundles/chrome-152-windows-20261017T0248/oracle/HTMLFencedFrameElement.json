@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "HTMLFencedFrameElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLFencedFrameElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFencedFrameElement",
+    "member": "constructor",
+    "expr": "new HTMLFencedFrameElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

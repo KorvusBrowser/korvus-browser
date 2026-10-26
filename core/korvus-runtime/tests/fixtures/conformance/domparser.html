@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<script src="testing.js"></script>
+<body></body>
+
+<script id=basic>
+{
+  {
+    const parser = new DOMParser();
+    testing.expectEqual('object', typeof parser);
+    testing.expectEqual('function', typeof parser.parseFromString);
+  }
+
+  {
+    const parser = new DOMParser();
+    let d = parser.parseFromString('', 'text/xml');
+    // Chrome 150 makes `<html xmlns=XHTML><body><parsererror style=...><h3>This page contains the following errors:</h3>
+    // <div ...>error on line 1 at column 1: Document is empty</div>...` -- libxml2's message, which this engine's XML
+    // parser does not produce; what both make is one `parsererror` element.
+    testing.expectEqual(1, d.getElementsByTagName('parsererror').length);
+  }
+}
+</script>
+
+<script id=parseSimpleHTML>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div>Hello World</div>', 'text/html');
+
+  testing.expectEqual('object', typeof doc);
+  testing.expectEqual('[object HTMLDocument]', doc.toString());
+
+  const div = doc.querySelector('div');
+  testing.expectEqual('DIV', div.tagName);
+  testing.expectEqual('Hello World', div.textContent);
+}
+</script>
+
+<script id=parseWithAttributes>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="test" class="foo">Content</div>', 'text/html');
+
+  const div = doc.querySelector('div');
+  testing.expectEqual('test', div.id);
+  testing.expectEqual('foo', div.className);
+  testing.expectEqual('Content', div.textContent);
+}
+</script>
+
+<script id=parseMultipleElements>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div>First</div><span>Second</span>', 'text/html');
+
+  const div = doc.querySelector('div');
+  const span = doc.querySelector('span');
+
+  testing.expectEqual('DIV', div.tagName);
+  testing.expectEqual('First', div.textContent);
+  testing.expectEqual('SPAN', span.tagName);
+  testing.expectEqual('Second', span.textContent);
+}
+</script>
+
+<script id=parseNestedElements>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div><p><span>Nested</span></p></div>', 'text/html');
+
+  const div = doc.querySelector('div');
+  const p = doc.querySelector('p');
+  const span = doc.querySelector('span');
+
+  testing.expectEqual('DIV', div.tagName);
+  testing.expectEqual('P', p.tagName);
+  testing.expectEqual('SPAN', span.tagName);
+  testing.expectEqual('Nested', span.textContent);
+  testing.expectEqual(p, div.firstChild);
+  testing.expectEqual(span, p.firstChild);
+}
+</script>
+
+<script id=parseEmptyString>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('', 'text/html');
+
+  testing.expectEqual('object', typeof doc);
+  testing.expectEqual('[object HTMLDocument]', doc.toString());
+}
+</script>
+
+<script id=parsedDocumentIsIndependent>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="parsed">Parsed</div>', 'text/html');
+
+  // The parsed document should be independent from the current document
+  const currentDiv = document.querySelector('div');
+  const parsedDiv = doc.querySelector('div');
+
+  testing.expectEqual(null, currentDiv);
+  testing.expectEqual('parsed', parsedDiv.id);
+  testing.expectEqual('Parsed', parsedDiv.textContent);
+}
+</script>
+
+<script id=malformedHTMLDoesNotThrow>
+{
+  const parser = new DOMParser();
+
+  // HTML parsers should be forgiving and not throw on malformed HTML
+  const doc1 = parser.parseFromString('<div><p>unclosed', 'text/html');
+  testing.expectEqual('object', typeof doc1);
+
+  const doc2 = parser.parseFromString('<<<invalid>>>', 'text/html');
+  testing.expectEqual('object', typeof doc2);
+}
+</script>
+
+<script id=getElementById>
+{
+  const doc = new DOMParser().parseFromString('<div id="new-node">new-node</div>', 'text/html');
+  testing.expectEqual('new-node', doc.getElementById('new-node').textContent);
+}
+</script>
+
+<script id=getElementById_isolationBetweenDocuments>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="shared-id">From parsed doc</div>', 'text/html');
+
+  // Create element with same ID in main document
+  const mainEl = document.createElement('div');
+  mainEl.id = 'shared-id';
+  mainEl.textContent = 'From main doc';
+  document.body.appendChild(mainEl);
+
+  // Each document should find its own element
+  const mainFound = document.getElementById('shared-id');
+  testing.expectEqual('From main doc', mainFound.textContent);
+
+  const parsedFound = doc.getElementById('shared-id');
+  testing.expectEqual('From parsed doc', parsedFound.textContent);
+
+  // Clean up
+  mainEl.remove();
+}
+</script>
+
+<script id=getElementById_afterSettingId>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div>No ID initially</div>', 'text/html');
+
+  const div = doc.querySelector('div');
+
+  // Should not find it yet
+  testing.expectEqual(null, doc.getElementById('new-id'));
+
+  // Set ID via JavaScript
+  div.id = 'new-id';
+
+  // Should now find it
+  const found = doc.getElementById('new-id');
+  testing.expectEqual(div, found);
+}
+</script>
+
+<script id=getElementById_afterRemovingId>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="remove-me">Content</div>', 'text/html');
+
+  // Should find it initially
+  const div = doc.getElementById('remove-me');
+  testing.expectEqual('Content', div.textContent);
+
+  // Remove the ID
+  div.removeAttribute('id');
+
+  // Should not find it anymore
+  testing.expectEqual(null, doc.getElementById('remove-me'));
+}
+</script>
+
+<script id=getElementById_afterChangingId>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="old-id">Content</div>', 'text/html');
+
+  const div = doc.querySelector('div');
+
+  // Change the ID
+  div.id = 'new-id';
+
+  // Should not find old ID
+  testing.expectEqual(null, doc.getElementById('old-id'));
+
+  // Should find new ID
+  const found = doc.getElementById('new-id');
+  testing.expectEqual(div, found);
+}
+</script>
+
+<script id=getElementById_detachedFromParsedDoc>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<div id="will-detach">Content</div>', 'text/html');
+
+  const div = doc.querySelector('div');
+
+  // Should find it while connected
+  testing.expectEqual(div, doc.getElementById('will-detach'));
+
+  // Remove it from the document
+  div.remove();
+
+  // Should not find it after removal
+  testing.expectEqual(null, doc.getElementById('will-detach'));
+}
+</script>
+
+<script id=getElementById_multipleDocuments>
+{
+  const parser = new DOMParser();
+  const doc1 = parser.parseFromString('<div id="doc1-el">Doc 1</div>', 'text/html');
+  const doc2 = parser.parseFromString('<div id="doc2-el">Doc 2</div>', 'text/html');
+
+  // Each document should only find its own element
+  testing.expectEqual('Doc 1', doc1.getElementById('doc1-el').textContent);
+  testing.expectEqual(null, doc1.getElementById('doc2-el'));
+
+  testing.expectEqual('Doc 2', doc2.getElementById('doc2-el').textContent);
+  testing.expectEqual(null, doc2.getElementById('doc1-el'));
+}
+</script>
+
+<script id=documentElement>
+  testing.expectEqual('', new DOMParser().parseFromString('', "text/html").documentElement.textContent);
+  testing.expectEqual('spice', new DOMParser().parseFromString('spice', "text/html").documentElement.textContent);
+  testing.expectEqual('<html><head></head><body>spice</body></html>', new DOMParser().parseFromString('spice', "text/html").documentElement.outerHTML);
+  testing.expectEqual('<html><head></head><body></body></html>', new DOMParser().parseFromString('<html></html>', "text/html").documentElement.outerHTML);
+</script>
+
+<script id=parse-xml>
+{
+  const sampleXML = `<?xml version="1.0"?>
+    <catalog>
+       <book id="bk101">
+          <author>Gambardella, Matthew</author>
+          <title>XML Developer's Guide</title>
+          <genre>Computer</genre>
+          <price>44.95</price>
+          <publish_date>2000-10-01</publish_date>
+          <description>An in-depth look at creating applications
+          with XML.</description>
+       </book>
+       <book id="bk102">
+          <author>Ralls, Kim</author>
+          <title>Midnight Rain</title>
+          <genre>Fantasy</genre>
+          <price>5.95</price>
+          <publish_date>2000-12-16</publish_date>
+          <description>A former architect battles corporate zombies,
+          an evil sorceress, and her own childhood to become queen
+          of the world.</description>
+       </book>
+       <book id="bk103">
+          <author>Corets, Eva</author>
+          <title>Maeve Ascendant</title>
+          <genre>Fantasy</genre>
+          <price>5.95</price>
+          <publish_date>2000-11-17</publish_date>
+          <description>After the collapse of a nanotechnology
+          society in England, the young survivors lay the
+          foundation for a new society.</description>
+       </book>
+       <book id="bk104">
+          <author>Corets, Eva</author>
+          <title>Oberon's Legacy</title>
+          <genre>Fantasy</genre>
+          <price>5.95</price>
+          <publish_date>2001-03-10</publish_date>
+          <description>In post-apocalypse England, the mysterious
+          agent known only as Oberon helps to create a new life
+          for the inhabitants of London. Sequel to Maeve
+          Ascendant.</description>
+       </book>
+       <book id="bk105">
+          <author>Corets, Eva</author>
+          <title>The Sundered Grail</title>
+          <genre>Fantasy</genre>
+          <price>5.95</price>
+          <publish_date>2001-09-10</publish_date>
+          <description>The two daughters of Maeve, half-sisters,
+          battle one another for control of England. Sequel to
+          Oberon's Legacy.</description>
+       </book>
+       <book id="bk106">
+          <author>Randall, Cynthia</author>
+          <title>Lover Birds</title>
+          <genre>Romance</genre>
+          <price>4.95</price>
+          <publish_date>2000-09-02</publish_date>
+          <description>When Carla meets Paul at an ornithology
+          conference, tempers fly as feathers get ruffled.</description>
+       </book>
+       <book id="bk107">
+          <author>Thurman, Paula</author>
+          <title>Splish Splash</title>
+          <genre>Romance</genre>
+          <price>4.95</price>
+          <publish_date>2000-11-02</publish_date>
+          <description>A deep sea diver finds true love twenty
+          thousand leagues beneath the sea.</description>
+       </book>
+       <book id="bk108">
+          <author>Knorr, Stefan</author>
+          <title>Creepy Crawlies</title>
+          <genre>Horror</genre>
+          <price>4.95</price>
+          <publish_date>2000-12-06</publish_date>
+          <description>An anthology of horror stories about roaches,
+          centipedes, scorpions  and other insects.</description>
+       </book>
+       <book id="bk109">
+          <author>Kress, Peter</author>
+          <title>Paradox Lost</title>
+          <genre>Science Fiction</genre>
+          <price>6.95</price>
+          <publish_date>2000-11-02</publish_date>
+          <description>After an inadvertent trip through a Heisenberg
+          Uncertainty Device, James Salway discovers the problems
+          of being quantum.</description>
+       </book>
+       <book id="bk110">
+          <author>O'Brien, Tim</author>
+          <title>Microsoft .NET: The Programming Bible</title>
+          <genre>Computer</genre>
+          <price>36.95</price>
+          <publish_date>2000-12-09</publish_date>
+          <description>Microsoft's .NET initiative is explored in
+          detail in this deep programmer's reference.</description>
+       </book>
+       <book id="bk111">
+          <author>O'Brien, Tim</author>
+          <title>MSXML3: A Comprehensive Guide</title>
+          <genre>Computer</genre>
+          <price>36.95</price>
+          <publish_date>2000-12-01</publish_date>
+          <description>The Microsoft MSXML3 parser is covered in
+          detail, with attention to XML DOM interfaces, XSLT processing,
+          SAX and more.</description>
+       </book>
+       <book id="bk112">
+          <author>Galos, Mike</author>
+          <title>Visual Studio 7: A Comprehensive Guide</title>
+          <genre>Computer</genre>
+          <price>49.95</price>
+          <publish_date>2001-04-16</publish_date>
+          <description>Microsoft Visual Studio 7 is explored in depth,
+          looking at how Visual Basic, Visual C++, C#, and ASP+ are
+          integrated into a comprehensive development
+          environment.</description>
+       </book>
+    </catalog>`;
+
+  const parser = new DOMParser();
+  const mimes = [
+    "text/xml",
+    "application/xml",
+    "application/xhtml+xml",
+    "image/svg+xml",
+  ];
+
+  for (const mime of mimes) {
+    const doc = parser.parseFromString(sampleXML, mime);
+    const { firstChild: { childNodes, children: collection, tagName }, children } = doc;
+    // doc.
+    testing.expectEqual(true, doc instanceof XMLDocument);
+    testing.expectEqual(1, children.length);
+    // firstChild.
+    // TODO: Modern browsers expect this in lowercase.
+    testing.expectEqual("catalog", tagName);
+    testing.expectEqual(25, childNodes.length);
+    testing.expectEqual(12, collection.length);
+    // Check children of first child.
+    for (let i = 0; i < collection.length; i++) {
+      const {children: elements, id} = collection.item(i);
+      testing.expectEqual("bk" + (100 + i + 1), id);
+      // TODO: Modern browsers expect these in lowercase.
+      testing.expectEqual("author", elements.item(0).tagName);
+      testing.expectEqual("title", elements.item(1).tagName);
+      testing.expectEqual("genre", elements.item(2).tagName);
+      testing.expectEqual("price", elements.item(3).tagName);
+      testing.expectEqual("publish_date", elements.item(4).tagName);
+      testing.expectEqual("description", elements.item(5).tagName);
+    }
+  }
+}
+</script>
+
+<script id=getElementsByTagName-xml>
+{
+  const parser = new DOMParser();
+  const doc = parser.parseFromString('<layout><row><col>A</col><col>B</col></row></layout>', 'text/xml');
+
+  // Test getElementsByTagName on document
+  const rows = doc.getElementsByTagName('row');
+  testing.expectEqual(1, rows.length);
+
+  // Test getElementsByTagName on element
+  const row = rows[0];
+  const cols = row.getElementsByTagName('col');
+  testing.expectEqual(2, cols.length);
+  testing.expectEqual('A', cols[0].textContent);
+  testing.expectEqual('B', cols[1].textContent);
+
+  // Test getElementsByTagName('*') on element
+  const allElements = row.getElementsByTagName('*');
+  testing.expectEqual(2, allElements.length);
+}
+</script>

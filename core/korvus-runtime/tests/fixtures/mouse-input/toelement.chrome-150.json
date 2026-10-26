@@ -1,0 +1,142 @@
+[
+ [
+  "mousemove relatedTarget=host",
+  {
+   "to": "SPAN#in",
+   "from": "DIV#h",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mousemove no relatedTarget",
+  {
+   "to": "SPAN#in",
+   "from": null
+  }
+ ],
+ [
+  "mouseover relatedTarget=host",
+  {
+   "to": "SPAN#in",
+   "from": "DIV#h",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mouseover no relatedTarget",
+  {
+   "to": "SPAN#in",
+   "from": null
+  }
+ ],
+ [
+  "mouseout relatedTarget=host",
+  {
+   "to": "DIV#h",
+   "from": "SPAN#in",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mouseout no relatedTarget",
+  {
+   "to": null,
+   "from": "SPAN#in"
+  }
+ ],
+ [
+  "mouseleave relatedTarget=host",
+  {
+   "to": "DIV#h",
+   "from": "SPAN#in",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mouseleave no relatedTarget",
+  {
+   "to": null,
+   "from": "SPAN#in"
+  }
+ ],
+ [
+  "mouseenter relatedTarget=host",
+  {
+   "to": "SPAN#in",
+   "from": "DIV#h",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mouseenter no relatedTarget",
+  {
+   "to": "SPAN#in",
+   "from": null
+  }
+ ],
+ [
+  "click relatedTarget=host",
+  {
+   "to": "SPAN#in",
+   "from": "DIV#h",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "click no relatedTarget",
+  {
+   "to": "SPAN#in",
+   "from": null
+  }
+ ],
+ [
+  "mousedown relatedTarget=host",
+  {
+   "to": "SPAN#in",
+   "from": "DIV#h",
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "mousedown no relatedTarget",
+  {
+   "to": "SPAN#in",
+   "from": null
+  }
+ ],
+ [
+  "pointermove relatedTarget=host",
+  {
+   "to": null,
+   "from": null,
+   "rel": "DIV#h",
+   "target": "SPAN#in"
+  }
+ ],
+ [
+  "pointermove no relatedTarget",
+  {
+   "to": null,
+   "from": null
+  }
+ ],
+ [
+  "after dispatch: toElement",
+  "SPAN#in"
+ ],
+ [
+  "never dispatched: toElement",
+  null
+ ],
+ [
+  "never dispatched mouseout relatedTarget=host: fromElement",
+  null
+ ]
+]

@@ -1,0 +1,409 @@
+{
+  "why": "The SVG animated-attribute generator's hand facts (gen_svg): ATTR_OVERRIDE = members whose content attribute name is not mechanically derivable from the member name (`in1` is the `in` attribute); HREF_MEMBERS = the SVG URL reference (plain `href`, legacy `xlink:href` fallback); ANIMATED = the SVGAnimated* types this generator implements (anything else stays a shell rather than being reflected wrongly); ENUM_TABLE = the constant-name prefix an SVGAnimatedEnumeration member's keywords are read from (declared once per interface family in the IDL); KEYWORD_FIX = keyword spellings that are not the constant suffix lowercased. VALUE_MEMBERS = the SVG value types' own members that `kits::svg_value` bodies (core/dom/svg_values.rs): an entry goes in when the member's answer is computable from the owning element's content attribute (or, for a detached value, from its own slot), and comes out when a real implementation takes the member. CREATE_VALUE = the SVGSVGElement factory methods, each naming the DETACHED value interface it mints.",
+  "attr_override": {
+    "SVGFEBlendElement.in1": "in",
+    "SVGFEColorMatrixElement.in1": "in",
+    "SVGFEComponentTransferElement.in1": "in",
+    "SVGFECompositeElement.in1": "in",
+    "SVGFECompositeElement.in2": "in2",
+    "SVGFEBlendElement.in2": "in2",
+    "SVGFEConvolveMatrixElement.in1": "in",
+    "SVGFEDiffuseLightingElement.in1": "in",
+    "SVGFEDisplacementMapElement.in1": "in",
+    "SVGFEDisplacementMapElement.in2": "in2",
+    "SVGFEDropShadowElement.in1": "in",
+    "SVGFEGaussianBlurElement.in1": "in",
+    "SVGFEMergeNodeElement.in1": "in",
+    "SVGFEMorphologyElement.in1": "in",
+    "SVGFEOffsetElement.in1": "in",
+    "SVGFESpecularLightingElement.in1": "in",
+    "SVGFETileElement.in1": "in",
+    "SVGFEImageElement.in1": "in",
+    "SVGFEConvolveMatrixElement.orderX": "order",
+    "SVGFEConvolveMatrixElement.orderY": "order",
+    "SVGFEConvolveMatrixElement.kernelUnitLengthX": "kernelUnitLength",
+    "SVGFEConvolveMatrixElement.kernelUnitLengthY": "kernelUnitLength",
+    "SVGFEDiffuseLightingElement.kernelUnitLengthX": "kernelUnitLength",
+    "SVGFEDiffuseLightingElement.kernelUnitLengthY": "kernelUnitLength",
+    "SVGFESpecularLightingElement.kernelUnitLengthX": "kernelUnitLength",
+    "SVGFESpecularLightingElement.kernelUnitLengthY": "kernelUnitLength",
+    "SVGFEGaussianBlurElement.stdDeviationX": "stdDeviation",
+    "SVGFEGaussianBlurElement.stdDeviationY": "stdDeviation",
+    "SVGFEDropShadowElement.stdDeviationX": "stdDeviation",
+    "SVGFEDropShadowElement.stdDeviationY": "stdDeviation",
+    "SVGFEMorphologyElement.radiusX": "radius",
+    "SVGFEMorphologyElement.radiusY": "radius",
+    "SVGFETurbulenceElement.baseFrequencyX": "baseFrequency",
+    "SVGFETurbulenceElement.baseFrequencyY": "baseFrequency",
+    "SVGMarkerElement.orientType": "orient",
+    "SVGMarkerElement.orientAngle": "orient",
+    "SVGMarkerElement.markerWidth": "markerWidth",
+    "SVGMarkerElement.markerHeight": "markerHeight",
+    "SVGFilterElement.filterUnits": "filterUnits",
+    "SVGPatternElement.patternUnits": "patternUnits"
+  },
+  "href_members": [
+    "href"
+  ],
+  "animated": {
+    "SVGAnimatedString": "str",
+    "SVGAnimatedNumber": "num",
+    "SVGAnimatedInteger": "int",
+    "SVGAnimatedBoolean": "bool",
+    "SVGAnimatedEnumeration": "enum",
+    "SVGAnimatedLength": "len",
+    "SVGAnimatedRect": "rect",
+    "SVGAnimatedPreserveAspectRatio": "par",
+    "SVGAnimatedNumberList": "numlist",
+    "SVGAnimatedLengthList": "lenlist",
+    "SVGAnimatedTransformList": "translist",
+    "SVGAnimatedAngle": "angle"
+  },
+  "enum_table": {
+    "SVGFEBlendElement.mode": "SVG_FEBLEND_MODE_",
+    "SVGFEColorMatrixElement.type": "SVG_FECOLORMATRIX_TYPE_",
+    "SVGFECompositeElement.operator": "SVG_FECOMPOSITE_OPERATOR_",
+    "SVGFEConvolveMatrixElement.edgeMode": "SVG_EDGEMODE_",
+    "SVGFEDisplacementMapElement.xChannelSelector": "SVG_CHANNEL_",
+    "SVGFEDisplacementMapElement.yChannelSelector": "SVG_CHANNEL_",
+    "SVGFEMorphologyElement.operator": "SVG_MORPHOLOGY_OPERATOR_",
+    "SVGFETurbulenceElement.type": "SVG_TURBULENCE_TYPE_",
+    "SVGFETurbulenceElement.stitchTiles": "SVG_STITCHTYPE_",
+    "SVGFilterElement.filterUnits": "SVG_UNIT_TYPE_",
+    "SVGFEImageElement.preserveAspectRatio": "SVG_PRESERVEASPECTRATIO_",
+    "SVGMaskElement.maskUnits": "SVG_UNIT_TYPE_",
+    "SVGMaskElement.maskContentUnits": "SVG_UNIT_TYPE_",
+    "SVGPatternElement.patternUnits": "SVG_UNIT_TYPE_",
+    "SVGPatternElement.patternContentUnits": "SVG_UNIT_TYPE_",
+    "SVGGradientElement.gradientUnits": "SVG_UNIT_TYPE_",
+    "SVGLinearGradientElement.gradientUnits": "SVG_UNIT_TYPE_",
+    "SVGRadialGradientElement.gradientUnits": "SVG_UNIT_TYPE_",
+    "SVGGradientElement.spreadMethod": "SVG_SPREADMETHOD_",
+    "SVGLinearGradientElement.spreadMethod": "SVG_SPREADMETHOD_",
+    "SVGRadialGradientElement.spreadMethod": "SVG_SPREADMETHOD_",
+    "SVGMarkerElement.markerUnits": "SVG_MARKERUNITS_",
+    "SVGMarkerElement.orientType": "SVG_MARKER_ORIENT_",
+    "SVGClipPathElement.clipPathUnits": "SVG_UNIT_TYPE_",
+    "SVGTextPathElement.method": "TEXTPATH_METHODTYPE_",
+    "SVGTextPathElement.spacing": "TEXTPATH_SPACINGTYPE_",
+    "SVGComponentTransferFunctionElement.type": "SVG_FECOMPONENTTRANSFER_TYPE_",
+    "SVGFilterElement.primitiveUnits": "SVG_UNIT_TYPE_",
+    "SVGTextContentElement.lengthAdjust": "LENGTHADJUST_",
+    "SVGTextPositioningElement.lengthAdjust": "LENGTHADJUST_",
+    "SVGFEFuncAElement.type": "SVG_FECOMPONENTTRANSFER_TYPE_",
+    "SVGFEFuncBElement.type": "SVG_FECOMPONENTTRANSFER_TYPE_",
+    "SVGFEFuncGElement.type": "SVG_FECOMPONENTTRANSFER_TYPE_",
+    "SVGFEFuncRElement.type": "SVG_FECOMPONENTTRANSFER_TYPE_"
+  },
+  "keyword_fix": {
+    "COLOR_DODGE": "color-dodge",
+    "COLOR_BURN": "color-burn",
+    "HARD_LIGHT": "hard-light",
+    "SOFT_LIGHT": "soft-light",
+    "LUMINOSITY": "luminosity",
+    "SATURATION": "saturation",
+    "OBJECTBOUNDINGBOX": "objectBoundingBox",
+    "USERSPACEONUSE": "userSpaceOnUse",
+    "STROKEWIDTH": "strokeWidth",
+    "USERSPACEONUSE_": "userSpaceOnUse",
+    "LINEARRGB": "linearRGB",
+    "SRGB": "sRGB",
+    "SPACINGANDGLYPHS": "spacingAndGlyphs",
+    "AUTO_START_REVERSE": "auto-start-reverse",
+    "HUEROTATE": "hueRotate",
+    "LUMINANCETOALPHA": "luminanceToAlpha",
+    "SPACINGANDGLYPHS_": "spacingAndGlyphs"
+  },
+  "value_members": {
+    "SVGAnimatedString": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedNumber": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedInteger": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedBoolean": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedEnumeration": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedLength": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedAngle": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedRect": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedPreserveAspectRatio": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedNumberList": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedLengthList": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGAnimatedTransformList": [
+      "baseVal",
+      "animVal"
+    ],
+    "SVGLength": [
+      "unitType",
+      "value",
+      "valueInSpecifiedUnits",
+      "valueAsString"
+    ],
+    "SVGAngle": [
+      "unitType",
+      "value",
+      "valueInSpecifiedUnits",
+      "valueAsString"
+    ],
+    "SVGRect": [
+      "x",
+      "y",
+      "width",
+      "height"
+    ],
+    "SVGPoint": [
+      "x",
+      "y"
+    ],
+    "SVGPreserveAspectRatio": [
+      "align",
+      "meetOrSlice"
+    ],
+    "SVGNumber": [
+      "value"
+    ],
+    "SVGNumberList": [
+      "length",
+      "numberOfItems",
+      "getItem",
+      "removeItem",
+      "clear",
+      "appendItem",
+      "insertItemBefore",
+      "replaceItem",
+      "initialize"
+    ],
+    "SVGLengthList": [
+      "length",
+      "numberOfItems",
+      "getItem",
+      "removeItem",
+      "clear",
+      "appendItem",
+      "insertItemBefore",
+      "replaceItem",
+      "initialize"
+    ],
+    "SVGTransformList": [
+      "length",
+      "numberOfItems",
+      "getItem",
+      "removeItem",
+      "clear",
+      "appendItem",
+      "insertItemBefore",
+      "replaceItem",
+      "initialize",
+      "consolidate",
+      "createSVGTransformFromMatrix"
+    ],
+    "SVGTransform": [
+      "type",
+      "angle",
+      "matrix",
+      "setMatrix",
+      "setTranslate",
+      "setScale",
+      "setRotate",
+      "setSkewX",
+      "setSkewY"
+    ],
+    "SVGPointList": [
+      "length",
+      "numberOfItems",
+      "getItem",
+      "removeItem",
+      "clear",
+      "appendItem",
+      "insertItemBefore",
+      "replaceItem",
+      "initialize"
+    ]
+  },
+  "create_value": {
+    "SVGSVGElement": {
+      "createSVGLength": "SVGLength",
+      "createSVGAngle": "SVGAngle",
+      "createSVGNumber": "SVGNumber",
+      "createSVGRect": "SVGRect",
+      "createSVGPoint": "SVGPoint",
+      "createSVGTransform": "SVGTransform"
+    }
+  },
+  "enum_initial": {
+    "_why": "SYNC 2026-10-08: an SVGAnimatedEnumeration whose attribute is ABSENT (or holds an unknown keyword) reads its element's INITIAL value, not _UNKNOWN (0). Blink sets each in the element's constructor (SVGAnimatedEnumeration<T>(this, attr, initial)); the source file is named per entry. Measured on Chrome 150 by core/korvus-runtime/tests/fixtures/svg/probe.js.",
+    "SVGFEBlendElement.mode": [
+      1,
+      "svg_fe_blend_element.cc: BlendMode::kNormal"
+    ],
+    "SVGFEColorMatrixElement.type": [
+      1,
+      "svg_fe_color_matrix_element.cc: FECOLORMATRIX_TYPE_MATRIX"
+    ],
+    "SVGFECompositeElement.operator": [
+      1,
+      "svg_fe_composite_element.cc: FECOMPOSITE_OPERATOR_OVER"
+    ],
+    "SVGFEConvolveMatrixElement.edgeMode": [
+      1,
+      "svg_fe_convolve_matrix_element.cc: EDGEMODE_DUPLICATE"
+    ],
+    "SVGFEDisplacementMapElement.xChannelSelector": [
+      4,
+      "svg_fe_displacement_map_element.cc: CHANNEL_A"
+    ],
+    "SVGFEDisplacementMapElement.yChannelSelector": [
+      4,
+      "svg_fe_displacement_map_element.cc: CHANNEL_A"
+    ],
+    "SVGFEMorphologyElement.operator": [
+      1,
+      "svg_fe_morphology_element.cc: FEMORPHOLOGY_OPERATOR_ERODE"
+    ],
+    "SVGFETurbulenceElement.type": [
+      2,
+      "svg_fe_turbulence_element.cc: FETURBULENCE_TYPE_TURBULENCE"
+    ],
+    "SVGFETurbulenceElement.stitchTiles": [
+      2,
+      "svg_fe_turbulence_element.cc: kSvgStitchtypeNostitch"
+    ],
+    "SVGFilterElement.filterUnits": [
+      2,
+      "svg_filter_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGFilterElement.primitiveUnits": [
+      1,
+      "svg_filter_element.cc: kSvgUnitTypeUserspaceonuse"
+    ],
+    "SVGMaskElement.maskUnits": [
+      2,
+      "svg_mask_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGMaskElement.maskContentUnits": [
+      1,
+      "svg_mask_element.cc: kSvgUnitTypeUserspaceonuse"
+    ],
+    "SVGPatternElement.patternUnits": [
+      2,
+      "svg_pattern_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGPatternElement.patternContentUnits": [
+      1,
+      "svg_pattern_element.cc: kSvgUnitTypeUserspaceonuse"
+    ],
+    "SVGGradientElement.gradientUnits": [
+      2,
+      "svg_gradient_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGLinearGradientElement.gradientUnits": [
+      2,
+      "svg_gradient_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGRadialGradientElement.gradientUnits": [
+      2,
+      "svg_gradient_element.cc: kSvgUnitTypeObjectboundingbox"
+    ],
+    "SVGGradientElement.spreadMethod": [
+      1,
+      "svg_gradient_element.cc: kSvgSpreadMethodPad"
+    ],
+    "SVGLinearGradientElement.spreadMethod": [
+      1,
+      "svg_gradient_element.cc: kSvgSpreadMethodPad"
+    ],
+    "SVGRadialGradientElement.spreadMethod": [
+      1,
+      "svg_gradient_element.cc: kSvgSpreadMethodPad"
+    ],
+    "SVGMarkerElement.markerUnits": [
+      2,
+      "svg_marker_element.cc: kSvgMarkerUnitsStrokeWidth"
+    ],
+    "SVGMarkerElement.orientType": [
+      2,
+      "svg_animated_angle.cc: kSVGMarkerOrientAngle"
+    ],
+    "SVGClipPathElement.clipPathUnits": [
+      1,
+      "svg_clip_path_element.cc: kSvgUnitTypeUserspaceonuse"
+    ],
+    "SVGTextPathElement.method": [
+      1,
+      "svg_text_path_element.cc: kSvgTextPathMethodAlign"
+    ],
+    "SVGTextPathElement.spacing": [
+      2,
+      "svg_text_path_element.cc: kSvgTextPathSpacingExact"
+    ],
+    "SVGTextContentElement.lengthAdjust": [
+      1,
+      "svg_text_content_element.cc: kSVGLengthAdjustSpacing"
+    ],
+    "SVGTextPositioningElement.lengthAdjust": [
+      1,
+      "svg_text_content_element.cc: kSVGLengthAdjustSpacing"
+    ],
+    "SVGComponentTransferFunctionElement.type": [
+      1,
+      "svg_component_transfer_function_element.cc: FECOMPONENTTRANSFER_TYPE_IDENTITY"
+    ],
+    "SVGFEFuncAElement.type": [
+      1,
+      "svg_component_transfer_function_element.cc: FECOMPONENTTRANSFER_TYPE_IDENTITY"
+    ],
+    "SVGFEFuncBElement.type": [
+      1,
+      "svg_component_transfer_function_element.cc: FECOMPONENTTRANSFER_TYPE_IDENTITY"
+    ],
+    "SVGFEFuncGElement.type": [
+      1,
+      "svg_component_transfer_function_element.cc: FECOMPONENTTRANSFER_TYPE_IDENTITY"
+    ],
+    "SVGFEFuncRElement.type": [
+      1,
+      "svg_component_transfer_function_element.cc: FECOMPONENTTRANSFER_TYPE_IDENTITY"
+    ]
+  },
+  "point_lists": {
+    "_why": "SYNC 2026-10-08: `points` / `animatedPoints` are SVGPointList views of the `points` attribute (SVGAnimatedPoints): `points` the base value, `animatedPoints` a READ-ONLY one (its mutators throw NoModificationAllowedError) -- two [SameObject] lists, not one.",
+    "SVGPolygonElement": [
+      "points",
+      "animatedPoints"
+    ],
+    "SVGPolylineElement": [
+      "points",
+      "animatedPoints"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+<!doctype html><html><head><title>request shape</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/rs/s-early.css">
+<link rel="stylesheet" media="print" href="/rs/s-print.css">
+<link rel="alternate stylesheet" title="alt" href="/rs/s-alt.css">
+<link rel="preload" as="script" href="/rs/pre-script.js">
+<link rel="preload" as="image" href="/rs/pre-image.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/rs/pre-font.woff2">
+<style>@font-face { font-family: F1; src: url(/rs/font.woff2) format("woff2"); } .f { font-family: F1; }
+.bg { background: url(/rs/bg.png); }</style>
+<script src="/rs/early.js"></script>
+<script async src="/rs/async.js"></script>
+<script defer src="/rs/defer.js"></script>
+<script fetchpriority="low" src="/rs/plow.js"></script>
+<script async fetchpriority="high" src="/rs/ahigh.js"></script>
+<script crossorigin src="/rs/cors-same.js"></script>
+<script crossorigin src="{{B}}/rs/cors-cross.js"></script>
+<script crossorigin="use-credentials" src="{{B}}/rs/cors-cred.js"></script>
+<script src="{{B}}/rs/nocors-cross.js"></script>
+<script type="module" src="/rs/m-same.js"></script>
+<script type="module" src="{{B}}/rs/m-cross.js"></script>
+</head><body><p class="f bg">text</p>
+<img src="/rs/i1.png">
+<img src="/rs/i-small.png" width="10" height="10">
+<img src="/rs/i2.png">
+<img fetchpriority="high" src="/rs/i-high.png">
+<img src="/rs/i3.png">
+<img src="/rs/i4.png">
+<img src="/rs/i5.png">
+<img crossorigin src="{{B}}/rs/i-anon.png">
+<link rel="stylesheet" href="/rs/s-late.css">
+<script src="/rs/late.js"></script>
+<script defer src="/rs/late-defer.js"></script>
+<video><track kind="subtitles" src="/rs/t-same.vtt" default></video>
+<script>
+var B = '{{B}}';
+function el(tag, props) { var e = document.createElement(tag); for (var k in props) e[k] = props[k]; return e; }
+document.head.appendChild(el('script', {src: '/rs/d-plain.js'}));
+document.head.appendChild(el('script', {src: '/rs/d-sync.js', async: false}));
+document.head.appendChild(el('script', {src: B + '/rs/d-cors-cross.js', crossOrigin: 'anonymous'}));
+document.head.appendChild(el('script', {type: 'module', src: '/rs/d-module.js'}));
+document.head.appendChild(el('link', {rel: 'stylesheet', href: '/rs/d-style.css'}));
+document.body.appendChild(el('img', {src: '/rs/d-img.png'}));
+document.body.appendChild(el('img', {fetchPriority: 'high', src: '/rs/d-img-high.png'}));
+var c = new Image(); c.crossOrigin = 'anonymous'; c.src = '/rs/d-img-cors.png';
+fetch(B + '/rs/f-default').catch(function () {});
+fetch(B + '/rs/f-include', {credentials: 'include'}).catch(function () {});
+fetch(B + '/rs/f-nocors', {mode: 'no-cors'}).catch(function () {});
+fetch('/rs/f-same-omit', {credentials: 'omit'}).catch(function () {});
+fetch(B + '/rs/f-pre', {credentials: 'include', headers: {'x-k': '1'}}).catch(function () {});
+fetch(B + '/rs/f-setz').then(function () { return fetch(B + '/rs/f-afterz', {credentials: 'include'}); }).catch(function () {});
+var x = new XMLHttpRequest(); x.open('GET', B + '/rs/xhr'); x.send();
+var y = new XMLHttpRequest(); y.open('GET', B + '/rs/xhr-cred'); y.withCredentials = true; y.send();
+setTimeout(function () { fetch('/rs/done'); }, 2500);
+</script></body></html>

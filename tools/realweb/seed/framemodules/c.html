@@ -1,0 +1,21 @@
+<!doctype html><html><body><script>
+// REALWEB F29: a frame's import() graph -- nested and cyclic static imports, a module imported twice, a
+// top-level await, an import() from a module -- loads and runs in the FRAME's realm, and fails as Chrome words it.
+var FRAMEVAR = 'frame';
+(async function () {
+  var r = {};
+  var t = async function (k, f) { try { r[k] = await f(); } catch (e) { r[k] = 'THROW ' + e.name + ': ' + e.message.replace(location.origin, 'ORIGIN'); } };
+  await t('nested', async function () { var m = await import('./a.js'); return m.a() + ' ' + m.fromB; });
+  await t('same', async function () { var x = await import('./a.js'), y = await import('./a.js?'); var z = await import('./a.js'); return [x === z, x === y].join(); });
+  await t('cycle', async function () { var m = await import('./c1.js'); return m.c1(); });
+  await t('missing', function () { return import('./nope.js'); });
+  await t('mime', function () { return import('./text.txt'); });
+  await t('bare', function () { return import('lodash'); });
+  await t('bareStatic', function () { return import('./badimp.js'); });
+  await t('syntax', function () { return import('./bad.js'); });
+  await t('tla', async function () { var m = await import('./tla.js'); return m.v; });
+  await t('inner', async function () { var m = await import('./inner.js'); return await m.load(); });
+  await t('pageImport', function () { return parent.PAGE_IMPORT; });
+  parent.postMessage({ r: r }, '*');
+})();
+</script></body></html>

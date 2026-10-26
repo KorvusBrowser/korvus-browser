@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "USBOutTransferResult",
+    "member": "constructor",
+    "expr": "new USBOutTransferResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new USBOutTransferResult(\"ok\"))",
+    "expected": "[object USBOutTransferResult]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "constructor",
+    "expr": "new USBOutTransferResult(\"bogus\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "status",
+    "expr": "new USBOutTransferResult(\"ok\").status",
+    "expected": "ok",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "status",
+    "expr": "new USBOutTransferResult(\"stall\").status",
+    "expected": "stall",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\").bytesWritten",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", 7).bytesWritten",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", -1).bytesWritten",
+    "expected": 4294967295,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", 4294967296).bytesWritten",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", 1.9).bytesWritten",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", NaN).bytesWritten",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBOutTransferResult",
+    "member": "bytesWritten",
+    "expr": "new USBOutTransferResult(\"ok\", \"12\").bytesWritten",
+    "expected": 12,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

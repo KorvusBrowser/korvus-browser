@@ -1,0 +1,1136 @@
+[
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "a",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).a",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "a",
+    "expr": "new DOMMatrixReadOnly().a",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "a",
+    "expr": "new DOMMatrixReadOnly('scale(2)').a",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "b",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).b",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "b",
+    "expr": "new DOMMatrixReadOnly().b",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "c",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).c",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "c",
+    "expr": "new DOMMatrixReadOnly().c",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "d",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).d",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "d",
+    "expr": "new DOMMatrixReadOnly().d",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "e",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).e",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "e",
+    "expr": "new DOMMatrixReadOnly().e",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "f",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).f",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "f",
+    "expr": "new DOMMatrixReadOnly().f",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m11",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m11",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m11",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m11",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m12",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m12",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m12",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m12",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m13",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m13",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m13",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m13",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m14",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m14",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m21",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m21",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m21",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m21",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m22",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m22",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m22",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m22",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m23",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m23",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m23",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m23",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m24",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m24",
+    "expected": 8,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m31",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m31",
+    "expected": 9,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m32",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m32",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m33",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m33",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m33",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m33",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m34",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m34",
+    "expected": 12,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m41",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m41",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m41",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m41",
+    "expected": 13,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m42",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m42",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m42",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m42",
+    "expected": 14,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m43",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m43",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m43",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m43",
+    "expected": 15,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m44",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).m44",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m44",
+    "expr": "new DOMMatrixReadOnly([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]).m44",
+    "expected": 16,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "is2D",
+    "expr": "new DOMMatrixReadOnly().is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "is2D",
+    "expr": "new DOMMatrixReadOnly(new Array(16).fill(0)).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "is2D",
+    "expr": "new DOMMatrixReadOnly().translate(0, 0, 1).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "is2D",
+    "expr": "new DOMMatrixReadOnly('scale(2)').is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "isIdentity",
+    "expr": "new DOMMatrixReadOnly().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "isIdentity",
+    "expr": "new DOMMatrixReadOnly('none').isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "isIdentity",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).isIdentity",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "isIdentity",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]).isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipX",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).flipX().a",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipX",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).flipX().e",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipX",
+    "expr": "new DOMMatrixReadOnly().flipX() instanceof DOMMatrix",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipX",
+    "expr": "new DOMMatrixReadOnly().flipX().is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipY",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).flipY().d",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipY",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).flipY().a",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "flipY",
+    "expr": "new DOMMatrixReadOnly().flipY() instanceof DOMMatrix",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "inverse",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).inverse().a",
+    "expected": 0.5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "inverse",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).inverse().e",
+    "expected": -10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "inverse",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).inverse().f",
+    "expected": -20,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "inverse",
+    "expr": "new DOMMatrixReadOnly().inverse().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "multiply",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).multiply({ a: 1, d: 1, e: 10, f: 20 }).e",
+    "expected": 20,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "multiply",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).multiply({ a: 1, d: 1, e: 10, f: 20 }).f",
+    "expected": 40,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "multiply",
+    "expr": "new DOMMatrixReadOnly().multiply().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "multiply",
+    "expr": "new DOMMatrixReadOnly().multiply({ m11: 2, m22: 3 }).d",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "multiply",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).multiply({ a: 1, d: 1, e: 10, f: 20 }) instanceof DOMMatrix",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotate",
+    "expr": "new DOMMatrixReadOnly().rotate(90).b",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotate",
+    "expr": "new DOMMatrixReadOnly().rotate(180).a",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotate",
+    "expr": "new DOMMatrixReadOnly().rotate(0).isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotate",
+    "expr": "Math.round(new DOMMatrixReadOnly().rotate(30).a * 1000)",
+    "expected": 866,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateAxisAngle",
+    "expr": "new DOMMatrixReadOnly().rotateAxisAngle(0, 0, 1, 90).b",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateAxisAngle",
+    "expr": "new DOMMatrixReadOnly().rotateAxisAngle(0, 0, 1, 90).is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateAxisAngle",
+    "expr": "new DOMMatrixReadOnly().rotateAxisAngle(1, 0, 0, 45).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateAxisAngle",
+    "expr": "Math.round(new DOMMatrixReadOnly().rotateAxisAngle(1, 0, 0, 45).m22 * 1000)",
+    "expected": 707,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateFromVector",
+    "expr": "new DOMMatrixReadOnly().rotateFromVector(0, 1).b",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateFromVector",
+    "expr": "new DOMMatrixReadOnly().rotateFromVector(1, 0).isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "rotateFromVector",
+    "expr": "new DOMMatrixReadOnly().rotateFromVector(0, 0).b",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale(2).a",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale(2).d",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale(2, 3).d",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale(1, 1, 2).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale",
+    "expr": "new DOMMatrixReadOnly().scale(1, 1, 2).m33",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale3d",
+    "expr": "new DOMMatrixReadOnly().scale3d(2).m11",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale3d",
+    "expr": "new DOMMatrixReadOnly().scale3d(2).m33",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale3d",
+    "expr": "new DOMMatrixReadOnly().scale3d(2).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scale3d",
+    "expr": "new DOMMatrixReadOnly().scale3d().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scaleNonUniform",
+    "expr": "new DOMMatrixReadOnly().scaleNonUniform(2, 3).a",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scaleNonUniform",
+    "expr": "new DOMMatrixReadOnly().scaleNonUniform(2, 3).d",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "scaleNonUniform",
+    "expr": "new DOMMatrixReadOnly().scaleNonUniform(2, 3).is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "skewX",
+    "expr": "Math.round(new DOMMatrixReadOnly().skewX(45).c)",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "skewX",
+    "expr": "new DOMMatrixReadOnly().skewX(0).isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "skewY",
+    "expr": "Math.round(new DOMMatrixReadOnly().skewY(45).b)",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "skewY",
+    "expr": "new DOMMatrixReadOnly().skewY(0).isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat32Array",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).toFloat32Array() instanceof Float32Array",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat32Array",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).toFloat32Array()[12]",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat32Array",
+    "expr": "new DOMMatrixReadOnly().toFloat32Array().length",
+    "expected": 16,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat64Array",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).toFloat64Array() instanceof Float64Array",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat64Array",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).toFloat64Array()[0]",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat64Array",
+    "expr": "new DOMMatrixReadOnly([2, 3, 4, 5, 6, 7]).toFloat64Array()[13]",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toFloat64Array",
+    "expr": "new DOMMatrixReadOnly().toFloat64Array().length",
+    "expected": 16,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).toJSON())",
+    "expected": "{\"a\":1,\"b\":0,\"c\":0,\"d\":1,\"e\":10,\"f\":20,\"m11\":1,\"m12\":0,\"m13\":0,\"m14\":0,\"m21\":0,\"m22\":1,\"m23\":0,\"m24\":0,\"m31\":0,\"m32\":0,\"m33\":1,\"m34\":0,\"m41\":10,\"m42\":20,\"m43\":0,\"m44\":1,\"is2D\":true,\"isIdentity\":false}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMMatrixReadOnly().toJSON())",
+    "expected": "{\"a\":1,\"b\":0,\"c\":0,\"d\":1,\"e\":0,\"f\":0,\"m11\":1,\"m12\":0,\"m13\":0,\"m14\":0,\"m21\":0,\"m22\":1,\"m23\":0,\"m24\":0,\"m31\":0,\"m32\":0,\"m33\":1,\"m34\":0,\"m41\":0,\"m42\":0,\"m43\":0,\"m44\":1,\"is2D\":true,\"isIdentity\":true}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toJSON",
+    "expr": "Object.keys(new DOMMatrixReadOnly().toJSON()).join()",
+    "expected": "a,b,c,d,e,f,m11,m12,m13,m14,m21,m22,m23,m24,m31,m32,m33,m34,m41,m42,m43,m44,is2D,isIdentity",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toJSON",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).toJSON().e",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).transformPoint({ x: 1, y: 2 }).x",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).transformPoint({ x: 1, y: 2 }).y",
+    "expected": 22,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).transformPoint({ x: 1, y: 2 }).z",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).transformPoint().x",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).transformPoint({ x: 3, y: 4 }).x",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "transformPoint",
+    "expr": "new DOMMatrixReadOnly().transformPoint({ x: 1, y: 2, z: 3, w: 4 }) instanceof DOMPoint",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate(10, 20).e",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate(10, 20).f",
+    "expected": 20,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate(0, 0, 5).m43",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate(0, 0, 5).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate(10, 20) instanceof DOMMatrix",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "translate",
+    "expr": "new DOMMatrixReadOnly().translate().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "new DOMMatrixReadOnly().toString()",
+    "expected": "matrix(1, 0, 0, 1, 0, 0)",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]).toString()",
+    "expected": "matrix(1, 0, 0, 1, 10, 20)",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "new DOMMatrixReadOnly([2, 0, 0, 2, 0, 0]).scale(0.5).toString()",
+    "expected": "matrix(1, 0, 0, 1, 0, 0)",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "String(new DOMMatrixReadOnly([1, 0, 0, 1, 10, 20]))",
+    "expected": "matrix(1, 0, 0, 1, 10, 20)",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "new DOMMatrixReadOnly([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 2, 3, 1]).toString()",
+    "expected": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 2, 3, 1)",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrixReadOnly.fromFloat32Array(new Float32Array([1, 0, 0, 1, 10, 20])).e",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrixReadOnly.fromFloat32Array(new Float32Array([1, 0, 0, 1, 10, 20])) instanceof DOMMatrixReadOnly",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrixReadOnly.fromFloat32Array(new Float32Array(16)).m33",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrixReadOnly.fromFloat32Array(new Float32Array(5))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrixReadOnly.fromFloat64Array(new Float64Array([2, 3, 4, 5, 6, 7])).f",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrixReadOnly.fromFloat64Array(new Float64Array([2, 3, 4, 5, 6, 7])) instanceof DOMMatrixReadOnly",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrixReadOnly.fromFloat64Array(new Float64Array([1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 0, 0, 4])).m33",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrixReadOnly.fromFloat64Array(new Float64Array([1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 0, 0, 4])).is2D",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrixReadOnly.fromFloat64Array(new Float64Array(7))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({ a: 2, d: 3, e: 5 }).a",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({ a: 2, d: 3, e: 5 }).d",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({ a: 2, d: 3, e: 5 }).e",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix().isIdentity",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({}).is2D",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({ m11: 2 }).m11",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "fromMatrix",
+    "expr": "DOMMatrixReadOnly.fromMatrix({ a: 1, d: 1, e: 10, f: 20 }) instanceof DOMMatrixReadOnly",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMMatrixReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "a",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.a; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "b",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.b; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "c",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.c; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "d",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.d; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "e",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.e; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "f",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.f; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m11",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m11; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m12",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m12; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m13",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m13; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m14",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m14; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m21",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m21; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m22",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m22; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m23",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m23; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m24",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m24; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m31",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m31; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m32",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m32; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m33",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m33; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m34",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m34; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m41",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m41; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m42",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m42; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m43",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m43; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "m44",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.m44; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "is2D",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.is2D; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "isIdentity",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.isIdentity; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMMatrixReadOnly",
+    "member": "toString",
+    "expr": "(() => { const o = new DOMMatrixReadOnly(); return o.toString(); })()",
+    "expected": "matrix(1, 0, 0, 1, 0, 0)",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

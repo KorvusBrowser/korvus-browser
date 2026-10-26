@@ -1,0 +1,242 @@
+{
+ "fetch": {
+  "bare": "res:Response",
+  "self": "res:Response",
+  "foreign": "rej:Failed to execute 'fetch' on 'Window': Illegal invocation",
+  "parent": "res:Response",
+  "direct": "res:Response",
+  "pageFnFrameRecv": "res:Response"
+ },
+ "setTimeout": {
+  "bare": "ok:Number",
+  "self": "ok:Number",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Number",
+  "direct": "ok:Number",
+  "pageFnFrameRecv": "ok:Number"
+ },
+ "setInterval": {
+  "bare": "ok:Number",
+  "self": "ok:Number",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Number",
+  "direct": "ok:Number",
+  "pageFnFrameRecv": "ok:Number"
+ },
+ "clearTimeout": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "clearInterval": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "queueMicrotask": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "structuredClone": {
+  "bare": "ok:Number",
+  "self": "ok:Number",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Number",
+  "direct": "ok:Number",
+  "pageFnFrameRecv": "ok:Number"
+ },
+ "atob": {
+  "bare": "ok:String",
+  "self": "ok:String",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:String",
+  "direct": "ok:String",
+  "pageFnFrameRecv": "ok:String"
+ },
+ "btoa": {
+  "bare": "ok:String",
+  "self": "ok:String",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:String",
+  "direct": "ok:String",
+  "pageFnFrameRecv": "ok:String"
+ },
+ "requestAnimationFrame": {
+  "bare": "ok:Number",
+  "self": "ok:Number",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Number",
+  "direct": "ok:Number",
+  "pageFnFrameRecv": "ok:Number"
+ },
+ "cancelAnimationFrame": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "requestIdleCallback": {
+  "bare": "ok:Number",
+  "self": "ok:Number",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Number",
+  "direct": "ok:Number",
+  "pageFnFrameRecv": "ok:Number"
+ },
+ "cancelIdleCallback": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "getComputedStyle": {
+  "bare": "ok:CSSStyleDeclaration",
+  "self": "ok:CSSStyleDeclaration",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:CSSStyleDeclaration",
+  "direct": "ok:CSSStyleDeclaration",
+  "pageFnFrameRecv": "ok:CSSStyleDeclaration"
+ },
+ "matchMedia": {
+  "bare": "ok:MediaQueryList",
+  "self": "ok:MediaQueryList",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:MediaQueryList",
+  "direct": "ok:MediaQueryList",
+  "pageFnFrameRecv": "ok:MediaQueryList"
+ },
+ "postMessage": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "createImageBitmap": {
+  "bare": "res:ImageBitmap",
+  "self": "res:ImageBitmap",
+  "foreign": "rej:Failed to execute 'createImageBitmap' on 'Window': Illegal invocation",
+  "parent": "res:ImageBitmap",
+  "direct": "res:ImageBitmap",
+  "pageFnFrameRecv": "res:ImageBitmap"
+ },
+ "reportError": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "alert": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "confirm": {
+  "bare": "ok:Boolean",
+  "self": "ok:Boolean",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Boolean",
+  "direct": "ok:Boolean",
+  "pageFnFrameRecv": "ok:Boolean"
+ },
+ "prompt": {
+  "bare": "ok:String",
+  "self": "ok:String",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:String",
+  "direct": "ok:String",
+  "pageFnFrameRecv": "ok:String"
+ },
+ "print": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "open": {
+  "bare": "ok:null",
+  "self": "ok:null",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:null",
+  "direct": "ok:null",
+  "pageFnFrameRecv": "ok:null"
+ },
+ "scroll": {
+  "bare": "res:Object",
+  "self": "res:Object",
+  "foreign": "rej:Failed to execute 'scroll' on 'Window': Illegal invocation",
+  "parent": "res:Object",
+  "direct": "res:Object",
+  "pageFnFrameRecv": "res:Object"
+ },
+ "scrollTo": {
+  "bare": "res:Object",
+  "self": "res:Object",
+  "foreign": "rej:Failed to execute 'scrollTo' on 'Window': Illegal invocation",
+  "parent": "res:Object",
+  "direct": "res:Object",
+  "pageFnFrameRecv": "res:Object"
+ },
+ "scrollBy": {
+  "bare": "res:Object",
+  "self": "res:Object",
+  "foreign": "rej:Failed to execute 'scrollBy' on 'Window': Illegal invocation",
+  "parent": "res:Object",
+  "direct": "res:Object",
+  "pageFnFrameRecv": "res:Object"
+ },
+ "getSelection": {
+  "bare": "ok:Selection",
+  "self": "ok:Selection",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Selection",
+  "direct": "ok:Selection",
+  "pageFnFrameRecv": "ok:Selection"
+ },
+ "focus": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "blur": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ },
+ "stop": {
+  "bare": "ok:Undefined",
+  "self": "ok:Undefined",
+  "foreign": "throw:Illegal invocation",
+  "parent": "ok:Undefined",
+  "direct": "ok:Undefined",
+  "pageFnFrameRecv": "ok:Undefined"
+ }
+}

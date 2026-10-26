@@ -1,0 +1,27 @@
+<!doctype html><html><body><p id=p>x</p><script>
+// REALWEB S34: a node of a document that is not rendered (DOMParser, createHTMLDocument) is CONNECTED -- to its
+// own document -- and a <style> there has a sheet with its rules, which never styles the page.
+var p = document.getElementById('p'), r = {};
+function sheetInfo(s) { var sh = s.sheet; if (!sh) return String(sh); return Object.prototype.toString.call(sh) + ' ' + sh.cssRules.length + ' ' + sh.cssRules[0].cssText + ' owner=' + (sh.ownerNode === s); }
+var doc = new DOMParser().parseFromString('<style>p { color: rgb(7, 8, 9) }</style><p>y</p>', 'text/html');
+r.domparser = [doc.querySelector('style').isConnected, doc.querySelector('p').isConnected, sheetInfo(doc.querySelector('style')), doc.styleSheets.length, getComputedStyle(p).color].join(' | ');
+var hd = document.implementation.createHTMLDocument('');
+hd.head.innerHTML = '<style>p { color: rgb(10, 11, 12) }</style>';
+r.impl = [hd.querySelector('style').isConnected, sheetInfo(hd.querySelector('style')), hd.styleSheets.length, getComputedStyle(p).color].join(' | ');
+var s2 = hd.createElement('style'); s2.textContent = 'a { top: 1px }';
+r.beforeAppend = [s2.isConnected, String(s2.sheet)].join(' | ');
+hd.body.appendChild(s2);
+r.implDynamic = [s2.isConnected, sheetInfo(s2)].join(' | ');
+var s3 = document.createElement('style'); s3.textContent = 'b { top: 2px }'; hd.body.appendChild(s3);
+r.adopted = [s3.ownerDocument === hd, s3.isConnected, sheetInfo(s3), getComputedStyle(p).color].join(' | ');
+hd.body.removeChild(s3);
+r.removed = [s3.isConnected, String(s3.sheet)].join(' | ');
+var frag = doc.createDocumentFragment(); var s4 = doc.createElement('style'); frag.appendChild(s4);
+r.fragment = [s4.isConnected, String(s4.sheet)].join(' | ');
+var xd = document.implementation.createDocument('http://www.w3.org/1999/xhtml', 'html', null);
+var xs = xd.createElementNS('http://www.w3.org/1999/xhtml', 'style'); xs.textContent = 'i { top: 3px }'; xd.documentElement.appendChild(xs);
+r.xmlDoc = [xs.isConnected, sheetInfo(xs)].join(' | ');
+r.inertComputed = getComputedStyle(doc.querySelector('p')).color;
+r.docConnected = [doc.isConnected, hd.isConnected, document.isConnected].join(' ');
+document.title = JSON.stringify(r);
+</script></body></html>

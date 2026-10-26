@@ -1,0 +1,12 @@
+[
+ "eval stack: \"TypeError: Cannot read properties of null (reading 'x')\\n    at eval (eval at <anonymous> (ORIGIN/werr.js:3:7), <anonymous>:1:6)\\n    at ORIGIN/werr.js:3:7\"",
+ "fn stack: \"TypeError: Cannot read properties of undefined (reading 'c')\\n    at eval (eval at <anonymous> (ORIGIN/werr.js:4:7), <anonymous>:3:12)\\n    at ORIGIN/werr.js:4:40\"",
+ "listener: [\"Uncaught Error: later\",\"ORIGIN/werr.js\",7,20,\"later\"]",
+ "listener: [\"Uncaught ReferenceError: undefinedFn is not defined\",\"ORIGIN/werr.js\",8,20,\"undefinedFn is not defined\"]",
+ "page onerror(blob): [\"Uncaught TypeError: top\",\"BLOBURL\",1,1,\"null\"]",
+ "page onerror(net): [\"Uncaught Error: later\",\"ORIGIN/werr.js\",7,20,\"null\"]",
+ "page onerror(net): [\"Uncaught ReferenceError: undefinedFn is not defined\",\"ORIGIN/werr.js\",8,20,\"null\"]",
+ "self.onerror: [\"Uncaught Error: later\",\"ORIGIN/werr.js\",7,20,\"later\"]",
+ "self.onerror: [\"Uncaught ReferenceError: undefinedFn is not defined\",\"ORIGIN/werr.js\",8,20,\"undefinedFn is not defined\"]",
+ "unhandledrejection: rej"
+]

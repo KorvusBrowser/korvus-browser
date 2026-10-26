@@ -1,0 +1,13 @@
+<!doctype html><title>H36</title><script>
+// REALWEB H36: each DOM prototype's @@unscopables -- a null-prototype object of `true`, non-writable -- and what it
+// is for: inside `with (node)`, the listed names resolve past the node (here to the script's own variables).
+var r = {};
+for (var n of ['CharacterData','Document','DocumentFragment','DocumentType','Element']) {
+  var u = self[n].prototype[Symbol.unscopables];
+  r[n] = u ? [Object.getPrototypeOf(u) === null, Object.keys(u).join(','), Object.values(u).every(v => v === true), JSON.stringify(Object.getOwnPropertyDescriptor(self[n].prototype, Symbol.unscopables).writable)].join(' | ') : 'none';
+}
+var after = 'outer', append = 'outer', id = 'outer';
+with (document.createElement('div')) { r.with = [after, append, typeof id].join(','); }
+with (document.createDocumentFragment()) { r.withFragment = [append, typeof querySelector].join(','); }
+document.title = JSON.stringify(r);
+</script>

@@ -1,0 +1,254 @@
+[
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "x",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).x",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "x",
+    "expr": "new DOMRectReadOnly().x",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "x",
+    "expr": "(() => { const r = new DOMRectReadOnly(1); r.x = 9; return r.x; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "x",
+    "expr": "(() => { \"use strict\"; const r = new DOMRectReadOnly(1); try { r.x = 9; return \"silent\"; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "y",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "y",
+    "expr": "new DOMRectReadOnly(1).y",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "width",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).width",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "width",
+    "expr": "new DOMRectReadOnly(1, 2).width",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "height",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).height",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "height",
+    "expr": "new DOMRectReadOnly(1, 2, 3).height",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "top",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).top",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "top",
+    "expr": "(() => { const r = new DOMRectReadOnly(2, 2, 4, -4); return r.height + ',' + r.top + ',' + r.bottom; })()",
+    "expected": "-4,-2,2",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "right",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).right",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "right",
+    "expr": "(() => { const r = new DOMRectReadOnly(2, 2, -4, 4); return r.width + ',' + r.left + ',' + r.right; })()",
+    "expected": "-4,-2,2",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "bottom",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).bottom",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "bottom",
+    "expr": "new DOMRectReadOnly(2, 2, 4, -4).bottom",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "left",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).left",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "left",
+    "expr": "new DOMRectReadOnly(2, 2, -4, 4).left",
+    "expected": -2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "fromRect",
+    "expr": "DOMRectReadOnly.fromRect({ x: 1, y: 2, width: 3, height: 4 }).width",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "fromRect",
+    "expr": "DOMRectReadOnly.fromRect({ x: 1, y: 2, width: 3, height: 4 }).bottom",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "fromRect",
+    "expr": "DOMRectReadOnly.fromRect().y",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "fromRect",
+    "expr": "DOMRectReadOnly.fromRect({ width: 5 }).right",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "fromRect",
+    "expr": "DOMRectReadOnly.fromRect({ x: 1, y: 2, width: 3, height: 4 }) instanceof DOMRectReadOnly",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMRectReadOnly(1, 2, 3, 4).toJSON())",
+    "expected": "{\"x\":1,\"y\":2,\"width\":3,\"height\":4,\"top\":2,\"right\":4,\"bottom\":6,\"left\":1}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMRectReadOnly().toJSON())",
+    "expected": "{\"x\":0,\"y\":0,\"width\":0,\"height\":0,\"top\":0,\"right\":0,\"bottom\":0,\"left\":0}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "toJSON",
+    "expr": "Object.keys(new DOMRectReadOnly(1, 2, 3, 4).toJSON()).join()",
+    "expected": "x,y,width,height,top,right,bottom,left",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "toJSON",
+    "expr": "new DOMRectReadOnly(1, 2, 3, 4).toJSON().left",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMRectReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "x",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.x; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "y",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.y; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "width",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.width; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "height",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.height; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "top",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.top; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "right",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.right; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "bottom",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.bottom; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRectReadOnly",
+    "member": "left",
+    "expr": "(() => { const o = new DOMRectReadOnly(); return o.left; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

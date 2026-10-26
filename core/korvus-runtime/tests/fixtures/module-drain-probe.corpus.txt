@@ -1,0 +1,249 @@
+# The module-drain probe corpus (PARITY MD1) — ONE set of bytes, served to BOTH engines.
+#
+# Chrome 150.0.7871.46 was asked for it over the delaying server below and its answer is
+# `module-drain-probe.chrome-150.txt`; `module_drain_live.rs` serves this same file from a
+# `TcpListener` that applies the SAME delays and asserts korvus prints the same lines. The two
+# drivers share these bytes rather than two copies of them.
+#
+# FORMAT. One file per `=== <path> <content-type>` header; the body is every line up to the next
+# header, verbatim. Lines beginning `#` BEFORE the first header are this comment; after it they are
+# body.
+#
+# THE DELAY IS IN THE PATH, and both servers derive it the same way: a path whose first segment is
+# `d<milliseconds>` is answered that many milliseconds late, and a path whose first segment is
+# `hang` is never answered at all. `/d700/dep1.mjs` is served 700 ms after the request arrives.
+# Nothing else about the response changes. This is what makes the probe a measurement of a WAIT
+# rather than of a parse: the bodies are one line each and the wall clock is entirely the server's.
+#
+# THE ORIGIN APPEARS NOWHERE IN THE TRANSCRIPT: every page imports by absolute path, so there is no
+# port to normalize and the two drivers compare byte for byte.
+#
+# RE-RECORD (an idle box; Chrome's answer was identical on two runs, and two runs is the standard):
+#
+#   1. Lay this file out as a directory -- for each `=== <path> <ctype>` header, write the lines up
+#      to the next header to `<dir>/<path>`.
+#   2. Run the delaying server over that directory:
+#
+#        python3 - <dir> <<'EOF'
+#        import http.server, os, re, socketserver, sys, time
+#        ROOT, PORT = sys.argv[1], 8932
+#        TYPES = {".html": "text/html", ".mjs": "text/javascript"}
+#        class H(http.server.BaseHTTPRequestHandler):
+#            protocol_version = "HTTP/1.1"
+#            def log_message(self, *a): pass
+#            def do_GET(self):
+#                p = self.path.split("?")[0]
+#                if p.startswith("/hang/"):
+#                    time.sleep(3600); return
+#                m = re.match(r"^/d(\d+)/", p)
+#                if m: time.sleep(int(m.group(1)) / 1000.0)
+#                f = os.path.join(ROOT, p.lstrip("/"))
+#                if not os.path.isfile(f):
+#                    self.send_response(404); self.send_header("Content-Length", "0"); self.end_headers(); return
+#                b = open(f, "rb").read()
+#                self.send_response(200)
+#                self.send_header("Content-Type", TYPES.get(os.path.splitext(f)[1], "text/plain"))
+#                self.send_header("Content-Length", str(len(b)))
+#                self.send_header("Cache-Control", "no-store")
+#                self.end_headers(); self.wfile.write(b)
+#        class S(socketserver.ThreadingTCPServer): daemon_threads = True; allow_reuse_address = True
+#        S(("127.0.0.1", PORT), H).serve_forever()
+#        EOF
+#
+#   3. For each of `/index.html`, `/three.html`, `/chain.html`, in that order:
+#      `google-chrome --headless --disable-gpu --no-sandbox --user-data-dir=$(mktemp -d)
+#       --virtual-time-budget=30000 --dump-dom http://127.0.0.1:8932/<page>`
+#   4. Take the text of `<pre id="out">` from each and write it to
+#      `module-drain-probe.chrome-150.txt`, each page's block preceded by a `== <page>` line.
+#      Repeat step 3 and diff the two recordings before committing.
+#
+# THE FOUR PAGES THAT ARE MEASURED BUT NOT ASSERTED (`/long5.html`, `/six5.html`, `/long30.html`,
+# `/hang.html`) are recorded in `module_drain_live.rs`'s module doc comment with their Chrome
+# readings and their korvus readings side by side. They are laid out and served by the same two
+# steps above; they are not in the compared transcript because korvus keeps a bounded drain and
+# Chrome, measured here, bounds this nowhere.
+
+=== /index.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — six modules, one 700 ms import each</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/d700/dep1.mjs'; P('ran m1 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep2.mjs'; P('ran m2 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep3.mjs'; P('ran m3 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep4.mjs'; P('ran m4 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep5.mjs'; P('ran m5 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep6.mjs'; P('ran m6 dep=' + n);</script>
+
+=== /three.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — three modules, one 700 ms import each</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/d700/dep1.mjs'; P('ran m1 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep2.mjs'; P('ran m2 dep=' + n);</script>
+<script type="module">import { n } from '/d700/dep3.mjs'; P('ran m3 dep=' + n);</script>
+
+=== /chain.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — one module, a three-deep 300 ms chain</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { c } from '/d300/c1.mjs'; P('ran chain dep=' + c);</script>
+
+=== /long5.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — one module, one 5000 ms import</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/d5000/slow.mjs'; P('ran long dep=' + n);</script>
+
+=== /six5.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — six modules, one 5000 ms import each</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/d5000/s1.mjs'; P('ran m1 dep=' + n);</script>
+<script type="module">import { n } from '/d5000/s2.mjs'; P('ran m2 dep=' + n);</script>
+<script type="module">import { n } from '/d5000/s3.mjs'; P('ran m3 dep=' + n);</script>
+<script type="module">import { n } from '/d5000/s4.mjs'; P('ran m4 dep=' + n);</script>
+<script type="module">import { n } from '/d5000/s5.mjs'; P('ran m5 dep=' + n);</script>
+<script type="module">import { n } from '/d5000/s6.mjs'; P('ran m6 dep=' + n);</script>
+
+=== /long30.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — one module, one 30000 ms import</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); });
+window.addEventListener('load', function () {
+  P('load');
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/d30000/slow.mjs'; P('ran long dep=' + n);</script>
+
+=== /hang.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>module drain probe — one module whose import never answers</title>
+<pre id="out"></pre>
+<script>
+window.L = [];
+window.P = function (s) { window.L.push(s); };
+window.addEventListener('error', function () { P('error'); });
+document.addEventListener('DOMContentLoaded', function () { P('dcl'); document.title = 'saw dcl'; });
+window.addEventListener('load', function () {
+  P('load');
+  document.title = 'saw load';
+  document.getElementById('out').textContent = window.L.join('\n');
+});
+</script>
+<script type="module">import { n } from '/hang/never.mjs'; P('ran hang dep=' + n);</script>
+
+=== /d700/dep1.mjs text/javascript
+export const n = 1;
+
+=== /d700/dep2.mjs text/javascript
+export const n = 2;
+
+=== /d700/dep3.mjs text/javascript
+export const n = 3;
+
+=== /d700/dep4.mjs text/javascript
+export const n = 4;
+
+=== /d700/dep5.mjs text/javascript
+export const n = 5;
+
+=== /d700/dep6.mjs text/javascript
+export const n = 6;
+
+=== /d300/c1.mjs text/javascript
+import { c as inner } from '/d300/c2.mjs';
+export const c = 'c1-' + inner;
+
+=== /d300/c2.mjs text/javascript
+import { c as inner } from '/d300/c3.mjs';
+export const c = 'c2-' + inner;
+
+=== /d300/c3.mjs text/javascript
+export const c = 'c3';
+
+=== /d5000/slow.mjs text/javascript
+export const n = 'slow';
+
+=== /d5000/s1.mjs text/javascript
+export const n = 1;
+
+=== /d5000/s2.mjs text/javascript
+export const n = 2;
+
+=== /d5000/s3.mjs text/javascript
+export const n = 3;
+
+=== /d5000/s4.mjs text/javascript
+export const n = 4;
+
+=== /d5000/s5.mjs text/javascript
+export const n = 5;
+
+=== /d5000/s6.mjs text/javascript
+export const n = 6;
+
+=== /d30000/slow.mjs text/javascript
+export const n = 'slow30';

@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "PluginArray",
+    "member": "constructor",
+    "expr": "new PluginArray()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PluginArray",
+    "member": "refresh",
+    "expr": "(() => { const o = navigator.plugins; return o.refresh(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PluginArray",
+    "member": "length",
+    "expr": "(() => { const o = navigator.plugins; return o.length; })()",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PluginArray",
+    "member": "item",
+    "expr": "(() => { const o = navigator.plugins; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PluginArray",
+    "member": "namedItem",
+    "expr": "(() => { const o = navigator.plugins; return o.namedItem(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PluginArray",
+    "member": "namedItem",
+    "expr": "(() => { const o = navigator.plugins; return o.namedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

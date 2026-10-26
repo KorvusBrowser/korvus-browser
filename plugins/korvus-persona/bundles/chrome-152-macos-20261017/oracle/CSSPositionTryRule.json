@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "constructor",
+    "expr": "new CSSPositionTryRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return o.name; })()",
+    "expected": "--p",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.style); })()",
+    "expected": "[object CSSPositionTryDescriptors]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"top: 5px\", o.style.top); })()",
+    "expected": "5px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"top: 5px\", o.style.cssText); })()",
+    "expected": "top: 5px;",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"top: 5px\", o.cssText); })()",
+    "expected": "@position-try --p { top: 5px; }",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"top: 5px; left: 3px\", o.style.left); })()",
+    "expected": "3px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style.top = \"7px\", o.style = \"left: 1px\", o.style.top); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"not-a-descriptor: 1px\", o.style.cssText); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return o.style.cssText; })()",
+    "expected": "top: 0px;",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style = \"top: 5px\", o.style === o.style); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "style",
+    "expr": "Object.getPrototypeOf(CSSPositionTryDescriptors.prototype) === CSSStyleDeclaration.prototype",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSPositionTryRule",
+    "member": "cssText",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return o.cssText; })()",
+    "expected": "@position-try --p { top: 0px; }",
+    "source": "chrome-152-macos-20261017"
+  }
+]

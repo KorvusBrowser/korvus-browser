@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "Path2D",
+    "member": "constructor",
+    "expr": "(() => { const o = new Path2D(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Path2D]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "addPath",
+    "expr": "(() => { const o = new Path2D(); return o.addPath(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new Path2D(); return o.closePath(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "moveTo",
+    "expr": "(() => { const o = new Path2D(); return o.moveTo(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "moveTo",
+    "expr": "(() => { const o = new Path2D(); return o.moveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "lineTo",
+    "expr": "(() => { const o = new Path2D(); return o.lineTo(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "lineTo",
+    "expr": "(() => { const o = new Path2D(); return o.lineTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "quadraticCurveTo",
+    "expr": "(() => { const o = new Path2D(); return o.quadraticCurveTo(1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "quadraticCurveTo",
+    "expr": "(() => { const o = new Path2D(); return o.quadraticCurveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "bezierCurveTo",
+    "expr": "(() => { const o = new Path2D(); return o.bezierCurveTo(1, 1, 1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "bezierCurveTo",
+    "expr": "(() => { const o = new Path2D(); return o.bezierCurveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new Path2D(); return o.arcTo(1, 1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new Path2D(); return o.arcTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "rect",
+    "expr": "(() => { const o = new Path2D(); return o.rect(1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "rect",
+    "expr": "(() => { const o = new Path2D(); return o.rect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new Path2D(); return o.roundRect(1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new Path2D(); return o.roundRect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arc",
+    "expr": "(() => { const o = new Path2D(); return o.arc(1, 1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arc",
+    "expr": "(() => { const o = new Path2D(); return o.arc(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new Path2D(); return o.ellipse(1, 1, 1, 1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new Path2D(); return o.ellipse(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new Path2D(); return o.roundRect(0, 0, 10, 10, 2); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new Path2D(); return o.roundRect(0, 0, 10, 10, -1); })()",
+    "throws": "RangeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new Path2D(); return o.ellipse(0, 0, 4, 3, 0, 0, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new Path2D(); return o.ellipse(0, 0, -4, 3, 0, 0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arc",
+    "expr": "(() => { const o = new Path2D(); return o.arc(0, 0, 5, 0, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arc",
+    "expr": "(() => { const o = new Path2D(); return o.arc(0, 0, -5, 0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new Path2D(); o.moveTo(0, 0); return o.arcTo(1, 1, 2, 2, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "addPath",
+    "expr": "(() => { const o = new Path2D(); const b = new Path2D(); b.rect(0, 0, 4, 4); return o.addPath(b); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "addPath",
+    "expr": "(() => { const o = new Path2D(); return o.addPath({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Path2D",
+    "member": "constructor",
+    "expr": "(() => { const o = new Path2D(); const b = new Path2D(); b.rect(0, 0, 4, 4); return Object.prototype.toString.call(new Path2D(b)); })()",
+    "expected": "[object Path2D]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

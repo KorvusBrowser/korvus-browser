@@ -1,0 +1,32 @@
+<!doctype html><title>t</title><body style="margin:0">
+<!-- REALWEB L9: CSS math functions in LAYOUT. Viewport-relative boxes are checked against their formula on this
+     window's own innerHeight/innerWidth (the persona's viewport is not Chrome's window); percentage boxes against
+     a 1000x500 container. Measured on Chrome 150. -->
+<div id=a style="height:calc(100px + 10vh)"></div>
+<div id=b style="height:max(100vh,700px)"></div>
+<div id=c style="height:min(20vh,300px)"></div>
+<div id=d style="height:clamp(100px,30vh,2000px)"></div>
+<div id=e style="height:calc(10vw + 5px)"></div>
+<div id=f style="min-height:calc(50vh - 10px)"></div>
+<div style="width:1000px;height:500px;position:relative">
+<div id=g style="width:calc(100% - 20px);height:10px"></div>
+<div id=h style="width:calc(50% + 2em);height:10px;font-size:10px"></div>
+<div id=i style="width:min(100%, 300px);height:10px"></div>
+<div id=j style="height:calc(20% + 10px);width:10px"></div>
+<div id=k style="width:calc(1px + 2px);height:10px"></div>
+<div id=l style="margin-left:calc(10% - 5px);width:10px;height:10px"></div>
+<div id=m style="padding-left:calc(5% + 3px);width:10px;height:10px"></div>
+</div>
+<script>
+setTimeout(() => {
+  const H = innerHeight, W = innerWidth, h = id => document.getElementById(id).offsetHeight, w = id => document.getElementById(id).offsetWidth;
+  const near = (got, want) => Math.abs(got - want) <= 1 ? 'ok' : got + '!=' + Math.round(want);
+  const r = {
+    a: near(h('a'), 100 + H / 10), b: near(h('b'), Math.max(H, 700)), c: near(h('c'), Math.min(H / 5, 300)),
+    d: near(h('d'), Math.min(Math.max(100, 0.3 * H), 2000)), e: near(h('e'), W / 10 + 5), f: near(h('f'), H / 2 - 10),
+    g: w('g'), h: w('h'), i: w('i'), j: h('j'), k: w('k'), l: document.getElementById('l').offsetLeft, m: w('m'),
+    marginTop: getComputedStyle(document.getElementById('k')).width,
+  };
+  document.title = JSON.stringify(r);
+}, 200);
+</script>

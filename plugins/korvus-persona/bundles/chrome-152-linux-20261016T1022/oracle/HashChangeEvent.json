@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HashChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HashChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object HashChangeEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HashChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HashChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HashChangeEvent",
+    "member": "oldURL",
+    "expr": "(() => { const o = new HashChangeEvent(\"x\"); return o.oldURL; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HashChangeEvent",
+    "member": "newURL",
+    "expr": "(() => { const o = new HashChangeEvent(\"x\"); return o.newURL; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

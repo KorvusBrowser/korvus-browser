@@ -1,0 +1,152 @@
+[
+  {
+    "iface": "AudioContext",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object AudioContext]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "baseLatency",
+    "expr": "(() => { const o = new AudioContext(); return o.baseLatency; })()",
+    "expected": 0.01,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "outputLatency",
+    "expr": "(() => { const o = new AudioContext(); return o.outputLatency; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "sinkId",
+    "expr": "(() => { const o = new AudioContext(); return o.sinkId; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "onsinkchange",
+    "expr": "(() => { const o = new AudioContext(); return o.onsinkchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "onerror",
+    "expr": "(() => { const o = new AudioContext(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "createMediaElementSource",
+    "expr": "(() => { const o = new AudioContext(); return o.createMediaElementSource(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "createMediaStreamSource",
+    "expr": "(() => { const o = new AudioContext(); return o.createMediaStreamSource(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "createMediaStreamTrackSource",
+    "expr": "(() => { const o = new AudioContext(); return o.createMediaStreamTrackSource(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "sinkId",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.sinkId); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "onsinkchange",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.onsinkchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "onerror",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "playbackStats",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.playbackStats); })()",
+    "expected": "[object AudioPlaybackStats]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "getOutputTimestamp",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.getOutputTimestamp()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "resume",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.resume()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "suspend",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.suspend()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "close",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.close()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "createMediaStreamDestination",
+    "expr": "(() => { const o = new AudioContext(); return Object.prototype.toString.call(o.createMediaStreamDestination()); })()",
+    "expected": "[object MediaStreamAudioDestinationNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "suspend",
+    "expr": "(async () => { const o = new AudioContext(); return await o.suspend(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "close",
+    "expr": "(async () => { const o = new AudioContext(); return await o.close(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioContext",
+    "member": "setSinkId",
+    "expr": "(async () => { const o = new AudioContext(); return await o.setSinkId(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

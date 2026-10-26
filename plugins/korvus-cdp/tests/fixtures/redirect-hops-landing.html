@@ -1,0 +1,3 @@
+<!doctype html><title>landing</title><p id=p>landing</p><script>
+window.__done = Promise.all([fetch('/f-r1').then(r => r.text()), fetch('/dup').then(r => r.text())]).then(() => 1);
+</script>

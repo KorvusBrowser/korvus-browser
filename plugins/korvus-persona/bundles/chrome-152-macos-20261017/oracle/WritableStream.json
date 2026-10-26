@@ -1,0 +1,53 @@
+[
+  {
+    "iface": "WritableStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new WritableStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object WritableStream]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "locked",
+    "expr": "(() => { const o = new WritableStream(); return o.locked; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "abort",
+    "expr": "(() => { const o = new WritableStream(); return Object.prototype.toString.call(o.abort()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "close",
+    "expr": "(() => { const o = new WritableStream(); return Object.prototype.toString.call(o.close()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "getWriter",
+    "expr": "(() => { const o = new WritableStream(); return Object.prototype.toString.call(o.getWriter()); })()",
+    "expected": "[object WritableStreamDefaultWriter]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "abort",
+    "expr": "(async () => { const o = new WritableStream(); return await o.abort(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WritableStream",
+    "member": "close",
+    "expr": "(async () => { const o = new WritableStream(); return await o.close(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

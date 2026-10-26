@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CrashReportContext",
+    "member": "constructor",
+    "expr": "new CrashReportContext()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

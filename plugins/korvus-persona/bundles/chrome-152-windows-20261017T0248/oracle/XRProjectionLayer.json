@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "XRProjectionLayer",
+    "member": "constructor",
+    "expr": "new XRProjectionLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureWidth",
+    "expr": "XRProjectionLayer.prototype.textureWidth",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureWidth",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureWidth\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureHeight",
+    "expr": "XRProjectionLayer.prototype.textureHeight",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureHeight",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureHeight\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureArrayLength",
+    "expr": "XRProjectionLayer.prototype.textureArrayLength",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureArrayLength",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureArrayLength\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "ignoreDepthValues",
+    "expr": "XRProjectionLayer.prototype.ignoreDepthValues",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "ignoreDepthValues",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"ignoreDepthValues\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "XRProjectionLayer.prototype.fixedFoveation",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "XRProjectionLayer.prototype.deltaPose",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").get.call(Object.create(XRProjectionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureWidth\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureWidth\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureHeight\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureHeight\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureArrayLength",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureArrayLength\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "textureArrayLength",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"textureArrayLength\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "ignoreDepthValues",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"ignoreDepthValues\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "ignoreDepthValues",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"ignoreDepthValues\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "fixedFoveation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"fixedFoveation\").set.call(Object.create(XRProjectionLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").get.call(Object.create(XRProjectionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRProjectionLayer",
+    "member": "deltaPose",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRProjectionLayer.prototype, \"deltaPose\").set.call(Object.create(XRProjectionLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

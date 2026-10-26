@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "XRAnchor",
+    "member": "constructor",
+    "expr": "new XRAnchor()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "anchorSpace",
+    "expr": "XRAnchor.prototype.anchorSpace",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "anchorSpace",
+    "expr": "Object.getOwnPropertyDescriptor(XRAnchor.prototype, \"anchorSpace\").get.call(Object.create(XRAnchor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "delete",
+    "expr": "XRAnchor.prototype.delete.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "delete",
+    "expr": "XRAnchor.prototype.delete.call(Object.create(XRAnchor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "anchorSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRAnchor.prototype, \"anchorSpace\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "anchorSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRAnchor.prototype, \"anchorSpace\").get.call(Object.create(XRAnchor.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "delete",
+    "expr": "(() => { try { const v = XRAnchor.prototype[\"delete\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRAnchor",
+    "member": "delete",
+    "expr": "(() => { try { const v = XRAnchor.prototype[\"delete\"].call(Object.create(XRAnchor.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

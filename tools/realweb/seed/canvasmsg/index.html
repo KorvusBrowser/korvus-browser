@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B7: an OffscreenCanvasRenderingContext2D's (and a Path2D's) own errors, as Chrome words them.
+const c = new OffscreenCanvas(4, 4).getContext('2d'), p = new Path2D(), u = undefined;
+const t = (f) => { try { const r = f(); return 'ok:' + r; } catch (e) { return e.name + ': ' + e.message; } };
+window.R = JSON.stringify({
+  arity: t(() => c.createConicGradient()),
+  nonFinite: t(() => c.createConicGradient(NaN, 0, 0)),
+  imageData: t(() => c.createImageData(0, 0)),
+  getImageData: t(() => c.getImageData(0, 0, 0, 1)),
+  putImageData: t(() => c.putImageData({}, 0, 0)),
+  fillRule: t(() => c.fill('bogus')),
+  pattern: t(() => c.createPattern(new OffscreenCanvas(1, 1), 'bogus')),
+  arc: t(() => c.arc(0, 0, -1, 0, 1)),
+  arcTo: t(() => c.arcTo(0, 0, 1, 1, -2.5)),
+  ellipseMajor: t(() => c.ellipse(0, 0, -1, 1, 0, 0, 1)),
+  ellipseMinor: t(() => c.ellipse(0, 0, 1, -1, 0, 0, 1)),
+  radialR0: t(() => c.createRadialGradient(0, 0, -1, 0, 0, 1)),
+  radialR1: t(() => c.createRadialGradient(0, 0, 1, 0, 0, -1)),
+  roundRect: t(() => c.roundRect(0, 0, 1, 1, -0.5)),
+  roundRectX: t(() => c.roundRect(0, 0, 1, 1, [{x: -1, y: 1}])),
+  path2dRoundRect: t(() => p.roundRect(0, 0, 1, 1, -1)),
+  path2dArc: t(() => p.arc(0, 0, -1, 0, 1)),
+  path2dEllipse: t(() => p.ellipse(0, 0, -1, 1, 0, 0, 1)),
+  path2dNaN: [t(() => p.arc(u, u, u, u, u)), t(() => p.arcTo(u, u, u, u, u)), t(() => p.ellipse(u, u, u, u, u, u, u)), t(() => p.arc(NaN, 0, -1, 0, 1))].join('; '),
+});
+</script>

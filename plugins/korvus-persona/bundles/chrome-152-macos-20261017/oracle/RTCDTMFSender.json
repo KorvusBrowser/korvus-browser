@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "RTCDTMFSender",
+    "member": "constructor",
+    "expr": "new RTCDTMFSender()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "insertDTMF",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return o.insertDTMF(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "insertDTMF",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return o.insertDTMF(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "ontonechange",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return o.ontonechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "ontonechange",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return Object.prototype.toString.call(o.ontonechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "canInsertDTMF",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return o.canInsertDTMF; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDTMFSender",
+    "member": "toneBuffer",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender.dtmf; return o.toneBuffer; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,23 @@
+[
+["no context", false, false, false],
+["getContext only", false, false, false],
+["fillStyle only", false, false, false],
+["save/restore/translate", true, true, false],
+["path no fill", false, false, false],
+["clearRect", true, true, false],
+["fillRect 0x0", false, false, false],
+["fillRect outside", true, true, false],
+["fillRect transparent", true, true, false],
+["fill empty path", false, false, false],
+["stroke empty path", false, false, false],
+["fillText empty", true, true, false],
+["fillText x", true, true, false],
+["measureText", false, false, false],
+["getImageData", false, false, false],
+["putImageData", true, true, false],
+["drawImage canvas", true, true, false],
+["reset after draw", true, true, false],
+["width set after draw", true, true, false],
+["toDataURL twice", false, false, false],
+["fillRect then toDataURL png", true, true, false]
+]

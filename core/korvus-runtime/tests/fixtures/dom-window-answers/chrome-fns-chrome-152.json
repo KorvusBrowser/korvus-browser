@@ -1,0 +1,330 @@
+[
+[
+"loadTimes own names",
+"length,name,prototype"
+],
+[
+"loadTimes name/length",
+"\"\"/0"
+],
+[
+"loadTimes prototype desc",
+"{\"t\":\"object\",\"w\":true,\"e\":false,\"c\":false}"
+],
+[
+"loadTimes prototype own names",
+"constructor"
+],
+[
+"loadTimes prototype.constructor desc",
+"{\"t\":\"function\",\"w\":true,\"e\":false,\"c\":true}"
+],
+[
+"loadTimes prototype.constructor is fn",
+true
+],
+[
+"loadTimes prototype proto is Object.prototype",
+true
+],
+[
+"loadTimes proto is Function.prototype",
+true
+],
+[
+"loadTimes toString",
+"function () { [native code] }"
+],
+[
+"new loadTimes()",
+"object requestTime,startLoadTime,commitLoadTime,finishDocumentLoadTime,finishLoadTime,firstPaintTime,firstPaintAfterLoadTime,navigationType,wasFetchedViaSpdy,wasNpnNegotiated,npnNegotiatedProtocol,wasAlternateProtocolAvailable,connectionInfo instanceof:false"
+],
+[
+"Reflect.construct loadTimes",
+"13 true"
+],
+[
+"loadTimes.call(1) keys",
+"requestTime,startLoadTime,commitLoadTime,finishDocumentLoadTime,finishLoadTime,firstPaintTime,firstPaintAfterLoadTime,navigationType,wasFetchedViaSpdy,wasNpnNegotiated,npnNegotiatedProtocol,wasAlternateProtocolAvailable,connectionInfo"
+],
+[
+"loadTimes prototype same object",
+true
+],
+[
+"loadTimes isExtensible",
+true
+],
+[
+"csi own names",
+"length,name,prototype"
+],
+[
+"csi name/length",
+"\"\"/0"
+],
+[
+"csi prototype desc",
+"{\"t\":\"object\",\"w\":true,\"e\":false,\"c\":false}"
+],
+[
+"csi prototype own names",
+"constructor"
+],
+[
+"csi prototype.constructor desc",
+"{\"t\":\"function\",\"w\":true,\"e\":false,\"c\":true}"
+],
+[
+"csi prototype.constructor is fn",
+true
+],
+[
+"csi prototype proto is Object.prototype",
+true
+],
+[
+"csi proto is Function.prototype",
+true
+],
+[
+"csi toString",
+"function () { [native code] }"
+],
+[
+"new csi()",
+"object startE,onloadT,pageT,tran instanceof:false"
+],
+[
+"Reflect.construct csi",
+"4 true"
+],
+[
+"csi.call(1) keys",
+"startE,onloadT,pageT,tran"
+],
+[
+"csi prototype same object",
+true
+],
+[
+"csi isExtensible",
+true
+],
+[
+"app.getDetails own names",
+"length,name"
+],
+[
+"new app.getDetails()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"app.getDetails toString",
+"function getDetails() { [native code] }"
+],
+[
+"app.getIsInstalled own names",
+"length,name"
+],
+[
+"new app.getIsInstalled()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"app.getIsInstalled toString",
+"function getIsInstalled() { [native code] }"
+],
+[
+"app.installState own names",
+"length,name"
+],
+[
+"new app.installState()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"app.installState toString",
+"function installState() { [native code] }"
+],
+[
+"app.runningState own names",
+"length,name"
+],
+[
+"new app.runningState()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"app.runningState toString",
+"function runningState() { [native code] }"
+],
+[
+"frame loadTimes own names",
+"length,name,prototype"
+],
+[
+"frame loadTimes name/length",
+"\"\"/0"
+],
+[
+"frame loadTimes prototype desc",
+"{\"t\":\"object\",\"w\":true,\"e\":false,\"c\":false}"
+],
+[
+"frame loadTimes prototype own names",
+"constructor"
+],
+[
+"frame loadTimes prototype.constructor desc",
+"{\"t\":\"function\",\"w\":true,\"e\":false,\"c\":true}"
+],
+[
+"frame loadTimes prototype.constructor is fn",
+true
+],
+[
+"frame loadTimes prototype proto is Object.prototype",
+true
+],
+[
+"frame loadTimes proto is Function.prototype",
+true
+],
+[
+"frame loadTimes toString",
+"function () { [native code] }"
+],
+[
+"frame new loadTimes()",
+"object requestTime,startLoadTime,commitLoadTime,finishDocumentLoadTime,finishLoadTime,firstPaintTime,firstPaintAfterLoadTime,navigationType,wasFetchedViaSpdy,wasNpnNegotiated,npnNegotiatedProtocol,wasAlternateProtocolAvailable,connectionInfo instanceof:false"
+],
+[
+"frame Reflect.construct loadTimes",
+"13 false"
+],
+[
+"frame loadTimes.call(1) keys",
+"requestTime,startLoadTime,commitLoadTime,finishDocumentLoadTime,finishLoadTime,firstPaintTime,firstPaintAfterLoadTime,navigationType,wasFetchedViaSpdy,wasNpnNegotiated,npnNegotiatedProtocol,wasAlternateProtocolAvailable,connectionInfo"
+],
+[
+"frame loadTimes prototype same object",
+true
+],
+[
+"frame loadTimes isExtensible",
+true
+],
+[
+"frame csi own names",
+"length,name,prototype"
+],
+[
+"frame csi name/length",
+"\"\"/0"
+],
+[
+"frame csi prototype desc",
+"{\"t\":\"object\",\"w\":true,\"e\":false,\"c\":false}"
+],
+[
+"frame csi prototype own names",
+"constructor"
+],
+[
+"frame csi prototype.constructor desc",
+"{\"t\":\"function\",\"w\":true,\"e\":false,\"c\":true}"
+],
+[
+"frame csi prototype.constructor is fn",
+true
+],
+[
+"frame csi prototype proto is Object.prototype",
+true
+],
+[
+"frame csi proto is Function.prototype",
+true
+],
+[
+"frame csi toString",
+"function () { [native code] }"
+],
+[
+"frame new csi()",
+"object startE,onloadT,pageT,tran instanceof:false"
+],
+[
+"frame Reflect.construct csi",
+"4 false"
+],
+[
+"frame csi.call(1) keys",
+"startE,onloadT,pageT,tran"
+],
+[
+"frame csi prototype same object",
+true
+],
+[
+"frame csi isExtensible",
+true
+],
+[
+"frame app.getDetails own names",
+"length,name"
+],
+[
+"frame new app.getDetails()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"frame app.getDetails toString",
+"function getDetails() { [native code] }"
+],
+[
+"frame app.getIsInstalled own names",
+"length,name"
+],
+[
+"frame new app.getIsInstalled()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"frame app.getIsInstalled toString",
+"function getIsInstalled() { [native code] }"
+],
+[
+"frame app.installState own names",
+"length,name"
+],
+[
+"frame new app.installState()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"frame app.installState toString",
+"function installState() { [native code] }"
+],
+[
+"frame app.runningState own names",
+"length,name"
+],
+[
+"frame new app.runningState()",
+"THROW TypeError: fn is not a constructor"
+],
+[
+"frame app.runningState toString",
+"function runningState() { [native code] }"
+],
+[
+"frame loadTimes distinct",
+true
+],
+[
+"frame new csi realm",
+true
+]
+]

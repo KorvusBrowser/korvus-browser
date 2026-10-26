@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "SVGFETileElement",
+    "member": "constructor",
+    "expr": "new SVGFETileElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFETileElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feTile\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

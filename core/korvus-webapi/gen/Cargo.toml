@@ -1,0 +1,38 @@
+[package]
+name = "korvus-webapi-gen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# The webapi TEST KIT: the surface grader, the behaviour oracle, the snapshot reader, WPT accounting.
+# v8-free. Kept out of the korvus-webapi package tree (that
+# package `exclude`s this dir) so it never links into the runtime. The WebIDL->Rust scaffold emitter it
+# used to carry was deleted (git history).
+[lib]
+name = "webapi_gen"
+
+# The codegen CLI. P0 seed: `cargo run -p korvus-webapi-gen --bin webapi` prints the parsed corpus.
+# `test = false`: the bin defines no `#[test]`s, and its libtest harness hangs at startup on this
+# platform (pre-existing; reproduces on a clean tree). Skipping it lets `cargo test -p korvus-webapi-gen`
+# run the lib tests to completion instead of blocking on an empty, hanging bin harness.
+[[bin]]
+name = "webapi"
+path = "src/main.rs"
+test = false
+
+[dependencies]
+# The ONE tag -> interface table: `korvus_dom::tags`, re-exported by `html_tags.rs`
+# instead of generated a second time into this crate. Pure Rust -- no deno_core, no v8 -- so the
+# "v8-free test kit" property above is unchanged.
+korvus-dom = { workspace = true }
+# The VALUES axis's reference. Taken from the crate that ships them rather than from a path, so a
+# bundle switch cannot leave the grader scoring against a persona the engine stopped wearing.
+persona = { workspace = true }
+# Rust WebIDL parser (spike-verified: inheritance / member kind / static-vs-inherit / readonly /
+# optionality / return types / ext-attrs). Pulls nom 5; both are already in the local cargo cache.
+weedle = "0.13"
+# coverage.rs scans the behavior scaffold source (trait stubs vs impl overrides) and parses the
+# behavior_rt dynamic-coverage json. All three are already in the local cargo cache.
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

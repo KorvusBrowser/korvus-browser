@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "XRLayerEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRLayerEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLayerEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRLayerEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLayerEvent",
+    "member": "layer",
+    "expr": "XRLayerEvent.prototype.layer",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLayerEvent",
+    "member": "layer",
+    "expr": "Object.getOwnPropertyDescriptor(XRLayerEvent.prototype, \"layer\").get.call(Object.create(XRLayerEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLayerEvent",
+    "member": "layer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLayerEvent.prototype, \"layer\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLayerEvent",
+    "member": "layer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLayerEvent.prototype, \"layer\").get.call(Object.create(XRLayerEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

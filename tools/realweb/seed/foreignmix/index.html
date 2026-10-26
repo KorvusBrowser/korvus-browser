@@ -1,0 +1,21 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B8: the foreign-content members an SVG / MathML interface shares with an HTML one are its OWN rows.
+const SVG = 'http://www.w3.org/2000/svg', MML = 'http://www.w3.org/1998/Math/MathML';
+const st = document.createElementNS(SVG, 'style'), a = document.createElementNS(SVG, 'a');
+const r = document.createElementNS(SVG, 'rect'), m = document.createElementNS(MML, 'mi');
+const t = (f) => { try { const v = f(); return typeof v + ':' + v; } catch (e) { return e.name + ': ' + e.message; } };
+const g = (P, k) => Object.getOwnPropertyDescriptor(P.prototype, k).get;
+window.R = JSON.stringify({
+  styleDisabled: t(() => st.disabled),
+  aReferrerPolicy: t(() => a.referrerPolicy),
+  fakeDisabled: t(() => g(SVGStyleElement, 'disabled').call(Object.create(SVGStyleElement.prototype))),
+  fakeReferrerPolicy: t(() => g(SVGAElement, 'referrerPolicy').call(Object.create(SVGAElement.prototype))),
+  setReferrerPolicy: t(() => { a.referrerPolicy = 'origin'; return a.getAttribute('referrerpolicy'); }),
+  svgDataset: t(() => { r.dataset.x = '1'; return r.getAttribute('data-x'); }),
+  svgStyle: t(() => { r.style.color = 'red'; return r.getAttribute('style'); }),
+  svgTabIndex: t(() => r.tabIndex),
+  mathNonce: t(() => { m.setAttribute('nonce', 'n'); return m.nonce; }),
+  mathFocusIsOwn: t(() => SVGElement.prototype.focus !== HTMLElement.prototype.focus && MathMLElement.prototype.focus !== HTMLElement.prototype.focus),
+  setMatrixArity: t(() => document.createElementNS(SVG, 'svg').createSVGTransform().setMatrix()),
+});
+</script>

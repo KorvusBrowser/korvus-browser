@@ -1,0 +1,19 @@
+<!doctype html><html><body><script>
+'use strict';
+// REALWEB H29: a structured clone's properties are plain data properties -- writable, enumerable, configurable --
+// whatever the source's were (StructuredDeserialize uses CreateDataProperty). The clone of a FROZEN object kept
+// every property read-only, so wix.com's footer (strict code) threw on `r.legacyLinks = r.legacyLinks.filter(...)`.
+var out = {};
+var d = function (o) { return Object.keys(o).map(function (k) { var p = Object.getOwnPropertyDescriptor(o, k); return k + ':' + (p.writable ? 'w' : '-') + (p.enumerable ? 'e' : '-') + (p.configurable ? 'c' : '-'); }).join(','); };
+var w = Object.freeze({ columns: Object.freeze([]), legacyLinks: Object.freeze([Object.freeze({ x: 1 })]), descriptionLinks: [] });
+var r = structuredClone(w);
+try { r.legacyLinks = r.legacyLinks.filter(function () { return true; }); out.wix = 'ok'; } catch (e) { out.wix = e.name + ': ' + e.message; }
+out.frozenClone = d(r) + ' | ' + d(r.legacyLinks[0]) + ' | frozen ' + Object.isFrozen(r) + Object.isFrozen(r.legacyLinks);
+var ro = {}; Object.defineProperty(ro, 'k', { value: 5, writable: false, enumerable: true, configurable: false });
+out.readOnly = d(structuredClone(ro));
+var sealed = structuredClone(Object.seal({ s: 1 })); sealed.t = 2; delete sealed.s; out.sealed = JSON.stringify(sealed);
+var arr = structuredClone(Object.freeze([1, 2])); arr.push(3); out.array = arr.join(',');
+var m = new MessageChannel();
+m.port1.onmessage = function (e) { try { e.data.legacyLinks = []; out.viaPort = 'ok ' + d(e.data); } catch (x) { out.viaPort = x.name; } document.title = JSON.stringify(out); };
+m.port2.postMessage(w);
+</script></body></html>

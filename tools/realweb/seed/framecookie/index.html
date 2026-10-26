@@ -1,0 +1,15 @@
+<!doctype html><title>fc</title>
+<script>
+// REALWEB F34: a frame's document.cookie is its OWN document's (Chrome 150): read and written against the frame's
+// URL, under SameSite rules for a cross-site frame -- not the page's jar.
+document.cookie = 'p=1; path=/';
+const out = { pageBefore: document.cookie };
+let want = 3;
+addEventListener('message', ev => {
+  out[ev.data.who] = ev.data.r;
+  if (--want === 0) { out.pageAfter = document.cookie; document.title = JSON.stringify(out); }
+});
+</script>
+<iframe src="http://localhost:18415/f.html?who=xsite"></iframe>
+<iframe src="/f.html?who=same"></iframe>
+<iframe src="http://localhost:18415/f.html?who=xsite2"></iframe>

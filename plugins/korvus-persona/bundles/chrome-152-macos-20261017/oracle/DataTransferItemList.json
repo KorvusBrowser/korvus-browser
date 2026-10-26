@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "DataTransferItemList",
+    "member": "constructor",
+    "expr": "new DataTransferItemList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransferItemList",
+    "member": "length",
+    "expr": "(() => { const o = new DataTransfer().items; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransferItemList",
+    "member": "add",
+    "expr": "(() => { const o = new DataTransfer().items; return o.add(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransferItemList",
+    "member": "remove",
+    "expr": "(() => { const o = new DataTransfer().items; return o.remove(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransferItemList",
+    "member": "remove",
+    "expr": "(() => { const o = new DataTransfer().items; return o.remove(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransferItemList",
+    "member": "clear",
+    "expr": "(() => { const o = new DataTransfer().items; return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

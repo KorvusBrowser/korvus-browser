@@ -1,0 +1,249 @@
+[
+  {
+    "iface": "FontFace",
+    "member": "constructor",
+    "expr": "new FontFace()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "family",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.family; })()",
+    "expected": "probe",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "family",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.family = \"x\", o.family); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "style",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.style; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "style",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.style = \"x\", o.style); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "weight",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.weight; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "weight",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.weight = \"x\", o.weight); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "stretch",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.stretch; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "stretch",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.stretch = \"x\", o.stretch); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "unicodeRange",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.unicodeRange; })()",
+    "expected": "U+0-10FFFF",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "unicodeRange",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.unicodeRange = \"x\", o.unicodeRange); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "featureSettings",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.featureSettings; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "featureSettings",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.featureSettings = \"x\", o.featureSettings); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "variationSettings",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.variationSettings; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "variationSettings",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.variationSettings = \"x\", o.variationSettings); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "display",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.display; })()",
+    "expected": "auto",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "display",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.display = \"x\", o.display); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "ascentOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.ascentOverride; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "ascentOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.ascentOverride = \"x\", o.ascentOverride); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "descentOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.descentOverride; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "descentOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.descentOverride = \"x\", o.descentOverride); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "lineGapOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.lineGapOverride; })()",
+    "expected": "normal",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "lineGapOverride",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return (o.lineGapOverride = \"x\", o.lineGapOverride); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "status",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.status; })()",
+    "expected": "unloaded",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "features",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.features; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "variations",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.variations; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "palettes",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return o.palettes; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "status",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.status); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "load",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.load()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "loaded",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.loaded); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "features",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.features); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "variations",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.variations); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "palettes",
+    "expr": "(() => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(o.palettes); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "load",
+    "expr": "(async () => { const o = new FontFace(\"probe\", \"url(data:,)\"); return await o.load(); })()",
+    "throws": "NetworkError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFace",
+    "member": "load",
+    "expr": "(async () => { const o = new FontFace(\"probe\", \"url(data:,)\"); return Object.prototype.toString.call(await o.load()); })()",
+    "throws": "NetworkError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

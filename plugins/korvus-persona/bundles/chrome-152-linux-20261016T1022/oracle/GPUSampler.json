@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPUSampler",
+    "member": "constructor",
+    "expr": "new GPUSampler()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "GPUSampler.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").get.call(Object.create(GPUSampler.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").get.call(Object.create(GPUSampler.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSampler",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUSampler.prototype, \"label\").set.call(Object.create(GPUSampler.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

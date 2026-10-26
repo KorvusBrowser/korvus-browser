@@ -1,0 +1,205 @@
+[
+  {
+    "iface": "URL",
+    "member": "revokeObjectURL",
+    "expr": "URL.revokeObjectURL(\"x\")",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "parse",
+    "expr": "URL.parse(\"x\")",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "canParse",
+    "expr": "URL.canParse(\"x\")",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "constructor",
+    "expr": "(() => { const o = new URL(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "constructor",
+    "expr": "(() => { const o = new URL(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "href",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.href; })()",
+    "expected": "http://user:pw@example.com:8080/a/b?q=1#h",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "href",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.href = \"x\", o.href); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "origin",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.origin; })()",
+    "expected": "http://example.com:8080",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "protocol",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.protocol; })()",
+    "expected": "http:",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "protocol",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.protocol = \"x\", o.protocol); })()",
+    "expected": "http:",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "username",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.username; })()",
+    "expected": "user",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "username",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.username = \"x\", o.username); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "password",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.password; })()",
+    "expected": "pw",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "password",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.password = \"x\", o.password); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "host",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.host; })()",
+    "expected": "example.com:8080",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "host",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.host = \"x\", o.host); })()",
+    "expected": "x:8080",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "hostname",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.hostname; })()",
+    "expected": "example.com",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "hostname",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.hostname = \"x\", o.hostname); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "port",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.port; })()",
+    "expected": "8080",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "port",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.port = \"x\", o.port); })()",
+    "expected": "8080",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "pathname",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.pathname; })()",
+    "expected": "/a/b",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "pathname",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.pathname = \"x\", o.pathname); })()",
+    "expected": "/x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "search",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.search; })()",
+    "expected": "?q=1",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "search",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.search = \"x\", o.search); })()",
+    "expected": "?x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "hash",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.hash; })()",
+    "expected": "#h",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "hash",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return (o.hash = \"x\", o.hash); })()",
+    "expected": "#x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "toJSON",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return o.toJSON(); })()",
+    "expected": "http://user:pw@example.com:8080/a/b?q=1#h",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "parse",
+    "expr": "Object.prototype.toString.call(URL.parse(\"x\"))",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "URL",
+    "member": "searchParams",
+    "expr": "(() => { const o = new URL(\"http://user:pw@example.com:8080/a/b?q=1#h\"); return Object.prototype.toString.call(o.searchParams); })()",
+    "expected": "[object URLSearchParams]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

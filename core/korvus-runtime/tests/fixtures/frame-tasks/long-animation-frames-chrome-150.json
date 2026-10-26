@@ -1,0 +1,1 @@
+[[["frames-spanning-the-fetch",0],["own-80ms-task",["task"]],["own-80ms-task-that-renders",["rendered"]],["80ms-message-from-the-page",["task"]],["80ms-xhr-load-handler",["task"]],["same-origin-childs-80ms-task",["task"],[]],["same-origin-childs-80ms-task-that-renders",[],["rendered"]]],["page-long-frames",0]]

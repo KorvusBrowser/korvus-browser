@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "constructor",
+    "expr": "new ImageBitmapRenderingContext()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.canvas === c; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.canvas.tagName; })()",
+    "expected": "CANVAS",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.canvas instanceof HTMLCanvasElement; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); const oc = new OffscreenCanvas(4, 4); return oc.getContext(\"bitmaprenderer\").canvas instanceof OffscreenCanvas; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); const s = new OffscreenCanvas(5, 6); s.getContext(\"2d\"); return o.transferFromImageBitmap(s.transferToImageBitmap()); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); const s = new OffscreenCanvas(5, 6); s.getContext(\"2d\"); o.transferFromImageBitmap(s.transferToImageBitmap()); return c.width + \"x\" + c.height; })()",
+    "expected": "9x13",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); const s = new OffscreenCanvas(5, 6); s.getContext(\"2d\"); const b = s.transferToImageBitmap(); o.transferFromImageBitmap(b); return b.width; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.transferFromImageBitmap(null); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); o.transferFromImageBitmap(null); return c.width + \"x\" + c.height; })()",
+    "expected": "9x13",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.transferFromImageBitmap(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.transferFromImageBitmap({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); return o.transferFromImageBitmap.length; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageBitmapRenderingContext",
+    "member": "transferFromImageBitmap",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); c.width = 9; c.height = 13; const o = c.getContext(\"bitmaprenderer\"); const s = new OffscreenCanvas(5, 6); s.getContext(\"2d\"); const b = s.transferToImageBitmap(); b.close(); return o.transferFromImageBitmap(b); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

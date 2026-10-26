@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "Sanitizer",
+    "member": "constructor",
+    "expr": "(() => { const o = new Sanitizer(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Sanitizer]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "allowElement",
+    "expr": "(() => { const o = new Sanitizer(); return o.allowElement(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "removeElement",
+    "expr": "(() => { const o = new Sanitizer(); return o.removeElement(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "replaceElementWithChildren",
+    "expr": "(() => { const o = new Sanitizer(); return o.replaceElementWithChildren(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "allowProcessingInstruction",
+    "expr": "(() => { const o = new Sanitizer(); return o.allowProcessingInstruction(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "removeProcessingInstruction",
+    "expr": "(() => { const o = new Sanitizer(); return o.removeProcessingInstruction(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "allowAttribute",
+    "expr": "(() => { const o = new Sanitizer(); return o.allowAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "removeAttribute",
+    "expr": "(() => { const o = new Sanitizer(); return o.removeAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "setComments",
+    "expr": "(() => { const o = new Sanitizer(); return o.setComments(true); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "setComments",
+    "expr": "(() => { const o = new Sanitizer(); return o.setComments(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "setDataAttributes",
+    "expr": "(() => { const o = new Sanitizer(); return o.setDataAttributes(true); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "setDataAttributes",
+    "expr": "(() => { const o = new Sanitizer(); return o.setDataAttributes(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "removeUnsafe",
+    "expr": "(() => { const o = new Sanitizer(); return o.removeUnsafe(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sanitizer",
+    "member": "get",
+    "expr": "(() => { const o = new Sanitizer(); return Object.prototype.toString.call(o.get()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

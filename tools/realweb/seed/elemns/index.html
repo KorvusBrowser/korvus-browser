@@ -1,0 +1,15 @@
+<!doctype html><html><body><script>
+// REALWEB S30: an element in no namespace or in a namespace other than HTML/SVG/MathML is an Element --
+// not HTMLUnknownElement -- whether createElementNS or an XML parser made it.
+var t = function (el) { return Object.prototype.toString.call(el) + ' ' + el.constructor.name + (el instanceof HTMLElement ? ' html' : ''); };
+var X = 'http://example.com/x', H = 'http://www.w3.org/1999/xhtml', S = 'http://www.w3.org/2000/svg';
+var xml = new DOMParser().parseFromString('<root xmlns="urn:x"><div/><p:q xmlns:p="urn:p"/><h:div xmlns:h="' + H + '"/></root>', 'application/xml').documentElement;
+var bare = new DOMParser().parseFromString('<root><div/></root>', 'application/xml').documentElement;
+document.title = JSON.stringify({
+  other: t(document.createElementNS(X, 'foo')), otherDiv: t(document.createElementNS(X, 'div')), otherPrefixed: t(document.createElementNS(X, 'p:div')),
+  nul: t(document.createElementNS(null, 'foo')), empty: t(document.createElementNS('', 'div')),
+  htmlUnknown: t(document.createElementNS(H, 'foo')), htmlDiv: t(document.createElementNS(H, 'div')), svgDiv: t(document.createElementNS(S, 'div')),
+  xmlRoot: t(xml), xmlDiv: t(xml.firstChild), xmlPrefixed: t(xml.childNodes[1]), xmlHtmlDiv: t(xml.childNodes[2]), bareRoot: t(bare), bareDiv: t(bare.firstChild),
+  proto: Object.getPrototypeOf(document.createElementNS(X, 'foo')) === Element.prototype
+});
+</script></body></html>

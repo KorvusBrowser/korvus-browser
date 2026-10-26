@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "DOMParser",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMParser(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMParser]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMParser",
+    "member": "parseFromString",
+    "expr": "(() => { const o = new DOMParser(); return o.parseFromString(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

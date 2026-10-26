@@ -1,0 +1,54 @@
+{
+ "frames": {
+  "blank": {
+   "ev": []
+  },
+  "cross": {
+   "ev": [],
+   "sc": false
+  },
+  "crossAllow2": {
+   "ev": [],
+   "sc": false
+  },
+  "crossAllow3": {
+   "ev": [],
+   "sc": false
+  },
+  "detached": {
+   "ev": []
+  },
+  "same": {
+   "ev": [],
+   "sc": false
+  },
+  "sameNoGyro": {
+   "ev": [],
+   "sc": false
+  },
+  "sameNoMagnet": {
+   "ev": [],
+   "sc": false
+  },
+  "sandboxed": {
+   "ev": [],
+   "sc": false
+  }
+ },
+ "handlers": [
+  false,
+  false,
+  false
+ ],
+ "hidden": false,
+ "ifaces": [
+  "undefined",
+  "undefined"
+ ],
+ "main": [],
+ "requestPermission": [
+  false,
+  false
+ ],
+ "sc": false
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "Accelerometer",
+    "member": "constructor",
+    "expr": "(() => { const o = new Accelerometer(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Accelerometer]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Accelerometer",
+    "member": "x",
+    "expr": "(() => { const o = new Accelerometer(); return o.x; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Accelerometer",
+    "member": "y",
+    "expr": "(() => { const o = new Accelerometer(); return o.y; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Accelerometer",
+    "member": "z",
+    "expr": "(() => { const o = new Accelerometer(); return o.z; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

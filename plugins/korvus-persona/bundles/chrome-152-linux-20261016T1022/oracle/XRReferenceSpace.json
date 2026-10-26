@@ -1,0 +1,117 @@
+[
+  {
+    "iface": "XRReferenceSpace",
+    "member": "constructor",
+    "expr": "new XRReferenceSpace()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "XRReferenceSpace.prototype.onreset",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").get.call(Object.create(XRReferenceSpace.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "XRReferenceSpace.prototype.getOffsetReferenceSpace.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "XRReferenceSpace.prototype.getOffsetReferenceSpace.call(Object.create(XRReferenceSpace.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "XRReferenceSpace.prototype.getOffsetReferenceSpace.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").get.call(Object.create(XRReferenceSpace.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRReferenceSpace.prototype, \"onreset\").set.call(Object.create(XRReferenceSpace.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "(() => { try { const v = XRReferenceSpace.prototype[\"getOffsetReferenceSpace\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "(() => { try { const v = XRReferenceSpace.prototype[\"getOffsetReferenceSpace\"].call(Object.create(XRReferenceSpace.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "getOffsetReferenceSpace",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.requestReferenceSpace(\"viewer\"))); return o.getOffsetReferenceSpace(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.requestReferenceSpace(\"viewer\"))); return o.onreset; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRReferenceSpace",
+    "member": "onreset",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.requestReferenceSpace(\"viewer\"))); return Object.prototype.toString.call(o.onreset); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

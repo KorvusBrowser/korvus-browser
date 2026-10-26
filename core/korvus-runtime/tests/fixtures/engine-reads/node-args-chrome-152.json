@@ -1,0 +1,142 @@
+[
+ [
+  "setAttribute converts the name, then the value",
+  "name,value",
+  "v"
+ ],
+ [
+  "setAttribute: a throwing name stops before the value",
+  "throw",
+  "threw Error: no"
+ ],
+ [
+  "setAttributeNS converts ns, name, value in order",
+  "ns,qname,value",
+  "v"
+ ],
+ [
+  "append(string) calls no createTextNode",
+  "",
+  "2:xy"
+ ],
+ [
+  "before() on a parentless node still converts its arguments",
+  "arg",
+  "true"
+ ],
+ [
+  "after() on a parentless node still converts its arguments",
+  "arg",
+  "true"
+ ],
+ [
+  "replaceWith() on a parentless node still converts its arguments",
+  "arg",
+  "true"
+ ],
+ [
+  "append converts every argument before inserting any",
+  "throw",
+  "0"
+ ],
+ [
+  "replaceChildren whose argument throws keeps the children",
+  "throw",
+  "ab"
+ ],
+ [
+  "replaceChildren that fails validity keeps the children",
+  "",
+  "threw HierarchyRequestError:a"
+ ],
+ [
+  "template content append: the Text node is the template document's",
+  "",
+  "true"
+ ],
+ [
+  "parsed document append: the Text node is that document's",
+  "",
+  "true"
+ ],
+ [
+  "parsed document before(): the Text node is that document's",
+  "",
+  "#text:true"
+ ],
+ [
+  "created document append: the Text node is that document's",
+  "",
+  "true"
+ ],
+ [
+  "innerText = null",
+  "",
+  "\"\""
+ ],
+ [
+  "innerText = undefined",
+  "",
+  "\"undefined\""
+ ],
+ [
+  "textContent = undefined",
+  "",
+  "\"\""
+ ],
+ [
+  "outerHTML = null",
+  "",
+  "\"\""
+ ],
+ [
+  "innerHTML = undefined",
+  "",
+  "\"undefined\""
+ ],
+ [
+  "iframe.srcdoc = null",
+  "",
+  "\"null\""
+ ],
+ [
+  "iframe.srcdoc = undefined",
+  "",
+  "\"undefined\""
+ ],
+ [
+  "script.text = null",
+  "",
+  "\"null\""
+ ],
+ [
+  "title.text = null",
+  "",
+  "\"null\""
+ ],
+ [
+  "insertAdjacentHTML(pos, null)",
+  "",
+  "\"null\""
+ ],
+ [
+  "createContextualFragment(null)",
+  "",
+  "\"null\""
+ ],
+ [
+  "frame document.write(TrustedHTML, string, TrustedHTML)",
+  "",
+  "<b>1</b><i>2</i><u>3</u>"
+ ],
+ [
+  "frame document.write(string, TrustedHTML): the DOMString overload",
+  "TrustedHTML.toString",
+  "<i>a</i><u>b</u>"
+ ],
+ [
+  "title.text set calls no textContent setter",
+  "",
+  "tt:ss"
+ ]
+]

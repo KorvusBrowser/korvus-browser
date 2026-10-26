@@ -1,0 +1,226 @@
+[
+  {
+    "iface": "GPUQueue",
+    "member": "constructor",
+    "expr": "new GPUQueue()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "GPUQueue.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").get.call(Object.create(GPUQueue.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "copyExternalImageToTexture",
+    "expr": "GPUQueue.prototype.copyExternalImageToTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "copyExternalImageToTexture",
+    "expr": "GPUQueue.prototype.copyExternalImageToTexture.call(Object.create(GPUQueue.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "onSubmittedWorkDone",
+    "expr": "Object.prototype.toString.call(GPUQueue.prototype.onSubmittedWorkDone.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "onSubmittedWorkDone",
+    "expr": "Object.prototype.toString.call(GPUQueue.prototype.onSubmittedWorkDone.call(Object.create(GPUQueue.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "submit",
+    "expr": "GPUQueue.prototype.submit.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "submit",
+    "expr": "GPUQueue.prototype.submit.call(Object.create(GPUQueue.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeBuffer",
+    "expr": "GPUQueue.prototype.writeBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeBuffer",
+    "expr": "GPUQueue.prototype.writeBuffer.call(Object.create(GPUQueue.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeTexture",
+    "expr": "GPUQueue.prototype.writeTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeTexture",
+    "expr": "GPUQueue.prototype.writeTexture.call(Object.create(GPUQueue.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "copyExternalImageToTexture",
+    "expr": "GPUQueue.prototype.copyExternalImageToTexture.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "submit",
+    "expr": "GPUQueue.prototype.submit.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeBuffer",
+    "expr": "GPUQueue.prototype.writeBuffer.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeTexture",
+    "expr": "GPUQueue.prototype.writeTexture.call({}, 1, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").get.call(Object.create(GPUQueue.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUQueue.prototype, \"label\").set.call(Object.create(GPUQueue.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "copyExternalImageToTexture",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"copyExternalImageToTexture\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "copyExternalImageToTexture",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"copyExternalImageToTexture\"].call(Object.create(GPUQueue.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "onSubmittedWorkDone",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"onSubmittedWorkDone\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "onSubmittedWorkDone",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"onSubmittedWorkDone\"].call(Object.create(GPUQueue.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "submit",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"submit\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "submit",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"submit\"].call(Object.create(GPUQueue.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeBuffer",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"writeBuffer\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeBuffer",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"writeBuffer\"].call(Object.create(GPUQueue.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeTexture",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"writeTexture\"].call({}, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUQueue",
+    "member": "writeTexture",
+    "expr": "(() => { try { const v = GPUQueue.prototype[\"writeTexture\"].call(Object.create(GPUQueue.prototype), 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

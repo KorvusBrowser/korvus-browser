@@ -1,0 +1,23 @@
+<!doctype html><title>m</title><body><div id="anchor"></div><script>
+window.__ok = {};
+customElements.define('x-ce', class extends HTMLElement { connectedCallback() { __ok['ce:' + this.getAttribute('k')] = 1; } });
+addEventListener('message', e => { if (e.data && e.data.f) __ok['iframe:' + e.data.f] = 1; });
+const P = {
+  appendChild: n => document.body.appendChild(n),
+  insertAdjacentElement: n => document.getElementById('anchor').insertAdjacentElement('afterend', n),
+  detachedThenAppend: n => { const d = document.createElement('div'); d.appendChild(n); document.body.appendChild(d); },
+  shadowDetachedHost: n => { const h = document.createElement('div'); h.attachShadow({mode: 'open'}).appendChild(n); document.body.appendChild(h); },
+  replaceChildren: n => { const d = document.createElement('div'); document.body.appendChild(d); d.replaceChildren(n); },
+};
+const mk = {
+  script: k => { const s = document.createElement('script'); s.src = 'ok.js?script:' + k; return s; },
+  iframe: k => { const f = document.createElement('iframe'); f.src = 'f.html?' + k; return f; },
+  img: k => { const i = document.createElement('img'); i.onload = () => __ok['img:' + k] = 1; i.src = 'px.png?' + k; return i; },
+  link: k => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.onload = () => __ok['link:' + k] = 1; l.href = 'st.css?' + k; return l; },
+  ce: k => { const c = document.createElement('x-ce'); c.setAttribute('k', k); return c; },
+};
+for (const [pk, pf] of Object.entries(P)) for (const [mkk, mf] of Object.entries(mk)) pf(mf(pk));
+for (const kind of ['iframe', 'img', 'link', 'ce']) {
+  const html = {iframe: '<iframe src="f.html?innerHTML"></iframe>', img: '<img src="px.png?innerHTML" onload="__ok[\'img:innerHTML\']=1">', link: '<link rel="stylesheet" href="st.css?innerHTML" onload="__ok[\'link:innerHTML\']=1">', ce: '<x-ce k="innerHTML"></x-ce>'}[kind];
+  const d = document.createElement('div'); document.body.appendChild(d); d.innerHTML = html; }
+</script></body>

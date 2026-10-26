@@ -1,0 +1,31 @@
+[
+  {
+    "iface": "ImageDecoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new ImageDecoder({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageDecoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new ImageDecoder(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageDecoder",
+    "member": "isTypeSupported",
+    "expr": "Object.prototype.toString.call(ImageDecoder.isTypeSupported(\"x\"))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ImageDecoder",
+    "member": "isTypeSupported",
+    "expr": "(async () => { return await ImageDecoder.isTypeSupported(\"x\"); })()",
+    "expected": false,
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

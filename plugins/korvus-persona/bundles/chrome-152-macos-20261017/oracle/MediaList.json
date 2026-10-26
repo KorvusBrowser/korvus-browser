@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "MediaList",
+    "member": "constructor",
+    "expr": "new MediaList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

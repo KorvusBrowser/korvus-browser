@@ -1,0 +1,5 @@
+[
+ "Document.createElement -> new HTMLElement x1",
+ "HTMLElement.click -> Event.preventDefault x1",
+ "HTMLFormElement.requestSubmit -> Event.preventDefault x1"
+]

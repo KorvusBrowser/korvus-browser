@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "IDBRecord",
+    "member": "constructor",
+    "expr": "new IDBRecord()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

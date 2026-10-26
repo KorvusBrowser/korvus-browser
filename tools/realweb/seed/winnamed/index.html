@@ -1,0 +1,18 @@
+<!doctype html><html><body>
+<form name=gone></form><form name=twin></form><form name=twin></form><div id=dupid></div><div id=dupid></div><img name=pic><iframe name=fr></iframe>
+<svg><rect id=svgrect /><text id=svgtext name=svgname>t</text></svg><math><mi id=mathmi>x</mi></math>
+<script>
+// REALWEB H20: the Window's named properties come from the DOCUMENT'S tree (HTML "named objects"): a detached
+// or removed element is not one, and two elements with the name give an HTMLCollection.
+var d = document.createElement('form'); d.name = 'loose';
+var did = document.createElement('div'); did.id = 'looseid';
+document.getElementsByName('gone')[0].remove();
+var t = function (v) { return v === undefined ? 'undefined' : Object.prototype.toString.call(v) + (v && v.length !== undefined && !(v instanceof Window) ? ':' + v.length : ''); };
+window.R = JSON.stringify({
+  loose: t(window.loose), gone: t(window.gone), twin: t(window.twin), dupid: t(window.dupid), looseid: t(window.looseid),
+  pic: t(window.pic), fr: t(window.fr), frIsWin: window.fr === frames[0],
+  docLoose: t(document.loose), docGone: t(document.gone), docTwin: t(document.twin), docPic: t(document.pic),
+  inLoose: 'loose' in window, inTwin: 'twin' in window,
+  svgrect: t(window.svgrect), svgtext: t(window.svgtext), svgname: t(window.svgname), mathmi: t(window.mathmi)
+});
+</script></body></html>

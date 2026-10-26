@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "ContentVisibilityAutoStateChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ContentVisibilityAutoStateChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ContentVisibilityAutoStateChangeEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ContentVisibilityAutoStateChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ContentVisibilityAutoStateChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ContentVisibilityAutoStateChangeEvent",
+    "member": "skipped",
+    "expr": "(() => { const o = new ContentVisibilityAutoStateChangeEvent(\"x\"); return o.skipped; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  }
+]

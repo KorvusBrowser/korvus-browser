@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "Serial",
+    "member": "constructor",
+    "expr": "new Serial()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.serial; return o.onconnect; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.serial; return o.ondisconnect; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.serial; return Object.prototype.toString.call(o.onconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.serial; return Object.prototype.toString.call(o.ondisconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "getPorts",
+    "expr": "(() => { const o = navigator.serial; return Object.prototype.toString.call(o.getPorts()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Serial",
+    "member": "requestPort",
+    "expr": "(() => { const o = navigator.serial; return Object.prototype.toString.call(o.requestPort()); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  }
+]

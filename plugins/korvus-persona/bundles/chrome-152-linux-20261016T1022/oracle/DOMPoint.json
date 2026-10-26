@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "DOMPoint",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMPoint(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMPoint]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "x",
+    "expr": "(() => { const o = new DOMPoint(); return o.x; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "x",
+    "expr": "(() => { const o = new DOMPoint(); return (o.x = 1, o.x); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "y",
+    "expr": "(() => { const o = new DOMPoint(); return o.y; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "y",
+    "expr": "(() => { const o = new DOMPoint(); return (o.y = 1, o.y); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "z",
+    "expr": "(() => { const o = new DOMPoint(); return o.z; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "z",
+    "expr": "(() => { const o = new DOMPoint(); return (o.z = 1, o.z); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "w",
+    "expr": "(() => { const o = new DOMPoint(); return o.w; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "w",
+    "expr": "(() => { const o = new DOMPoint(); return (o.w = 1, o.w); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "x",
+    "expr": "(() => { const o = new DOMPoint(); return (o.x = \"1\", o.x); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "y",
+    "expr": "(() => { const o = new DOMPoint(); return (o.y = \"1\", o.y); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "z",
+    "expr": "(() => { const o = new DOMPoint(); return (o.z = \"1\", o.z); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "w",
+    "expr": "(() => { const o = new DOMPoint(); return (o.w = \"1\", o.w); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMPoint",
+    "member": "fromPoint",
+    "expr": "Object.prototype.toString.call(DOMPoint.fromPoint())",
+    "expected": "[object DOMPoint]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

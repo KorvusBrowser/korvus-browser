@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object SecurityPolicyViolationEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "documentURI",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.documentURI; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "referrer",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.referrer; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "blockedURI",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.blockedURI; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "effectiveDirective",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.effectiveDirective; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "violatedDirective",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.violatedDirective; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "originalPolicy",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.originalPolicy; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "sourceFile",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.sourceFile; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "sample",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.sample; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "disposition",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.disposition; })()",
+    "expected": "enforce",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "statusCode",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.statusCode; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "lineNumber",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.lineNumber; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SecurityPolicyViolationEvent",
+    "member": "columnNumber",
+    "expr": "(() => { const o = new SecurityPolicyViolationEvent(\"x\"); return o.columnNumber; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  }
+]

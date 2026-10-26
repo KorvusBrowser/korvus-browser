@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SVGUseElementShadowRoot",
+    "member": "constructor",
+    "expr": "new SVGUseElementShadowRoot()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

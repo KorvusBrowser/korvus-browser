@@ -1,0 +1,15 @@
+<!doctype html><html><body><iframe id=f srcdoc="<script>onmessage=function(e){var p=e.ports[0]||(e.data&&e.data.port);if(p){p.postMessage('pong '+(e.ports.length)+' '+(e.data&&e.data.port?'inData':'noData'))}}</script>"></iframe><script>
+// REALWEB H22: a TRANSFERRED MessagePort is not cloned -- it is the receiver's new port, inside the
+// message as in `ports` -- and one that is not transferred is a DataCloneError.
+var R={};
+function t(k,fn){try{fn();R[k]=R[k]||'ok'}catch(e){R[k]=e.name+': '+e.message}}
+t('cloneBare', function(){ structuredClone(new MessageChannel().port1) });
+t('cloneTransfer', function(){ var c=new MessageChannel(); var x=structuredClone({p:c.port1},{transfer:[c.port1]}); R.cloneTransfer='ok '+Object.prototype.toString.call(x.p) });
+f.onload=function(){
+  var c1=new MessageChannel(); c1.port1.onmessage=function(e){R.viaPorts=e.data};
+  t('postPorts', function(){ f.contentWindow.postMessage('ping', '*', [c1.port2]) });
+  var c2=new MessageChannel(); c2.port1.onmessage=function(e){R.viaData=e.data};
+  t('postPortInData', function(){ f.contentWindow.postMessage({port:c2.port2}, '*', [c2.port2]) });
+  setTimeout(function(){document.title=JSON.stringify(R)},500);
+};
+</script></body></html>

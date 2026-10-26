@@ -1,0 +1,49 @@
+<!doctype html><html><head><?start name="ttl"?><?end?></head><body>
+<div id=pageTarget><?start name="pg"?>old page<?end?></div>
+<section id=scriptTarget><?start name="sc"?><script>window.state = 'init';</script><?end?></section>
+<div id=host><template shadowrootmode="open"><p id=inShadow><?start name="sh"?>old shadow<?end?></p><template for="sh">new shadow</template></template></div>
+<div id=lightSh><?start name="sh"?>light<?end?></div>
+<template for="pg"><b>new page</b></template>
+<template for="sc"><script>window.state = 'patched';</script></template>
+<template for="ttl"><title>New title</title></template>
+<template for="nomatch">stays</template>
+<script>
+// REALWEB S33a: declarative partial updates -- `<template for>` patches the `<?start>`/`<?marker>` range before it in
+// the tree being parsed (Chrome 150). The cases are WPT template-for-multiple-cases.html's, parsed three ways.
+var cases = [
+  ['<?start name="p">Old content', '<template for="p">New content</template>'],
+  ['<?start name="p">Old<?end> content', '<template for="p">New</template>'],
+  ['<?marker name="p"> content', '<template for="p">New</template>'],
+  ['New <?marker name="p">', '<template for="p">content</template>'],
+  ['New <?marker name="a"> content <?marker name="a">', '<template for="a">X</template>'],
+  ['<?marker name="b"> content', '<template for="b">X<?marker name="b"></template><template for="b">Y</template>'],
+  ['<?start name="a">New <?start name="b"> content <?end> after <?end>', '<template for="a">X</template>'],
+  ['<?start name="a">New <?start name="b"> content <?end> after', '<template for="b">X</template>'],
+  ['<?start name="a">New <?start name="b"> content <?end name="a"> after<?end>', '<template for="a">X</template>'],
+  ['<?start name="a">New <?start name="b"> content <?end name="a"> after<?end>', '<template for="b">X</template>'],
+  ['<?start name="a#b">New <?start> content <?end> after<?end>', '<template for="a#b">X</template>'],
+  ['<?start name="">Old<?end>', '<template for="">New</template>'],
+  ['<?start name="p">Old<?end>', '<template for="p"><span>New</template>'],
+  ['New <?marker name="p"> content', '<template for="p"><span>X</template>'],
+  ['<?start name="p">Old<?end>', '<template for="p"></template>'],
+  ['New <?marker name="p"> content', '<template for="p"></template>'],
+  ['<?other name="p"><?marker name="p"> content', '<template for="p">New</template>'],
+  ['<?end name="p"><?marker name="p"> content', '<template for="p">New</template>'],
+  ['<?Start name="a"?><?ENd><?marker Name="d"><?marker name="E">', '<template for="a">a</template><template for="d">d</template><template for="e">e</template><template for="E">E</template>'],
+  ['<?marker name=b1?><?marker name = "b2" ?><?marker name="b3" name="z"?><?marker name=\'b5\'?><?marker name="b&amp;9"?>', '<template for="b1">1</template><template for="b2">2</template><template for="b3">3</template><template for="z">Z</template><template for="b5">5</template><template for="b&9">9</template>'],
+  ['', '<template for="p">New</template><p><?start name="p">Old</p>'],
+  ['<span><?start name="j"?>x</span>y<?end?>', '<template for="j">J</template>'],
+];
+var R = {};
+cases.forEach(function (c, i) {
+  var html = '<div>' + c[0] + '</div>' + c[1];
+  var dp = new DOMParser().parseFromString(html, 'text/html').body.innerHTML;
+  var d = document.createElement('div'); d.innerHTML = html;
+  var t = document.createElement('template'); t.innerHTML = html;
+  R[i] = dp + (d.innerHTML === dp ? '' : ' || innerHTML: ' + d.innerHTML) + (t.innerHTML === dp ? '' : ' || template: ' + t.innerHTML);
+});
+R.page = [document.getElementById('pageTarget').innerHTML, document.getElementById('scriptTarget').innerHTML, window.state, document.title, document.querySelectorAll('template[for]').length + ':' + Array.from(document.querySelectorAll('template[for]')).map(function (x) { return x.getAttribute('for'); }).join()].join(' | ');
+R.shadow = [document.getElementById('host').shadowRoot && document.getElementById('host').shadowRoot.getElementById('inShadow').innerHTML, document.getElementById('lightSh').innerHTML].join(' | ');
+R.outsideFragment = (function () { var holder = document.createElement('div'); holder.innerHTML = '<p><?start name="o"?>old</p>'; document.body.appendChild(holder); var c = document.createElement('div'); c.innerHTML = '<template for="o">new</template>'; var out = holder.innerHTML + ' | ' + c.innerHTML; holder.remove(); return out; })();
+window.R = JSON.stringify(R);
+</script></body></html>

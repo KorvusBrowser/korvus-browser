@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRInputSourcesChangeEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRInputSourcesChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "session",
+    "expr": "XRInputSourcesChangeEvent.prototype.session",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "session",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"session\").get.call(Object.create(XRInputSourcesChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "added",
+    "expr": "XRInputSourcesChangeEvent.prototype.added",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "added",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"added\").get.call(Object.create(XRInputSourcesChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "removed",
+    "expr": "XRInputSourcesChangeEvent.prototype.removed",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "removed",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"removed\").get.call(Object.create(XRInputSourcesChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"session\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"session\").get.call(Object.create(XRInputSourcesChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "added",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"added\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "added",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"added\").get.call(Object.create(XRInputSourcesChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "removed",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"removed\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRInputSourcesChangeEvent",
+    "member": "removed",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourcesChangeEvent.prototype, \"removed\").get.call(Object.create(XRInputSourcesChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

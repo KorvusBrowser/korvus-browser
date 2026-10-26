@@ -1,0 +1,21 @@
+<!doctype html><html><body>
+<!-- WebAssembly.instantiateStreaming / compileStreaming: deno_core leaves the WASM streaming host
+     callback unset, so V8 invoking it ABORTS the process (not a catchable throw). vitejs.dev and any
+     esbuild-wasm site tripped it. The bootstrap routes both through arrayBuffer()+instantiate/compile,
+     which are plain V8 with no host callback. This stage proves they resolve (not abort) and stay
+     [native code]. The module is the 8-byte empty module (magic + version). -->
+<script>
+(async () => {
+  try {
+    const nativeStream = WebAssembly.instantiateStreaming.toString().includes('[native code]')
+                      && WebAssembly.compileStreaming.toString().includes('[native code]');
+    const respLike = () => ({ arrayBuffer: async () => new Uint8Array([0,97,115,109,1,0,0,0]).buffer });
+    const r = await WebAssembly.instantiateStreaming(respLike());
+    const okInst = r.instance instanceof WebAssembly.Instance && r.module instanceof WebAssembly.Module;
+    const mod = await WebAssembly.compileStreaming(respLike());
+    const okComp = mod instanceof WebAssembly.Module;
+    globalThis.__obstacle = 'wasm:' + nativeStream + ':' + okInst + ':' + okComp;
+  } catch (e) { globalThis.__obstacle = 'wasm:threw:' + e.name; }
+})();
+</script>
+</body></html>

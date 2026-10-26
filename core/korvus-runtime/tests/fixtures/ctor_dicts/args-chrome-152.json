@@ -1,0 +1,23 @@
+[
+["usb-in-bogus", "TypeError", "Failed to construct 'USBInTransferResult': The provided value 'bogus' is not a valid enum value of type USBTransferStatus."],
+["usb-in-ok", "ok", "ok"],
+["usb-in-data-null", "ok", null],
+["usb-in-data-wrong", "TypeError", "Failed to construct 'USBInTransferResult': parameter 2 is not of type 'DataView'."],
+["usb-in-data", "ok", true],
+["usb-in-readonly", "ok", "ok"],
+["usb-out", "ok", 4294967295],
+["usb-out-str", "ok", 12],
+["usb-out-default", "ok", 0],
+["usb-iso-in-3", "TypeError", "Failed to construct 'USBIsochronousInTransferResult': The provided value cannot be converted to a sequence."],
+["usb-iso-in-obj", "TypeError", "Failed to construct 'USBIsochronousInTransferResult': The object must have a callable @@iterator property."],
+["usb-iso-in-wrong-elem", "TypeError", "Failed to construct 'USBIsochronousInTransferResult': Failed to convert value to 'USBIsochronousInTransferPacket'."],
+["usb-iso-in", "ok", "1,true,true,false"],
+["usb-iso-in-iter", "ok", 1],
+["usb-iso-out", "ok", 2],
+["phrase", "ok", "x:1"],
+["phrase-boost", "ok", 0.10000000149011612],
+["phrase-nan", "TypeError", "Failed to construct 'SpeechRecognitionPhrase': The provided float value is non-finite."],
+["fontfaces-frozen", "ok", true],
+["fontfaces-given", "ok", "false,false,true"],
+["brand", "TypeError", "Illegal invocation"]
+]

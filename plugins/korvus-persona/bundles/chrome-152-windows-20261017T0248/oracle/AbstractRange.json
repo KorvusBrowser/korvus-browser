@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "AbstractRange",
+    "member": "constructor",
+    "expr": "new AbstractRange()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AbstractRange",
+    "member": "startOffset",
+    "expr": "(() => { const o = document.createRange(); return o.startOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AbstractRange",
+    "member": "endOffset",
+    "expr": "(() => { const o = document.createRange(); return o.endOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AbstractRange",
+    "member": "collapsed",
+    "expr": "(() => { const o = document.createRange(); return o.collapsed; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AbstractRange",
+    "member": "startContainer",
+    "expr": "(() => { const o = document.createRange(); return Object.prototype.toString.call(o.startContainer); })()",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AbstractRange",
+    "member": "endContainer",
+    "expr": "(() => { const o = document.createRange(); return Object.prototype.toString.call(o.endContainer); })()",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

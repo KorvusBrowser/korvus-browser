@@ -1,0 +1,3790 @@
+[
+ [
+  "img computed plain",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "img computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "img computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "img computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "img computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "img computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "img computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "img computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "img computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "img computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "img computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "img computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "img computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "img computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "img computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "img computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "img computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "img computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "img computed width=\"40\" height=\"30\"",
+  "40px 30px auto 40 / 30"
+ ],
+ [
+  "img computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "img computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto 40.5 / 30.25"
+ ],
+ [
+  "img computed width=\"0\" height=\"0\"",
+  "0px 0px auto 0 / 0"
+ ],
+ [
+  "img computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "img computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto 1 / 3"
+ ],
+ [
+  "iframe computed plain",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "iframe computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "iframe computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "iframe computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "iframe computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "iframe computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "iframe computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "iframe computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "iframe computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "iframe computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "iframe computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "iframe computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "iframe computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "iframe computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "iframe computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "iframe computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "iframe computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "iframe computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "iframe computed width=\"40\" height=\"30\"",
+  "40px 30px auto"
+ ],
+ [
+  "iframe computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "iframe computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto"
+ ],
+ [
+  "iframe computed width=\"0\" height=\"0\"",
+  "0px 0px auto"
+ ],
+ [
+  "iframe computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "iframe computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto"
+ ],
+ [
+  "video computed plain",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "video computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "video computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "video computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "video computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "video computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "video computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "video computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "video computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "video computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "video computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "video computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "video computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "video computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "video computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "video computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "video computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "video computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "video computed width=\"40\" height=\"30\"",
+  "40px 30px auto 40 / 30"
+ ],
+ [
+  "video computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "video computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto 40.5 / 30.25"
+ ],
+ [
+  "video computed width=\"0\" height=\"0\"",
+  "0px 0px auto 0 / 0"
+ ],
+ [
+  "video computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "video computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto 1 / 3"
+ ],
+ [
+  "canvas computed plain",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"100\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"50%\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"12.5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"0\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\" 30\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"30px\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"5.%\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"1e2\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"40.\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"0%\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"100.75%\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"7.5.5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"1,5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"60\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"50%\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"0\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"7.5\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "canvas computed width=\"40\" height=\"30\"",
+  "auto auto auto 40 / 30"
+ ],
+ [
+  "canvas computed width=\"40\" height=\"50%\"",
+  "auto auto auto 40 / 50"
+ ],
+ [
+  "canvas computed width=\"40.5\" height=\"30.25\"",
+  "auto auto auto 40 / 30"
+ ],
+ [
+  "canvas computed width=\"0\" height=\"0\"",
+  "auto auto auto 0 / 0"
+ ],
+ [
+  "canvas computed width=\"40\" height=\"30*\"",
+  "auto auto auto 40 / 30"
+ ],
+ [
+  "canvas computed width=\"1e2\" height=\"3\"",
+  "auto auto auto 1 / 3"
+ ],
+ [
+  "embed computed plain",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "embed computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "embed computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "embed computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "embed computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "embed computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "embed computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "embed computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "embed computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "embed computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "embed computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "embed computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "embed computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "embed computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "embed computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "embed computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "embed computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "embed computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "embed computed width=\"40\" height=\"30\"",
+  "40px 30px auto"
+ ],
+ [
+  "embed computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "embed computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto"
+ ],
+ [
+  "embed computed width=\"0\" height=\"0\"",
+  "0px 0px auto"
+ ],
+ [
+  "embed computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "embed computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto"
+ ],
+ [
+  "object computed plain",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "object computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "object computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "object computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "object computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "object computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "object computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "object computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "object computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "object computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "object computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "object computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "object computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "object computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "object computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "object computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "object computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "object computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "object computed width=\"40\" height=\"30\"",
+  "40px 30px auto"
+ ],
+ [
+  "object computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "object computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto"
+ ],
+ [
+  "object computed width=\"0\" height=\"0\"",
+  "0px 0px auto"
+ ],
+ [
+  "object computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "object computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto"
+ ],
+ [
+  "input-image computed plain",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"100\"",
+  "100px auto auto"
+ ],
+ [
+  "input-image computed width=\"50%\"",
+  "50% auto auto"
+ ],
+ [
+  "input-image computed width=\"12.5\"",
+  "12.5px auto auto"
+ ],
+ [
+  "input-image computed width=\"0\"",
+  "0px auto auto"
+ ],
+ [
+  "input-image computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\" 30\"",
+  "30px auto auto"
+ ],
+ [
+  "input-image computed width=\"30px\"",
+  "30px auto auto"
+ ],
+ [
+  "input-image computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"5.%\"",
+  "5% auto auto"
+ ],
+ [
+  "input-image computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"1e2\"",
+  "1px auto auto"
+ ],
+ [
+  "input-image computed width=\"40.\"",
+  "40px auto auto"
+ ],
+ [
+  "input-image computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"0%\"",
+  "0% auto auto"
+ ],
+ [
+  "input-image computed width=\"100.75%\"",
+  "100.75% auto auto"
+ ],
+ [
+  "input-image computed width=\"7.5.5\"",
+  "7.5px auto auto"
+ ],
+ [
+  "input-image computed width=\"1,5\"",
+  "1px auto auto"
+ ],
+ [
+  "input-image computed height=\"60\"",
+  "auto 60px auto"
+ ],
+ [
+  "input-image computed height=\"50%\"",
+  "auto 50% auto"
+ ],
+ [
+  "input-image computed height=\"0\"",
+  "auto 0px auto"
+ ],
+ [
+  "input-image computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed height=\"7.5\"",
+  "auto 7.5px auto"
+ ],
+ [
+  "input-image computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "input-image computed width=\"40\" height=\"30\"",
+  "40px 30px auto 40 / 30"
+ ],
+ [
+  "input-image computed width=\"40\" height=\"50%\"",
+  "40px 50% auto"
+ ],
+ [
+  "input-image computed width=\"40.5\" height=\"30.25\"",
+  "40.5px 30.25px auto 40.5 / 30.25"
+ ],
+ [
+  "input-image computed width=\"0\" height=\"0\"",
+  "0px 0px auto 0 / 0"
+ ],
+ [
+  "input-image computed width=\"40\" height=\"30*\"",
+  "40px auto auto"
+ ],
+ [
+  "input-image computed width=\"1e2\" height=\"3\"",
+  "1px 3px auto 1 / 3"
+ ],
+ [
+  "input-text computed plain",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"100\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"50%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"12.5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"0\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\" 30\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"30px\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"5.%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"+5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"-5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"1e2\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"40.\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\".5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"0%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"100.75%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"7.5.5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"1,5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"60\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"50%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"0\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"abc\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"7.5\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed height=\"10*\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"40\" height=\"30\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"40\" height=\"50%\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"40.5\" height=\"30.25\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"0\" height=\"0\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"40\" height=\"30*\"",
+  "auto auto auto"
+ ],
+ [
+  "input-text computed width=\"1e2\" height=\"3\"",
+  "auto auto auto"
+ ],
+ [
+  "img plain",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"100\"",
+  "100px 0px 100 0 auto"
+ ],
+ [
+  "img width=\"50%\"",
+  "200px 0px 200 0 auto"
+ ],
+ [
+  "img width=\"12.5\"",
+  "12.5px 0px 13 0 auto"
+ ],
+ [
+  "img width=\"0\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"10*\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\" 30\"",
+  "30px 0px 30 0 auto"
+ ],
+ [
+  "img width=\"30px\"",
+  "30px 0px 30 0 auto"
+ ],
+ [
+  "img width=\"abc\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"5.%\"",
+  "20px 0px 20 0 auto"
+ ],
+ [
+  "img width=\"+5\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"-5\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"1e2\"",
+  "1px 0px 1 0 auto"
+ ],
+ [
+  "img width=\"40.\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "img width=\".5\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"0%\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img width=\"100.75%\"",
+  "403px 0px 403 0 auto"
+ ],
+ [
+  "img width=\"7.5.5\"",
+  "7.5px 0px 8 0 auto"
+ ],
+ [
+  "img width=\"1,5\"",
+  "1px 0px 1 0 auto"
+ ],
+ [
+  "img height=\"60\"",
+  "0px 60px 0 60 auto"
+ ],
+ [
+  "img height=\"50%\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img height=\"0\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img height=\"abc\"",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img height=\"7.5\"",
+  "0px 7.5px 0 8 auto"
+ ],
+ [
+  "img height=\"50%\" in 300px",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "img width=\"40\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "img width=\"40\" height=\"50%\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "img width=\"40\" height=\"abc\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "img width=\"40\" height=\"\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "img width=\"0\" height=\"30\"",
+  "0px 30px 0 30 auto 0 / 30"
+ ],
+ [
+  "img width=\"40.5\" height=\"30\"",
+  "40.5px 30px 41 30 auto 40.5 / 30"
+ ],
+ [
+  "img width=\"40px\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "img width=\"-4\" height=\"3\"",
+  "0px 3px 0 3 auto"
+ ],
+ [
+  "img width=\"40\" height=\"0\"",
+  "40px 0px 40 0 auto 40 / 0"
+ ],
+ [
+  "img width=40 height=30 .w100",
+  "100px 30px 100 30 auto 40 / 30"
+ ],
+ [
+  "img width=40 height=30 .hauto",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "img width=100 .w10",
+  "10px 0px 10 0 auto"
+ ],
+ [
+  "img width=100 style=width:auto",
+  "0px 0px 0 0 auto"
+ ],
+ [
+  "img hspace=\"10\"",
+  "0px 10px 0px 10px"
+ ],
+ [
+  "img vspace=\"10\"",
+  "10px 0px 10px 0px"
+ ],
+ [
+  "img hspace=\"10%\"",
+  "0px 40px 0px 40px"
+ ],
+ [
+  "img vspace=\"10%\"",
+  "40px 0px 40px 0px"
+ ],
+ [
+  "img hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "img vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "img hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "img vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "img hspace=\"2.5\"",
+  "0px 2.5px 0px 2.5px"
+ ],
+ [
+  "img vspace=\"2.5\"",
+  "2.5px 0px 2.5px 0px"
+ ],
+ [
+  "img border=\"3\"",
+  "3px solid 3px solid"
+ ],
+ [
+  "img border=\"0\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "img border=\"\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "img border=\"abc\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "img border=\"2px\"",
+  "2px solid 2px solid"
+ ],
+ [
+  "img border=\"-1\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "img border=\" 4\"",
+  "4px solid 4px solid"
+ ],
+ [
+  "img align=\"left\"",
+  "left top start"
+ ],
+ [
+  "img align=\"right\"",
+  "right top start"
+ ],
+ [
+  "img align=\"middle\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "img align=\"absmiddle\"",
+  "none middle start"
+ ],
+ [
+  "img align=\"abscenter\"",
+  "none middle start"
+ ],
+ [
+  "img align=\"absbottom\"",
+  "none bottom start"
+ ],
+ [
+  "img align=\"top\"",
+  "none top start"
+ ],
+ [
+  "img align=\"center\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "img align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "img align=\"texttop\"",
+  "none text-top start"
+ ],
+ [
+  "img align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "img align=\"LEFT\"",
+  "left top start"
+ ],
+ [
+  "img align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "img align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "img align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "img valign=\"top\"",
+  "none top start"
+ ],
+ [
+  "img valign=\"middle\"",
+  "none middle start"
+ ],
+ [
+  "img valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "img valign=\"TEXT-TOP\"",
+  "none text-top start"
+ ],
+ [
+  "img valign=\"10px\"",
+  "none 10px start"
+ ],
+ [
+  "img align=left valign=bottom",
+  "left bottom start"
+ ],
+ [
+  "img frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "img frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "img frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "iframe plain",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"100\"",
+  "100px 150px 104 154 auto"
+ ],
+ [
+  "iframe width=\"50%\"",
+  "200px 150px 204 154 auto"
+ ],
+ [
+  "iframe width=\"12.5\"",
+  "12.5px 150px 17 154 auto"
+ ],
+ [
+  "iframe width=\"0\"",
+  "0px 150px 4 154 auto"
+ ],
+ [
+  "iframe width=\"10*\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\" 30\"",
+  "30px 150px 34 154 auto"
+ ],
+ [
+  "iframe width=\"30px\"",
+  "30px 150px 34 154 auto"
+ ],
+ [
+  "iframe width=\"abc\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"5.%\"",
+  "20px 150px 24 154 auto"
+ ],
+ [
+  "iframe width=\"+5\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"-5\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"1e2\"",
+  "1px 150px 5 154 auto"
+ ],
+ [
+  "iframe width=\"40.\"",
+  "40px 150px 44 154 auto"
+ ],
+ [
+  "iframe width=\".5\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"0%\"",
+  "0px 150px 4 154 auto"
+ ],
+ [
+  "iframe width=\"100.75%\"",
+  "403px 150px 407 154 auto"
+ ],
+ [
+  "iframe width=\"7.5.5\"",
+  "7.5px 150px 12 154 auto"
+ ],
+ [
+  "iframe width=\"1,5\"",
+  "1px 150px 5 154 auto"
+ ],
+ [
+  "iframe height=\"60\"",
+  "300px 60px 304 64 auto"
+ ],
+ [
+  "iframe height=\"50%\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe height=\"0\"",
+  "300px 0px 304 4 auto"
+ ],
+ [
+  "iframe height=\"abc\"",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe height=\"7.5\"",
+  "300px 7.5px 304 12 auto"
+ ],
+ [
+  "iframe height=\"50%\" in 300px",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe width=\"40\" height=\"30\"",
+  "40px 30px 44 34 auto"
+ ],
+ [
+  "iframe width=\"40\" height=\"50%\"",
+  "40px 150px 44 154 auto"
+ ],
+ [
+  "iframe width=\"40\" height=\"abc\"",
+  "40px 150px 44 154 auto"
+ ],
+ [
+  "iframe width=\"40\" height=\"\"",
+  "40px 150px 44 154 auto"
+ ],
+ [
+  "iframe width=\"0\" height=\"30\"",
+  "0px 30px 4 34 auto"
+ ],
+ [
+  "iframe width=\"40.5\" height=\"30\"",
+  "40.5px 30px 45 34 auto"
+ ],
+ [
+  "iframe width=\"40px\" height=\"30\"",
+  "40px 30px 44 34 auto"
+ ],
+ [
+  "iframe width=\"-4\" height=\"3\"",
+  "300px 3px 304 7 auto"
+ ],
+ [
+  "iframe width=\"40\" height=\"0\"",
+  "40px 0px 44 4 auto"
+ ],
+ [
+  "iframe width=40 height=30 .w100",
+  "100px 30px 104 34 auto"
+ ],
+ [
+  "iframe width=40 height=30 .hauto",
+  "40px 150px 44 154 auto"
+ ],
+ [
+  "iframe width=100 .w10",
+  "10px 150px 14 154 auto"
+ ],
+ [
+  "iframe width=100 style=width:auto",
+  "300px 150px 304 154 auto"
+ ],
+ [
+  "iframe hspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe vspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe hspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe vspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe hspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe vspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "iframe border=\"3\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\"0\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\"\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\"abc\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\"2px\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\"-1\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe border=\" 4\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe align=\"left\"",
+  "left top start"
+ ],
+ [
+  "iframe align=\"right\"",
+  "right top start"
+ ],
+ [
+  "iframe align=\"middle\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "iframe align=\"absmiddle\"",
+  "none middle start"
+ ],
+ [
+  "iframe align=\"abscenter\"",
+  "none middle start"
+ ],
+ [
+  "iframe align=\"absbottom\"",
+  "none bottom start"
+ ],
+ [
+  "iframe align=\"top\"",
+  "none top start"
+ ],
+ [
+  "iframe align=\"center\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "iframe align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "iframe align=\"texttop\"",
+  "none text-top start"
+ ],
+ [
+  "iframe align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "iframe align=\"LEFT\"",
+  "left top start"
+ ],
+ [
+  "iframe align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "iframe align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "iframe align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "iframe valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "iframe valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "iframe valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "iframe valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "iframe valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "iframe align=left valign=bottom",
+  "left top start"
+ ],
+ [
+  "iframe frameborder=\"0\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"1\"",
+  "2px inset 2px 304 300"
+ ],
+ [
+  "iframe frameborder=\"no\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "video plain",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"100\"",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "video width=\"50%\"",
+  "200px 150px 200 150 auto"
+ ],
+ [
+  "video width=\"12.5\"",
+  "12.5px 150px 13 150 auto"
+ ],
+ [
+  "video width=\"0\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "video width=\"10*\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\" 30\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "video width=\"30px\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "video width=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"5.%\"",
+  "20px 150px 20 150 auto"
+ ],
+ [
+  "video width=\"+5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"-5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"1e2\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "video width=\"40.\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "video width=\".5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"0%\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "video width=\"100.75%\"",
+  "403px 150px 403 150 auto"
+ ],
+ [
+  "video width=\"7.5.5\"",
+  "7.5px 150px 8 150 auto"
+ ],
+ [
+  "video width=\"1,5\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "video height=\"60\"",
+  "300px 60px 300 60 auto"
+ ],
+ [
+  "video height=\"50%\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video height=\"0\"",
+  "300px 0px 300 0 auto"
+ ],
+ [
+  "video height=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video height=\"7.5\"",
+  "300px 7.5px 300 8 auto"
+ ],
+ [
+  "video height=\"50%\" in 300px",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video width=\"40\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "video width=\"40\" height=\"50%\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "video width=\"40\" height=\"abc\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "video width=\"40\" height=\"\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "video width=\"0\" height=\"30\"",
+  "0px 30px 0 30 auto 0 / 30"
+ ],
+ [
+  "video width=\"40.5\" height=\"30\"",
+  "40.5px 30px 41 30 auto 40.5 / 30"
+ ],
+ [
+  "video width=\"40px\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "video width=\"-4\" height=\"3\"",
+  "300px 3px 300 3 auto"
+ ],
+ [
+  "video width=\"40\" height=\"0\"",
+  "40px 0px 40 0 auto 40 / 0"
+ ],
+ [
+  "video width=40 height=30 .w100",
+  "100px 30px 100 30 auto 40 / 30"
+ ],
+ [
+  "video width=40 height=30 .hauto",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "video width=100 .w10",
+  "10px 150px 10 150 auto"
+ ],
+ [
+  "video width=100 style=width:auto",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "video hspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video vspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video hspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video vspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video hspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video vspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "video border=\"3\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\"\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\"abc\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\"2px\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\"-1\"",
+  "0px none 0px none"
+ ],
+ [
+  "video border=\" 4\"",
+  "0px none 0px none"
+ ],
+ [
+  "video align=\"left\"",
+  "none baseline left"
+ ],
+ [
+  "video align=\"right\"",
+  "none baseline right"
+ ],
+ [
+  "video align=\"middle\"",
+  "none baseline center"
+ ],
+ [
+  "video align=\"absmiddle\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"abscenter\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"absbottom\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"center\"",
+  "none baseline center"
+ ],
+ [
+  "video align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"texttop\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"LEFT\"",
+  "none baseline left"
+ ],
+ [
+  "video align=\"justify\"",
+  "none baseline justify"
+ ],
+ [
+  "video align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "video align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "video valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "video valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "video valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "video valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "video valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "video align=left valign=bottom",
+  "none baseline left"
+ ],
+ [
+  "video frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "video frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "video frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas plain",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas width=\"100\"",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "canvas width=\"50%\"",
+  "50px 150px 50 150 auto"
+ ],
+ [
+  "canvas width=\"12.5\"",
+  "12px 150px 12 150 auto"
+ ],
+ [
+  "canvas width=\"0\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "canvas width=\"10*\"",
+  "10px 150px 10 150 auto"
+ ],
+ [
+  "canvas width=\" 30\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "canvas width=\"30px\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "canvas width=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas width=\"\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas width=\"5.%\"",
+  "5px 150px 5 150 auto"
+ ],
+ [
+  "canvas width=\"+5\"",
+  "5px 150px 5 150 auto"
+ ],
+ [
+  "canvas width=\"-5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas width=\"1e2\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "canvas width=\"40.\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "canvas width=\".5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas width=\"0%\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "canvas width=\"100.75%\"",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "canvas width=\"7.5.5\"",
+  "7px 150px 7 150 auto"
+ ],
+ [
+  "canvas width=\"1,5\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "canvas height=\"60\"",
+  "300px 60px 300 60 auto"
+ ],
+ [
+  "canvas height=\"50%\"",
+  "300px 50px 300 50 auto"
+ ],
+ [
+  "canvas height=\"0\"",
+  "300px 0px 300 0 auto"
+ ],
+ [
+  "canvas height=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "canvas height=\"7.5\"",
+  "300px 7px 300 7 auto"
+ ],
+ [
+  "canvas height=\"50%\" in 300px",
+  "300px 50px 300 50 auto"
+ ],
+ [
+  "canvas width=\"40\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "canvas width=\"40\" height=\"50%\"",
+  "40px 50px 40 50 auto 40 / 50"
+ ],
+ [
+  "canvas width=\"40\" height=\"abc\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "canvas width=\"40\" height=\"\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "canvas width=\"0\" height=\"30\"",
+  "0px 30px 0 30 auto 0 / 30"
+ ],
+ [
+  "canvas width=\"40.5\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "canvas width=\"40px\" height=\"30\"",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "canvas width=\"-4\" height=\"3\"",
+  "300px 3px 300 3 auto"
+ ],
+ [
+  "canvas width=\"40\" height=\"0\"",
+  "40px 0px 40 0 auto 40 / 0"
+ ],
+ [
+  "canvas width=40 height=30 .w100",
+  "100px 75px 100 75 auto 40 / 30"
+ ],
+ [
+  "canvas width=40 height=30 .hauto",
+  "40px 30px 40 30 auto 40 / 30"
+ ],
+ [
+  "canvas width=100 .w10",
+  "10px 15px 10 15 auto"
+ ],
+ [
+  "canvas width=100 style=width:auto",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "canvas hspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas vspace=\"10\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas hspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas vspace=\"10%\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas hspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas vspace=\"2.5\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "canvas border=\"3\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\"\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\"abc\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\"2px\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\"-1\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas border=\" 4\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas align=\"left\"",
+  "none baseline left"
+ ],
+ [
+  "canvas align=\"right\"",
+  "none baseline right"
+ ],
+ [
+  "canvas align=\"middle\"",
+  "none baseline center"
+ ],
+ [
+  "canvas align=\"absmiddle\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"abscenter\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"absbottom\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"center\"",
+  "none baseline center"
+ ],
+ [
+  "canvas align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"texttop\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"LEFT\"",
+  "none baseline left"
+ ],
+ [
+  "canvas align=\"justify\"",
+  "none baseline justify"
+ ],
+ [
+  "canvas align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "canvas valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "canvas valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "canvas valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "canvas valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "canvas valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "canvas align=left valign=bottom",
+  "none baseline left"
+ ],
+ [
+  "canvas frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "canvas frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed plain",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"100\"",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "embed width=\"50%\"",
+  "200px 150px 200 150 auto"
+ ],
+ [
+  "embed width=\"12.5\"",
+  "12.5px 150px 13 150 auto"
+ ],
+ [
+  "embed width=\"0\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "embed width=\"10*\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\" 30\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "embed width=\"30px\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "embed width=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"5.%\"",
+  "20px 150px 20 150 auto"
+ ],
+ [
+  "embed width=\"+5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"-5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"1e2\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "embed width=\"40.\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "embed width=\".5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"0%\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "embed width=\"100.75%\"",
+  "403px 150px 403 150 auto"
+ ],
+ [
+  "embed width=\"7.5.5\"",
+  "7.5px 150px 8 150 auto"
+ ],
+ [
+  "embed width=\"1,5\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "embed height=\"60\"",
+  "300px 60px 300 60 auto"
+ ],
+ [
+  "embed height=\"50%\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed height=\"0\"",
+  "300px 0px 300 0 auto"
+ ],
+ [
+  "embed height=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed height=\"7.5\"",
+  "300px 7.5px 300 8 auto"
+ ],
+ [
+  "embed height=\"50%\" in 300px",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed width=\"40\" height=\"30\"",
+  "40px 30px 40 30 auto"
+ ],
+ [
+  "embed width=\"40\" height=\"50%\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "embed width=\"40\" height=\"abc\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "embed width=\"40\" height=\"\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "embed width=\"0\" height=\"30\"",
+  "0px 30px 0 30 auto"
+ ],
+ [
+  "embed width=\"40.5\" height=\"30\"",
+  "40.5px 30px 41 30 auto"
+ ],
+ [
+  "embed width=\"40px\" height=\"30\"",
+  "40px 30px 40 30 auto"
+ ],
+ [
+  "embed width=\"-4\" height=\"3\"",
+  "300px 3px 300 3 auto"
+ ],
+ [
+  "embed width=\"40\" height=\"0\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "embed width=40 height=30 .w100",
+  "100px 30px 100 30 auto"
+ ],
+ [
+  "embed width=40 height=30 .hauto",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "embed width=100 .w10",
+  "10px 150px 10 150 auto"
+ ],
+ [
+  "embed width=100 style=width:auto",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "embed hspace=\"10\"",
+  "0px 10px 0px 10px"
+ ],
+ [
+  "embed vspace=\"10\"",
+  "10px 0px 10px 0px"
+ ],
+ [
+  "embed hspace=\"10%\"",
+  "0px 40px 0px 40px"
+ ],
+ [
+  "embed vspace=\"10%\"",
+  "40px 0px 40px 0px"
+ ],
+ [
+  "embed hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "embed vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "embed hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "embed vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "embed hspace=\"2.5\"",
+  "0px 2.5px 0px 2.5px"
+ ],
+ [
+  "embed vspace=\"2.5\"",
+  "2.5px 0px 2.5px 0px"
+ ],
+ [
+  "embed border=\"3\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\"\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\"abc\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\"2px\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\"-1\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed border=\" 4\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed align=\"left\"",
+  "left top start"
+ ],
+ [
+  "embed align=\"right\"",
+  "right top start"
+ ],
+ [
+  "embed align=\"middle\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "embed align=\"absmiddle\"",
+  "none middle start"
+ ],
+ [
+  "embed align=\"abscenter\"",
+  "none middle start"
+ ],
+ [
+  "embed align=\"absbottom\"",
+  "none bottom start"
+ ],
+ [
+  "embed align=\"top\"",
+  "none top start"
+ ],
+ [
+  "embed align=\"center\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "embed align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "embed align=\"texttop\"",
+  "none text-top start"
+ ],
+ [
+  "embed align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "embed align=\"LEFT\"",
+  "left top start"
+ ],
+ [
+  "embed align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "embed align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "embed align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "embed valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "embed valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "embed valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "embed valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "embed valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "embed align=left valign=bottom",
+  "left top start"
+ ],
+ [
+  "embed frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "embed frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "object plain",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"100\"",
+  "100px 150px 100 150 auto"
+ ],
+ [
+  "object width=\"50%\"",
+  "200px 150px 200 150 auto"
+ ],
+ [
+  "object width=\"12.5\"",
+  "12.5px 150px 13 150 auto"
+ ],
+ [
+  "object width=\"0\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "object width=\"10*\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\" 30\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "object width=\"30px\"",
+  "30px 150px 30 150 auto"
+ ],
+ [
+  "object width=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"5.%\"",
+  "20px 150px 20 150 auto"
+ ],
+ [
+  "object width=\"+5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"-5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"1e2\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "object width=\"40.\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "object width=\".5\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"0%\"",
+  "0px 150px 0 150 auto"
+ ],
+ [
+  "object width=\"100.75%\"",
+  "403px 150px 403 150 auto"
+ ],
+ [
+  "object width=\"7.5.5\"",
+  "7.5px 150px 8 150 auto"
+ ],
+ [
+  "object width=\"1,5\"",
+  "1px 150px 1 150 auto"
+ ],
+ [
+  "object height=\"60\"",
+  "300px 60px 300 60 auto"
+ ],
+ [
+  "object height=\"50%\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object height=\"0\"",
+  "300px 0px 300 0 auto"
+ ],
+ [
+  "object height=\"abc\"",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object height=\"7.5\"",
+  "300px 7.5px 300 8 auto"
+ ],
+ [
+  "object height=\"50%\" in 300px",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object width=\"40\" height=\"30\"",
+  "40px 30px 40 30 auto"
+ ],
+ [
+  "object width=\"40\" height=\"50%\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "object width=\"40\" height=\"abc\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "object width=\"40\" height=\"\"",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "object width=\"0\" height=\"30\"",
+  "0px 30px 0 30 auto"
+ ],
+ [
+  "object width=\"40.5\" height=\"30\"",
+  "40.5px 30px 41 30 auto"
+ ],
+ [
+  "object width=\"40px\" height=\"30\"",
+  "40px 30px 40 30 auto"
+ ],
+ [
+  "object width=\"-4\" height=\"3\"",
+  "300px 3px 300 3 auto"
+ ],
+ [
+  "object width=\"40\" height=\"0\"",
+  "40px 0px 40 0 auto"
+ ],
+ [
+  "object width=40 height=30 .w100",
+  "100px 30px 100 30 auto"
+ ],
+ [
+  "object width=40 height=30 .hauto",
+  "40px 150px 40 150 auto"
+ ],
+ [
+  "object width=100 .w10",
+  "10px 150px 10 150 auto"
+ ],
+ [
+  "object width=100 style=width:auto",
+  "300px 150px 300 150 auto"
+ ],
+ [
+  "object hspace=\"10\"",
+  "0px 10px 0px 10px"
+ ],
+ [
+  "object vspace=\"10\"",
+  "10px 0px 10px 0px"
+ ],
+ [
+  "object hspace=\"10%\"",
+  "0px 40px 0px 40px"
+ ],
+ [
+  "object vspace=\"10%\"",
+  "40px 0px 40px 0px"
+ ],
+ [
+  "object hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "object vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "object hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "object vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "object hspace=\"2.5\"",
+  "0px 2.5px 0px 2.5px"
+ ],
+ [
+  "object vspace=\"2.5\"",
+  "2.5px 0px 2.5px 0px"
+ ],
+ [
+  "object border=\"3\"",
+  "3px solid 3px solid"
+ ],
+ [
+  "object border=\"0\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "object border=\"\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "object border=\"abc\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "object border=\"2px\"",
+  "2px solid 2px solid"
+ ],
+ [
+  "object border=\"-1\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "object border=\" 4\"",
+  "4px solid 4px solid"
+ ],
+ [
+  "object align=\"left\"",
+  "left top start"
+ ],
+ [
+  "object align=\"right\"",
+  "right top start"
+ ],
+ [
+  "object align=\"middle\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "object align=\"absmiddle\"",
+  "none middle start"
+ ],
+ [
+  "object align=\"abscenter\"",
+  "none middle start"
+ ],
+ [
+  "object align=\"absbottom\"",
+  "none bottom start"
+ ],
+ [
+  "object align=\"top\"",
+  "none top start"
+ ],
+ [
+  "object align=\"center\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "object align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "object align=\"texttop\"",
+  "none text-top start"
+ ],
+ [
+  "object align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "object align=\"LEFT\"",
+  "left top start"
+ ],
+ [
+  "object align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "object align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "object align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "object valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "object valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "object valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "object valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "object valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "object align=left valign=bottom",
+  "left top start"
+ ],
+ [
+  "object frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "object frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "object frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "input-image hspace=\"10\"",
+  "0px 10px 0px 10px"
+ ],
+ [
+  "input-image vspace=\"10\"",
+  "10px 0px 10px 0px"
+ ],
+ [
+  "input-image hspace=\"10%\"",
+  "0px 40px 0px 40px"
+ ],
+ [
+  "input-image vspace=\"10%\"",
+  "40px 0px 40px 0px"
+ ],
+ [
+  "input-image hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-image vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-image hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-image vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-image hspace=\"2.5\"",
+  "0px 2.5px 0px 2.5px"
+ ],
+ [
+  "input-image vspace=\"2.5\"",
+  "2.5px 0px 2.5px 0px"
+ ],
+ [
+  "input-image border=\"3\"",
+  "3px solid 3px solid"
+ ],
+ [
+  "input-image border=\"0\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "input-image border=\"\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "input-image border=\"abc\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "input-image border=\"2px\"",
+  "2px solid 2px solid"
+ ],
+ [
+  "input-image border=\"-1\"",
+  "0px solid 0px solid"
+ ],
+ [
+  "input-image border=\" 4\"",
+  "4px solid 4px solid"
+ ],
+ [
+  "input-image align=\"left\"",
+  "left top start"
+ ],
+ [
+  "input-image align=\"right\"",
+  "right top start"
+ ],
+ [
+  "input-image align=\"middle\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "input-image align=\"absmiddle\"",
+  "none middle start"
+ ],
+ [
+  "input-image align=\"abscenter\"",
+  "none middle start"
+ ],
+ [
+  "input-image align=\"absbottom\"",
+  "none bottom start"
+ ],
+ [
+  "input-image align=\"top\"",
+  "none top start"
+ ],
+ [
+  "input-image align=\"center\"",
+  "none -webkit-baseline-middle start"
+ ],
+ [
+  "input-image align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "input-image align=\"texttop\"",
+  "none text-top start"
+ ],
+ [
+  "input-image align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "input-image align=\"LEFT\"",
+  "left top start"
+ ],
+ [
+  "input-image align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "input-image align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "input-image align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "input-image valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "input-image valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "input-image valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "input-image valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "input-image valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "input-image align=left valign=bottom",
+  "left top start"
+ ],
+ [
+  "input-image frameborder=\"0\"",
+  "0px none 0px none"
+ ],
+ [
+  "input-image frameborder=\"1\"",
+  "0px none 0px none"
+ ],
+ [
+  "input-image frameborder=\"no\"",
+  "0px none 0px none"
+ ],
+ [
+  "input-text plain",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"100\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"50%\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"12.5\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"0\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"10*\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\" 30\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"30px\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"abc\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"5.%\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"+5\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"-5\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"1e2\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40.\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\".5\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"0%\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"100.75%\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"7.5.5\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"1,5\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"60\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"50%\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"0\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"abc\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"7.5\"",
+  "true true auto"
+ ],
+ [
+  "input-text height=\"50%\" in 300px",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40\" height=\"30\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40\" height=\"50%\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40\" height=\"abc\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40\" height=\"\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"0\" height=\"30\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40.5\" height=\"30\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40px\" height=\"30\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"-4\" height=\"3\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=\"40\" height=\"0\"",
+  "true true auto"
+ ],
+ [
+  "input-text width=40 height=30 .w100",
+  "false true auto"
+ ],
+ [
+  "input-text width=40 height=30 .hauto",
+  "true true auto"
+ ],
+ [
+  "input-text width=100 .w10",
+  "false true auto"
+ ],
+ [
+  "input-text width=100 style=width:auto",
+  "true true auto"
+ ],
+ [
+  "input-text hspace=\"10\"",
+  "0px 10px 0px 10px"
+ ],
+ [
+  "input-text vspace=\"10\"",
+  "10px 0px 10px 0px"
+ ],
+ [
+  "input-text hspace=\"10%\"",
+  "0px 40px 0px 40px"
+ ],
+ [
+  "input-text vspace=\"10%\"",
+  "40px 0px 40px 0px"
+ ],
+ [
+  "input-text hspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-text vspace=\"abc\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-text hspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-text vspace=\"0\"",
+  "0px 0px 0px 0px"
+ ],
+ [
+  "input-text hspace=\"2.5\"",
+  "0px 2.5px 0px 2.5px"
+ ],
+ [
+  "input-text vspace=\"2.5\"",
+  "2.5px 0px 2.5px 0px"
+ ],
+ [
+  "input-text border=\"3\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\"0\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\"\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\"abc\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\"2px\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\"-1\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text border=\" 4\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text align=\"left\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"right\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"absmiddle\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"abscenter\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"absbottom\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"center\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"bottom\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"texttop\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"baseline\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"LEFT\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"justify\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=\"\"",
+  "none baseline start"
+ ],
+ [
+  "input-text valign=\"top\"",
+  "none baseline start"
+ ],
+ [
+  "input-text valign=\"middle\"",
+  "none baseline start"
+ ],
+ [
+  "input-text valign=\"foo\"",
+  "none baseline start"
+ ],
+ [
+  "input-text valign=\"TEXT-TOP\"",
+  "none baseline start"
+ ],
+ [
+  "input-text valign=\"10px\"",
+  "none baseline start"
+ ],
+ [
+  "input-text align=left valign=bottom",
+  "none baseline start"
+ ],
+ [
+  "input-text frameborder=\"0\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text frameborder=\"1\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "input-text frameborder=\"no\"",
+  "2px inset 2px inset"
+ ],
+ [
+  "iframe frameborder=\"yes\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\" 0\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"-1\"",
+  "2px inset 2px 304 300"
+ ],
+ [
+  "iframe frameborder=\"0x\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"00\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"+0\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"1.5\"",
+  "2px inset 2px 304 300"
+ ],
+ [
+  "iframe frameborder=\"99999999999\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\" 1\"",
+  "2px inset 2px 304 300"
+ ],
+ [
+  "iframe frameborder=\"-0\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\"0.9\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=\" 0\"",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "iframe frameborder=0 style=border:3px solid",
+  "3px solid 3px 306 300"
+ ],
+ [
+  "iframe frameborder=0 border=5",
+  "0px inset 0px 300 300"
+ ],
+ [
+  "embed hidden",
+  "0px 0px 0 0 auto inline visible"
+ ],
+ [
+  "embed width=100 hidden",
+  "0px 0px 0 0 auto inline visible"
+ ],
+ [
+  "embed hidden width=120",
+  "120px 0px 120 0 auto inline visible"
+ ],
+ [
+  "embed hidden=until-found",
+  "0px 0px 0 0 auto inline visible"
+ ],
+ [
+  "img hidden",
+  "none 30px"
+ ],
+ [
+  "table cellspacing=\"10\"",
+  "auto auto 10px"
+ ],
+ [
+  "table cellspacing=\"10%\"",
+  "auto auto 2px"
+ ],
+ [
+  "table cellspacing=\"0\"",
+  "auto auto 0px"
+ ],
+ [
+  "table cellspacing=\"abc\"",
+  "auto auto 2px"
+ ],
+ [
+  "table cellspacing=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "table cellspacing=\"3*\"",
+  "auto auto 2px"
+ ],
+ [
+  "table width=\"100\"",
+  "100px auto 2px"
+ ],
+ [
+  "table height=\"100\"",
+  "auto 100px 2px"
+ ],
+ [
+  "td width=\"100\"",
+  "100px auto 2px"
+ ],
+ [
+  "td height=\"100\"",
+  "auto 100px 2px"
+ ],
+ [
+  "tr height=\"100\"",
+  "auto 100px 2px"
+ ],
+ [
+  "col width=\"100\"",
+  "100px auto 2px"
+ ],
+ [
+  "colgroup width=\"100\"",
+  "100px auto 2px"
+ ],
+ [
+  "col height=\"100\"",
+  "auto 100px 2px"
+ ],
+ [
+  "tbody height=\"100\"",
+  "auto 100px 2px"
+ ],
+ [
+  "table width=\"50%\"",
+  "50% auto 2px"
+ ],
+ [
+  "table height=\"50%\"",
+  "auto 50% 2px"
+ ],
+ [
+  "td width=\"50%\"",
+  "50% auto 2px"
+ ],
+ [
+  "td height=\"50%\"",
+  "auto 50% 2px"
+ ],
+ [
+  "tr height=\"50%\"",
+  "auto 50% 2px"
+ ],
+ [
+  "col width=\"50%\"",
+  "50% auto 2px"
+ ],
+ [
+  "colgroup width=\"50%\"",
+  "50% auto 2px"
+ ],
+ [
+  "col height=\"50%\"",
+  "auto 50% 2px"
+ ],
+ [
+  "tbody height=\"50%\"",
+  "auto 50% 2px"
+ ],
+ [
+  "table width=\"0\"",
+  "auto auto 2px"
+ ],
+ [
+  "table height=\"0\"",
+  "auto 0px 2px"
+ ],
+ [
+  "td width=\"0\"",
+  "auto auto 2px"
+ ],
+ [
+  "td height=\"0\"",
+  "auto auto 2px"
+ ],
+ [
+  "tr height=\"0\"",
+  "auto 0px 2px"
+ ],
+ [
+  "col width=\"0\"",
+  "0px auto 2px"
+ ],
+ [
+  "colgroup width=\"0\"",
+  "0px auto 2px"
+ ],
+ [
+  "col height=\"0\"",
+  "auto 0px 2px"
+ ],
+ [
+  "tbody height=\"0\"",
+  "auto 0px 2px"
+ ],
+ [
+  "table width=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "table height=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "td width=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "td height=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "tr height=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "col width=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "colgroup width=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "col height=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "tbody height=\"10*\"",
+  "auto auto 2px"
+ ],
+ [
+  "table width=\"7.5.5\"",
+  "7.5px auto 2px"
+ ],
+ [
+  "table height=\"7.5.5\"",
+  "auto 7.5px 2px"
+ ],
+ [
+  "td width=\"7.5.5\"",
+  "7.5px auto 2px"
+ ],
+ [
+  "td height=\"7.5.5\"",
+  "auto 7.5px 2px"
+ ],
+ [
+  "tr height=\"7.5.5\"",
+  "auto 7.5px 2px"
+ ],
+ [
+  "col width=\"7.5.5\"",
+  "7.5px auto 2px"
+ ],
+ [
+  "colgroup width=\"7.5.5\"",
+  "7.5px auto 2px"
+ ],
+ [
+  "col height=\"7.5.5\"",
+  "auto 7.5px 2px"
+ ],
+ [
+  "tbody height=\"7.5.5\"",
+  "auto 7.5px 2px"
+ ],
+ [
+  "table width=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "table height=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "td width=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "td height=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "tr height=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "col width=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "colgroup width=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "col height=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "tbody height=\"\"",
+  "auto auto 2px"
+ ],
+ [
+  "device-check frame",
+  "400 true 400 true"
+ ],
+ [
+  "iframe width=50% innerWidth",
+  "204 200 150"
+ ],
+ [
+  "iframe width=123 height=45 innerWidth",
+  "127 49 123 45"
+ ],
+ [
+  "loaded img src only",
+  "2px 3px 2 3 auto"
+ ],
+ [
+  "loaded img width=60",
+  "60px 90px 60 90 auto"
+ ],
+ [
+  "loaded img height=60",
+  "40px 60px 40 60 auto"
+ ],
+ [
+  "loaded img width=60 height=60",
+  "60px 60px 60 60 auto 60 / 60"
+ ],
+ [
+  "loaded img width=60 height=60 .hauto",
+  "60px 90px 60 90 auto 60 / 60"
+ ],
+ [
+  "loaded img width=50%",
+  "200px 300px 200 300 auto"
+ ],
+ [
+  "loaded img width=60 height=60 .w100",
+  "100px 60px 100 60 auto 60 / 60"
+ ]
+]

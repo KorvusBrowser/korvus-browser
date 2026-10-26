@@ -1,0 +1,138 @@
+[
+  {
+    "iface": "FontFaceSet",
+    "member": "constructor",
+    "expr": "new FontFaceSet()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "add",
+    "expr": "(() => { const o = document.fonts; return o.add(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "delete",
+    "expr": "(() => { const o = document.fonts; return o.delete(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "clear",
+    "expr": "(() => { const o = document.fonts; return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloading",
+    "expr": "(() => { const o = document.fonts; return o.onloading; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloadingdone",
+    "expr": "(() => { const o = document.fonts; return o.onloadingdone; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloadingerror",
+    "expr": "(() => { const o = document.fonts; return o.onloadingerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "check",
+    "expr": "(() => { const o = document.fonts; return o.check(\"x\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "check",
+    "expr": "(() => { const o = document.fonts; return o.check(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "status",
+    "expr": "(() => { const o = document.fonts; return o.status; })()",
+    "expected": "loaded",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloading",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.onloading); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloadingdone",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.onloadingdone); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "onloadingerror",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.onloadingerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "load",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.load(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "ready",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.ready); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "status",
+    "expr": "(() => { const o = document.fonts; return Object.prototype.toString.call(o.status); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "load",
+    "expr": "(async () => { const o = document.fonts; return await o.load(\"x\"); })()",
+    "throws": "SyntaxError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "load",
+    "expr": "(async () => { const o = document.fonts; return Object.prototype.toString.call(await o.load(\"x\")); })()",
+    "throws": "SyntaxError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FontFaceSet",
+    "member": "load",
+    "expr": "(async () => { const o = document.fonts; return await o.load(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

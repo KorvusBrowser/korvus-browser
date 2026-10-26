@@ -1,0 +1,90 @@
+[
+  {
+    "iface": "OfflineAudioContext",
+    "member": "constructor",
+    "expr": "(() => { const o = new OfflineAudioContext({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "constructor",
+    "expr": "(() => { const o = new OfflineAudioContext(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "length",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "oncomplete",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.oncomplete; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "startRendering",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.startRendering()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "resume",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.resume()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "suspend",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.suspend(1)); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "oncomplete",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.oncomplete); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "startRendering",
+    "expr": "(async () => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(await o.startRendering()); })()",
+    "expected": "[object AudioBuffer]",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "resume",
+    "expr": "(async () => { const o = new OfflineAudioContext(1, 1, 44100); return await o.resume(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "suspend",
+    "expr": "(async () => { const o = new OfflineAudioContext(1, 1, 44100); return await o.suspend(1); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OfflineAudioContext",
+    "member": "suspend",
+    "expr": "(async () => { const o = new OfflineAudioContext(1, 1, 44100); return await o.suspend(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

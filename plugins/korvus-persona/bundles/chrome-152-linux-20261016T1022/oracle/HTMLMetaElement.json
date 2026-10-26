@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "HTMLMetaElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLMetaElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "constructor",
+    "expr": "new HTMLMetaElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "httpEquiv",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return o.httpEquiv; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "httpEquiv",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return (o.httpEquiv = \"x\", o.httpEquiv); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "content",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return o.content; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "content",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return (o.content = \"x\", o.content); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return o.media; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return (o.media = \"x\", o.media); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "scheme",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return o.scheme; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLMetaElement",
+    "member": "scheme",
+    "expr": "(() => { const o = document.createElement(\"meta\"); return (o.scheme = \"x\", o.scheme); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

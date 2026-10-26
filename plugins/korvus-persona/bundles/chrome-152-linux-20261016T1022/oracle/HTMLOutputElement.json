@@ -1,0 +1,142 @@
+[
+  {
+    "iface": "HTMLOutputElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLOutputElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "constructor",
+    "expr": "new HTMLOutputElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"output\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.type; })()",
+    "expected": "output",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "defaultValue",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.defaultValue; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "defaultValue",
+    "expr": "(() => { const o = document.createElement(\"output\"); return (o.defaultValue = \"x\", o.defaultValue); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"output\"); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "willValidate",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.willValidate; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "validationMessage",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.validationMessage; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.setCustomValidity(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"output\"); return o.setCustomValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "htmlFor",
+    "expr": "(() => { const o = document.createElement(\"output\"); return Object.prototype.toString.call(o.htmlFor); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"output\"); return Object.prototype.toString.call(o.form); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "validity",
+    "expr": "(() => { const o = document.createElement(\"output\"); return Object.prototype.toString.call(o.validity); })()",
+    "expected": "[object ValidityState]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOutputElement",
+    "member": "labels",
+    "expr": "(() => { const o = document.createElement(\"output\"); return Object.prototype.toString.call(o.labels); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

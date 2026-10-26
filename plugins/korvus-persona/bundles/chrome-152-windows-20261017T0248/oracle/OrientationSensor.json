@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "OrientationSensor",
+    "member": "constructor",
+    "expr": "new OrientationSensor()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OrientationSensor",
+    "member": "quaternion",
+    "expr": "(() => { const o = new RelativeOrientationSensor(); return o.quaternion; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OrientationSensor",
+    "member": "quaternion",
+    "expr": "(() => { const o = new RelativeOrientationSensor(); return Object.prototype.toString.call(o.quaternion); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OrientationSensor",
+    "member": "populateMatrix",
+    "expr": "(() => { const o = new RelativeOrientationSensor(); return o.populateMatrix(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

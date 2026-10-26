@@ -1,0 +1,30 @@
+<!doctype html><html><body><script>
+// REALWEB S33a: how the HTML parser tokenizes `<?` -- every input of WPT's html5lib processing-instructions.dat (+ the
+// `<?` cases of tests1 / comments01 / html5test-com, + edge cases measured in Chrome 150), parsed as a whole document
+// (DOMParser) and as a fragment (innerHTML), dumped html5lib-style.
+function dump(n, depth, out) {
+  for (var c = n.firstChild; c; c = c.nextSibling) {
+    var pad = '| ' + '  '.repeat(depth), t = c.nodeType;
+    if (t === 1) {
+      out.push(pad + '<' + (c.namespaceURI === 'http://www.w3.org/2000/svg' ? 'svg ' : c.namespaceURI === 'http://www.w3.org/1998/Math/MathML' ? 'math ' : '') + c.localName + '>');
+      if (c.localName === 'template' && c.content) { out.push(pad + '  content'); dump(c.content, depth + 2, out); }
+      dump(c, depth + 1, out);
+    } else if (t === 3) out.push(pad + JSON.stringify(c.data));
+    else if (t === 7) out.push(pad + '<?' + JSON.stringify(c.target) + ' ' + JSON.stringify(c.data) + '>');
+    else if (t === 8) out.push(pad + '<!-- ' + JSON.stringify(c.data) + ' -->');
+    else if (t === 10) out.push(pad + '<!DOCTYPE ' + c.name + '>');
+  }
+}
+var R = {};
+fetch('cases.json').then(function (r) { return r.json(); }).then(function (cases) {
+  cases.forEach(function (c, i) {
+    var out = [];
+    try { dump(new DOMParser().parseFromString(c, 'text/html'), 0, out); } catch (e) { out.push('THROW ' + e.name); }
+    var frag = [];
+    try { var d = document.createElement('div'); d.innerHTML = c; dump(d, 0, frag); frag.push('~ ' + d.innerHTML); } catch (e) { frag.push('THROW ' + e.name); }
+    R[i + ' ' + JSON.stringify(c).slice(0, 60)] = out.join('\n') + '\n== fragment\n' + frag.join('\n');
+  });
+  window.R = JSON.stringify(R);
+  document.title = 'done';
+});
+</script></body></html>

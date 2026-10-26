@@ -1,0 +1,4102 @@
+[
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_BUFFER_BIT",
+    "expr": "WebGLRenderingContext.DEPTH_BUFFER_BIT",
+    "expected": 256,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BUFFER_BIT",
+    "expr": "WebGLRenderingContext.STENCIL_BUFFER_BIT",
+    "expected": 1024,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COLOR_BUFFER_BIT",
+    "expr": "WebGLRenderingContext.COLOR_BUFFER_BIT",
+    "expected": 16384,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "POINTS",
+    "expr": "WebGLRenderingContext.POINTS",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINES",
+    "expr": "WebGLRenderingContext.LINES",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINE_LOOP",
+    "expr": "WebGLRenderingContext.LINE_LOOP",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINE_STRIP",
+    "expr": "WebGLRenderingContext.LINE_STRIP",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TRIANGLES",
+    "expr": "WebGLRenderingContext.TRIANGLES",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TRIANGLE_STRIP",
+    "expr": "WebGLRenderingContext.TRIANGLE_STRIP",
+    "expected": 5,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TRIANGLE_FAN",
+    "expr": "WebGLRenderingContext.TRIANGLE_FAN",
+    "expected": 6,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ZERO",
+    "expr": "WebGLRenderingContext.ZERO",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE",
+    "expr": "WebGLRenderingContext.ONE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SRC_COLOR",
+    "expr": "WebGLRenderingContext.SRC_COLOR",
+    "expected": 768,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_SRC_COLOR",
+    "expr": "WebGLRenderingContext.ONE_MINUS_SRC_COLOR",
+    "expected": 769,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SRC_ALPHA",
+    "expr": "WebGLRenderingContext.SRC_ALPHA",
+    "expected": 770,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_SRC_ALPHA",
+    "expr": "WebGLRenderingContext.ONE_MINUS_SRC_ALPHA",
+    "expected": 771,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DST_ALPHA",
+    "expr": "WebGLRenderingContext.DST_ALPHA",
+    "expected": 772,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_DST_ALPHA",
+    "expr": "WebGLRenderingContext.ONE_MINUS_DST_ALPHA",
+    "expected": 773,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DST_COLOR",
+    "expr": "WebGLRenderingContext.DST_COLOR",
+    "expected": 774,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_DST_COLOR",
+    "expr": "WebGLRenderingContext.ONE_MINUS_DST_COLOR",
+    "expected": 775,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SRC_ALPHA_SATURATE",
+    "expr": "WebGLRenderingContext.SRC_ALPHA_SATURATE",
+    "expected": 776,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FUNC_ADD",
+    "expr": "WebGLRenderingContext.FUNC_ADD",
+    "expected": 32774,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_EQUATION",
+    "expr": "WebGLRenderingContext.BLEND_EQUATION",
+    "expected": 32777,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_EQUATION_RGB",
+    "expr": "WebGLRenderingContext.BLEND_EQUATION_RGB",
+    "expected": 32777,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_EQUATION_ALPHA",
+    "expr": "WebGLRenderingContext.BLEND_EQUATION_ALPHA",
+    "expected": 34877,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FUNC_SUBTRACT",
+    "expr": "WebGLRenderingContext.FUNC_SUBTRACT",
+    "expected": 32778,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FUNC_REVERSE_SUBTRACT",
+    "expr": "WebGLRenderingContext.FUNC_REVERSE_SUBTRACT",
+    "expected": 32779,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_DST_RGB",
+    "expr": "WebGLRenderingContext.BLEND_DST_RGB",
+    "expected": 32968,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_SRC_RGB",
+    "expr": "WebGLRenderingContext.BLEND_SRC_RGB",
+    "expected": 32969,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_DST_ALPHA",
+    "expr": "WebGLRenderingContext.BLEND_DST_ALPHA",
+    "expected": 32970,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_SRC_ALPHA",
+    "expr": "WebGLRenderingContext.BLEND_SRC_ALPHA",
+    "expected": 32971,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CONSTANT_COLOR",
+    "expr": "WebGLRenderingContext.CONSTANT_COLOR",
+    "expected": 32769,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_CONSTANT_COLOR",
+    "expr": "WebGLRenderingContext.ONE_MINUS_CONSTANT_COLOR",
+    "expected": 32770,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CONSTANT_ALPHA",
+    "expr": "WebGLRenderingContext.CONSTANT_ALPHA",
+    "expected": 32771,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ONE_MINUS_CONSTANT_ALPHA",
+    "expr": "WebGLRenderingContext.ONE_MINUS_CONSTANT_ALPHA",
+    "expected": 32772,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND_COLOR",
+    "expr": "WebGLRenderingContext.BLEND_COLOR",
+    "expected": 32773,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ARRAY_BUFFER",
+    "expr": "WebGLRenderingContext.ARRAY_BUFFER",
+    "expected": 34962,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ELEMENT_ARRAY_BUFFER",
+    "expr": "WebGLRenderingContext.ELEMENT_ARRAY_BUFFER",
+    "expected": 34963,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ARRAY_BUFFER_BINDING",
+    "expr": "WebGLRenderingContext.ARRAY_BUFFER_BINDING",
+    "expected": 34964,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ELEMENT_ARRAY_BUFFER_BINDING",
+    "expr": "WebGLRenderingContext.ELEMENT_ARRAY_BUFFER_BINDING",
+    "expected": 34965,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STREAM_DRAW",
+    "expr": "WebGLRenderingContext.STREAM_DRAW",
+    "expected": 35040,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STATIC_DRAW",
+    "expr": "WebGLRenderingContext.STATIC_DRAW",
+    "expected": 35044,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DYNAMIC_DRAW",
+    "expr": "WebGLRenderingContext.DYNAMIC_DRAW",
+    "expected": 35048,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BUFFER_SIZE",
+    "expr": "WebGLRenderingContext.BUFFER_SIZE",
+    "expected": 34660,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BUFFER_USAGE",
+    "expr": "WebGLRenderingContext.BUFFER_USAGE",
+    "expected": 34661,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CURRENT_VERTEX_ATTRIB",
+    "expr": "WebGLRenderingContext.CURRENT_VERTEX_ATTRIB",
+    "expected": 34342,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRONT",
+    "expr": "WebGLRenderingContext.FRONT",
+    "expected": 1028,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BACK",
+    "expr": "WebGLRenderingContext.BACK",
+    "expected": 1029,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRONT_AND_BACK",
+    "expr": "WebGLRenderingContext.FRONT_AND_BACK",
+    "expected": 1032,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CULL_FACE",
+    "expr": "WebGLRenderingContext.CULL_FACE",
+    "expected": 2884,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLEND",
+    "expr": "WebGLRenderingContext.BLEND",
+    "expected": 3042,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DITHER",
+    "expr": "WebGLRenderingContext.DITHER",
+    "expected": 3024,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_TEST",
+    "expr": "WebGLRenderingContext.STENCIL_TEST",
+    "expected": 2960,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_TEST",
+    "expr": "WebGLRenderingContext.DEPTH_TEST",
+    "expected": 2929,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SCISSOR_TEST",
+    "expr": "WebGLRenderingContext.SCISSOR_TEST",
+    "expected": 3089,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "POLYGON_OFFSET_FILL",
+    "expr": "WebGLRenderingContext.POLYGON_OFFSET_FILL",
+    "expected": 32823,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLE_ALPHA_TO_COVERAGE",
+    "expr": "WebGLRenderingContext.SAMPLE_ALPHA_TO_COVERAGE",
+    "expected": 32926,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLE_COVERAGE",
+    "expr": "WebGLRenderingContext.SAMPLE_COVERAGE",
+    "expected": 32928,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NO_ERROR",
+    "expr": "WebGLRenderingContext.NO_ERROR",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INVALID_ENUM",
+    "expr": "WebGLRenderingContext.INVALID_ENUM",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INVALID_VALUE",
+    "expr": "WebGLRenderingContext.INVALID_VALUE",
+    "expected": 1281,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INVALID_OPERATION",
+    "expr": "WebGLRenderingContext.INVALID_OPERATION",
+    "expected": 1282,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "OUT_OF_MEMORY",
+    "expr": "WebGLRenderingContext.OUT_OF_MEMORY",
+    "expected": 1285,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CW",
+    "expr": "WebGLRenderingContext.CW",
+    "expected": 2304,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CCW",
+    "expr": "WebGLRenderingContext.CCW",
+    "expected": 2305,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINE_WIDTH",
+    "expr": "WebGLRenderingContext.LINE_WIDTH",
+    "expected": 2849,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ALIASED_POINT_SIZE_RANGE",
+    "expr": "WebGLRenderingContext.ALIASED_POINT_SIZE_RANGE",
+    "expected": 33901,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ALIASED_LINE_WIDTH_RANGE",
+    "expr": "WebGLRenderingContext.ALIASED_LINE_WIDTH_RANGE",
+    "expected": 33902,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CULL_FACE_MODE",
+    "expr": "WebGLRenderingContext.CULL_FACE_MODE",
+    "expected": 2885,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRONT_FACE",
+    "expr": "WebGLRenderingContext.FRONT_FACE",
+    "expected": 2886,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_RANGE",
+    "expr": "WebGLRenderingContext.DEPTH_RANGE",
+    "expected": 2928,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_WRITEMASK",
+    "expr": "WebGLRenderingContext.DEPTH_WRITEMASK",
+    "expected": 2930,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_CLEAR_VALUE",
+    "expr": "WebGLRenderingContext.DEPTH_CLEAR_VALUE",
+    "expected": 2931,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_FUNC",
+    "expr": "WebGLRenderingContext.DEPTH_FUNC",
+    "expected": 2932,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_CLEAR_VALUE",
+    "expr": "WebGLRenderingContext.STENCIL_CLEAR_VALUE",
+    "expected": 2961,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_FUNC",
+    "expr": "WebGLRenderingContext.STENCIL_FUNC",
+    "expected": 2962,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_FAIL",
+    "expr": "WebGLRenderingContext.STENCIL_FAIL",
+    "expected": 2964,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_PASS_DEPTH_FAIL",
+    "expr": "WebGLRenderingContext.STENCIL_PASS_DEPTH_FAIL",
+    "expected": 2965,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_PASS_DEPTH_PASS",
+    "expr": "WebGLRenderingContext.STENCIL_PASS_DEPTH_PASS",
+    "expected": 2966,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_REF",
+    "expr": "WebGLRenderingContext.STENCIL_REF",
+    "expected": 2967,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_VALUE_MASK",
+    "expr": "WebGLRenderingContext.STENCIL_VALUE_MASK",
+    "expected": 2963,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_WRITEMASK",
+    "expr": "WebGLRenderingContext.STENCIL_WRITEMASK",
+    "expected": 2968,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_FUNC",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_FUNC",
+    "expected": 34816,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_FAIL",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_FAIL",
+    "expected": 34817,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_PASS_DEPTH_FAIL",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_FAIL",
+    "expected": 34818,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_PASS_DEPTH_PASS",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_PASS",
+    "expected": 34819,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_REF",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_REF",
+    "expected": 36003,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_VALUE_MASK",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_VALUE_MASK",
+    "expected": 36004,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BACK_WRITEMASK",
+    "expr": "WebGLRenderingContext.STENCIL_BACK_WRITEMASK",
+    "expected": 36005,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VIEWPORT",
+    "expr": "WebGLRenderingContext.VIEWPORT",
+    "expected": 2978,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SCISSOR_BOX",
+    "expr": "WebGLRenderingContext.SCISSOR_BOX",
+    "expected": 3088,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COLOR_CLEAR_VALUE",
+    "expr": "WebGLRenderingContext.COLOR_CLEAR_VALUE",
+    "expected": 3106,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COLOR_WRITEMASK",
+    "expr": "WebGLRenderingContext.COLOR_WRITEMASK",
+    "expected": 3107,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNPACK_ALIGNMENT",
+    "expr": "WebGLRenderingContext.UNPACK_ALIGNMENT",
+    "expected": 3317,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "PACK_ALIGNMENT",
+    "expr": "WebGLRenderingContext.PACK_ALIGNMENT",
+    "expected": 3333,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_TEXTURE_SIZE",
+    "expr": "WebGLRenderingContext.MAX_TEXTURE_SIZE",
+    "expected": 3379,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_VIEWPORT_DIMS",
+    "expr": "WebGLRenderingContext.MAX_VIEWPORT_DIMS",
+    "expected": 3386,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SUBPIXEL_BITS",
+    "expr": "WebGLRenderingContext.SUBPIXEL_BITS",
+    "expected": 3408,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RED_BITS",
+    "expr": "WebGLRenderingContext.RED_BITS",
+    "expected": 3410,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "GREEN_BITS",
+    "expr": "WebGLRenderingContext.GREEN_BITS",
+    "expected": 3411,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BLUE_BITS",
+    "expr": "WebGLRenderingContext.BLUE_BITS",
+    "expected": 3412,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ALPHA_BITS",
+    "expr": "WebGLRenderingContext.ALPHA_BITS",
+    "expected": 3413,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_BITS",
+    "expr": "WebGLRenderingContext.DEPTH_BITS",
+    "expected": 3414,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_BITS",
+    "expr": "WebGLRenderingContext.STENCIL_BITS",
+    "expected": 3415,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "POLYGON_OFFSET_UNITS",
+    "expr": "WebGLRenderingContext.POLYGON_OFFSET_UNITS",
+    "expected": 10752,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "POLYGON_OFFSET_FACTOR",
+    "expr": "WebGLRenderingContext.POLYGON_OFFSET_FACTOR",
+    "expected": 32824,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_BINDING_2D",
+    "expr": "WebGLRenderingContext.TEXTURE_BINDING_2D",
+    "expected": 32873,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLE_BUFFERS",
+    "expr": "WebGLRenderingContext.SAMPLE_BUFFERS",
+    "expected": 32936,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLES",
+    "expr": "WebGLRenderingContext.SAMPLES",
+    "expected": 32937,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLE_COVERAGE_VALUE",
+    "expr": "WebGLRenderingContext.SAMPLE_COVERAGE_VALUE",
+    "expected": 32938,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLE_COVERAGE_INVERT",
+    "expr": "WebGLRenderingContext.SAMPLE_COVERAGE_INVERT",
+    "expected": 32939,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COMPRESSED_TEXTURE_FORMATS",
+    "expr": "WebGLRenderingContext.COMPRESSED_TEXTURE_FORMATS",
+    "expected": 34467,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DONT_CARE",
+    "expr": "WebGLRenderingContext.DONT_CARE",
+    "expected": 4352,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FASTEST",
+    "expr": "WebGLRenderingContext.FASTEST",
+    "expected": 4353,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NICEST",
+    "expr": "WebGLRenderingContext.NICEST",
+    "expected": 4354,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "GENERATE_MIPMAP_HINT",
+    "expr": "WebGLRenderingContext.GENERATE_MIPMAP_HINT",
+    "expected": 33170,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BYTE",
+    "expr": "WebGLRenderingContext.BYTE",
+    "expected": 5120,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_BYTE",
+    "expr": "WebGLRenderingContext.UNSIGNED_BYTE",
+    "expected": 5121,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SHORT",
+    "expr": "WebGLRenderingContext.SHORT",
+    "expected": 5122,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_SHORT",
+    "expr": "WebGLRenderingContext.UNSIGNED_SHORT",
+    "expected": 5123,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INT",
+    "expr": "WebGLRenderingContext.INT",
+    "expected": 5124,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_INT",
+    "expr": "WebGLRenderingContext.UNSIGNED_INT",
+    "expected": 5125,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT",
+    "expr": "WebGLRenderingContext.FLOAT",
+    "expected": 5126,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_COMPONENT",
+    "expr": "WebGLRenderingContext.DEPTH_COMPONENT",
+    "expected": 6402,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ALPHA",
+    "expr": "WebGLRenderingContext.ALPHA",
+    "expected": 6406,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB",
+    "expr": "WebGLRenderingContext.RGB",
+    "expected": 6407,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGBA",
+    "expr": "WebGLRenderingContext.RGBA",
+    "expected": 6408,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LUMINANCE",
+    "expr": "WebGLRenderingContext.LUMINANCE",
+    "expected": 6409,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LUMINANCE_ALPHA",
+    "expr": "WebGLRenderingContext.LUMINANCE_ALPHA",
+    "expected": 6410,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_SHORT_4_4_4_4",
+    "expr": "WebGLRenderingContext.UNSIGNED_SHORT_4_4_4_4",
+    "expected": 32819,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_SHORT_5_5_5_1",
+    "expr": "WebGLRenderingContext.UNSIGNED_SHORT_5_5_5_1",
+    "expected": 32820,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNSIGNED_SHORT_5_6_5",
+    "expr": "WebGLRenderingContext.UNSIGNED_SHORT_5_6_5",
+    "expected": 33635,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAGMENT_SHADER",
+    "expr": "WebGLRenderingContext.FRAGMENT_SHADER",
+    "expected": 35632,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_SHADER",
+    "expr": "WebGLRenderingContext.VERTEX_SHADER",
+    "expected": 35633,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_VERTEX_ATTRIBS",
+    "expr": "WebGLRenderingContext.MAX_VERTEX_ATTRIBS",
+    "expected": 34921,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_VERTEX_UNIFORM_VECTORS",
+    "expr": "WebGLRenderingContext.MAX_VERTEX_UNIFORM_VECTORS",
+    "expected": 36347,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_VARYING_VECTORS",
+    "expr": "WebGLRenderingContext.MAX_VARYING_VECTORS",
+    "expected": 36348,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_COMBINED_TEXTURE_IMAGE_UNITS",
+    "expr": "WebGLRenderingContext.MAX_COMBINED_TEXTURE_IMAGE_UNITS",
+    "expected": 35661,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_VERTEX_TEXTURE_IMAGE_UNITS",
+    "expr": "WebGLRenderingContext.MAX_VERTEX_TEXTURE_IMAGE_UNITS",
+    "expected": 35660,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_TEXTURE_IMAGE_UNITS",
+    "expr": "WebGLRenderingContext.MAX_TEXTURE_IMAGE_UNITS",
+    "expected": 34930,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_FRAGMENT_UNIFORM_VECTORS",
+    "expr": "WebGLRenderingContext.MAX_FRAGMENT_UNIFORM_VECTORS",
+    "expected": 36349,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SHADER_TYPE",
+    "expr": "WebGLRenderingContext.SHADER_TYPE",
+    "expected": 35663,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DELETE_STATUS",
+    "expr": "WebGLRenderingContext.DELETE_STATUS",
+    "expected": 35712,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINK_STATUS",
+    "expr": "WebGLRenderingContext.LINK_STATUS",
+    "expected": 35714,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VALIDATE_STATUS",
+    "expr": "WebGLRenderingContext.VALIDATE_STATUS",
+    "expected": 35715,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ATTACHED_SHADERS",
+    "expr": "WebGLRenderingContext.ATTACHED_SHADERS",
+    "expected": 35717,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ACTIVE_UNIFORMS",
+    "expr": "WebGLRenderingContext.ACTIVE_UNIFORMS",
+    "expected": 35718,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ACTIVE_ATTRIBUTES",
+    "expr": "WebGLRenderingContext.ACTIVE_ATTRIBUTES",
+    "expected": 35721,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SHADING_LANGUAGE_VERSION",
+    "expr": "WebGLRenderingContext.SHADING_LANGUAGE_VERSION",
+    "expected": 35724,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CURRENT_PROGRAM",
+    "expr": "WebGLRenderingContext.CURRENT_PROGRAM",
+    "expected": 35725,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NEVER",
+    "expr": "WebGLRenderingContext.NEVER",
+    "expected": 512,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LESS",
+    "expr": "WebGLRenderingContext.LESS",
+    "expected": 513,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "EQUAL",
+    "expr": "WebGLRenderingContext.EQUAL",
+    "expected": 514,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LEQUAL",
+    "expr": "WebGLRenderingContext.LEQUAL",
+    "expected": 515,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "GREATER",
+    "expr": "WebGLRenderingContext.GREATER",
+    "expected": 516,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NOTEQUAL",
+    "expr": "WebGLRenderingContext.NOTEQUAL",
+    "expected": 517,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "GEQUAL",
+    "expr": "WebGLRenderingContext.GEQUAL",
+    "expected": 518,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ALWAYS",
+    "expr": "WebGLRenderingContext.ALWAYS",
+    "expected": 519,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "KEEP",
+    "expr": "WebGLRenderingContext.KEEP",
+    "expected": 7680,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "REPLACE",
+    "expr": "WebGLRenderingContext.REPLACE",
+    "expected": 7681,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INCR",
+    "expr": "WebGLRenderingContext.INCR",
+    "expected": 7682,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DECR",
+    "expr": "WebGLRenderingContext.DECR",
+    "expected": 7683,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INVERT",
+    "expr": "WebGLRenderingContext.INVERT",
+    "expected": 5386,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INCR_WRAP",
+    "expr": "WebGLRenderingContext.INCR_WRAP",
+    "expected": 34055,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DECR_WRAP",
+    "expr": "WebGLRenderingContext.DECR_WRAP",
+    "expected": 34056,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VENDOR",
+    "expr": "WebGLRenderingContext.VENDOR",
+    "expected": 7936,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERER",
+    "expr": "WebGLRenderingContext.RENDERER",
+    "expected": 7937,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERSION",
+    "expr": "WebGLRenderingContext.VERSION",
+    "expected": 7938,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NEAREST",
+    "expr": "WebGLRenderingContext.NEAREST",
+    "expected": 9728,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINEAR",
+    "expr": "WebGLRenderingContext.LINEAR",
+    "expected": 9729,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NEAREST_MIPMAP_NEAREST",
+    "expr": "WebGLRenderingContext.NEAREST_MIPMAP_NEAREST",
+    "expected": 9984,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINEAR_MIPMAP_NEAREST",
+    "expr": "WebGLRenderingContext.LINEAR_MIPMAP_NEAREST",
+    "expected": 9985,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NEAREST_MIPMAP_LINEAR",
+    "expr": "WebGLRenderingContext.NEAREST_MIPMAP_LINEAR",
+    "expected": 9986,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LINEAR_MIPMAP_LINEAR",
+    "expr": "WebGLRenderingContext.LINEAR_MIPMAP_LINEAR",
+    "expected": 9987,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_MAG_FILTER",
+    "expr": "WebGLRenderingContext.TEXTURE_MAG_FILTER",
+    "expected": 10240,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_MIN_FILTER",
+    "expr": "WebGLRenderingContext.TEXTURE_MIN_FILTER",
+    "expected": 10241,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_WRAP_S",
+    "expr": "WebGLRenderingContext.TEXTURE_WRAP_S",
+    "expected": 10242,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_WRAP_T",
+    "expr": "WebGLRenderingContext.TEXTURE_WRAP_T",
+    "expected": 10243,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_2D",
+    "expr": "WebGLRenderingContext.TEXTURE_2D",
+    "expected": 3553,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE",
+    "expr": "WebGLRenderingContext.TEXTURE",
+    "expected": 5890,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP",
+    "expected": 34067,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_BINDING_CUBE_MAP",
+    "expr": "WebGLRenderingContext.TEXTURE_BINDING_CUBE_MAP",
+    "expected": 34068,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_POSITIVE_X",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X",
+    "expected": 34069,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_NEGATIVE_X",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X",
+    "expected": 34070,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_POSITIVE_Y",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Y",
+    "expected": 34071,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_NEGATIVE_Y",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Y",
+    "expected": 34072,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_POSITIVE_Z",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z",
+    "expected": 34073,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE_CUBE_MAP_NEGATIVE_Z",
+    "expr": "WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z",
+    "expected": 34074,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_CUBE_MAP_TEXTURE_SIZE",
+    "expr": "WebGLRenderingContext.MAX_CUBE_MAP_TEXTURE_SIZE",
+    "expected": 34076,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE0",
+    "expr": "WebGLRenderingContext.TEXTURE0",
+    "expected": 33984,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE1",
+    "expr": "WebGLRenderingContext.TEXTURE1",
+    "expected": 33985,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE2",
+    "expr": "WebGLRenderingContext.TEXTURE2",
+    "expected": 33986,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE3",
+    "expr": "WebGLRenderingContext.TEXTURE3",
+    "expected": 33987,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE4",
+    "expr": "WebGLRenderingContext.TEXTURE4",
+    "expected": 33988,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE5",
+    "expr": "WebGLRenderingContext.TEXTURE5",
+    "expected": 33989,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE6",
+    "expr": "WebGLRenderingContext.TEXTURE6",
+    "expected": 33990,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE7",
+    "expr": "WebGLRenderingContext.TEXTURE7",
+    "expected": 33991,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE8",
+    "expr": "WebGLRenderingContext.TEXTURE8",
+    "expected": 33992,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE9",
+    "expr": "WebGLRenderingContext.TEXTURE9",
+    "expected": 33993,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE10",
+    "expr": "WebGLRenderingContext.TEXTURE10",
+    "expected": 33994,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE11",
+    "expr": "WebGLRenderingContext.TEXTURE11",
+    "expected": 33995,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE12",
+    "expr": "WebGLRenderingContext.TEXTURE12",
+    "expected": 33996,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE13",
+    "expr": "WebGLRenderingContext.TEXTURE13",
+    "expected": 33997,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE14",
+    "expr": "WebGLRenderingContext.TEXTURE14",
+    "expected": 33998,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE15",
+    "expr": "WebGLRenderingContext.TEXTURE15",
+    "expected": 33999,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE16",
+    "expr": "WebGLRenderingContext.TEXTURE16",
+    "expected": 34000,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE17",
+    "expr": "WebGLRenderingContext.TEXTURE17",
+    "expected": 34001,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE18",
+    "expr": "WebGLRenderingContext.TEXTURE18",
+    "expected": 34002,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE19",
+    "expr": "WebGLRenderingContext.TEXTURE19",
+    "expected": 34003,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE20",
+    "expr": "WebGLRenderingContext.TEXTURE20",
+    "expected": 34004,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE21",
+    "expr": "WebGLRenderingContext.TEXTURE21",
+    "expected": 34005,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE22",
+    "expr": "WebGLRenderingContext.TEXTURE22",
+    "expected": 34006,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE23",
+    "expr": "WebGLRenderingContext.TEXTURE23",
+    "expected": 34007,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE24",
+    "expr": "WebGLRenderingContext.TEXTURE24",
+    "expected": 34008,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE25",
+    "expr": "WebGLRenderingContext.TEXTURE25",
+    "expected": 34009,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE26",
+    "expr": "WebGLRenderingContext.TEXTURE26",
+    "expected": 34010,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE27",
+    "expr": "WebGLRenderingContext.TEXTURE27",
+    "expected": 34011,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE28",
+    "expr": "WebGLRenderingContext.TEXTURE28",
+    "expected": 34012,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE29",
+    "expr": "WebGLRenderingContext.TEXTURE29",
+    "expected": 34013,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE30",
+    "expr": "WebGLRenderingContext.TEXTURE30",
+    "expected": 34014,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "TEXTURE31",
+    "expr": "WebGLRenderingContext.TEXTURE31",
+    "expected": 34015,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "ACTIVE_TEXTURE",
+    "expr": "WebGLRenderingContext.ACTIVE_TEXTURE",
+    "expected": 34016,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "REPEAT",
+    "expr": "WebGLRenderingContext.REPEAT",
+    "expected": 10497,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CLAMP_TO_EDGE",
+    "expr": "WebGLRenderingContext.CLAMP_TO_EDGE",
+    "expected": 33071,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MIRRORED_REPEAT",
+    "expr": "WebGLRenderingContext.MIRRORED_REPEAT",
+    "expected": 33648,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_VEC2",
+    "expr": "WebGLRenderingContext.FLOAT_VEC2",
+    "expected": 35664,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_VEC3",
+    "expr": "WebGLRenderingContext.FLOAT_VEC3",
+    "expected": 35665,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_VEC4",
+    "expr": "WebGLRenderingContext.FLOAT_VEC4",
+    "expected": 35666,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INT_VEC2",
+    "expr": "WebGLRenderingContext.INT_VEC2",
+    "expected": 35667,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INT_VEC3",
+    "expr": "WebGLRenderingContext.INT_VEC3",
+    "expected": 35668,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INT_VEC4",
+    "expr": "WebGLRenderingContext.INT_VEC4",
+    "expected": 35669,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BOOL",
+    "expr": "WebGLRenderingContext.BOOL",
+    "expected": 35670,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BOOL_VEC2",
+    "expr": "WebGLRenderingContext.BOOL_VEC2",
+    "expected": 35671,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BOOL_VEC3",
+    "expr": "WebGLRenderingContext.BOOL_VEC3",
+    "expected": 35672,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BOOL_VEC4",
+    "expr": "WebGLRenderingContext.BOOL_VEC4",
+    "expected": 35673,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_MAT2",
+    "expr": "WebGLRenderingContext.FLOAT_MAT2",
+    "expected": 35674,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_MAT3",
+    "expr": "WebGLRenderingContext.FLOAT_MAT3",
+    "expected": 35675,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FLOAT_MAT4",
+    "expr": "WebGLRenderingContext.FLOAT_MAT4",
+    "expected": 35676,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLER_2D",
+    "expr": "WebGLRenderingContext.SAMPLER_2D",
+    "expected": 35678,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "SAMPLER_CUBE",
+    "expr": "WebGLRenderingContext.SAMPLER_CUBE",
+    "expected": 35680,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_ENABLED",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_ENABLED",
+    "expected": 34338,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_SIZE",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_SIZE",
+    "expected": 34339,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_STRIDE",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_STRIDE",
+    "expected": 34340,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_TYPE",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_TYPE",
+    "expected": 34341,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_NORMALIZED",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_NORMALIZED",
+    "expected": 34922,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_POINTER",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_POINTER",
+    "expected": 34373,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "VERTEX_ATTRIB_ARRAY_BUFFER_BINDING",
+    "expr": "WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING",
+    "expected": 34975,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "IMPLEMENTATION_COLOR_READ_TYPE",
+    "expr": "WebGLRenderingContext.IMPLEMENTATION_COLOR_READ_TYPE",
+    "expected": 35738,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "IMPLEMENTATION_COLOR_READ_FORMAT",
+    "expr": "WebGLRenderingContext.IMPLEMENTATION_COLOR_READ_FORMAT",
+    "expected": 35739,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COMPILE_STATUS",
+    "expr": "WebGLRenderingContext.COMPILE_STATUS",
+    "expected": 35713,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LOW_FLOAT",
+    "expr": "WebGLRenderingContext.LOW_FLOAT",
+    "expected": 36336,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MEDIUM_FLOAT",
+    "expr": "WebGLRenderingContext.MEDIUM_FLOAT",
+    "expected": 36337,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "HIGH_FLOAT",
+    "expr": "WebGLRenderingContext.HIGH_FLOAT",
+    "expected": 36338,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "LOW_INT",
+    "expr": "WebGLRenderingContext.LOW_INT",
+    "expected": 36339,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MEDIUM_INT",
+    "expr": "WebGLRenderingContext.MEDIUM_INT",
+    "expected": 36340,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "HIGH_INT",
+    "expr": "WebGLRenderingContext.HIGH_INT",
+    "expected": 36341,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER",
+    "expected": 36160,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER",
+    "expr": "WebGLRenderingContext.RENDERBUFFER",
+    "expected": 36161,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGBA4",
+    "expr": "WebGLRenderingContext.RGBA4",
+    "expected": 32854,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB5_A1",
+    "expr": "WebGLRenderingContext.RGB5_A1",
+    "expected": 32855,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGBA8",
+    "expr": "WebGLRenderingContext.RGBA8",
+    "expected": 32856,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB565",
+    "expr": "WebGLRenderingContext.RGB565",
+    "expected": 36194,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_COMPONENT16",
+    "expr": "WebGLRenderingContext.DEPTH_COMPONENT16",
+    "expected": 33189,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_INDEX8",
+    "expr": "WebGLRenderingContext.STENCIL_INDEX8",
+    "expected": 36168,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_STENCIL",
+    "expr": "WebGLRenderingContext.DEPTH_STENCIL",
+    "expected": 34041,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_WIDTH",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_WIDTH",
+    "expected": 36162,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_HEIGHT",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_HEIGHT",
+    "expected": 36163,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_INTERNAL_FORMAT",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_INTERNAL_FORMAT",
+    "expected": 36164,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_RED_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_RED_SIZE",
+    "expected": 36176,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_GREEN_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_GREEN_SIZE",
+    "expected": 36177,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_BLUE_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_BLUE_SIZE",
+    "expected": 36178,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_ALPHA_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_ALPHA_SIZE",
+    "expected": 36179,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_DEPTH_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_DEPTH_SIZE",
+    "expected": 36180,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_STENCIL_SIZE",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_STENCIL_SIZE",
+    "expected": 36181,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE",
+    "expected": 36048,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_ATTACHMENT_OBJECT_NAME",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME",
+    "expected": 36049,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL",
+    "expected": 36050,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE",
+    "expected": 36051,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "COLOR_ATTACHMENT0",
+    "expr": "WebGLRenderingContext.COLOR_ATTACHMENT0",
+    "expected": 36064,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_ATTACHMENT",
+    "expr": "WebGLRenderingContext.DEPTH_ATTACHMENT",
+    "expected": 36096,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "STENCIL_ATTACHMENT",
+    "expr": "WebGLRenderingContext.STENCIL_ATTACHMENT",
+    "expected": 36128,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "DEPTH_STENCIL_ATTACHMENT",
+    "expr": "WebGLRenderingContext.DEPTH_STENCIL_ATTACHMENT",
+    "expected": 33306,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "NONE",
+    "expr": "WebGLRenderingContext.NONE",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_COMPLETE",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_COMPLETE",
+    "expected": 36053,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_INCOMPLETE_ATTACHMENT",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_ATTACHMENT",
+    "expected": 36054,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT",
+    "expected": 36055,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_INCOMPLETE_DIMENSIONS",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_DIMENSIONS",
+    "expected": 36057,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_UNSUPPORTED",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_UNSUPPORTED",
+    "expected": 36061,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "FRAMEBUFFER_BINDING",
+    "expr": "WebGLRenderingContext.FRAMEBUFFER_BINDING",
+    "expected": 36006,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RENDERBUFFER_BINDING",
+    "expr": "WebGLRenderingContext.RENDERBUFFER_BINDING",
+    "expected": 36007,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "MAX_RENDERBUFFER_SIZE",
+    "expr": "WebGLRenderingContext.MAX_RENDERBUFFER_SIZE",
+    "expected": 34024,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "INVALID_FRAMEBUFFER_OPERATION",
+    "expr": "WebGLRenderingContext.INVALID_FRAMEBUFFER_OPERATION",
+    "expected": 1286,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNPACK_FLIP_Y_WEBGL",
+    "expr": "WebGLRenderingContext.UNPACK_FLIP_Y_WEBGL",
+    "expected": 37440,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNPACK_PREMULTIPLY_ALPHA_WEBGL",
+    "expr": "WebGLRenderingContext.UNPACK_PREMULTIPLY_ALPHA_WEBGL",
+    "expected": 37441,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "CONTEXT_LOST_WEBGL",
+    "expr": "WebGLRenderingContext.CONTEXT_LOST_WEBGL",
+    "expected": 37442,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "UNPACK_COLORSPACE_CONVERSION_WEBGL",
+    "expr": "WebGLRenderingContext.UNPACK_COLORSPACE_CONVERSION_WEBGL",
+    "expected": 37443,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "BROWSER_DEFAULT_WEBGL",
+    "expr": "WebGLRenderingContext.BROWSER_DEFAULT_WEBGL",
+    "expected": 37444,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "constructor",
+    "expr": "new WebGLRenderingContext()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createBuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createBuffer() instanceof WebGLBuffer; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createFramebuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createFramebuffer() instanceof WebGLFramebuffer; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createProgram() instanceof WebGLProgram; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createRenderbuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createRenderbuffer() instanceof WebGLRenderbuffer; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createTexture",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createTexture() instanceof WebGLTexture; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "createShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.createShader(g.VERTEX_SHADER) instanceof WebGLShader; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isBuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isBuffer(g.createBuffer()); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isFramebuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isFramebuffer(g.createFramebuffer()); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isProgram(g.createProgram()); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isRenderbuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isRenderbuffer(g.createRenderbuffer()); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isTexture",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isTexture(g.createTexture()); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isShader(g.createShader(g.FRAGMENT_SHADER)); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteBuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createBuffer();g.deleteBuffer(o);return g.isBuffer(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteFramebuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createFramebuffer();g.deleteFramebuffer(o);return g.isFramebuffer(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteRenderbuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createRenderbuffer();g.deleteRenderbuffer(o);return g.isRenderbuffer(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteTexture",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createTexture();g.deleteTexture(o);return g.isTexture(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createProgram();g.deleteProgram(o);return g.isProgram(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "deleteShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const o=g.createShader(g.VERTEX_SHADER);g.deleteShader(o);return g.isShader(o); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "shaderSource",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const s=g.createShader(g.VERTEX_SHADER);g.shaderSource(s,\"void main(){}\");return g.getShaderSource(s); })()",
+    "expected": "void main(){}"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getShaderSource",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const s=g.createShader(g.VERTEX_SHADER);g.shaderSource(s,\"void main(){}\");return g.getShaderSource(s); })()",
+    "expected": "void main(){}"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compileShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const s=g.createShader(g.VERTEX_SHADER);g.shaderSource(s,\"void main(){gl_Position=vec4(0.);}\");g.compileShader(s);return g.getShaderParameter(s,g.COMPILE_STATUS); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getShaderParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const s=g.createShader(g.VERTEX_SHADER);g.shaderSource(s,\"void main( {\");g.compileShader(s);return g.getShaderParameter(s,g.COMPILE_STATUS); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getShaderInfoLog",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const s=g.createShader(g.VERTEX_SHADER);g.shaderSource(s,\"void main(){gl_Position=vec4(0.);}\");g.compileShader(s);return g.getShaderInfoLog(s); })()",
+    "expected": ""
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "attachShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getProgramParameter(p,g.ATTACHED_SHADERS); })()",
+    "expected": 2
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getAttachedShaders",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getAttachedShaders(p).length; })()",
+    "expected": 2
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "detachShader",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);g.detachShader(p,vs);return g.getProgramParameter(p,g.ATTACHED_SHADERS); })()",
+    "expected": 1
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "linkProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getProgramParameter(p,g.LINK_STATUS); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getProgramParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getProgramParameter(p,g.ACTIVE_ATTRIBUTES); })()",
+    "expected": 1
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getProgramInfoLog",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getProgramInfoLog(p); })()",
+    "expected": ""
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "validateProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);g.validateProgram(p);return g.getProgramParameter(p,g.VALIDATE_STATUS); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "useProgram",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getAttribLocation",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getAttribLocation(p,\"a\"); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bindAttribLocation",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);g.bindAttribLocation(p,3,\"a\");g.linkProgram(p);return g.getAttribLocation(p,\"a\"); })()",
+    "expected": 3
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getUniformLocation",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getUniformLocation(p,\"u\") instanceof WebGLUniformLocation; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getActiveAttrib",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getActiveAttrib(p,0).name; })()",
+    "expected": "a"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getActiveUniform",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);return g.getActiveUniform(p,0).name; })()",
+    "expected": "u"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getUniform",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const L=g.getUniformLocation(p,\"u\");g.uniform1f(L,0.5);return g.getUniform(p,L); })()",
+    "expected": 0.5
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getShaderPrecisionFormat",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.getShaderPrecisionFormat(g.FRAGMENT_SHADER,g.HIGH_FLOAT).precision; })()",
+    "expected": 23
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bindBuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Uint8Array(5),g.STATIC_DRAW);return g.getBufferParameter(g.ARRAY_BUFFER,g.BUFFER_SIZE); })()",
+    "expected": 5
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bufferData",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array([1,2,3]),g.STATIC_DRAW);return g.getBufferParameter(g.ARRAY_BUFFER,g.BUFFER_SIZE); })()",
+    "expected": 12
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getBufferParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Uint8Array(7),g.STATIC_DRAW);return g.getBufferParameter(g.ARRAY_BUFFER,g.BUFFER_SIZE); })()",
+    "expected": 7
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bufferSubData",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Uint8Array(8),g.STATIC_DRAW);g.bufferSubData(g.ARRAY_BUFFER,0,new Uint8Array([1,2]));return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "enableVertexAttribArray",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.enableVertexAttribArray(1);return g.getVertexAttrib(1,g.VERTEX_ATTRIB_ARRAY_ENABLED); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "disableVertexAttribArray",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.enableVertexAttribArray(1);g.disableVertexAttribArray(1);return g.getVertexAttrib(1,g.VERTEX_ATTRIB_ARRAY_ENABLED); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttribPointer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array(16),g.STATIC_DRAW);g.vertexAttribPointer(2,3,g.FLOAT,false,16,8);return g.getVertexAttrib(2,g.VERTEX_ATTRIB_ARRAY_SIZE)+\",\"+g.getVertexAttrib(2,g.VERTEX_ATTRIB_ARRAY_STRIDE); })()",
+    "expected": "3,16"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getVertexAttrib",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib3f(1,0.25,0.5,0.75);return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.25,0.5,0.75,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getVertexAttribOffset",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array(16),g.STATIC_DRAW);g.vertexAttribPointer(0,2,g.FLOAT,false,0,24);return g.getVertexAttribOffset(0,g.VERTEX_ATTRIB_ARRAY_POINTER); })()",
+    "expected": 24
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib1f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib1f(1,0.5);return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0,0,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib1fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib1fv(1,new Float32Array([0.5]));return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0,0,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib2f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib2f(1,0.5,0.25);return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib2fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib2fv(1,new Float32Array([0.5, 0.25]));return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib3f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib3f(1,0.5,0.25,0.125);return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib3fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib3fv(1,new Float32Array([0.5, 0.25, 0.125]));return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,1"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib4f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib4f(1,0.5,0.25,0.125,0.0625);return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,0.0625"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "vertexAttrib4fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.vertexAttrib4fv(1,new Float32Array([0.5, 0.25, 0.125, 0.0625]));return Array.from(g.getVertexAttrib(1,g.CURRENT_VERTEX_ATTRIB)).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,0.0625"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform1f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform1f(U(\"f1\"),0.5);return g.getUniform(p,U(\"f1\")); })()",
+    "expected": 0.5
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform1fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform1fv(U(\"f1\"),[0.25]);return g.getUniform(p,U(\"f1\")); })()",
+    "expected": 0.25
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform1i",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform1i(U(\"i1\"),7);return g.getUniform(p,U(\"i1\")); })()",
+    "expected": 7
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform1iv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform1iv(U(\"i1\"),[9]);return g.getUniform(p,U(\"i1\")); })()",
+    "expected": 9
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform2f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform2f(U(\"f2\"),0.5,0.25);return Array.from(g.getUniform(p,U(\"f2\"))).join(\",\"); })()",
+    "expected": "0.5,0.25"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform2fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform2fv(U(\"f2\"),new Float32Array([0.5, 0.25]));return Array.from(g.getUniform(p,U(\"f2\"))).join(\",\"); })()",
+    "expected": "0.5,0.25"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform2i",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform2i(U(\"i2\"),1,2);return Array.from(g.getUniform(p,U(\"i2\"))).join(\",\"); })()",
+    "expected": "1,2"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform2iv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform2iv(U(\"i2\"),[1, 2]);return Array.from(g.getUniform(p,U(\"i2\"))).join(\",\"); })()",
+    "expected": "1,2"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniformMatrix2fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniformMatrix2fv(U(\"m2\"),false,new Float32Array([0.0, 1.0, 2.0, 3.0]));return Array.from(g.getUniform(p,U(\"m2\"))).join(\",\"); })()",
+    "expected": "0,1,2,3"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform3f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform3f(U(\"f3\"),0.5,0.25,0.125);return Array.from(g.getUniform(p,U(\"f3\"))).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform3fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform3fv(U(\"f3\"),new Float32Array([0.5, 0.25, 0.125]));return Array.from(g.getUniform(p,U(\"f3\"))).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform3i",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform3i(U(\"i3\"),1,2,3);return Array.from(g.getUniform(p,U(\"i3\"))).join(\",\"); })()",
+    "expected": "1,2,3"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform3iv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform3iv(U(\"i3\"),[1, 2, 3]);return Array.from(g.getUniform(p,U(\"i3\"))).join(\",\"); })()",
+    "expected": "1,2,3"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniformMatrix3fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniformMatrix3fv(U(\"m3\"),false,new Float32Array([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]));return Array.from(g.getUniform(p,U(\"m3\"))).join(\",\"); })()",
+    "expected": "0,1,2,3,4,5,6,7,8"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform4f",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform4f(U(\"f4\"),0.5,0.25,0.125,0.0625);return Array.from(g.getUniform(p,U(\"f4\"))).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,0.0625"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform4fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform4fv(U(\"f4\"),new Float32Array([0.5, 0.25, 0.125, 0.0625]));return Array.from(g.getUniform(p,U(\"f4\"))).join(\",\"); })()",
+    "expected": "0.5,0.25,0.125,0.0625"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform4i",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform4i(U(\"i4\"),1,2,3,4);return Array.from(g.getUniform(p,U(\"i4\"))).join(\",\"); })()",
+    "expected": "1,2,3,4"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniform4iv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniform4iv(U(\"i4\"),[1, 2, 3, 4]);return Array.from(g.getUniform(p,U(\"i4\"))).join(\",\"); })()",
+    "expected": "1,2,3,4"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "uniformMatrix4fv",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"void main(){gl_Position=vec4(0.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float f1;uniform vec2 f2;uniform vec3 f3;uniform vec4 f4;uniform int i1;uniform ivec2 i2;uniform ivec3 i3;uniform ivec4 i4;uniform mat2 m2;uniform mat3 m3;uniform mat4 m4;void main(){gl_FragColor=vec4(f1+f2.x+f3.x+f4.x+m2[0][0]+m3[0][0]+m4[0][0])+vec4(float(i1+i2.x+i3.x+i4.x));}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const U=n=>g.getUniformLocation(p,n);g.uniformMatrix4fv(U(\"m4\"),false,new Float32Array([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0]));return Array.from(g.getUniform(p,U(\"m4\"))).join(\",\"); })()",
+    "expected": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bindTexture",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texParameteri(g.TEXTURE_2D,g.TEXTURE_MAG_FILTER,g.NEAREST);return g.getTexParameter(g.TEXTURE_2D,g.TEXTURE_MAG_FILTER)===g.NEAREST; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "texParameteri",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texParameteri(g.TEXTURE_2D,g.TEXTURE_MAG_FILTER,g.NEAREST);return g.getTexParameter(g.TEXTURE_2D,g.TEXTURE_MAG_FILTER)===g.NEAREST; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getTexParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texParameteri(g.TEXTURE_2D,g.TEXTURE_WRAP_S,g.CLAMP_TO_EDGE);return g.getTexParameter(g.TEXTURE_2D,g.TEXTURE_WRAP_S)===g.CLAMP_TO_EDGE; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "texParameterf",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texParameterf(g.TEXTURE_2D,g.TEXTURE_MIN_FILTER,g.LINEAR);return g.getTexParameter(g.TEXTURE_2D,g.TEXTURE_MIN_FILTER)===g.LINEAR; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "activeTexture",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.activeTexture(g.TEXTURE3);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "texImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texImage2D(g.TEXTURE_2D,0,g.RGBA,1,1,0,g.RGBA,g.UNSIGNED_BYTE,new Uint8Array([1,2,3,4]));return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "texSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texImage2D(g.TEXTURE_2D,0,g.RGBA,2,2,0,g.RGBA,g.UNSIGNED_BYTE,new Uint8Array(16));g.texSubImage2D(g.TEXTURE_2D,0,0,0,1,1,g.RGBA,g.UNSIGNED_BYTE,new Uint8Array([1,2,3,4]));return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "generateMipmap",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texImage2D(g.TEXTURE_2D,0,g.RGBA,2,2,0,g.RGBA,g.UNSIGNED_BYTE,new Uint8Array(16));g.generateMipmap(g.TEXTURE_2D);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "pixelStorei",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.pixelStorei(g.UNPACK_FLIP_Y_WEBGL,1);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "checkFramebufferStatus",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.checkFramebufferStatus(g.FRAMEBUFFER)===g.FRAMEBUFFER_COMPLETE; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bindFramebuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const f=g.createFramebuffer();g.bindFramebuffer(g.FRAMEBUFFER,f);return g.checkFramebufferStatus(g.FRAMEBUFFER)===g.FRAMEBUFFER_INCOMPLETE_ATTACHMENT; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "bindRenderbuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const r=g.createRenderbuffer();g.bindRenderbuffer(g.RENDERBUFFER,r);g.renderbufferStorage(g.RENDERBUFFER,g.RGBA4,3,3);return g.getRenderbufferParameter(g.RENDERBUFFER,g.RENDERBUFFER_WIDTH); })()",
+    "expected": 3
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "renderbufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const r=g.createRenderbuffer();g.bindRenderbuffer(g.RENDERBUFFER,r);g.renderbufferStorage(g.RENDERBUFFER,g.RGBA4,4,6);return g.getRenderbufferParameter(g.RENDERBUFFER,g.RENDERBUFFER_WIDTH); })()",
+    "expected": 4
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getRenderbufferParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const r=g.createRenderbuffer();g.bindRenderbuffer(g.RENDERBUFFER,r);g.renderbufferStorage(g.RENDERBUFFER,g.RGBA4,4,6);return g.getRenderbufferParameter(g.RENDERBUFFER,g.RENDERBUFFER_HEIGHT); })()",
+    "expected": 6
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "framebufferTexture2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const t=g.createTexture();g.bindTexture(g.TEXTURE_2D,t);g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null);const f=g.createFramebuffer();g.bindFramebuffer(g.FRAMEBUFFER,f);g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0);return g.checkFramebufferStatus(g.FRAMEBUFFER)===g.FRAMEBUFFER_COMPLETE; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "framebufferRenderbuffer",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const r=g.createRenderbuffer();g.bindRenderbuffer(g.RENDERBUFFER,r);g.renderbufferStorage(g.RENDERBUFFER,g.RGBA4,4,4);const f=g.createFramebuffer();g.bindFramebuffer(g.FRAMEBUFFER,f);g.framebufferRenderbuffer(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.RENDERBUFFER,r);return g.checkFramebufferStatus(g.FRAMEBUFFER)===g.FRAMEBUFFER_COMPLETE; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "clearColor",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.clearColor(0,0,1,1);g.clear(g.COLOR_BUFFER_BIT);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "0,0,255,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "clear",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.clearColor(1,1,0,1);g.clear(g.COLOR_BUFFER_BIT);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "255,255,0,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "readPixels",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.clearColor(0,1,0,1);g.clear(g.COLOR_BUFFER_BIT);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "0,255,0,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "colorMask",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.colorMask(true,false,true,true);g.clearColor(1,1,1,1);g.clear(g.COLOR_BUFFER_BIT);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "255,0,255,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "scissor",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.enable(g.SCISSOR_TEST);g.scissor(0,0,2,2);g.clearColor(1,0,0,1);g.clear(g.COLOR_BUFFER_BIT);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "0,0,0,0"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "enable",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.enable(g.BLEND);return g.isEnabled(g.BLEND); })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "disable",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.enable(g.BLEND);g.disable(g.BLEND);return g.isEnabled(g.BLEND); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isEnabled",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isEnabled(g.DEPTH_TEST); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "isContextLost",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.isContextLost(); })()",
+    "expected": false
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getError",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "clearDepth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.clearDepth(0.5);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "clearStencil",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.clearStencil(1);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "depthFunc",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.depthFunc(g.LEQUAL);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "depthMask",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.depthMask(false);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "depthRange",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.depthRange(0,0.5);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilMask",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilMask(255);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilMaskSeparate",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilMaskSeparate(g.FRONT,255);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilFunc",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilFunc(g.ALWAYS,0,255);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilFuncSeparate",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilFuncSeparate(g.FRONT,g.ALWAYS,0,255);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilOp",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilOp(g.KEEP,g.KEEP,g.KEEP);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "stencilOpSeparate",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.stencilOpSeparate(g.FRONT,g.KEEP,g.KEEP,g.KEEP);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "blendFunc",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.blendFunc(g.SRC_ALPHA,g.ONE_MINUS_SRC_ALPHA);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "blendFuncSeparate",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.blendFuncSeparate(g.SRC_ALPHA,g.ONE_MINUS_SRC_ALPHA,g.ONE,g.ZERO);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "blendEquation",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.blendEquation(g.FUNC_ADD);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "blendEquationSeparate",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.blendEquationSeparate(g.FUNC_ADD,g.FUNC_SUBTRACT);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "blendColor",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.blendColor(0.5,0.5,0.5,1);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "cullFace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.cullFace(g.FRONT);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "frontFace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.frontFace(g.CW);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "lineWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.lineWidth(1);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "polygonOffset",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.polygonOffset(1,1);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "sampleCoverage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.sampleCoverage(0.5,false);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "hint",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.hint(g.GENERATE_MIPMAP_HINT,g.FASTEST);return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "finish",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.finish();return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "flush",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");g.flush();return g.getError(); })()",
+    "expected": 0
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "makeXRCompatible",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const pr=g.makeXRCompatible();pr.catch(()=>{});return pr instanceof Promise; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "viewport",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);const L=g.getAttribLocation(p,\"a\");g.enableVertexAttribArray(L);g.vertexAttribPointer(L,2,g.FLOAT,false,0,0);g.uniform1f(g.getUniformLocation(p,\"u\"),1.0);g.viewport(0,0,4,4);g.drawArrays(g.TRIANGLES,0,3);const lo=new Uint8Array(4);g.readPixels(1,1,1,1,g.RGBA,g.UNSIGNED_BYTE,lo);const hi=new Uint8Array(4);g.readPixels(6,6,1,1,g.RGBA,g.UNSIGNED_BYTE,hi);return Array.from(lo).join(\",\")+\"|\"+Array.from(hi).join(\",\"); })()",
+    "expected": "255,0,0,255|0,0,0,0"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawArrays",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);const L=g.getAttribLocation(p,\"a\");g.enableVertexAttribArray(L);g.vertexAttribPointer(L,2,g.FLOAT,false,0,0);g.uniform1f(g.getUniformLocation(p,\"u\"),1.0);g.drawArrays(g.TRIANGLES,0,3);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "255,0,0,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawElements",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u,0.,0.,1.);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);g.useProgram(p);const b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),g.STATIC_DRAW);const L=g.getAttribLocation(p,\"a\");g.enableVertexAttribArray(L);g.vertexAttribPointer(L,2,g.FLOAT,false,0,0);g.uniform1f(g.getUniformLocation(p,\"u\"),1.0);const e=g.createBuffer();g.bindBuffer(g.ELEMENT_ARRAY_BUFFER,e);g.bufferData(g.ELEMENT_ARRAY_BUFFER,new Uint16Array([0,1,2]),g.STATIC_DRAW);g.drawElements(g.TRIANGLES,3,g.UNSIGNED_SHORT,0);const q=new Uint8Array(4);g.readPixels(4,4,1,1,g.RGBA,g.UNSIGNED_BYTE,q);return Array.from(q).join(\",\"); })()",
+    "expected": "255,0,0,255"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.canvas === c; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.canvas instanceof HTMLCanvasElement; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.canvas.tagName; })()",
+    "expected": "CANVAS",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "canvas",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const o=new OffscreenCanvas(8,8); const gg=o.getContext(\"webgl\"); return gg.canvas instanceof OffscreenCanvas; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferWidth; })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferHeight",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferHeight; })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); c.width = 37; return g.drawingBufferWidth; })()",
+    "expected": 37,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferHeight",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); c.height = 41; return g.drawingBufferHeight; })()",
+    "expected": 41,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); c.width = 0; return g.drawingBufferWidth; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferHeight",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); c.height = 0; return g.drawingBufferHeight; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.drawingBufferWidth; })()",
+    "expected": "number",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferWidth",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return (g.drawingBufferWidth = 999, g.drawingBufferWidth); })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferColorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.drawingBufferColorSpace = \"display-p3\"; return g.drawingBufferColorSpace; })()",
+    "expected": "display-p3",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.drawingBufferColorSpace = \"bogus\"; return g.drawingBufferColorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.drawingBufferColorSpace = \"srgb\"; return g.drawingBufferColorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "unpackColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.unpackColorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "unpackColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.unpackColorSpace = \"display-p3\"; return g.unpackColorSpace; })()",
+    "expected": "display-p3",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "unpackColorSpace",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.unpackColorSpace = \"bogus\"; return g.unpackColorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferFormat",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferFormat; })()",
+    "expected": 32856,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferFormat",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.drawingBufferFormat; })()",
+    "expected": "number",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.drawingBufferStorage; })()",
+    "expected": "function",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferStorage.length; })()",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferStorage.name; })()",
+    "expected": "drawingBufferStorage",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.drawingBufferStorage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.drawingBufferStorage(g.RGBA8, 4, 4); return g.getError(); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "drawingBufferStorage",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.drawingBufferStorage(g.RGBA8, 4, 4); return [g.drawingBufferWidth, g.drawingBufferHeight].join(','); })()",
+    "expected": "4,4",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Object.keys(g.getContextAttributes()).sort().join(','); })()",
+    "expected": "alpha,antialias,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,xrCompatible",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().alpha; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().depth; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().stencil; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().antialias; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().premultipliedAlpha; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().preserveDrawingBuffer; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().powerPreference; })()",
+    "expected": "default",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().failIfMajorPerformanceCaveat; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().desynchronized; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getContextAttributes().xrCompatible; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getContextAttributes(); })()",
+    "expected": "object",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const c2=document.createElement(\"canvas\"); const g2=c2.getContext(\"webgl\",{alpha:false,depth:false,stencil:true,antialias:false,preserveDrawingBuffer:true}); const a=g2.getContextAttributes(); return [a.alpha,a.depth,a.stencil,a.antialias,a.preserveDrawingBuffer].join(\",\"); })()",
+    "expected": "false,false,true,false,true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getContextAttributes",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const g2=document.createElement(\"canvas\").getContext(\"webgl\",{powerPreference:\"low-power\"}); return g2.getContextAttributes().powerPreference; })()",
+    "expected": "low-power",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.isArray(g.getSupportedExtensions()); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions().every(x => typeof x === 'string'); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions().includes(\"WEBGL_lose_context\"); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions().includes(\"WEBGL_debug_renderer_info\"); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions().length > 0; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions() === g.getSupportedExtensions(); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getSupportedExtensions",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getSupportedExtensions().includes(\"OES_element_index_uint\"); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(\"WEBGL_lose_context\") !== null; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Object.prototype.toString.call(g.getExtension(\"WEBGL_lose_context\")); })()",
+    "expected": "[object WebGLLoseContext]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(\"NO_SUCH_EXTENSION_XYZ\"); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(\"webgl_lose_context\") !== null; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(\"WEBGL_lose_context\") === g.getExtension(\"WEBGL_lose_context\"); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getExtension(\"WEBGL_lose_context\").loseContext; })()",
+    "expected": "function",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const e=g.getExtension(\"WEBGL_lose_context\"); e.loseContext(); return g.isContextLost(); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const e=g.getExtension(\"WEBGL_lose_context\"); e.loseContext(); return g.getParameter(g.VERSION); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const e=g.getExtension(\"WEBGL_lose_context\"); e.loseContext(); return g.getError(); })()",
+    "expected": 37442,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const e=g.getExtension(\"WEBGL_lose_context\"); e.loseContext(); return g.createBuffer() === null; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const e=g.getExtension(\"WEBGL_lose_context\"); e.loseContext(); return g.drawingBufferWidth; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(\"EXT_texture_filter_anisotropic\") !== null; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getExtension(null); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getExtension",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Object.prototype.toString.call(g.getExtension(\"OES_vertex_array_object\")); })()",
+    "expected": "[object OESVertexArrayObject]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.RED_BITS); })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.GREEN_BITS); })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLUE_BITS); })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.ALPHA_BITS); })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DEPTH_BITS); })()",
+    "expected": 24,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_BITS); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SUBPIXEL_BITS); })()",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.UNPACK_ALIGNMENT); })()",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.PACK_ALIGNMENT); })()",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.CULL_FACE_MODE); })()",
+    "expected": 1029,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.FRONT_FACE); })()",
+    "expected": 2305,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DEPTH_FUNC); })()",
+    "expected": 513,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_FUNC); })()",
+    "expected": 519,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_REF); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_FAIL); })()",
+    "expected": 7680,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_PASS_DEPTH_FAIL); })()",
+    "expected": 7680,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_PASS_DEPTH_PASS); })()",
+    "expected": 7680,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_SRC_RGB); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_DST_RGB); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_SRC_ALPHA); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_DST_ALPHA); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_EQUATION_RGB); })()",
+    "expected": 32774,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND_EQUATION_ALPHA); })()",
+    "expected": 32774,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.GENERATE_MIPMAP_HINT); })()",
+    "expected": 4352,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.ACTIVE_TEXTURE); })()",
+    "expected": 33984,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.UNPACK_COLORSPACE_CONVERSION_WEBGL); })()",
+    "expected": 37444,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.LINE_WIDTH); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DEPTH_CLEAR_VALUE); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_CLEAR_VALUE); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.POLYGON_OFFSET_FACTOR); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.POLYGON_OFFSET_UNITS); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SAMPLE_COVERAGE_VALUE); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.BLEND); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.CULL_FACE); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DEPTH_TEST); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DITHER); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.POLYGON_OFFSET_FILL); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SAMPLE_ALPHA_TO_COVERAGE); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SAMPLE_COVERAGE); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SCISSOR_TEST); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.STENCIL_TEST); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.DEPTH_WRITEMASK); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.UNPACK_FLIP_Y_WEBGL); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.UNPACK_PREMULTIPLY_ALPHA_WEBGL); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.SAMPLE_COVERAGE_INVERT); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.ARRAY_BUFFER_BINDING); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.ELEMENT_ARRAY_BUFFER_BINDING); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.CURRENT_PROGRAM); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.FRAMEBUFFER_BINDING); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.RENDERBUFFER_BINDING); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.TEXTURE_BINDING_2D); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.TEXTURE_BINDING_CUBE_MAP); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.VIEWPORT)).join(','); })()",
+    "expected": "0,0,8,8",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.SCISSOR_BOX)).join(','); })()",
+    "expected": "0,0,8,8",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.COLOR_CLEAR_VALUE)).join(','); })()",
+    "expected": "0,0,0,0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.COLOR_WRITEMASK)).join(','); })()",
+    "expected": "true,true,true,true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.DEPTH_RANGE)).join(','); })()",
+    "expected": "0,1",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Array.from(g.getParameter(g.ALIASED_LINE_WIDTH_RANGE)).join(','); })()",
+    "expected": "1,10",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_TEXTURE_SIZE) + ':' + (g.getParameter(g.MAX_TEXTURE_SIZE) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_CUBE_MAP_TEXTURE_SIZE) + ':' + (g.getParameter(g.MAX_CUBE_MAP_TEXTURE_SIZE) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_RENDERBUFFER_SIZE) + ':' + (g.getParameter(g.MAX_RENDERBUFFER_SIZE) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_VERTEX_ATTRIBS) + ':' + (g.getParameter(g.MAX_VERTEX_ATTRIBS) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_TEXTURE_IMAGE_UNITS) + ':' + (g.getParameter(g.MAX_TEXTURE_IMAGE_UNITS) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_VARYING_VECTORS) + ':' + (g.getParameter(g.MAX_VARYING_VECTORS) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_VERTEX_UNIFORM_VECTORS) + ':' + (g.getParameter(g.MAX_VERTEX_UNIFORM_VECTORS) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.MAX_FRAGMENT_UNIFORM_VECTORS) + ':' + (g.getParameter(g.MAX_FRAGMENT_UNIFORM_VECTORS) > 0); })()",
+    "expected": "number:true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(0x9999); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.getParameter(0x9999); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.VIEWPORT) instanceof Int32Array; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.COLOR_CLEAR_VALUE) instanceof Float32Array; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.COLOR_WRITEMASK) instanceof Array; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.VERSION); })()",
+    "expected": "string",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return typeof g.getParameter(g.SHADING_LANGUAGE_VERSION); })()",
+    "expected": "string",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.viewport(1,2,3,4); return Array.from(g.getParameter(g.VIEWPORT)).join(','); })()",
+    "expected": "1,2,3,4",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.clearColor(0.5,0,0,1); return Array.from(g.getParameter(g.COLOR_CLEAR_VALUE)).join(','); })()",
+    "expected": "0.5,0,0,1",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.enable(g.BLEND); return g.getParameter(g.BLEND); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const b=g.createBuffer(); g.bindBuffer(g.ARRAY_BUFFER,b); return g.getParameter(g.ARRAY_BUFFER_BINDING) === b; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.IMPLEMENTATION_COLOR_READ_FORMAT); })()",
+    "expected": 6408,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(g.IMPLEMENTATION_COLOR_READ_TYPE); })()",
+    "expected": 5121,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getParameter(0x8CA6); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.getParameter(0x8CA6); return g.getError(); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB8",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.RGB8; })()",
+    "expected": 32849,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB8",
+    "expr": "WebGLRenderingContext.RGB8",
+    "expected": 32849,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "RGB8",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return Object.getOwnPropertyDescriptor(WebGLRenderingContext.prototype, 'RGB8').writable; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE); })()",
+    "expected": 5890,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME) === t; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.DEPTH_ATTACHMENT,g.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,0x9999); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,0x9999); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const fb=g.createFramebuffer(); g.bindFramebuffer(g.FRAMEBUFFER, fb); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D, t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.framebufferTexture2D(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.TEXTURE_2D,t,0); return g.checkFramebufferStatus(g.FRAMEBUFFER); })()",
+    "expected": 36053,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "getFramebufferAttachmentParameter",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.getFramebufferAttachmentParameter(g.FRAMEBUFFER,g.COLOR_ATTACHMENT0,g.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE); return g.getError(); })()",
+    "expected": 1282,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.copyTexImage2D(g.TEXTURE_2D,0,g.RGBA,0,0,4,4,0); return g.getError(); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.copyTexImage2D(g.TEXTURE_2D,0,g.RGBA,0,0,4,4,1); return g.getError(); })()",
+    "expected": 1281,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.copyTexImage2D(g.TEXTURE_2D,-1,g.RGBA,0,0,4,4,0); return g.getError(); })()",
+    "expected": 1281,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.copyTexImage2D(g.TEXTURE_2D,0,0x9999,0,0,4,4,0); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); return g.copyTexImage2D(g.TEXTURE_2D,0,g.RGBA,0,0,4,4,0); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.copyTexImage2D.length; })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); g.copyTexImage2D(g.TEXTURE_2D,0,g.RGBA,0,0,4,4,0); return g.getError(); })()",
+    "expected": 1282,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.copyTexSubImage2D(g.TEXTURE_2D,0,0,0,0,0,2,2); return g.getError(); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); return g.copyTexSubImage2D(g.TEXTURE_2D,0,0,0,0,0,2,2); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.texImage2D(g.TEXTURE_2D,0,g.RGBA,4,4,0,g.RGBA,g.UNSIGNED_BYTE,null); g.copyTexSubImage2D(g.TEXTURE_2D,0,-1,0,0,0,2,2); return g.getError(); })()",
+    "expected": 1281,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.copyTexSubImage2D(g.TEXTURE_2D,0,0,0,0,0,2,2); return g.getError(); })()",
+    "expected": 1281,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "copyTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.copyTexSubImage2D.length; })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.compressedTexImage2D(g.TEXTURE_2D,0,0x83F0,4,4,0,new Uint8Array(8)); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); return g.compressedTexImage2D(g.TEXTURE_2D,0,0x83F0,4,4,0,new Uint8Array(8)); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.compressedTexImage2D.length; })()",
+    "expected": 7,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.compressedTexImage2D(g.TEXTURE_2D,0,0x9999,4,4,0,new Uint8Array(8)); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.compressedTexImage2D(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); const t=g.createTexture(); g.bindTexture(g.TEXTURE_2D,t); g.compressedTexSubImage2D(g.TEXTURE_2D,0,0,0,4,4,0x83F0,new Uint8Array(8)); return g.getError(); })()",
+    "expected": 1280,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.compressedTexSubImage2D.length; })()",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebGLRenderingContext",
+    "member": "compressedTexSubImage2D",
+    "expr": "(() => { const c=document.createElement(\"canvas\");c.width=8;c.height=8;const g=c.getContext(\"webgl\"); return g.compressedTexSubImage2D(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

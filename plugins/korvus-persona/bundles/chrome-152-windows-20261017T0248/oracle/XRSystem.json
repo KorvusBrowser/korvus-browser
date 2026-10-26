@@ -1,0 +1,104 @@
+[
+  {
+    "iface": "XRSystem",
+    "member": "constructor",
+    "expr": "new XRSystem()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "ondevicechange",
+    "expr": "(() => { const o = navigator.xr; return o.ondevicechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "ondevicechange",
+    "expr": "(() => { const o = navigator.xr; return Object.prototype.toString.call(o.ondevicechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "Object.prototype.toString.call(navigator.xr.isSessionSupported(\"immersive-vr\"))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "Object.prototype.toString.call(navigator.xr.isSessionSupported(\"bogus\"))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "Object.prototype.toString.call(navigator.xr.isSessionSupported())",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "requestSession",
+    "expr": "Object.prototype.toString.call(navigator.xr.requestSession(\"inline\"))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "requestSession",
+    "expr": "Object.prototype.toString.call(navigator.xr.requestSession(\"bogus\"))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "(() => { const o = navigator.xr; return Object.prototype.toString.call(o.isSessionSupported(\"inline\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "(async () => { const o = navigator.xr; return await o.isSessionSupported(\"inline\"); })()",
+    "expected": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "isSessionSupported",
+    "expr": "(async () => { const o = navigator.xr; return await o.isSessionSupported(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "requestSession",
+    "expr": "(() => { const o = navigator.xr; return Object.prototype.toString.call(o.requestSession(\"inline\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "requestSession",
+    "expr": "(async () => { const o = navigator.xr; return Object.prototype.toString.call(await o.requestSession(\"inline\")); })()",
+    "expected": "[object XRSession]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRSystem",
+    "member": "requestSession",
+    "expr": "(async () => { const o = navigator.xr; return await o.requestSession(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

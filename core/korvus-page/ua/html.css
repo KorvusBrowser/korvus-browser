@@ -1,0 +1,170 @@
+/* The user-agent stylesheet.
+ *
+ * What a browser looks like before a page says anything: why a <div> is a block and a <span> is
+ * not, why <h1> is large and bold, why <ul> has a bullet. Without it every element is
+ * `display: inline` with no margins, and every page is a wall of text.
+ *
+ * DERIVED AS DATA from Chromium's `third_party/blink/renderer/core/html/resources/html.css`
+ * (Copyright (C) 2000 Lars Knoll, Copyright (C) 2003-2011 Apple Inc.; LGPL 2.1). It is a table of
+ * facts about HTML rather than an implementation, and it is reproduced here as one. No Blink code
+ * is copied anywhere in this crate. Which `blink-feature()` branches apply and what
+ * `-webkit-small-control` computes to were ASKED of Chrome -- see `ua/chrome-ua-probe.json`.
+ *
+ * GENERATED -- see `tools/extract-ua-stylesheet.py`. Edit that, not this. */
+
+/* 149 rules; Chrome asked: Chrome/152.0.7977.82 */
+
+html { display: block }
+:root { view-transition-name: root }
+:active-view-transition { view-transition-name: root }
+:active-view-transition:not(:root) { view-transition-group: contain }
+body { display: block; margin: 8px }
+p { display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0; margin-inline-end: 0 }
+div { display: block }
+article, aside, footer, header, hgroup, main, nav, search, section { display: block }
+marquee { display: inline-block }
+address { display: block }
+blockquote { display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 40px; margin-inline-end: 40px }
+figcaption { display: block }
+figure { display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 40px; margin-inline-end: 40px }
+q { display: inline }
+center { display: block }
+hr { display: block; overflow: hidden; margin-block-start: 0.5em; margin-block-end: 0.5em; margin-inline-start: auto; margin-inline-end: auto; border-style: inset; border-width: 1px; color: gray }
+map { display: inline }
+video { object-fit: contain }
+audio:not([controls]) { display: none !important }
+audio { width: 300px; height: 54px }
+video, canvas, img { overflow: clip; overflow-clip-margin: content-box }
+iframe, embed, object, fencedframe { overflow: clip !important; overflow-clip-margin: content-box !important }
+h1 { display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+h2 { display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+h3 { display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+h4 { display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+h5 { display: block; font-size: .83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+h6 { display: block; font-size: .67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0; margin-inline-end: 0; font-weight: bold }
+table { display: table; box-sizing: border-box; border-spacing: 2px; border-collapse: separate; text-indent: initial }
+thead { display: table-header-group; vertical-align: middle; border-color: inherit }
+tbody { display: table-row-group; vertical-align: middle; border-color: inherit }
+tfoot { display: table-footer-group; vertical-align: middle; border-color: inherit }
+table > tr { vertical-align: middle }
+col { display: table-column }
+colgroup { display: table-column-group }
+tr { display: table-row; vertical-align: inherit; border-color: inherit }
+td, th { display: table-cell; vertical-align: inherit }
+td:not(table td), th:not(table th) { padding: 1px }
+th { font-weight: bold; text-align: -internal-center }
+caption { display: table-caption }
+ul, menu, dir { display: block; list-style-type: disc; margin-block-start: 1em; margin-block-end: 1em; padding-inline-start: 40px }
+ol { display: block; list-style-type: decimal; margin-block-start: 1em; margin-block-end: 1em; padding-inline-start: 40px }
+li { display: list-item; text-align: match-parent }
+:is(dir, dl, menu, ol, ul) dir, :is(dir, dl, menu, ol, ul) dl, :is(dir, dl, menu, ol, ul) menu, :is(dir, dl, menu, ol, ul) ol, :is(dir, dl, menu, ol, ul) ul { margin-block-start: 0; margin-block-end: 0 }
+:is(dir, menu, ol, ul) dir, :is(dir, menu, ol, ul) menu, :is(dir, menu, ol, ul) ul { list-style-type: circle }
+:is(dir, menu, ol, ul) :is(dir, menu, ol, ul) dir, :is(dir, menu, ol, ul) :is(dir, menu, ol, ul) menu, :is(dir, menu, ol, ul) :is(dir, menu, ol, ul) ul { list-style-type: square }
+dd { display: block; margin-inline-start: 40px }
+dl { display: block; margin-block-start: 1em; margin-block-end: 1em }
+dt { display: block }
+form { display: block; margin-top: 0em }
+label { cursor: default }
+fieldset { display: block; margin-inline: 2px; border: groove 2px ThreeDFace; padding-block: 0.35em 0.625em; padding-inline: 0.75em; min-inline-size: min-content }
+legend { display: block; padding-inline: 2px }
+legend[align=left i] { justify-self: left }
+legend[align=center i] { justify-self: center }
+legend[align=right i] { justify-self: right }
+button { appearance: auto }
+input, textarea, select, button { margin: 0em; font: normal 400 13.3333px Arial; text-rendering: auto; color: FieldText; letter-spacing: normal; word-spacing: normal; line-height: normal; text-transform: none; text-indent: 0; text-shadow: none; display: inline-block; text-align: start }
+textarea { appearance: auto; column-count: initial !important; -webkit-rtl-ordering: logical; cursor: text; white-space: pre-wrap; font-family: monospace; border: 1px solid light-dark(#767676, #858585); background-color: Field; padding: 2px }
+input { appearance: auto; cursor: text; padding: 1px 0; border: 2px inset light-dark(#767676, #858585); -webkit-rtl-ordering: logical; background-color: Field }
+input[type="search" i] { appearance: auto; box-sizing: border-box }
+input, input[type="email" i], input[type="number" i], input[type="password" i], input[type="search" i], input[type="tel" i], input[type="text" i], input[type="url" i] { padding-block: 1px; padding-inline: 2px }
+input[type="tel" i] { direction: ltr }
+input[type="password" i] { -webkit-text-security: disc !important }
+input[type="hidden" i], input[type="image" i], input[type="file" i] { appearance: none; padding: initial; background-color: initial; border: initial; cursor: default }
+input[type="file" i] { align-items: baseline; color: inherit; text-align: start !important; text-overflow: ellipsis !important; white-space: pre }
+input[type="image" i] { cursor: pointer }
+input[type="radio" i], input[type="checkbox" i] { padding: initial; background-color: initial; border: initial; cursor: default }
+input[type="checkbox" i] { margin: 3px 3px 3px 4px }
+input[type="radio" i] { margin: 3px 3px 0 5px }
+input[type="button" i], input[type="submit" i], input[type="reset" i] { appearance: auto; user-select: none; white-space: pre }
+input[type="button" i], input[type="submit" i], input[type="reset" i], button { cursor: default; box-sizing: border-box; text-align: center; cursor: default; padding-block: 1px; padding-inline: 6px; border: 2px outset ButtonBorder; background-color: ButtonFace; color: ButtonText }
+input[type="checkbox" i]:disabled, input[type="file" i]:disabled, input[type="hidden" i]:disabled, input[type="image" i]:disabled, input[type="radio" i]:disabled, input[type="range" i]:disabled { background-color: initial }
+input[type="range" i] { appearance: auto; padding: initial; border: initial; margin: 2px; cursor: default; color: light-dark(#101010, #ffffff) }
+input[type="range" i]:disabled { color: #c5c5c5 }
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, button:disabled { background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3)); border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3)); color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)) }
+input[type="color" i]:disabled { background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3)); border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3)); color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3)) }
+input[type="button" i]:active, input[type="submit" i]:active, input[type="reset" i]:active, button:active { border-style: inset }
+input[type="button" i]:active:disabled, input[type="submit" i]:active:disabled, input[type="reset" i]:active:disabled, button:active:disabled { border-style: outset }
+input:disabled, textarea:disabled { cursor: default; background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3)); color: light-dark(#545454, #aaaaaa) }
+input:not([type="range" i], [type="checkbox" i], [type="radio" i]) { overflow: clip !important; overflow-clip-margin: 0px !important }
+input[type="image" i] { overflow-clip-margin: content-box !important }
+area { display: inline }
+base, basefont, datalist, head, link, meta, noembed, noframes, param, rp, script, style, template, title { display: none }
+input[type="hidden" i] { display: none !important }
+input[type="checkbox" i] { appearance: auto; box-sizing: border-box }
+input[type="radio" i] { appearance: auto; box-sizing: border-box }
+input[type="color" i] { appearance: auto; box-sizing: border-box; inline-size: 50px; block-size: 27px; border: 1px solid ButtonBorder; padding: 1px 2px; cursor: default; background-color: ButtonFace; color: ButtonText }
+input[type="date" i], input[type="datetime-local" i], input[type="month" i], input[type="week" i], select { text-autospace: no-autospace !important }
+select { appearance: auto; box-sizing: border-box; align-items: center; white-space: pre; -webkit-rtl-ordering: logical; color: FieldText; background-color: Field; border: 1px solid light-dark(#767676, #858585); cursor: default; border-radius: 0 }
+select:disabled { opacity: 0.7 }
+select option:enabled:hover { background-color: initial }
+optgroup { font-weight: bolder; display: block }
+option { font-weight: normal; display: block; padding-inline: 2px; padding-block-start: 0; padding-block-end: 1px; white-space: nowrap; min-inline-size: unset; min-block-size: 1.2em; gap: unset; align-items: unset }
+input:disabled, textarea:disabled { border-color: rgba(118, 118, 118, 0.3) }
+select:disabled { border-color: rgba(118, 118, 118, 0.3) }
+select:disabled, optgroup:disabled, option:disabled, select[disabled]>option { color: light-dark(GrayText, #aaa) }
+select:disabled option, optgroup:disabled option { color: light-dark(GrayText, #aaa) }
+output { display: inline }
+meter { -webkit-user-modify: read-only !important; appearance: auto; block-size: 1em; box-sizing: border-box; display: inline-block; inline-size: 5em; vertical-align: -0.2em }
+progress { appearance: auto; box-sizing: border-box; display: inline-block; block-size: 1em; inline-size: 10em; vertical-align: -0.2em }
+u, ins { text-decoration: underline }
+/* Chromium's `a:-webkit-any-link { color: -webkit-link; text-decoration: underline; cursor: pointer }`, in the selectors
+   and values this engine has: the same specificity, and `-webkit-link` is #0000EE for an unvisited link (a page reads no
+   other). The extractor dropped it, and every link painted black and bare -- and read so in getComputedStyle. */
+a[href], area[href] { color: rgb(0, 0, 238); text-decoration: underline; cursor: pointer }
+abbr[title], acronym[title] { text-decoration: dotted underline }
+strong, b { font-weight: bolder }
+i, cite, em, var, address, dfn { font-style: italic }
+tt, code, kbd, samp { font-family: monospace }
+pre, xmp, plaintext, listing { display: block; font-family: monospace; white-space: pre; margin-block: 1em; margin-inline: 0 }
+mark { background-color: Mark; color: MarkText }
+big { font-size: larger }
+small { font-size: smaller }
+s, strike, del { text-decoration: line-through }
+sub { vertical-align: sub; font-size: smaller }
+sup { vertical-align: super; font-size: smaller }
+nobr { white-space: nowrap }
+button[interestfor] { user-select: none }
+:focus-visible { outline: auto 1px rgb(16, 16, 16) }
+html:focus-visible, body:focus-visible { outline: none }
+embed:focus-visible, iframe:focus-visible, object:focus-visible { outline: none }
+input:focus-visible, textarea:focus-visible, select:focus-visible { outline-offset: 0 }
+input[type="button" i]:focus-visible, input[type="file" i]:focus-visible, input[type="hidden" i]:focus-visible, input[type="image" i]:focus-visible, input[type="reset" i]:focus-visible, input[type="submit" i]:focus-visible { outline-offset: 0 }
+input[type="checkbox" i]:focus-visible, input[type="radio" i]:focus-visible { outline-offset: 2px }
+ruby, rt { text-indent: 0 }
+ruby { display: ruby }
+rt { line-height: normal }
+ruby > rt { display: ruby-text; font-size: 50%; text-align: start }
+frameset, frame { display: block }
+frameset { border-color: inherit }
+iframe { border: 2px inset }
+fencedframe { border: 2px inset; object-fit: contain !important; object-position: 50% 50% !important }
+details { display: block }
+summary { display: block }
+details > summary:first-of-type { display: list-item; counter-increment: list-item 0; list-style: disclosure-closed inside }
+details[open] > summary:first-of-type { list-style-type: disclosure-open }
+address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir=ltr i], [dir=rtl i], [dir=auto i] { unicode-bidi: isolate }
+bdo, bdo[dir] { unicode-bidi: isolate-override }
+textarea[dir=auto i], pre[dir=auto i] { unicode-bidi: plaintext }
+dialog { position: absolute; inset-inline-start: 0; inset-inline-end: 0; width: fit-content; height: fit-content; margin: auto; border: solid; padding: 1em; background-color: Canvas; color: CanvasText }
+[popover] { position: fixed; position-anchor: auto; inset: 0; width: fit-content; height: fit-content; margin: auto; border: solid; padding: 0.25em; overflow: auto; color: CanvasText; background-color: Canvas }
+dialog:not([open]), [popover]:where(:not(:popover-open)) { display: none }
+dialog[open], [popover]:popover-open { display: block }
+slot { display: contents }
+thead { break-inside: if(media(overflow-block: paged): avoid;) }
+tfoot { break-inside: if(media(overflow-block: paged): avoid;) }
+img:is([sizes="auto" i], [sizes^="auto," i]) { contain: size !important; contain-intrinsic-size: 300px 150px }
+dialog:where(:modal) { interactivity: auto }
+[inert] { interactivity: inert !important }
+select { font: normal 400 13.3333px Arial; text-shadow: none; text-transform: none; text-rendering: auto; letter-spacing: normal; word-spacing: normal; text-align: start; text-indent: 0px; -webkit-rtl-ordering: logical; cursor: default; white-space: pre; text-autospace: no-autospace !important; color: FieldText; background-color: Field; min-inline-size: auto; min-block-size: auto; user-select: auto }
+select optgroup legend { padding-inline: 2px; min-block-size: initial }
+select optgroup optgroup { display: none }
+[overscrollcontainer] > [overscrollarea]:not(:overscroll-open) { interactivity: inert }

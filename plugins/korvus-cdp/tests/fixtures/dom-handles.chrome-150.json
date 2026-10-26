@@ -1,0 +1,62 @@
+{
+ "source": "stock Chrome 150.0.7871.46 headless, fresh profile, one raw CDP client (bench-lean/cdp/probe/page_shapes.mjs, 2026-10-12): Target.createTarget + attach, Page.enable, Runtime.enable, Page.navigate(dom-handles.html) ...",
+ "evaluate_q": {
+  "type": "object",
+  "subtype": "node",
+  "className": "HTMLInputElement",
+  "description": "input#q"
+ },
+ "describe_q_by_object": {
+  "nodeType": 1,
+  "nodeName": "INPUT",
+  "localName": "input",
+  "nodeValue": "",
+  "childNodeCount": 0,
+  "attributes": [
+   "id",
+   "q",
+   "name",
+   "q"
+  ]
+ },
+ "describe_go_by_node_id": {
+  "nodeType": 1,
+  "nodeName": "BUTTON",
+  "localName": "button",
+  "nodeValue": "",
+  "childNodeCount": 1,
+  "attributes": [
+   "id",
+   "go",
+   "type",
+   "submit"
+  ]
+ },
+ "quads_q": [
+  [
+   8,
+   108,
+   193,
+   108,
+   193,
+   129,
+   8,
+   129
+  ]
+ ],
+ "resolve_q": {
+  "type": "object",
+  "subtype": "node",
+  "className": "HTMLInputElement",
+  "description": "input#q"
+ },
+ "document_root": {
+  "nodeType": 9,
+  "nodeName": "#document",
+  "localName": "",
+  "nodeValue": "",
+  "childNodeCount": 2,
+  "xmlVersion": "",
+  "compatibilityMode": "NoQuirksMode"
+ }
+}

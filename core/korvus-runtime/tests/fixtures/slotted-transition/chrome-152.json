@@ -1,0 +1,34 @@
+[
+ [
+  "shadow element: opacity right after",
+  "1"
+ ],
+ [
+  "shadow element: getAnimations",
+  "CSSTransition"
+ ],
+ [
+  "slotted child: color right after its slot changed",
+  "rgb(0, 0, 0)"
+ ],
+ [
+  "slotted child: getAnimations",
+  "CSSTransition:color"
+ ],
+ [
+  "unslotted child: getAnimations",
+  0
+ ],
+ [
+  "events",
+  "transitionrun:kid:color transitionend:kid:color"
+ ],
+ [
+  "settled: shadow element opacity",
+  "0.5"
+ ],
+ [
+  "settled: slotted child color",
+  "rgb(0, 0, 255)"
+ ]
+]

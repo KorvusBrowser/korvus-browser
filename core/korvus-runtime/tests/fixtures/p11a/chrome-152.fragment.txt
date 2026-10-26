@@ -1,0 +1,25 @@
+new PopStateEvent("p") =>  false false false [object PopStateEvent]
+new PopStateEvent("p", {state: 5}) => 5
+new PopStateEvent("p", {state: undefined}) => null
+new HashChangeEvent("h", {oldURL: 1, newURL: "x"}) => ["1","x"]
+new HashChangeEvent("h") => ["",""]
+new PopStateEvent() => THROW TypeError: Failed to construct 'PopStateEvent': 1 argument required, but only 0 present.
+PopStateEvent("p") => THROW TypeError: Failed to construct 'PopStateEvent': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+new HashChangeEvent("h", 5) => THROW TypeError: Failed to construct 'HashChangeEvent': The provided value is not of type 'HashChangeEventInit'.
+location.hash = "a" => popstate state=null href=#a trusted=true bubbles=false cancelable=false, sync hash=#a dh=1, microtask, hashchange old=/page.html new=/page.html#a [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+location.hash = "#b" => popstate state=null href=#b trusted=true bubbles=false cancelable=false, sync hash=#b dh=2, microtask, hashchange old=/page.html#a new=/page.html#b [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+location.hash = "#b" again => sync hash=#b dh=2, microtask, timeout0
+location.href = "#c" => popstate state=null href=#c trusted=true bubbles=false cancelable=false, sync hash=#c dh=3, microtask, hashchange old=/page.html#b new=/page.html#c [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+location.assign("#d") => popstate state=null href=#d trusted=true bubbles=false cancelable=false, sync hash=#d dh=4, microtask, hashchange old=/page.html#c new=/page.html#d [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+location.replace("#e") => popstate state=null href=#e trusted=true bubbles=false cancelable=false, sync hash=#e dh=4, microtask, hashchange old=/page.html#d new=/page.html#e [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+location.hash = "" => popstate state=null href= trusted=true bubbles=false cancelable=false, sync hash= dh=5, microtask, hashchange old=/page.html#e new=/page.html# [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout0
+history.back() => sync hash= dh=5, microtask, popstate state=null href=#e trusted=true bubbles=false cancelable=false, hashchange old=/page.html# new=/page.html#e [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout50
+history.pushState({n: 1}, "", "?s=1#e") => sync hash=#e dh=5, microtask, timeout0
+history.pushState({n: 2}, "", "#q") => sync hash=#q dh=6, microtask, timeout0
+history.replaceState({n: 3}, "") => sync hash=#q dh=6, microtask, timeout0
+history.back() after pushes => sync hash=#q dh=6, microtask, popstate state={"n":1} href=#e trusted=true bubbles=false cancelable=false, hashchange old=/page.html?s=1#q new=/page.html?s=1#e [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout50
+history.forward() => sync hash=#e dh=6, microtask, popstate state={"n":3} href=#q trusted=true bubbles=false cancelable=false, hashchange old=/page.html?s=1#e new=/page.html?s=1#q [object HashChangeEvent] trusted=true bubbles=false cancelable=false, timeout50
+history.go(-2) => sync hash=#q dh=6, microtask, popstate state=null href=#e trusted=true bubbles=false cancelable=false, timeout50
+history.go(10) => sync hash=#e dh=6, microtask, timeout50
+history.state => state=null search=, sync hash=#e dh=6, microtask, timeout0
+final => /page.html#e dh=6

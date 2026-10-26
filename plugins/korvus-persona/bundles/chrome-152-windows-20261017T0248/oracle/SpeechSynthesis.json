@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "SpeechSynthesis",
+    "member": "constructor",
+    "expr": "new SpeechSynthesis()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "pending",
+    "expr": "(() => { const o = speechSynthesis; return o.pending; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "speaking",
+    "expr": "(() => { const o = speechSynthesis; return o.speaking; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "paused",
+    "expr": "(() => { const o = speechSynthesis; return o.paused; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "onvoiceschanged",
+    "expr": "(() => { const o = speechSynthesis; return o.onvoiceschanged; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "speak",
+    "expr": "(() => { const o = speechSynthesis; return o.speak(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "cancel",
+    "expr": "(() => { const o = speechSynthesis; return o.cancel(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "pause",
+    "expr": "(() => { const o = speechSynthesis; return o.pause(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "resume",
+    "expr": "(() => { const o = speechSynthesis; return o.resume(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesis",
+    "member": "getVoices",
+    "expr": "(() => { const o = speechSynthesis; return o.getVoices(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

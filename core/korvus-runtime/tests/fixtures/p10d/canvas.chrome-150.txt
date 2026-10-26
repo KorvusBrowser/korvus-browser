@@ -1,0 +1,83 @@
+red.png => 255,0,0,255
+quad.png => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,128
+quad.jpg => 253,0,2,255 | 4,253,3,255 | 2,0,254,255 | 252,255,0,255
+quad.gif => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,255
+quad.bmp => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,255
+5-arg scale x2, no smoothing => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,128 | 255,0,0,255 | 255,255,0,128
+9-arg one quadrant scaled => 0,255,0,255 | 0,255,0,255
+9-arg centre => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,128 | 0,0,0,0
+9-arg source partly outside => 0,0,0,0 | 255,0,0,255 | 255,0,0,255
+9-arg negative sw => 0,255,0,255 | 0,0,0,0
+9-arg negative dw => 255,0,0,255 | 255,255,0,128
+globalAlpha 0.5 => 255,0,0,128 | 255,255,0,64
+translate => 0,0,0,0 | 255,0,0,255
+NaN width => 0,0,0,0
+9-arg one quadrant scaled, edge => 37,255,0,223 | 37,255,0,223
+drawImage args=0 a0=[object Undefined] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': 3 arguments required, but only 0 present.
+drawImage args=1 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': 3 arguments required, but only 1 present.
+drawImage args=2 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': 3 arguments required, but only 2 present.
+drawImage args=4 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': Overload resolution failed.
+drawImage args=6 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': Overload resolution failed.
+drawImage args=7 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': Overload resolution failed.
+drawImage args=8 a0=img => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': Overload resolution failed.
+drawImage args=3 a0=[object Object] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+drawImage args=3 a0=[object Null] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+drawImage args=3 a0=[object Undefined] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+drawImage args=3 a0=[object String] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+drawImage args=3 a0=[object ImageData] => THROW TypeError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+img with no src => ok 0,0,0,0
+img 404 => THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.
+img not an image => THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.
+canvas source => 0,255,0,255 | 0,0,0,0
+canvas source 0 wide => THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The image argument is a canvas element with a width or height of 0.
+canvas source with no context => ok 0,0,0,0
+OffscreenCanvas source => 0,0,255,255
+OffscreenCanvas ctx drawImage(img) => 0,255,0,255
+OffscreenCanvas ctx drawImage({}) => THROW TypeError: Failed to execute 'drawImage' on 'OffscreenCanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'.
+video never played => ok 0,0,0,0
+createImageBitmap(img) => 20x20 255,0,0,255 | 255,255,0,128 closed:THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The image source is detached
+createImageBitmap crop => 10 0,255,0,255 | 0,0,0,0
+createImageBitmap crop negative => 10x10 0,255,0,255
+createImageBitmap crop beyond => 10x10 255,255,0,128 | 0,0,0,0
+createImageBitmap(ImageData) => 1,2,3,255 | 10,11,12,255
+createImageBitmap(canvas) => 18,52,86,255
+createImageBitmap(blob) => 20 255,0,0,255 | 255,255,0,128
+createImageBitmap resize pixelated => 40x40 255,0,0,255 | 255,255,0,128
+createImageBitmap resizeWidth only => 10x10
+createImageBitmap flipY => 0,0,255,255 | 255,255,0,128 | 255,0,0,255
+createImageBitmap errors => REJECT TypeError: Failed to execute 'createImageBitmap' on 'Window': 1 argument required, but only 0 present. ## REJECT TypeError: Failed to execute 'createImageBitmap' on 'Window': The provided value is not of type '(Blob or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or ImageData or OffscreenCanvas or SVGImageElement or VideoFrame)'. ## REJECT TypeError: Failed to execute 'createImageBitmap' on 'Window': The provided value is not of type 'ImageBitmapOptions'. ## REJECT TypeError: Failed to execute 'createImageBitmap' on 'Window': Overload resolution failed. ## REJECT RangeError: Failed to execute 'createImageBitmap' on 'Window': The crop rect width is 0. ## REJECT RangeError: Failed to execute 'createImageBitmap' on 'Window': The crop rect height is 0. ## REJECT InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The image source is not usable. ## REJECT InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The HTMLImageElement provided is in the 'broken' state. ## REJECT InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The image source's width is 0. ## REJECT InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The image source is not usable. ## REJECT InvalidStateError: The source image could not be decoded. ## REJECT InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The resize width dimension is equal to 0. ## REJECT TypeError: Failed to execute 'createImageBitmap' on 'Window': Failed to read the 'imageOrientation' property from 'ImageBitmapOptions': The provided value 'sideways' is not a valid enum value of type ImageOrientation.
+ImageBitmap shape => [object ImageBitmap] 0  0 0
+ImageBitmap width on a foreign receiver => THROW TypeError: Illegal invocation
+transferToImageBitmap => [object ImageBitmap] 4 255,0,255,255 0,0,0,0 255,0,255,255
+transferToImageBitmap with no context => THROW InvalidStateError: Failed to execute 'transferToImageBitmap' on 'OffscreenCanvas': Cannot transfer an ImageBitmap from an OffscreenCanvas with no context
+convertToBlob => image/png image/jpeg image/png
+convertToBlob with no context => THROW InvalidStateError: Failed to execute 'convertToBlob' on 'OffscreenCanvas': "OffscreenCanvas" has no rendering context.
+createPattern sources => TypeError: Failed to execute 'createPattern' on 'CanvasRenderingContext2D': The provided value is not of type '(CSSImageValue or HTMLCanvasElement or HTMLImageElement or HTMLVideoElement or ImageBitmap or OffscreenCanvas or SVGImageElement or VideoFrame)'. ## null ## InvalidStateError: Failed to execute 'createPattern' on 'CanvasRenderingContext2D': Source image is in the 'broken' state. ## InvalidStateError: Failed to execute 'createPattern' on 'CanvasRenderingContext2D': The image argument is a canvas element with a width or height of 0.
+createPattern(img) fills => 255,0,0,255 | 255,0,0,255 | 255,255,0,128
+width reset resets state => #000000 0,0,0,0
+cross-origin img drawn: getImageData => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+cross-origin: toDataURL => THROW SecurityError: Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported.
+cross-origin: toDataURL jpeg => THROW SecurityError: Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported.
+cross-origin: toBlob => THROW SecurityError: Failed to execute 'toBlob' on 'HTMLCanvasElement': Tainted canvases may not be exported.
+cross-origin: isPointInPath => true
+cross-origin: after clearRect => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+cross-origin: after reset() => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+cross-origin: after width = width => 0,0,0,0
+cross-origin: after setAttribute(width) => 0,0,0,0
+cross-origin: zero-size destination => 0,0,0,0
+cross-origin: zero-size source => 0,0,0,0
+cross-origin: drawn off the bitmap => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+tainted canvas as a source => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+cross-origin pattern: created / assigned / filled => 0,0,0,0 ## THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data. ## THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+cross-origin pattern as strokeStyle => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+bitmap of a cross-origin img => 20 THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+OffscreenCanvas: getImageData after cross-origin draw => THROW SecurityError: Failed to execute 'getImageData' on 'OffscreenCanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+OffscreenCanvas: convertToBlob after cross-origin draw => THROW SecurityError: Failed to execute 'convertToBlob' on 'OffscreenCanvas': Tainted "OffscreenCanvas" may not be exported.
+OffscreenCanvas: width reset clears the taint => 0,0,0,0
+texImage2D of tainted sources => SecurityError: Failed to execute 'texImage2D' on 'WebGL2RenderingContext': The image element contains cross-origin data, and may not be loaded. ## SecurityError: Failed to execute 'texSubImage2D' on 'WebGL2RenderingContext': The image element contains cross-origin data, and may not be loaded. ## SecurityError: Failed to execute 'texImage2D' on 'WebGL2RenderingContext': Tainted canvases may not be loaded. ## SecurityError: Failed to execute 'texImage2D' on 'WebGL2RenderingContext': The ImageBitmap contains cross-origin data, and may not be loaded.
+crossorigin=anonymous + ACAO * => 255,0,0,255
+crossorigin=anonymous, no ACAO => THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.
+crossorigin=use-credentials, ACAO * => THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.
+no crossorigin, ACAO * => THROW SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
+same-origin, crossorigin=anonymous => 255,0,0,255
+texImage2D(img) uploads its pixels => 255,0,0,255 | 0,255,0,255 | 0,0,255,255 | 255,255,0,128 err=0

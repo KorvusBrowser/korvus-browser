@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "KeyFrameRequestEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new KeyFrameRequestEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyFrameRequestEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new KeyFrameRequestEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

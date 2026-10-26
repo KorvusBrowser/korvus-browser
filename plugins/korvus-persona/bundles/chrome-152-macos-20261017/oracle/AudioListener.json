@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "AudioListener",
+    "member": "constructor",
+    "expr": "new AudioListener()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "positionX",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.positionX); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "positionY",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.positionY); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "positionZ",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.positionZ); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "forwardX",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.forwardX); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "forwardY",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.forwardY); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "forwardZ",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.forwardZ); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "upX",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.upX); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "upY",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.upY); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "upZ",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return Object.prototype.toString.call(o.upZ); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "setPosition",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return o.setPosition(1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "setPosition",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return o.setPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "setOrientation",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return o.setOrientation(1, 1, 1, 1, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioListener",
+    "member": "setOrientation",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).listener; return o.setOrientation(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

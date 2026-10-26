@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "DataCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new DataCue(1, 1, 1); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DataCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new DataCue(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DataCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new DataCue(\"1\", \"1\", 1); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

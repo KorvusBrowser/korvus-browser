@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "constructor",
+    "expr": "new CSSKeyframesRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.name; })()",
+    "expected": "k",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "length",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "appendRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.appendRule(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "appendRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.appendRule(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "deleteRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.deleteRule(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "deleteRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.deleteRule(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "findRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.findRule(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "findRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return o.findRule(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "cssRules",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.cssRules); })()",
+    "expected": "[object CSSRuleList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSKeyframesRule",
+    "member": "findRule",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.findRule(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

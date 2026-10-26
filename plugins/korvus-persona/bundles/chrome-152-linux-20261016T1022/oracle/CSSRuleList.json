@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CSSRuleList",
+    "member": "constructor",
+    "expr": "new CSSRuleList()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSRuleList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules; })(); return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSRuleList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules; })(); return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSRuleList",
+    "member": "length",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules; })(); return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

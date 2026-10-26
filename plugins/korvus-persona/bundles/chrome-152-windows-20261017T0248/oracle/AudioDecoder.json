@@ -1,0 +1,94 @@
+[
+  {
+    "iface": "AudioDecoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioDecoder({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioDecoder(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "state",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.state; })()",
+    "expected": "unconfigured",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "decodeQueueSize",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.decodeQueueSize; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.ondequeue; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "configure",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.configure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "decode",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.decode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "reset",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "close",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "state",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.state); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.ondequeue); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "flush",
+    "expr": "(() => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.flush()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioDecoder",
+    "member": "flush",
+    "expr": "(async () => { const o = new AudioDecoder({ output: () => {}, error: () => {} }); return await o.flush(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

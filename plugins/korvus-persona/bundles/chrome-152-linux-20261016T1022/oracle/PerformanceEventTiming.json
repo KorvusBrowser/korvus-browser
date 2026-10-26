@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "constructor",
+    "expr": "new PerformanceEventTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "processingStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"processingStart\").get.call(Object.create(PerformanceEventTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "processingStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"processingStart\").get.name",
+    "expected": "get processingStart",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "processingEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"processingEnd\").get.call(Object.create(PerformanceEventTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "processingEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"processingEnd\").get.name",
+    "expected": "get processingEnd",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "cancelable",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"cancelable\").get.call(Object.create(PerformanceEventTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "cancelable",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"cancelable\").get.name",
+    "expected": "get cancelable",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "target",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"target\").get.call(Object.create(PerformanceEventTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "target",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"target\").get.name",
+    "expected": "get target",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "interactionId",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"interactionId\").get.call(Object.create(PerformanceEventTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "interactionId",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEventTiming.prototype, \"interactionId\").get.name",
+    "expected": "get interactionId",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "toJSON",
+    "expr": "PerformanceEventTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "toJSON",
+    "expr": "PerformanceEventTiming.prototype.toJSON.name",
+    "expected": "toJSON",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEventTiming",
+    "member": "toJSON",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceEventTiming.prototype.toJSON.call(Object.create(PerformanceEventTiming.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

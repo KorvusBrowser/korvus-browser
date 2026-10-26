@@ -1,0 +1,10 @@
+{
+ "crossA_eq_crossB": false,
+ "crossA_eq_page": false,
+ "crossB_eq_page": false,
+ "format": [
+  "uuid4.local"
+ ],
+ "page1_eq_page2": true,
+ "same_eq_page": false
+}

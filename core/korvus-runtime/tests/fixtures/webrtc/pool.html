@@ -1,0 +1,26 @@
+<!doctype html><title>pool</title><script>
+// iceCandidatePoolSize, as Chrome 150 reports it: a connection made, its description applied 300 ms later, against a
+// STUN server that answers after 80 ms (`?stun=<port>`). Each case's events in order -- a candidate with the
+// iceGatheringState it fired under, `sld` when setLocalDescription() settled -- for a pool of 0 and of 1, one
+// m-section (a data channel) and three (offerToReceiveAudio/Video). `window.__r` is the case's line.
+var Q = new URLSearchParams(location.search), PORT = Q.get('stun'), CASE = Q.get('case').split(',').map(Number);
+function run(pool, sections) {
+  return new Promise(function (done) {
+    var seq = [];
+    var pc = new RTCPeerConnection({iceServers: [{urls: 'stun:127.0.0.1:' + PORT}], iceCandidatePoolSize: pool});
+    pc.onicecandidate = function (e) { seq.push((e.candidate ? e.candidate.type : 'end') + ':' + pc.iceGatheringState); };
+    pc.onicegatheringstatechange = function () { seq.push('state:' + pc.iceGatheringState); };
+    setTimeout(async function () {
+      seq.push('before:' + pc.iceGatheringState);
+      pc.createDataChannel('');
+      var o = await pc.createOffer(sections === 3 ? {offerToReceiveAudio: true, offerToReceiveVideo: true} : {});
+      await pc.setLocalDescription(o);
+      seq.push('sld:' + pc.iceGatheringState);
+      setTimeout(function () { pc.close(); done('pool ' + pool + ', ' + sections + ' section(s): ' + seq.join(' ')); }, 700);
+    }, 300);
+  });
+}
+// one case per page (`?case=<pool>,<sections>`): a connection closed just before -- the previous case's -- left Chrome's
+// next pool racing its teardown (three runs, three orders)
+run(CASE[0], CASE[1]).then(function (r) { window.__r = r; });
+</script>

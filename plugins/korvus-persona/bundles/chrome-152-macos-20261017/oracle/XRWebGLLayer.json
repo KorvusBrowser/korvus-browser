@@ -1,0 +1,205 @@
+[
+  {
+    "iface": "XRWebGLLayer",
+    "member": "constructor",
+    "expr": "new XRWebGLLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "antialias",
+    "expr": "XRWebGLLayer.prototype.antialias",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "antialias",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"antialias\").get.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "ignoreDepthValues",
+    "expr": "XRWebGLLayer.prototype.ignoreDepthValues",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "ignoreDepthValues",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"ignoreDepthValues\").get.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferWidth",
+    "expr": "XRWebGLLayer.prototype.framebufferWidth",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferWidth",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferWidth\").get.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferHeight",
+    "expr": "XRWebGLLayer.prototype.framebufferHeight",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferHeight",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferHeight\").get.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebuffer",
+    "expr": "XRWebGLLayer.prototype.framebuffer",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebuffer",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebuffer\").get.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getViewport",
+    "expr": "XRWebGLLayer.prototype.getViewport.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getViewport",
+    "expr": "XRWebGLLayer.prototype.getViewport.call(Object.create(XRWebGLLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getViewport",
+    "expr": "XRWebGLLayer.prototype.getViewport.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getNativeFramebufferScaleFactor",
+    "expr": "XRWebGLLayer.getNativeFramebufferScaleFactor()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getNativeFramebufferScaleFactor",
+    "expr": "XRWebGLLayer.getNativeFramebufferScaleFactor({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getNativeFramebufferScaleFactor",
+    "expr": "XRWebGLLayer.getNativeFramebufferScaleFactor(null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "antialias",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"antialias\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "antialias",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"antialias\").get.call(Object.create(XRWebGLLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "ignoreDepthValues",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"ignoreDepthValues\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "ignoreDepthValues",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"ignoreDepthValues\").get.call(Object.create(XRWebGLLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferWidth\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferWidth\").get.call(Object.create(XRWebGLLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferHeight\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebufferHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebufferHeight\").get.call(Object.create(XRWebGLLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebuffer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebuffer\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "framebuffer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLLayer.prototype, \"framebuffer\").get.call(Object.create(XRWebGLLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getViewport",
+    "expr": "(() => { try { const v = XRWebGLLayer.prototype[\"getViewport\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRWebGLLayer",
+    "member": "getViewport",
+    "expr": "(() => { try { const v = XRWebGLLayer.prototype[\"getViewport\"].call(Object.create(XRWebGLLayer.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

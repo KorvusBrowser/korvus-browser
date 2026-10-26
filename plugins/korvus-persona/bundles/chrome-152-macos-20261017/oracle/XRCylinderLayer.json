@@ -1,0 +1,303 @@
+[
+  {
+    "iface": "XRCylinderLayer",
+    "member": "constructor",
+    "expr": "new XRCylinderLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "XRCylinderLayer.prototype.space",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "XRCylinderLayer.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "XRCylinderLayer.prototype.radius",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "XRCylinderLayer.prototype.centralAngle",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "XRCylinderLayer.prototype.aspectRatio",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "XRCylinderLayer.prototype.onredraw",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").get.call(Object.create(XRCylinderLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"space\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"transform\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "radius",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"radius\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "centralAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"centralAngle\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "aspectRatio",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"aspectRatio\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").get.call(Object.create(XRCylinderLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCylinderLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCylinderLayer.prototype, \"onredraw\").set.call(Object.create(XRCylinderLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

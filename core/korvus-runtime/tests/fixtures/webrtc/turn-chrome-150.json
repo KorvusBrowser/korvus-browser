@@ -1,0 +1,63 @@
+[
+[
+"turn",
+"host",
+"candidate:F 1 udp 2113937151 MDNS PORT typ host generation 0 ufrag U network-cost 999",
+null,
+"",
+null,
+2113937151,
+"udp"
+],
+[
+"turn",
+"srflx",
+"candidate:F 1 udp 1677729535 203.0.113.9 PORT typ srflx raddr 0.0.0.0 rport RP generation 0 ufrag U network-cost 999",
+"0.0.0.0",
+"stun:PORT.0.0.1:PORT",
+null,
+1677729535,
+"udp"
+],
+[
+"turn",
+"relay",
+"candidate:F 1 udp 50339839 198.51.100.7 PORT typ relay raddr 203.0.113.9 rport RP generation 0 ufrag U network-cost 999",
+"203.0.113.9",
+"turn:PORT.0.0.1:PORT?transport=udp",
+null,
+50339839,
+"udp"
+],
+[
+"turn",
+"complete",
+"complete",
+3,
+""
+],
+[
+"relay only",
+"relay",
+"candidate:F 1 udp 50339839 198.51.100.7 PORT typ relay raddr 0.0.0.0 rport RP generation 0 ufrag U network-cost 999",
+"0.0.0.0",
+"turn:PORT.0.0.1:PORT?transport=udp",
+null,
+50339839,
+"udp"
+],
+[
+"relay only",
+"complete",
+"complete",
+1,
+""
+],
+[
+"wrong credential",
+"timeout",
+"gathering",
+0,
+""
+]
+]

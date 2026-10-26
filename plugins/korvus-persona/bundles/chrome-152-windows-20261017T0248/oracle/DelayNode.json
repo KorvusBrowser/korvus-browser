@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "DelayNode",
+    "member": "constructor",
+    "expr": "new DelayNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DelayNode",
+    "member": "delayTime",
+    "expr": "(() => { const o = new DelayNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.delayTime); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

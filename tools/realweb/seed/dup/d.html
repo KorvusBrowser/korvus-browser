@@ -1,0 +1,17 @@
+<!doctype html><title>d</title><script>window.__c = {}; window.hit = k => { __c[k] = (__c[k] || 0) + 1; };</script>
+<script id="s1" src="x.js?parser"></script>
+<script>document.write('<script src="x.js?docwrite"><\/script>');</script>
+<body><div id="box"></div><script>
+// 1) move an executed parser script
+const s1 = document.getElementById('s1'); document.getElementById('box').appendChild(s1);
+// 2) clone an executed script and insert the clone
+document.body.appendChild(s1.cloneNode(true));
+// 3) script created by innerHTML, then moved into the document
+const t = document.createElement('div'); t.innerHTML = '<script src="x.js?innerHTML"><\/script>'; document.body.appendChild(t.firstChild);
+// 4) dynamic script, removed and re-added
+const d = document.createElement('script'); d.src = 'x.js?dynamic'; document.body.appendChild(d);
+setTimeout(() => { d.remove(); document.body.appendChild(d); }, 100);
+// 5) inline script re-inserted
+const i = document.createElement('script'); i.textContent = "hit('inline')"; document.body.appendChild(i); document.getElementById('box').appendChild(i);
+setTimeout(() => { document.title = JSON.stringify(__c); }, 600);
+</script></body>

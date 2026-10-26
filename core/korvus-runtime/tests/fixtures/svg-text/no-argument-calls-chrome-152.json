@@ -1,0 +1,56 @@
+[
+ [
+  "getNumberOfChars",
+  0,
+  "throw:Illegal invocation",
+  "0"
+ ],
+ [
+  "getComputedTextLength",
+  0,
+  "throw:Illegal invocation",
+  "0"
+ ],
+ [
+  "getSubStringLength",
+  2,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'getSubStringLength' on 'SVGTextContentElement': 2 arguments required, but only 0 present."
+ ],
+ [
+  "getStartPositionOfChar",
+  1,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'getStartPositionOfChar' on 'SVGTextContentElement': 1 argument required, but only 0 present."
+ ],
+ [
+  "getEndPositionOfChar",
+  1,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'getEndPositionOfChar' on 'SVGTextContentElement': 1 argument required, but only 0 present."
+ ],
+ [
+  "getExtentOfChar",
+  1,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': 1 argument required, but only 0 present."
+ ],
+ [
+  "getRotationOfChar",
+  1,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'getRotationOfChar' on 'SVGTextContentElement': 1 argument required, but only 0 present."
+ ],
+ [
+  "getCharNumAtPosition",
+  0,
+  "throw:Illegal invocation",
+  "-1"
+ ],
+ [
+  "selectSubString",
+  2,
+  "throw:Illegal invocation",
+  "throw:Failed to execute 'selectSubString' on 'SVGTextContentElement': 2 arguments required, but only 0 present."
+ ]
+]

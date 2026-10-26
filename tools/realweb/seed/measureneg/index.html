@@ -1,0 +1,16 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B12: performance.measure's duration is end - start, unclamped (User Timing L3).
+const t = (f) => { try { return f(); } catch (e) { return e.name + ': ' + e.message; } };
+performance.mark('early', { startTime: 10 });
+performance.mark('late', { startTime: 60 });
+const far = performance.now() + 5000;
+performance.mark('far', { startTime: far });
+window.R = JSON.stringify({
+  reversed: t(() => performance.measure('r', 'late', 'early').duration),
+  reversedEnd: t(() => { const m = performance.measure('r2', 'late', 'early'); return m.startTime + m.duration; }),
+  optsReversed: t(() => performance.measure('o', { start: 60, end: 10 }).duration),
+  optsNegDuration: t(() => { const m = performance.measure('d', { start: 60, duration: -20 }); return [m.startTime, m.duration].join(); }),
+  farToNow: t(() => { const n0 = performance.now(); const m = performance.measure('f', 'far'); const n1 = performance.now(); const end = m.startTime + m.duration; return (m.duration < 0) + ',' + (end >= n0 - 0.01 && end <= n1 + 0.01) + ',' + (m.startTime === far); }),
+  forward: t(() => performance.measure('fw', 'early', 'late').duration),
+});
+</script>

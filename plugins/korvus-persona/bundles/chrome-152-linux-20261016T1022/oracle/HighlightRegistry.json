@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "HighlightRegistry",
+    "member": "constructor",
+    "expr": "new HighlightRegistry()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "size",
+    "expr": "(() => { const o = CSS.highlights; return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "set",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); const n = o.size; o.clear(); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "set",
+    "expr": "(() => { const o = CSS.highlights; return o.set(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "get",
+    "expr": "(() => { const o = CSS.highlights; const h = new Highlight(); o.set(\"k\", h); const r = o.get(\"k\") === h; o.clear(); return r; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "get",
+    "expr": "(() => { const o = CSS.highlights; return o.get(\"nope\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "has",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); const r = o.has(\"k\"); o.clear(); return r; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "has",
+    "expr": "(() => { const o = CSS.highlights; return o.has(\"nope\"); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "delete",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); const r = o.delete(\"k\"); o.clear(); return r; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "delete",
+    "expr": "(() => { const o = CSS.highlights; return o.delete(\"nope\"); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "clear",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); o.clear(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "keys",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); const r = [...o.keys()][0]; o.clear(); return r; })()",
+    "expected": "k",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "keys",
+    "expr": "(() => { const o = CSS.highlights; return Object.prototype.toString.call(o.keys()); })()",
+    "expected": "[object HighlightRegistry Iterator]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "values",
+    "expr": "(() => { const o = CSS.highlights; const h = new Highlight(); o.set(\"k\", h); const r = [...o.values()][0] === h; o.clear(); return r; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "values",
+    "expr": "(() => { const o = CSS.highlights; return Object.prototype.toString.call(o.values()); })()",
+    "expected": "[object HighlightRegistry Iterator]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "entries",
+    "expr": "(() => { const o = CSS.highlights; const h = new Highlight(); o.set(\"k\", h); const e = [...o.entries()][0]; o.clear(); return e[0] === \"k\" && e[1] === h; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "entries",
+    "expr": "(() => { const o = CSS.highlights; return Object.prototype.toString.call(o.entries()); })()",
+    "expected": "[object HighlightRegistry Iterator]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "forEach",
+    "expr": "(() => { const o = CSS.highlights; o.set(\"k\", new Highlight()); let n = 0; o.forEach(function () { n++; }); o.clear(); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "forEach",
+    "expr": "(() => { const o = CSS.highlights; return o.forEach(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "highlightsFromPoint",
+    "expr": "(() => { const o = CSS.highlights; return o.highlightsFromPoint(0, 0).length; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HighlightRegistry",
+    "member": "highlightsFromPoint",
+    "expr": "(() => { const o = CSS.highlights; return Array.isArray(o.highlightsFromPoint(0, 0)); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

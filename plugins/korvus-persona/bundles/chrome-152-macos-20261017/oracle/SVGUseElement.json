@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "SVGUseElement",
+    "member": "constructor",
+    "expr": "new SVGUseElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGUseElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"use\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGUseElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"use\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGUseElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"use\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGUseElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"use\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGUseElement",
+    "member": "href",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"use\"); return Object.prototype.toString.call(o.href); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

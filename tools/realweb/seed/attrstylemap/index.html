@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><body><div id=d style="color: red; display: block; width: 10px; margin-top: 5px"></div><svg><rect id=r style="fill: green"></rect></svg><script>
+// TEMPLATES P6 B18: el.attributeStyleMap is the typed view of the element's INLINE style (it refused every
+// member with Illegal invocation). Keyword reification (display -> CSSKeywordValue) is out of scope: no property registry.
+const out = {};
+const t = (k, f) => { try { const v = f(); out[k] = v === null ? 'null' : typeof v === 'object' ? Object.prototype.toString.call(v) + (v && 'value' in v ? ':' + v.value : '') + (v && 'unit' in v ? v.unit : '') : String(v); } catch (e) { out[k] = 'ERR ' + e.constructor.name + ': ' + e.message; } };
+const el = document.getElementById('d'), m = el.attributeStyleMap;
+t('same', () => el.attributeStyleMap === m);
+t('size', () => m.size);
+t('keys', () => [...m.keys()].join());
+t('has', () => [m.has('color'), m.has('font-size')].join());
+t('getColor', () => m.get('color'));
+
+t('getMissing', () => m.get('font-size'));
+t('getAllLen', () => m.getAll('display').length);
+t('entries0', () => [...m.entries()][0][0]);
+t('forEach', () => { const r = []; m.forEach((v, k) => r.push(k)); return r.join(); });
+t('live', () => { el.style.opacity = '0.5'; return m.size + ':' + m.has('opacity'); });
+t('svgSize', () => document.getElementById('r').attributeStyleMap.size);
+t('fresh', () => document.createElement('p').attributeStyleMap.size);
+t('iterTag', () => m.keys());
+const g = (I) => Object.getOwnPropertyDescriptor(I.prototype, 'attributeStyleMap').get;
+t('fakeHtml', () => g(HTMLElement).call(Object.create(HTMLElement.prototype)));
+t('fakeSvg', () => g(SVGElement).call(Object.create(SVGElement.prototype)));
+t('text', () => g(HTMLElement).call(document.createTextNode('x')));
+window.R = JSON.stringify(out);
+</script>

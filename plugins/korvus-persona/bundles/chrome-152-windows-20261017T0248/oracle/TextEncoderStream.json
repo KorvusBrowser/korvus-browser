@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "TextEncoderStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextEncoderStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextEncoderStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextEncoderStream",
+    "member": "encoding",
+    "expr": "(() => { const o = new TextEncoderStream(); return o.encoding; })()",
+    "expected": "utf-8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextEncoderStream",
+    "member": "readable",
+    "expr": "(() => { const o = new TextEncoderStream(); return Object.prototype.toString.call(o.readable); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextEncoderStream",
+    "member": "writable",
+    "expr": "(() => { const o = new TextEncoderStream(); return Object.prototype.toString.call(o.writable); })()",
+    "expected": "[object WritableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

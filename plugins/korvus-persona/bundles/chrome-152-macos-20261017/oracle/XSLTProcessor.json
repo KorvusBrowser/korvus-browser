@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "XSLTProcessor",
+    "member": "constructor",
+    "expr": "(() => { const o = new XSLTProcessor(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "importStylesheet",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.importStylesheet(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "transformToFragment",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.transformToFragment(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "transformToDocument",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.transformToDocument(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "setParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.setParameter(\"x\", \"x\", 1); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "setParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.setParameter(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "getParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.getParameter(\"x\", \"x\"); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "getParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.getParameter(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "removeParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.removeParameter(\"x\", \"x\"); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "removeParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.removeParameter(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "clearParameters",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.clearParameters(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "reset",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.reset(); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

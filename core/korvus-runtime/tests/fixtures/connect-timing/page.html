@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+// connect-timing probe, the page (https://127.0.0.1:P/): 300 ms after its load it makes a CROSS-SITE frame
+// (https://localhost:P/frame), whose own connection is new; the frame's answer is kept in window.__r and posted to
+// /report (the recorder's exit).
+addEventListener('message', function (e) {
+  window.__r = e.data;
+  fetch('/report', {method: 'POST', body: e.data});
+});
+addEventListener('load', function () { setTimeout(function () {
+  var f = document.createElement('iframe');
+  f.src = 'https://localhost:' + location.port + '/frame';
+  document.body.appendChild(f);
+}, 300); });
+</script></body></html>

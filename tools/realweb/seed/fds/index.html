@@ -1,0 +1,7 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>a frame's deferred scripts</title>
+<!-- F23: a FRAME's parser ran every classic script in document order, deferred ones included, and
+     modules with them: `defer` must wait for the end of the parse (Chrome: s1,inline,s2,d1,module,d2,DCL). -->
+<iframe src="f.html"></iframe>
+<script>window.R = null; addEventListener('load', function () { setTimeout(function () { R = frames[0].L.join(','); }, 500); });</script>

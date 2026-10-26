@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "ChapterInformation",
+    "member": "constructor",
+    "expr": "new ChapterInformation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ChapterInformation",
+    "member": "title",
+    "expr": "(() => { const o = new MediaMetadata({ chapterInfo: [{ title: \"a\", startTime: 0 }] }).chapterInfo[0]; return o.title; })()",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ChapterInformation",
+    "member": "startTime",
+    "expr": "(() => { const o = new MediaMetadata({ chapterInfo: [{ title: \"a\", startTime: 0 }] }).chapterInfo[0]; return o.startTime; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ChapterInformation",
+    "member": "artwork",
+    "expr": "(() => { const o = new MediaMetadata({ chapterInfo: [{ title: \"a\", startTime: 0 }] }).chapterInfo[0]; return o.artwork; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ChapterInformation",
+    "member": "artwork",
+    "expr": "(() => { const o = new MediaMetadata({ chapterInfo: [{ title: \"a\", startTime: 0 }] }).chapterInfo[0]; return Object.prototype.toString.call(o.artwork); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

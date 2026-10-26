@@ -1,0 +1,19 @@
+-- phase 0
+clip n=1 array=true this=true | clipped is=false ratio=0 b=400,150,50,50 i=0,0,0,0 rb=0,0,VW,VH time=true vis=false proto=true
+doc n=1 array=true this=true | inv is=true ratio=1 b=0,0,200,100 i=0,0,200,100 rb=0,0,VW,VH time=true vis=false proto=true
+half n=1 array=true this=true | half is=true ratio=0.5 b=0,VH-50,200,100 i=0,VH-50,200,50 rb=0,0,VW,VH time=true vis=false proto=true
+mar n=1 array=true this=true | farm is=true ratio=1 b=0,3500,200,100 i=0,3500,200,100 rb=0,0,VW,VH+3000 time=true vis=false proto=true
+misc n=4 array=true this=true | zero is=true ratio=1 b=0,10,200,0 i=0,10,200,0 rb=0,0,VW,VH time=true vis=false proto=true ; none is=false ratio=0 b=0,0,0,0 i=0,0,0,0 rb=0,0,0,0 time=true vis=false proto=true ; hid is=true ratio=1 b=300,0,20,20 i=300,0,20,20 rb=0,0,VW,VH time=true vis=false proto=true ; div is=false ratio=0 b=0,0,0,0 i=0,0,0,0 rb=0,0,0,0 time=true vis=false proto=true
+neg n=1 array=true this=true | inv is=true ratio=0.86 b=0,0,200,100 i=10,10,190,90 rb=10,10,VW-20,VH-20 time=true vis=false proto=true
+notdesc n=1 array=true this=true | inv is=false ratio=0 b=0,0,0,0 i=0,0,0,0 rb=0,0,0,0 time=true vis=false proto=true
+pct n=1 array=true this=true | pctt is=true ratio=1 b=0,VH+50,200,100 i=0,VH+50,200,100 rb=0,0,VW,floor(VH*1.5) time=true vis=false proto=true
+sc n=1 array=true this=true | inner is=false ratio=0 b=608,508,50,50 i=0,0,0,0 rb=605,5,91,106 time=true vis=false proto=true
+calls => 9
+-- phase 1
+
+-- phase 2
+clip n=1 array=true this=true | clipped is=true ratio=1 b=400,10,50,50 i=400,10,50,50 rb=0,0,VW,VH time=true vis=false proto=true
+half n=1 array=true this=true | half is=true ratio=1 b=0,0,200,100 i=0,0,200,100 rb=0,0,VW,VH time=true vis=false proto=true
+misc n=1 array=true this=true | none is=true ratio=1 b=0,0,20,20 i=0,0,20,20 rb=0,0,VW,VH time=true vis=false proto=true
+sc n=1 array=true this=true | inner is=true ratio=1 b=608,58,50,50 i=608,58,50,50 rb=605,5,91,106 time=true vis=false proto=true
+calls => 13

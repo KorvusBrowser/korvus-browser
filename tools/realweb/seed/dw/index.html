@@ -1,0 +1,11 @@
+<!doctype html><html><head><title>dw</title></head><body>
+<script>window.L = []; L.push('a:' + document.readyState);</script>
+<script>window.X || document.write('<script src="x.js"><\/script>'); L.push('writer1-end:' + typeof X);</script>
+<script>L.push('b:' + typeof X + ',' + typeof X2);</script>
+<script>document.write('<script src="y.js"><\/script><script>L.push("inline-after-y:" + typeof Y)<\/script>'); document.write('<script>L.push("second-write:" + typeof Y)<\/script>'); L.push('writer2-end:' + typeof Y);</script>
+<script>L.push('c:' + typeof Y);</script>
+<script src="z.js"></script>
+<script>document.write('<p id=p1>written</p>'); L.push('p1:' + !!document.getElementById('p1'));</script>
+<script>(function () { var all = Array.from(document.scripts); L.push('order:' + all.slice(0, all.indexOf(document.currentScript) + 1).map(function (s) { return s.src ? s.src.split('/').pop() : 'i'; }).join(',')); })();</script>
+<script>addEventListener('DOMContentLoaded', function () { L.push('dcl'); }); addEventListener('load', function () { L.push('load'); window.R = L.join(' | '); });</script>
+</body></html>

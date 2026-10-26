@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "HTMLParamElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLParamElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "constructor",
+    "expr": "new HTMLParamElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"param\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"param\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"param\"); return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"param\"); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"param\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"param\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "valueType",
+    "expr": "(() => { const o = document.createElement(\"param\"); return o.valueType; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLParamElement",
+    "member": "valueType",
+    "expr": "(() => { const o = document.createElement(\"param\"); return (o.valueType = \"x\", o.valueType); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

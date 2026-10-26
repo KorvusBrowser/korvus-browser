@@ -1,0 +1,5 @@
+<!doctype html><html><body><pre id="a">x</pre><pre id="b" style="white-space: pre-wrap">y</pre><div id="c" style="white-space: nowrap">z</div><div id="d" style="white-space: pre-line">w</div><div id="e" style="white-space: break-spaces">v</div><div id="f">u</div><textarea id="t"></textarea><script>
+var g = function (id) { var s = getComputedStyle(document.getElementById(id)); return [s.whiteSpace, s.whiteSpaceCollapse, s.textWrapMode, s.getPropertyValue('white-space')].join('|'); };
+var R = {}; ['a','b','c','d','e','f','t'].forEach(function (k) { R[k] = g(k); }); R.inl = document.getElementById('b').style.whiteSpace;
+window.R = JSON.stringify(R);
+</script></body></html>

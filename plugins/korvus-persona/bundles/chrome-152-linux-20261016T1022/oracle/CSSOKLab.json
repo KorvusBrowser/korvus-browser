@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSOKLab",
+    "member": "constructor",
+    "expr": "new CSSOKLab()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

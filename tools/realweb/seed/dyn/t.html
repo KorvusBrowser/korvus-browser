@@ -1,0 +1,16 @@
+<!doctype html><title>t</title><body><div id="x"></div><script>
+window.__ran = [];
+const add = (how, type) => { const s = document.createElement('script'); if (type) s.type = type; s.src = 'r.js?' + how + '-' + (type || 'classic');
+  if (how === 'appendChild') document.body.appendChild(s);
+  else if (how === 'insertAdjacentElement') document.body.insertAdjacentElement('beforeend', s);
+  else if (how === 'insertBefore') document.body.insertBefore(s, document.body.firstChild);
+  else if (how === 'append') document.body.append(s);
+  else if (how === 'after') document.getElementById('x').after(s);
+  else if (how === 'replaceWith') { const p = document.createElement('i'); document.body.appendChild(p); p.replaceWith(s); }
+  else if (how === 'prepend') document.body.prepend(s);
+  else if (how === 'head.appendChild') document.head.appendChild(s); };
+for (const how of ['appendChild', 'insertAdjacentElement', 'insertBefore', 'append', 'after', 'replaceWith', 'prepend', 'head.appendChild']) { add(how); add(how, 'module'); }
+const inl = document.createElement('script'); inl.textContent = "__ran.push('inline-text-appendChild')"; document.body.appendChild(inl);
+const inl2 = document.createElement('script'); inl2.textContent = "__ran.push('inline-text-insertAdjacentElement')"; document.body.insertAdjacentElement('beforeend', inl2);
+document.body.insertAdjacentHTML('beforeend', '<script>__ran.push("insertAdjacentHTML-should-NOT-run")<\/script>');
+</script></body>

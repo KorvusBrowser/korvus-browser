@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "CSSMathProduct",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSMathProduct(); return Object.prototype.toString.call(o); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSMathProduct",
+    "member": "values",
+    "expr": "(() => { const o = new CSSMathProduct(CSS.px(1), CSS.number(2)); return Object.prototype.toString.call(o.values); })()",
+    "expected": "[object CSSNumericArray]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

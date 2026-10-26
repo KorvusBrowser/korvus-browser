@@ -1,0 +1,38 @@
+[
+ [
+  "min-width innerWidth-1 hides #a",
+  false
+ ],
+ [
+  "max-width innerWidth-1 leaves #b",
+  true
+ ],
+ [
+  "width innerWidth hides #c",
+  false
+ ],
+ [
+  "an ancestor hidden by @media hides #q",
+  false
+ ],
+ [
+  "no rule leaves #d",
+  true
+ ],
+ [
+  "getComputedStyle agrees on #a",
+  "none"
+ ],
+ [
+  "getComputedStyle agrees on #b",
+  "block"
+ ],
+ [
+  "matchMedia width innerWidth",
+  true
+ ],
+ [
+  "checkVisibility again after a layout read",
+  false
+ ]
+]

@@ -1,0 +1,16 @@
+[package]
+name = "korvus-plugin-host"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "plugin_host"
+
+# Run-time plugins: shared libraries built against `public/plugins/korvus_plugin.h`, loaded by path, their slots
+# dispatched for the crates that own each point (webapi's member exits, transport's request hops, the router's
+# context making). Pure Rust and no V8: the V8 side of a slot (reading a call's arguments, setting its return) is the
+# owning crate's, behind the traits here.
+[dependencies]
+libloading = "0.8"
+serde_json = "1"

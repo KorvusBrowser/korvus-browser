@@ -1,0 +1,32 @@
+[
+ {
+  "getDirectory": 4.5,
+  "firstOperation": 3.8,
+  "getDirectoryAgain": 0.1,
+  "keysMin": 0.1,
+  "tenLookupsMin": 0.3,
+  "syncHandleMin": 0,
+  "flushNothingNewMin": 0,
+  "tenSyncHandlesMin": 0.7
+ },
+ {
+  "getDirectory": 4.9,
+  "firstOperation": 3.9,
+  "getDirectoryAgain": 0.3,
+  "keysMin": 0.1,
+  "tenLookupsMin": 0.3,
+  "syncHandleMin": 0.1,
+  "flushNothingNewMin": 0,
+  "tenSyncHandlesMin": 0.9
+ },
+ {
+  "getDirectory": 5.2,
+  "firstOperation": 4.2,
+  "getDirectoryAgain": 0.2,
+  "keysMin": 0.1,
+  "tenLookupsMin": 0.3,
+  "syncHandleMin": 0.1,
+  "flushNothingNewMin": 0,
+  "tenSyncHandlesMin": 0.8
+ }
+]

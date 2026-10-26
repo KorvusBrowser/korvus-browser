@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPURenderBundle",
+    "member": "constructor",
+    "expr": "new GPURenderBundle()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "GPURenderBundle.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").get.call(Object.create(GPURenderBundle.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").get.call(Object.create(GPURenderBundle.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPURenderBundle",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderBundle.prototype, \"label\").set.call(Object.create(GPURenderBundle.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

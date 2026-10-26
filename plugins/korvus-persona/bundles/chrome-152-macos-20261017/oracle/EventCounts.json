@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "EventCounts",
+    "member": "constructor",
+    "expr": "new EventCounts()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

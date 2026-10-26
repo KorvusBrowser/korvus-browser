@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "PageTransitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageTransitionEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PageTransitionEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PageTransitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageTransitionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PageTransitionEvent",
+    "member": "persisted",
+    "expr": "(() => { const o = new PageTransitionEvent(\"x\"); return o.persisted; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,8 @@
+<!doctype html><meta charset=utf-8><body><script src="probe.js"></script><script>
+// TEMPLATES P6 B16 (see probe.js), in the page and in a dedicated worker.
+const got = {};
+const done = () => { if (got.page && got.worker) window.R = JSON.stringify({ page: got.page, worker: got.worker }); };
+probeIter().then((r) => { got.page = r; done(); });
+const w = new Worker('w.js');
+w.onmessage = (e) => { got.worker = e.data; done(); };
+</script>

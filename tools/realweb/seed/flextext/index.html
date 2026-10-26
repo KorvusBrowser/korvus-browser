@@ -1,0 +1,18 @@
+<!doctype html><title>t</title><body style="margin:0;font:16px/24px sans-serif">
+<!-- L15 (europa.eu): a flex or grid container's bare text run is an ANONYMOUS item -- it does not carry the
+     container's padding, border or size a second time. korvus laid it out with the container's own style, so
+     a padded flex link with one line of text was 32px too tall and 16px too wide; ECL's menu then widened each
+     link 1px at a time to 1000px (6,000 forced layouts, a 13 s freeze). -->
+<ul style="display:flex;list-style:none;margin:0;padding:0">
+ <li style="display:flex"><a id=a1 href="#" style="display:flex;padding:16px 8px;line-height:24px">Home</a></li>
+</ul>
+<div id=d2 style="display:flex;padding:16px 8px;line-height:24px">flex text</div>
+<div id=d3 style="display:grid;padding:10px;border:3px solid;line-height:24px">grid text</div>
+<span id=s4 style="display:inline-flex;padding:4px 12px;border:1px solid;line-height:20px">btn</span>
+<div id=d5 style="display:flex;height:40px;padding:5px;align-items:center;line-height:24px">fixed</div>
+<script>
+const r = {};
+for (const id of ['a1', 'd2', 'd3', 's4', 'd5']) { const e = document.getElementById(id); r[id] = e.offsetHeight; }
+r.a1w = document.getElementById('a1').offsetWidth;
+document.title = JSON.stringify(r);
+</script>

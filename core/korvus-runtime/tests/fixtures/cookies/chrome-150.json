@@ -1,0 +1,146 @@
+[
+ [
+  "sealed: cookieStore reads by two document.cookie writes",
+  0
+ ],
+ [
+  "document.cookie after the writes",
+  "k_host=1; k_reg=1; k_regdot=1; k_regcase=1; k_self=1; __Secure-k2=1; k_ssnone_s=1; k_sslax=1; k_ssstrict=1; k_ssbogus=1; k_part_s=1; k_mabad=1; k_feb30=1; k_eq=a=b; k_empty=; k_bare; __Host-k4=1; k_ws=v w"
+ ],
+ [
+  "order of the overwrites",
+  "k_o3=1; k_o1=1; k_o3=1; k_o2=2"
+ ],
+ [
+  "img same host, Domain=ck.localhost",
+  "load"
+ ],
+ [
+  "img same host, Domain=localhost",
+  "load"
+ ],
+ [
+  "fetch same origin, credentials omit",
+  "ok"
+ ],
+ [
+  "fetch same origin, HttpOnly",
+  "ok"
+ ],
+ [
+  "fetch same site, include, Domain=ck.localhost",
+  "ok"
+ ],
+ [
+  "fetch same site, include, host-only",
+  "ok"
+ ],
+ [
+  "img cross site, Domain=a.ck.localhost",
+  "load"
+ ],
+ [
+  "img cross site, no SameSite",
+  "load"
+ ],
+ [
+  "img cross site, SameSite=None; Secure",
+  "load"
+ ],
+ [
+  "img cross site, SameSite=None; Secure; Partitioned",
+  "load"
+ ],
+ [
+  "img same host, three in one response",
+  "load"
+ ],
+ [
+  "img IP, Domain=127.0.0.1",
+  "load"
+ ],
+ [
+  "img IP, Domain=.127.0.0.1",
+  "load"
+ ],
+ [
+  "img IP, Domain=0.0.1",
+  "load"
+ ],
+ [
+  "document.cookie after the responses",
+  "k_host=1; k_reg=1; k_regdot=1; k_regcase=1; k_self=1; __Secure-k2=1; k_ssnone_s=1; k_sslax=1; k_ssstrict=1; k_ssbogus=1; k_part_s=1; k_mabad=1; k_feb30=1; k_eq=a=b; k_empty=; k_bare; __Host-k4=1; k_ws=v w; kn_img=1; kn_b=1; kn_m2=1; kn_m1=2"
+ ],
+ [
+  "cross-site frame: document.cookie before || after its writes",
+  "kc_none=1; kc_part=1 || kc_none=1; kc_part=1; kf_none=1; kf_part=1"
+ ],
+ [
+  "Cookie sent to a.ck.localhost",
+  "__Host-k4=1; k_ws=v w; kn_img=1; kn_ho=1; kn_b=1; kn_m2=1; kn_m1=2"
+ ],
+ [
+  "Cookie sent to b.ck.localhost",
+  "kn_img=1; kn_b=1; kn_bhost=1"
+ ],
+ [
+  "Cookie sent to c.ck2.localhost (cross-site)",
+  "kc_none=1; kc_part=1; kf_none=1; kf_part=1"
+ ],
+ [
+  "Cookie sent to 127.0.0.1 (cross-site)",
+  "ki_dom=1; ki_dotdom=1"
+ ],
+ [
+  "cookieStore.getAll() names",
+  "k_host,k_reg,k_regdot,k_regcase,k_self,__Secure-k2,k_ssnone_s,k_sslax,k_ssstrict,k_ssbogus,k_part_s,k_mabad,k_feb30,k_eq,k_empty,,__Host-k4,k_ws,kn_img,kn_b,kn_m2,kn_m1"
+ ],
+ [
+  "cookieStore.get(\"k_reg\")",
+  "{\"domain\":\"ck.localhost\",\"expires\":null,\"name\":\"k_reg\",\"partitioned\":false,\"path\":\"/d\",\"sameSite\":\"lax\",\"secure\":false,\"value\":\"1\"}"
+ ],
+ [
+  "cookieStore.get(\"k_host\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_host\",\"partitioned\":false,\"path\":\"/d\",\"sameSite\":\"lax\",\"secure\":false,\"value\":\"1\"}"
+ ],
+ [
+  "cookieStore.get(\"k_ws\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_ws\",\"partitioned\":false,\"path\":\"/\",\"sameSite\":\"lax\",\"secure\":false,\"value\":\"v w\"}"
+ ],
+ [
+  "cookieStore.get(\"k_sslax\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_sslax\",\"partitioned\":false,\"path\":\"/d\",\"sameSite\":\"lax\",\"secure\":false,\"value\":\"1\"}"
+ ],
+ [
+  "cookieStore.get(\"k_ssnone_s\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_ssnone_s\",\"partitioned\":false,\"path\":\"/d\",\"sameSite\":\"none\",\"secure\":true,\"value\":\"1\"}"
+ ],
+ [
+  "cookieStore.get(\"k_part_s\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_part_s\",\"partitioned\":true,\"path\":\"/d\",\"sameSite\":\"lax\",\"secure\":true,\"value\":\"1\"}"
+ ],
+ [
+  "cookieStore.get(\"kn_ho\")",
+  "null"
+ ],
+ [
+  "cookieStore.get(\"\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"\",\"partitioned\":false,\"path\":\"/d\",\"sameSite\":\"lax\",\"secure\":false,\"value\":\"k_bare\"}"
+ ],
+ [
+  "document.cookie has the cookieStore.set cookie",
+  true
+ ],
+ [
+  "cookieStore.get(\"k_cs\")",
+  "{\"domain\":null,\"expires\":null,\"name\":\"k_cs\",\"partitioned\":false,\"path\":\"/\",\"sameSite\":\"strict\",\"secure\":true,\"value\":\"v\"}"
+ ],
+ [
+  "document.cookie after cookieStore.delete",
+  false
+ ],
+ [
+  "change events",
+  "+k_ev=1 | +k_ev=2 | -k_ev:{\"domain\":null,\"name\":\"k_ev\",\"partitioned\":false,\"path\":\"/d\",\"secure\":false}"
+ ]
+]

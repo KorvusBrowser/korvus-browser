@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "AudioNode",
+    "member": "constructor",
+    "expr": "new AudioNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "connect",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.connect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "disconnect",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.disconnect(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "disconnect",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.disconnect(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "context",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return Object.prototype.toString.call(o.context); })()",
+    "expected": "[object OfflineAudioContext]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "numberOfInputs",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.numberOfInputs; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "numberOfOutputs",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.numberOfOutputs; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelCount",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.channelCount; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelCount",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return (o.channelCount = 1, o.channelCount); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelCountMode",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.channelCountMode; })()",
+    "expected": "explicit",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelCountMode",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return Object.prototype.toString.call(o.channelCountMode); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelInterpretation",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return o.channelInterpretation; })()",
+    "expected": "speakers",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelInterpretation",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return Object.prototype.toString.call(o.channelInterpretation); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioNode",
+    "member": "channelCount",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).destination; return (o.channelCount = \"1\", o.channelCount); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

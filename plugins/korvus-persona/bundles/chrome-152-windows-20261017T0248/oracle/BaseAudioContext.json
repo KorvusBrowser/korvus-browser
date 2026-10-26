@@ -1,0 +1,255 @@
+[
+  {
+    "iface": "BaseAudioContext",
+    "member": "constructor",
+    "expr": "new BaseAudioContext()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "destination",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.destination); })()",
+    "expected": "[object AudioDestinationNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "sampleRate",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.sampleRate; })()",
+    "expected": 44100,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "currentTime",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.currentTime; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "listener",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.listener); })()",
+    "expected": "[object AudioListener]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "state",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.state; })()",
+    "expected": "suspended",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "state",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.state); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "renderQuantumSize",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.renderQuantumSize; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "audioWorklet",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.audioWorklet); })()",
+    "expected": "[object AudioWorklet]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "onstatechange",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.onstatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "onstatechange",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.onstatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createAnalyser",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createAnalyser()); })()",
+    "expected": "[object AnalyserNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createBiquadFilter",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createBiquadFilter()); })()",
+    "expected": "[object BiquadFilterNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createBuffer",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createBuffer(1, 1, 1); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createBuffer",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createBuffer(1, 1, 1)); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createBuffer",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createBuffer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createBufferSource",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createBufferSource()); })()",
+    "expected": "[object AudioBufferSourceNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createChannelMerger",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createChannelMerger()); })()",
+    "expected": "[object ChannelMergerNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createChannelSplitter",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createChannelSplitter()); })()",
+    "expected": "[object ChannelSplitterNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createConstantSource",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createConstantSource()); })()",
+    "expected": "[object ConstantSourceNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createConvolver",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createConvolver()); })()",
+    "expected": "[object ConvolverNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createDelay",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createDelay()); })()",
+    "expected": "[object DelayNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createDynamicsCompressor",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createDynamicsCompressor()); })()",
+    "expected": "[object DynamicsCompressorNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createGain",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createGain()); })()",
+    "expected": "[object GainNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createIIRFilter",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createIIRFilter([], []); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createIIRFilter",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createIIRFilter([], [])); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createIIRFilter",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createIIRFilter(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createOscillator",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createOscillator()); })()",
+    "expected": "[object OscillatorNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createPanner",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createPanner()); })()",
+    "expected": "[object PannerNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createPeriodicWave",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createPeriodicWave([], []); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createPeriodicWave",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createPeriodicWave([], [])); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createPeriodicWave",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return o.createPeriodicWave(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createScriptProcessor",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createScriptProcessor()); })()",
+    "expected": "[object ScriptProcessorNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createStereoPanner",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createStereoPanner()); })()",
+    "expected": "[object StereoPannerNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "createWaveShaper",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100); return Object.prototype.toString.call(o.createWaveShaper()); })()",
+    "expected": "[object WaveShaperNode]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BaseAudioContext",
+    "member": "decodeAudioData",
+    "expr": "(async () => { const o = new OfflineAudioContext(1, 1, 44100); return await o.decodeAudioData(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "WorkerLocation",
+    "member": "constructor",
+    "expr": "new WorkerLocation()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>CSP script-src</title>
+<script>
+// U12: script-src is not enforced. about.gitea.com's meta CSP lists 'unsafe-inline' AND hashes, so
+// Chrome blocks its script-inserted Hotjar snippet (CSP3: a hash or nonce voids 'unsafe-inline');
+// korvus ran it and fetched hotjar (2026-09-26). Each frame carries one policy shape.
+window.R = null;
+var names = ['p1', 'p2', 'p3'], got = {};
+names.forEach(function (n) {
+  var f = document.createElement('iframe'); f.src = n + '.html'; document.documentElement.appendChild(f);
+});
+var t0 = Date.now();
+(function poll() {
+  if (Date.now() - t0 > 1200) names.forEach(function (n, i) { var w = frames[i]; if (w && w.R && !got[n]) got[n] = w.R.join(','); });
+  if (Object.keys(got).length === names.length || Date.now() - t0 > 3000) { window.R = got; return; }
+  setTimeout(poll, 50);
+})();
+</script>

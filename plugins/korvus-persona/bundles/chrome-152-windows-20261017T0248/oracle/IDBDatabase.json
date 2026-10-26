@@ -1,0 +1,247 @@
+[
+  {
+    "iface": "IDBDatabase",
+    "member": "constructor",
+    "expr": "new IDBDatabase()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"name\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"name\").get.name",
+    "expected": "get name",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "version",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"version\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "version",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"version\").get.name",
+    "expected": "get version",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "objectStoreNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"objectStoreNames\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "objectStoreNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"objectStoreNames\").get.name",
+    "expected": "get objectStoreNames",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onabort\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onabort\").get.name",
+    "expected": "get onabort",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onabort\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onabort\").set.call(Object.create(IDBDatabase.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onclose",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onclose\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onclose",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onclose\").get.name",
+    "expected": "get onclose",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onclose",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onclose\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onclose",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onclose\").set.call(Object.create(IDBDatabase.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onerror\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onerror\").get.name",
+    "expected": "get onerror",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onerror\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onerror\").set.call(Object.create(IDBDatabase.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onversionchange",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onversionchange\").get.call(Object.create(IDBDatabase.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onversionchange",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onversionchange\").get.name",
+    "expected": "get onversionchange",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onversionchange",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onversionchange\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "onversionchange",
+    "expr": "Object.getOwnPropertyDescriptor(IDBDatabase.prototype, \"onversionchange\").set.call(Object.create(IDBDatabase.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "close",
+    "expr": "IDBDatabase.prototype.close.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "close",
+    "expr": "IDBDatabase.prototype.close.name",
+    "expected": "close",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "createObjectStore",
+    "expr": "IDBDatabase.prototype.createObjectStore.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "createObjectStore",
+    "expr": "IDBDatabase.prototype.createObjectStore.name",
+    "expected": "createObjectStore",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "deleteObjectStore",
+    "expr": "IDBDatabase.prototype.deleteObjectStore.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "deleteObjectStore",
+    "expr": "IDBDatabase.prototype.deleteObjectStore.name",
+    "expected": "deleteObjectStore",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "transaction",
+    "expr": "IDBDatabase.prototype.transaction.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "transaction",
+    "expr": "IDBDatabase.prototype.transaction.name",
+    "expected": "transaction",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "createObjectStore",
+    "expr": "IDBDatabase.prototype.createObjectStore.call(Object.create(IDBDatabase.prototype), \"s\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "deleteObjectStore",
+    "expr": "IDBDatabase.prototype.deleteObjectStore.call(Object.create(IDBDatabase.prototype), \"s\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "transaction",
+    "expr": "IDBDatabase.prototype.transaction.call(Object.create(IDBDatabase.prototype), \"s\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBDatabase",
+    "member": "close",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBDatabase.prototype.close.call(Object.create(IDBDatabase.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

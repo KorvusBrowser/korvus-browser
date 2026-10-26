@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "URLPattern",
+    "member": "test",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.test(); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "exec",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.exec(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "protocol",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.protocol; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "username",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.username; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "password",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.password; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "hostname",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.hostname; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "port",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.port; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "pathname",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.pathname; })()",
+    "expected": "/a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "search",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.search; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "hash",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.hash; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "URLPattern",
+    "member": "hasRegExpGroups",
+    "expr": "(() => { const o = new URLPattern({ pathname: \"/a\" }); return o.hasRegExpGroups; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

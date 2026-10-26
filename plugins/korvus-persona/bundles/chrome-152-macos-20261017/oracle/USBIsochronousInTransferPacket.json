@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "constructor",
+    "expr": "new USBIsochronousInTransferPacket()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new USBIsochronousInTransferPacket(\"ok\"))",
+    "expected": "[object USBIsochronousInTransferPacket]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "constructor",
+    "expr": "new USBIsochronousInTransferPacket(\"bogus\")",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "status",
+    "expr": "new USBIsochronousInTransferPacket(\"ok\").status",
+    "expected": "ok",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "status",
+    "expr": "new USBIsochronousInTransferPacket(\"babble\").status",
+    "expected": "babble",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "data",
+    "expr": "new USBIsochronousInTransferPacket(\"ok\").data",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "data",
+    "expr": "Object.prototype.toString.call(new USBIsochronousInTransferPacket(\"ok\", new DataView(new ArrayBuffer(2))).data)",
+    "expected": "[object DataView]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousInTransferPacket",
+    "member": "data",
+    "expr": "new USBIsochronousInTransferPacket(\"ok\", new DataView(new ArrayBuffer(2))).data.byteLength",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  }
+]

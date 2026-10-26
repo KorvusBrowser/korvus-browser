@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "IdentityProvider",
+    "member": "close",
+    "expr": "IdentityProvider.close()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IdentityProvider",
+    "member": "resolve",
+    "expr": "IdentityProvider.resolve(1)",
+    "throws": "ReferenceError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "IdentityProvider",
+    "member": "constructor",
+    "expr": "new IdentityProvider()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

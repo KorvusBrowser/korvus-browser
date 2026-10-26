@@ -1,0 +1,334 @@
+[
+  {
+    "iface": "SpeechRecognition",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object SpeechRecognition]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "lang",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.lang; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "lang",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.lang = \"x\", o.lang); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "continuous",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.continuous; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "continuous",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.continuous = true, o.continuous); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "interimResults",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.interimResults; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "interimResults",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.interimResults = true, o.interimResults); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "unspokenPunctuation",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.unspokenPunctuation; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "unspokenPunctuation",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.unspokenPunctuation = true, o.unspokenPunctuation); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "maxAlternatives",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.maxAlternatives; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "maxAlternatives",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.maxAlternatives = 1, o.maxAlternatives); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "processLocally",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.processLocally; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "processLocally",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.processLocally = true, o.processLocally); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "phrases",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.phrases; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "start",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.start(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "stop",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.stop(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "abort",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.abort(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onaudiostart",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onaudiostart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onsoundstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onsoundstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onspeechstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onspeechstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onspeechend",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onspeechend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onsoundend",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onsoundend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onaudioend",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onaudioend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onresult",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onresult; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onnomatch",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onnomatch; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onerror",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onend",
+    "expr": "(() => { const o = new SpeechRecognition(); return o.onend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "maxAlternatives",
+    "expr": "(() => { const o = new SpeechRecognition(); return (o.maxAlternatives = \"1\", o.maxAlternatives); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "available",
+    "expr": "Object.prototype.toString.call(SpeechRecognition.available({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "install",
+    "expr": "Object.prototype.toString.call(SpeechRecognition.install({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "grammars",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.grammars); })()",
+    "expected": "[object SpeechGrammarList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "phrases",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.phrases); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onaudiostart",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onaudiostart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onsoundstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onsoundstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onspeechstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onspeechstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onspeechend",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onspeechend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onsoundend",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onsoundend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onaudioend",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onaudioend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onresult",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onresult); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onnomatch",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onnomatch); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onerror",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onstart",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "onend",
+    "expr": "(() => { const o = new SpeechRecognition(); return Object.prototype.toString.call(o.onend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "available",
+    "expr": "(async () => { return await SpeechRecognition.available({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "available",
+    "expr": "(async () => { return Object.prototype.toString.call(await SpeechRecognition.available({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognition",
+    "member": "install",
+    "expr": "(async () => { return await SpeechRecognition.install({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

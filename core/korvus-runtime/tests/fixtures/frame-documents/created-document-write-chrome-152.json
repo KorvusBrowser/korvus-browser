@@ -1,0 +1,14 @@
+[
+ "open, write, close: <p>w</p>",
+ "open() answers the document: true",
+ "write without open: <html><head></head><body><p>x</p></body></html>",
+ "two writes, one tag across them: <p>ab</p>",
+ "writeln: \"<p>l</p>\\n\"",
+ "write after close: <p>2</p>",
+ "body during writing: <p>m</p>",
+ "a doctype decides the mode: CSS1Compat",
+ "no doctype: BackCompat",
+ "DOMParser document: <p>new</p>",
+ "open(url, name, features): threw InvalidAccessError: Failed to execute 'open' on 'Document': The document has no window associated.",
+ "an XML document: threw InvalidStateError: Failed to execute 'open' on 'Document': Only HTML documents support open()."
+]

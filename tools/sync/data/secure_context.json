@@ -1,0 +1,1482 @@
+{
+ "why": "THE MEASUREMENT: every own name an insecure origin takes off the window, and nothing else. Read on 2026-09-19 (PARITY FP5.9) off Chrome 150.0.7871.46 (Chrome's column re-read 2026-10-16 off Chrome 152.0.7977.82, headed on the Wayland desktop with no DevTools client: the same 243 names but EyeDropper, which that Chrome does not expose at all), Brave 151.1.93.138, Edge 151.0.4129.93 and Opera 135.0.5973.133, headed under Xvfb over CDP with --remote-debugging-port=<a free port> (never =0, which sets navigator.webdriver; it read false in all eight runs). ONE python3 http.server, TWO hostnames, so trustworthiness is the only variable: http://127.0.0.1:<p>/page.html (isSecureContext true -- loopback is potentially-trustworthy) and http://web-platform.test:<p>/page.html (isSecureContext false -- it resolves to loopback and is not `localhost`). Object.getOwnPropertyNames(window) at each. A name is IN when a browser that has it on the secure origin does not have it on the insecure one; it is OUT when it survives. The four browsers NEVER disagree about a name they both have (248 names, 229 of them common to all four), which is why this is one platform fact and not a bundle field: `browsers` records which of the four had the name at all. Nothing was gained on the insecure origin, on any browser. WHY NOT THE IDL: webref's [SecureContext] is measurably wrong in BOTH directions here -- it marks 13 interfaces the browsers KEEP (AudioWorkletNode, GeolocationPosition, PushManager, SpeechRecognition, Navigator, Window, ...) and is silent about 40 names they REMOVE (the 26 XR layer/hand/plane interfaces, Worklet, FontData, KeyboardLayoutMap, caches, cookieStore, queryLocalFonts, the three file pickers, the four on* handlers, ...). The spec is a hypothesis; the browser is the authority. WHAT PUTS AN ENTRY IN: re-run the reading above on a newer build and add what it removes. WHAT TAKES ONE OUT: the same reading showing the name survives an insecure origin. Do not add a name because an IDL says [SecureContext], and do not remove one because an IDL is silent.",
+ "measured": "2026-09-19",
+ "origins": {
+  "secure": "http://127.0.0.1:<port>/page.html",
+  "insecure": "http://web-platform.test:<port>/page.html"
+ },
+ "versions": {
+  "brave-151": "Brave Browser 151.1.93.138",
+  "chrome-152": "Google Chrome 152.0.7977.82",
+  "edge-151": "Microsoft Edge 151.0.4129.93",
+  "opera-135": "Opera 135.0.5973.133"
+ },
+ "removed_by": {
+  "brave-151": 234,
+  "chrome-152": 243,
+  "edge-151": 243,
+  "opera-135": 244
+ },
+ "names": {
+  "AbsoluteOrientationSensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Accelerometer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AudioDecoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AudioEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AudioPlaybackStats": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AudioWorklet": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AuthenticatorAssertionResponse": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AuthenticatorAttestationResponse": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "AuthenticatorResponse": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "BatteryManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Cache": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CacheStorage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CaptureController": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Clipboard": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ClipboardChangeEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ClipboardItem": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CookieChangeEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CookieStore": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CookieStoreManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CreateMonitor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Credential": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CredentialsContainer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "CryptoKey": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DeviceMotionEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DeviceMotionEventAcceleration": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DeviceMotionEventRotationRate": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DeviceOrientationEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DevicePosture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DigitalCredential": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "DocumentPictureInPicture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "EyeDropper": [
+   "brave-151",
+   "edge-151",
+   "opera-135"
+  ],
+  "FederatedCredential": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FetchLaterResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FileSystemDirectoryHandle": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FileSystemFileHandle": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FileSystemHandle": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FileSystemObserver": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FileSystemWritableFileStream": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "FontData": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPU": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUAdapter": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUAdapterInfo": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUBindGroup": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUBindGroupLayout": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUBuffer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUBufferUsage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUCanvasContext": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUColorWrite": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUCommandBuffer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUCommandEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUCompilationInfo": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUCompilationMessage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUComputePassEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUComputePipeline": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUDevice": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUDeviceLostInfo": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUExternalTexture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUInternalError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUMapMode": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUOutOfMemoryError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUPipelineError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUPipelineLayout": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUQuerySet": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUQueue": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPURenderBundle": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPURenderBundleEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPURenderPassEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPURenderPipeline": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUSampler": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUShaderModule": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUShaderStage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUSupportedFeatures": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUSupportedLimits": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUTexture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUTextureUsage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUTextureView": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUUncapturedErrorEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GPUValidationError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "GravitySensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Gyroscope": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "HID": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "HIDConnectionEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "HIDDevice": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "HIDInputReportEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "IdentityCredential": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "IdentityCredentialError": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "IdentityProvider": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "IdleDetector": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ImageCapture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ImageDecoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ImageTrack": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ImageTrackList": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Keyboard": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "KeyboardLayoutMap": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "LanguageDetector": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "LanguageModel": [
+   "chrome-152",
+   "opera-135"
+  ],
+  "LinearAccelerationSensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Lock": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "LockManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIAccess": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIConnectionEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIInput": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIInputMap": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIMessageEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIOutput": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIOutputMap": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MIDIPort": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaDeviceInfo": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaDevices": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaKeyMessageEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaKeySession": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaKeyStatusMap": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaKeySystemAccess": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "MediaKeys": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "NavigationPreloadManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "NavigatorLogin": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "NavigatorManagedData": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "OTPCredential": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "OrientationSensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PasswordCredential": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentAddress": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentMethodChangeEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentRequest": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentRequestUpdateEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PaymentResponse": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Presentation": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationAvailability": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationConnection": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationConnectionAvailableEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationConnectionCloseEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationConnectionList": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationReceiver": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PresentationRequest": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PressureObserver": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PressureRecord": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ProtectedAudience": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "PublicKeyCredential": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "RelativeOrientationSensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ScreenDetailed": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ScreenDetails": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Sensor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "SensorErrorEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Serial": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "SerialPort": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ServiceWorker": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ServiceWorkerContainer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ServiceWorkerRegistration": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "SpeechRecognitionPhrase": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "StorageBucket": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "StorageBucketManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "StorageManager": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "SubtleCrypto": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Summarizer": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Translator": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USB": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBAlternateInterface": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBConfiguration": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBConnectionEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBDevice": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBEndpoint": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBInTransferResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBInterface": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBIsochronousInTransferPacket": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBIsochronousInTransferResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBIsochronousOutTransferPacket": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBIsochronousOutTransferResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "USBOutTransferResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "VideoDecoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "VideoEncoder": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "VirtualKeyboard": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WGSLLanguageFeatures": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WakeLock": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WakeLockSentinel": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WebTransport": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WebTransportBidirectionalStream": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WebTransportDatagramDuplexStream": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "WebTransportError": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "Worklet": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRAnchor": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRAnchorSet": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRBoundedReferenceSpace": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRCPUDepthInformation": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRCamera": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRCompositionLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRCubeLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRCylinderLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRDOMOverlayState": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRDepthInformation": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XREquirectLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRFrame": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRHand": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRHitTestResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRHitTestSource": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRInputSource": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRInputSourceArray": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRInputSourceEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRInputSourcesChangeEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRJointPose": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRJointSpace": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRLayerEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRLightEstimate": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRLightProbe": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRPlane": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRPlaneSet": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRPose": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRProjectionLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRQuadLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRRay": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRReferenceSpace": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRReferenceSpaceEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRRenderState": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRRigidTransform": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRSession": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRSessionEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRSpace": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRSubImage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRSystem": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRTransientInputHitTestResult": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRTransientInputHitTestSource": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRView": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRViewerPose": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRViewport": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRVisibilityMaskChangeEvent": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRWebGLBinding": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRWebGLDepthInformation": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRWebGLLayer": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "XRWebGLSubImage": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "braveEthereum": [
+   "brave-151"
+  ],
+  "braveSolana": [
+   "brave-151"
+  ],
+  "caches": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "cardano": [
+   "brave-151"
+  ],
+  "cookieStore": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "documentPictureInPicture": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "fetchLater": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "getScreenDetails": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondevicemotion": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondeviceorientation": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondeviceorientationabsolute": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerrawupdate": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "queryLocalFonts": [
+   "brave-151",
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "sharedStorage": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "showDirectoryPicker": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "showOpenFilePicker": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "showSaveFilePicker": [
+   "chrome-152",
+   "edge-151",
+   "opera-135"
+  ],
+  "solana": [
+   "brave-151"
+  ]
+ }
+}

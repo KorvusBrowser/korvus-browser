@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "HTMLOListElement",
+    "member": "constructor",
+    "expr": "new HTMLOListElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return o.compact; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return (o.compact = true, o.compact); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "reversed",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return o.reversed; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "reversed",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return (o.reversed = true, o.reversed); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "start",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return o.start; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "start",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return (o.start = 1, o.start); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLOListElement",
+    "member": "start",
+    "expr": "(() => { const o = document.createElement(\"ol\"); return (o.start = \"1\", o.start); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "DecompressionStream",
+    "member": "constructor",
+    "expr": "new DecompressionStream()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DecompressionStream",
+    "member": "readable",
+    "expr": "(() => { const o = new DecompressionStream(\"gzip\"); return Object.prototype.toString.call(o.readable); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DecompressionStream",
+    "member": "writable",
+    "expr": "(() => { const o = new DecompressionStream(\"gzip\"); return Object.prototype.toString.call(o.writable); })()",
+    "expected": "[object WritableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

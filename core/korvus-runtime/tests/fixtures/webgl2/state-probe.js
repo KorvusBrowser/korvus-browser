@@ -1,0 +1,123 @@
+(() => {
+  const out = [];
+  const mk = () => { const c = document.createElement('canvas'); c.width = 8; c.height = 8; return c.getContext('webgl2'); };
+  const show = v => (v === null ? 'null' : v === undefined ? 'undefined' : typeof v === 'object' ? Object.prototype.toString.call(v) : (typeof v === 'number' && isNaN(v)) ? 'NaN' : v);
+  const t = (label, f) => {
+    const g = mk();
+    try { const v = f(g); out.push([label, show(v), g.getError(), g.getError()]); }
+    catch (e) { out.push([label, 'threw ' + e.name, e.message]); }
+  };
+  // ── samplers
+  const SP = ['TEXTURE_MIN_FILTER', 'TEXTURE_MAG_FILTER', 'TEXTURE_WRAP_S', 'TEXTURE_WRAP_T', 'TEXTURE_WRAP_R', 'TEXTURE_COMPARE_MODE', 'TEXTURE_COMPARE_FUNC', 'TEXTURE_MIN_LOD', 'TEXTURE_MAX_LOD'];
+  for (const p of SP) t('sampler-default-' + p, g => g.getSamplerParameter(g.createSampler(), g[p]));
+  t('sampler-bad-pname', g => g.getSamplerParameter(g.createSampler(), 0x9999));
+  t('sampler-null', g => g.getSamplerParameter(null, g.TEXTURE_MIN_FILTER));
+  t('sampler-deleted', g => { const s = g.createSampler(); g.deleteSampler(s); return g.getSamplerParameter(s, g.TEXTURE_MIN_FILTER); });
+  t('sampler-other-ctx', g => g.getSamplerParameter(mk().createSampler(), g.TEXTURE_MIN_FILTER));
+  t('sampleri-set', g => { const s = g.createSampler(); g.samplerParameteri(s, g.TEXTURE_MIN_FILTER, g.NEAREST); return g.getSamplerParameter(s, g.TEXTURE_MIN_FILTER); });
+  t('sampleri-wrap', g => { const s = g.createSampler(); g.samplerParameteri(s, g.TEXTURE_WRAP_R, g.MIRRORED_REPEAT); return g.getSamplerParameter(s, g.TEXTURE_WRAP_R); });
+  t('sampleri-cmp', g => { const s = g.createSampler(); g.samplerParameteri(s, g.TEXTURE_COMPARE_MODE, g.COMPARE_REF_TO_TEXTURE); g.samplerParameteri(s, g.TEXTURE_COMPARE_FUNC, g.GREATER); return [g.getSamplerParameter(s, g.TEXTURE_COMPARE_MODE), g.getSamplerParameter(s, g.TEXTURE_COMPARE_FUNC)].join(); });
+  t('sampleri-bad-value', g => { const s = g.createSampler(); g.samplerParameteri(s, g.TEXTURE_MAG_FILTER, g.NEAREST_MIPMAP_NEAREST); return g.getSamplerParameter(s, g.TEXTURE_MAG_FILTER); });
+  t('sampleri-bad-pname', g => g.samplerParameteri(g.createSampler(), 0x9999, 1));
+  t('sampleri-lod', g => { const s = g.createSampler(); g.samplerParameteri(s, g.TEXTURE_MAX_LOD, 7); return g.getSamplerParameter(s, g.TEXTURE_MAX_LOD); });
+  t('samplerf-lod', g => { const s = g.createSampler(); g.samplerParameterf(s, g.TEXTURE_MIN_LOD, -5.5); return g.getSamplerParameter(s, g.TEXTURE_MIN_LOD); });
+  t('samplerf-lod-frac', g => { const s = g.createSampler(); g.samplerParameterf(s, g.TEXTURE_MAX_LOD, 0.1); return g.getSamplerParameter(s, g.TEXTURE_MAX_LOD); });
+  t('samplerf-filter', g => { const s = g.createSampler(); g.samplerParameterf(s, g.TEXTURE_MAG_FILTER, g.NEAREST); return g.getSamplerParameter(s, g.TEXTURE_MAG_FILTER); });
+  t('samplerf-filter-frac', g => { const s = g.createSampler(); g.samplerParameterf(s, g.TEXTURE_MAG_FILTER, 9728.5); return g.getSamplerParameter(s, g.TEXTURE_MAG_FILTER); });
+  t('sampler-aniso-off', g => g.getSamplerParameter(g.createSampler(), 0x84FE));
+  t('sampler-binding', g => { const s = g.createSampler(); g.bindSampler(0, s); return g.getParameter(g.SAMPLER_BINDING) === s; });
+  t('sampler-bind-range', g => g.bindSampler(9999, g.createSampler()));
+  // ── queries
+  t('query-begin-get', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); return g.getQuery(g.ANY_SAMPLES_PASSED, g.CURRENT_QUERY) === q; });
+  t('query-none', g => g.getQuery(g.ANY_SAMPLES_PASSED, g.CURRENT_QUERY));
+  t('query-tf-none', g => g.getQuery(g.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, g.CURRENT_QUERY));
+  t('query-cons-vs-any', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); return g.getQuery(g.ANY_SAMPLES_PASSED_CONSERVATIVE, g.CURRENT_QUERY); });
+  t('query-bad-target', g => g.beginQuery(0x9999, g.createQuery()));
+  t('query-twice', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.beginQuery(g.ANY_SAMPLES_PASSED, g.createQuery()); return 1; });
+  t('query-retarget', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.endQuery(g.ANY_SAMPLES_PASSED); g.beginQuery(g.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, q); return 1; });
+  t('query-end-none', g => g.endQuery(g.ANY_SAMPLES_PASSED));
+  t('query-end-bad', g => g.endQuery(0x9999));
+  t('query-getq-bad-pname', g => g.getQuery(g.ANY_SAMPLES_PASSED, 0x9999));
+  t('query-getq-bad-target', g => g.getQuery(0x9999, g.CURRENT_QUERY));
+  t('query-param-unused', g => g.getQueryParameter(g.createQuery(), g.QUERY_RESULT_AVAILABLE));
+  t('query-param-active', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); return g.getQueryParameter(q, g.QUERY_RESULT); });
+  t('query-param-avail', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.endQuery(g.ANY_SAMPLES_PASSED); return g.getQueryParameter(q, g.QUERY_RESULT_AVAILABLE); });
+  t('query-param-result', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.endQuery(g.ANY_SAMPLES_PASSED); return typeof g.getQueryParameter(q, g.QUERY_RESULT); });
+  t('query-param-bad', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.endQuery(g.ANY_SAMPLES_PASSED); return g.getQueryParameter(q, 0x9999); });
+  t('query-is', g => { const q = g.createQuery(); const a = g.isQuery(q); g.beginQuery(g.ANY_SAMPLES_PASSED, q); return a + ':' + g.isQuery(q); });
+  t('query-delete-active', g => { const q = g.createQuery(); g.beginQuery(g.ANY_SAMPLES_PASSED, q); g.deleteQuery(q); return g.getQuery(g.ANY_SAMPLES_PASSED, g.CURRENT_QUERY); });
+  // ── syncs
+  t('sync-type', g => g.getSyncParameter(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), g.OBJECT_TYPE));
+  t('sync-cond', g => g.getSyncParameter(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), g.SYNC_CONDITION));
+  t('sync-flags', g => g.getSyncParameter(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), g.SYNC_FLAGS));
+  t('sync-status', g => g.getSyncParameter(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), g.SYNC_STATUS));
+  t('sync-bad', g => g.getSyncParameter(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 0x9999));
+  t('fence-bad-cond', g => g.fenceSync(0x9999, 0));
+  t('fence-bad-flags', g => g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 1));
+  t('client-wait', g => g.clientWaitSync(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 0, 0));
+  t('client-wait-flags', g => g.clientWaitSync(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 5, 0));
+  t('client-wait-timeout', g => g.clientWaitSync(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 0, 1e12));
+  t('wait-sync-bad', g => g.waitSync(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 0, 0));
+  t('wait-sync-ok', g => g.waitSync(g.fenceSync(g.SYNC_GPU_COMMANDS_COMPLETE, 0), 0, -1));
+  // ── indexed buffer bindings
+  t('idx-ub-size', g => g.getIndexedParameter(g.UNIFORM_BUFFER_SIZE, 0));
+  t('idx-ub-start', g => g.getIndexedParameter(g.UNIFORM_BUFFER_START, 0));
+  t('idx-ub-binding', g => g.getIndexedParameter(g.UNIFORM_BUFFER_BINDING, 0));
+  t('idx-tf-binding', g => g.getIndexedParameter(g.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0));
+  t('idx-tf-size', g => g.getIndexedParameter(g.TRANSFORM_FEEDBACK_BUFFER_SIZE, 0));
+  t('idx-bad', g => g.getIndexedParameter(0x9999, 0));
+  t('idx-ub-range', g => g.getIndexedParameter(g.UNIFORM_BUFFER_BINDING, 99999));
+  t('idx-tf-range', g => g.getIndexedParameter(g.TRANSFORM_FEEDBACK_BUFFER_BINDING, 99999));
+  t('idx-ub-size-range', g => g.getIndexedParameter(g.UNIFORM_BUFFER_SIZE, 99999));
+  const ub = g => { const b = g.createBuffer(); g.bindBuffer(g.UNIFORM_BUFFER, b); g.bufferData(g.UNIFORM_BUFFER, 1024, g.STATIC_DRAW); return b; };
+  t('range-size', g => { const b = ub(g); g.bindBufferRange(g.UNIFORM_BUFFER, 1, b, 256, 16); return [g.getIndexedParameter(g.UNIFORM_BUFFER_SIZE, 1), g.getIndexedParameter(g.UNIFORM_BUFFER_START, 1), g.getIndexedParameter(g.UNIFORM_BUFFER_BINDING, 1) === b, g.getParameter(g.UNIFORM_BUFFER_BINDING) === b].join(); });
+  t('range-align', g => g.bindBufferRange(g.UNIFORM_BUFFER, 0, ub(g), 1, 16));
+  t('range-neg', g => g.bindBufferRange(g.UNIFORM_BUFFER, 0, ub(g), -1, 16));
+  t('range-zero-size', g => g.bindBufferRange(g.UNIFORM_BUFFER, 0, ub(g), 0, 0));
+  t('range-bad-target', g => g.bindBufferRange(g.ARRAY_BUFFER, 0, ub(g), 0, 16));
+  t('range-index', g => g.bindBufferRange(g.UNIFORM_BUFFER, 99999, ub(g), 0, 16));
+  t('base', g => { const b = ub(g); g.bindBufferBase(g.UNIFORM_BUFFER, 2, b); return [g.getIndexedParameter(g.UNIFORM_BUFFER_SIZE, 2), g.getIndexedParameter(g.UNIFORM_BUFFER_START, 2), g.getIndexedParameter(g.UNIFORM_BUFFER_BINDING, 2) === b].join(); });
+  t('base-null', g => { const b = ub(g); g.bindBufferBase(g.UNIFORM_BUFFER, 2, b); g.bindBufferBase(g.UNIFORM_BUFFER, 2, null); return g.getIndexedParameter(g.UNIFORM_BUFFER_BINDING, 2); });
+  t('base-elem-conflict', g => { const b = g.createBuffer(); g.bindBuffer(g.ELEMENT_ARRAY_BUFFER, b); g.bindBufferBase(g.UNIFORM_BUFFER, 0, b); return 1; });
+  t('base-tf', g => { const b = g.createBuffer(); g.bindBufferBase(g.TRANSFORM_FEEDBACK_BUFFER, 0, b); return [g.getIndexedParameter(g.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0) === b, g.getParameter(g.TRANSFORM_FEEDBACK_BUFFER_BINDING) === b].join(); });
+  // ── buffer readback / copy
+  const fb = g => { const b = g.createBuffer(); g.bindBuffer(g.ARRAY_BUFFER, b); g.bufferData(g.ARRAY_BUFFER, new Float32Array([1, 2, 3, 4]), g.STATIC_DRAW); return b; };
+  t('gbsd', g => { fb(g); const o = new Float32Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 0, o); return Array.from(o).join(); });
+  t('gbsd-off', g => { fb(g); const o = new Float32Array(2); g.getBufferSubData(g.ARRAY_BUFFER, 4, o); return Array.from(o).join(); });
+  t('gbsd-dst', g => { fb(g); const o = new Float32Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 0, o, 1, 2); return Array.from(o).join(); });
+  t('gbsd-dst-len0', g => { fb(g); const o = new Float32Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 4, o, 1); return Array.from(o).join(); });
+  t('gbsd-too-big', g => { fb(g); g.getBufferSubData(g.ARRAY_BUFFER, 0, new Float32Array(8)); return 1; });
+  t('gbsd-neg', g => { fb(g); g.getBufferSubData(g.ARRAY_BUFFER, -4, new Float32Array(1)); return 1; });
+  t('gbsd-dstoff-big', g => { fb(g); g.getBufferSubData(g.ARRAY_BUFFER, 0, new Float32Array(4), 5); return 1; });
+  t('gbsd-none', g => { g.getBufferSubData(g.ARRAY_BUFFER, 0, new Float32Array(1)); return 1; });
+  t('gbsd-bad-target', g => { g.getBufferSubData(0x9999, 0, new Float32Array(1)); return 1; });
+  t('gbsd-subdata', g => { fb(g); g.bufferSubData(g.ARRAY_BUFFER, 4, new Float32Array([9])); const o = new Float32Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 0, o); return Array.from(o).join(); });
+  t('gbsd-u8', g => { fb(g); const o = new Uint8Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 4, o); return Array.from(o).join(); });
+  t('gbsd-dataview', g => { fb(g); const o = new DataView(new ArrayBuffer(4)); g.getBufferSubData(g.ARRAY_BUFFER, 0, o); return o.getFloat32(0, true); });
+  const cw = g => { const b = fb(g); const d = g.createBuffer(); g.bindBuffer(g.COPY_WRITE_BUFFER, d); g.bufferData(g.COPY_WRITE_BUFFER, 16, g.STATIC_DRAW); g.bindBuffer(g.COPY_READ_BUFFER, b); return d; };
+  t('cbsd', g => { cw(g); g.copyBufferSubData(g.COPY_READ_BUFFER, g.COPY_WRITE_BUFFER, 0, 0, 16); const o = new Float32Array(4); g.getBufferSubData(g.COPY_WRITE_BUFFER, 0, o); return Array.from(o).join(); });
+  t('cbsd-part', g => { cw(g); g.copyBufferSubData(g.COPY_READ_BUFFER, g.COPY_WRITE_BUFFER, 4, 8, 4); const o = new Float32Array(4); g.getBufferSubData(g.COPY_WRITE_BUFFER, 0, o); return Array.from(o).join(); });
+  t('cbsd-over', g => { cw(g); g.copyBufferSubData(g.COPY_READ_BUFFER, g.COPY_WRITE_BUFFER, 0, 8, 16); return 1; });
+  t('cbsd-neg', g => { cw(g); g.copyBufferSubData(g.COPY_READ_BUFFER, g.COPY_WRITE_BUFFER, -4, 0, 4); return 1; });
+  t('cbsd-same-overlap', g => { fb(g); g.copyBufferSubData(g.ARRAY_BUFFER, g.ARRAY_BUFFER, 0, 4, 8); return 1; });
+  t('cbsd-same-ok', g => { fb(g); g.copyBufferSubData(g.ARRAY_BUFFER, g.ARRAY_BUFFER, 0, 8, 8); const o = new Float32Array(4); g.getBufferSubData(g.ARRAY_BUFFER, 0, o); return Array.from(o).join(); });
+  t('cbsd-unbound', g => { g.copyBufferSubData(g.COPY_READ_BUFFER, g.COPY_WRITE_BUFFER, 0, 0, 4); return 1; });
+  // ── immutable texture storage
+  t('ts2d-err', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-immut', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 2, g.RGBA8, 4, 4); return [g.getTexParameter(g.TEXTURE_2D, g.TEXTURE_IMMUTABLE_FORMAT), g.getTexParameter(g.TEXTURE_2D, g.TEXTURE_IMMUTABLE_LEVELS)].join(); });
+  t('ts2d-before', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); return [g.getTexParameter(g.TEXTURE_2D, g.TEXTURE_IMMUTABLE_FORMAT), g.getTexParameter(g.TEXTURE_2D, g.TEXTURE_IMMUTABLE_LEVELS)].join(); });
+  t('ts2d-twice', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-levels0', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 0, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-unsized', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA, 4, 4); return 1; });
+  t('ts2d-toomany', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 4, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-zero', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 0, 4); return 1; });
+  t('ts2d-unbound', g => { g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-bad-target', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_3D, 1, g.RGBA8, 4, 4); return 1; });
+  t('ts2d-teximage-after', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); g.texImage2D(g.TEXTURE_2D, 0, g.RGBA, 4, 4, 0, g.RGBA, g.UNSIGNED_BYTE, null); return 1; });
+  t('ts2d-subimage-ok', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); g.texSubImage2D(g.TEXTURE_2D, 0, 0, 0, 2, 2, g.RGBA, g.UNSIGNED_BYTE, new Uint8Array(16)); return 1; });
+  t('ts2d-subimage-out', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D, tx); g.texStorage2D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4); g.texSubImage2D(g.TEXTURE_2D, 0, 3, 3, 2, 2, g.RGBA, g.UNSIGNED_BYTE, new Uint8Array(16)); return 1; });
+  t('ts3d-immut', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D_ARRAY, tx); g.texStorage3D(g.TEXTURE_2D_ARRAY, 1, g.RGBA8, 4, 4, 2); return g.getTexParameter(g.TEXTURE_2D_ARRAY, g.TEXTURE_IMMUTABLE_FORMAT); });
+  t('ts3d-bad-target', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_2D_ARRAY, tx); g.texStorage3D(g.TEXTURE_2D, 1, g.RGBA8, 4, 4, 2); return 1; });
+  t('ts3d-3d', g => { const tx = g.createTexture(); g.bindTexture(g.TEXTURE_3D, tx); g.texStorage3D(g.TEXTURE_3D, 3, g.RGBA8, 4, 4, 4); return g.getTexParameter(g.TEXTURE_3D, g.TEXTURE_IMMUTABLE_LEVELS); });
+  return out;
+})()

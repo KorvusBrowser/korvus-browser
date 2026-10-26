@@ -1,0 +1,18 @@
+<!doctype html><html><head><script>
+// REALWEB F29: a frame's <script type=module> -- inline with an import, external, missing, with a syntax error --
+// runs as a module of the FRAME's realm in its deferred turn, with the events and order Chrome gives.
+var FRAMEVAR = 'frame'; window.LOG = [];
+document.addEventListener('DOMContentLoaded', function () { LOG.push('DCL'); });
+addEventListener('error', function (e) { LOG.push('winerror:' + (e.message || '').replace(location.origin, 'ORIGIN').slice(0, 60)); });
+addEventListener('load', function () { setTimeout(function () { parent.postMessage({ log: LOG }, '*'); }, 50); });
+</script>
+<script type="module">
+import { b } from './b.js';
+LOG.push('inline:' + b + ':' + (document.currentScript === null) + ':' + new URL(import.meta.url).pathname + ':' + (window === top));
+</script>
+<script type="module" src="ext.js" onload="LOG.push('ext-load')" onerror="LOG.push('ext-error')"></script>
+<script type="module" src="nope-mod.js" onload="LOG.push('nope-load')" onerror="LOG.push('nope-error')"></script>
+<script type="module" src="bad.js" onload="LOG.push('bad-load')" onerror="LOG.push('bad-error')"></script>
+<script defer src="deferred.js"></script>
+<script>LOG.push('classic');</script>
+</head><body></body></html>

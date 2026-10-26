@@ -1,0 +1,118 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>font probe</title></head><body>
+<!--
+  The persona browser's text metrics, for plugins/korvus-persona/capture/emit.py
+  --role font-metrics --font-capture FILE. Open in the persona's browser (headed, fresh profile) and read
+  `window.R`: either over a read-only CDP attach (tools/realweb/seed/chrome_eval.py with CHROME_BIN), or --
+  with NO DevTools attached -- through plugins/korvus-persona/capture/fonts_capture.py, which serves this page
+  with `?report` and takes the POST it makes to /report. Save it under reference/captures/. It measures, per
+  installed family and per generic family, in four styles: printable-ASCII advances and the kerning pairs, 447
+  sample characters (Latin-1, punctuation, Hangul syllables and jamo, CJK, kana, emoji), the font bounding box, the
+  x/cap heights; then the DOM's default font and each family's `line-height: normal` box height (the line gap is
+  that height minus ascent and descent: measureText cannot report it).
+
+  WHICH FAMILIES. A family is recorded when the browser DETECTS it -- the probe a page runs:
+  `72px "<family>", <generic>` measures unlike `72px <generic>` for one of the three generics. The candidates are
+  the names below -- the families fingerprinting scripts probe (BrowserScan's 93 detections on this persona,
+  common fingerprinting libraries' lists), Skia's metric-compatible equivalents (`kFontEquivMap`: Chrome on Linux
+  accepts `PMingLiU` for Noto Serif CJK TC, `MS Gothic` for Noto Sans Mono CJK JP) and Blink's alternate names --
+  plus, with fonts_capture.py --host-families, every family the capturing machine has installed (served as
+  `families.json`, its `fc-list : family`; ~300 names on this persona, most of them faces of their own, so the
+  bundle grows by megabytes). The capture used to probe 21 names; Chrome on the persona detects 93 of
+  BrowserScan's.
+-->
+<script>
+
+// With `?report`, an error the capture hits is reported too, so the driver says why instead of timing out.
+if (/[?&]report\b/.test(location.search)) {
+  window.addEventListener('error', function (e) {
+    var r = new XMLHttpRequest(); r.open('POST', '/report-error', true); r.send(String(e.message) + ' at ' + e.lineno + ':' + e.colno);
+  });
+}
+
+// The `line-height: normal` box of a family at 1000px, for its line gap (see the header).
+function lineHeightsOf(fams) {
+  var out = {};
+  fams.forEach(function (f) {
+    var s = document.createElement('span'); s.style.fontSize = '1000px'; s.style.lineHeight = 'normal'; s.style.whiteSpace = 'pre'; if (f !== 'initial') s.style.fontFamily = f;
+    s.textContent = 'Hxg'; document.body.appendChild(s);
+    var r = s.getBoundingClientRect();
+    var d = document.createElement('div'); d.style.fontSize = '1000px'; d.style.lineHeight = 'normal'; if (f !== 'initial') d.style.fontFamily = f; d.textContent = 'Hxg'; document.body.appendChild(d);
+    out[f] = { spanH: r.height, divH: d.getBoundingClientRect().height, bold: (function () { s.style.fontWeight = 'bold'; return s.getBoundingClientRect().width; })(), italic: (function () { s.style.fontWeight = ''; s.style.fontStyle = 'italic'; return s.getBoundingClientRect().width; })() };
+    s.remove(); d.remove();
+  });
+  return out;
+}
+
+(function () {
+var LIST = ["Arial", "Arial Black", "Arial Narrow", "Arial Rounded MT Bold", "Helvetica", "Helvetica Neue", "Times", "Times New Roman", "Courier", "Courier New", "Georgia", "Palatino", "Palatino Linotype", "Garamond", "Bookman", "Comic Sans MS", "Trebuchet MS", "Impact", "Verdana", "Tahoma", "Geneva", "Lucida Console", "Lucida Grande", "Lucida Sans Unicode", "Monaco", "Menlo", "Consolas", "Segoe UI", "Segoe UI Emoji", "Calibri", "Cambria", "Candara", "Constantia", "Corbel", "Franklin Gothic Medium", "Gill Sans", "Optima", "Futura", "Baskerville", "American Typewriter", "Andale Mono", "Apple Chancery", "Apple Color Emoji", "AppleGothic", "Avenir", "Avenir Next", "Big Caslon", "Brush Script MT", "Chalkboard", "Cochin", "Copperplate", "Didot", "Herculanum", "Hoefler Text", "Marker Felt", "Noteworthy", "Papyrus", "Phosphate", "Rockwell", "Savoye LET", "SignPainter", "Skia", "Snell Roundhand", "Zapfino", "PT Sans", "PT Serif", "Roboto", "Noto Sans", "Noto Serif", "Noto Color Emoji", "Noto Sans CJK KR", "Noto Sans CJK JP", "DejaVu Sans", "DejaVu Serif", "DejaVu Sans Mono", "Liberation Sans", "Liberation Serif", "Liberation Mono", "Ubuntu", "Cantarell", "FreeSans", "Malgun Gothic", "AppleSDGothicNeo", "Apple SD Gothic Neo", "Nanum Gothic", "NanumGothic", "Batang", "Dotum", "Gulim", "MS Gothic", "MS PGothic", "Meiryo", "Yu Gothic", "SimSun", "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Songti SC", "STHeiti", "Heiti SC",
+  // F9: BrowserScan's detections on the persona (stock Chrome 150, 2026-10-11)
+  "Noto Nastaliq Urdu", "Noto Sans Adlam", "Noto Sans Bhaiksuki", "Noto Sans Brahmi", "Noto Sans Chakma", "Noto Sans Cham", "Noto Sans Cuneiform", "Noto Sans Egyptian Hieroglyphs", "Noto Sans Inscriptional Pahlavi", "Noto Sans Inscriptional Parthian", "Noto Sans Javanese", "Noto Sans Kaithi", "Noto Sans Kannada", "Noto Sans Kharoshthi", "Noto Sans Khojki", "Noto Sans Khudawadi", "Noto Sans Lepcha", "Noto Sans Mandaic", "Noto Sans Manichaean", "Noto Sans Marchen", "Noto Sans Meetei Mayek", "Noto Sans Meroitic", "Noto Sans Miao", "Noto Sans Modi", "Noto Sans Mongolian", "Noto Sans Myanmar", "Noto Sans Newa", "Noto Sans Oriya", "Noto Sans Psalter Pahlavi", "Noto Sans Sharada", "Noto Sans Sundanese", "Noto Sans Syriac", "Noto Sans Tai Tham", "Noto Sans Takri", "Noto Sans Thaana", "Noto Sans Tirhuta", "Noto Sans Ugaritic", "Noto Serif Ahom", "Noto Serif Balinese", "Noto Serif Myanmar", "C059", "D050000L", "Liberation Sans Narrow", "Nimbus Mono PS", "Nimbus Roman", "Nimbus Sans", "Nimbus Sans Narrow", "Noto Mono", "Noto Sans CJK HK", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans Mono", "Noto Sans Mono CJK HK", "Noto Sans Mono CJK JP", "Noto Sans Mono CJK KR", "Noto Sans Mono CJK SC", "Noto Sans Mono CJK TC", "Noto Serif CJK JP", "Noto Serif CJK KR", "Noto Serif CJK SC", "Noto Serif CJK TC", "P052", "Standard Symbols PS", "Ubuntu Mono", "Ubuntu Sans", "Ubuntu Sans Mono", "URW Bookman", "URW Gothic", "Z003",
+  // Skia's metric-compatible equivalents (`kFontEquivMap`) and the CJK legacy names fingerprinters ask for
+  "Arimo", "Tinos", "Cousine", "Symbol", "Symbol Neu", "MS PMincho", "MS Mincho", "PMingLiU", "MingLiU", "PMingLiU_HKSCS", "MingLiU_HKSCS", "NSimSun", "Caladea", "Carlito", "IPAGothic", "IPAPGothic", "IPAMincho", "IPAPMincho", "MS UI Gothic",
+  // common fingerprinting libraries' lists (the names not above)
+  "sans-serif-thin", "ARNO PRO", "Agency FB", "Arabic Typesetting", "Arial Unicode MS", "AvantGarde Bk BT", "BankGothic Md BT", "Bitstream Vera Sans Mono", "Century", "Century Gothic", "CenturyGothic", "Clarendon", "EUROSTILE", "Franklin Gothic", "Futura Bk BT", "Futura Md BT", "GOTHAM", "HELV", "Haettenschweiler", "Humanst521 BT", "Leelawadee", "Letter Gothic", "Levenim MT", "Lucida Bright", "Lucida Sans", "MS Outlook", "MS Reference Specialty", "MT Extra", "MYRIAD PRO", "Marlett", "Meiryo UI", "Microsoft Uighur", "Minion Pro", "Monotype Corsiva", "Pristina", "SCRIPTINA", "Segoe UI Light", "Serifa", "Small Fonts", "Staccato222 BT", "TRAJAN PRO", "Univers CE 55 Medium", "Vrinda", "ZWAdobeF", "BitstreamVeraSansMono"];
+// The capturing machine's own families (fonts_capture.py serves its `fc-list : family` as families.json).
+try {
+  var x = new XMLHttpRequest(); x.open('GET', 'families.json', false); x.send();
+  if (x.status === 200) JSON.parse(x.responseText).forEach(function (f) { if (LIST.indexOf(f) < 0) LIST.push(f); });
+} catch (e) {}
+var GENERIC = ["serif", "sans-serif", "monospace", "cursive", "fantasy", "system-ui", "ui-serif", "ui-sans-serif", "ui-monospace", "ui-rounded", "math", "emoji", "fangsong"];
+var cx = document.createElement("canvas").getContext("2d");
+var BASE = ["monospace", "sans-serif", "serif"], TEST = "mmmmmmmmmmlli WWWWWWWWWW 0123456789";
+var w72 = function (fam) { cx.font = "72px " + fam; return cx.measureText(TEST).width; };
+var baseW = {}; BASE.forEach(function (b) { baseW[b] = w72(b); });
+var present = LIST.filter(function (f) { return BASE.some(function (b) { return Math.abs(w72('"' + f + '",' + b) - baseW[b]) > 0.05; }); });
+var ASCII = []; for (var c = 0x20; c < 0x7f; c++) ASCII.push(String.fromCharCode(c));
+var EXTRA = Array.from("àáâãäåæçèéêëìíîïñòóôõöøùúûüýÿÀÁÂÄÅÆÇÈÉÊÑÒÓÔÖØÙÚÛÜßœŒ€£¥¢©®°±×÷§¶‘’“”…–—•·‹›«»¿¡");
+var HANGUL = Array.from("가각간갈감갑강개거건걸검게겨결경계고곡공과관광교구국군굴권귀그근글금기길김까나날남내너노농누눈느는니다단달담대더도독동두드들등디라래러로루르를리마만말매머며면명모무문물미민바반발밤방배버번법변별보본부북분불비빠사산살상새서선설성세소손수숙순스습시신실심아안알앞애야약양어언얼없에여역연열영예오온올와완왕외요용우운원월위유은을음의이인일임입있자작잔장재저적전절점정제조존종주준중지직진집차참창책처천철체초최추출치카커코크타태터토통트파판패퍼편포표프피하학한할함해했행허험현형호화확환회후히힘ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ");
+var CJK = Array.from("的一是不了人我在有他这中大来上国个到说们为子和你地出道也时年得就那要下以生会自着去之日本語漢字あいうえおかきくけこさしすせそアイウエオカキクケコサシスセソ、。「」（）");
+var EMOJI = ["😀", "😂", "👍", "❤️", "🎉", "🔥", "✅", "⭐", "🙏", "💯", "🚀", "👀", "🤔", "😍", "🥰", "🇰🇷", "👨‍👩‍👧"];
+var SIZE = 1000;
+// The printable-ASCII characters a NAMED family has a glyph for (F9): a character it lacks falls back to the next
+// family of the list, so `"<family>", <generic>` measures it unlike for each generic; one it has measures alike.
+// Recorded only when the face lacks some: korvus sets those in the list's next family, as Blink does.
+var coveredBy = function (famCss, style) {
+  var pre = (style ? style + " " : "") + SIZE + "px " + famCss + ", ";
+  return ASCII.filter(function (ch) {
+    var ws = BASE.map(function (b) { cx.font = pre + b; return cx.measureText(ch).width; });
+    return ws[0] === ws[1] && ws[1] === ws[2];
+  }).join("");
+};
+var measure = function (famCss, style, named) {
+  var covered = named ? coveredBy(famCss, style) : null;
+  cx.font = (style ? style + " " : "") + SIZE + "px " + famCss;
+  var adv = {}; ASCII.forEach(function (ch) { adv[ch] = cx.measureText(ch).width; });
+  var kern = {};
+  ASCII.forEach(function (a) { ASCII.forEach(function (b) { var d = cx.measureText(a + b).width - adv[a] - adv[b]; if (Math.abs(d) > 0.001) kern[a + b] = +d.toFixed(4); }); });
+  var extra = {}; EXTRA.concat(HANGUL, CJK, EMOJI).forEach(function (ch) { extra[ch] = cx.measureText(ch).width; });
+  var m = cx.measureText("Hxg"), x = cx.measureText("x"), h = cx.measureText("가");
+  var r = { size: SIZE, advances: adv, kern: kern, extra: extra, ascent: m.fontBoundingBoxAscent, descent: m.fontBoundingBoxDescent,
+           xheight: x.actualBoundingBoxAscent, capheight: cx.measureText("H").actualBoundingBoxAscent,
+           hangulAscent: h.actualBoundingBoxAscent, hangulDescent: h.actualBoundingBoxDescent, zero: adv["0"] };
+  if (covered !== null && covered.length < ASCII.length) r.covered = covered;
+  return r;
+};
+var out = { ua: navigator.userAgent, languages: navigator.languages, lang: document.documentElement.lang, candidates: LIST, present: present, generic: baseW, fonts: {}, generics: {} };
+var STYLES = {normal: '', bold: 'bold', italic: 'italic', boldItalic: 'italic bold'};
+out.styles = {};
+Object.keys(STYLES).forEach(function (sk) { var o = out.styles[sk] = { fonts: {}, generics: {} };
+  present.forEach(function (f) { o.fonts[f] = measure('"' + f + '"', STYLES[sk], true); });
+  GENERIC.forEach(function (g) { o.generics[g] = measure(g, STYLES[sk]); }); });
+out.fonts = out.styles.normal.fonts; out.generics = out.styles.normal.generics;
+// The DOM default font: what a page gets with no font-family at all (the UA's standard font for the
+// document language), and what getComputedStyle reports for it.
+var span = document.createElement("span"); span.style.fontSize = "100px"; span.style.whiteSpace = "pre"; document.body.appendChild(span);
+var dom = {};
+["mmmmmmmmmm", "iiiiiiiiii", "Hello, world!", "가나다라마바사", "日本語", "0123456789"].forEach(function (t) { span.textContent = t; dom[t] = span.getBoundingClientRect().width; });
+out.domDefault = { computedFontFamily: getComputedStyle(span).fontFamily, bodyFontFamily: getComputedStyle(document.body).fontFamily, widthsAt100px: dom,
+                   lineHeight: span.getBoundingClientRect().height };
+var noLang = document.createElement("div"); noLang.lang = ""; noLang.appendChild(span.cloneNode(true)); document.body.appendChild(noLang);
+// every recorded family's line box, the generic keywords' and the default's
+out.lineHeights = lineHeightsOf(present.map(function (f) { return '"' + f + '"'; }).concat(GENERIC, ['initial']));
+window.R = JSON.stringify(out);
+if (/[?&]report\b/.test(location.search)) {
+  var r = new XMLHttpRequest(); r.open('POST', '/report', true); r.setRequestHeader('Content-Type', 'application/json'); r.send(window.R);
+}
+})();
+
+</script></body></html>

@@ -1,0 +1,26 @@
+<!doctype html><html><head><style>
+body { margin: 0; width: 1400px; }
+.g { display: grid; gap: 30px; grid-template-columns: 970px 300px; margin-bottom: 4px; }
+.spaced { grid-template-areas: "headline headline" "center right"; }
+.tight { grid-template-areas:"headline headline""center right"; }
+.single { grid-template-areas: "center right"; }
+.c { grid-area: center; display: flex; } .r { grid-area: right; } .h { grid-area: headline; }
+.lines { grid-template-columns: [full-start] 100px [main-start] 500px [main-end] 100px [full-end]; }
+.main { grid-column: main; } .full { grid-column: full-start / full-end; }
+.row2 { grid-template-rows: [top] 20px [mid] 30px [bottom]; grid-template-columns: 1fr; } .midrow { grid-row: mid / bottom; }
+</style></head><body>
+<div class="g spaced" id=a><div class=h>h</div><div class=c id=ac>c</div><div class=r id=ar>r</div></div>
+<div class="g tight" id=b><div class=h id=bh>h</div><div class=c id=bc>c</div><div class=r id=br>r</div></div>
+<div class="g single" id=s><div class=c id=sc>c</div><div class=r id=sr>r</div></div>
+<div class="g lines"><div class=main id=lm>m</div><div class=full id=lf>f</div></div>
+<div class="g row2"><div class=midrow id=mr>x</div></div>
+<script>
+// REALWEB L5: grid placement by NAME -- template areas (with and without whitespace between the strings, as
+// minifiers write them) and named lines -- places the item in its area (rambler.ru's centre column read 0 px wide).
+var R = {};
+['ac','ar','bh','bc','br','sc','sr','lm','lf','mr'].forEach(function (id) { var r = document.getElementById(id).getBoundingClientRect(); R[id] = [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)].join(','); });
+R.tightAreas = getComputedStyle(document.getElementById('b')).gridTemplateAreas;
+R.spacedAreas = getComputedStyle(document.getElementById('a')).gridTemplateAreas;
+R.cArea = getComputedStyle(document.getElementById('bc')).gridArea;
+document.title = JSON.stringify(R);
+</script></body></html>

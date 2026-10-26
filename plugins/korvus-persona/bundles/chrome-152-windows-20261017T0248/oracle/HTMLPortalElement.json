@@ -1,0 +1,172 @@
+[
+  {
+    "iface": "HTMLPortalElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLPortalElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "constructor",
+    "expr": "new HTMLPortalElement()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "constructor",
+    "expr": "document.createElement(\"portal\") instanceof HTMLPortalElement",
+    "expected": true
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "constructor",
+    "expr": "(() => { const o = document.createElement(\"portal\"); return o.constructor.name; })()",
+    "expected": "HTMLPortalElement"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); return o.src; })()",
+    "expected": ""
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.src = \"https://example.com/x\"; return o.getAttribute(\"src\"); })()",
+    "expected": "https://example.com/x"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.setAttribute(\"src\", \"https://example.com/y\"); return o.src; })()",
+    "expected": "https://example.com/y"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.src = 123; return o.getAttribute(\"src\"); })()",
+    "expected": "123"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.src = null; return o.getAttribute(\"src\"); })()",
+    "expected": "null"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.setAttribute(\"src\", \"a\"); o.removeAttribute(\"src\"); return o.src; })()",
+    "expected": ""
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); return o.referrerPolicy; })()",
+    "expected": ""
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.referrerPolicy = \"origin\"; return o.referrerPolicy; })()",
+    "expected": "origin"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.setAttribute(\"referrerpolicy\", \"strict-origin\"); return o.referrerPolicy; })()",
+    "expected": "strict-origin"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.referrerPolicy = \"bogus\"; return o.getAttribute(\"referrerpolicy\") + \"/\" + o.referrerPolicy; })()",
+    "expected": "bogus/"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.referrerPolicy = 5; return o.getAttribute(\"referrerpolicy\") + \"/\" + o.referrerPolicy; })()",
+    "expected": "5/"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.setAttribute(\"referrerpolicy\", \"SAME-ORIGIN\"); return o.referrerPolicy; })()",
+    "expected": "same-origin"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "activate",
+    "expr": "(() => { const o = document.createElement(\"portal\"); try { o.activate(); return \"no-throw\"; } catch (e) { return e.name; } })()",
+    "expected": "InvalidStateError"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "activate",
+    "expr": "(() => { const o = document.createElement(\"portal\"); try { o.activate({ data: 42 }); return \"no-throw\"; } catch (e) { return e.name; } })()",
+    "expected": "InvalidStateError"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "postMessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); try { o.postMessage(\"x\"); return \"no-throw\"; } catch (e) { return e.name; } })()",
+    "expected": "InvalidStateError"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "postMessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); try { o.postMessage(); return \"no-throw\"; } catch (e) { return e.name; } })()",
+    "expected": "TypeError"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); return o.onmessage; })()",
+    "expected": null
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.onmessage = function () { return 7; }; return o.onmessage(); })()",
+    "expected": 7
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.onmessage = 5; return o.onmessage; })()",
+    "expected": null
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.onmessage = function () {}; o.onmessage = null; return o.onmessage; })()",
+    "expected": null
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"portal\"); let got = \"none\"; o.onmessage = (ev) => { got = ev.data; }; o.dispatchEvent(new MessageEvent(\"message\", { data: \"hi\" })); return got; })()",
+    "expected": "hi"
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElement(\"portal\"); return o.onmessageerror; })()",
+    "expected": null
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElement(\"portal\"); o.onmessageerror = \"not a function\"; return o.onmessageerror; })()",
+    "expected": null
+  },
+  {
+    "iface": "HTMLPortalElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElement(\"portal\"); let got = \"none\"; o.onmessageerror = (ev) => { got = ev.type + \":\" + ev.data; }; o.dispatchEvent(new MessageEvent(\"messageerror\", { data: 2 })); return got; })()",
+    "expected": "messageerror:2"
+  }
+]

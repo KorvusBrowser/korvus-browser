@@ -1,0 +1,352 @@
+[
+  {
+    "iface": "XREquirectLayer",
+    "member": "constructor",
+    "expr": "new XREquirectLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "XREquirectLayer.prototype.space",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "XREquirectLayer.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "XREquirectLayer.prototype.radius",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "XREquirectLayer.prototype.centralHorizontalAngle",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "XREquirectLayer.prototype.upperVerticalAngle",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "XREquirectLayer.prototype.lowerVerticalAngle",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "XREquirectLayer.prototype.onredraw",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").get.call(Object.create(XREquirectLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"space\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"transform\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "radius",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"radius\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "centralHorizontalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"centralHorizontalAngle\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "upperVerticalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"upperVerticalAngle\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "lowerVerticalAngle",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"lowerVerticalAngle\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").get.call(Object.create(XREquirectLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XREquirectLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XREquirectLayer.prototype, \"onredraw\").set.call(Object.create(XREquirectLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

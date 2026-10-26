@@ -1,0 +1,10 @@
+{
+ "frame-fetch1": "conn4",
+ "frame-fetch2": "conn4",
+ "frame-img1": "conn3",
+ "frame-img2": "conn3",
+ "page-fetch1": "conn2",
+ "page-fetch2": "conn2",
+ "page-img1": "conn1",
+ "page-img2": "conn1"
+}

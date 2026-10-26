@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "VisualViewport",
+    "member": "constructor",
+    "expr": "new VisualViewport()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "offsetLeft",
+    "expr": "(() => { const o = visualViewport; return o.offsetLeft; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "offsetTop",
+    "expr": "(() => { const o = visualViewport; return o.offsetTop; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "pageLeft",
+    "expr": "(() => { const o = visualViewport; return o.pageLeft; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "pageTop",
+    "expr": "(() => { const o = visualViewport; return o.pageTop; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "scale",
+    "expr": "(() => { const o = visualViewport; return o.scale; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onresize",
+    "expr": "(() => { const o = visualViewport; return o.onresize; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onscroll",
+    "expr": "(() => { const o = visualViewport; return o.onscroll; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onscrollend",
+    "expr": "(() => { const o = visualViewport; return o.onscrollend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onresize",
+    "expr": "(() => { const o = visualViewport; return Object.prototype.toString.call(o.onresize); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onscroll",
+    "expr": "(() => { const o = visualViewport; return Object.prototype.toString.call(o.onscroll); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VisualViewport",
+    "member": "onscrollend",
+    "expr": "(() => { const o = visualViewport; return Object.prototype.toString.call(o.onscrollend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

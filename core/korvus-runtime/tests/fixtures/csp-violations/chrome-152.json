@@ -1,0 +1,78 @@
+[
+[
+"img-src none, detached img",
+"r:set ; ev:target=#document|img-src|img-src|http://127.0.0.1:1/csp-probe/a.gif?q=1|img-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"img-src none, connected img",
+"ev:target=#document|img-src|img-src|http://127.0.0.1:1/csp-probe/b.gif|img-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"img-src self, data: image",
+"ev:target=#document|img-src|img-src|data|img-src 'self'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"default-src none, img",
+"ev:target=#document|img-src|img-src|http://127.0.0.1:1/csp-probe/c.gif|default-src 'none'; script-src 'nonce-t'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"connect-src none, fetch",
+"r:called ; r:TypeError: Failed to fetch ; ev:target=#document|connect-src|connect-src|http://127.0.0.1:1/csp-probe/f?x=1|connect-src 'none'|enforce|sample=|status=0|file=about|line=2|col=23|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"connect-src none, xhr",
+"r:sent ; ev:target=#document|connect-src|connect-src|http://127.0.0.1:1/csp-probe/x|connect-src 'none'|enforce|sample=|status=0|file=about|line=3|col=64|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error 4 0 ; r:loadend"
+],
+[
+"connect-src none, sync xhr",
+"r:threw NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://127.0.0.1:1/csp-probe/sx'. ; ev:target=#document|connect-src|connect-src|http://127.0.0.1:1/csp-probe/sx|connect-src 'none'|enforce|sample=|status=0|file=about|line=2|col=104|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"connect-src none, sendBeacon",
+"r:true ; ev:target=#document|connect-src|connect-src|http://127.0.0.1:1/csp-probe/beacon|connect-src 'none'|enforce|sample=|status=0|file=about|line=2|col=28|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"connect-src none, EventSource",
+"r:made ; ev:target=#document|connect-src|connect-src|http://127.0.0.1:1/csp-probe/es|connect-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error 2"
+],
+[
+"connect-src none, WebSocket",
+"r:made ; ev:target=#document|connect-src|connect-src|ws://127.0.0.1:1/ws|connect-src 'none'|enforce|sample=|status=0|file=about|line=2|col=23|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error 3"
+],
+[
+"style-src none, link stylesheet",
+"ev:target=#document|style-src-elem|style-src-elem|http://127.0.0.1:1/csp-probe/s.css|style-src 'none'|enforce|sample=|status=0|file=about|line=2|col=198|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"font-src none, FontFace",
+"r:NetworkError: A network error occurred. ; ev:target=#document|font-src|font-src|http://127.0.0.1:1/csp-probe/f.woff2|font-src 'none'|enforce|sample=|status=0|file=about|line=2|col=19|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"media-src none, audio",
+"r:set ; ev:target=#document|media-src|media-src|http://127.0.0.1:1/csp-probe/a.mp3|media-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error 4"
+],
+[
+"frame-src none, iframe",
+"ev:target=#document|frame-src|frame-src|http://127.0.0.1:1|frame-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:load"
+],
+[
+"worker-src none, Worker",
+"r:made ; ev:target=#document|worker-src|worker-src|blob|worker-src 'none'|enforce|sample=|status=0|file=about|line=2|col=23|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"script-src nonce, script element",
+"ev:target=#document|script-src-elem|script-src-elem|http://127.0.0.1:1/csp-probe/s.js|script-src 'nonce-t'|enforce|sample=|status=0|file=about|line=2|col=176|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+],
+[
+"script-src nonce, inline script",
+"r:0 ; ev:target=SCRIPT|script-src-elem|script-src-elem|inline|script-src 'nonce-t'|enforce|sample=|status=0|file=about|line=2|col=157|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"script-src nonce, eval",
+"r:EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'nonce-t'\".\n ; ev:target=#document|script-src|script-src|eval|script-src 'nonce-t'|enforce|sample=|status=0|file=about|line=2|col=13|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win"
+],
+[
+"img-src none, two policies",
+"ev:target=#document|img-src|img-src|http://127.0.0.1:1/csp-probe/d.gif|img-src 'none'|enforce|sample=|status=0|file=|line=0|col=0|doc=about|ref=http://127.0.0.1:PORT/|true|true|false|true ; win ; r:error"
+]
+]

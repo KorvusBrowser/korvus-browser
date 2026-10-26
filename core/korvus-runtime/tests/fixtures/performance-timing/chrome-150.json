@@ -1,0 +1,40 @@
+{
+ "early": {
+  "keys": "connectStart,secureConnectionStart,unloadEventEnd,domainLookupStart,domainLookupEnd,responseStart,connectEnd,responseEnd,requestStart,domLoading,redirectStart,loadEventEnd,domComplete,navigationStart,loadEventStart,domContentLoadedEventEnd,unloadEventStart,redirectEnd,domInteractive,fetchStart,domContentLoadedEventStart",
+  "zero": "domComplete,domContentLoadedEventEnd,domContentLoadedEventStart,domInteractive,loadEventEnd,loadEventStart,redirectEnd,redirectStart,secureConnectionStart,unloadEventEnd,unloadEventStart",
+  "ordered": true,
+  "navigationStartAtOrigin": true,
+  "measureFromUnhappened": "InvalidAccessError: Failed to execute 'measure' on 'Performance': 'loadEventEnd' is empty: either the event hasn't happened yet, or it would provide cross-origin timing information.",
+  "markNamedAfterField": "SyntaxError: Failed to execute 'mark' on 'Performance': 'fetchStart' is part of the PerformanceTiming interface, and cannot be used as a mark name.",
+  "constructMarkNamedAfterField": "SyntaxError: Failed to construct 'PerformanceMark': 'loadEventEnd' is part of the PerformanceTiming interface, and cannot be used as a mark name.",
+  "loadTimesBeforeLoad": "0,0,0"
+ },
+ "inLoad": {
+  "loadEventStart": true,
+  "loadEventEnd": 0
+ },
+ "late": {
+  "keys": "connectStart,secureConnectionStart,unloadEventEnd,domainLookupStart,domainLookupEnd,responseStart,connectEnd,responseEnd,requestStart,domLoading,redirectStart,loadEventEnd,domComplete,navigationStart,loadEventStart,domContentLoadedEventEnd,unloadEventStart,redirectEnd,domInteractive,fetchStart,domContentLoadedEventStart",
+  "zero": "redirectEnd,redirectStart,secureConnectionStart,unloadEventEnd,unloadEventStart",
+  "ordered": true,
+  "navigationStartAtOrigin": true,
+  "floorOfEntry": "",
+  "measureFromField": true,
+  "loadTimes": "true,true,true,true,true",
+  "csi": "true,true"
+ },
+ "srcdoc": {
+  "keys": "connectStart,secureConnectionStart,unloadEventEnd,domainLookupStart,domainLookupEnd,responseStart,connectEnd,responseEnd,requestStart,domLoading,redirectStart,loadEventEnd,domComplete,navigationStart,loadEventStart,domContentLoadedEventEnd,unloadEventStart,redirectEnd,domInteractive,fetchStart,domContentLoadedEventStart",
+  "zero": "connectEnd,connectStart,domainLookupEnd,domainLookupStart,fetchStart,redirectEnd,redirectStart,requestStart,responseStart,secureConnectionStart,unloadEventEnd,unloadEventStart",
+  "laterThanPage": true,
+  "responseEndAfterDomLoading": true,
+  "interactiveAfterResponseEnd": true,
+  "milestonesOrdered": true,
+  "crossRealmGetter": true
+ },
+ "network": {
+  "keys": "connectStart,secureConnectionStart,unloadEventEnd,domainLookupStart,domainLookupEnd,responseStart,connectEnd,responseEnd,requestStart,domLoading,redirectStart,loadEventEnd,domComplete,navigationStart,loadEventStart,domContentLoadedEventEnd,unloadEventStart,redirectEnd,domInteractive,fetchStart,domContentLoadedEventStart",
+  "zero": "redirectEnd,redirectStart,secureConnectionStart,unloadEventEnd,unloadEventStart",
+  "ordered": true
+ }
+}

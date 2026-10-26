@@ -1,0 +1,205 @@
+[
+  {
+    "iface": "XRInputSource",
+    "member": "constructor",
+    "expr": "new XRInputSource()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "handedness",
+    "expr": "XRInputSource.prototype.handedness",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "handedness",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"handedness\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRayMode",
+    "expr": "XRInputSource.prototype.targetRayMode",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRayMode",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRayMode\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRaySpace",
+    "expr": "XRInputSource.prototype.targetRaySpace",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRaySpace",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRaySpace\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gripSpace",
+    "expr": "XRInputSource.prototype.gripSpace",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gripSpace",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gripSpace\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gamepad",
+    "expr": "XRInputSource.prototype.gamepad",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gamepad",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gamepad\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "hand",
+    "expr": "XRInputSource.prototype.hand",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "hand",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"hand\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "profiles",
+    "expr": "XRInputSource.prototype.profiles",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "profiles",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"profiles\").get.call(Object.create(XRInputSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "handedness",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"handedness\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "handedness",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"handedness\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRayMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRayMode\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRayMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRayMode\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRaySpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRaySpace\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "targetRaySpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"targetRaySpace\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gripSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gripSpace\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gripSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gripSpace\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gamepad",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gamepad\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "gamepad",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"gamepad\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "hand",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"hand\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "hand",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"hand\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "profiles",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"profiles\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSource",
+    "member": "profiles",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSource.prototype, \"profiles\").get.call(Object.create(XRInputSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

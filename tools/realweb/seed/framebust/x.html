@@ -1,0 +1,12 @@
+<!doctype html><html><body><script>
+// A frame that tries to navigate the TOP in one of three ways (REALWEB F35/F36).
+var how = new URLSearchParams(location.search).get('how'), r = how + ':';
+var away = 'http://127.0.0.1:' + location.port + '/away.html?by=' + how;
+try {
+  if (how === 'href') top.location.href = away;
+  if (how === 'open') r += String(window.open(away, '_top'));
+  if (how === 'anchor') { var a = document.createElement('a'); a.href = away; a.target = '_top'; document.body.appendChild(a); a.click(); }
+  r += 'ok';
+} catch (e) { r += 'THROW ' + e.name + ': ' + e.message.replace(/:\/\/[^/']+/g, '://HOST'); }
+parent.postMessage({ r: r }, '*');
+</script></body></html>

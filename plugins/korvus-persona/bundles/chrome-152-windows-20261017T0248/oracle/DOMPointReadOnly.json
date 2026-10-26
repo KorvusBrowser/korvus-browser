@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "x",
+    "expr": "new DOMPointReadOnly(1, 2, 3, 4).x",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "x",
+    "expr": "new DOMPointReadOnly().x",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "x",
+    "expr": "(() => { const p = new DOMPointReadOnly(1); p.x = 9; return p.x; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "x",
+    "expr": "(() => { \"use strict\"; const p = new DOMPointReadOnly(1); try { p.x = 9; return \"silent\"; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "y",
+    "expr": "new DOMPointReadOnly(1, 2, 3, 4).y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "y",
+    "expr": "new DOMPointReadOnly().y",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "y",
+    "expr": "(() => { \"use strict\"; const p = new DOMPointReadOnly(0, 2); try { p.y = 9; return \"silent\"; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "z",
+    "expr": "new DOMPointReadOnly(1, 2, 3, 4).z",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "z",
+    "expr": "new DOMPointReadOnly().z",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "w",
+    "expr": "new DOMPointReadOnly(1, 2, 3, 4).w",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "w",
+    "expr": "new DOMPointReadOnly().w",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "w",
+    "expr": "new DOMPointReadOnly(1, 2).w",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "w",
+    "expr": "new DOMPointReadOnly(0, 0, 0, 0).w",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "matrixTransform",
+    "expr": "(() => { const p = new DOMPointReadOnly(1, 2, 3, 4).matrixTransform(); return p.x + ',' + p.y + ',' + p.z + ',' + p.w; })()",
+    "expected": "1,2,3,4",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "matrixTransform",
+    "expr": "(() => { const p = new DOMPointReadOnly(5, 4).matrixTransform({ m41: 10, m42: 20 }); return p.x + ',' + p.y; })()",
+    "expected": "15,24",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "matrixTransform",
+    "expr": "(() => { const p = new DOMPointReadOnly(1, 2).matrixTransform({ a: 2, b: 1, c: 1, d: 3 }); return p.x + ',' + p.y; })()",
+    "expected": "4,7",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "matrixTransform",
+    "expr": "(() => { const p = new DOMPointReadOnly(1, 2, 3, 1).matrixTransform({ m11: 2, m22: 3, m33: 4, m43: 5 }); return p.x + ',' + p.y + ',' + p.z; })()",
+    "expected": "2,6,17",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "matrixTransform",
+    "expr": "new DOMPointReadOnly().matrixTransform() instanceof DOMPoint",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMPointReadOnly(1, 2, 3, 4).toJSON())",
+    "expected": "{\"x\":1,\"y\":2,\"z\":3,\"w\":4}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "toJSON",
+    "expr": "JSON.stringify(new DOMPointReadOnly().toJSON())",
+    "expected": "{\"x\":0,\"y\":0,\"z\":0,\"w\":1}",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "toJSON",
+    "expr": "Object.keys(new DOMPointReadOnly(1, 2, 3, 4).toJSON()).join()",
+    "expected": "x,y,z,w",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "toJSON",
+    "expr": "new DOMPointReadOnly(1, 2, 3, 4).toJSON().y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "fromPoint",
+    "expr": "DOMPointReadOnly.fromPoint({ x: 1, y: 2, z: 3, w: 4 }).y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "fromPoint",
+    "expr": "DOMPointReadOnly.fromPoint({}).w",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "fromPoint",
+    "expr": "DOMPointReadOnly.fromPoint().z",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "fromPoint",
+    "expr": "DOMPointReadOnly.fromPoint({ x: 1, y: 2, z: 3, w: 4 }) instanceof DOMPointReadOnly",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMPointReadOnly(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "x",
+    "expr": "(() => { const o = new DOMPointReadOnly(); return o.x; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "y",
+    "expr": "(() => { const o = new DOMPointReadOnly(); return o.y; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "z",
+    "expr": "(() => { const o = new DOMPointReadOnly(); return o.z; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMPointReadOnly",
+    "member": "w",
+    "expr": "(() => { const o = new DOMPointReadOnly(); return o.w; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

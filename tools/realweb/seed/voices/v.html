@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf-8><title>voices</title><body><p>speechSynthesis.getVoices() before and after voiceschanged.</p><script>
+window.__r = null; const log = {sync: speechSynthesis.getVoices().length};
+speechSynthesis.addEventListener('voiceschanged', e => { const a = speechSynthesis.getVoices(), b = speechSynthesis.getVoices();
+  window.__r = JSON.stringify({...log, trusted: e.isTrusted, n: a.length, first: a[0] ? [a[0].name, a[0].lang, a[0].localService, a[0].default, a[0].voiceURI] : null,
+    sameObjects: a.length ? a[0] === b[0] : true, freshArray: a !== b, proto: a.length ? Object.getPrototypeOf(a[0]) === SpeechSynthesisVoice.prototype : true,
+    own: a.length ? Object.getOwnPropertyNames(a[0]).length : 0, css: getComputedStyle(document.documentElement).length,
+    rubyOverhang: Array.from(getComputedStyle(document.documentElement)).includes('ruby-overhang')}); });
+setTimeout(() => { log.t0 = speechSynthesis.getVoices().length; }, 0);
+</script>

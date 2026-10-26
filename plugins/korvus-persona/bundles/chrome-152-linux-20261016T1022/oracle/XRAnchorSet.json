@@ -1,0 +1,191 @@
+[
+  {
+    "iface": "XRAnchorSet",
+    "member": "constructor",
+    "expr": "new XRAnchorSet()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "size",
+    "expr": "XRAnchorSet.prototype.size",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "size",
+    "expr": "Object.getOwnPropertyDescriptor(XRAnchorSet.prototype, \"size\").get.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "entries",
+    "expr": "XRAnchorSet.prototype.entries.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "entries",
+    "expr": "XRAnchorSet.prototype.entries.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "forEach",
+    "expr": "XRAnchorSet.prototype.forEach.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "forEach",
+    "expr": "XRAnchorSet.prototype.forEach.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "has",
+    "expr": "XRAnchorSet.prototype.has.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "has",
+    "expr": "XRAnchorSet.prototype.has.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "keys",
+    "expr": "XRAnchorSet.prototype.keys.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "keys",
+    "expr": "XRAnchorSet.prototype.keys.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "values",
+    "expr": "XRAnchorSet.prototype.values.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "values",
+    "expr": "XRAnchorSet.prototype.values.call(Object.create(XRAnchorSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "forEach",
+    "expr": "XRAnchorSet.prototype.forEach.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "has",
+    "expr": "XRAnchorSet.prototype.has.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRAnchorSet.prototype, \"size\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRAnchorSet.prototype, \"size\").get.call(Object.create(XRAnchorSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"entries\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"entries\"].call(Object.create(XRAnchorSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"forEach\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"forEach\"].call(Object.create(XRAnchorSet.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "has",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"has\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "has",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"has\"].call(Object.create(XRAnchorSet.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"keys\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"keys\"].call(Object.create(XRAnchorSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "values",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"values\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRAnchorSet",
+    "member": "values",
+    "expr": "(() => { try { const v = XRAnchorSet.prototype[\"values\"].call(Object.create(XRAnchorSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

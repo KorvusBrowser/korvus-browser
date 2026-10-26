@@ -1,0 +1,229 @@
+[
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob().size",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['hello']).size",
+    "expected": 5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['\\u00e9']).size",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['ab', new Blob(['cd'])]).size",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['0123456789']).slice(2, 5).size",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['0123456789']).slice(-3).size",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "new Blob(['0123456789']).slice(4, 2).size",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "new Blob(['x']).type",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "new Blob(['x'], { type: 'TEXT/PLAIN' }).type",
+    "expected": "text/plain",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "new Blob(['x'], { type: 'text/plain; charset=UTF-8' }).type",
+    "expected": "text/plain; charset=utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "new Blob(['x'], { type: 'bogus' }).type",
+    "expected": "bogus",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "new Blob(['x']).slice(0, 1, 'Image/PNG').type",
+    "expected": "image/png",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "slice",
+    "expr": "new Blob(['0123456789']).slice(2, 5) instanceof Blob",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "slice",
+    "expr": "new Blob(['0123456789']).slice(-4, -2).size",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "slice",
+    "expr": "new Blob(['abc']).slice(1, 99).size",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "text",
+    "expr": "new Blob(['hi']).text() instanceof Promise",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "bytes",
+    "expr": "new Blob(['hi']).bytes() instanceof Promise",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "arrayBuffer",
+    "expr": "new Blob(['hi']).arrayBuffer() instanceof Promise",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "stream",
+    "expr": "new Blob(['hi']).stream() instanceof ReadableStream",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "textStream",
+    "expr": "new Blob(['hi']).textStream() instanceof ReadableStream",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "constructor",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Blob]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "size",
+    "expr": "(() => { const o = new Blob(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "type",
+    "expr": "(() => { const o = new Blob(); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "slice",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.slice()); })()",
+    "expected": "[object Blob]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "stream",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.stream()); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "text",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.text()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "text",
+    "expr": "(async () => { const o = new Blob(); return await o.text(); })()",
+    "expected": "",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "arrayBuffer",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.arrayBuffer()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "arrayBuffer",
+    "expr": "(async () => { const o = new Blob(); return Object.prototype.toString.call(await o.arrayBuffer()); })()",
+    "expected": "[object ArrayBuffer]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "textStream",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.textStream()); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "bytes",
+    "expr": "(() => { const o = new Blob(); return Object.prototype.toString.call(o.bytes()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Blob",
+    "member": "bytes",
+    "expr": "(async () => { const o = new Blob(); return Object.prototype.toString.call(await o.bytes()); })()",
+    "expected": "[object Uint8Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

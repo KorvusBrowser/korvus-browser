@@ -1,0 +1,339 @@
+encrypt name "AES-CBC" = ok
+encrypt name "AES-CTR" = THREW InvalidAccessError: key.algorithm does not match that of operation
+encrypt name "AES-GCM" = THREW InvalidAccessError: key.algorithm does not match that of operation
+encrypt name "AES-KW" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': AES-KW: Unsupported operation: encrypt
+encrypt name "HMAC" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': HMAC: Unsupported operation: encrypt
+encrypt name "PBKDF2" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': PBKDF2: Unsupported operation: encrypt
+encrypt name "HKDF" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': HKDF: Unsupported operation: encrypt
+encrypt name "RSA-OAEP" = THREW InvalidAccessError: key.algorithm does not match that of operation
+encrypt name "X25519" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': X25519: Unsupported operation: encrypt
+encrypt name "ECDH" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': ECDH: Unsupported operation: encrypt
+encrypt name "ECDSA" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': ECDSA: Unsupported operation: encrypt
+encrypt name "aes-gcm" = THREW InvalidAccessError: key.algorithm does not match that of operation
+encrypt name "AES-GCM " = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+encrypt name "NOPE" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+encrypt name "" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+decrypt name "AES-GCM" = THREW InvalidAccessError: key.algorithm does not match that of operation
+decrypt name "AES-KW" = THREW NotSupportedError: Failed to execute 'decrypt' on 'SubtleCrypto': AES-KW: Unsupported operation: decrypt
+decrypt name "NOPE" = THREW NotSupportedError: Failed to execute 'decrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+encrypt algorithm as a bare string = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCbcParams: iv: Missing required property
+encrypt algorithm missing name = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: name: Missing or not a string
+AES-CBC-128 encrypt = 3f619c6faefed52c801aa3d5ffd7997860d9b12a37c6847cd0c17b79579ad0b2674f680a327de4b43fb0b433187f178a
+AES-CBC-128 encrypt empty = 0a940bb5416ef045f1c39458c653ea5a
+AES-CBC-128 encrypt 16 bytes = 8ea07eb4477cd88cf75583500cf45999756a484a676f0f5b8736f1150d1153ac
+AES-CBC-192 encrypt = THREW OperationError: 192-bit AES keys are not supported
+AES-CBC-256 encrypt = b746e4f1bce2352d20440b8a2e0eb8fd68c1fcd0d00fcac779ecaadacde7e51aead2cd496e95891769f63684c11169a1
+AES-CBC round trip = The quick brown fox jumps over the lazy dog.
+AES-CBC decrypt bad padding = THREW OperationError: 
+AES-CBC decrypt short block = THREW OperationError: 
+AES-CBC decrypt no data = THREW OperationError: 
+AES-CBC iv 15 bytes = THREW OperationError: The "iv" has an unexpected length -- must be 16 bytes
+AES-CBC iv missing = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCbcParams: iv: Missing required property
+AES-CBC key algorithm = {"name":"AES-CBC","length":128}
+AES-CTR-128 encrypt = 53968a5490a06a0dfb2e8c63e1e3fcb3f4adbd24b279ef7235591214ee8bfe7ca244180b549f818b01f9ed02
+AES-CTR length 128 = 53968a5490a06a0dfb2e8c63e1e3fcb3f4adbd24b279ef7235591214ee8bfe7ca244180b549f818b01f9ed02
+AES-CTR counter 15 bytes = THREW OperationError: The "counter" has an unexpected length -- must be 16 bytes
+AES-CTR length 0 = THREW OperationError: The "length" member must be >= 1 and <= 128
+AES-CTR length 129 = THREW OperationError: The "length" member must be >= 1 and <= 128
+AES-GCM-128 encrypt = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b322e41347c431738bb804f87ad43c060d
+AES-GCM-128 encrypt empty = 396114d5ce9ee295d89bf9c38895457b
+AES-GCM-128 with aad = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b3b2430a46128198b5eaf1f908cbd495d5
+AES-GCM-128 tagLength 32 = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b322e41347
+AES-GCM-128 tagLength 96 = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b322e41347c431738bb804f87a
+AES-GCM-128 tagLength 127 = THREW OperationError: The tag length is invalid: Must be 32, 64, 96, 104, 112, 120, or 128 bits
+AES-GCM-256 encrypt = 8652c3501ded736d715c20bcae6f9ad9b62694bcedf50e9e1fd603642cf87e7d1debc568ef5f4cfa709209bc63bb99f4a4c374b573d3f636eed116d1
+AES-GCM iv 16 bytes = 91f692960cc74debbd38a1f0ce5841f7939258bf0773ca88daa6e8e0263153944b414b6b80630d6e88ea8bf155f08a6b28dd557e8419af2b6e890662
+AES-GCM iv 8 bytes = 05f65321e1f7aeb6c2e5a6ddc9884cc763c5a38d6e1acccbbe905d6f4e58775511097e8ca8bc81555aa84c2134ea67ab3e0a1abab86859d23b25e8d5
+AES-GCM iv empty = THREW OperationError: 
+AES-GCM iv missing = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AeadParams: iv: Missing required property
+AES-GCM round trip = The quick brown fox jumps over the lazy dog.
+AES-GCM decrypt wrong aad = THREW OperationError: 
+AES-GCM decrypt tampered = THREW OperationError: 
+AES-GCM decrypt too short = THREW OperationError: The provided data is too small
+AES-KW rfc3394 4.1 = 1fa68b0a8112b447aef34bd8fb5a7b829d3e862371d2cfe5
+AES-KW unwrap round trip = 00112233445566778899aabbccddeeff
+AES-KW encrypt = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': AES-KW: Unsupported operation: encrypt
+AES-KW wrap 20 bytes = THREW DataError: The AES-KW input data length is invalid: not a multiple of 8 bytes
+wrapKey AES-CBC raw = 1eca870ffea114b7fd6cf363c30b96b10d47f7c33722bae48a4489a6bb9d993d
+wrapKey AES-GCM raw = c0e43097c2a51f7e33d1256fbd127a811dc20ec5d17aa041d83920be18572e08
+wrapKey AES-GCM jwk round trip = 00112233445566778899aabbccddeeff
+wrapKey unextractable = THREW InvalidAccessError: key is not extractable
+wrapKey format bogus = THREW TypeError: Failed to execute 'wrapKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+wrapKey format pkcs8 on a secret key = THREW NotSupportedError: Unsupported export key format for algorithm
+wrapKey format spki on a secret key = THREW NotSupportedError: Unsupported export key format for algorithm
+wrapKey with a key lacking wrapKey = THREW InvalidAccessError: key.usages does not permit this operation
+unwrapKey format bogus = THREW TypeError: Failed to execute 'unwrapKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey AES-CBC raw = ok secret {"name":"AES-CBC","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-CBC jwk = ok secret {"name":"AES-CBC","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-CBC pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-CBC spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-CBC bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey AES-CTR raw = ok secret {"name":"AES-CTR","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-CTR jwk = ok secret {"name":"AES-CTR","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-CTR pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-CTR spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-CTR bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey AES-GCM raw = ok secret {"name":"AES-GCM","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-GCM jwk = ok secret {"name":"AES-GCM","length":128} ["encrypt","decrypt"] ext=true
+importKey AES-GCM pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-GCM spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-GCM bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey AES-KW raw = ok secret {"name":"AES-KW","length":128} ["wrapKey","unwrapKey"] ext=true
+importKey AES-KW jwk = ok secret {"name":"AES-KW","length":128} ["wrapKey","unwrapKey"] ext=true
+importKey AES-KW pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-KW spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey AES-KW bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey HMAC raw = ok secret {"name":"HMAC","hash":{"name":"SHA-256"},"length":128} ["sign","verify"] ext=true
+importKey HMAC jwk = ok secret {"name":"HMAC","hash":{"name":"SHA-256"},"length":128} ["sign","verify"] ext=true
+importKey HMAC pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey HMAC spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey HMAC bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey PBKDF2 raw = ok secret {"name":"PBKDF2"} ["deriveBits"] ext=false
+importKey PBKDF2 jwk = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey PBKDF2 pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey PBKDF2 spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey PBKDF2 bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+importKey HKDF raw = ok secret {"name":"HKDF"} ["deriveBits"] ext=false
+importKey HKDF jwk = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey HKDF pkcs8 = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey HKDF spki = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey HKDF bogus = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+jwk alg A128CBC-correct = ok {"name":"AES-CBC","length":128} ["encrypt","decrypt"]
+jwk alg A256CBC-mismatched = THREW DataError: The JWK "k" member did not include the right length of key data for the given algorithm.
+jwk alg A128GCM-on-AES-CBC = THREW DataError: The JWK "alg" member was inconsistent with that specified by the Web Crypto call
+jwk alg A128GCM-correct = ok {"name":"AES-GCM","length":128} ["encrypt","decrypt"]
+jwk alg A128CTR-is-not-a-thing = ok {"name":"AES-CTR","length":128} ["encrypt","decrypt"]
+jwk alg A128KW-correct = ok {"name":"AES-KW","length":128} ["wrapKey","unwrapKey"]
+jwk alg HS256-correct = ok {"name":"HMAC","hash":{"name":"SHA-256"},"length":256} ["sign","verify"]
+jwk alg HS512-mismatched = THREW DataError: The JWK "alg" member was inconsistent with that specified by the Web Crypto call
+jwk kty RSA = THREW DataError: The JWK "kty" member was not "oct"
+jwk kty missing = THREW DataError: The required JWK member "kty" was missing
+jwk k missing = THREW DataError: The required JWK member "k" was missing
+jwk k not base64url = THREW DataError: The JWK member "k" could not be base64url decoded or contained padding
+jwk k padded base64 = THREW DataError: The JWK member "k" could not be base64url decoded or contained padding
+jwk k 15 bytes = THREW DataError: AES key data must be 128 or 256 bits
+jwk ext false imported extractable = THREW DataError: The "ext" member of the JWK dictionary is inconsistent what that specified by the Web Crypto call
+jwk ext absent = ok {"name":"AES-CBC","length":128} ["encrypt","decrypt"]
+jwk key_ops agreeing = ok {"name":"AES-CBC","length":128} ["encrypt","decrypt"]
+jwk key_ops narrower = THREW DataError: The JWK "key_ops" member was inconsistent with that specified by the Web Crypto call. The JWK usage must be a superset of those requested
+jwk use sig on an AES key = THREW DataError: The JWK "use" member was inconsistent with that specified by the Web Crypto call. The JWK usage must be a superset of those requested
+jwk use enc = ok {"name":"AES-CBC","length":128} ["encrypt","decrypt"]
+jwk as a JSON string = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': The provided value is not of type '(ArrayBuffer or ArrayBufferView or JsonWebKey)'.
+jwk as a BufferSource = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Key data must be an object for JWK import
+raw as a plain object = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Key data must be a BufferSource for non-JWK formats
+exportKey jwk AES-CBC-128 = {"alg":"A128CBC","ext":true,"k":"AAECAwQFBgcICQoLDA0ODw","key_ops":["encrypt","decrypt"],"kty":"oct"}
+exportKey jwk AES-CBC-256 = {"alg":"A256CBC","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["encrypt","decrypt"],"kty":"oct"}
+exportKey jwk AES-CBC-192 = THREW OperationError: 192-bit AES keys are not supported
+exportKey jwk AES-CTR = {"alg":"A128CTR","ext":true,"k":"AAECAwQFBgcICQoLDA0ODw","key_ops":["encrypt","decrypt"],"kty":"oct"}
+exportKey jwk AES-GCM-256 = {"alg":"A256GCM","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["encrypt","decrypt"],"kty":"oct"}
+exportKey jwk AES-KW = {"alg":"A128KW","ext":true,"k":"AAECAwQFBgcICQoLDA0ODw","key_ops":["wrapKey","unwrapKey"],"kty":"oct"}
+exportKey jwk HMAC SHA-256 = {"alg":"HS256","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["sign","verify"],"kty":"oct"}
+exportKey jwk HMAC SHA-1 = {"alg":"HS1","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["sign"],"kty":"oct"}
+exportKey jwk HMAC SHA-384 = {"alg":"HS384","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["verify"],"kty":"oct"}
+exportKey jwk HMAC SHA-512 = {"alg":"HS512","ext":true,"k":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","key_ops":["sign","verify"],"kty":"oct"}
+exportKey jwk one usage = {"alg":"A128CBC","ext":true,"k":"AAECAwQFBgcICQoLDA0ODw","key_ops":["decrypt"],"kty":"oct"}
+exportKey jwk unextractable = THREW InvalidAccessError: Failed to execute 'exportKey' on 'SubtleCrypto': key is not extractable
+exportKey jwk round trip = 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+exportKey pkcs8 on a secret key = THREW NotSupportedError: Unsupported export key format for algorithm
+exportKey spki on a secret key = THREW NotSupportedError: Unsupported export key format for algorithm
+exportKey bogus = THREW TypeError: Failed to execute 'exportKey' on 'SubtleCrypto': Invalid keyFormat argument: bogus
+exportKey raw PBKDF2 = THREW InvalidAccessError: Failed to execute 'exportKey' on 'SubtleCrypto': key is not extractable
+importKey usages AES-CBC ["sign"] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey usages AES-CBC [] = THREW SyntaxError: Usages cannot be empty when creating a key.
+importKey usages AES-KW ["encrypt"] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey usages AES-GCM ["wrapKey","unwrapKey"] = ok ["wrapKey","unwrapKey"]
+importKey usages AES-GCM ["deriveBits"] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey usages AES-CTR ["encrypt","encrypt"] = ok ["encrypt"]
+encrypt with a decrypt-only key = THREW InvalidAccessError: key.usages does not permit this operation
+encrypt with an AES-GCM key under AES-CBC = THREW InvalidAccessError: key.algorithm does not match that of operation
+importKey AES-CBC raw 24 bytes = THREW OperationError: 192-bit AES keys are not supported
+importKey AES-CBC raw 8 bytes = THREW DataError: AES key data must be 128 or 256 bits
+importKey AES-CBC jwk A192CBC = THREW OperationError: 192-bit AES keys are not supported
+importKey AES-CBC jwk 24 bytes no alg = THREW OperationError: 192-bit AES keys are not supported
+generateKey AES-CBC 192 = THREW OperationError: 192-bit AES keys are not supported
+generateKey AES-GCM 128 length = {"name":"AES-GCM","length":128}
+wrapKey jwk plaintext = {"alg":"A128CBC","ext":true,"k":"ABEiM0RVZneImaq7zN3u_w","key_ops":["encrypt","decrypt"],"kty":"oct"}
+unwrapKey jwk of garbage = THREW DataError: JWK input could not be parsed to a JSON dictionary
+unwrapKey format pkcs8 = THREW OperationError: 
+unwrapKey bad usages = THREW SyntaxError: Cannot create a key using the specified key usages.
+AES-GCM tagLength 32 round trip = The quick brown fox jumps over the lazy dog.
+AES-GCM tagLength mismatch on decrypt = THREW OperationError: 
+AES-GCM long aad = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b31e7cd28a15ce19f9360304ad7e47d5e4
+AES-GCM 33 byte body = f0c42097b2c54f3e8371b5ef4df2aa4188f037ddc2136ca32f2a8d5ceb0ea31418adf9f5b5b92b7ab37bf124e7f13f4fbf
+AES-CBC 32 byte body = 9e3c311788a3dae7a3a6018da2c98cc6c7a8dfeeb23acb56f001e9d69664e84b0d8d570ee4e8f1387377de0b846aa59c
+AES-KW wrap 32 bytes = 0e7808f506f2c3e7aa6edad793ac4495b093eb482e5c7ca9c170c9faa07dc0cbbb87512e19fd4092
+AES-KW unwrap corrupted = THREW OperationError: 
+AES-KW 256-bit kek = 64e8c3f9ce0f5ba263e9777905818a2a93c8191e7d6e8ae7
+exportKey raw of a jwk-imported key = 000102030405060708090a0b0c0d0e0f
+AES-KW wrap 8 bytes = THREW OperationError: The provided data is too small
+registry "SHA-1" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': SHA-1: Unsupported operation: encrypt
+registry "SHA-256" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': SHA-256: Unsupported operation: encrypt
+registry "SHA-384" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': SHA-384: Unsupported operation: encrypt
+registry "SHA-512" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': SHA-512: Unsupported operation: encrypt
+registry "sha-256" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': SHA-256: Unsupported operation: encrypt
+registry "hmac" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': HMAC: Unsupported operation: encrypt
+registry "ecdsa" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': ECDSA: Unsupported operation: encrypt
+registry "ed25519" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Ed25519: Unsupported operation: encrypt
+registry "RSASSA-PKCS1-v1_5" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': RSASSA-PKCS1-v1_5: Unsupported operation: encrypt
+registry "RSA-PSS" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': RSA-PSS: Unsupported operation: encrypt
+registry "Ed25519" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Ed25519: Unsupported operation: encrypt
+registry "Ed448" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "X448" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "AES-CMAC" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "AES-CFB" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "RSAES-PKCS1-v1_5" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "CONCAT" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "DH" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "SHA-3" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "X963-KDF" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "ML-DSA-44" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+registry "ML-KEM-768" = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': Algorithm: Unrecognized name
+order: wrong algorithm AND wrong usage = THREW InvalidAccessError: key.algorithm does not match that of operation
+order: unsupported operation AND wrong usage = THREW NotSupportedError: Failed to execute 'encrypt' on 'SubtleCrypto': HMAC: Unsupported operation: encrypt
+order: bad params AND wrong usage = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCbcParams: iv: Missing required property
+AesCtrParams counter missing = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCtrParams: counter: Missing required property
+AesCtrParams length missing = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCtrParams: length: Missing required property
+AesCtrParams counter not a buffer = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCtrParams: counter: Not a BufferSource
+AesCbcParams iv not a buffer = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AesCbcParams: iv: Not a BufferSource
+AeadParams tagLength 0 = THREW OperationError: The tag length is invalid: Must be 32, 64, 96, 104, 112, 120, or 128 bits
+AeadParams tagLength 64 = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b322e41347c431738b
+AeadParams tagLength 104 = 949d7784f785106ad068eda61eb8fa5eaede0dbeec2347941443a861c231cd2f20e112ecc05ea0259133c7b322e41347c431738bb804f87ad4
+AeadParams tagLength 256 = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AeadParams: tagLength: Outside of numeric range
+AeadParams additionalData not a buffer = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': AeadParams: additionalData: Not a BufferSource
+data not a BufferSource = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': The provided value is not of type '(ArrayBuffer or ArrayBufferView)'.
+key not a CryptoKey = THREW TypeError: Failed to execute 'encrypt' on 'SubtleCrypto': parameter 2 is not of type 'CryptoKey'.
+AES-CTR length 1 two blocks = 37cfdd47d5e03559a837d42ab2a9acac1e3f971542f8ff2689cb557228bd293a
+AES-CTR length 1 three blocks = THREW DataError: The input is too large for the counter length.
+wrapKey with an HMAC wrapping key = THREW NotSupportedError: Failed to execute 'wrapKey' on 'SubtleCrypto': HMAC: Unsupported operation: wrapKey
+wrapKey algorithm unrecognized = THREW NotSupportedError: Failed to execute 'wrapKey' on 'SubtleCrypto': Algorithm: Unrecognized name
+unwrapKey unwrappedKeyAlgorithm unrecognized = THREW NotSupportedError: Failed to execute 'unwrapKey' on 'SubtleCrypto': Algorithm: Unrecognized name
+unwrapKey into an HMAC key = {"name":"HMAC","hash":{"name":"SHA-256"},"length":256} 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
+unwrapKey into an AES-KW key = {"name":"AES-KW","length":128} ["wrapKey","unwrapKey"]
+unwrapKey into a PBKDF2 key = {"name":"PBKDF2"}
+wrapKey with an AES-KW key that only unwraps = THREW InvalidAccessError: key.usages does not permit this operation
+importKey spki RSA-OAEP = ok public {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["encrypt"] ext=true
+importKey pkcs8 RSA-OAEP = ok private {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["decrypt"] ext=true
+importKey spki RSASSA-PKCS1-v1_5 = ok public {"name":"RSASSA-PKCS1-v1_5","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["verify"] ext=true
+importKey pkcs8 RSASSA-PKCS1-v1_5 = ok private {"name":"RSASSA-PKCS1-v1_5","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["sign"] ext=true
+importKey spki RSA-PSS = ok public {"name":"RSA-PSS","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["verify"] ext=true
+importKey spki ECDSA P-256 = ok public {"name":"ECDSA","namedCurve":"P-256"} ["verify"] ext=true
+importKey pkcs8 ECDSA P-256 = ok private {"name":"ECDSA","namedCurve":"P-256"} ["sign"] ext=true
+importKey spki ECDH P-256 = ok public {"name":"ECDH","namedCurve":"P-256"} [] ext=true
+importKey pkcs8 ECDH P-256 = ok private {"name":"ECDH","namedCurve":"P-256"} ["deriveBits"] ext=true
+importKey raw ECDSA P-256 = ok public {"name":"ECDSA","namedCurve":"P-256"} ["verify"] ext=true
+importKey raw RSA-OAEP = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey spki AES-CBC = THREW NotSupportedError: Unsupported import key format for algorithm
+importKey spki RSA 512 = 512
+importKey spki RSA 1024 = 1024
+importKey spki RSA 3072 = 3072
+importKey spki RSA e=3 = {"0":3}
+importKey pkcs8 RSA 512 = 512
+importKey spki ECDSA P-384 = {"name":"ECDSA","namedCurve":"P-384"}
+importKey spki ECDSA P-521 = {"name":"ECDSA","namedCurve":"P-521"}
+importKey spki ECDSA secp256k1 = THREW NotSupportedError: Failed to execute 'importKey' on 'SubtleCrypto': EcKeyImportParams: Unrecognized namedCurve
+importKey spki ECDSA P-256 curve K-256 = THREW DataError: 
+importKey spki ECDSA curve mismatch = THREW DataError: The imported EC key specifies a different curve than requested
+importKey spki ECDSA namedCurve bogus = THREW NotSupportedError: Failed to execute 'importKey' on 'SubtleCrypto': EcKeyImportParams: Unrecognized namedCurve
+importKey spki ECDSA namedCurve missing = THREW TypeError: Failed to execute 'importKey' on 'SubtleCrypto': EcKeyImportParams: namedCurve: Missing or not a string
+importKey spki truncated = THREW DataError: 
+importKey spki empty = THREW DataError: 
+importKey spki garbage = THREW DataError: 
+importKey spki trailing byte = THREW DataError: 
+importKey pkcs8 truncated = THREW DataError: 
+importKey pkcs8 is really a spki = THREW DataError: 
+importKey spki is really a pkcs8 = THREW DataError: 
+importKey spki of an EC key as RSA = THREW DataError: 
+importKey spki of an RSA key as ECDSA = THREW DataError: 
+importKey raw ECDSA not a point = THREW DataError: 
+importKey raw ECDSA 64 bytes = THREW DataError: 
+importKey spki RSA-OAEP [decrypt] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey pkcs8 RSA-OAEP [encrypt] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey spki RSA-OAEP [] = ok public {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} [] ext=true
+importKey pkcs8 RSA-OAEP [] = THREW SyntaxError: Usages cannot be empty when creating a key.
+importKey spki RSA-OAEP [wrapKey] = ok public {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["wrapKey"] ext=true
+importKey spki RSA-OAEP [sign] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey spki ECDSA [sign] = THREW SyntaxError: Cannot create a key using the specified key usages.
+importKey pkcs8 ECDH [deriveKey,deriveBits] = ok private {"name":"ECDH","namedCurve":"P-256"} ["deriveKey","deriveBits"] ext=true
+importKey spki ECDH [deriveBits] = THREW SyntaxError: Cannot create a key using the specified key usages.
+exportKey jwk RSA-OAEP public = {"alg":"RSA-OAEP-256","e":"AQAB","ext":true,"key_ops":["encrypt"],"kty":"RSA","n":"4o3WFyiJY66WODreGbF_H_cMDKhMqAf98Nk2fgc4sXbNZQz9uw8clk48WHVueE7mxDOOMRw1D8rwX_O-7uyrr8LSLROMiPrf68uB0Ya8CRlmoFmcHfcquBOhYnCKgQ043UbVWuuH68tut_GUfTsqtkE_fCTK8FBG_LIcPlyb7WUYjctuhrVeI8bii7ubIzr12v8DJKzjSSpUm30d51LVoeOLvNsI96-ZKMSJrMcLfjs6_ez2pIDXIJVP9-bUA7jnX4HYS48-pTIMSq31Y94jRfeExR5rT1j7iHg-ifGAcDbtDUrKIO3fkwtGrkxob6cOj_kQm2-pHvblUXlD6fTF4w"}
+exportKey jwk RSA-OAEP private keys = alg,d,dp,dq,e,ext,key_ops,kty,n,p,q,qi alg=RSA-OAEP-256 kty=RSA n=342 d=342
+exportKey jwk RSASSA public alg = RS256
+exportKey jwk ECDSA public = {"crv":"P-256","ext":true,"key_ops":["verify"],"kty":"EC","x":"tg-QANEvDAw2qBk4NMo9I20VjSC_XjvIie4oSijdiKw","y":"UYeCsnyhHWVBhqad1fUJE9-cGwwidNbGKZO3nd3dbPA"}
+exportKey jwk ECDSA private keys = crv,d,ext,key_ops,kty,x,y crv=P-256 d=43
+exportKey jwk ECDH public = {"crv":"P-256","ext":true,"key_ops":[],"kty":"EC","x":"YTEqa_0Kdq0NP5-UxrUaxrNvgfpcfUNH_qQBG0MQYgM","y":"q7gRjzgFLbg2IKBjRgaoB7IsQIANg7Eq-7kG1mGcqZ4"}
+importKey jwk RSA-OAEP public = ok public {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["encrypt"] ext=true
+importKey jwk RSA-OAEP private = ok private {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["decrypt"] ext=true
+importKey jwk ECDSA public = ok public {"name":"ECDSA","namedCurve":"P-256"} ["verify"] ext=true
+importKey jwk RSA alg mismatch = THREW DataError: The JWK "alg" member was inconsistent with that specified by the Web Crypto call
+importKey jwk RSA alg absent = ok public {"name":"RSA-OAEP","hash":{"name":"SHA-256"},"modulusLength":2048,"publicExponent":{"0":1,"1":0,"2":1}} ["encrypt"] ext=true
+importKey jwk RSA kty oct = THREW DataError: The JWK "kty" member was not "RSA"
+importKey jwk RSA n missing = THREW DataError: The required JWK member "n" was missing
+importKey jwk RSA e missing = THREW DataError: The required JWK member "e" was missing
+importKey jwk RSA n not base64url = THREW DataError: The JWK member "n" could not be base64url decoded or contained padding
+importKey jwk RSA private d only = THREW DataError: The required JWK member "p" was missing
+importKey jwk RSA private p missing = THREW DataError: The required JWK member "p" was missing
+importKey jwk EC crv mismatch = THREW DataError: The JWK's "crv" member specifies a different curve than requested
+importKey jwk EC kty mismatch = THREW DataError: The JWK "kty" member was not "EC"
+importKey jwk EC y missing = THREW DataError: The required JWK member "y" was missing
+importKey jwk EC x short = THREW DataError: The JWK's "x" member defines an octet string of length 30 bytes but should be 32
+importKey jwk EC use sig on ECDH = ok public {"name":"ECDH","namedCurve":"P-256"} [] ext=true
+importKey jwk RSA key_ops narrower = THREW DataError: The JWK "key_ops" member was inconsistent with that specified by the Web Crypto call. The JWK usage must be a superset of those requested
+importKey jwk RSA ext false = THREW DataError: The "ext" member of the JWK dictionary is inconsistent what that specified by the Web Crypto call
+exportKey spki round trip = true
+exportKey pkcs8 round trip = true
+exportKey spki EC round trip = true
+exportKey pkcs8 EC round trip = true
+exportKey raw ECDSA public = 04b60f9000d12f0c0c36a8193834ca3d236d158d20bf5e3bc889ee284a28dd88ac518782b27ca11d654186a69dd5f50913df9c1b0c2274d6c62993b79ddddd6cf0
+exportKey raw ECDSA private = THREW InvalidAccessError: The key is not of the expected type
+exportKey spki on a private key = THREW InvalidAccessError: The key is not of the expected type
+exportKey pkcs8 on a public key = THREW InvalidAccessError: The key is not of the expected type
+RSASSA-PKCS1-v1_5 sign SHA-256 = 3ee4db9e3e1cf845c64ef0e42c3a35566003d7c5f46d5d575a9e0a994af34bc75f052c31997608fb6a3fa207ce5d038634255b5425b61a70a94d2bcac1468f8057bbf1ffe4c95fc84e22001b3643ae1a682d82eb845ebb6a019a474efeca46c2d5d53bbecc7c633670d99fee6ed3c234edd95d51ccb8a0eaf2099c6ef6c8e65c6d57ed6d21eef40ade8fdf6f725f0acfd05760a9838e2337f4d3fd637a4b41134cc89238da3e0c938dfd1848ee1374e5e669a8984996cf996894055ad8eb03992701afcb1e7a41beb75c96c6ffb98f8641324956066bb4e000d7fb07fe40462c06b8a12822615092185ac719f5e3002fc508b2b397a8155f4ddfa1e9bcc0e496
+RSASSA-PKCS1-v1_5 verify = true
+RSASSA-PKCS1-v1_5 verify tampered = false
+RSASSA-PKCS1-v1_5 sign with the public key = THREW InvalidAccessError: key.usages does not permit this operation
+RSASSA-PKCS1-v1_5 sign SHA-1 = c9d54ec40b1c272591c01d180bd71551bd28824dec71b04c112564116ede9d62bc93e785435c02739f11396556d0d16a4ca0216aeb79415514aa85af2e207487c6eff2fbcc6039cc6174a87ac419cc221772f80b8a12bbf701222f10dce1fd8188bbfe0d0ab786233860a0103e168fcb575c44caf17fba10c5572560d008c044e3a84d5231a599a31c77afbe812069b2d1ad6f636a0d6dddecbb47d92131aa97038345a745bea113f0dd63ab927395768b921a07c8a9f806e0da53ccbab5e8357b542d1b215945712ea9ebaf7a0fd48fb64fae128e3a2a714ba27f6fc7d6781e7fa2ae5d3a15a3866446b4443cbbc09d8fd63dfc146d2c2d12f15a350ecf72e8
+RSASSA-PKCS1-v1_5 sign SHA-512 = 2d4e76f548eb871ae370d67d44162e9bc65e1f9a70199b13d3f5df6ca61c2b0c1bef8fd6d323fc1e01965767025418a9cd735a49b6203dcd9036fd2b3e2489929d13a3b9d6ce7ec4df07c84057794082172310cb58ad01d8f6afe2991509e1bf899034cb07da8e65d7e3eb30770c3c642bdd6e3156ce7b4cb000c8290f883d5bae3bfe9e2f8ecdf096e351402c2df7394e3087a4af244d273a385a11722a48e078a2ede0beacbb33cd363ee2489f8885a3be7a730e286abd0beaa5c42fc509e3c6b7269cc79a53e3fc88743598781682f160a706ba51c300b05117ff20f428525db94c09fdf086fbecebffcc9d2c5caecf62253dec084a6b51c25cc8435d6e77
+RSASSA-PKCS1-v1_5 sign 512-bit key SHA-512 = THREW OperationError: 
+RSA-OAEP round trip = The quick brown fox jumps over the lazy dog.
+RSA-OAEP round trip with a label = The quick brown fox jumps over the lazy dog.
+RSA-OAEP label mismatch = THREW OperationError: 
+RSA-OAEP too long = THREW OperationError: 
+RSA-OAEP largest that fits = 256
+RSA-OAEP one too many = THREW OperationError: 
+RSA-OAEP decrypt garbage = THREW OperationError: 
+RSA-OAEP encrypt with the private key = THREW InvalidAccessError: key.usages does not permit this operation
+RSA-PSS round trip = true
+RSA-PSS saltLength 0 = 4ed29567834ae48ad02932a6f7ac7c0f243da395af267aed981d31ecdc65b2be87e0932e5400b33ca116f54b674ca40ce99ae3e80708c2924d3d19688d66f83d380c341a53c34a48cfddde59eaafef6167a7d50a1ea9b27b61381e64d2d03c1ea1bcfe76dcea52bcc0b1509a0e541d5ed4e0783d86bb5138d5408bd3fad2b807d7f8eab93f9d3213a52cc2684dc48ce6a1523c197a208ae7c2147fa5ff1064142ceeaea8e88d249ae2179023a74e5f1577d0f831337f3851630a0d5133f909a69d17c94e6195fde2801063475ba3439dc25e93e7b3b28e76af742d6590877288cdc55df1a4255adc3a6d530c15d52f52ce8ae9286007552fe2d7b7d58204f9ce
+RSA-PSS saltLength too large = THREW OperationError: 
+RSA-PSS saltLength missing = THREW TypeError: Failed to execute 'sign' on 'SubtleCrypto': RsaPssParams: saltLength: Missing required property
+ECDSA round trip = true
+ECDSA signature length = 64
+ECDSA verify a DER signature = false
+ECDSA hash missing = THREW TypeError: Failed to execute 'sign' on 'SubtleCrypto': EcdsaParams: hash: Missing or not an AlgorithmIdentifier
+ECDSA P-521 round trip = 132 true
+ECDH deriveBits 256 = 4bb91467513b995fe0d22aec8fa9e4a7a8217d6794d9cdfccca0a1bca733ccc5
+ECDH deriveBits null length = 4bb91467513b995fe0d22aec8fa9e4a7a8217d6794d9cdfccca0a1bca733ccc5
+ECDH deriveBits 128 = 4bb91467513b995fe0d22aec8fa9e4a7
+ECDH deriveBits 257 = THREW OperationError: Length specified for ECDH key derivation is too large. Maximum allowed is 256 bits
+ECDH deriveBits 4 = 40
+ECDH public is a private key = THREW InvalidAccessError: The public parameter for ECDH key derivation is not a public EC key
+ECDH public missing = THREW TypeError: Failed to execute 'deriveBits' on 'SubtleCrypto': EcdhKeyDeriveParams: public: Missing required property
+ECDH deriveKey to AES-GCM = THREW InvalidAccessError: key.usages does not permit this operation
+generateKey RSA-OAEP 2048 = 294 public private ["encrypt"] ["decrypt"]
+generateKey RSA-OAEP 1024 = 1024
+generateKey RSA-OAEP 512 = 512
+generateKey RSA-OAEP exponent 3 = {"0":3}
+generateKey RSA-OAEP exponent 4 = THREW OperationError: The "publicExponent" must be either 3 or 65537
+generateKey RSA-OAEP no hash = THREW TypeError: Failed to execute 'generateKey' on 'SubtleCrypto': RsaHashedKeyGenParams: hash: Missing or not an AlgorithmIdentifier
+generateKey ECDSA P-256 = {"name":"ECDSA","namedCurve":"P-256"} 65
+generateKey ECDSA P-521 = 133
+generateKey ECDSA bogus curve = THREW NotSupportedError: Failed to execute 'generateKey' on 'SubtleCrypto': EcKeyGenParams: Unrecognized namedCurve
+generateKey ECDH P-256 usages = [] ["deriveKey","deriveBits"]
+generateKey ECDSA with encrypt = THREW SyntaxError: Cannot create a key using the specified key usages.
+wrapKey raw under RSA-OAEP = 256 000102030405060708090a0b0c0d0e0f
+wrapKey jwk under RSA-OAEP = 000102030405060708090a0b0c0d0e0f
+wrapKey spki of an RSA public key under AES-KW = THREW DataError: The AES-KW input data length is invalid: not a multiple of 8 bytes
+wrapKey pkcs8 of an RSA private key under AES-KW = THREW DataError: The AES-KW input data length is invalid: not a multiple of 8 bytes
+wrapKey raw of an EC public key under AES-KW = THREW DataError: The AES-KW input data length is invalid: not a multiple of 8 bytes
+wrapKey too big for the RSA key = THREW OperationError: 
+unwrapKey RSA-OAEP garbage = THREW OperationError: 

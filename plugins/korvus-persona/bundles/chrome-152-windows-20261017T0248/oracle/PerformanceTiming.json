@@ -1,0 +1,667 @@
+[
+  {
+    "iface": "PerformanceTiming",
+    "member": "constructor",
+    "expr": "new PerformanceTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectStart",
+    "expr": "(() => { const o = performance.timing; return o.redirectStart; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectEnd",
+    "expr": "(() => { const o = performance.timing; return o.redirectEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "secureConnectionStart",
+    "expr": "(() => { const o = performance.timing; return o.secureConnectionStart; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "(() => { const o = performance.timing; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "navigationStart",
+    "expr": "typeof performance.timing.navigationStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "navigationStart",
+    "expr": "performance.timing.toJSON().navigationStart === performance.timing.navigationStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "navigationStart",
+    "expr": "performance.timing.navigationStart > 1500000000000",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "navigationStart",
+    "expr": "performance.timing.navigationStart <= Date.now()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "navigationStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"navigationStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventStart",
+    "expr": "typeof performance.timing.unloadEventStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventStart",
+    "expr": "performance.timing.toJSON().unloadEventStart === performance.timing.unloadEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventStart",
+    "expr": "performance.timing.unloadEventStart >= 0",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"unloadEventStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventEnd",
+    "expr": "typeof performance.timing.unloadEventEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventEnd",
+    "expr": "performance.timing.toJSON().unloadEventEnd === performance.timing.unloadEventEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventEnd",
+    "expr": "performance.timing.unloadEventEnd >= performance.timing.unloadEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "unloadEventEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"unloadEventEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectStart",
+    "expr": "typeof performance.timing.redirectStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectStart",
+    "expr": "performance.timing.toJSON().redirectStart === performance.timing.redirectStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectStart",
+    "expr": "performance.timing.redirectStart",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"redirectStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectEnd",
+    "expr": "typeof performance.timing.redirectEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectEnd",
+    "expr": "performance.timing.toJSON().redirectEnd === performance.timing.redirectEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectEnd",
+    "expr": "performance.timing.redirectEnd",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "redirectEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"redirectEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "fetchStart",
+    "expr": "typeof performance.timing.fetchStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "fetchStart",
+    "expr": "performance.timing.toJSON().fetchStart === performance.timing.fetchStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "fetchStart",
+    "expr": "performance.timing.fetchStart >= performance.timing.navigationStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "fetchStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"fetchStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupStart",
+    "expr": "typeof performance.timing.domainLookupStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupStart",
+    "expr": "performance.timing.toJSON().domainLookupStart === performance.timing.domainLookupStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupStart",
+    "expr": "performance.timing.domainLookupStart >= performance.timing.fetchStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domainLookupStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupEnd",
+    "expr": "typeof performance.timing.domainLookupEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupEnd",
+    "expr": "performance.timing.toJSON().domainLookupEnd === performance.timing.domainLookupEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupEnd",
+    "expr": "performance.timing.domainLookupEnd >= performance.timing.domainLookupStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domainLookupEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domainLookupEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectStart",
+    "expr": "typeof performance.timing.connectStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectStart",
+    "expr": "performance.timing.toJSON().connectStart === performance.timing.connectStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectStart",
+    "expr": "performance.timing.connectStart >= performance.timing.domainLookupEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"connectStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectEnd",
+    "expr": "typeof performance.timing.connectEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectEnd",
+    "expr": "performance.timing.toJSON().connectEnd === performance.timing.connectEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectEnd",
+    "expr": "performance.timing.connectEnd >= performance.timing.connectStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "connectEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"connectEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "secureConnectionStart",
+    "expr": "typeof performance.timing.secureConnectionStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "secureConnectionStart",
+    "expr": "performance.timing.toJSON().secureConnectionStart === performance.timing.secureConnectionStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "secureConnectionStart",
+    "expr": "performance.timing.secureConnectionStart",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "secureConnectionStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"secureConnectionStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "requestStart",
+    "expr": "typeof performance.timing.requestStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "requestStart",
+    "expr": "performance.timing.toJSON().requestStart === performance.timing.requestStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "requestStart",
+    "expr": "performance.timing.requestStart >= performance.timing.connectEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "requestStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"requestStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseStart",
+    "expr": "typeof performance.timing.responseStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseStart",
+    "expr": "performance.timing.toJSON().responseStart === performance.timing.responseStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseStart",
+    "expr": "performance.timing.responseStart >= performance.timing.requestStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"responseStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseEnd",
+    "expr": "typeof performance.timing.responseEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseEnd",
+    "expr": "performance.timing.toJSON().responseEnd === performance.timing.responseEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseEnd",
+    "expr": "performance.timing.responseEnd >= performance.timing.responseStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "responseEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"responseEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domLoading",
+    "expr": "typeof performance.timing.domLoading",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domLoading",
+    "expr": "performance.timing.toJSON().domLoading === performance.timing.domLoading",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domLoading",
+    "expr": "performance.timing.domLoading >= performance.timing.responseStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domLoading",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domLoading\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domInteractive",
+    "expr": "typeof performance.timing.domInteractive",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domInteractive",
+    "expr": "performance.timing.toJSON().domInteractive === performance.timing.domInteractive",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domInteractive",
+    "expr": "performance.timing.domInteractive >= performance.timing.responseStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domInteractive",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domInteractive\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventStart",
+    "expr": "typeof performance.timing.domContentLoadedEventStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventStart",
+    "expr": "performance.timing.toJSON().domContentLoadedEventStart === performance.timing.domContentLoadedEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventStart",
+    "expr": "performance.timing.domContentLoadedEventStart >= performance.timing.domInteractive",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domContentLoadedEventStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventEnd",
+    "expr": "typeof performance.timing.domContentLoadedEventEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventEnd",
+    "expr": "performance.timing.toJSON().domContentLoadedEventEnd === performance.timing.domContentLoadedEventEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventEnd",
+    "expr": "performance.timing.domContentLoadedEventEnd >= performance.timing.domContentLoadedEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domContentLoadedEventEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domContentLoadedEventEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domComplete",
+    "expr": "typeof performance.timing.domComplete",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domComplete",
+    "expr": "performance.timing.toJSON().domComplete === performance.timing.domComplete",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domComplete",
+    "expr": "performance.timing.domComplete >= performance.timing.domContentLoadedEventEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "domComplete",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"domComplete\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventStart",
+    "expr": "typeof performance.timing.loadEventStart",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventStart",
+    "expr": "performance.timing.toJSON().loadEventStart === performance.timing.loadEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventStart",
+    "expr": "performance.timing.loadEventStart >= performance.timing.domComplete",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"loadEventStart\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventEnd",
+    "expr": "typeof performance.timing.loadEventEnd",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventEnd",
+    "expr": "performance.timing.toJSON().loadEventEnd === performance.timing.loadEventEnd",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventEnd",
+    "expr": "performance.timing.loadEventEnd >= performance.timing.loadEventStart",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "loadEventEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, \"loadEventEnd\").get.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "typeof performance.timing.toJSON()",
+    "expected": "object",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "Object.keys(performance.timing.toJSON()).length",
+    "expected": 21,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "Object.keys(performance.timing.toJSON()).includes(\"navigationStart\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "PerformanceTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceTiming",
+    "member": "toJSON",
+    "expr": "PerformanceTiming.prototype.toJSON.call(Object.create(PerformanceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CommandEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CommandEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CommandEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CommandEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CommandEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CommandEvent",
+    "member": "source",
+    "expr": "(() => { const o = new CommandEvent(\"x\"); return o.source; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CommandEvent",
+    "member": "command",
+    "expr": "(() => { const o = new CommandEvent(\"x\"); return o.command; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

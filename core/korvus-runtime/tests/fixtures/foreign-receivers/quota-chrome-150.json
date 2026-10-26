@@ -1,0 +1,17 @@
+[
+["order", "micro,t0,q,r,rneg,r0"],
+["details", [["q", "number", "number", 2, true, true, true, true], ["r", "number", 1024, 1], ["rneg", "number", true, 1], ["r0", 0]]],
+["q()", "THROW TypeError: Failed to execute 'queryUsageAndQuota' on 'DeprecatedStorageQuota': 1 argument required, but only 0 present."],
+["q(1)", "THROW TypeError: Failed to execute 'queryUsageAndQuota' on 'DeprecatedStorageQuota': parameter 1 is not of type 'Function'."],
+["q(fn, 1)", "THROW TypeError: Failed to execute 'queryUsageAndQuota' on 'DeprecatedStorageQuota': parameter 2 is not of type 'Function'."],
+["q(fn, null)", "undefined"],
+["q(null)", "THROW TypeError: Failed to execute 'queryUsageAndQuota' on 'DeprecatedStorageQuota': parameter 1 is not of type 'Function'."],
+["r()", "THROW TypeError: Failed to execute 'requestQuota' on 'DeprecatedStorageQuota': 1 argument required, but only 0 present."],
+["r(1, 1)", "THROW TypeError: Failed to execute 'requestQuota' on 'DeprecatedStorageQuota': parameter 2 is not of type 'Function'."],
+["r(1, null, 2)", "THROW TypeError: Failed to execute 'requestQuota' on 'DeprecatedStorageQuota': parameter 3 is not of type 'Function'."],
+["r(Symbol())", "THROW TypeError: Failed to execute 'requestQuota' on 'DeprecatedStorageQuota': Cannot convert a Symbol value to a number"],
+["r(10n)", "THROW TypeError: Failed to execute 'requestQuota' on 'DeprecatedStorageQuota': Cannot convert a BigInt value to a number"],
+["r(1)", "undefined"],
+["same", "string"],
+["onerror", ["Uncaught Error: cbthrow"]]
+]

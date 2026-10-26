@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "constructor",
+    "expr": "new XRCPUDepthInformation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "data",
+    "expr": "XRCPUDepthInformation.prototype.data",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "data",
+    "expr": "Object.getOwnPropertyDescriptor(XRCPUDepthInformation.prototype, \"data\").get.call(Object.create(XRCPUDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "getDepthInMeters",
+    "expr": "XRCPUDepthInformation.prototype.getDepthInMeters.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "getDepthInMeters",
+    "expr": "XRCPUDepthInformation.prototype.getDepthInMeters.call(Object.create(XRCPUDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "getDepthInMeters",
+    "expr": "XRCPUDepthInformation.prototype.getDepthInMeters.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "data",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCPUDepthInformation.prototype, \"data\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "data",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCPUDepthInformation.prototype, \"data\").get.call(Object.create(XRCPUDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "getDepthInMeters",
+    "expr": "(() => { try { const v = XRCPUDepthInformation.prototype[\"getDepthInMeters\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRCPUDepthInformation",
+    "member": "getDepthInMeters",
+    "expr": "(() => { try { const v = XRCPUDepthInformation.prototype[\"getDepthInMeters\"].call(Object.create(XRCPUDepthInformation.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

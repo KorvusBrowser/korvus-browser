@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "constructor",
+    "expr": "new GPUCommandBuffer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "GPUCommandBuffer.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").get.call(Object.create(GPUCommandBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").get.call(Object.create(GPUCommandBuffer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandBuffer",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUCommandBuffer.prototype, \"label\").set.call(Object.create(GPUCommandBuffer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

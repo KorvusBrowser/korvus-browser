@@ -1,0 +1,46 @@
+[
+[
+"getTiming",
+"delay,direction,duration,easing,endDelay,fill,iterationStart,iterations"
+],
+[
+"getComputedTiming",
+"delay,direction,duration,easing,endDelay,fill,iterationStart,iterations,activeDuration,currentIteration,endTime,localTime,progress"
+],
+[
+"getKeyframes[0]",
+"offset,easing,composite,opacity,computedOffset"
+],
+[
+"getKeyframes[1]",
+"offset,easing,composite,opacity,computedOffset"
+],
+[
+"getComputedTiming paused",
+"{\"delay\":0,\"direction\":\"normal\",\"duration\":PORT,\"easing\":\"linear\",\"endDelay\":0,\"fill\":\"none\",\"iterationStart\":0,\"iterations\":1,\"activeDuration\":PORT,\"currentIteration\":0,\"endTime\":PORT,\"localTime\":PORT,\"progress\":0.5}"
+],
+[
+"getComputedTiming idle",
+"{\"delay\":0,\"direction\":\"normal\",\"duration\":PORT,\"easing\":\"linear\",\"endDelay\":0,\"fill\":\"none\",\"iterationStart\":0,\"iterations\":1,\"activeDuration\":PORT,\"currentIteration\":null,\"endTime\":PORT,\"localTime\":null,\"progress\":null}"
+],
+[
+"getTiming full",
+"{\"delay\":PORT,\"direction\":\"normal\",\"duration\":PORT,\"easing\":\"ease-in\",\"endDelay\":0,\"fill\":\"both\",\"iterationStart\":0,\"iterations\":2}"
+],
+[
+"KeyframeEffect getKeyframes",
+"[{\"offset\":0,\"easing\":\"linear\",\"composite\":\"add\",\"color\":\"red\",\"computedOffset\":0},{\"offset\":null,\"easing\":\"steps(2)\",\"composite\":\"auto\",\"color\":\"blue\",\"computedOffset\":1}]"
+],
+[
+"KeyframeEffect getComputedTiming",
+"{\"delay\":0,\"direction\":\"normal\",\"duration\":PORT,\"easing\":\"linear\",\"endDelay\":0,\"fill\":\"none\",\"iterationStart\":0,\"iterations\":1,\"activeDuration\":PORT,\"currentIteration\":null,\"endTime\":PORT,\"localTime\":null,\"progress\":null}"
+],
+[
+"CSSAnimation getTiming",
+"{\"delay\":PORT,\"direction\":\"alternate\",\"duration\":PORT,\"easing\":\"linear\",\"endDelay\":0,\"fill\":\"both\",\"iterationStart\":0,\"iterations\":null}"
+],
+[
+"CSSAnimation getKeyframes[0]",
+"offset,easing,composite,opacity,computedOffset"
+]
+]

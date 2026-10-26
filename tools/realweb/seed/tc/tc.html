@@ -1,0 +1,10 @@
+<!doctype html><title>tc</title><script>
+const r = {};
+try { const t = new TaskController({priority: 'background'}); r.ctor = 'ok'; r.isAbortController = t instanceof AbortController;
+  try { r.signal = String(t.signal); r.priority = t.signal.priority; } catch (e) { r.signal = 'THROW ' + e.message; }
+  try { t.setPriority('user-visible'); r.setPriority = t.signal.priority; } catch (e) { r.setPriority = 'THROW ' + e.message; }
+  try { t.abort(); r.aborted = t.signal.aborted; } catch (e) { r.abort = 'THROW ' + e.message; }
+} catch (e) { r.ctor = 'THROW ' + e.message; }
+try { r.schedulerPostTask = typeof scheduler === 'object' && typeof scheduler.postTask; } catch (e) {}
+document.title = JSON.stringify(r);
+</script>

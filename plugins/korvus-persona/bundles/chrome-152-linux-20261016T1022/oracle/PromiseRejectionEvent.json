@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "PromiseRejectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PromiseRejectionEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PromiseRejectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PromiseRejectionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PromiseRejectionEvent",
+    "member": "reason",
+    "expr": "(() => { const o = new PromiseRejectionEvent(\"x\", { promise: Promise.resolve(), reason: 1 }); return o.reason; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PromiseRejectionEvent",
+    "member": "promise",
+    "expr": "(() => { const o = new PromiseRejectionEvent(\"x\", { promise: Promise.resolve(), reason: 1 }); return Object.prototype.toString.call(o.promise); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

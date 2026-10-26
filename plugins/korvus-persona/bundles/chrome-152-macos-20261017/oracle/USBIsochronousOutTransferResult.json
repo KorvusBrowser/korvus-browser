@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "constructor",
+    "expr": "(() => { const o = new USBIsochronousOutTransferResult([]); return Object.prototype.toString.call(o); })()",
+    "expected": "[object USBIsochronousOutTransferResult]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "constructor",
+    "expr": "(() => { const o = new USBIsochronousOutTransferResult(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "packets",
+    "expr": "(() => { const o = new USBIsochronousOutTransferResult([]); return o.packets; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "constructor",
+    "expr": "new USBIsochronousOutTransferResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "packets",
+    "expr": "new USBIsochronousOutTransferResult([new USBIsochronousOutTransferPacket(\"ok\", 2)]).packets.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "packets",
+    "expr": "new USBIsochronousOutTransferResult([new USBIsochronousOutTransferPacket(\"ok\", 2)]).packets[0].bytesWritten",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBIsochronousOutTransferResult",
+    "member": "packets",
+    "expr": "Object.isFrozen(new USBIsochronousOutTransferResult([]).packets)",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

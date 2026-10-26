@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRVisibilityMaskChangeEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRVisibilityMaskChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "session",
+    "expr": "XRVisibilityMaskChangeEvent.prototype.session",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "session",
+    "expr": "Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"session\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "eye",
+    "expr": "XRVisibilityMaskChangeEvent.prototype.eye",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "eye",
+    "expr": "Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"eye\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "index",
+    "expr": "XRVisibilityMaskChangeEvent.prototype.index",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "index",
+    "expr": "Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"index\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "vertices",
+    "expr": "XRVisibilityMaskChangeEvent.prototype.vertices",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "vertices",
+    "expr": "Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"vertices\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "indices",
+    "expr": "XRVisibilityMaskChangeEvent.prototype.indices",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "indices",
+    "expr": "Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"indices\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"session\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"session\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "eye",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"eye\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "eye",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"eye\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "index",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"index\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "index",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"index\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "vertices",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"vertices\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "vertices",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"vertices\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "indices",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"indices\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRVisibilityMaskChangeEvent",
+    "member": "indices",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRVisibilityMaskChangeEvent.prototype, \"indices\").get.call(Object.create(XRVisibilityMaskChangeEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

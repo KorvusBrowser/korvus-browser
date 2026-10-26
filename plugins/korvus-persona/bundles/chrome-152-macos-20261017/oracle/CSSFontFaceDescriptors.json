@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSFontFaceDescriptors",
+    "member": "constructor",
+    "expr": "new CSSFontFaceDescriptors()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

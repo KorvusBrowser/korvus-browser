@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "BluetoothUUID",
+    "member": "canonicalUUID",
+    "expr": "BluetoothUUID.canonicalUUID(1)",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BluetoothUUID",
+    "member": "constructor",
+    "expr": "new BluetoothUUID()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BluetoothUUID",
+    "member": "canonicalUUID",
+    "expr": "Object.prototype.toString.call(BluetoothUUID.canonicalUUID(1))",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

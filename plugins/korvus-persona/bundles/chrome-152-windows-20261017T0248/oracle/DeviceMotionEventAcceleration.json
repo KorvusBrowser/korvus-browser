@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "DeviceMotionEventAcceleration",
+    "member": "constructor",
+    "expr": "new DeviceMotionEventAcceleration()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceMotionEventAcceleration",
+    "member": "x",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { acceleration: { x: 1, y: 2, z: 3 } }).acceleration; return o.x; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceMotionEventAcceleration",
+    "member": "y",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { acceleration: { x: 1, y: 2, z: 3 } }).acceleration; return o.y; })()",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceMotionEventAcceleration",
+    "member": "z",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { acceleration: { x: 1, y: 2, z: 3 } }).acceleration; return o.z; })()",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

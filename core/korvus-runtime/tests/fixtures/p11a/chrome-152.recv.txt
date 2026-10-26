@@ -1,0 +1,101 @@
+document get.call({}) => THROW TypeError: Illegal invocation
+document get.call(undefined) => [object HTMLDocument] same=true
+document get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+document get identity => true
+window get.call({}) => THROW TypeError: Illegal invocation
+window get.call(undefined) => window same=true
+window get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+window get identity => true
+self get.call({}) => THROW TypeError: Illegal invocation
+self get.call(undefined) => window same=true
+self get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+self get identity => true
+self set.call({}, 7) => THROW TypeError: Illegal invocation
+top get.call({}) => THROW TypeError: Illegal invocation
+top get.call(undefined) => window same=true
+top get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+top get identity => true
+parent get.call({}) => THROW TypeError: Illegal invocation
+parent get.call(undefined) => window same=true
+parent get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+parent get identity => true
+parent set.call({}, 7) => THROW TypeError: Illegal invocation
+frames get.call({}) => THROW TypeError: Illegal invocation
+frames get.call(undefined) => window same=true
+frames get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+frames get identity => true
+frames set.call({}, 7) => THROW TypeError: Illegal invocation
+location get.call({}) => THROW TypeError: Illegal invocation
+location get.call(undefined) => [object Location] same=true
+location get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+location get identity => true
+location set.call({}, 7) => THROW TypeError: Illegal invocation
+navigator get.call({}) => THROW TypeError: Illegal invocation
+navigator get.call(undefined) => [object Navigator] same=true
+navigator get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+navigator get identity => true
+screen get.call({}) => THROW TypeError: Illegal invocation
+screen get.call(undefined) => [object Screen] same=true
+screen get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+screen get identity => true
+screen set.call({}, 7) => THROW TypeError: Illegal invocation
+performance get.call({}) => THROW TypeError: Illegal invocation
+performance get.call(undefined) => [object Performance] same=true
+performance get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+performance get identity => true
+performance set.call({}, 7) => THROW TypeError: Illegal invocation
+history get.call({}) => THROW TypeError: Illegal invocation
+history get.call(undefined) => [object History] same=true
+history get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+history get identity => true
+localStorage get.call({}) => THROW TypeError: Illegal invocation
+localStorage get.call(undefined) => [object Storage] same=true
+localStorage get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+localStorage get identity => true
+sessionStorage get.call({}) => THROW TypeError: Illegal invocation
+sessionStorage get.call(undefined) => [object Storage] same=true
+sessionStorage get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+sessionStorage get identity => true
+customElements get.call({}) => THROW TypeError: Illegal invocation
+customElements get.call(undefined) => [object CustomElementRegistry] same=true
+customElements get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+customElements get identity => true
+cookieStore get.call({}) => THROW TypeError: Illegal invocation
+cookieStore get.call(undefined) => [object CookieStore] same=true
+cookieStore get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+cookieStore get identity => true
+origin get.call({}) => THROW TypeError: Illegal invocation
+origin get.call(undefined) => string same=true
+origin get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+origin get identity => true
+origin set.call({}, 7) => THROW TypeError: Illegal invocation
+opener get.call({}) => THROW TypeError: Illegal invocation
+opener get.call(undefined) => null same=true
+opener get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+opener get identity => true
+opener set.call({}, 7) => THROW TypeError: Illegal invocation
+name get.call({}) => THROW TypeError: Illegal invocation
+name get.call(undefined) => string same=true
+name get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+name get identity => true
+name set.call({}, 7) => THROW TypeError: Illegal invocation
+crypto get.call({}) => THROW TypeError: Illegal invocation
+crypto get.call(undefined) => [object Crypto] same=true
+crypto get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+crypto get identity => true
+caches get.call({}) => THROW TypeError: Illegal invocation
+caches get.call(undefined) => [object CacheStorage] same=true
+caches get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+caches get identity => true
+indexedDB get.call({}) => THROW TypeError: Illegal invocation
+indexedDB get.call(undefined) => [object IDBFactory] same=true
+indexedDB get.call(Object.create(Window.prototype)) => THROW TypeError: Illegal invocation
+indexedDB get identity => true
+strict self = 7 => THROW TypeError: Cannot set property navigator of #<Window> which has only a getter
+strict document = 7 => THROW TypeError: Cannot set property document of #<Window> which has only a getter
+strict top = 7 => THROW TypeError: Cannot set property top of #<Window> which has only a getter
+delete window.navigator => true
+navigator after delete => undefined
+delete window.document => false
+opener = null then => data null
+opener = {} then => data w=true e=true c=true same=true

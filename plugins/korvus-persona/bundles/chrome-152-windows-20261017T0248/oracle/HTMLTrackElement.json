@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "HTMLTrackElement",
+    "member": "NONE",
+    "expr": "HTMLTrackElement.NONE",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "LOADING",
+    "expr": "HTMLTrackElement.LOADING",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "LOADED",
+    "expr": "HTMLTrackElement.LOADED",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "ERROR",
+    "expr": "HTMLTrackElement.ERROR",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTrackElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "constructor",
+    "expr": "new HTMLTrackElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "kind",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.kind; })()",
+    "expected": "subtitles",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "kind",
+    "expr": "(() => { const o = document.createElement(\"track\"); return (o.kind = \"x\", o.kind); })()",
+    "expected": "metadata",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "srclang",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.srclang; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "srclang",
+    "expr": "(() => { const o = document.createElement(\"track\"); return (o.srclang = \"x\", o.srclang); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "label",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.label; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "label",
+    "expr": "(() => { const o = document.createElement(\"track\"); return (o.label = \"x\", o.label); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "default",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.default; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "default",
+    "expr": "(() => { const o = document.createElement(\"track\"); return (o.default = true, o.default); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "readyState",
+    "expr": "(() => { const o = document.createElement(\"track\"); return o.readyState; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTrackElement",
+    "member": "track",
+    "expr": "(() => { const o = document.createElement(\"track\"); return Object.prototype.toString.call(o.track); })()",
+    "expected": "[object TextTrack]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,283 @@
+{
+ "what": "ABPROG F12: isolated worlds over CDP on stock Chrome 150.0.7871.46 (headed, Xvfb, fresh profile, one raw CDP client: Page.enable, Runtime.enable, addScriptToEvaluateOnNewDocument(worldName util) and (main), createIsolatedWorld(w2) on about:blank, navigate /world, the probe in every context, createIsolatedWorld(w3), navigate /world2, the probe again); abprog/fixes/F12/rec_cdp.py, 3 runs identical.",
+ "commands": [
+  [
+   "Page.enable",
+   {}
+  ],
+  [
+   "Runtime.enable",
+   {}
+  ],
+  [
+   "add util",
+   {
+    "identifier": "1"
+   }
+  ],
+  [
+   "add main",
+   {
+    "identifier": "2"
+   }
+  ],
+  [
+   "create w2 (blank)",
+   {
+    "executionContextId": 2
+   }
+  ],
+  [
+   "create w3 (loaded)",
+   {
+    "executionContextId": 6
+   }
+  ]
+ ],
+ "events": [
+  [
+   "CTX",
+   2,
+   "w2",
+   "://",
+   "isolated",
+   false
+  ],
+  [
+   "CLEARED"
+  ],
+  [
+   "CLEARED"
+  ],
+  [
+   "FN",
+   "/world"
+  ],
+  [
+   "CTX",
+   3,
+   "",
+   "http://127.0.0.1:PORT",
+   "default",
+   true
+  ],
+  [
+   "CTX",
+   4,
+   "util",
+   "http://127.0.0.1:PORT",
+   "isolated",
+   false
+  ],
+  [
+   "CTX",
+   5,
+   "w2",
+   "://",
+   "isolated",
+   false
+  ],
+  [
+   "CTX",
+   6,
+   "w3",
+   "http://127.0.0.1:PORT",
+   "isolated",
+   false
+  ],
+  [
+   "CLEARED"
+  ],
+  [
+   "CLEARED"
+  ],
+  [
+   "FN",
+   "/world2"
+  ],
+  [
+   "CTX",
+   7,
+   "",
+   "http://127.0.0.1:PORT",
+   "default",
+   true
+  ],
+  [
+   "CTX",
+   8,
+   "util",
+   "http://127.0.0.1:PORT",
+   "isolated",
+   false
+  ],
+  [
+   "CTX",
+   9,
+   "w2",
+   "://",
+   "isolated",
+   false
+  ],
+  [
+   "CTX",
+   10,
+   "w3",
+   "http://127.0.0.1:PORT",
+   "isolated",
+   false
+  ]
+ ],
+ "answers": {
+  "answers1": {
+   "1": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "2": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "3": {
+    "pageVar": "number",
+    "iso": null,
+    "proto": "number",
+    "custom": "number",
+    "title": "spoofed",
+    "qs": "undefined",
+    "same": true,
+    "attr": null,
+    "href": "/world",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   },
+   "4": {
+    "pageVar": "undefined",
+    "iso": 1,
+    "proto": "undefined",
+    "custom": "undefined",
+    "title": "world",
+    "qs": "p",
+    "same": true,
+    "attr": null,
+    "href": "/world",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   },
+   "5": {
+    "pageVar": "undefined",
+    "iso": null,
+    "proto": "undefined",
+    "custom": "undefined",
+    "title": "world",
+    "qs": "p",
+    "same": true,
+    "attr": null,
+    "href": "/world",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   }
+  },
+  "answers2": {
+   "1": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "2": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "3": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "4": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "5": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "6": {
+    "error": {
+     "code": -32000,
+     "message": "Cannot find context with specified id"
+    }
+   },
+   "7": {
+    "pageVar": "number",
+    "iso": null,
+    "proto": "number",
+    "custom": "number",
+    "title": "spoofed",
+    "qs": "undefined",
+    "same": true,
+    "attr": null,
+    "href": "/world2",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   },
+   "8": {
+    "pageVar": "undefined",
+    "iso": 1,
+    "proto": "undefined",
+    "custom": "undefined",
+    "title": "world",
+    "qs": "p",
+    "same": true,
+    "attr": null,
+    "href": "/world2",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   },
+   "9": {
+    "pageVar": "undefined",
+    "iso": null,
+    "proto": "undefined",
+    "custom": "undefined",
+    "title": "world",
+    "qs": "p",
+    "same": true,
+    "attr": null,
+    "href": "/world2",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   },
+   "10": {
+    "pageVar": "undefined",
+    "iso": null,
+    "proto": "undefined",
+    "custom": "undefined",
+    "title": "world",
+    "qs": "p",
+    "same": true,
+    "attr": null,
+    "href": "/world2",
+    "text": "world body",
+    "ctor": true,
+    "win": "function"
+   }
+  }
+ }
+}

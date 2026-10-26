@@ -1,0 +1,9 @@
+<!doctype html><html><head><link rel="stylesheet" href="s.css"><meta class="m">
+<script>window.L = []; var cs = function (s, p) { var e = document.querySelector(s); return e ? getComputedStyle(e)[p] : 'none'; };
+L.push('head:' + document.styleSheets.length + ':' + cs('meta.m', 'fontFamily'));</script>
+</head><body><div id="x"></div>
+<script>L.push('body:' + cs('#x', 'width') + ':' + cs('body', 'marginLeft'));</script>
+<link rel="stylesheet" href="late.css"><div id="y"></div>
+<script>L.push('afterLate:' + cs('#y', 'width'));</script>
+<script>addEventListener('DOMContentLoaded', function () { L.push('dcl:' + cs('#y', 'width')); }); addEventListener('load', function () { window.R = L.join(' | '); });</script>
+</body></html>

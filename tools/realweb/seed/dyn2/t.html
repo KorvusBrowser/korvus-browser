@@ -1,0 +1,6 @@
+<!doctype html><title>t</title><script src="first.js"></script><body><script>
+window.__r = {};
+try { const st = document.body.style; __r.styleRemoveAttribute = typeof st.removeAttribute + '/' + JSON.stringify(st.removeAttribute); __r.styleUnknown = JSON.stringify(st.fooBarBaz); __r.styleInRemove = 'removeAttribute' in st; } catch (e) { __r.style = 'THROW ' + e.message; }
+const s = document.createElement('script'); s.async = true; s.src = 'cq.js'; s.setAttribute('data-k', 'v'); const f = document.getElementsByTagName('script')[0]; f.parentNode.insertBefore(s, f);
+const s2 = document.createElement('script'); s2.src = 'cq2.js'; s2.async = false; document.head.appendChild(s2);
+</script></body>

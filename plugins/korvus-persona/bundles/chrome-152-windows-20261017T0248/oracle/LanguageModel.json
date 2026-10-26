@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "LanguageModel",
+    "member": "create",
+    "expr": "LanguageModel.create()",
+    "throws": "ReferenceError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "LanguageModel",
+    "member": "availability",
+    "expr": "LanguageModel.availability()",
+    "throws": "ReferenceError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "LanguageModel",
+    "member": "params",
+    "expr": "LanguageModel.params()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "LanguageModel",
+    "member": "constructor",
+    "expr": "new LanguageModel()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

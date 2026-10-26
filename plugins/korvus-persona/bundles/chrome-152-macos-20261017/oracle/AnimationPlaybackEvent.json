@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "AnimationPlaybackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AnimationPlaybackEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object AnimationPlaybackEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AnimationPlaybackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AnimationPlaybackEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AnimationPlaybackEvent",
+    "member": "currentTime",
+    "expr": "(() => { const o = new AnimationPlaybackEvent(\"x\"); return o.currentTime; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AnimationPlaybackEvent",
+    "member": "timelineTime",
+    "expr": "(() => { const o = new AnimationPlaybackEvent(\"x\"); return o.timelineTime; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

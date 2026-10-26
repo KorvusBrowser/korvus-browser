@@ -1,0 +1,26 @@
+no callback tag => [object ViewTransition]
+no callback types => object [object ViewTransitionTypeSet] size=0
+no callback transitionRoot => true
+no callback order => returned, microtask, updateCallbackDone fulfilled, ready fulfilled, finished fulfilled
+sync callback tag => [object ViewTransition]
+sync callback types => object [object ViewTransitionTypeSet] size=0
+sync callback transitionRoot => true
+sync callback order => returned, microtask, callback, updateCallbackDone fulfilled, ready fulfilled, finished fulfilled
+async callback tag => [object ViewTransition]
+async callback types => object [object ViewTransitionTypeSet] size=0
+async callback transitionRoot => true
+async callback order => returned, microtask, callback, callback resolved, updateCallbackDone fulfilled, ready fulfilled, finished fulfilled
+throwing callback tag => [object ViewTransition]
+throwing callback types => object [object ViewTransitionTypeSet] size=0
+throwing callback transitionRoot => true
+throwing callback order => returned, microtask, callback, updateCallbackDone rejected TypeError, ready rejected TypeError, finished rejected TypeError
+skipTransition tag => [object ViewTransition]
+skipTransition types => object [object ViewTransitionTypeSet] size=0
+skipTransition transitionRoot => true
+skipTransition order => returned, skipped, microtask, ready rejected AbortError, callback, updateCallbackDone fulfilled, finished fulfilled
+options object tag => [object ViewTransition]
+options object types => object [object ViewTransitionTypeSet] size=2
+options object transitionRoot => true
+options object order => returned, microtask, callback, updateCallbackDone fulfilled, ready fulfilled, finished fulfilled
+non-function argument => THROW TypeError: Failed to execute 'startViewTransition' on 'Document': Overload resolution failed.
+activeViewTransition => object

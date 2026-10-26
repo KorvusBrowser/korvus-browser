@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "GPUCanvasContext",
+    "member": "constructor",
+    "expr": "new GPUCanvasContext()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "canvas",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return Object.prototype.toString.call(o.canvas); })()",
+    "expected": "[object HTMLCanvasElement]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "configure",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return o.configure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "unconfigure",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return o.unconfigure(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getConfiguration",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return o.getConfiguration(); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getConfiguration",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return Object.prototype.toString.call(o.getConfiguration()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getCurrentTexture",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return o.getCurrentTexture(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getCurrentTexture",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"webgpu\"); return Object.prototype.toString.call(o.getCurrentTexture()); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getCurrentTexture",
+    "expr": "document.createElement(\"canvas\").getContext(\"webgpu\").getCurrentTexture()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "getConfiguration",
+    "expr": "document.createElement(\"canvas\").getContext(\"webgpu\").getConfiguration()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "configure",
+    "expr": "document.createElement(\"canvas\").getContext(\"webgpu\").configure({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "configure",
+    "expr": "document.createElement(\"canvas\").getContext(\"webgpu\").configure()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "canvas",
+    "expr": "Object.prototype.toString.call(document.createElement(\"canvas\").getContext(\"webgpu\").canvas)",
+    "expected": "[object HTMLCanvasElement]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCanvasContext",
+    "member": "canvas",
+    "expr": "(() => { const c = document.createElement(\"canvas\"); return c.getContext(\"webgpu\").canvas === c; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

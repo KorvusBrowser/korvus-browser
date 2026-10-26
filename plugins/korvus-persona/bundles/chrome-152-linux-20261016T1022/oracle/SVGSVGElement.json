@@ -1,0 +1,534 @@
+[
+  {
+    "iface": "SVGSVGElement",
+    "member": "constructor",
+    "expr": "new SVGSVGElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "currentScale",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.currentScale; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "currentScale",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return (o.currentScale = 1, o.currentScale); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getIntersectionList",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.getIntersectionList(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getEnclosureList",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.getEnclosureList(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "checkIntersection",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.checkIntersection(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "checkEnclosure",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.checkEnclosure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "deselectAll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.deselectAll(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGTransformFromMatrix",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.createSVGTransformFromMatrix(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getElementById",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.getElementById(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getElementById",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.getElementById(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "suspendRedraw",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.suspendRedraw(1); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "suspendRedraw",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.suspendRedraw(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "unsuspendRedraw",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.unsuspendRedraw(1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "unsuspendRedraw",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.unsuspendRedraw(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "unsuspendRedrawAll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.unsuspendRedrawAll(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "forceRedraw",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.forceRedraw(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "pauseAnimations",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.pauseAnimations(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "unpauseAnimations",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.unpauseAnimations(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "animationsPaused",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.animationsPaused(); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getCurrentTime",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.getCurrentTime(); })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "setCurrentTime",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.setCurrentTime(1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "setCurrentTime",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.setCurrentTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onafterprint",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onafterprint; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onbeforeprint; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onbeforeunload; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onhashchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onhashchange; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onlanguagechange; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onmessage; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onmessageerror; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onoffline",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onoffline; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "ononline",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.ononline; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpagehide",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onpagehide; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onpagereveal; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpageshow",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onpageshow; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpageswap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onpageswap; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpopstate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onpopstate; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onrejectionhandled; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onstorage",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onstorage; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onunhandledrejection; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onunload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return o.onunload; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "currentScale",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return (o.currentScale = \"1\", o.currentScale); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "currentTranslate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.currentTranslate); })()",
+    "expected": "[object SVGPoint]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGNumber",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGNumber()); })()",
+    "expected": "[object SVGNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGLength()); })()",
+    "expected": "[object SVGLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGAngle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGAngle()); })()",
+    "expected": "[object SVGAngle]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGPoint",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGPoint()); })()",
+    "expected": "[object SVGPoint]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGMatrix",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGMatrix()); })()",
+    "expected": "[object SVGMatrix]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGRect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGRect()); })()",
+    "expected": "[object SVGRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGTransform",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGTransform()); })()",
+    "expected": "[object SVGTransform]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "createSVGTransformFromMatrix",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.createSVGTransformFromMatrix()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "getElementById",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.getElementById(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "viewBox",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.viewBox); })()",
+    "expected": "[object SVGAnimatedRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "preserveAspectRatio",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.preserveAspectRatio); })()",
+    "expected": "[object SVGAnimatedPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onafterprint",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onafterprint); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onbeforeprint); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onbeforeunload); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onhashchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onhashchange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onlanguagechange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onmessageerror); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onoffline",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onoffline); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "ononline",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.ononline); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpagehide",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onpagehide); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onpagereveal); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpageshow",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onpageshow); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpageswap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onpageswap); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onpopstate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onpopstate); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onrejectionhandled); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onstorage",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onstorage); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onunhandledrejection); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSVGElement",
+    "member": "onunload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\"); return Object.prototype.toString.call(o.onunload); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

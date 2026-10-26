@@ -1,0 +1,364 @@
+[
+ [
+  "range in non-editable",
+  "enabled",
+  "defaultParagraphSeparator,findString,print,selectAll,styleWithCss,unselect,useCss"
+ ],
+ [
+  "range in non-editable",
+  "state",
+  ""
+ ],
+ [
+  "range in non-editable",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "range in non-editable",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in non-editable",
+  "enabled",
+  "defaultParagraphSeparator,findString,print,selectAll,styleWithCss,useCss"
+ ],
+ [
+  "caret in non-editable",
+  "state",
+  "justifyLeft"
+ ],
+ [
+  "caret in non-editable",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in non-editable",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in bold",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,selectAll,strikethrough,styleWithCss,subscript,superscript,transpose,underline,unselect,useCss"
+ ],
+ [
+  "caret in bold",
+  "state",
+  "bold,justifyLeft"
+ ],
+ [
+  "caret in bold",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),bold=true,defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in bold",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in plain",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,selectAll,strikethrough,styleWithCss,subscript,superscript,transpose,underline,unselect,useCss"
+ ],
+ [
+  "caret in plain",
+  "state",
+  "justifyLeft"
+ ],
+ [
+  "caret in plain",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in plain",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in list item",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,selectAll,strikethrough,styleWithCss,subscript,superscript,transpose,underline,unselect,useCss"
+ ],
+ [
+  "caret in list item",
+  "state",
+  "insertUnorderedList,justifyLeft"
+ ],
+ [
+  "caret in list item",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),insertUnorderedList=true,justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in list item",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in heading",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,selectAll,strikethrough,styleWithCss,subscript,superscript,transpose,underline,unselect,useCss"
+ ],
+ [
+  "caret in heading",
+  "state",
+  "bold,justifyLeft"
+ ],
+ [
+  "caret in heading",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),bold=true,defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=5,foreColor=rgb(0, 0, 0),formatBlock=h2,justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in heading",
+  "indeterm",
+  ""
+ ],
+ [
+  "caret in styled span",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,selectAll,strikethrough,styleWithCss,subscript,superscript,transpose,underline,unselect,useCss"
+ ],
+ [
+  "caret in styled span",
+  "state",
+  "justifyCenter"
+ ],
+ [
+  "caret in styled span",
+  "value",
+  "backColor=rgb(9, 8, 7),defaultParagraphSeparator=div,fontName=Arial,fontSize=5,foreColor=rgb(1, 2, 3),formatBlock=p,justifyCenter=center,justifyFull=center,justifyLeft=center,justifyNone=center,justifyRight=center"
+ ],
+ [
+  "caret in styled span",
+  "indeterm",
+  ""
+ ],
+ [
+  "range bold to plain",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,removeFormat,selectAll,strikethrough,styleWithCss,subscript,superscript,underline,unlink,unselect,useCss"
+ ],
+ [
+  "range bold to plain",
+  "state",
+  "justifyLeft"
+ ],
+ [
+  "range bold to plain",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "range bold to plain",
+  "indeterm",
+  "bold"
+ ],
+ [
+  "range whole host",
+  "enabled",
+  "backColor,bold,createLink,defaultParagraphSeparator,delete,findString,fontName,fontSize,fontSizeDelta,foreColor,formatBlock,forwardDelete,hiliteColor,indent,insertHorizontalRule,insertHTML,insertImage,insertLineBreak,insertNewlineInQuotedContent,insertOrderedList,insertParagraph,insertText,insertUnorderedList,italic,justifyCenter,justifyFull,justifyLeft,justifyNone,justifyRight,outdent,print,removeFormat,selectAll,strikethrough,styleWithCss,subscript,superscript,underline,unlink,unselect,useCss"
+ ],
+ [
+  "range whole host",
+  "state",
+  ""
+ ],
+ [
+  "range whole host",
+  "value",
+  "backColor=rgba(0, 0, 0, 0),defaultParagraphSeparator=div,fontName=\"Noto Sans CJK KR\",fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "range whole host",
+  "indeterm",
+  "bold,italic,justifyCenter,justifyLeft"
+ ],
+ [
+  "caret in textarea",
+  "enabled",
+  "defaultParagraphSeparator,delete,findString,forwardDelete,insertHTML,insertLineBreak,insertParagraph,insertText,print,selectAll,styleWithCss,transpose,unselect,useCss"
+ ],
+ [
+  "caret in textarea",
+  "state",
+  "justifyLeft"
+ ],
+ [
+  "caret in textarea",
+  "value",
+  "backColor=rgb(255, 255, 255),defaultParagraphSeparator=div,fontName=monospace,fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "caret in textarea",
+  "indeterm",
+  ""
+ ],
+ [
+  "range in textarea",
+  "enabled",
+  "defaultParagraphSeparator,delete,findString,forwardDelete,insertHTML,insertLineBreak,insertParagraph,insertText,print,selectAll,styleWithCss,unselect,useCss"
+ ],
+ [
+  "range in textarea",
+  "state",
+  "justifyLeft"
+ ],
+ [
+  "range in textarea",
+  "value",
+  "backColor=rgb(255, 255, 255),defaultParagraphSeparator=div,fontName=monospace,fontSize=3,foreColor=rgb(0, 0, 0),justifyCenter=left,justifyFull=left,justifyLeft=left,justifyNone=left,justifyRight=left"
+ ],
+ [
+  "range in textarea",
+  "indeterm",
+  ""
+ ],
+ [
+  "no selection",
+  "enabled",
+  "defaultParagraphSeparator,findString,print,selectAll,styleWithCss,useCss"
+ ],
+ [
+  "no selection",
+  "state",
+  ""
+ ],
+ [
+  "no selection",
+  "value",
+  "defaultParagraphSeparator=div"
+ ],
+ [
+  "no selection",
+  "indeterm",
+  ""
+ ],
+ [
+  "exec selectAll",
+  true,
+  "Range",
+  "#text",
+  "BODY"
+ ],
+ [
+  "exec unselect",
+  true,
+  "None"
+ ],
+ [
+  "exec unselect again",
+  false,
+  "None"
+ ],
+ [
+  "exec styleWithCSS true",
+  true,
+  true,
+  ""
+ ],
+ [
+  "exec styleWithCSS false",
+  true,
+  false
+ ],
+ [
+  "exec useCSS false",
+  true,
+  true,
+  false
+ ],
+ [
+  "exec useCSS true",
+  true,
+  false
+ ],
+ [
+  "exec defaultParagraphSeparator P",
+  true,
+  "p"
+ ],
+ [
+  "exec defaultParagraphSeparator span",
+  true,
+  "p"
+ ],
+ [
+  "exec defaultParagraphSeparator div",
+  true,
+  "div"
+ ],
+ [
+  "exec findString",
+  true,
+  "Range",
+  "words"
+ ],
+ [
+  "exec findString missing",
+  false,
+  "None"
+ ],
+ [
+  "exec bold non-editable",
+  false,
+  211
+ ],
+ [
+  "exec insertText no focus",
+  false
+ ],
+ [
+  "xml execCommand",
+  "throw:InvalidStateError: Failed to execute 'execCommand' on 'Document': execCommand is only supported on HTML documents."
+ ],
+ [
+  "xml queryCommandEnabled",
+  "throw:InvalidStateError: Failed to execute 'queryCommandEnabled' on 'Document': queryCommandEnabled is only supported on HTML documents."
+ ],
+ [
+  "xml queryCommandIndeterm",
+  "throw:InvalidStateError: Failed to execute 'queryCommandIndeterm' on 'Document': queryCommandIndeterm is only supported on HTML documents."
+ ],
+ [
+  "xml queryCommandState",
+  "throw:InvalidStateError: Failed to execute 'queryCommandState' on 'Document': queryCommandState is only supported on HTML documents."
+ ],
+ [
+  "xml queryCommandSupported",
+  "throw:InvalidStateError: Failed to execute 'queryCommandSupported' on 'Document': queryCommandSupported is only supported on HTML documents."
+ ],
+ [
+  "xml queryCommandValue",
+  "throw:InvalidStateError: Failed to execute 'queryCommandValue' on 'Document': queryCommandValue is only supported on HTML documents."
+ ],
+ [
+  "frameless execCommand",
+  false
+ ],
+ [
+  "frameless queryCommandEnabled",
+  false
+ ],
+ [
+  "frameless queryCommandSupported",
+  false
+ ],
+ [
+  "frameless queryCommandValue",
+  ""
+ ],
+ [
+  "frameless queryCommandState",
+  false
+ ],
+ [
+  "createHTMLDocument supported",
+  false
+ ]
+]

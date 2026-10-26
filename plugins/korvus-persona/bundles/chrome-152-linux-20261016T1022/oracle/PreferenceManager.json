@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PreferenceManager",
+    "member": "constructor",
+    "expr": "new PreferenceManager()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

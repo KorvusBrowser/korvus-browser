@@ -1,0 +1,426 @@
+[
+[
+"layout Arial",
+"monospace,sans-serif,serif"
+],
+[
+"layout Helvetica",
+"monospace,sans-serif,serif"
+],
+[
+"layout arial",
+"monospace,sans-serif,serif"
+],
+[
+"layout Courier",
+"monospace,sans-serif,serif"
+],
+[
+"layout Courier New",
+"monospace,sans-serif,serif"
+],
+[
+"layout DejaVu Sans Mono",
+"monospace,sans-serif,serif"
+],
+[
+"layout MS Gothic",
+"sans-serif,serif"
+],
+[
+"layout MS PGothic",
+"monospace,serif"
+],
+[
+"layout Times",
+"monospace,sans-serif,serif"
+],
+[
+"layout Times New Roman",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Serif",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Sans",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Color Emoji",
+"-"
+],
+[
+"layout PMingLiU",
+"monospace,sans-serif"
+],
+[
+"layout SimSun",
+"monospace,sans-serif"
+],
+[
+"layout MS PMincho",
+"monospace,sans-serif"
+],
+[
+"layout Noto Nastaliq Urdu",
+"-"
+],
+[
+"layout Noto Sans Adlam",
+"-"
+],
+[
+"layout Noto Sans Bhaiksuki",
+"-"
+],
+[
+"layout Noto Sans Brahmi",
+"-"
+],
+[
+"layout Noto Sans Chakma",
+"-"
+],
+[
+"layout Noto Sans Cham",
+"-"
+],
+[
+"layout Noto Sans Cuneiform",
+"-"
+],
+[
+"layout Noto Sans Egyptian Hieroglyphs",
+"-"
+],
+[
+"layout Noto Sans Inscriptional Pahlavi",
+"-"
+],
+[
+"layout Noto Sans Inscriptional Parthian",
+"-"
+],
+[
+"layout Noto Sans Javanese",
+"-"
+],
+[
+"layout Noto Sans Kaithi",
+"-"
+],
+[
+"layout Noto Sans Kannada",
+"-"
+],
+[
+"layout Noto Sans Kharoshthi",
+"-"
+],
+[
+"layout Noto Sans Khojki",
+"-"
+],
+[
+"layout Noto Sans Khudawadi",
+"-"
+],
+[
+"layout Noto Sans Lepcha",
+"-"
+],
+[
+"layout Noto Sans Mandaic",
+"-"
+],
+[
+"layout Noto Sans Manichaean",
+"-"
+],
+[
+"layout Noto Sans Marchen",
+"-"
+],
+[
+"layout Noto Sans Meetei Mayek",
+"-"
+],
+[
+"layout Noto Sans Meroitic",
+"-"
+],
+[
+"layout Noto Sans Miao",
+"-"
+],
+[
+"layout Noto Sans Modi",
+"-"
+],
+[
+"layout Noto Sans Mongolian",
+"-"
+],
+[
+"layout Noto Sans Myanmar",
+"-"
+],
+[
+"layout Noto Sans Newa",
+"-"
+],
+[
+"layout Noto Sans Oriya",
+"-"
+],
+[
+"layout Noto Sans Psalter Pahlavi",
+"-"
+],
+[
+"layout Noto Sans Sharada",
+"-"
+],
+[
+"layout Noto Sans Sundanese",
+"-"
+],
+[
+"layout Noto Sans Syriac",
+"-"
+],
+[
+"layout Noto Sans Tai Tham",
+"-"
+],
+[
+"layout Noto Sans Takri",
+"-"
+],
+[
+"layout Noto Sans Thaana",
+"-"
+],
+[
+"layout Noto Sans Tirhuta",
+"-"
+],
+[
+"layout Noto Sans Ugaritic",
+"-"
+],
+[
+"layout Noto Serif Ahom",
+"-"
+],
+[
+"layout Noto Serif Balinese",
+"-"
+],
+[
+"layout Noto Serif Myanmar",
+"-"
+],
+[
+"layout Liberation Sans",
+"monospace,sans-serif,serif"
+],
+[
+"layout Ubuntu",
+"monospace,sans-serif,serif"
+],
+[
+"layout C059",
+"monospace,sans-serif,serif"
+],
+[
+"layout Liberation Mono",
+"monospace,sans-serif,serif"
+],
+[
+"layout D050000L",
+"monospace,sans-serif,serif"
+],
+[
+"layout DejaVu Sans",
+"monospace,sans-serif,serif"
+],
+[
+"layout DejaVu Serif",
+"monospace,sans-serif,serif"
+],
+[
+"layout Liberation Sans Narrow",
+"monospace,sans-serif,serif"
+],
+[
+"layout Nimbus Mono PS",
+"monospace,sans-serif,serif"
+],
+[
+"layout Nimbus Roman",
+"monospace,sans-serif,serif"
+],
+[
+"layout Nimbus Sans",
+"monospace,sans-serif,serif"
+],
+[
+"layout Nimbus Sans Narrow",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Mono",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Sans CJK HK",
+"monospace,serif"
+],
+[
+"layout Noto Sans CJK JP",
+"monospace,serif"
+],
+[
+"layout Noto Sans CJK KR",
+"monospace,serif"
+],
+[
+"layout Noto Sans CJK SC",
+"monospace,serif"
+],
+[
+"layout Noto Sans CJK TC",
+"monospace,serif"
+],
+[
+"layout Noto Sans Mono",
+"monospace,sans-serif,serif"
+],
+[
+"layout Noto Sans Mono CJK HK",
+"sans-serif,serif"
+],
+[
+"layout Noto Sans Mono CJK JP",
+"sans-serif,serif"
+],
+[
+"layout Noto Sans Mono CJK KR",
+"sans-serif,serif"
+],
+[
+"layout Noto Sans Mono CJK SC",
+"sans-serif,serif"
+],
+[
+"layout Noto Sans Mono CJK TC",
+"sans-serif,serif"
+],
+[
+"layout Noto Serif CJK JP",
+"monospace,sans-serif"
+],
+[
+"layout Noto Serif CJK KR",
+"monospace,sans-serif"
+],
+[
+"layout Noto Serif CJK SC",
+"monospace,sans-serif"
+],
+[
+"layout Noto Serif CJK TC",
+"monospace,sans-serif"
+],
+[
+"layout P052",
+"monospace,sans-serif,serif"
+],
+[
+"layout Standard Symbols PS",
+"monospace,sans-serif,serif"
+],
+[
+"layout Ubuntu Mono",
+"monospace,sans-serif,serif"
+],
+[
+"layout URW Bookman",
+"monospace,sans-serif,serif"
+],
+[
+"layout URW Gothic",
+"monospace,sans-serif,serif"
+],
+[
+"layout Z003",
+"monospace,sans-serif,serif"
+],
+[
+"layout MingLiU",
+"-"
+],
+[
+"layout Bitstream Vera Sans Mono",
+"-"
+],
+[
+"layout Century",
+"-"
+],
+[
+"layout Calibri",
+"-"
+],
+[
+"layout Cambria",
+"-"
+],
+[
+"layout Verdana",
+"-"
+],
+[
+"layout Georgia",
+"-"
+],
+[
+"layout Tahoma",
+"-"
+],
+[
+"layout Batang",
+"-"
+],
+[
+"layout Segoe UI",
+"-"
+],
+[
+"layout Helvetica Neue",
+"-"
+],
+[
+"layout Menlo",
+"-"
+],
+[
+"layout MS Mincho",
+"-"
+],
+[
+"layout SimHei",
+"-"
+],
+[
+"layout Arial Unicode MS",
+"-"
+],
+[
+"layout Lucida Sans",
+"-"
+]
+]

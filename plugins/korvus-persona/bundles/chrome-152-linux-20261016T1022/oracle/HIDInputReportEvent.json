@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HIDInputReportEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HIDInputReportEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "device",
+    "expr": "HIDInputReportEvent.prototype.device",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "device",
+    "expr": "Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"device\").get.call(Object.create(HIDInputReportEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "reportId",
+    "expr": "HIDInputReportEvent.prototype.reportId",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "reportId",
+    "expr": "Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"reportId\").get.call(Object.create(HIDInputReportEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "data",
+    "expr": "HIDInputReportEvent.prototype.data",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "data",
+    "expr": "Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"data\").get.call(Object.create(HIDInputReportEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "device",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"device\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "device",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"device\").get.call(Object.create(HIDInputReportEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "reportId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"reportId\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "reportId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"reportId\").get.call(Object.create(HIDInputReportEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "data",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"data\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HIDInputReportEvent",
+    "member": "data",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDInputReportEvent.prototype, \"data\").get.call(Object.create(HIDInputReportEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

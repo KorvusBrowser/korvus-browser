@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="./testing.js"></script>
+
+<script id=basic type=module>
+  const state = await testing.async();
+
+  const parts1 = ["\r\nthe quick brown\rfo\rx\r", "\njumps over\r\nthe\nlazy\r", "\ndog"];
+  // "transparent" ending should not modify the final buffer.
+  const blob1 = new Blob(parts1, { type: "text/html" });
+  const expected1 = parts1.join("");
+  const text1 = await blob1.text();
+
+  const parts2 = ["\rhello\r", "\nwor\r\nld"];
+  // "native" ending should modify the final buffer.
+  const blob2 = new Blob(parts2, { endings: "native" });
+  const expected2 = "\nhello\n\nwor\nld";
+  const text2 = await blob2.text();
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(expected1.length, blob1.size);
+    testing.expectEqual("text/html", blob1.type);
+    testing.expectEqual(expected1, text1);
+
+    testing.expectEqual(expected2.length, blob2.size);
+    testing.expectEqual(expected2, text2);
+  });
+</script>
+
+<!-- Firefox and Safari only -->
+<script id=bytes type=module>
+  const state = await testing.async();
+
+  const parts1 = ["light ", "panda ", "rocks ", "!"];
+  const blob1 = new Blob(parts1);
+  const result1 = await blob1.bytes();
+
+  // Test for SIMD.
+  const parts2 = [
+    "\rThe opened package\r\nof potato\nchi\rps",
+    "held the\r\nanswer to the\r mystery. Both det\rectives looke\r\rd\r",
+    "\rat it but failed to realize\nit was\r\nthe\rkey\r\n",
+    "\r\nto solve the \rcrime.\r"
+  ];
+  const blob2 = new Blob(parts2, { type: "text/html", endings: "native" });
+  const result2 = await blob2.bytes();
+
+  state.resolve();
+  await state.done(() => {
+    const expected1 = new Uint8Array([108, 105, 103, 104, 116, 32, 112, 97,
+                                      110, 100, 97, 32, 114, 111, 99, 107, 115,
+                                      32, 33]);
+    testing.expectEqual(true, result1 instanceof Uint8Array);
+    testing.expectEqual(expected1, result1);
+
+    testing.expectEqual(161, blob2.size);
+    testing.expectEqual("text/html", blob2.type);
+    const expected2 = new Uint8Array([10, 84, 104, 101, 32, 111, 112, 101, 110,
+                                      101, 100, 32, 112, 97, 99, 107, 97, 103,
+                                      101, 10, 111, 102, 32, 112, 111, 116, 97,
+                                      116, 111, 10, 99, 104, 105, 10, 112, 115,
+                                      104, 101, 108, 100, 32, 116, 104, 101, 10,
+                                      97, 110, 115, 119, 101, 114, 32, 116, 111,
+                                      32, 116, 104, 101, 10, 32, 109, 121, 115,
+                                      116, 101, 114, 121, 46, 32, 66, 111, 116,
+                                      104, 32, 100, 101, 116, 10, 101, 99, 116,
+                                      105, 118, 101, 115, 32, 108, 111, 111, 107,
+                                      101, 10, 10, 100, 10, 10, 97, 116, 32, 105,
+                                      116, 32, 98, 117, 116, 32, 102, 97, 105, 108,
+                                      101, 100, 32, 116, 111, 32, 114, 101, 97,
+                                      108, 105, 122, 101, 10, 105, 116, 32, 119, 97,
+                                      115, 10, 116, 104, 101, 10, 107, 101, 121,
+                                      10, 10, 116, 111, 32, 115, 111, 108, 118, 101,
+                                      32, 116, 104, 101, 32, 10, 99, 114, 105, 109,
+                                      101, 46, 10]);
+    testing.expectEqual(true, result2 instanceof Uint8Array);
+    testing.expectEqual(expected2, result2);
+  });
+</script>
+
+<script id=parts type=module>
+  const state = await testing.async();
+
+  // Blob as a blob part - contents are copied in, not stringified.
+  const inner = new Blob(["hello "], { type: "text/plain" });
+  const blobInner = new Blob([inner, "world"]);
+  const textInner = await blobInner.text();
+
+  // Uint8Array as a blob part.
+  const bytesPart = new Uint8Array([104, 101, 108, 108, 111]); // "hello"
+  const blobBytes = new Blob([bytesPart, " ", "world"]);
+  const textBytes = await blobBytes.text();
+
+  // Non-byte TypedArrays contribute their raw backing bytes.
+  // Uint16Array of one element (0x0041 = 'A' little-endian) produces 2 bytes.
+  const u16 = new Uint16Array([0x0041]);
+  const blobU16 = new Blob([u16]);
+
+  // Float32Array: 4 bytes per element.
+  const f32 = new Float32Array([1.0, 2.0, 3.0]);
+  const blobF32 = new Blob([f32]);
+
+  // ArrayBuffer as a blob part.
+  const abBuf = new Uint8Array([1, 2, 3, 4]).buffer;
+  const blobAb = new Blob([abBuf]);
+  const resultAb = await blobAb.bytes();
+
+  // DataView (ArrayBufferView) as a blob part.
+  const dvBuf = new Uint8Array([10, 20, 30, 40, 50]).buffer;
+  const dvView = new DataView(dvBuf, 1, 3); // bytes [20, 30, 40]
+  const blobDv = new Blob([dvView]);
+  const resultDv = await blobDv.bytes();
+
+  // Mixed types in a single parts array.
+  const mixedInner = new Blob(["bb"]);
+  const mixedBytes = new Uint8Array([99, 99]); // "cc"
+  const mixedBuf = new Uint8Array([100, 100]).buffer; // "dd"
+  const blobMixed = new Blob(["aa", mixedInner, mixedBytes, mixedBuf, "ee"]);
+  const textMixed = await blobMixed.text();
+
+  // Number coerces to string.
+  const blobNum = new Blob([42]);
+  const textNum = await blobNum.text();
+
+  // Empty parts array.
+  const blobEmpty = new Blob([]);
+
+  // No arguments.
+  const blobNone = new Blob();
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(11, blobInner.size);
+    testing.expectEqual("hello world", textInner);
+
+    testing.expectEqual(11, blobBytes.size);
+    testing.expectEqual("hello world", textBytes);
+
+    testing.expectEqual(2, blobU16.size);
+    testing.expectEqual(12, blobF32.size);
+
+    testing.expectEqual(4, blobAb.size);
+    testing.expectEqual(new Uint8Array([1, 2, 3, 4]), resultAb);
+
+    testing.expectEqual(3, blobDv.size);
+    testing.expectEqual(new Uint8Array([20, 30, 40]), resultDv);
+
+    testing.expectEqual(10, blobMixed.size);
+    testing.expectEqual("aabbccddee", textMixed);
+
+    testing.expectEqual(2, blobNum.size);
+    testing.expectEqual("42", textNum);
+
+    testing.expectEqual(0, blobEmpty.size);
+    testing.expectEqual("", blobEmpty.type);
+
+    testing.expectEqual(0, blobNone.size);
+  });
+</script>
+
+<script id=stream type=module>
+  const state = await testing.async();
+
+  const parts = ["may", "thy", "knife", "chip", "and", "shatter"];
+  const blob = new Blob(parts);
+  const reader = blob.stream().getReader();
+  const { done: done, value: value } = await reader.read();
+
+  state.resolve();
+  await state.done(() => {
+    const expected = new Uint8Array([109, 97, 121, 116, 104, 121, 107, 110,
+                                     105, 102, 101, 99, 104, 105, 112, 97,
+                                     110, 100, 115, 104, 97, 116, 116, 101,
+                                     114]);
+    testing.expectEqual(false, done);
+    testing.expectEqual(true, value instanceof Uint8Array);
+    testing.expectEqual(expected, value);
+  });
+</script>
+
+<script id=mime_parsing>
+  // MIME types are lowercased
+  {
+    const blob = new Blob([], { type: "TEXT/HTML" });
+    testing.expectEqual("text/html", blob.type);
+  }
+
+  {
+    const blob = new Blob([], { type: "Application/JSON" });
+    testing.expectEqual("application/json", blob.type);
+  }
+
+  // KORVUS: the reference suite parses and re-serializes the MIME type here ("text/html;charset=UTF-8",
+  // "" for "invalid"). Chromium does neither: the File API says a type outside U+0020..U+007E
+  // becomes "", and everything else is ASCII-lowercased as a whole. The Brave 151 capture answers
+  //   new Blob(['x'], { type: 'text/plain; charset=UTF-8' }).type  -> "text/plain; charset=utf-8"
+  //   new Blob(['x'], { type: 'bogus' }).type                       -> "bogus"
+  // and that capture is this engine's shape authority, so the three cases below assert Chromium.
+  {
+    const blob = new Blob([], { type: "text/html; charset=UTF-8" });
+    testing.expectEqual("text/html; charset=utf-8", blob.type);
+  }
+
+  {
+    const blob = new Blob([], { type: "invalid" });
+    testing.expectEqual("invalid", blob.type);
+  }
+
+  {
+    const blob = new Blob([], { type: "/" });
+    testing.expectEqual("/", blob.type);
+  }
+
+  // Non-ASCII characters cause empty string (not HTTP token code points)
+  {
+    const blob = new Blob([], { type: "ý/x" });
+    testing.expectEqual("", blob.type);
+  }
+
+  {
+    const blob = new Blob([], { type: "text/plàin" });
+    testing.expectEqual("", blob.type);
+  }
+
+  // Control characters cause empty string
+  {
+    const blob = new Blob([], { type: "text/html\x00" });
+    testing.expectEqual("", blob.type);
+  }
+
+  // Empty type stays empty
+  {
+    const blob = new Blob([]);
+    testing.expectEqual("", blob.type);
+  }
+
+  {
+    const blob = new Blob([], { type: "" });
+    testing.expectEqual("", blob.type);
+  }
+</script>
+
+<script id=slice type=module>
+  const state = await testing.async();
+
+  const parts = ["la", "symphonie", "des", "éclairs"];
+  const blob = new Blob(parts);
+  const arrayBufferResult = await blob.arrayBuffer();
+
+  const sliceAll = blob.slice(0);
+  const sliceAllText = await sliceAll.text();
+
+  const sliceCustom = blob.slice(-4, -2, "custom");
+  const sliceCustomText = await sliceCustom.text();
+
+  const sliceTail = blob.slice(14);
+  const sliceTailText = await sliceTail.text();
+
+  const sliceMid = blob.slice(6, -10, "text/eclair");
+  const sliceMidText = await sliceMid.text();
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, arrayBufferResult instanceof ArrayBuffer);
+
+    testing.expectEqual(blob.size, sliceAll.size);
+    testing.expectEqual("lasymphoniedeséclairs", sliceAllText);
+
+    testing.expectEqual(2, sliceCustom.size);
+    // KORVUS: the reference suite empties a type with no "/"; Chromium keeps it (capture: slice(0, 1,
+    // 'Image/PNG').type -> "image/png", and Chrome 151 answers "custom" here, checked directly).
+    testing.expectEqual("custom", sliceCustom.type);
+    testing.expectEqual("ai", sliceCustomText);
+
+    testing.expectEqual(8, sliceTail.size);
+    testing.expectEqual("éclairs", sliceTailText);
+
+    testing.expectEqual(6, sliceMid.size);
+    testing.expectEqual("text/eclair", sliceMid.type);
+    testing.expectEqual("honied", sliceMidText);
+  });
+</script>

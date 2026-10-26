@@ -1,0 +1,19 @@
+-- phase 0
+observe box bogus => THROW TypeError: Failed to execute 'observe' on 'ResizeObserver': Failed to read the 'box' property from 'ResizeObserverOptions': The provided value 'bogus' is not a valid enum value of type ResizeObserverBoxOptions.
+observe(5) => THROW TypeError: Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element'.
+unobserve(5) => THROW TypeError: Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element'.
+sync calls => 0
+ro1 call1 n=5 array=true this=true | b cr=10,10,100,50 content=len1:100x50:frozen border=len1:124x74:frozen dp=len1:100x50:frozen crproto=DOMRectReadOnly proto=true ; n cr=0,0,0,0 content=len1:0x0:frozen border=len1:0x0:frozen dp=len1:0x0:frozen crproto=DOMRectReadOnly proto=true ; z cr=0,0,0,0 content=len1:0x0:frozen border=len1:0x0:frozen dp=len1:0x0:frozen crproto=DOMRectReadOnly proto=true ; s cr=0,0,0,0 content=len1:0x0:frozen border=len1:0x0:frozen dp=len1:0x0:frozen crproto=DOMRectReadOnly proto=true ; det cr=0,0,0,0 content=len1:0x0:frozen border=len1:0x0:frozen dp=len1:0x0:frozen crproto=DOMRectReadOnly proto=true
+ro2 call2 n=1 array=true this=true | b cr=10,10,100,50 content=len1:100x50:frozen border=len1:124x74:frozen dp=len1:100x50:frozen crproto=DOMRectReadOnly proto=true
+ro3 call3 n=1 array=true this=true | b cr=10,10,100,50 content=len1:100x50:frozen border=len1:124x74:frozen dp=len1:100x50:frozen crproto=DOMRectReadOnly proto=true
+calls => 3
+-- phase 1
+no change, calls => 3
+-- phase 2
+ro1 call4 n=2 array=true this=true | b cr=10,10,150,50 content=len1:150x50:frozen border=len1:174x74:frozen dp=len1:150x50:frozen crproto=DOMRectReadOnly proto=true ; n cr=0,0,20,20 content=len1:20x20:frozen border=len1:20x20:frozen dp=len1:20x20:frozen crproto=DOMRectReadOnly proto=true
+ro2 call5 n=1 array=true this=true | b cr=10,10,150,50 content=len1:150x50:frozen border=len1:174x74:frozen dp=len1:150x50:frozen crproto=DOMRectReadOnly proto=true
+ro3 call6 n=1 array=true this=true | b cr=10,10,150,50 content=len1:150x50:frozen border=len1:174x74:frozen dp=len1:150x50:frozen crproto=DOMRectReadOnly proto=true
+calls => 6
+-- phase 3
+ro3 call7 n=1 array=true this=true | b cr=10,10,160,50 content=len1:160x50:frozen border=len1:184x74:frozen dp=len1:160x50:frozen crproto=DOMRectReadOnly proto=true
+calls => 7

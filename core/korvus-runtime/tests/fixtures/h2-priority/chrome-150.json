@@ -1,0 +1,159 @@
+{
+ "what": "ABPROG F12: page.html on stock Chrome 150.0.7871.46, headed under Xvfb, no DevTools client, HOME with an NSS db trusting ../wire-spelling/tls-ca.pem; record.py chrome, 3 runs (2026-10-11). `headers`: each request's `priority` field, its HEADERS frame's exclusive bit and weight byte -- alike in every run. `runs`: each run's arrival order and the path each stream depends on (\"\" the root): the two concurrent fetches /fl and /fh arrive in either order, and the parent follows it (Http2PriorityDependencies).",
+ "report": {
+  "sync": [
+   200,
+   ""
+  ],
+  "h2": [
+   [
+    200,
+    ""
+   ],
+   [
+    200,
+    ""
+   ],
+   [
+    200,
+    ""
+   ]
+  ],
+  "h1": [
+   [
+    200,
+    "OK"
+   ],
+   [
+    200,
+    "Awesome"
+   ],
+   [
+    200,
+    ""
+   ],
+   [
+    404,
+    "Nope"
+   ]
+  ]
+ },
+ "headers": [
+  {
+   "path": "/",
+   "priority": "u=0, i",
+   "exclusive": 1,
+   "weight": 255
+  },
+  {
+   "path": "/fe",
+   "priority": "u=1, i",
+   "exclusive": 1,
+   "weight": 219
+  },
+  {
+   "path": "/fh",
+   "priority": "u=1, i",
+   "exclusive": 1,
+   "weight": 219
+  },
+  {
+   "path": "/fl",
+   "priority": "i",
+   "exclusive": 1,
+   "weight": 146
+  },
+  {
+   "path": "/report",
+   "priority": "u=1, i",
+   "exclusive": 1,
+   "weight": 219
+  },
+  {
+   "path": "/sx",
+   "priority": "u=0, i",
+   "exclusive": 1,
+   "weight": 255
+  }
+ ],
+ "runs": [
+  [
+   [
+    "/",
+    ""
+   ],
+   [
+    "/sx",
+    ""
+   ],
+   [
+    "/fe",
+    ""
+   ],
+   [
+    "/fl",
+    "/fe"
+   ],
+   [
+    "/fh",
+    "/fe"
+   ],
+   [
+    "/report",
+    ""
+   ]
+  ],
+  [
+   [
+    "/",
+    ""
+   ],
+   [
+    "/sx",
+    ""
+   ],
+   [
+    "/fe",
+    ""
+   ],
+   [
+    "/fl",
+    "/fe"
+   ],
+   [
+    "/fh",
+    "/fe"
+   ],
+   [
+    "/report",
+    ""
+   ]
+  ],
+  [
+   [
+    "/",
+    ""
+   ],
+   [
+    "/sx",
+    ""
+   ],
+   [
+    "/fe",
+    ""
+   ],
+   [
+    "/fh",
+    "/fe"
+   ],
+   [
+    "/fl",
+    "/fh"
+   ],
+   [
+    "/report",
+    ""
+   ]
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B14: ReadableStream.prototype[Symbol.asyncIterator] IS ReadableStream.prototype.values, in every realm.
+const probe = (g) => { const P = g.ReadableStream.prototype, d = Object.getOwnPropertyDescriptor(P, Symbol.asyncIterator);
+  return [P[Symbol.asyncIterator] === P.values, d.value.name, d.value.length, d.writable, d.enumerable, d.configurable].join(); };
+const got = { page: probe(window) };
+const done = () => { if (got.frame && got.worker) window.R = JSON.stringify({ page: got.page, frame: got.frame, worker: got.worker }); };
+const f = document.createElement('iframe');
+f.src = 'blank.html';
+f.onload = () => { got.frame = probe(f.contentWindow); done(); };
+document.body.appendChild(f);
+const w = new Worker('w.js');
+w.onmessage = (e) => { got.worker = e.data; done(); };
+</script>

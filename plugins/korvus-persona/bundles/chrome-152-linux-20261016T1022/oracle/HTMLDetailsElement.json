@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLDetailsElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "constructor",
+    "expr": "new HTMLDetailsElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"details\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"details\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "open",
+    "expr": "(() => { const o = document.createElement(\"details\"); return o.open; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDetailsElement",
+    "member": "open",
+    "expr": "(() => { const o = document.createElement(\"details\"); return (o.open = true, o.open); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

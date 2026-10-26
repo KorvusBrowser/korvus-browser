@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "ResizeObserver",
+    "member": "constructor",
+    "expr": "new ResizeObserver()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ResizeObserver",
+    "member": "observe",
+    "expr": "(() => { const o = new ResizeObserver(() => {}); return o.observe(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ResizeObserver",
+    "member": "unobserve",
+    "expr": "(() => { const o = new ResizeObserver(() => {}); return o.unobserve(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ResizeObserver",
+    "member": "disconnect",
+    "expr": "(() => { const o = new ResizeObserver(() => {}); return o.disconnect(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

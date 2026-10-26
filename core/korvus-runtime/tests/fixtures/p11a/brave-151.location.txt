@@ -1,0 +1,34 @@
+String(location) => true
+location.valueOf() === location => true
+location.ancestorOrigins => [object DOMStringList] 0
+location.assign() => THROW TypeError: Failed to execute 'assign' on 'Location': 1 argument required, but only 0 present.
+location.replace() => THROW TypeError: Failed to execute 'replace' on 'Location': 1 argument required, but only 0 present.
+location.assign("http://[") => THROW SyntaxError: Failed to execute 'assign' on 'Location': 'http://[/' is not a valid URL.
+location.href = "http://[" => THROW SyntaxError: Failed to set the 'href' property on 'Location': 'http://[/' is not a valid URL.
+location.replace("http://x:99999/") => THROW SyntaxError: Failed to execute 'replace' on 'Location': 'http://x:99999/' is not a valid URL.
+location.replace("//[") => THROW SyntaxError: Failed to execute 'replace' on 'Location': 'http://[/' is not a valid URL.
+location.replace("http://[::1") => THROW SyntaxError: Failed to execute 'replace' on 'Location': 'http://[::1/' is not a valid URL.
+location.replace("https://") => THROW SyntaxError: Failed to execute 'replace' on 'Location': 'https:' is not a valid URL.
+location.replace("http://%zz/") => THROW SyntaxError: Failed to execute 'replace' on 'Location': 'http://%25zz/' is not a valid URL.
+location.assign.length => 1 1 0 0
+location.valueOf === Object.prototype.valueOf => true
+location[Symbol.toPrimitive] => undefined
+ancestorOrigins same object => true
+location.port => string true
+Location.prototype own => constructor
+new Location() => THROW TypeError: Failed to construct 'Location': Illegal constructor
+Location() => THROW TypeError: Illegal constructor
+location instanceof Location => true
+Object.keys(location) => ancestorOrigins href origin protocol host hostname port pathname search hash assign reload replace toString
+location.protocol = "" => THROW SyntaxError: Failed to set the 'protocol' property on 'Location': '' is an invalid protocol.
+location.protocol = "ht tp" => THROW SyntaxError: Failed to set the 'protocol' property on 'Location': 'ht tp' is an invalid protocol.
+location.protocol = "data" => no throw http:
+set pathname on receiver {} => THROW TypeError: Illegal invocation
+get href on receiver {} => THROW TypeError: Illegal invocation
+assign.call({}) => THROW TypeError: Illegal invocation
+Object.defineProperty(location, "href", {value:1}) => THROW TypeError: Cannot redefine property: href
+delete location.href => false
+location.x = 1 => 1
+Object.setPrototypeOf(location, null) => THROW TypeError: Immutable prototype object '[object Location]' cannot have their prototype set
+document.location === location => true
+window.location === location => true

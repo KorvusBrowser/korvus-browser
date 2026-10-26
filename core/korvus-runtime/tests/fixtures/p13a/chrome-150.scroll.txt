@@ -1,0 +1,42 @@
+-- phase 0
+setup
+-- phase 1
+scroll => 50,900 de.scrollTop=900
+a.getBoundingClientRect => -40,100,60,30
+a.getClientRects => [-40,100,60,30]
+a offset/client => 10,1000,60,56,2
+fx.getBoundingClientRect => 20,10,30,30
+sc.getBoundingClientRect => 50,300,200,100
+sc.scrollTop => 50
+sc-in.getBoundingClientRect => 50,250,50,500
+sc-item.getBoundingClientRect => 60,400,40,20
+scs-flow.getBoundingClientRect => -50,880,30,10
+scs-abs.getBoundingClientRect => 200,550,30,10
+sp.getClientRects => [-9.95,201,35.59,17 | -50,221,72.05,17]
+sp.getBoundingClientRect => -50,201,75.64,37
+st.getBoundingClientRect => 450,5,100,30
+st-after.getBoundingClientRect => 450,-70,100,30
+range(selectNode a).getBoundingClientRect => -40,100,60,30
+range(selectNode a).getClientRects => [-40,100,60,30]
+elementFromPoint(10,110) [a] => #a
+elementFromPoint(10,500) [nothing moved there] => #scs-in
+elementsFromPoint(10,110) => #a #tall body html
+elementFromPoint(30,20) [fx] => #fx
+elementFromPoint(80,410) [sc-item] => #tall
+elementFromPoint(65,550) [scs-in] => #scs-in
+elementFromPoint(210,555) [scs-abs] => #scs-abs
+elementFromPoint(460,10) [st] => #st
+caretPositionFromPoint(10,110) [a] => #a:0 [object CaretPosition] rect=0,0,0,0
+caretPositionFromPoint(80,410) [clipped sc-item] => #tall:0 [object CaretPosition] rect=0,0,0,0
+caretPositionFromPoint(12,428) [cp h] => #cp/#text:0 [object CaretPosition] rect=10,420,0,17
+caretPositionFromPoint(19.5,428) [cp h|e] => #cp/#text:1 [object CaretPosition] rect=18.89,420,0,17
+caretPositionFromPoint(36,428) [cp l|o] => #cp/#text:4 [object CaretPosition] rect=34.91,420,0,17
+caretPositionFromPoint(250,428) [cp past the end] => #cp/#text:11 [object CaretPosition] rect=86.48,420,0,17
+caretPositionFromPoint(5,210) [sp line 1] => #sp/#text:2 [object CaretPosition] rect=7.84,201,0,17
+caretPositionFromPoint(-5,5000) [outside] => null
+caretPositionFromPoint() arity => THROW TypeError: Failed to execute 'caretPositionFromPoint' on 'Document': 2 arguments required, but only 1 present.
+CaretPosition.prototype.offset on a foreign receiver => THROW TypeError: Illegal invocation
+after scrollTo(0,0) a => 10,1000,60,30
+after scrollTo(0,0) st => 500,800,100,30
+after scrollTo(0,0) elementFromPoint(30,20) [fx] => #fx
+after scrollTo(0,0) elementFromPoint(510,810) [st] => #st

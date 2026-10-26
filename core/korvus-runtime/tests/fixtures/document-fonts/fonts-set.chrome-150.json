@@ -1,0 +1,74 @@
+[
+[
+"initial",
+"0|loaded|true"
+],
+[
+"after-style",
+"5|loaded|true"
+],
+[
+"faces-1",
+"F9 Used/normal/normal/normal/U+0-10FFFF/auto/unloaded,F9Unused/italic/700/normal/U+0-7F/swap/unloaded,F9Local/normal/normal/normal/U+0-10FFFF/auto/unloaded,F9Supports/normal/normal/normal/U+0-10FFFF/auto/unloaded,F9Wide/normal/300 500/condensed/U+0-10FFFF/auto/unloaded"
+],
+[
+"identity",
+true
+],
+[
+"add-returns",
+true
+],
+[
+"order",
+"F9 Used,F9Unused,F9Local,F9Supports,F9Wide,F9Mine|6|6|6"
+],
+[
+"has",
+"true|true|false"
+],
+[
+"delete-css",
+"false|6|true"
+],
+[
+"check",
+"false|false|false|true|true|false|true|false|true"
+],
+[
+"laid-out",
+true
+],
+[
+"after-load",
+"F9 Used/normal/normal/normal/U+0-10FFFF/auto/error,F9Unused/italic/700/normal/U+0-7F/swap/unloaded,F9Local/normal/normal/normal/U+0-10FFFF/auto/loaded,F9Supports/normal/normal/normal/U+0-10FFFF/auto/unloaded,F9Wide/normal/300 500/condensed/U+0-10FFFF/auto/unloaded,F9Mine/normal/normal/normal/U+0-10FFFF/auto/unloaded|loaded|loading::loading:false:true:true;loadingdone:F9Local/loaded:loaded:true:true:true;loadingerror:F9 Used/error:loaded:true:true:true|load:loading;ready0:true:true|true"
+],
+[
+"set-load-unused",
+"res:F9Unused/loaded|loaded"
+],
+[
+"set-load-wide",
+"rej:NetworkError|F9 Used/normal/normal/normal/U+0-10FFFF/auto/error,F9Unused/italic/700/normal/U+0-7F/swap/loaded,F9Local/normal/normal/normal/U+0-10FFFF/auto/loaded,F9Supports/normal/normal/normal/U+0-10FFFF/auto/unloaded,F9Wide/normal/300 500/condensed/U+0-10FFFF/auto/error,F9Mine/normal/normal/normal/U+0-10FFFF/auto/unloaded"
+],
+[
+"events-2",
+"loading::loading:true:true:true;loadingdone:F9Unused/loaded:loaded:true:true:true;loadingerror:F9Wide/error:loaded:true:true:true|loaded"
+],
+[
+"ready-again",
+"false|loaded"
+],
+[
+"after-edit",
+"F9 Used,F9Unused,F9Local,F9Supports,F9Wide,F9Appended,F9Mine|false|7"
+],
+[
+"after-append",
+"F9 Used,F9Unused,F9Local,F9Supports,F9Wide,F9Appended,F9Second,F9Mine|true|8"
+],
+[
+"after-removal",
+"2|F9Second,F9Mine"
+]
+]

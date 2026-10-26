@@ -1,0 +1,55 @@
+[
+  {
+    "iface": "HTMLCollection",
+    "member": "constructor",
+    "expr": "new HTMLCollection()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "length",
+    "expr": "(() => { const el = document.createElement(\"korvus-length-probe\"); document.documentElement.appendChild(el); try { return document.getElementsByTagName(\"korvus-length-probe\").length + \",\" + document.getElementsByTagName(\"KORVUS-LENGTH-PROBE\").length; } finally { el.remove(); } })()",
+    "expected": "1,1"
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "item",
+    "expr": "(() => { const el = document.createElement(\"korvus-item-probe\"); document.documentElement.appendChild(el); try { const o = document.getElementsByTagName(\"korvus-item-probe\"); return o.item(0) === el && o.item(1) === null && o.item(-1) === null; } finally { el.remove(); } })()",
+    "expected": true
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "namedItem",
+    "expr": "(() => { const el = document.createElement(\"korvus-ni-probe\"); el.id = \"korvus-ni-id\"; document.documentElement.appendChild(el); try { const o = document.getElementsByTagName(\"korvus-ni-probe\"); return o.namedItem(\"korvus-ni-id\") === el && o.namedItem(\"no-such-name-anywhere\") === null && o.namedItem(\"\") === null; } finally { el.remove(); } })()",
+    "expected": true
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "length",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.getElementsByTagName(\"*\"); })(); return o.length; })()",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.getElementsByTagName(\"*\"); })(); return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "namedItem",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.getElementsByTagName(\"*\"); })(); return o.namedItem(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLCollection",
+    "member": "namedItem",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.getElementsByTagName(\"*\"); })(); return o.namedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

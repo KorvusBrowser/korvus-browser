@@ -1,0 +1,289 @@
+[
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "constructor",
+    "expr": "new ServiceWorkerRegistration()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "installing",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"installing\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "installing",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"installing\").get.name",
+    "expected": "get installing",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "waiting",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"waiting\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "waiting",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"waiting\").get.name",
+    "expected": "get waiting",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "active",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"active\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "active",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"active\").get.name",
+    "expected": "get active",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "navigationPreload",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"navigationPreload\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "navigationPreload",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"navigationPreload\").get.name",
+    "expected": "get navigationPreload",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "scope",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"scope\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "scope",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"scope\").get.name",
+    "expected": "get scope",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "updateViaCache",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"updateViaCache\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "updateViaCache",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"updateViaCache\").get.name",
+    "expected": "get updateViaCache",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "onupdatefound",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"onupdatefound\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "onupdatefound",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"onupdatefound\").get.name",
+    "expected": "get onupdatefound",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "onupdatefound",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"onupdatefound\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "onupdatefound",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"onupdatefound\").set.call(Object.create(ServiceWorkerRegistration.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "unregister",
+    "expr": "ServiceWorkerRegistration.prototype.unregister.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "unregister",
+    "expr": "ServiceWorkerRegistration.prototype.unregister.name",
+    "expected": "unregister",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "update",
+    "expr": "ServiceWorkerRegistration.prototype.update.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "update",
+    "expr": "ServiceWorkerRegistration.prototype.update.name",
+    "expected": "update",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "paymentManager",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"paymentManager\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "paymentManager",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"paymentManager\").get.name",
+    "expected": "get paymentManager",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "backgroundFetch",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"backgroundFetch\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "backgroundFetch",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"backgroundFetch\").get.name",
+    "expected": "get backgroundFetch",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "periodicSync",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"periodicSync\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "periodicSync",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"periodicSync\").get.name",
+    "expected": "get periodicSync",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "sync",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"sync\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "sync",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"sync\").get.name",
+    "expected": "get sync",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "cookies",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"cookies\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "cookies",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"cookies\").get.name",
+    "expected": "get cookies",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "pushManager",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"pushManager\").get.call(Object.create(ServiceWorkerRegistration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "pushManager",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorkerRegistration.prototype, \"pushManager\").get.name",
+    "expected": "get pushManager",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "getNotifications",
+    "expr": "ServiceWorkerRegistration.prototype.getNotifications.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "getNotifications",
+    "expr": "ServiceWorkerRegistration.prototype.getNotifications.name",
+    "expected": "getNotifications",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "showNotification",
+    "expr": "ServiceWorkerRegistration.prototype.showNotification.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "showNotification",
+    "expr": "ServiceWorkerRegistration.prototype.showNotification.name",
+    "expected": "showNotification",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "unregister",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(ServiceWorkerRegistration.prototype.unregister.call(Object.create(ServiceWorkerRegistration.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "update",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(ServiceWorkerRegistration.prototype.update.call(Object.create(ServiceWorkerRegistration.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "getNotifications",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(ServiceWorkerRegistration.prototype.getNotifications.call(Object.create(ServiceWorkerRegistration.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerRegistration",
+    "member": "showNotification",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(ServiceWorkerRegistration.prototype.showNotification.call(Object.create(ServiceWorkerRegistration.prototype), \"t\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

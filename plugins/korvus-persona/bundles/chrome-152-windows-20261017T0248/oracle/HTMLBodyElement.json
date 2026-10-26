@@ -1,0 +1,366 @@
+[
+  {
+    "iface": "HTMLBodyElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLBodyElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "constructor",
+    "expr": "new HTMLBodyElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onorientationchange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onorientationchange; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "text",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.text; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "text",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.text = \"x\", o.text); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "link",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.link; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "link",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.link = \"x\", o.link); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "vLink",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.vLink; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "vLink",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.vLink = \"x\", o.vLink); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "aLink",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.aLink; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "aLink",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.aLink = \"x\", o.aLink); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.bgColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.bgColor = \"x\", o.bgColor); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "background",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.background; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "background",
+    "expr": "(() => { const o = document.createElement(\"body\"); return (o.background = \"x\", o.background); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onafterprint",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onafterprint; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onbeforeprint; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onbeforeunload; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onhashchange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onhashchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onlanguagechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onmessageerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onoffline",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onoffline; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "ononline",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.ononline; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpagehide",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onpagehide; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onpagereveal; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpageshow",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onpageshow; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpageswap",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onpageswap; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpopstate",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onpopstate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onrejectionhandled; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onstorage",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onstorage; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onunhandledrejection; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onunload",
+    "expr": "(() => { const o = document.createElement(\"body\"); return o.onunload; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onorientationchange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onorientationchange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onafterprint",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onafterprint); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onbeforeprint); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onbeforeunload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onhashchange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onhashchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onlanguagechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onmessage",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onmessageerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onoffline",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onoffline); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "ononline",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.ononline); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpagehide",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onpagehide); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onpagereveal); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpageshow",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onpageshow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpageswap",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onpageswap); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onpopstate",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onpopstate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onrejectionhandled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onstorage",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onstorage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onunhandledrejection); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLBodyElement",
+    "member": "onunload",
+    "expr": "(() => { const o = document.createElement(\"body\"); return Object.prototype.toString.call(o.onunload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

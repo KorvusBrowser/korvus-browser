@@ -1,0 +1,21 @@
+<!doctype html><body><script>
+window.__r=[];
+const desc = (e, u) => JSON.stringify([e.constructor.name, e.message, e.filename === u ? 'URL' : e.filename, e.lineno, e.colno, String(e.error), e.cancelable, e.isTrusted]);
+const mk = (name, src, opts) => { const u = src.startsWith('http') || src.endsWith('.js') ? src : URL.createObjectURL(new Blob([src],{type:'text/javascript'})); const w = new Worker(u, opts);
+  w.onmessage = e => window.__r.push(name + ' msg: ' + e.data);
+  w.addEventListener('error', e => window.__r.push(name + ' page error: ' + desc(e, u))); return w; };
+// M1 module worker top-level throw, worker listeners registered first
+mk('M1', `self.onerror = (m, f, l, c, e) => postMessage('self.onerror ' + JSON.stringify([m, f.slice(0,5), l, c, String(e)])); self.addEventListener('unhandledrejection', e => postMessage('M1 unhandledrejection')); setTimeout(() => postMessage('alive'), 50); throw new RangeError('modtop')`, {type: 'module'});
+// L1 a script that 404s
+mk('L1', 'missing-404.js');
+// C1 classic top-level throw with self.onerror set before the throw; returns nothing
+mk('C1', `self.onerror = (m, f, l, c, e) => postMessage('self.onerror ' + JSON.stringify([m, f.slice(0,5), l, c, String(e)])); throw new Error('ctop')`);
+// C2 classic top-level throw, handled in worker (return true): page must not see it
+mk('C2', `self.onerror = () => true; setTimeout(() => postMessage('alive'), 50); throw new Error('handled')`);
+// C3 throw a non-Error string at top level
+mk('C3', `throw 'str'`);
+// C4 page preventDefault on the error, then check console - not visible here; just record
+const w4 = mk('C4', `setTimeout(() => { throw new SyntaxError('t4') }, 10)`); w4.onerror = e => { e.preventDefault(); window.__r.push('C4 onerror prop called') };
+// C5 syntax error in the script itself
+mk('C5', `let x = ;`);
+</script>

@@ -1,0 +1,46 @@
+[package]
+name = "korvus-cdp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# One binary for every integration test: see tests/all.rs for the measurement.
+# `autotests = false` stops Cargo auto-discovering tests/*.rs as separate binaries.
+autotests = false
+
+[[test]]
+name = "all"
+path = "tests/all.rs"
+
+[lib]
+name = "cdp"
+
+# G1.8 adds the CDP WebSocket server. G1.0 is a placeholder.
+[dependencies]
+spec = { workspace = true }
+engine = { workspace = true }
+webapi = { workspace = true }
+tokio-tungstenite = "0.24"
+futures-util = "0.3"
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+anyhow = "1"
+tokio = { version = "1", features = ["net", "io-util", "rt", "macros", "sync", "time", "process"] }
+# `Page.captureScreenshot` hands the rendered PNG over as base64 (the workspace's own 0.22).
+base64 = "0.22"
+transport = { workspace = true }
+# The router's plugin slots (rotation, device, identity, observer) and the input slot's CDP routing.
+plugin_host = { workspace = true }
+# Chrome-shaped CDP identifiers need real entropy (see src/ids.rs); the same 0.2 the rest of the
+# workspace uses (korvus-webapi, korvus-runtime).
+getrandom = "0.2"
+# A popup's opener origin, read off the opener's URL (D74 step 3); the workspace's own 2.
+url = "2"
+
+[dev-dependencies]
+# Tests drive the engine with the SHIPPED persona bundle, not an empty stub. A stub with an
+# empty UA and no TLS profile is not a cheap browser, it is an incoherent one -- and it is what WPT
+# and the bench have been measuring.
+persona = { workspace = true }
+# The legacy-encoded fixtures of tests/navigation.rs are written in their encodings.
+encoding_rs = "0.8"

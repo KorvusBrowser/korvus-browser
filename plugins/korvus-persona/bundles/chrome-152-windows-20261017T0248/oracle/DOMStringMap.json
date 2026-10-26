@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "DOMStringMap",
+    "member": "named getter",
+    "expr": "(() => { const e = document.createElement('div'); e.setAttribute('data-foo', 'bar'); return e.dataset.foo; })()",
+    "expected": "bar",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named getter",
+    "expr": "(() => { const e = document.createElement('div'); e.setAttribute('data-foo-bar', '1'); return e.dataset.fooBar; })()",
+    "expected": "1",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named getter",
+    "expr": "(() => { const e = document.createElement('div'); return e.dataset.nothing; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named getter",
+    "expr": "(() => { const e = document.createElement('div'); e.setAttribute('data-x', '1'); return 'x' in e.dataset && !('y' in e.dataset); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named setter",
+    "expr": "(() => { const e = document.createElement('div'); e.dataset.foo = 'bar'; return e.getAttribute('data-foo'); })()",
+    "expected": "bar",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named setter",
+    "expr": "(() => { const e = document.createElement('div'); e.dataset.fooBar = '2'; return e.getAttribute('data-foo-bar'); })()",
+    "expected": "2",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named setter",
+    "expr": "(() => { const e = document.createElement('div'); e.dataset.n = 42; return e.getAttribute('data-n'); })()",
+    "expected": "42",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named deleter",
+    "expr": "(() => { const e = document.createElement('div'); e.setAttribute('data-foo', 'bar'); delete e.dataset.foo; return e.hasAttribute('data-foo'); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "named deleter",
+    "expr": "(() => { const e = document.createElement('div'); return delete e.dataset.nope; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMStringMap",
+    "member": "constructor",
+    "expr": "new DOMStringMap()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

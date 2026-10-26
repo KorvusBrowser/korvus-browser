@@ -1,0 +1,150 @@
+{
+ "head-gz": [
+  "HEAD",
+  [
+   "gzip"
+  ],
+  "gz"
+ ],
+ "empty-gz": [
+  "GET",
+  [
+   "gzip"
+  ],
+  null
+ ],
+ "gz": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz"
+ ],
+ "gz-trunc": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz-trunc"
+ ],
+ "gz-header-only": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz-header-only"
+ ],
+ "gz-badcrc": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz-badcrc"
+ ],
+ "gz-two": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz-two"
+ ],
+ "gz-junk-after": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "gz-junk-after"
+ ],
+ "gz-identity": [
+  "GET",
+  [
+   "gzip, identity"
+  ],
+  "gz"
+ ],
+ "gz-empty-token": [
+  "GET",
+  [
+   "gzip,"
+  ],
+  "gz"
+ ],
+ "identity-gz": [
+  "GET",
+  [
+   "identity",
+   "gzip"
+  ],
+  "gz"
+ ],
+ "x-gzip": [
+  "GET",
+  [
+   "X-GZIP"
+  ],
+  "gz"
+ ],
+ "deflate-zlib": [
+  "GET",
+  [
+   "deflate"
+  ],
+  "deflate-zlib"
+ ],
+ "deflate-raw": [
+  "GET",
+  [
+   "deflate"
+  ],
+  "deflate-raw"
+ ],
+ "deflate-zlib-trunc": [
+  "GET",
+  [
+   "deflate"
+  ],
+  "deflate-zlib-trunc"
+ ],
+ "br": [
+  "GET",
+  [
+   "br"
+  ],
+  "br"
+ ],
+ "empty-br": [
+  "GET",
+  [
+   "br"
+  ],
+  null
+ ],
+ "zstd": [
+  "GET",
+  [
+   "zstd"
+  ],
+  "zstd"
+ ],
+ "empty-zstd": [
+  "GET",
+  [
+   "zstd"
+  ],
+  null
+ ],
+ "garbage-gz": [
+  "GET",
+  [
+   "gzip"
+  ],
+  "garbage"
+ ],
+ "head-garbage-gz": [
+  "HEAD",
+  [
+   "gzip"
+  ],
+  "garbage"
+ ]
+}

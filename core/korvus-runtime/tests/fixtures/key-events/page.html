@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset=utf-8><style>
+body { margin: 0 }
+form { margin: 0 }
+#t { display: block; box-sizing: border-box; width: 1200px; height: 400px; margin: 0; font-size: 40px }
+#u, #go { display: block; width: 300px; height: 40px }
+</style></head><body>
+<form id=f action="/submitted"><input id=t name=q autocomplete=off></form>
+<script>
+(function () {
+  var v = (location.search.match(/v=(\w+)/) || [])[1] || 'button';
+  var f = document.getElementById('f');
+  if (v === 'button') { var b = document.createElement('button'); b.id = 'go'; b.textContent = 'Go'; f.appendChild(b); }
+  if (v === 'two') { var u = document.createElement('input'); u.id = 'u'; u.name = 'r'; f.appendChild(u); }
+  var R = window.__rows = [];
+  var t = document.getElementById('t');
+  var has = function (e, k) { return (k in e) ? e[k] : null; };
+  var gms = function (e, k) { return typeof e.getModifierState === 'function' ? e.getModifierState(k) : null; };
+  var id = function (n) { return n === null || n === undefined ? null : (n === window ? '#window' : (n === document ? '#document' : (n.id || n.nodeName))); };
+  var row = function (e) {
+    return [e.type, id(e.target), e.constructor.name,
+      has(e, 'key'), has(e, 'code'), has(e, 'keyCode'), has(e, 'which'), has(e, 'charCode'),
+      has(e, 'shiftKey'), has(e, 'ctrlKey'), has(e, 'altKey'), has(e, 'metaKey'),
+      gms(e, 'Shift'), gms(e, 'Control'), gms(e, 'Alt'), gms(e, 'Meta'), gms(e, 'CapsLock'), gms(e, 'NumLock'), gms(e, 'AltGraph'), gms(e, 'Accel'),
+      has(e, 'repeat'), has(e, 'location'), has(e, 'isComposing'),
+      e.isTrusted, e.bubbles, e.cancelable, e.composed, has(e, 'detail'), 'view' in e ? e.view === window : null,
+      has(e, 'data'), has(e, 'inputType'),
+      has(e, 'pointerId'), has(e, 'pointerType'), has(e, 'button'), has(e, 'buttons'), has(e, 'screenX'), has(e, 'clientX'),
+      'submitter' in e ? id(e.submitter) : null,
+      t.value, t.selectionStart, t.selectionEnd, id(document.activeElement)];
+  };
+  var finished = false;
+  var finish = window.__finish = function () {
+    if (finished) return; finished = true;
+    window.__report = JSON.stringify(R);
+    if (location.port) fetch('/report', {method: 'POST', body: window.__report});
+  };
+  ['keydown', 'keypress', 'keyup', 'beforeinput', 'input', 'change', 'click', 'submit'].forEach(function (k) {
+    window.addEventListener(k, function (e) {
+      if (k === 'click' && e.target === t) return;   // the click that focused the field
+      R.push(row(e));
+      if (k === 'submit') { e.preventDefault(); setTimeout(finish, 300); }
+      if (k === 'keyup' && e.key === 'Enter') setTimeout(finish, 800);
+    }, true);
+  });
+  if (/dbg=1/.test(location.search)) ['focus', 'blur'].forEach(function (k) { window.addEventListener(k, function (e) { R.push([k, id(e.target), performance.now()]); }, true); });
+  t.focus();
+  if (location.port) { fetch('/ready'); setTimeout(finish, 9000); }
+})();
+</script></body></html>

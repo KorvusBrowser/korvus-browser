@@ -1,0 +1,180 @@
+[
+  {
+    "iface": "SubtleCrypto",
+    "member": "constructor",
+    "expr": "new SubtleCrypto()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "encapsulateKey",
+    "expr": "(() => { const o = crypto.subtle; return o.encapsulateKey(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "encapsulateBits",
+    "expr": "(() => { const o = crypto.subtle; return o.encapsulateBits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "decapsulateKey",
+    "expr": "(() => { const o = crypto.subtle; return o.decapsulateKey(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "decapsulateBits",
+    "expr": "(() => { const o = crypto.subtle; return o.decapsulateBits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "getPublicKey",
+    "expr": "(() => { const o = crypto.subtle; return o.getPublicKey(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "encapsulateKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.encapsulateKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "encapsulateBits",
+    "expr": "(async () => { const o = crypto.subtle; return await o.encapsulateBits(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "decapsulateKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.decapsulateKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "decapsulateBits",
+    "expr": "(async () => { const o = crypto.subtle; return await o.decapsulateBits(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "getPublicKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.getPublicKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "encrypt",
+    "expr": "(async () => { const o = crypto.subtle; return await o.encrypt(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "decrypt",
+    "expr": "(async () => { const o = crypto.subtle; return await o.decrypt(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "sign",
+    "expr": "(async () => { const o = crypto.subtle; return await o.sign(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "verify",
+    "expr": "(async () => { const o = crypto.subtle; return await o.verify(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "digest",
+    "expr": "(async () => { const o = crypto.subtle; return await o.digest(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "generateKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.generateKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "deriveKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.deriveKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "deriveBits",
+    "expr": "(async () => { const o = crypto.subtle; return await o.deriveBits(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "importKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.importKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "exportKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.exportKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "wrapKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.wrapKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SubtleCrypto",
+    "member": "unwrapKey",
+    "expr": "(async () => { const o = crypto.subtle; return await o.unwrapKey(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

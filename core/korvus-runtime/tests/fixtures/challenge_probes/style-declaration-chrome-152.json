@@ -1,0 +1,179 @@
+[
+ [
+  "computed counts",
+  1222,
+  1213,
+  746,
+  476
+ ],
+ [
+  "computed first named",
+  "accentColor,additiveSymbols,alignContent,alignItems,alignSelf,alignmentBaseline,all,anchorName,anchorScope,animation,animationComposition,animationDelay"
+ ],
+ [
+  "computed last named",
+  "widows,width,willChange,windowDrag,wordBreak,wordSpacing,wordWrap,writingMode,x,y,zIndex,zoom"
+ ],
+ [
+  "computed own-not-keys",
+  "epubCaptionSide,epubTextCombine,epubTextEmphasis,epubTextEmphasisColor,epubTextEmphasisStyle,epubTextOrientation,epubTextTransform,epubWordBreak,epubWritingMode"
+ ],
+ [
+  "computed order idx-first",
+  "0,1,2",
+  "475,accentColor,additiveSymbols"
+ ],
+ [
+  "computed for-in count",
+  1222,
+  "0,1,2",
+  "item,removeProperty,setProperty"
+ ],
+ [
+  "computed in",
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  false,
+  true,
+  false
+ ],
+ [
+  "computed desc",
+  "{\"value\":\"auto\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"rgba(0, 0, 0, 0)\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "none",
+  "{\"value\":\"none\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "none",
+  "{\"value\":\"none\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"none\",\"writable\":true,\"enumerable\":true,\"configurable\":true}"
+ ],
+ [
+  "computed get",
+  "rgba(0, 0, 0, 0)",
+  "rgba(0, 0, 0, 0)",
+  "none",
+  "none",
+  "undefined",
+  "none",
+  "none"
+ ],
+ [
+  "inline counts",
+  747,
+  738,
+  746,
+  1
+ ],
+ [
+  "inline first named",
+  "accentColor,additiveSymbols,alignContent,alignItems,alignSelf,alignmentBaseline,all,anchorName,anchorScope,animation,animationComposition,animationDelay"
+ ],
+ [
+  "inline last named",
+  "widows,width,willChange,windowDrag,wordBreak,wordSpacing,wordWrap,writingMode,x,y,zIndex,zoom"
+ ],
+ [
+  "inline own-not-keys",
+  "epubCaptionSide,epubTextCombine,epubTextEmphasis,epubTextEmphasisColor,epubTextEmphasisStyle,epubTextOrientation,epubTextTransform,epubWordBreak,epubWritingMode"
+ ],
+ [
+  "inline order idx-first",
+  "0,accentColor,additiveSymbols",
+  "0,accentColor,additiveSymbols"
+ ],
+ [
+  "inline for-in count",
+  747,
+  "0,accentColor,additiveSymbols",
+  "item,removeProperty,setProperty"
+ ],
+ [
+  "inline in",
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  false,
+  true,
+  false
+ ],
+ [
+  "inline desc",
+  "{\"value\":\"\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "none",
+  "{\"value\":\"\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "none",
+  "{\"value\":\"\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"\",\"writable\":true,\"enumerable\":true,\"configurable\":true}"
+ ],
+ [
+  "inline get",
+  "",
+  "",
+  "",
+  "",
+  "undefined",
+  "",
+  ""
+ ],
+ [
+  "computed set THROW",
+  "NoModificationAllowedError",
+  "Failed to set a named property 'color' on 'CSSStyleDeclaration': These styles are computed, and therefore the 'color' property is read-only."
+ ],
+ [
+  "computed set dashed THROW",
+  "NoModificationAllowedError",
+  "Failed to set a named property 'background-color' on 'CSSStyleDeclaration': These styles are computed, and therefore the 'background-color' property is read-only."
+ ],
+ [
+  "computed set foo",
+  1,
+  true
+ ],
+ [
+  "inline set camel",
+  "green",
+  "color: red; background-color: green;"
+ ],
+ [
+  "inline set dashed",
+  "blue",
+  "color: red; background-color: green; border-top-color: blue;"
+ ],
+ [
+  "inline set number",
+  ""
+ ],
+ [
+  "inline set zero",
+  "0px",
+  "color: red; background-color: green; border-top-color: blue; width: 0px;"
+ ],
+ [
+  "delete",
+  true,
+  "red",
+  true
+ ],
+ [
+  "expando",
+  "bar",
+  true,
+  true
+ ],
+ [
+  "proto has",
+  10,
+  false
+ ]
+]

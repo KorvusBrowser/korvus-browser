@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "CSSParserQualifiedRule",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSParserQualifiedRule([]); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSParserQualifiedRule",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSParserQualifiedRule(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

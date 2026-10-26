@@ -1,0 +1,105 @@
+(() => {
+  const out = [];
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = n => document.createElementNS(NS, n);
+  const show = v => (v === null ? 'null' : v === undefined ? 'undefined' : typeof v === 'object' ? Object.prototype.toString.call(v) : (typeof v === 'number' && isNaN(v)) ? 'NaN' : v);
+  const t = (label, f) => { try { out.push([label, show(f())]); } catch (e) { out.push([label, 'threw ' + e.name, e.message]); } };
+  // ── point lists
+  t('points-type', () => el('polygon').points);
+  t('points-same', () => { const p = el('polygon'); return p.points === p.points; });
+  t('points-anim-distinct', () => { const p = el('polygon'); return p.points === p.animatedPoints; });
+  t('points-empty', () => { const l = el('polygon').points; return [l.length, l.numberOfItems].join(); });
+  t('points-parse', () => { const p = el('polygon'); p.setAttribute('points', '1,2 3,4  5 6'); const l = p.points; return [l.length, l.getItem(0).x, l.getItem(0).y, l.getItem(2).x, l[1].y].join(); });
+  t('points-item-type', () => { const p = el('polyline'); p.setAttribute('points', '1,2'); return Object.prototype.toString.call(p.points.getItem(0)); });
+  t('points-item-same', () => { const p = el('polyline'); p.setAttribute('points', '1,2'); return p.points.getItem(0) === p.points.getItem(0); });
+  t('points-bad', () => { const p = el('polygon'); p.setAttribute('points', '1,2 3'); return p.points.length; });
+  t('points-bad2', () => { const p = el('polygon'); p.setAttribute('points', '1,2 x 3,4'); return p.points.length; });
+  t('points-getitem-oob', () => el('polygon').points.getItem(1));
+  t('points-remove-oob', () => el('polygon').points.removeItem(1));
+  t('points-clear', () => { const p = el('polygon'); p.setAttribute('points', '1,2 3,4'); p.points.clear(); return [p.points.length, p.getAttribute('points')].join('|'); });
+  t('points-append', () => { const p = el('polygon'); const s = el('svg'); const pt = s.createSVGPoint(); pt.x = 7; pt.y = 8; p.points.appendItem(pt); return [p.points.length, p.getAttribute('points')].join('|'); });
+  t('points-write-item', () => { const p = el('polygon'); p.setAttribute('points', '1,2 3,4'); p.points.getItem(1).x = 9; return p.getAttribute('points'); });
+  t('points-remove', () => { const p = el('polygon'); p.setAttribute('points', '1,2 3,4'); const r = p.points.removeItem(0); return [r.x, r.y, p.getAttribute('points')].join('|'); });
+  t('points-anim-readonly', () => { const p = el('polygon'); p.setAttribute('points', '1,2'); p.animatedPoints.clear(); return p.points.length; });
+  // ── list removeItem / getItem bounds
+  t('lenlist-remove-oob', () => el('text').x.baseVal.removeItem(1));
+  t('lenlist-get-oob', () => el('text').x.baseVal.getItem(0));
+  t('translist-remove-oob', () => el('svg').transform);
+  t('translist-remove-oob2', () => el('g').transform.baseVal.removeItem(1));
+  t('numlist-get-oob', () => el('text').rotate.baseVal.getItem(0));
+  // ── valueAsString parsing
+  t('length-vas-bad', () => { const l = el('svg').createSVGLength(); l.valueAsString = 'x'; return l.valueAsString; });
+  t('length-vas-ok', () => { const l = el('svg').createSVGLength(); l.valueAsString = '2em'; return [l.unitType, l.valueInSpecifiedUnits, l.valueAsString].join(); });
+  t('length-vas-empty', () => { const l = el('svg').createSVGLength(); l.valueAsString = ''; return l.valueAsString; });
+  t('angle-vas-bad', () => { const a = el('svg').createSVGAngle(); a.valueAsString = 'x'; return a.valueAsString; });
+  t('angle-vas-ok', () => { const a = el('svg').createSVGAngle(); a.valueAsString = '90deg'; return [a.unitType, a.value].join(); });
+  t('rect-len-vas-bad', () => { const r = el('rect'); r.x.baseVal.valueAsString = 'x'; return r.getAttribute('x'); });
+  // ── enumeration initial values
+  t('feblend-mode', () => el('feBlend').mode.baseVal);
+  t('feblend-mode-anim', () => el('feBlend').mode.animVal);
+  t('lg-units', () => el('linearGradient').gradientUnits.baseVal);
+  t('lg-spread', () => el('linearGradient').spreadMethod.baseVal);
+  t('pattern-units', () => el('pattern').patternUnits.baseVal);
+  t('pattern-content-units', () => el('pattern').patternContentUnits.baseVal);
+  t('clip-units', () => el('clipPath').clipPathUnits.baseVal);
+  t('mask-units', () => el('mask').maskUnits.baseVal);
+  t('mask-content-units', () => el('mask').maskContentUnits.baseVal);
+  t('filter-units', () => el('filter').filterUnits.baseVal);
+  t('filter-prim-units', () => el('filter').primitiveUnits.baseVal);
+  t('marker-units', () => el('marker').markerUnits.baseVal);
+  t('marker-orient-type', () => el('marker').orientType.baseVal);
+  t('textpath-method', () => el('textPath').method.baseVal);
+  t('textpath-spacing', () => el('textPath').spacing.baseVal);
+  t('text-length-adjust', () => el('text').lengthAdjust.baseVal);
+  t('fecomposite-op', () => el('feComposite').operator.baseVal);
+  t('fecolormatrix-type', () => el('feColorMatrix').type.baseVal);
+  t('feturb-type', () => el('feTurbulence').type.baseVal);
+  t('feturb-stitch', () => el('feTurbulence').stitchTiles.baseVal);
+  t('fedisp-x', () => el('feDisplacementMap').xChannelSelector.baseVal);
+  t('femorph-op', () => el('feMorphology').operator.baseVal);
+  t('feconv-edge', () => el('feConvolveMatrix').edgeMode.baseVal);
+  t('fegauss-edge', () => el('feGaussianBlur').edgeMode.baseVal);
+  t('fefunc-type', () => el('feFuncR').type.baseVal);
+  t('feblend-mode-set', () => { const f = el('feBlend'); f.setAttribute('mode', 'multiply'); return f.mode.baseVal; });
+  t('feblend-mode-bad', () => { const f = el('feBlend'); f.setAttribute('mode', 'nope'); return f.mode.baseVal; });
+  t('enum-set-0', () => { const f = el('feBlend'); f.mode.baseVal = 0; return f.mode.baseVal; });
+  t('enum-set-big', () => { const f = el('feBlend'); f.mode.baseVal = 99; return f.mode.baseVal; });
+  // ── <style>
+  t('style-type', () => el('style').type);
+  t('style-media', () => el('style').media);
+  t('style-title', () => el('style').title);
+  t('style-disabled', () => { const s = el('style'); s.disabled = true; return s.disabled; });
+  t('style-disabled-connected', () => { const s = el('style'); s.textContent = 'a{}'; const g = el('svg'); g.appendChild(s); document.body.appendChild(g); s.disabled = true; const r = [s.disabled, s.sheet && s.sheet.disabled].join(); g.remove(); return r; });
+  t('style-type-set', () => { const s = el('style'); s.type = 'x'; return [s.type, s.getAttribute('type')].join(); });
+  t('style-media-set', () => { const s = el('style'); s.media = 'print'; return [s.media, s.getAttribute('media')].join(); });
+  // ── <svg>
+  t('svg-current-scale', () => el('svg').currentScale);
+  t('svg-current-scale-set', () => { const s = el('svg'); s.currentScale = '2'; return s.currentScale; });
+  t('svg-current-scale-bad', () => { const s = el('svg'); s.currentScale = 'x'; return s.currentScale; });
+  t('svg-current-translate', () => el('svg').currentTranslate);
+  t('svg-current-translate-xy', () => { const p = el('svg').currentTranslate; return [p.x, p.y].join(); });
+  t('svg-current-translate-same', () => { const s = el('svg'); return s.currentTranslate === s.currentTranslate; });
+  t('svg-suspend', () => el('svg').suspendRedraw(1));
+  t('svg-suspend-0', () => el('svg').suspendRedraw(0));
+  t('svg-unsuspend', () => el('svg').unsuspendRedraw(1));
+  t('svg-force', () => el('svg').forceRedraw());
+  // ── transform / misc
+  t('transform-matrix', () => el('svg').createSVGTransform().matrix);
+  t('transform-matrix-vals', () => { const m = el('svg').createSVGTransform().matrix; return [m.a, m.b, m.c, m.d, m.e, m.f].join(); });
+  t('transform-matrix-same', () => { const t2 = el('svg').createSVGTransform(); return t2.matrix === t2.matrix; });
+  t('transform-type', () => el('svg').createSVGTransform().type);
+  t('path-point-empty', () => el('path').getPointAtLength(1));
+  t('path-length-empty', () => el('path').getTotalLength());
+  t('path-point', () => { const p = el('path'); p.setAttribute('d', 'M0 0 L10 0'); const q = p.getPointAtLength(4); return [Object.prototype.toString.call(q), q.x, q.y].join(); });
+  t('par-align-1', () => { const p = el('svg').preserveAspectRatio.baseVal; p.align = 1; return p.align; });
+  t('par-align-str', () => { const p = el('svg').preserveAspectRatio.baseVal; p.align = '1'; return p.align; });
+  t('par-align-0', () => { const p = el('svg').preserveAspectRatio.baseVal; p.align = 0; return p.align; });
+  t('par-align-attr', () => { const s = el('svg'); s.preserveAspectRatio.baseVal.align = 1; return s.getAttribute('preserveAspectRatio'); });
+  t('par-default', () => { const p = el('svg').preserveAspectRatio.baseVal; return [p.align, p.meetOrSlice].join(); });
+  t('image-crossorigin', () => { const i = el('image'); i.crossOrigin = 'x'; return i.crossOrigin; });
+  t('image-crossorigin-null', () => el('image').crossOrigin);
+  t('image-crossorigin-uc', () => { const i = el('image'); i.crossOrigin = 'USE-CREDENTIALS'; return i.crossOrigin; });
+  t('a-referrerpolicy', () => { const a = el('a'); a.referrerPolicy = 'x'; return a.referrerPolicy; });
+  t('a-referrerpolicy-ok', () => { const a = el('a'); a.referrerPolicy = 'NO-REFERRER'; return a.referrerPolicy; });
+  return out;
+})()

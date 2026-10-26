@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>named properties</title>
+<!-- H16: Document's and HTMLFormElement's NAMED properties answered undefined (crt.sh: `document.search.q`;
+     a form's controls by name, the document's forms/images/embeds/objects by name and id). -->
+<body>
+<form name="search" id="sf"><input name="q" value="v"><input id="idctl" value="i"><select name="s"><option>o</option></select><input name="dup" value="1"><input name="dup" value="2"></form>
+<img name="pic" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="><img id="picid" name="pn2" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+<embed name="emb"><object name="obj"></object><iframe name="ifr"></iframe><div id="plainid" name="plainname"></div>
+<script>
+var r = {};
+function t(n, f) { try { var v = f(); r[n] = v === undefined ? 'undefined' : JSON.stringify(v); } catch (e) { r[n] = 'threw ' + e.name; } }
+var tag = function (x) { return x == null ? String(x) : Object.prototype.toString.call(x); };
+t('docForm', function () { return tag(document.search); });
+t('docImg', function () { return tag(document.pic); });
+t('docImgById', function () { return tag(document.picid); });
+t('docEmbed', function () { return tag(document.emb); });
+t('docObject', function () { return tag(document.obj); });
+t('docIframe', function () { return tag(document.ifr); });
+t('docPlainDiv', function () { return tag(document.plainname) + '/' + tag(document.plainid); });
+t('formNamed', function () { return document.search.q.value; });
+t('formById', function () { return document.search.idctl.value; });
+t('formSelect', function () { return tag(document.search.s); });
+t('formDup', function () { return tag(document.search.dup) + ':' + document.search.dup.length; });
+t('formIndexed', function () { return tag(document.search[0]) + ':' + document.search.length; });
+t('inDoc', function () { return ['search' in document, 'pic' in document, 'nope' in document]; });
+t('formsNamed', function () { return document.forms.search.q.value; });
+window.R = JSON.stringify(r);
+</script>

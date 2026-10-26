@@ -1,0 +1,74 @@
+[
+  {
+    "iface": "ReadableStream",
+    "member": "from",
+    "expr": "ReadableStream.from([])",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new ReadableStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "locked",
+    "expr": "(() => { const o = new ReadableStream(); return o.locked; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "pipeThrough",
+    "expr": "(() => { const o = new ReadableStream(); return o.pipeThrough(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "from",
+    "expr": "Object.prototype.toString.call(ReadableStream.from([]))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "cancel",
+    "expr": "(() => { const o = new ReadableStream(); return Object.prototype.toString.call(o.cancel()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "getReader",
+    "expr": "(() => { const o = new ReadableStream(); return Object.prototype.toString.call(o.getReader()); })()",
+    "expected": "[object ReadableStreamDefaultReader]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "tee",
+    "expr": "(() => { const o = new ReadableStream(); return Object.prototype.toString.call(o.tee()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "cancel",
+    "expr": "(async () => { const o = new ReadableStream(); return await o.cancel(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ReadableStream",
+    "member": "pipeTo",
+    "expr": "(async () => { const o = new ReadableStream(); return await o.pipeTo(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

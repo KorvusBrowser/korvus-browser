@@ -1,0 +1,240 @@
+[
+  {
+    "iface": "XRView",
+    "member": "constructor",
+    "expr": "new XRView()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "eye",
+    "expr": "XRView.prototype.eye",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "eye",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"eye\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "recommendedViewportScale",
+    "expr": "XRView.prototype.recommendedViewportScale",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "recommendedViewportScale",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"recommendedViewportScale\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "isFirstPersonObserver",
+    "expr": "XRView.prototype.isFirstPersonObserver",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "isFirstPersonObserver",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"isFirstPersonObserver\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "camera",
+    "expr": "XRView.prototype.camera",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "camera",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"camera\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "requestViewportScale",
+    "expr": "XRView.prototype.requestViewportScale.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "requestViewportScale",
+    "expr": "XRView.prototype.requestViewportScale.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "index",
+    "expr": "XRView.prototype.index",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "index",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"index\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "projectionMatrix",
+    "expr": "XRView.prototype.projectionMatrix",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "projectionMatrix",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"projectionMatrix\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "transform",
+    "expr": "XRView.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRView.prototype, \"transform\").get.call(Object.create(XRView.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "requestViewportScale",
+    "expr": "XRView.prototype.requestViewportScale.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "eye",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"eye\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "eye",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"eye\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "recommendedViewportScale",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"recommendedViewportScale\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "recommendedViewportScale",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"recommendedViewportScale\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "isFirstPersonObserver",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"isFirstPersonObserver\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "isFirstPersonObserver",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"isFirstPersonObserver\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "camera",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"camera\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "camera",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"camera\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "requestViewportScale",
+    "expr": "(() => { try { const v = XRView.prototype[\"requestViewportScale\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "requestViewportScale",
+    "expr": "(() => { try { const v = XRView.prototype[\"requestViewportScale\"].call(Object.create(XRView.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "index",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"index\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "index",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"index\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "projectionMatrix",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"projectionMatrix\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "projectionMatrix",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"projectionMatrix\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRView",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRView.prototype, \"transform\").get.call(Object.create(XRView.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "PresentationRequest",
+    "member": "constructor",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PresentationRequest]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "constructor",
+    "expr": "(() => { const o = new PresentationRequest(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "onconnectionavailable",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return o.onconnectionavailable; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "start",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return Object.prototype.toString.call(o.start()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "reconnect",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return Object.prototype.toString.call(o.reconnect(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "getAvailability",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return Object.prototype.toString.call(o.getAvailability()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PresentationRequest",
+    "member": "onconnectionavailable",
+    "expr": "(() => { const o = new PresentationRequest(\"x\"); return Object.prototype.toString.call(o.onconnectionavailable); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

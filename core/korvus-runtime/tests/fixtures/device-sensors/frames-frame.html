@@ -1,0 +1,7 @@
+<!doctype html><script>
+var ev = [];
+['devicemotion', 'deviceorientation', 'deviceorientationabsolute'].forEach(function (t) {
+  addEventListener(t, function (e) { ev.push([e.type, e.isTrusted, e.type === 'devicemotion' ? e.interval : e.absolute]); });
+});
+setTimeout(function () { parent.postMessage({who: location.search.slice(1), sc: isSecureContext, ev: ev}, '*'); }, 1200);
+</script>

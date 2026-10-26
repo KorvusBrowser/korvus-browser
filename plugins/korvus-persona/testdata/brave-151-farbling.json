@@ -1,0 +1,1074 @@
+{
+ "meta": {
+  "emitter": "plugins/korvus-persona/capture/farbling.py",
+  "probe": "plugins/korvus-persona/capture/farbling-probe.js",
+  "browser": "Brave Browser 151.1.93.138 unknown",
+  "binary": "/opt/brave.com/brave/brave",
+  "capturedAt": "2026-09-19T13:53:11Z",
+  "display": ":82",
+  "windowSizes": [
+   "600x400",
+   "800x600",
+   "1000x700",
+   "1200x800",
+   "1290x810",
+   "1350x850",
+   "1360x820",
+   "1400x900",
+   "1450x920",
+   "1500x1000",
+   "1600x1000",
+   "1700x1050",
+   "1920x1052",
+   "1920x1080",
+   "2000x1200",
+   "2200x1300",
+   "2700x1500",
+   "1320x881",
+   "1480x981"
+  ],
+  "cpuset": "all",
+  "hostCores": 12,
+  "origins": [
+   "http://127.0.0.1:56483/",
+   "http://127.0.0.2:56483/",
+   "http://127.0.0.3:56483/",
+   "http://localhost:56483/"
+  ],
+  "sessions": {
+   "farbled": 38,
+   "unfarbled": 4
+  },
+  "cells": {
+   "farbled": 152,
+   "unfarbled": 16
+  },
+  "probe_reads": {
+   "farbled": 380,
+   "unfarbled": 40
+  },
+  "webdriver_seen": [
+   "False"
+  ],
+  "sessions_not_reaped": 0,
+  "reducedAt": "2026-09-19T14:27:39Z",
+  "reducedFrom": "farbling-brave-151-20260919-38s.raw.json"
+ },
+ "scope": {
+  "policy": "every farbled signal is redrawn per (session, eTLD+1) and per nothing else — not per page load, not per tab, not per read",
+  "keyed_on": "the origin's HOST STRING as written, not the address it resolves to (`localhost` and `127.0.0.1` are one socket and draw differently)",
+  "read_the_counts_against_expected_if_redrawn_every_time": true,
+  "evidence": {
+   "navigator.hardwareConcurrency": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "107/114",
+    "differs_across_sessions": "32/37",
+    "expected_if_redrawn_every_time": 0.8934
+   },
+   "navigator.deviceMemory": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "90/114",
+    "differs_across_sessions": "30/37",
+    "expected_if_redrawn_every_time": 0.7355
+   },
+   "navigator.languages": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "0/114",
+    "differs_across_sessions": "0/37",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.mimeTypes.length": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "0/114",
+    "differs_across_sessions": "0/37",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.plugins:names": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "114/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.9737
+   },
+   "canvas:toDataURL": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "114/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.9737
+   },
+   "canvas:getImageData": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "114/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.9737
+   },
+   "audio:offlineSum": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "114/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.9737
+   },
+   "screen": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "0/114",
+    "differs_across_sessions": "19/37",
+    "expected_if_redrawn_every_time": 0.8144
+   },
+   "window.outer-inner": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "114/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.964
+   },
+   "window.screenX/screenY": {
+    "same_page_twice_equal": "190/190",
+    "same_origin_second_tab_equal": "38/38",
+    "differs_across_origins": "113/114",
+    "differs_across_sessions": "37/37",
+    "expected_if_redrawn_every_time": 0.9626
+   }
+  },
+  "unfarbled_control": {
+   "navigator.hardwareConcurrency": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.deviceMemory": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.languages": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.mimeTypes.length": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "navigator.plugins:names": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "canvas:toDataURL": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "canvas:getImageData": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "audio:offlineSum": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "screen": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "window.outer-inner": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   },
+   "window.screenX/screenY": {
+    "same_page_twice_equal": "20/20",
+    "same_origin_second_tab_equal": "4/4",
+    "differs_across_origins": "0/12",
+    "differs_across_sessions": "0/3",
+    "expected_if_redrawn_every_time": 0.0
+   }
+  }
+ },
+ "signals": {
+  "scalars": {
+   "navigator.hardwareConcurrency": {
+    "n": 152,
+    "distinct": 11,
+    "counts": {
+     "6": 22,
+     "10": 19,
+     "12": 18,
+     "7": 17,
+     "5": 14,
+     "11": 13,
+     "2": 12,
+     "3": 11,
+     "8": 11,
+     "9": 10,
+     "4": 5
+    },
+    "chi2_vs_uniform": 16.908,
+    "unfarbled": {
+     "12": 16
+    },
+    "farbled": true,
+    "policy": "uniform over the integers [2, N]; N is this host's core count as the UNFARBLED browser reports it — see the `unfarbled` row here, NOT meta.machineCores"
+   },
+   "navigator.deviceMemory": {
+    "n": 152,
+    "distinct": 4,
+    "counts": {
+     "4": 42,
+     "16": 38,
+     "8": 37,
+     "32": 35
+    },
+    "chi2_vs_uniform": 0.684,
+    "unfarbled": {
+     "32": 16
+    },
+    "farbled": true,
+    "policy": "uniform over a fixed set; see counts"
+   },
+   "navigator.languages": {
+    "n": 152,
+    "distinct": 1,
+    "counts": {
+     "[\"ko-KR\"]": 152
+    },
+    "chi2_vs_uniform": null,
+    "unfarbled": {
+     "[\"ko-KR\", \"ko\", \"en-US\", \"en\"]": 16
+    },
+    "farbled": true,
+    "policy": "NOT farbled — a REDUCTION: the farbled list is a prefix of the unfarbled one, constant within a profile, 0 variation across origins and sessions. APPLY IT AT THE `navigator.languages` BINDING AND NOWHERE ELSE: measured 2026-09-19, Brave at its default answers the reduced list to a page and still renders `<text systemLanguage=en>` exactly as the same browser with fingerprinting off does, so the DEVICE's language list is untouched and everything else that reads it must keep seeing the unreduced one."
+   },
+   "navigator.mimeTypes.length": {
+    "n": 152,
+    "distinct": 1,
+    "counts": {
+     "2": 152
+    },
+    "chi2_vs_uniform": null,
+    "unfarbled": {
+     "2": 16
+    },
+    "farbled": false,
+    "policy": "not farbled"
+   }
+  },
+  "navigator.plugins": {
+   "entries": {
+    "unfarbled": [
+     5
+    ],
+    "farbled": {
+     "7": 152
+    }
+   },
+   "navigator_mimeTypes_length": {
+    "2": 152
+   },
+   "genuine_names_kept": {
+    "Chrome PDF Viewer": 1,
+    "PDF Viewer": 152,
+    "Chromium PDF Viewer": 152,
+    "Microsoft Edge PDF Viewer": 152,
+    "WebKit built-in PDF": 152
+   },
+   "genuine_names_unfarbled": [
+    "Chrome PDF Viewer",
+    "Chromium PDF Viewer",
+    "Microsoft Edge PDF Viewer",
+    "PDF Viewer",
+    "WebKit built-in PDF"
+   ],
+   "entry_shape": "4 genuine (filename internal-pdf-viewer) + 1 generated worded name (32-char random filename) + 2 random names — then the list is shuffled",
+   "entry_shape_holds": "152/152",
+   "generated_name_grammar": "PRE + MID + SUF",
+   "PRE": {
+    "": 22,
+    "Brave": 21,
+    "Browser": 20,
+    "Chrome": 15,
+    "Chromium": 11,
+    "JavaScript": 12,
+    "Online": 17,
+    "OpenSource": 19,
+    "Web": 15
+   },
+   "MID": {
+    "PDF": 22,
+    "PDF and PS": 20,
+    "Portable Document Format": 20,
+    "com.adobe.pdf": 25,
+    "doc": 21,
+    "document": 21,
+    "portable-document-format": 23
+   },
+   "SUF": {
+    "": 12,
+    "Display": 24,
+    "Plugin": 14,
+    "Renderer": 12,
+    "Viewer": 25,
+    "extension": 23,
+    "plug in": 17,
+    "plug-in": 25
+   },
+   "names_parsed": "152/152",
+   "unparsed_names": [],
+   "random_entry_name_and_filename_lengths": [
+    [
+     "7/15",
+     152
+    ],
+    [
+     "8/16",
+     152
+    ]
+   ]
+  },
+  "canvas": {
+   "operation": "channel ^= bit on the LOW BIT of R, G and B; alpha is not touched",
+   "base_is_the_unfarbled_fill": {
+    "#123456": [
+     18,
+     52,
+     86,
+     255
+    ],
+    "#000000": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "#ffffff": [
+     255,
+     255,
+     255,
+     255
+    ],
+    "#7f7f7f": [
+     127,
+     127,
+     127,
+     255
+    ],
+    "#010203": [
+     1,
+     2,
+     3,
+     255
+    ],
+    "#fefdfc": [
+     254,
+     253,
+     252,
+     255
+    ],
+    "#ff0000": [
+     255,
+     0,
+     0,
+     255
+    ],
+    "#00ff01": [
+     0,
+     255,
+     1,
+     255
+    ]
+   },
+   "low_bit_only": "18240/18240",
+   "alpha_perturbed": 0,
+   "two_reads_of_the_same_colour_at_different_coordinates_equal": "1216/1216",
+   "flip_patterns_by_buffer_length": {
+    "1": [
+     "000",
+     "011",
+     "101",
+     "110"
+    ],
+    "2": [
+     "000",
+     "001",
+     "010",
+     "011",
+     "100",
+     "101",
+     "110",
+     "111"
+    ],
+    "4": [
+     "000",
+     "001",
+     "010",
+     "011",
+     "100",
+     "101",
+     "110",
+     "111"
+    ],
+    "8": [
+     "000",
+     "001",
+     "010",
+     "011",
+     "100",
+     "101",
+     "110",
+     "111"
+    ]
+   },
+   "pattern_counts_by_fill": {
+    "#000000": {
+     "1": {
+      "101": 32,
+      "110": 38,
+      "000": 42,
+      "011": 40
+     },
+     "2": {
+      "100": 41,
+      "001": 41,
+      "000": 35,
+      "110": 43,
+      "011": 41,
+      "101": 39,
+      "111": 30,
+      "010": 34
+     },
+     "4": {
+      "111": 95,
+      "001": 81,
+      "100": 81,
+      "010": 71,
+      "000": 70,
+      "101": 70,
+      "110": 75,
+      "011": 65
+     },
+     "8": {
+      "011": 141,
+      "100": 146,
+      "101": 159,
+      "010": 166,
+      "111": 165,
+      "001": 143,
+      "110": 144,
+      "000": 152
+     }
+    },
+    "#00ff01": {
+     "1": {
+      "000": 37,
+      "011": 45,
+      "110": 37,
+      "101": 33
+     },
+     "2": {
+      "000": 40,
+      "101": 35,
+      "110": 37,
+      "011": 32,
+      "111": 44,
+      "010": 41,
+      "100": 30,
+      "001": 45
+     },
+     "4": {
+      "100": 84,
+      "111": 90,
+      "101": 68,
+      "011": 74,
+      "010": 78,
+      "110": 72,
+      "000": 70,
+      "001": 72
+     },
+     "8": {
+      "001": 159,
+      "000": 139,
+      "011": 136,
+      "111": 144,
+      "100": 163,
+      "101": 174,
+      "010": 154,
+      "110": 147
+     }
+    },
+    "#010203": {
+     "1": {
+      "011": 41,
+      "000": 35,
+      "101": 39,
+      "110": 37
+     },
+     "2": {
+      "001": 40,
+      "100": 36,
+      "000": 47,
+      "011": 32,
+      "111": 42,
+      "110": 38,
+      "101": 33,
+      "010": 36
+     },
+     "4": {
+      "001": 83,
+      "000": 64,
+      "101": 69,
+      "100": 84,
+      "110": 79,
+      "010": 76,
+      "111": 85,
+      "011": 68
+     },
+     "8": {
+      "110": 178,
+      "100": 140,
+      "000": 140,
+      "011": 171,
+      "111": 151,
+      "010": 135,
+      "101": 153,
+      "001": 148
+     }
+    },
+    "#123456": {
+     "1": {
+      "000": 41,
+      "110": 34,
+      "011": 42,
+      "101": 35
+     },
+     "2": {
+      "000": 33,
+      "010": 39,
+      "111": 36,
+      "001": 34,
+      "101": 37,
+      "110": 58,
+      "011": 28,
+      "100": 39
+     },
+     "4": {
+      "111": 73,
+      "100": 71,
+      "101": 80,
+      "000": 81,
+      "011": 69,
+      "010": 72,
+      "110": 86,
+      "001": 76
+     },
+     "8": {
+      "101": 150,
+      "110": 162,
+      "001": 134,
+      "111": 179,
+      "011": 154,
+      "000": 162,
+      "100": 152,
+      "010": 123
+     }
+    },
+    "#7f7f7f": {
+     "1": {
+      "101": 41,
+      "011": 46,
+      "110": 25,
+      "000": 40
+     },
+     "2": {
+      "001": 38,
+      "111": 40,
+      "000": 46,
+      "110": 35,
+      "011": 38,
+      "100": 35,
+      "010": 41,
+      "101": 31
+     },
+     "4": {
+      "000": 77,
+      "100": 87,
+      "011": 87,
+      "001": 74,
+      "101": 66,
+      "010": 73,
+      "110": 74,
+      "111": 70
+     },
+     "8": {
+      "110": 178,
+      "101": 157,
+      "100": 150,
+      "111": 134,
+      "000": 153,
+      "011": 142,
+      "001": 161,
+      "010": 141
+     }
+    },
+    "#fefdfc": {
+     "1": {
+      "110": 41,
+      "011": 35,
+      "000": 34,
+      "101": 42
+     },
+     "2": {
+      "000": 46,
+      "111": 32,
+      "100": 32,
+      "110": 45,
+      "101": 35,
+      "010": 26,
+      "011": 50,
+      "001": 38
+     },
+     "4": {
+      "110": 67,
+      "010": 79,
+      "001": 66,
+      "011": 76,
+      "100": 95,
+      "101": 63,
+      "000": 78,
+      "111": 84
+     },
+     "8": {
+      "000": 142,
+      "011": 154,
+      "100": 154,
+      "110": 162,
+      "101": 162,
+      "111": 148,
+      "010": 144,
+      "001": 150
+     }
+    },
+    "#ff0000": {
+     "1": {
+      "011": 39,
+      "101": 40,
+      "000": 40,
+      "110": 33
+     },
+     "2": {
+      "001": 37,
+      "010": 54,
+      "000": 38,
+      "011": 31,
+      "101": 40,
+      "110": 33,
+      "100": 37,
+      "111": 34
+     },
+     "4": {
+      "100": 76,
+      "010": 71,
+      "111": 90,
+      "001": 79,
+      "110": 68,
+      "011": 82,
+      "000": 74,
+      "101": 68
+     },
+     "8": {
+      "100": 155,
+      "010": 160,
+      "001": 147,
+      "110": 133,
+      "000": 157,
+      "101": 154,
+      "111": 142,
+      "011": 168
+     }
+    },
+    "#ffffff": {
+     "1": {
+      "110": 42,
+      "000": 39,
+      "101": 44,
+      "011": 27
+     },
+     "2": {
+      "001": 40,
+      "011": 41,
+      "110": 52,
+      "100": 42,
+      "111": 30,
+      "010": 38,
+      "101": 37,
+      "000": 24
+     },
+     "4": {
+      "001": 87,
+      "000": 78,
+      "110": 64,
+      "010": 79,
+      "100": 74,
+      "011": 82,
+      "111": 64,
+      "101": 80
+     },
+     "8": {
+      "100": 146,
+      "101": 137,
+      "111": 153,
+      "001": 177,
+      "110": 142,
+      "000": 163,
+      "010": 152,
+      "011": 146
+     }
+    }
+   }
+  },
+  "audio": {
+   "farbled": true,
+   "policy": "one MULTIPLICATIVE factor per (session, eTLD+1) applied to the whole rendered buffer; uniform on [lo, 1.0]",
+   "unfarbled_sum": [
+    172.6716509661
+   ],
+   "n": 152,
+   "factor_min": 0.9990059690387642,
+   "factor_max": 0.9999951919976429,
+   "factor_mean": 0.99950372,
+   "factor_deciles_from_min": [
+    10,
+    18,
+    17,
+    16,
+    16,
+    17,
+    14,
+    12,
+    17,
+    15
+   ],
+   "distinct_sums": 152
+  },
+  "screen": {
+   "farbled": true,
+   "policy": "the smallest entry of `resolution_list` with width >= outerWidth and height >= outerHeight, where outer* is the ALREADY-FARBLED outer size",
+   "read_the_scope_row_with_this": "`screen` has no draw of its own, so its line in `scope` is not a scoping measurement: it reads 0/N across origins because one session's tabs share a window, and non-zero across sessions only because this run CYCLES the window size. `screen_by_requested_window` is the real evidence.",
+   "resolution_list": [
+    [
+     1280,
+     800
+    ],
+    [
+     1366,
+     768
+    ],
+    [
+     1440,
+     900
+    ],
+    [
+     1680,
+     1050
+    ],
+    [
+     1920,
+     1080
+    ],
+    [
+     2560,
+     1440
+    ],
+    [
+     3840,
+     2160
+    ]
+   ],
+   "resolution_list_is": "the distinct values this run observed — a lower bound on the browser's list, valid over `farbled_outer_range`",
+   "rule_holds_against_farbled_outer": "152/152",
+   "same_rule_against_inner": "136/152",
+   "on_readings_where_outer_and_inner_DISAGREE": {
+    "n": 16,
+    "outer_wins": "16/16",
+    "inner_wins": "0/16",
+    "note": "0 here means this run never straddled a list boundary, so its `same_rule_against_inner` score is not evidence either way"
+   },
+   "availWidth_availHeight_equal_screen": "152/152",
+   "availTop_availLeft_zero": "152/152",
+   "window_sizes_probed": [
+    "600x400",
+    "800x600",
+    "1000x700",
+    "1200x800",
+    "1290x810",
+    "1350x850",
+    "1360x820",
+    "1400x900",
+    "1450x920",
+    "1500x1000",
+    "1600x1000",
+    "1700x1050",
+    "1920x1052",
+    "1920x1080",
+    "2000x1200",
+    "2200x1300",
+    "2700x1500",
+    "1320x881",
+    "1480x981"
+   ],
+   "farbled_outer_range": [
+    [
+     560,
+     319
+    ],
+    [
+     2667,
+     1423
+    ]
+   ],
+   "screen_by_requested_window": {
+    "600x400": {
+     "1280x800": 8
+    },
+    "800x600": {
+     "1280x800": 8
+    },
+    "1000x700": {
+     "1280x800": 8
+    },
+    "1200x800": {
+     "1280x800": 8
+    },
+    "1290x810": {
+     "1280x800": 8
+    },
+    "1350x850": {
+     "1440x900": 8
+    },
+    "1360x820": {
+     "1366x768": 8
+    },
+    "1400x900": {
+     "1440x900": 8
+    },
+    "1450x920": {
+     "1440x900": 8
+    },
+    "1500x1000": {
+     "1680x1050": 8
+    },
+    "1600x1000": {
+     "1680x1050": 8
+    },
+    "1700x1050": {
+     "1680x1050": 8
+    },
+    "1920x1052": {
+     "1920x1080": 8
+    },
+    "1920x1080": {
+     "1920x1080": 8
+    },
+    "2000x1200": {
+     "2560x1440": 8
+    },
+    "2200x1300": {
+     "2560x1440": 8
+    },
+    "2700x1500": {
+     "3840x2160": 8
+    },
+    "1320x881": {
+     "1440x900": 8
+    },
+    "1480x981": {
+     "1680x1050": 8
+    }
+   },
+   "resolutions_observed": {
+    "1280x800": 40,
+    "1366x768": 8,
+    "1440x900": 32,
+    "1680x1050": 32,
+    "1920x1080": 16,
+    "2560x1440": 16,
+    "3840x2160": 8
+   },
+   "unfarbled_screen": [
+    {
+     "width": 3000,
+     "height": 1800,
+     "availWidth": 3000,
+     "availHeight": 1800,
+     "availTop": 0,
+     "availLeft": 0,
+     "colorDepth": 24,
+     "pixelDepth": 24
+    }
+   ]
+  },
+  "geometry": {
+   "window.outer-inner": {
+    "n": 152,
+    "distinct": 74,
+    "counts": null,
+    "chi2_vs_uniform": null,
+    "unfarbled": {
+     "[40, 81]": 16
+    },
+    "farbled": true,
+    "per_axis": {
+     "x": {
+      "6": 21,
+      "7": 20,
+      "1": 19,
+      "4": 19,
+      "5": 19,
+      "2": 14,
+      "3": 14,
+      "0": 13,
+      "8": 13
+     },
+     "y": {
+      "4": 21,
+      "5": 21,
+      "0": 18,
+      "2": 18,
+      "7": 16,
+      "3": 15,
+      "6": 15,
+      "8": 15,
+      "1": 13
+     },
+     "chi2_vs_uniform_x": 5.145,
+     "chi2_vs_uniform_y": 3.724,
+     "distinct_pairs_seen": 74
+    },
+    "policy": "outer = inner + U[0, 8] per axis, drawn independently. NOTE the `unfarbled` row: farbling does not ADD to the real chrome, it REPLACES it — the unfarbled difference is this profile's actual window furniture and no farbled draw reproduces it except by coincidence. inner* is NOT farbled (ruling R18)."
+   },
+   "window.screenX/screenY": {
+    "n": 152,
+    "distinct": 70,
+    "counts": null,
+    "chi2_vs_uniform": null,
+    "unfarbled": {
+     "[10, 10]": 16
+    },
+    "farbled": true,
+    "per_axis": {
+     "x": {
+      "8": 26,
+      "1": 22,
+      "4": 20,
+      "5": 18,
+      "6": 17,
+      "3": 16,
+      "2": 14,
+      "0": 13,
+      "7": 6
+     },
+     "y": {
+      "8": 22,
+      "7": 19,
+      "3": 18,
+      "4": 17,
+      "0": 16,
+      "2": 16,
+      "6": 16,
+      "1": 15,
+      "5": 13
+     },
+     "chi2_vs_uniform_x": 15.566,
+     "chi2_vs_uniform_y": 3.132,
+     "distinct_pairs_seen": 70
+    },
+    "policy": "U[0, 8] per axis, drawn independently"
+   },
+   "window.inner": {
+    "policy": "NOT farbled (ruling R18: it is the captured window)",
+    "counts": {
+     "[1160, 719]": 8,
+     "[1250, 729]": 8,
+     "[1280, 800]": 8,
+     "[1310, 769]": 8,
+     "[1320, 739]": 8,
+     "[1360, 819]": 8,
+     "[1410, 839]": 8,
+     "[1440, 900]": 8,
+     "[1460, 919]": 8,
+     "[1560, 919]": 8,
+     "[1660, 969]": 8,
+     "[1880, 971]": 8,
+     "[1880, 999]": 8,
+     "[1960, 1119]": 8,
+     "[2160, 1219]": 8,
+     "[2660, 1419]": 8,
+     "[560, 319]": 8,
+     "[760, 519]": 8,
+     "[960, 619]": 8
+    }
+   }
+  },
+  "accept-language": {
+   "farbled": true,
+   "policy": "one q per (session, eTLD+1), across every request that cell makes, including the ones the browser makes by itself; the language LIST is constant and unfarbled requests carry no q parameter at all",
+   "sample": {
+    "requests": 380,
+    "cells": 152,
+    "one_q_per_cell": "152/152",
+    "q_counts": {
+     "0.8": 36,
+     "0.5": 34,
+     "0.7": 33,
+     "0.6": 25,
+     "0.9": 24
+    },
+    "language_lists_seen": {
+     "ko-KR,ko": 380
+    }
+   },
+   "unfarbled": {
+    "requests": 40,
+    "cells": 16,
+    "one_q_per_cell": "16/16",
+    "q_counts": {
+     "None": 16
+    },
+    "language_lists_seen": {
+     "ko-KR,ko": 40
+    }
+   }
+  }
+ }
+}

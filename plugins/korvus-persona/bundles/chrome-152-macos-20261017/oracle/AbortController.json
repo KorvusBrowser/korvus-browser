@@ -1,0 +1,107 @@
+[
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { const c = new AbortController(); return c.signal instanceof AbortSignal; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { const c = new AbortController(); return c.signal === c.signal; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { const c = new AbortController(); return c.signal.aborted + ',' + (c.signal.reason === undefined) + ',' + (c.signal.onabort === null); })()",
+    "expected": "false,true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { const c = new AbortController(); const d = Object.getOwnPropertyDescriptor(AbortController.prototype, 'signal'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined) + ',' + d.enumerable + ',' + d.configurable; })()",
+    "expected": "get signal,0,true,true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { 'use strict'; try { new AbortController().signal = null; return 'no-throw'; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "signal",
+    "expr": "(() => { const c = new AbortController(); c.signal = null; return c.signal instanceof AbortSignal; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); c.abort(); return c.signal.aborted; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); c.abort(); return c.signal.reason.name; })()",
+    "expected": "AbortError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); c.abort('because'); return c.signal.reason; })()",
+    "expected": "because",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); let n = 0; c.signal.addEventListener('abort', () => n++); c.abort(); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); let fired = 0; c.signal.onabort = () => fired++; c.abort(); c.abort(); return fired; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); let ok = false; c.signal.addEventListener('abort', (e) => { ok = e.target === c.signal && e.type === 'abort'; }); c.abort(); return ok; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const c = new AbortController(); const d = AbortController.prototype; return Object.getOwnPropertyNames(d).filter((n) => n !== 'constructor').join(','); })()",
+    "expected": "signal,abort",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "constructor",
+    "expr": "(() => { const o = new AbortController(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object AbortController]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AbortController",
+    "member": "abort",
+    "expr": "(() => { const o = new AbortController(); return o.abort(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

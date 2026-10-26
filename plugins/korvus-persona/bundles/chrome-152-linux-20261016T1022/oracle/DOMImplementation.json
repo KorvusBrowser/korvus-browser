@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "DOMImplementation",
+    "member": "constructor",
+    "expr": "new DOMImplementation()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "createDocumentType",
+    "expr": "(() => { const o = document.implementation; return o.createDocumentType(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "createDocument",
+    "expr": "(() => { const o = document.implementation; return o.createDocument(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "hasFeature",
+    "expr": "(() => { const o = document.implementation; return o.hasFeature(); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "createDocumentType",
+    "expr": "(() => { const o = document.implementation; return Object.prototype.toString.call(o.createDocumentType(\"x\", \"x\", \"x\")); })()",
+    "expected": "[object DocumentType]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "createDocument",
+    "expr": "(() => { const o = document.implementation; return Object.prototype.toString.call(o.createDocument(\"x\", \"x\")); })()",
+    "expected": "[object XMLDocument]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DOMImplementation",
+    "member": "createHTMLDocument",
+    "expr": "(() => { const o = document.implementation; return Object.prototype.toString.call(o.createHTMLDocument()); })()",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

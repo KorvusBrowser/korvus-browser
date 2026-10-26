@@ -1,0 +1,11 @@
+<!doctype html><html><head><title>parent</title></head><body>
+<script>
+window.__log = [];
+addEventListener('message', e => { __log.push({origin: e.origin, data: e.data, srcIsFrame: e.source === document.querySelector('iframe#x').contentWindow}); });
+const f = document.createElement('iframe'); f.id = 'x'; f.src = 'http://127.0.0.1:18082/child.html';
+f.onload = () => __log.push('iframe-load');
+document.body.appendChild(f);
+const g = document.createElement('iframe'); g.id = 'y'; g.src = 'http://localhost:18081/child.html';
+g.onload = () => __log.push('same-origin-iframe-load');
+document.body.appendChild(g);
+</script></body></html>

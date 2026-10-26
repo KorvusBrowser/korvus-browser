@@ -1,0 +1,5 @@
+<!doctype html><html><head><link rel="stylesheet" href="m.css"><style>@media(max-width:10px){.g{display:none}} .g{display:block}</style></head><body>
+<div class="a"></div><div class="b"></div><div class="c"></div><div class="d"></div><div class="e"></div><div class="f"></div><div class="g"></div>
+<script>addEventListener('load', function () { var R = {}; ['a','b','c','d','e','f','g'].forEach(function (k) { R[k] = getComputedStyle(document.querySelector('.' + k)).display; });
+R.mmReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; R.rules = Array.prototype.map.call(document.styleSheets[0].cssRules, function (r) { return r.constructor.name + ':' + (r.conditionText || r.media && r.media.mediaText || r.selectorText); }).join(' | ');
+window.R = JSON.stringify(R); });</script></body></html>

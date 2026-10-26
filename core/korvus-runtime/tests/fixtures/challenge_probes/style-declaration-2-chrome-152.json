@@ -1,0 +1,72 @@
+[
+ [
+  "idx desc",
+  "{\"value\":\"accent-color\",\"writable\":false,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"color\",\"writable\":false,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"margin-top\",\"writable\":false,\"enumerable\":true,\"configurable\":true}",
+  "none",
+  "{\"value\":\"-webkit-user-modify\",\"writable\":false,\"enumerable\":true,\"configurable\":true}",
+  "{\"value\":\"-webkit-user-drag\",\"writable\":false,\"enumerable\":true,\"configurable\":true}"
+ ],
+ [
+  "idx in",
+  true,
+  true,
+  false,
+  true,
+  true
+ ],
+ [
+  "idx set",
+  "accent-color"
+ ],
+ [
+  "idx set sloppy",
+  "color"
+ ],
+ [
+  "delete idx",
+  false,
+  "color",
+  false
+ ],
+ [
+  "named list sample",
+  746
+ ],
+ [
+  "has float",
+  true,
+  false,
+  true,
+  false,
+  151,
+  9
+ ],
+ [
+  "set computed strict",
+  "NoModificationAllowedError: Failed to set a named property 'color' on 'CSSStyleDeclaration': These styles are computed, and therefore the 'color' property is read-only."
+ ],
+ [
+  "set computed invalid",
+  [
+   1,
+   true
+  ]
+ ],
+ [
+  "set computed webkit",
+  "NoModificationAllowedError: Failed to set a named property 'webkitAppearance' on 'CSSStyleDeclaration': These styles are computed, and therefore the '-webkit-appearance' property is read-only."
+ ],
+ [
+  "rule style",
+  [
+   747,
+   738,
+   "color",
+   true,
+   "{\"value\":\"color\",\"writable\":false,\"enumerable\":true,\"configurable\":true}",
+   "{\"value\":\"red\",\"writable\":true,\"enumerable\":true,\"configurable\":true}"
+  ]
+ ]
+]

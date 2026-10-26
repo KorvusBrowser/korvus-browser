@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "TextMetrics",
+    "member": "constructor",
+    "expr": "new TextMetrics()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxLeft",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").measureText(\"x\"); return o.actualBoundingBoxLeft; })()",
+    "expected": -0.0537109375,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxDescent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").measureText(\"x\"); return o.actualBoundingBoxDescent; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "emHeightAscent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").measureText(\"x\"); return o.emHeightAscent; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "emHeightDescent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").measureText(\"x\"); return o.emHeightDescent; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "alphabeticBaseline",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").measureText(\"x\"); return o.alphabeticBaseline; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "alphabeticBaseline",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); c.textBaseline = \"alphabetic\"; return c.measureText(\"x\").alphabeticBaseline; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "hangingBaseline",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); c.textBaseline = \"alphabetic\"; return c.measureText(\"x\").hangingBaseline > 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "ideographicBaseline",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); c.textBaseline = \"alphabetic\"; return c.measureText(\"x\").ideographicBaseline < 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "width",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); return c.measureText(\"\").width; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "width",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); return c.measureText(\"WWWWW\").width > c.measureText(\"iiiii\").width; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "fontBoundingBoxAscent",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); return c.measureText(\"x\").fontBoundingBoxAscent > 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "fontBoundingBoxDescent",
+    "expr": "(() => { const c = document.createElement(\"canvas\").getContext(\"2d\"); return c.measureText(\"x\").fontBoundingBoxDescent > 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxAscent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return typeof m.actualBoundingBoxAscent; })()",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxAscent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return m.actualBoundingBoxAscent > 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxAscent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return o.measureText(\"\").actualBoundingBoxAscent; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxAscent",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return (m.actualBoundingBoxAscent = 999, m.actualBoundingBoxAscent === 999); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxRight",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return typeof m.actualBoundingBoxRight; })()",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxRight",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return m.actualBoundingBoxRight > 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxRight",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); return o.measureText(\"\").actualBoundingBoxRight; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextMetrics",
+    "member": "actualBoundingBoxRight",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\"); o.font = \"50px sans-serif\"; const m = o.measureText(\"H\"); o.textAlign = \"right\"; return o.measureText(\"H\").actualBoundingBoxRight <= 0; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

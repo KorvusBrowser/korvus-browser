@@ -1,0 +1,39 @@
+[package]
+name = "korvus-page"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# One binary for every integration test: see tests/all.rs for the measurement.
+# `autotests = false` stops Cargo auto-discovering tests/*.rs as separate binaries.
+autotests = false
+
+[[test]]
+name = "all"
+path = "tests/all.rs"
+
+[lib]
+name = "page"
+
+[features]
+# the work counters (`src/perf_counters.rs`): compiled in only for a diag build, so a release
+# binary pays nothing for them. `cargo build --release -p korvus -p korvus-page --features korvus-page/perf-counters`.
+perf-counters = []
+
+# The page pipeline: style (cascade) -> layout -> hit test. One plugin, because it is one pipeline
+# (design D1). Deliberately **pure Rust**: no deno_core, no v8, no skia. That is not incidental —
+# it is what lets the cascade be tested in ~1s instead of behind a Skia link, and it is enforced by
+# `scripts/check-invariants.sh`. Pixels are somebody else's job: this crate reaches a rasterizer only
+# through `ctx.get::<RenderHandle>()`, never through a crate dependency (design D2/D3).
+[dependencies]
+spec = { workspace = true }
+# Same version korvus-dom already uses, so the tokenizer the selector engine sees is the tokenizer
+# the cascade sees.
+cssparser = "0.34"
+korvus-dom = { workspace = true }
+# Flex, grid, and block layout, driven over *our* arena rather than taffy's own tree (design D8):
+# `default-features = false` drops its `TaffyTree`, which would store a second copy of every node's
+# style. `std` is kept for the f32 maths.
+taffy = { version = "0.14", default-features = false, features = ["std", "block_layout", "float_layout", "flexbox", "grid", "content_size", "calc"] }
+# `clip-path: path("...")`'s SVG path data, absolute and arcs as curves: the parser resvg already brings in.
+svgtypes = "0.16"

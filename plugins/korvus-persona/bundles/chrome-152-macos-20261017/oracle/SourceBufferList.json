@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "SourceBufferList",
+    "member": "constructor",
+    "expr": "new SourceBufferList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBufferList",
+    "member": "length",
+    "expr": "(() => { const o = new MediaSource().sourceBuffers; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBufferList",
+    "member": "onaddsourcebuffer",
+    "expr": "(() => { const o = new MediaSource().sourceBuffers; return o.onaddsourcebuffer; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBufferList",
+    "member": "onaddsourcebuffer",
+    "expr": "(() => { const o = new MediaSource().sourceBuffers; return Object.prototype.toString.call(o.onaddsourcebuffer); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBufferList",
+    "member": "onremovesourcebuffer",
+    "expr": "(() => { const o = new MediaSource().sourceBuffers; return o.onremovesourcebuffer; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBufferList",
+    "member": "onremovesourcebuffer",
+    "expr": "(() => { const o = new MediaSource().sourceBuffers; return Object.prototype.toString.call(o.onremovesourcebuffer); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

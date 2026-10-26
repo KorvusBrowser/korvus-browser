@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGClipPathElement",
+    "member": "constructor",
+    "expr": "new SVGClipPathElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGClipPathElement",
+    "member": "clipPathUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"clipPath\"); return Object.prototype.toString.call(o.clipPathUnits); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGClipPathElement",
+    "member": "transform",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"clipPath\"); return Object.prototype.toString.call(o.transform); })()",
+    "expected": "[object SVGAnimatedTransformList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

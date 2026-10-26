@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "TextDetector",
+    "member": "availability",
+    "expr": "TextDetector.availability({})",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDetector",
+    "member": "create",
+    "expr": "TextDetector.create()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDetector",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextDetector(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

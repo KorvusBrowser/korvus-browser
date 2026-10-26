@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "PageSwapEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageSwapEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PageSwapEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PageSwapEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageSwapEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PageSwapEvent",
+    "member": "activation",
+    "expr": "(() => { const o = new PageSwapEvent(\"x\"); return o.activation; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PageSwapEvent",
+    "member": "viewTransition",
+    "expr": "(() => { const o = new PageSwapEvent(\"x\"); return o.viewTransition; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

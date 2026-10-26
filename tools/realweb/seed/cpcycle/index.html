@@ -1,0 +1,11 @@
+<!doctype html><html><body>
+<div id=p style="--a: red; --k: blue"><div id=c style="--a: var(--b); --b: var(--a); color: var(--a, green)"></div>
+<div id=d style="--x: var(--y); --y: var(--x); --z: var(--x, fallback)"></div>
+<div id=e style="--k: var(--nope)"></div><div id=f style="--k: var(--nope, teal)"></div></div>
+<script>
+// REALWEB S29: a custom property in a var() CYCLE, or referencing an undefined one without a fallback, is
+// guaranteed-invalid AT that element -- its computed value is the empty value, not the parent's.
+var g = function (id, p) { return JSON.stringify(getComputedStyle(document.getElementById(id)).getPropertyValue(p)); };
+document.title = JSON.stringify({ ca: g('c', '--a'), cb: g('c', '--b'), color: getComputedStyle(c).color, dx: g('d', '--x'), dz: g('d', '--z'),
+  ek: g('e', '--k'), fk: g('f', '--k'), pk: g('p', '--k') });
+</script></body></html>

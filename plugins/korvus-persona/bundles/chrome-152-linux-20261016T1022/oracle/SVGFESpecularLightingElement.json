@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "constructor",
+    "expr": "new SVGFESpecularLightingElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "surfaceScale",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.surfaceScale); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "specularConstant",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.specularConstant); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "specularExponent",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.specularExponent); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "kernelUnitLengthX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.kernelUnitLengthX); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "kernelUnitLengthY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.kernelUnitLengthY); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFESpecularLightingElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpecularLighting\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

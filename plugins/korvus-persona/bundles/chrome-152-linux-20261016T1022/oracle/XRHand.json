@@ -1,0 +1,191 @@
+[
+  {
+    "iface": "XRHand",
+    "member": "constructor",
+    "expr": "new XRHand()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "size",
+    "expr": "XRHand.prototype.size",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "size",
+    "expr": "Object.getOwnPropertyDescriptor(XRHand.prototype, \"size\").get.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "get",
+    "expr": "XRHand.prototype.get.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "get",
+    "expr": "XRHand.prototype.get.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "entries",
+    "expr": "XRHand.prototype.entries.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "entries",
+    "expr": "XRHand.prototype.entries.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "forEach",
+    "expr": "XRHand.prototype.forEach.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "forEach",
+    "expr": "XRHand.prototype.forEach.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "keys",
+    "expr": "XRHand.prototype.keys.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "keys",
+    "expr": "XRHand.prototype.keys.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "values",
+    "expr": "XRHand.prototype.values.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "values",
+    "expr": "XRHand.prototype.values.call(Object.create(XRHand.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "get",
+    "expr": "XRHand.prototype.get.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "forEach",
+    "expr": "XRHand.prototype.forEach.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRHand.prototype, \"size\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRHand.prototype, \"size\").get.call(Object.create(XRHand.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "get",
+    "expr": "(() => { try { const v = XRHand.prototype[\"get\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "get",
+    "expr": "(() => { try { const v = XRHand.prototype[\"get\"].call(Object.create(XRHand.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRHand.prototype[\"entries\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRHand.prototype[\"entries\"].call(Object.create(XRHand.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRHand.prototype[\"forEach\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRHand.prototype[\"forEach\"].call(Object.create(XRHand.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRHand.prototype[\"keys\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRHand.prototype[\"keys\"].call(Object.create(XRHand.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "values",
+    "expr": "(() => { try { const v = XRHand.prototype[\"values\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRHand",
+    "member": "values",
+    "expr": "(() => { try { const v = XRHand.prototype[\"values\"].call(Object.create(XRHand.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

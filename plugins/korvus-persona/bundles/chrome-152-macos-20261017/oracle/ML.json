@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "ML",
+    "member": "constructor",
+    "expr": "new ML()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

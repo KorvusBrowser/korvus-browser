@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "UIEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object UIEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new UIEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "sourceCapabilities",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.sourceCapabilities; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "view",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.view; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "detail",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.detail; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "initUIEvent",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.initUIEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "initUIEvent",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.initUIEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "which",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return o.which; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "sourceCapabilities",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return Object.prototype.toString.call(o.sourceCapabilities); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "UIEvent",
+    "member": "view",
+    "expr": "(() => { const o = new UIEvent(\"x\"); return Object.prototype.toString.call(o.view); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

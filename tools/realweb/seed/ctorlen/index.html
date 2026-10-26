@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B23: a V8 constructor's own `length` is configurable (ECMAScript: every function's
+// `length` is { writable: false, enumerable: false, configurable: true }) -- in the page's realm and in
+// a frame's. A constant-seal pass applied the PROTOTYPE's non-configurable `length` row to the
+// constructor too, sealing `Array.length` and `String.length`.
+const probe = (w) => {
+  const d = (o, k) => { const x = w.Object.getOwnPropertyDescriptor(o, k); return x ? [x.value, x.writable, x.enumerable, x.configurable].join() : 'none'; };
+  const out = {};
+  for (const n of ['Array', 'String', 'Object', 'Number', 'Boolean', 'Function', 'Symbol', 'Promise', 'Map']) {
+    out[n] = d(w[n], 'length');
+  }
+  out['Array.prototype'] = d(w.Array.prototype, 'length');
+  out['String.prototype'] = d(w.String.prototype, 'length');
+  out['Function.prototype'] = d(w.Function.prototype, 'length');
+  out.deleteArray = (() => { try { return String(delete w.Array.length) + ',' + w.Object.getOwnPropertyNames(w.Array).includes('length'); } catch (e) { return 'ERR ' + e.name; } })();
+  return out;
+};
+const f = document.createElement('iframe');
+f.srcdoc = '<p>frame</p>';
+f.onload = () => {
+  const frame = probe(f.contentWindow);
+  const page = probe(window);
+  window.R = JSON.stringify({ page, frame });
+};
+document.body.appendChild(f);
+</script>

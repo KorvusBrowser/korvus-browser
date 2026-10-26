@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_METHODTYPE_UNKNOWN",
+    "expr": "SVGTextPathElement.TEXTPATH_METHODTYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_METHODTYPE_ALIGN",
+    "expr": "SVGTextPathElement.TEXTPATH_METHODTYPE_ALIGN",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_METHODTYPE_STRETCH",
+    "expr": "SVGTextPathElement.TEXTPATH_METHODTYPE_STRETCH",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_SPACINGTYPE_UNKNOWN",
+    "expr": "SVGTextPathElement.TEXTPATH_SPACINGTYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_SPACINGTYPE_AUTO",
+    "expr": "SVGTextPathElement.TEXTPATH_SPACINGTYPE_AUTO",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "TEXTPATH_SPACINGTYPE_EXACT",
+    "expr": "SVGTextPathElement.TEXTPATH_SPACINGTYPE_EXACT",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "constructor",
+    "expr": "new SVGTextPathElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "startOffset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"textPath\"); return Object.prototype.toString.call(o.startOffset); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "method",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"textPath\"); return Object.prototype.toString.call(o.method); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "spacing",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"textPath\"); return Object.prototype.toString.call(o.spacing); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextPathElement",
+    "member": "href",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"textPath\"); return Object.prototype.toString.call(o.href); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

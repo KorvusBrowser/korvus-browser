@@ -1,0 +1,170 @@
+[
+  {
+    "iface": "AudioParam",
+    "member": "constructor",
+    "expr": "new AudioParam()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "value",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.value; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "value",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "automationRate",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.automationRate; })()",
+    "expected": "a-rate",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "automationRate",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.automationRate); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "defaultValue",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.defaultValue; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "minValue",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.minValue; })()",
+    "expected": -3.4028234663852886e+38,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "maxValue",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.maxValue; })()",
+    "expected": 3.4028234663852886e+38,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.setValueAtTime(1, 1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.setValueAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "linearRampToValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.linearRampToValueAtTime(1, 1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "linearRampToValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.linearRampToValueAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "exponentialRampToValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.exponentialRampToValueAtTime(1, 1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "exponentialRampToValueAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.exponentialRampToValueAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setTargetAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.setTargetAtTime(1, 1, 1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setTargetAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.setTargetAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setValueCurveAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.setValueCurveAtTime([], 1, 1); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setValueCurveAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.setValueCurveAtTime([], 1, 1)); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "setValueCurveAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.setValueCurveAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "cancelScheduledValues",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.cancelScheduledValues(1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "cancelScheduledValues",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.cancelScheduledValues(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "cancelAndHoldAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return Object.prototype.toString.call(o.cancelAndHoldAtTime(1)); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "cancelAndHoldAtTime",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return o.cancelAndHoldAtTime(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioParam",
+    "member": "value",
+    "expr": "(() => { const o = new GainNode(new OfflineAudioContext(1, 1, 44100)).gain; return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

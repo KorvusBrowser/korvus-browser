@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "constructor",
+    "expr": "new WGSLLanguageFeatures()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "size",
+    "expr": "typeof navigator.gpu.wgslLanguageFeatures.size",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "has",
+    "expr": "navigator.gpu.wgslLanguageFeatures.has(\"readonly_and_readwrite_storage_textures\")",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "has",
+    "expr": "navigator.gpu.wgslLanguageFeatures.has(\"definitely-not-a-wgsl-feature\")",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "has",
+    "expr": "navigator.gpu.wgslLanguageFeatures.has()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "keys",
+    "expr": "Object.prototype.toString.call(navigator.gpu.wgslLanguageFeatures.keys())",
+    "expected": "[object WGSLLanguageFeatures Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "values",
+    "expr": "Object.prototype.toString.call(navigator.gpu.wgslLanguageFeatures.values())",
+    "expected": "[object WGSLLanguageFeatures Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "entries",
+    "expr": "Object.prototype.toString.call(navigator.gpu.wgslLanguageFeatures.entries())",
+    "expected": "[object WGSLLanguageFeatures Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "entries",
+    "expr": "(() => { const e = navigator.gpu.wgslLanguageFeatures.entries().next().value; return Array.isArray(e) ? e.length : typeof e; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "forEach",
+    "expr": "(() => { let n = 0; navigator.gpu.wgslLanguageFeatures.forEach(() => n++); return n === navigator.gpu.wgslLanguageFeatures.size; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "forEach",
+    "expr": "(() => { const a = []; navigator.gpu.wgslLanguageFeatures.forEach(function () { a.push(arguments.length); }); return a[0]; })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "forEach",
+    "expr": "(() => { const a = []; navigator.gpu.wgslLanguageFeatures.forEach(function (v, k) { a.push(v === k); }); return a[0]; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WGSLLanguageFeatures",
+    "member": "forEach",
+    "expr": "navigator.gpu.wgslLanguageFeatures.forEach(null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

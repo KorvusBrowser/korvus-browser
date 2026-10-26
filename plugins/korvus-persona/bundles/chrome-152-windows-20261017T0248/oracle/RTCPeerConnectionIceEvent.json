@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "RTCPeerConnectionIceEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCPeerConnectionIceEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object RTCPeerConnectionIceEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnectionIceEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCPeerConnectionIceEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnectionIceEvent",
+    "member": "candidate",
+    "expr": "(() => { const o = new RTCPeerConnectionIceEvent(\"x\"); return o.candidate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnectionIceEvent",
+    "member": "url",
+    "expr": "(() => { const o = new RTCPeerConnectionIceEvent(\"x\"); return o.url; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

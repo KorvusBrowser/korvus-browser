@@ -1,0 +1,72 @@
+<!doctype html><html><head><meta charset="utf-8"><title>content-type</title></head><body>
+<script>
+(async function () {
+  var V = await (await fetch('/variants.json')).json();
+  var out = {frame: {}, script: {}, style: {}, xhr: {}, fetch: {}};
+  function probe(d) { var w = d.defaultView; return [!!(w && w.__ran), d.contentType, d.characterSet, d.compatMode]; }
+  function frame(k) {
+    return new Promise(function (res) {
+      var f = document.createElement('iframe');
+      f.onload = function () { res(probe(f.contentDocument)); };
+      f.src = '/doc/' + k;
+      document.body.appendChild(f);
+    });
+  }
+  // A top-level document of each kind: a popup (Chrome's recording only; the korvus test navigates its engine).
+  function top(k) {
+    return new Promise(function (res) {
+      var w = window.open('/doc/' + k);
+      var t = setInterval(function () {
+        try {
+          if (w.location.pathname === '/doc/' + k && w.document.readyState === 'complete') {
+            clearInterval(t);
+            var r = probe(w.document);
+            w.close();
+            res(r);
+          }
+        } catch (e) {}
+      }, 50);
+    });
+  }
+  function script(k) {
+    return new Promise(function (res) {
+      var s = document.createElement('script');
+      var done = function (e) { res([!!(window.__s && window.__s[k]), e.type]); };
+      s.onload = done; s.onerror = done;
+      s.src = '/s/' + k;
+      document.head.appendChild(s);
+    });
+  }
+  function style(k) {
+    return new Promise(function (res) {
+      var d = document.createElement('div');
+      d.id = 'c_' + k; d.style.position = 'absolute';
+      document.body.appendChild(d);
+      var l = document.createElement('link');
+      var done = function (e) { res([getComputedStyle(d).width === '123px', e.type]); };
+      l.onload = done; l.onerror = done;
+      l.rel = 'stylesheet'; l.href = '/c/' + k;
+      document.head.appendChild(l);
+    });
+  }
+  function xhr(k, rt) {
+    return new Promise(function (res) {
+      var x = new XMLHttpRequest();
+      x.open('GET', '/x/' + k);
+      if (rt) x.responseType = rt;
+      x.onload = function () { res(rt ? x.response.type : (x.responseXML ? x.responseXML.documentElement.nodeName : null)); };
+      x.onerror = function () { res('error'); };
+      x.send();
+    });
+  }
+  var k;
+  for (k in V.doc) out.frame[k] = await frame(k);
+  if (location.search.indexOf('top') >= 0) { out.top = {}; for (k in V.doc) out.top[k] = await top(k); }
+  for (k in V.script) out.script[k] = await script(k);
+  for (k in V.style) out.style[k] = await style(k);
+  for (k in V.xhr) out.xhr[k] = [await xhr(k, 'blob'), await xhr(k, '')];
+  for (k in V.fetch) out.fetch[k] = (await (await fetch('/f/' + k)).blob()).type;
+  window.__out = out;
+  fetch('/report', {method: 'POST', body: JSON.stringify(out)});
+})();
+</script></body></html>

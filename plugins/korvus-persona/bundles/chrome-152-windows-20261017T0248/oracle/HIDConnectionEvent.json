@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HIDConnectionEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new HIDConnectionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "device",
+    "expr": "HIDConnectionEvent.prototype.device",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "device",
+    "expr": "Object.getOwnPropertyDescriptor(HIDConnectionEvent.prototype, \"device\").get.call(Object.create(HIDConnectionEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "device",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDConnectionEvent.prototype, \"device\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HIDConnectionEvent",
+    "member": "device",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(HIDConnectionEvent.prototype, \"device\").get.call(Object.create(HIDConnectionEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

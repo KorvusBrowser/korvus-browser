@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "PerformanceMark",
+    "member": "constructor",
+    "expr": "(() => { const o = new PerformanceMark(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PerformanceMark]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceMark",
+    "member": "constructor",
+    "expr": "(() => { const o = new PerformanceMark(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceMark",
+    "member": "detail",
+    "expr": "(() => { const o = new PerformanceMark(\"x\"); return o.detail; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

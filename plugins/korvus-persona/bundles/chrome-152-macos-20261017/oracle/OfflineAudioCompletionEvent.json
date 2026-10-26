@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "OfflineAudioCompletionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new OfflineAudioCompletionEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OfflineAudioCompletionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new OfflineAudioCompletionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OfflineAudioCompletionEvent",
+    "member": "renderedBuffer",
+    "expr": "(() => { const o = new OfflineAudioCompletionEvent(\"x\", { renderedBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }) }); return Object.prototype.toString.call(o.renderedBuffer); })()",
+    "expected": "[object AudioBuffer]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

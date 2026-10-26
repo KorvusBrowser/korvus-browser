@@ -1,0 +1,257 @@
+[
+ [
+  "wterr/300",
+  "ok",
+  "[255,\"stream\"]"
+ ],
+ [
+  "wterr/255.5",
+  "ok",
+  "[255,\"stream\"]"
+ ],
+ [
+  "wterr/254.5",
+  "ok",
+  "[254,\"stream\"]"
+ ],
+ [
+  "wterr/2.5",
+  "ok",
+  "[2,\"stream\"]"
+ ],
+ [
+  "wterr/3.5",
+  "ok",
+  "[3,\"stream\"]"
+ ],
+ [
+  "wterr/-2.5",
+  "ok",
+  "[0,\"stream\"]"
+ ],
+ [
+  "wterr/-3",
+  "ok",
+  "[0,\"stream\"]"
+ ],
+ [
+  "wterr/NaN",
+  "ok",
+  "[0,\"stream\"]"
+ ],
+ [
+  "wterr/Infinity",
+  "ok",
+  "[255,\"stream\"]"
+ ],
+ [
+  "wterr/-Infinity",
+  "ok",
+  "[0,\"stream\"]"
+ ],
+ [
+  "wterr/7.5",
+  "ok",
+  "[7,\"stream\"]"
+ ],
+ [
+  "wterr/null",
+  "ok",
+  "[0,\"stream\"]"
+ ],
+ [
+  "wterr/1000000000000",
+  "ok",
+  "[255,\"stream\"]"
+ ],
+ [
+  "wterr/none",
+  "ok",
+  "[null,\"stream\"][\"WebTransportError\",0,\"\"]"
+ ],
+ [
+  "wterr/message",
+  "ok",
+  "[\"WebTransportError\",0,\"hi\"]"
+ ],
+ [
+  "wterr/string",
+  "TypeError",
+  "Failed to construct 'WebTransportError': The provided value is not of type 'WebTransportErrorInit'."
+ ],
+ [
+  "wterr/two",
+  "ok",
+  "[\"a\",null]"
+ ],
+ [
+  "wserr/1000",
+  "ok",
+  "[1000,\"\"]"
+ ],
+ [
+  "wserr/3000.5",
+  "ok",
+  "[3000,\"\"]"
+ ],
+ [
+  "wserr/3001.5",
+  "ok",
+  "[3001,\"\"]"
+ ],
+ [
+  "wserr/4999.5",
+  "ok",
+  "[4999,\"\"]"
+ ],
+ [
+  "wserr/70000",
+  "InvalidAccessError",
+  "Failed to construct 'WebSocketError': The close code must be either 1000, or between 3000 and 4999. 65535 is neither."
+ ],
+ [
+  "wserr/-1",
+  "InvalidAccessError",
+  "Failed to construct 'WebSocketError': The close code must be either 1000, or between 3000 and 4999. 0 is neither."
+ ],
+ [
+  "wserr/NaN",
+  "InvalidAccessError",
+  "Failed to construct 'WebSocketError': The close code must be either 1000, or between 3000 and 4999. 0 is neither."
+ ],
+ [
+  "wserr/1000.4",
+  "ok",
+  "[1000,\"\"]"
+ ],
+ [
+  "wserr/2999",
+  "InvalidAccessError",
+  "Failed to construct 'WebSocketError': The close code must be either 1000, or between 3000 and 4999. 2999 is neither."
+ ],
+ [
+  "wserr/none",
+  "ok",
+  "[null,\"\"][\"WebSocketError\",0,\"\"]"
+ ],
+ [
+  "wserr/reason-only",
+  "ok",
+  "[1000,\"r\"][\"WebSocketError\",0,\"m\"]"
+ ],
+ [
+  "wserr/reason-123",
+  "ok",
+  123
+ ],
+ [
+  "wserr/reason-124",
+  "SyntaxError",
+  "Failed to construct 'WebSocketError': The close reason must not be greater than 123 UTF-8 bytes."
+ ],
+ [
+  "wserr/reason-utf8",
+  "SyntaxError",
+  "Failed to construct 'WebSocketError': The close reason must not be greater than 123 UTF-8 bytes."
+ ],
+ [
+  "dcid/70000",
+  "TypeError",
+  "Failed to execute 'createDataChannel' on 'RTCPeerConnection': Failed to read the 'id' property from 'RTCDataChannelInit': Value is outside the 'unsigned short' value range."
+ ],
+ [
+  "dcid/-1",
+  "TypeError",
+  "Failed to execute 'createDataChannel' on 'RTCPeerConnection': Failed to read the 'id' property from 'RTCDataChannelInit': Value is outside the 'unsigned short' value range."
+ ],
+ [
+  "dcid/NaN",
+  "TypeError",
+  "Failed to execute 'createDataChannel' on 'RTCPeerConnection': Failed to read the 'id' property from 'RTCDataChannelInit': Value is not of type 'unsigned short'."
+ ],
+ [
+  "dcid/Infinity",
+  "TypeError",
+  "Failed to execute 'createDataChannel' on 'RTCPeerConnection': Failed to read the 'id' property from 'RTCDataChannelInit': Value is infinite and not of type 'unsigned short'."
+ ],
+ [
+  "dcid/-Infinity",
+  "TypeError",
+  "Failed to execute 'createDataChannel' on 'RTCPeerConnection': Failed to read the 'id' property from 'RTCDataChannelInit': Value is infinite and not of type 'unsigned short'."
+ ],
+ [
+  "dcid/5.9",
+  "ok",
+  5
+ ],
+ [
+  "dcid/12",
+  "ok",
+  12
+ ],
+ [
+  "delay/-1",
+  "ok",
+  "TypeError: Failed to execute 'postTask' on 'Scheduler': Failed to read the 'delay' property from 'SchedulerPostTaskOptions': Value is outside the 'unsigned long long' value range."
+ ],
+ [
+  "delay/9007199254740992",
+  "ok",
+  "TypeError: Failed to execute 'postTask' on 'Scheduler': Failed to read the 'delay' property from 'SchedulerPostTaskOptions': Value is outside the 'unsigned long long' value range."
+ ],
+ [
+  "delay/Infinity",
+  "ok",
+  "TypeError: Failed to execute 'postTask' on 'Scheduler': Failed to read the 'delay' property from 'SchedulerPostTaskOptions': Value is infinite and not of type 'unsigned long long'."
+ ],
+ [
+  "xrealm/postTask-signal",
+  "ok",
+  "ran"
+ ],
+ [
+  "xrealm/listener-signal",
+  "ok",
+  0
+ ],
+ [
+  "sym/worker-name",
+  "TypeError",
+  "Failed to construct 'Worker': Failed to read the 'name' property from 'WorkerOptions': Cannot convert a Symbol value to a string"
+ ],
+ [
+  "sym/blob-type",
+  "TypeError",
+  "Failed to construct 'Blob': Failed to read the 'type' property from 'BlobPropertyBag': Cannot convert a Symbol value to a string"
+ ],
+ [
+  "sym/blob-endings",
+  "TypeError",
+  "Failed to construct 'Blob': Failed to read the 'endings' property from 'BlobPropertyBag': Cannot convert a Symbol value to a string"
+ ],
+ [
+  "sym/mouse-clientX",
+  "TypeError",
+  "Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': Cannot convert a Symbol value to a number"
+ ],
+ [
+  "big/mouse-clientX",
+  "TypeError",
+  "Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': Cannot convert a BigInt value to a number"
+ ],
+ [
+  "big/progress-loaded",
+  "TypeError",
+  "Failed to construct 'ProgressEvent': Failed to read the 'loaded' property from 'ProgressEventInit': Cannot convert a BigInt value to a number"
+ ],
+ [
+  "big/mouse-button",
+  "TypeError",
+  "Failed to construct 'MouseEvent': Failed to read the 'button' property from 'MouseEventInit': Cannot convert a BigInt value to a number"
+ ],
+ [
+  "worker/request-reads",
+  "ok",
+  "body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,signal,targetAddressSpace"
+ ]
+]

@@ -1,0 +1,34 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P8 B30: a PROMISE member called on a receiver that is not its interface's instance (`{}`) returns
+// a promise rejected with a TypeError whose message names the member, in stock Chrome:
+// "Failed to execute '<op>' on '<I>': Illegal invocation" / "Failed to read the '<attr>' property from '<I>':
+// Illegal invocation". (A synchronous member throws the bare "Illegal invocation".)
+// (Members whose bodies make their own receiver check -- navigator.mediaDevices, navigator.clipboard,
+// navigator.storage, navigator.permissions, navigator.userAgentData -- are the next fixture's.)
+const probes = [
+  ['Navigator', 'getBattery'], ['Navigator', 'requestMediaKeySystemAccess'],
+  ['IDBFactory', 'databases'], ['SubtleCrypto', 'digest'], ['SubtleCrypto', 'generateKey'], ['CookieStore', 'get'],
+  ['Document', 'hasStorageAccess'], ['ServiceWorkerContainer', 'getRegistrations'],
+  ['ViewTransition', 'finished'], ['ViewTransition', 'ready'], ['ServiceWorkerContainer', 'ready'],
+  ['Navigator', 'userAgent'], ['Document', 'createElement'],
+];
+const out = {};
+const pending = [];
+for (const [I, m] of probes) {
+  const k = I + '.' + m;
+  const C = self[I];
+  if (!C) { out[k] = 'no-iface'; continue; }
+  const d = Object.getOwnPropertyDescriptor(C.prototype, m);
+  if (!d) { out[k] = 'no-member'; continue; }
+  const f = d.get || d.value;
+  try {
+    const r = f.call({});
+    if (r && typeof r.then === 'function') {
+      out[k] = 'pending';
+      pending.push(r.then(() => { out[k] = 'resolved'; }, (e) => { out[k] = 'rejects ' + (e && e.constructor && e.constructor.name) + ': ' + (e && e.message); }));
+    } else { out[k] = 'answers ' + typeof r; }
+  } catch (e) { out[k] = 'throws ' + e.constructor.name + ': ' + e.message; }
+}
+const done = () => { window.R = JSON.stringify(out); };
+Promise.all(pending).then(done, done);
+</script>

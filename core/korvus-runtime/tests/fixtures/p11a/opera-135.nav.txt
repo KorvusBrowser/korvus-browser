@@ -1,0 +1,17 @@
+location.href = "p2.html?h" => p2.html?h | sync href=<same>/page.html mark=1 || after <same>/p2.html?h dh=1 reloaded=true
+location.pathname = "/p2.html" => /p2.html | sync href=<same>/page.html mark=1 || after <same>/p2.html dh=1 reloaded=true
+location.pathname = "p2.html" => p2.html | sync href=<same>/page.html mark=1 || after <same>/p2.html dh=1 reloaded=true
+location.search = "q=1" => q=1 | sync href=<same>/page.html mark=1 || after <same>/page.html?q=1 dh=1 reloaded=true
+location.search = "?q=2" => ?q=2 | sync href=<same>/page.html mark=1 || after <same>/page.html?q=2 dh=1 reloaded=true
+location.search = "" =>  | sync href=<same>/page.html mark=1 || after <same>/page.html? dh=1 reloaded=true
+location.hostname = "localhost" => localhost | sync href=<same>/page.html mark=1 || after <same-localhost>/page.html dh=1 reloaded=true
+location.host = "localhost:PORT" => localhost:<same-port> | sync href=<same>/page.html mark=1 || after <same-localhost>/page.html dh=1 reloaded=true
+location.port = "OTHER" => <xo-port> | sync href=<same>/page.html mark=1 || after <xo>/page.html dh=1 reloaded=true
+location.protocol = "http:" => http: | sync href=<same>/page.html mark=1 || after <same>/page.html dh=0 reloaded=true
+location.hash = "h" => h | sync href=<same>/page.html#h mark=1 || after <same>/page.html#h dh=1 reloaded=false
+window.location = "p2.html?w" => p2.html?w | sync href=<same>/page.html mark=1 || after <same>/p2.html?w dh=1 reloaded=true
+document.location = "p2.html?d" => p2.html?d | sync href=<same>/page.html mark=1 || after <same>/p2.html?d dh=1 reloaded=true
+location.assign("p2.html?a") => undefined | sync href=<same>/page.html mark=1 || after <same>/p2.html?a dh=1 reloaded=true
+location.replace("p2.html?r") => undefined | sync href=<same>/page.html mark=1 || after <same>/p2.html?r dh=0 reloaded=true
+location.reload() => undefined | sync href=<same>/page.html mark=1 || after <same>/page.html dh=0 reloaded=true
+self = 1 then location => 1 | sync href=<same>/page.html mark=1 || after <same>/page.html dh=0 reloaded=false

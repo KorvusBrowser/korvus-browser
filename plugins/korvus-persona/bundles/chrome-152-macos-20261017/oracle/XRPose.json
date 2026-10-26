@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "XRPose",
+    "member": "constructor",
+    "expr": "new XRPose()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "transform",
+    "expr": "XRPose.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRPose.prototype, \"transform\").get.call(Object.create(XRPose.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "emulatedPosition",
+    "expr": "XRPose.prototype.emulatedPosition",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "emulatedPosition",
+    "expr": "Object.getOwnPropertyDescriptor(XRPose.prototype, \"emulatedPosition\").get.call(Object.create(XRPose.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPose.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPose.prototype, \"transform\").get.call(Object.create(XRPose.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "emulatedPosition",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPose.prototype, \"emulatedPosition\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPose",
+    "member": "emulatedPosition",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPose.prototype, \"emulatedPosition\").get.call(Object.create(XRPose.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

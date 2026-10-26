@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLCanvasElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "constructor",
+    "expr": "new HTMLCanvasElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.width; })()",
+    "expected": 300,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return (o.width = 1, o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.height; })()",
+    "expected": 150,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return (o.height = 1, o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.getContext(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.getContext(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toBlob",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toBlob(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return (o.width = \"1\", o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return (o.height = \"1\", o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toDataURL",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toDataURL().slice(0, 22); })()",
+    "expected": "data:image/png;base64,",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toDataURL",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toDataURL(\"image/jpeg\").slice(0, 23); })()",
+    "expected": "data:image/jpeg;base64,",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toDataURL",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); o.width = 0; return o.toDataURL(); })()",
+    "expected": "data:,",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toDataURL",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toDataURL(\"image/nonsense\").slice(0, 22); })()",
+    "expected": "data:image/png;base64,",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toDataURL",
+    "expr": "(() => { const a = document.createElement(\"canvas\"); const b = document.createElement(\"canvas\"); b.width = 10; return a.toDataURL() === b.toDataURL(); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toBlob",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toBlob(function () {}); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toBlob",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.toBlob(\"not a function\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "toBlob",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); let sync = false; o.toBlob(function () { sync = true; }); return sync; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return Object.prototype.toString.call(o.getContext(\"2d\")); })()",
+    "expected": "[object CanvasRenderingContext2D]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return o.getContext(\"2d\") === o.getContext(\"2d\"); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); o.getContext(\"2d\"); return o.getContext(\"webgl\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "getContext",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return Object.prototype.toString.call(o.getContext(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "transferControlToOffscreen",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return Object.prototype.toString.call(o.transferControlToOffscreen()); })()",
+    "expected": "[object OffscreenCanvas]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLCanvasElement",
+    "member": "captureStream",
+    "expr": "(() => { const o = document.createElement(\"canvas\"); return Object.prototype.toString.call(o.captureStream()); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

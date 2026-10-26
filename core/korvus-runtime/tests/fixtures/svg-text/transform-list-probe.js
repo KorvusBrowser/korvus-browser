@@ -1,0 +1,85 @@
+(() => {
+  // SVGTransform and an element's transform list (an interactive-widget challenge 2026-10-09): every setter, each list method, Blink's
+  // serialization of the list back to the attribute, its grammar and its errors, read-only animVal items, and a
+  // text's box after replaceItem() -- WPT svg/coordinate-systems/svgtransformlist-replaceitem.html's question.
+  const R = [];
+  const t = (name, f) => { try { R.push([name, f()]); } catch (e) { R.push([name, e.name + ': ' + e.message]); } };
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg'); document.body.appendChild(svg);
+  const g = (a) => { const e = document.createElementNS(NS, 'g'); if (a !== undefined) e.setAttribute('transform', a); svg.appendChild(e); return e; };
+  const m6 = (m) => [m.a, m.b, m.c, m.d, m.e, m.f].map((v) => +v.toFixed(6));
+  const desc = (x) => [x.type, +x.angle.toFixed(6), m6(x.matrix)];
+  const st = (e) => [e.getAttribute('transform'), e.hasAttribute('transform'), e.transform.baseVal.numberOfItems];
+  t('create', () => { const x = svg.createSVGTransform(); return desc(x); });
+  t('setScale detached', () => { const x = svg.createSVGTransform(); x.setScale(10, 1); return desc(x); });
+  t('setTranslate', () => { const x = svg.createSVGTransform(); x.setTranslate(3, -4.5); return desc(x); });
+  t('setRotate', () => { const x = svg.createSVGTransform(); x.setRotate(30, 5, 6); return desc(x); });
+  t('setRotate no center', () => { const x = svg.createSVGTransform(); x.setRotate(-90, 0, 0); return desc(x); });
+  t('setSkewX', () => { const x = svg.createSVGTransform(); x.setSkewX(45); return desc(x); });
+  t('setSkewY', () => { const x = svg.createSVGTransform(); x.setSkewY(30); return desc(x); });
+  t('setMatrix', () => { const x = svg.createSVGTransform(); x.setMatrix({ a: 2, b: 0, c: 0, d: 3, e: 4, f: 5 }); return desc(x); });
+  t('setMatrix DOMMatrix', () => { const x = svg.createSVGTransform(); x.setMatrix(new DOMMatrix([1, 2, 3, 4, 5, 6])); return desc(x); });
+  t('setMatrix svgmatrix', () => { const x = svg.createSVGTransform(); const m = svg.createSVGMatrix(); m.a = 7; x.setMatrix(m); return desc(x); });
+  t('setMatrix empty', () => { const x = svg.createSVGTransform(); x.setScale(2, 2); x.setMatrix({}); return desc(x); });
+  t('setMatrix bad', () => { const x = svg.createSVGTransform(); x.setMatrix({ a: 1, m11: 2 }); return desc(x); });
+  t('setMatrix none', () => { const x = svg.createSVGTransform(); x.setMatrix(); return desc(x); });
+  t('setScale 1 arg', () => { const x = svg.createSVGTransform(); x.setScale(2); return desc(x); });
+  t('setScale NaN', () => { const x = svg.createSVGTransform(); x.setScale(NaN, 1); return desc(x); });
+  t('setScale Inf', () => { const x = svg.createSVGTransform(); x.setScale(Infinity, 1); return desc(x); });
+  t('matrix same obj', () => { const x = svg.createSVGTransform(); const m = x.matrix; x.setScale(3, 4); return [m === x.matrix, m6(m)]; });
+  t('matrix write', () => { const x = svg.createSVGTransform(); x.setScale(3, 4); x.matrix.e = 9; return desc(x); });
+  // lists
+  t('replaceItem', () => { const e = g(); e.setAttribute('transform', 'scale(1) translate(0 0)'); const x = svg.createSVGTransform(); x.setScale(10, 1); const r = e.transform.baseVal.replaceItem(x, 0); return [e.getAttribute('transform'), r === x, r === e.transform.baseVal.getItem(0), e.transform.baseVal.numberOfItems]; });
+  t('replaceItem then mutate', () => { const e = g(); e.setAttribute('transform', 'scale(1) translate(0 0)'); const x = svg.createSVGTransform(); const r = e.transform.baseVal.replaceItem(x, 0); x.setTranslate(7, 8); return [e.getAttribute('transform'), desc(e.transform.baseVal.getItem(0))]; });
+  t('appendItem', () => { const e = g(); e.setAttribute('transform', 'rotate(30)'); const x = svg.createSVGTransform(); x.setSkewX(10); e.transform.baseVal.appendItem(x); return e.getAttribute('transform'); });
+  t('insertItemBefore', () => { const e = g(); e.setAttribute('transform', 'rotate(30) scale(2)'); const x = svg.createSVGTransform(); x.setTranslate(1, 2); e.transform.baseVal.insertItemBefore(x, 1); return e.getAttribute('transform'); });
+  t('insertItemBefore big', () => { const e = g(); e.setAttribute('transform', 'rotate(30)'); const x = svg.createSVGTransform(); e.transform.baseVal.insertItemBefore(x, 99); return e.getAttribute('transform'); });
+  t('initialize', () => { const e = g(); e.setAttribute('transform', 'rotate(30) scale(2)'); const x = svg.createSVGTransform(); x.setRotate(45, 1, 2); const r = e.transform.baseVal.initialize(x); return [e.getAttribute('transform'), r === x]; });
+  t('live item setScale', () => { const e = g(); e.setAttribute('transform', 'translate(5 6) rotate(10)'); const it = e.transform.baseVal.getItem(1); it.setScale(2, 3); return [e.getAttribute('transform'), desc(it)]; });
+  t('live item matrix write', () => { const e = g(); e.setAttribute('transform', 'translate(5 6)'); const it = e.transform.baseVal.getItem(0); it.matrix.a = 2; return [e.getAttribute('transform'), desc(it)]; });
+  t('live from other list', () => { const a = g(), b = g(); a.setAttribute('transform', 'scale(2)'); b.setAttribute('transform', 'translate(1)'); const it = a.transform.baseVal.getItem(0); const r = b.transform.baseVal.appendItem(it); return [a.getAttribute('transform'), b.getAttribute('transform'), r === it]; });
+  t('same list item', () => { const a = g(); a.setAttribute('transform', 'scale(2) translate(1 1)'); const it = a.transform.baseVal.getItem(0); const r = a.transform.baseVal.appendItem(it); return [a.getAttribute('transform'), r === it]; });
+  t('consolidate', () => { const a = g(); a.setAttribute('transform', 'translate(10 0) scale(2)'); const c = a.transform.baseVal.consolidate(); return [a.getAttribute('transform'), c && desc(c)]; });
+  t('consolidate empty', () => { const a = g(); return [a.transform.baseVal.consolidate(), a.getAttribute('transform')]; });
+  t('fromMatrix', () => { const a = g(); const x = a.transform.baseVal.createSVGTransformFromMatrix({ a: 2, d: 2, e: 1 }); return desc(x); });
+  t('serialize floats', () => { const e = g(); e.setAttribute('transform', 'scale(1)'); const x = svg.createSVGTransform(); x.setTranslate(0.1, 1e-7); e.transform.baseVal.replaceItem(x, 0); return e.getAttribute('transform'); });
+  t('serialize rotate center', () => { const e = g(); e.setAttribute('transform', 'scale(1)'); const x = svg.createSVGTransform(); x.setRotate(30, 0, 5); e.transform.baseVal.replaceItem(x, 0); return e.getAttribute('transform'); });
+  t('animVal', () => { const e = g(); e.setAttribute('transform', 'scale(2)'); const x = svg.createSVGTransform(); try { e.transform.animVal.appendItem(x); return 'ok'; } catch (err) { return err.name + ': ' + err.message; } });
+  t('type error', () => { const e = g(); try { e.transform.baseVal.appendItem({}); return 'ok'; } catch (err) { return err.name + ': ' + err.message; } });
+  t('replace bad index', () => { const e = g(); e.setAttribute('transform', 'scale(2)'); try { e.transform.baseVal.replaceItem(svg.createSVGTransform(), 3); return 'ok'; } catch (err) { return err.name + ': ' + err.message; } });
+  t('getItem detached after remove', () => { const e = g(); e.setAttribute('transform', 'scale(2) translate(3 4)'); const it = e.transform.baseVal.getItem(0); e.transform.baseVal.removeItem(0); it.setScale(5, 5); return [e.getAttribute('transform'), desc(it)]; });
+  t('clear', () => { const e = g('scale(2) translate(1 1)'); e.transform.baseVal.clear(); return st(e); });
+  t('remove last', () => { const e = g('scale(2)'); e.transform.baseVal.removeItem(0); return st(e); });
+  t('append no attr', () => { const e = g(); e.transform.baseVal.appendItem(svg.createSVGTransform()); return st(e); });
+  t('consolidate then len', () => { const e = g('translate(10 0) scale(2)'); e.transform.baseVal.consolidate(); return st(e); });
+  t('consolidate then setAttribute same', () => { const e = g('translate(10 0) scale(2)'); e.transform.baseVal.consolidate(); e.setAttribute('transform', 'translate(10 0) scale(2)'); return st(e); });
+  t('consolidate then append', () => { const e = g('translate(10 0) scale(2)'); e.transform.baseVal.consolidate(); e.transform.baseVal.appendItem(svg.createSVGTransform()); return st(e); });
+  t('consolidate one', () => { const e = g('rotate(30)'); const c = e.transform.baseVal.consolidate(); return [st(e), c.type, c.angle]; });
+  t('bad attr', () => { const e = g('scale(2) foo(3)'); return st(e); });
+  t('bad attr trailing comma', () => { const e = g('scale(2),'); return st(e); });
+  t('attr commas', () => { const e = g('translate(1,2),scale(3)'); e.transform.baseVal.getItem(0).setTranslate(1, 2); return st(e); });
+  t('setAttribute after getItem', () => { const e = g('scale(2)'); const it = e.transform.baseVal.getItem(0); e.setAttribute('transform', 'translate(5)'); it.setScale(3, 3); return [st(e), it.type]; });
+  t('removeAttribute after getItem', () => { const e = g('scale(2)'); const it = e.transform.baseVal.getItem(0); e.removeAttribute('transform'); return [st(e), it.type, it.matrix.a]; });
+  t('animVal item', () => { const e = g('scale(2)'); const a = e.transform.animVal.getItem(0); e.transform.baseVal.getItem(0).setTranslate(4, 5); let w; try { a.setScale(1, 1); w = 'ok'; } catch (err) { w = err.name + ': ' + err.message; } return [a.type, a.matrix.e, w]; });
+  t('animVal matrix write', () => { const e = g('scale(2)'); const a = e.transform.animVal.getItem(0); try { a.matrix.a = 3; return 'ok'; } catch (err) { return err.name + ': ' + err.message; } });
+  t('indexed', () => { const e = g('scale(2) rotate(5)'); const l = e.transform.baseVal; return [l[1].type, l[5] === undefined, l.length]; });
+  t('indexed set', () => { const e = g('scale(2) rotate(5)'); const x = svg.createSVGTransform(); x.setTranslate(9, 9); e.transform.baseVal[0] = x; return st(e); });
+  t('matrix serialization', () => { const e = g('matrix(1,2,3,4,5,6)'); e.transform.baseVal.getItem(0).matrix.f = 7.25; return st(e); });
+  t('big numbers', () => { const e = g('scale(1)'); e.transform.baseVal.getItem(0).setTranslate(1234567, 0.000012345); return st(e); });
+  t('negative', () => { const e = g('scale(1)'); e.transform.baseVal.getItem(0).setScale(-0.5, -1e-8); return st(e); });
+  t('rotate decompose', () => { const e = g('rotate(45 10 20)'); e.transform.baseVal.getItem(0).matrix; const it = e.transform.baseVal.getItem(0); it.setRotate(45, 10, 20); return st(e); });
+  t('rotate 90', () => { const e = g('scale(1)'); e.transform.baseVal.getItem(0).setRotate(90, 3, 4); return st(e); });
+  t('skew', () => { const e = g('scale(1)'); e.transform.baseVal.getItem(0).setSkewY(-12.5); return st(e); });
+  t('parse spaces', () => { const e = g('  scale( 2 , 3 )  translate(1e1 .5)  '); e.transform.baseVal.getItem(0).setScale(2, 3); return st(e); });
+  t('float parse', () => { const e = g('translate(0.3 1.23456789)'); e.transform.baseVal.getItem(1 - 1).setTranslate(e.transform.baseVal.getItem(0).matrix.e, e.transform.baseVal.getItem(0).matrix.f); return [st(e), e.transform.baseVal.getItem(0).matrix.e, e.transform.baseVal.getItem(0).matrix.f]; });
+  t('text box after replaceItem', () => {
+    const s2 = document.createElementNS(NS, 'svg'); s2.setAttribute('width', '800'); s2.setAttribute('height', '600'); document.body.appendChild(s2);
+    s2.innerHTML = '<text x="200" y="200" transform="scale(1) translate(0 0)">123</text><text x="200" y="200" transform="scale(10 1) translate(0 0)">123</text>';
+    const [text, ref] = s2.querySelectorAll('text');
+    const before = text.getBBox();
+    const x = s2.createSVGTransform(); x.setScale(10, 1); text.transform.baseVal.replaceItem(x, 0);
+    const b = text.getBBox(), r = ref.getBBox();
+    return [[before.y, before.height], [b.x, b.y, b.width, b.height], [r.x, r.y, r.width, r.height], text.getAttribute('transform')];
+  });
+  return R;
+})()

@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "CSSStyleRule",
+    "member": "constructor",
+    "expr": "new CSSStyleRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSStyleRule",
+    "member": "selectorText",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules[0]; })(); return o.selectorText; })()",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSStyleRule",
+    "member": "selectorText",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules[0]; })(); return (o.selectorText = \"x\", o.selectorText); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSStyleRule",
+    "member": "styleMap",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.styleMap); })()",
+    "expected": "[object StylePropertyMap]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSStyleRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"a{color:red}\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.style); })()",
+    "expected": "[object CSSStyleDeclaration]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

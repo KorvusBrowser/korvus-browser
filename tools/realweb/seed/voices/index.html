@@ -1,0 +1,14 @@
+<!doctype html><title>pending</title><script>
+// REALWEB V14: the first read of speechSynthesis asks for the voice list; its arrival fires ONE trusted
+// voiceschanged. Nothing touches speechSynthesis until 400 ms, so a listener added right after the late
+// first read still hears it; a later getVoices() fires nothing more.
+const log = [];
+setTimeout(() => {
+  const s = speechSynthesis;
+  log.push('first=' + s.getVoices().length);
+  s.addEventListener('voiceschanged', e => log.push([e.type, e.isTrusted, e.constructor.name, e.bubbles, e.cancelable, e.target === s, s.getVoices().length].join(':')));
+  s.onvoiceschanged = () => log.push('handler');
+  setTimeout(() => { s.getVoices(); }, 300);
+}, 400);
+setTimeout(() => { document.title = log.join(' '); }, 2000);
+</script>

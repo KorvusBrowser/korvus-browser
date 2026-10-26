@@ -1,0 +1,142 @@
+[
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_UNKNOWN",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_OVER",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_OVER",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_IN",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_IN",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_OUT",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_OUT",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_ATOP",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_ATOP",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_XOR",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_XOR",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "SVG_FECOMPOSITE_OPERATOR_ARITHMETIC",
+    "expr": "SVGFECompositeElement.SVG_FECOMPOSITE_OPERATOR_ARITHMETIC",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "constructor",
+    "expr": "new SVGFECompositeElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "in2",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.in2); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "operator",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.operator); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "k1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.k1); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "k2",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.k2); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "k3",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.k3); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "k4",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.k4); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFECompositeElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feComposite\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

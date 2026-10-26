@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "MessageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MessageEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MessageEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "data",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.data; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "origin",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.origin; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "lastEventId",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.lastEventId; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "source",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.source; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "ports",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.ports; })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "initMessageEvent",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.initMessageEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "initMessageEvent",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return o.initMessageEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "source",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return Object.prototype.toString.call(o.source); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MessageEvent",
+    "member": "ports",
+    "expr": "(() => { const o = new MessageEvent(\"x\"); return Object.prototype.toString.call(o.ports); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

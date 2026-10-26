@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "ImageData",
+    "member": "constructor",
+    "expr": "(() => { const o = new ImageData(1, 1); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ImageData]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "constructor",
+    "expr": "(() => { const o = new ImageData(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "constructor",
+    "expr": "(() => { const o = new ImageData(\"1\", \"1\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ImageData]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "width",
+    "expr": "(() => { const o = new ImageData(1, 1); return o.width; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "height",
+    "expr": "(() => { const o = new ImageData(1, 1); return o.height; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "pixelFormat",
+    "expr": "(() => { const o = new ImageData(1, 1); return o.pixelFormat; })()",
+    "expected": "rgba-unorm8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "colorSpace",
+    "expr": "(() => { const o = new ImageData(1, 1); return o.colorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "data",
+    "expr": "(() => { const o = new ImageData(1, 1); return Object.prototype.toString.call(o.data); })()",
+    "expected": "[object Uint8ClampedArray]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "pixelFormat",
+    "expr": "(() => { const o = new ImageData(1, 1); return Object.prototype.toString.call(o.pixelFormat); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ImageData",
+    "member": "colorSpace",
+    "expr": "(() => { const o = new ImageData(1, 1); return Object.prototype.toString.call(o.colorSpace); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

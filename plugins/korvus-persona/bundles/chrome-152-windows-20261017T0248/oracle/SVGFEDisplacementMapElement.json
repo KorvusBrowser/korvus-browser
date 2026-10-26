@@ -1,0 +1,114 @@
+[
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "SVG_CHANNEL_UNKNOWN",
+    "expr": "SVGFEDisplacementMapElement.SVG_CHANNEL_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "SVG_CHANNEL_R",
+    "expr": "SVGFEDisplacementMapElement.SVG_CHANNEL_R",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "SVG_CHANNEL_G",
+    "expr": "SVGFEDisplacementMapElement.SVG_CHANNEL_G",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "SVG_CHANNEL_B",
+    "expr": "SVGFEDisplacementMapElement.SVG_CHANNEL_B",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "SVG_CHANNEL_A",
+    "expr": "SVGFEDisplacementMapElement.SVG_CHANNEL_A",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "constructor",
+    "expr": "new SVGFEDisplacementMapElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "in2",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.in2); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "scale",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.scale); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "xChannelSelector",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.xChannelSelector); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "yChannelSelector",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.yChannelSelector); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEDisplacementMapElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDisplacementMap\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

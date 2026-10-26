@@ -1,0 +1,16 @@
+<!doctype html><html><body>
+<div id="t"></div>
+<script>
+let fired = 0, added = 0;
+const t = document.getElementById('t');
+const mo = new MutationObserver((records) => {
+  fired++;
+  for (const r of records) added += r.addedNodes.length;
+  globalThis.__obstacle = 'mo:' + fired + ':' + added;
+});
+mo.observe(t, { childList: true });
+t.appendChild(document.createElement('span'));
+t.appendChild(document.createElement('span'));
+t.appendChild(document.createElement('span'));
+</script>
+</body></html>

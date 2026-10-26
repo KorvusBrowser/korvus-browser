@@ -1,0 +1,235 @@
+[
+  {
+    "iface": "MediaStreamTrack",
+    "member": "constructor",
+    "expr": "new MediaStreamTrack()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getCaptureHandle",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.getCaptureHandle(); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getCaptureHandle",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.getCaptureHandle()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "oncapturehandlechange",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.oncapturehandlechange; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "oncapturehandlechange",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.oncapturehandlechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getSupportedCaptureActions",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.getSupportedCaptureActions(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getSupportedCaptureActions",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.getSupportedCaptureActions()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "sendCaptureAction",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.sendCaptureAction(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "kind",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.kind; })()",
+    "expected": "video",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "enabled",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.enabled; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "enabled",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return (o.enabled = true, o.enabled); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "muted",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.muted; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onmute",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.onmute; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onmute",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.onmute); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onunmute",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.onunmute; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onunmute",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.onunmute); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "readyState",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.readyState; })()",
+    "expected": "live",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "readyState",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.readyState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "clone",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object CanvasCaptureMediaStreamTrack]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "stop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.stop(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getCapabilities",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.getCapabilities()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getConstraints",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.getConstraints()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "getSettings",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.getSettings()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "applyConstraints",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.applyConstraints()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "contentHint",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.contentHint; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "contentHint",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return (o.contentHint = \"x\", o.contentHint); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "isolated",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.isolated; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onisolationchange",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.onisolationchange; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "onisolationchange",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.onisolationchange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "sendCaptureAction",
+    "expr": "(async () => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return await o.sendCaptureAction(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaStreamTrack",
+    "member": "applyConstraints",
+    "expr": "(async () => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return await o.applyConstraints(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

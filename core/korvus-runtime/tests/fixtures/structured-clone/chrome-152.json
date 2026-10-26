@@ -1,0 +1,153 @@
+{
+ "bigintObj": [
+  "object",
+  "[object BigInt]",
+  true,
+  true
+ ],
+ "bigintStr": "TNMKX5611",
+ "bigintValueOf": "bigint",
+ "bigintPrim": [
+  "bigint",
+  "611"
+ ],
+ "numberObj": [
+  "object",
+  6,
+  "[object Number]"
+ ],
+ "stringObj": [
+  "object",
+  "x!",
+  1
+ ],
+ "boolObj": [
+  "object",
+  "true",
+  "[object Boolean]"
+ ],
+ "regexp": [
+  "/gule/gi",
+  "gi",
+  0
+ ],
+ "date": [
+  true,
+  0
+ ],
+ "symbolObj": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Symbol] could not be cloned.",
+ "err": [
+  true,
+  "RangeError",
+  "m",
+  []
+ ],
+ "classInstance": [
+  "Object.prototype",
+  "{\"x\":1}",
+  false
+ ],
+ "nullProto": [
+  "Object.prototype",
+  1
+ ],
+ "arrayHoles": [
+  4,
+  false,
+  true,
+  false,
+  "1,3"
+ ],
+ "arrayExtraProp": [
+  "bar",
+  "0,1,foo"
+ ],
+ "arraySparseBig": [
+  1001,
+  "1000"
+ ],
+ "weakMap": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<WeakMap> could not be cloned.",
+ "weakSet": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<WeakSet> could not be cloned.",
+ "weakRef": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<WeakRef> could not be cloned.",
+ "promise": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<Promise> could not be cloned.",
+ "proxy": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<Object> could not be cloned.",
+ "proxyArr": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Object] could not be cloned.",
+ "generator": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Generator] could not be cloned.",
+ "arguments": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': #<Object> could not be cloned.",
+ "mapIterator": "THREW DataCloneError: Failed to execute 'structuredClone' on 'Window': [object Map Iterator] could not be cloned.",
+ "getterOrder": "b,c",
+ "symbolKey": [
+  0,
+  2
+ ],
+ "nonEnum": "v|false",
+ "errorCause": [
+  "TypeError",
+  "m",
+  5,
+  "stack,message,cause"
+ ],
+ "errorCustomName": [
+  "Error",
+  "Error"
+ ],
+ "aggregate": [
+  "Error",
+  "Error",
+  "agg",
+  false
+ ],
+ "errorExtraProp": [
+  null,
+  ""
+ ],
+ "regexpLastIndex": [
+  0,
+  null
+ ],
+ "dateProp": [
+  5,
+  null
+ ],
+ "mapProp": [
+  2,
+  null
+ ],
+ "typedSub": [
+  "Uint8Array",
+  2
+ ],
+ "typedProp": [
+  null,
+  2
+ ],
+ "sharedBuf": true,
+ "cycle": true,
+ "wrapperProps": [
+  6,
+  null
+ ],
+ "stringWrapperIdx": [
+  "a",
+  2,
+  "0,1"
+ ],
+ "negZero": [
+  true,
+  true
+ ],
+ "resizable": [
+  true,
+  8,
+  2
+ ],
+ "dataView": [
+  2,
+  4,
+  8
+ ],
+ "bigint64": [
+  "BigInt64Array",
+  "1"
+ ]
+}

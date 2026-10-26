@@ -1,0 +1,289 @@
+[
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "constructor",
+    "expr": "new XRWebGLSubImage()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTexture",
+    "expr": "XRWebGLSubImage.prototype.colorTexture",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTexture",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTexture\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTexture",
+    "expr": "XRWebGLSubImage.prototype.depthStencilTexture",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTexture",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTexture\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTexture",
+    "expr": "XRWebGLSubImage.prototype.motionVectorTexture",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTexture",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTexture\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "imageIndex",
+    "expr": "XRWebGLSubImage.prototype.imageIndex",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "imageIndex",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"imageIndex\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureWidth",
+    "expr": "XRWebGLSubImage.prototype.colorTextureWidth",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureWidth",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureHeight",
+    "expr": "XRWebGLSubImage.prototype.colorTextureHeight",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureHeight",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureWidth",
+    "expr": "XRWebGLSubImage.prototype.depthStencilTextureWidth",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureWidth",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureHeight",
+    "expr": "XRWebGLSubImage.prototype.depthStencilTextureHeight",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureHeight",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureWidth",
+    "expr": "XRWebGLSubImage.prototype.motionVectorTextureWidth",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureWidth",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureHeight",
+    "expr": "XRWebGLSubImage.prototype.motionVectorTextureHeight",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureHeight",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTexture\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTexture\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTexture\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTexture\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTexture\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTexture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTexture\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "imageIndex",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"imageIndex\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "imageIndex",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"imageIndex\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureWidth\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureHeight\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "colorTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"colorTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureWidth\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureHeight\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "depthStencilTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"depthStencilTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureWidth\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureWidth",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureWidth\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureHeight\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLSubImage",
+    "member": "motionVectorTextureHeight",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLSubImage.prototype, \"motionVectorTextureHeight\").get.call(Object.create(XRWebGLSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

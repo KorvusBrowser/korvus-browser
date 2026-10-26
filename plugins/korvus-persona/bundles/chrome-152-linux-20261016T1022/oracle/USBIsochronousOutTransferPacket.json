@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "constructor",
+    "expr": "new USBIsochronousOutTransferPacket()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new USBIsochronousOutTransferPacket(\"ok\"))",
+    "expected": "[object USBIsochronousOutTransferPacket]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "constructor",
+    "expr": "new USBIsochronousOutTransferPacket(\"bogus\")",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "status",
+    "expr": "new USBIsochronousOutTransferPacket(\"ok\").status",
+    "expected": "ok",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "bytesWritten",
+    "expr": "new USBIsochronousOutTransferPacket(\"ok\").bytesWritten",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "bytesWritten",
+    "expr": "new USBIsochronousOutTransferPacket(\"ok\", 3).bytesWritten",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "USBIsochronousOutTransferPacket",
+    "member": "bytesWritten",
+    "expr": "new USBIsochronousOutTransferPacket(\"ok\", -1).bytesWritten",
+    "expected": 4294967295,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

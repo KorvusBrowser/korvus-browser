@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Global",
+    "member": "constructor",
+    "expr": "new Global()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

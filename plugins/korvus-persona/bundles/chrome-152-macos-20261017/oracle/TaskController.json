@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "TaskController",
+    "member": "constructor",
+    "expr": "(() => { const o = new TaskController(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TaskController]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TaskController",
+    "member": "setPriority",
+    "expr": "(() => { const o = new TaskController(); return o.setPriority(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

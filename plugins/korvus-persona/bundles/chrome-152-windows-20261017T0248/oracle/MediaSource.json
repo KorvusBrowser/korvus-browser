@@ -1,0 +1,373 @@
+[
+  {
+    "iface": "MediaSource",
+    "member": "canConstructInDedicatedWorker",
+    "expr": "MediaSource.canConstructInDedicatedWorker",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"x\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MediaSource]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "handle",
+    "expr": "(() => { const o = new MediaSource(); return o.handle; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "readyState",
+    "expr": "(() => { const o = new MediaSource(); return o.readyState; })()",
+    "expected": "closed",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "duration",
+    "expr": "(() => { const o = new MediaSource(); return o.duration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "duration",
+    "expr": "(() => { const o = new MediaSource(); return (o.duration = 1, o.duration); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceopen",
+    "expr": "(() => { const o = new MediaSource(); return o.onsourceopen; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceended",
+    "expr": "(() => { const o = new MediaSource(); return o.onsourceended; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceclose",
+    "expr": "(() => { const o = new MediaSource(); return o.onsourceclose; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "addSourceBuffer",
+    "expr": "(() => { const o = new MediaSource(); return o.addSourceBuffer(\"x\"); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "addSourceBuffer",
+    "expr": "(() => { const o = new MediaSource(); return o.addSourceBuffer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "removeSourceBuffer",
+    "expr": "(() => { const o = new MediaSource(); return o.removeSourceBuffer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "endOfStream",
+    "expr": "(() => { const o = new MediaSource(); return o.endOfStream(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "setLiveSeekableRange",
+    "expr": "(() => { const o = new MediaSource(); return o.setLiveSeekableRange(1, 1); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "setLiveSeekableRange",
+    "expr": "(() => { const o = new MediaSource(); return o.setLiveSeekableRange(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "clearLiveSeekableRange",
+    "expr": "(() => { const o = new MediaSource(); return o.clearLiveSeekableRange(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "duration",
+    "expr": "(() => { const o = new MediaSource(); return (o.duration = \"1\", o.duration); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "handle",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.handle); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "sourceBuffers",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.sourceBuffers); })()",
+    "expected": "[object SourceBufferList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "activeSourceBuffers",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.activeSourceBuffers); })()",
+    "expected": "[object SourceBufferList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "readyState",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.readyState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceopen",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.onsourceopen); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceended",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.onsourceended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "onsourceclose",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.onsourceclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "addSourceBuffer",
+    "expr": "(() => { const o = new MediaSource(); return Object.prototype.toString.call(o.addSourceBuffer(\"x\")); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"audio/mpeg\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"audio/aac\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp2t\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/ogg\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"avc1.42E01E\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"avc1.42E01E, mp4a.40.2\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"avc1\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"mp4a.40.2\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"mp4a.66\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"mp4a.67\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=\\\"vp09.00.10.08\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"vp8\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"vp8.0\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"vp9\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"vorbis\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"opus\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"vp8, opus\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"audio/webm; codecs=\\\"opus\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/ogg; codecs=\\\"vorbis\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp2t; codecs=\\\"avc1.42E01E\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/x-matroska; codecs=\\\"vp8\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/webm; codecs=\\\"nonsense\\\"\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaSource",
+    "member": "isTypeSupported",
+    "expr": "MediaSource.isTypeSupported(\"video/mp4; codecs=avc1.42E01E\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

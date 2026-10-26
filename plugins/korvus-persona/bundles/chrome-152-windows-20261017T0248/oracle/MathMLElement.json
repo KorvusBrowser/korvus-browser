@@ -1,0 +1,1899 @@
+[
+  {
+    "iface": "MathMLElement",
+    "member": "constructor",
+    "expr": "new MathMLElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onabort",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onabort; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onauxclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onauxclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onbeforeinput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onbeforematch; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onbeforetoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onblur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onblur; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncanplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncanplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncanplaythrough; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onclose",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncommand",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncommand; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncontextlost; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncontextmenu; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncontextrestored; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncopy",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncopy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncuechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncut",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncut; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondblclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondblclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondrag",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondrag; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondragend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondragenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondragleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondragover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondragstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondrop",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondrop; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ondurationchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onemptied",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onemptied; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onfocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onfocus; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onformdata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onformdata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oninput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oninput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oninvalid",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oninvalid; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeydown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onkeydown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeypress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onkeypress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeyup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onkeyup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onload; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onloadeddata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onloadedmetadata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onloadstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousedown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmousedown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmouseenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmouseleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousemove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmousemove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmouseout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmouseover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmouseup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpaste",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpaste; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpause",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onplaying",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onplaying; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onprogress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onprogress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onratechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onratechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onreset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onreset; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onresize",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onresize; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscroll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onscroll; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onscrollend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onsecuritypolicyviolation; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onseeked",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onseeked; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onseeking",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onseeking; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onslotchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onstalled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onstalled; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsubmit",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onsubmit; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsuspend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onsuspend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontimeupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onvolumechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwaiting",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwaiting; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwebkitanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwebkitanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwebkitanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwebkittransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onwheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "nonce",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.nonce; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "nonce",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return (o.nonce = \"x\", o.nonce); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "autofocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.autofocus; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "autofocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return (o.autofocus = true, o.autofocus); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.tabIndex; })()",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return (o.tabIndex = 1, o.tabIndex); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "focus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.focus(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "blur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.blur(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return (o.tabIndex = \"1\", o.tabIndex); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "style",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.style); })()",
+    "expected": "[object CSSStyleDeclaration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onabort",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onabort); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onauxclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onauxclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onbeforeinput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onbeforematch); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onbeforetoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onblur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onblur); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncancel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncanplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncanplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncanplaythrough); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onclose",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncommand",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncommand); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncontextlost); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncontextmenu); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncontextrestored); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncopy",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncopy); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncuechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncut",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oncut); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondblclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondblclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondrag",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondrag); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondragend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondragenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondragleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondragover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondragstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondragstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondrop",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondrop); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ondurationchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onemptied",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onemptied); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onfocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onfocus); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onformdata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onformdata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oninput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oninput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oninvalid",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.oninvalid); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeydown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onkeydown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeypress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onkeypress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onkeyup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onkeyup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onloadeddata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onloadedmetadata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onloadstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onloadstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousedown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmousedown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmouseenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmouseleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousemove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmousemove); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmouseout); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmouseover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmouseup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onmouseup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpaste",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onpaste); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpause",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onpause); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onplaying",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onplaying); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onprogress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onprogress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onratechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onratechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onreset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onreset); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onresize",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onresize); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscroll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onscroll); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onscrollend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onsecuritypolicyviolation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onseeked",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onseeked); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onseeking",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onseeking); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onselect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onslotchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onstalled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onstalled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsubmit",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onsubmit); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onsuspend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onsuspend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ontimeupdate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.ontoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onvolumechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwaiting",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwaiting); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwebkitanimationend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwebkitanimationiteration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwebkitanimationstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwebkittransitionend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onwheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.onwheel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "dataset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.dataset); })()",
+    "expected": "[object DOMStringMap]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onanimationcancel = f; return o.onanimationcancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onanimationcancel = 42; return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onanimationcancel = function (e) { n = e.type === \"animationcancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationcancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onanimationend = f; return o.onanimationend === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onanimationend = 42; return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onanimationend = function (e) { n = e.type === \"animationend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationend\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onanimationiteration = f; return o.onanimationiteration === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onanimationiteration = 42; return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onanimationiteration = function (e) { n = e.type === \"animationiteration\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationiteration\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onanimationstart = f; return o.onanimationstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onanimationstart = 42; return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onanimationstart = function (e) { n = e.type === \"animationstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onbeforexrselect = f; return o.onbeforexrselect === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onbeforexrselect = 42; return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onbeforexrselect = function (e) { n = e.type === \"beforexrselect\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforexrselect\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.oncontentvisibilityautostatechange = f; return o.oncontentvisibilityautostatechange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.oncontentvisibilityautostatechange = 42; return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.oncontentvisibilityautostatechange = function (e) { n = e.type === \"contentvisibilityautostatechange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"contentvisibilityautostatechange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.ongotpointercapture = f; return o.ongotpointercapture === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.ongotpointercapture = 42; return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.ongotpointercapture = function (e) { n = e.type === \"gotpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"gotpointercapture\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onlostpointercapture = f; return o.onlostpointercapture === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onlostpointercapture = 42; return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onlostpointercapture = function (e) { n = e.type === \"lostpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"lostpointercapture\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onmousewheel = f; return o.onmousewheel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onmousewheel = 42; return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onmousewheel = function (e) { n = e.type === \"mousewheel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"mousewheel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointercancel = f; return o.onpointercancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointercancel = 42; return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointercancel = function (e) { n = e.type === \"pointercancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointercancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerdown = f; return o.onpointerdown === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerdown = 42; return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerdown = function (e) { n = e.type === \"pointerdown\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerdown\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerenter = f; return o.onpointerenter === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerenter = 42; return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerenter = function (e) { n = e.type === \"pointerenter\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerenter\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerleave = f; return o.onpointerleave === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerleave = 42; return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerleave = function (e) { n = e.type === \"pointerleave\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerleave\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointermove = f; return o.onpointermove === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointermove = 42; return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointermove = function (e) { n = e.type === \"pointermove\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointermove\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerout = f; return o.onpointerout === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerout = 42; return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerout = function (e) { n = e.type === \"pointerout\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerout\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerover = f; return o.onpointerover === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerover = 42; return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerover = function (e) { n = e.type === \"pointerover\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerover\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerrawupdate = f; return o.onpointerrawupdate === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerrawupdate = 42; return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerrawupdate = function (e) { n = e.type === \"pointerrawupdate\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerrawupdate\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onpointerup = f; return o.onpointerup === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onpointerup = 42; return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onpointerup = function (e) { n = e.type === \"pointerup\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerup\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onscrollsnapchange = f; return o.onscrollsnapchange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onscrollsnapchange = 42; return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onscrollsnapchange = function (e) { n = e.type === \"scrollsnapchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onscrollsnapchanging = f; return o.onscrollsnapchanging === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onscrollsnapchanging = 42; return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onscrollsnapchanging = function (e) { n = e.type === \"scrollsnapchanging\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchanging\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onselectionchange = f; return o.onselectionchange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onselectionchange = 42; return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onselectionchange = function (e) { n = e.type === \"selectionchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectionchange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.onselectstart = f; return o.onselectstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.onselectstart = 42; return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.onselectstart = function (e) { n = e.type === \"selectstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.ontransitioncancel = f; return o.ontransitioncancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.ontransitioncancel = 42; return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.ontransitioncancel = function (e) { n = e.type === \"transitioncancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitioncancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.ontransitionend = f; return o.ontransitionend === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.ontransitionend = 42; return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.ontransitionend = function (e) { n = e.type === \"transitionend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionend\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.ontransitionrun = f; return o.ontransitionrun === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.ontransitionrun = 42; return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.ontransitionrun = function (e) { n = e.type === \"transitionrun\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionrun\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); const f = function () {}; o.ontransitionstart = f; return o.ontransitionstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); o.ontransitionstart = 42; return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); let n = 0; o.ontransitionstart = function (e) { n = e.type === \"transitionstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "attributeStyleMap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return Object.prototype.toString.call(o.attributeStyleMap); })()",
+    "expected": "[object StylePropertyMap]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "attributeStyleMap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.attributeStyleMap.size; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MathMLElement",
+    "member": "focusGroupStart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/1998/Math/MathML\", \"a\"); return o.focusGroupStart; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

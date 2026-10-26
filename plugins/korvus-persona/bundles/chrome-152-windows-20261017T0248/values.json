@@ -1,0 +1,1637 @@
+{
+  "nav": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "product": "Gecko",
+    "productSub": "20030107",
+    "vendor": "Google Inc.",
+    "vendorSub": "",
+    "platform": "Win32",
+    "language": "ko-KR",
+    "hardwareConcurrency": 24,
+    "deviceMemory": 32,
+    "maxTouchPoints": 0,
+    "pdfViewerEnabled": true,
+    "doNotTrack": null,
+    "cookieEnabled": true,
+    "onLine": true,
+    "webdriver": false,
+    "cpuPerformance": 4,
+    "languages": [
+      "ko-KR",
+      "ko",
+      "en-US",
+      "en"
+    ],
+    "acceptLanguage": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "plugins": [
+      {
+        "name": "PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chrome PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chromium PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Microsoft Edge PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "WebKit built-in PDF",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      }
+    ],
+    "mimeTypes": [
+      {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "PDF Viewer"
+      },
+      {
+        "type": "text/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "PDF Viewer"
+      }
+    ],
+    "userAgentData": {
+      "brands": [
+        {
+          "brand": "Chromium",
+          "version": "152"
+        },
+        {
+          "brand": "Not?A_Brand",
+          "version": "24"
+        },
+        {
+          "brand": "Google Chrome",
+          "version": "152"
+        }
+      ],
+      "mobile": false,
+      "platform": "Windows",
+      "highEntropy": {
+        "architecture": "x86",
+        "bitness": "64",
+        "brands": [
+          {
+            "brand": "Chromium",
+            "version": "152"
+          },
+          {
+            "brand": "Not?A_Brand",
+            "version": "24"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "152"
+          }
+        ],
+        "formFactors": [
+          "Desktop"
+        ],
+        "fullVersionList": [
+          {
+            "brand": "Chromium",
+            "version": "152.0.7977.82"
+          },
+          {
+            "brand": "Not?A_Brand",
+            "version": "24.0.0.0"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "152.0.7977.82"
+          }
+        ],
+        "mobile": false,
+        "model": "",
+        "platform": "Windows",
+        "platformVersion": "19.0.0",
+        "uaFullVersion": "152.0.7977.82",
+        "wow64": false
+      }
+    },
+    "connection": {
+      "effectiveType": "4g",
+      "rtt": 100,
+      "downlink": 1.45,
+      "saveData": false
+    },
+    "storageEstimate": {
+      "quota": 10737418240,
+      "usage": 0,
+      "usageDetails": {}
+    },
+    "battery": {
+      "has": true,
+      "keys": [
+        "charging",
+        "chargingTime",
+        "dischargingTime",
+        "level",
+        "onchargingchange",
+        "onchargingtimechange",
+        "ondischargingtimechange",
+        "onlevelchange",
+        "constructor"
+      ]
+    },
+    "permissions": {
+      "geolocation": "prompt",
+      "notifications": "prompt",
+      "camera": "prompt",
+      "microphone": "prompt",
+      "midi": "prompt",
+      "background-sync": "granted",
+      "persistent-storage": "prompt",
+      "clipboard-read": "prompt",
+      "clipboard-write": "granted",
+      "accelerometer": "granted",
+      "gyroscope": "granted",
+      "magnetometer": "granted",
+      "screen-wake-lock": "granted",
+      "payment-handler": "granted",
+      "storage-access": "granted",
+      "idle-detection": "prompt",
+      "background-fetch": "granted",
+      "periodic-background-sync": "denied",
+      "keyboard-lock": "granted",
+      "pointer-lock": "granted",
+      "display-capture": "prompt",
+      "local-fonts": "prompt",
+      "window-management": "prompt",
+      "captured-surface-control": "prompt",
+      "local-network-access": "prompt",
+      "local-network": "prompt",
+      "loopback-network": "prompt"
+    },
+    "mediaDevices": {
+      "count": 1,
+      "kinds": [
+        "videoinput"
+      ],
+      "labelled": 0,
+      "supported": {
+        "aspectRatio": true,
+        "autoGainControl": true,
+        "brightness": true,
+        "channelCount": true,
+        "colorTemperature": true,
+        "contrast": true,
+        "deviceId": true,
+        "displaySurface": true,
+        "echoCancellation": true,
+        "exposureCompensation": true,
+        "exposureMode": true,
+        "exposureTime": true,
+        "facingMode": true,
+        "focusDistance": true,
+        "focusMode": true,
+        "frameRate": true,
+        "groupId": true,
+        "height": true,
+        "iso": true,
+        "latency": true,
+        "noiseSuppression": true,
+        "pan": true,
+        "pointsOfInterest": true,
+        "resizeMode": true,
+        "restrictOwnAudio": true,
+        "sampleRate": true,
+        "sampleSize": true,
+        "saturation": true,
+        "sharpness": true,
+        "suppressLocalAudioPlayback": true,
+        "tilt": true,
+        "torch": true,
+        "voiceIsolation": true,
+        "whiteBalanceMode": true,
+        "width": true,
+        "zoom": true
+      }
+    },
+    "acceptNavigation": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "_acceptNavigationNote": "Google Chrome 152.0.7977.83 (Windows)'s navigation Accept, MEASURED 2026-10-17 on a loopback echo (page and cross-site iframe alike, a fresh profile, headed on the owner's Windows PC -- Windows Server 2025, the user's disconnected RDP session). A browser-identifying value belongs in the bundle.",
+    "thirdPartyCookies": "allowed",
+    "_thirdPartyCookiesNote": "Google Chrome 152.0.7977.83 (Windows) allows third-party cookies: MEASURED 2026-10-17 with a localhost page and a 127.0.0.1 frame -- the frame's credentialed fetch carried `Sec-Fetch-Storage-Access: active`.",
+    "keyboardLayoutMap": [
+      [
+        "KeyK",
+        "k"
+      ],
+      [
+        "KeyG",
+        "g"
+      ],
+      [
+        "Digit2",
+        "2"
+      ],
+      [
+        "Digit0",
+        "0"
+      ],
+      [
+        "KeyV",
+        "v"
+      ],
+      [
+        "KeyA",
+        "a"
+      ],
+      [
+        "Backquote",
+        "`"
+      ],
+      [
+        "KeyL",
+        "l"
+      ],
+      [
+        "IntlBackslash",
+        "₩"
+      ],
+      [
+        "Quote",
+        "'"
+      ],
+      [
+        "KeyW",
+        "w"
+      ],
+      [
+        "Digit8",
+        "8"
+      ],
+      [
+        "KeyM",
+        "m"
+      ],
+      [
+        "KeyH",
+        "h"
+      ],
+      [
+        "Period",
+        "."
+      ],
+      [
+        "Digit7",
+        "7"
+      ],
+      [
+        "Digit1",
+        "1"
+      ],
+      [
+        "KeyP",
+        "p"
+      ],
+      [
+        "KeyD",
+        "d"
+      ],
+      [
+        "KeyF",
+        "f"
+      ],
+      [
+        "KeyO",
+        "o"
+      ],
+      [
+        "KeyQ",
+        "q"
+      ],
+      [
+        "KeyC",
+        "c"
+      ],
+      [
+        "KeyN",
+        "n"
+      ],
+      [
+        "BracketLeft",
+        "["
+      ],
+      [
+        "KeyZ",
+        "z"
+      ],
+      [
+        "KeyY",
+        "y"
+      ],
+      [
+        "Digit3",
+        "3"
+      ],
+      [
+        "Digit6",
+        "6"
+      ],
+      [
+        "Digit5",
+        "5"
+      ],
+      [
+        "KeyX",
+        "x"
+      ],
+      [
+        "Slash",
+        "/"
+      ],
+      [
+        "Backslash",
+        "\\"
+      ],
+      [
+        "Comma",
+        ","
+      ],
+      [
+        "Minus",
+        "-"
+      ],
+      [
+        "Digit4",
+        "4"
+      ],
+      [
+        "KeyB",
+        "b"
+      ],
+      [
+        "KeyT",
+        "t"
+      ],
+      [
+        "Digit9",
+        "9"
+      ],
+      [
+        "KeyS",
+        "s"
+      ],
+      [
+        "KeyI",
+        "i"
+      ],
+      [
+        "KeyU",
+        "u"
+      ],
+      [
+        "Equal",
+        "="
+      ],
+      [
+        "KeyJ",
+        "j"
+      ],
+      [
+        "Semicolon",
+        ";"
+      ],
+      [
+        "KeyR",
+        "r"
+      ],
+      [
+        "BracketRight",
+        "]"
+      ],
+      [
+        "KeyE",
+        "e"
+      ]
+    ],
+    "_keyboardLayoutMapNote": "navigator.keyboard.getLayoutMap()'s [code, key] entries in the order the map iterates them, MEASURED 2026-10-17 on the owner's Windows PC (its own layout) in Google Chrome 152.0.7977.83 (Windows) over a loopback page; null = navigator.keyboard is null.",
+    "aiAvailability": {
+      "LanguageDetector": "unavailable",
+      "LanguageModel": "unavailable",
+      "Summarizer": "unavailable",
+      "Translator": "unavailable"
+    },
+    "_aiAvailabilityNote": "The built-in AI APIs' availability() with no options (Translator with {sourceLanguage:'en', targetLanguage:'fr'}), MEASURED 2026-10-17 on the owner's Windows PC in Google Chrome 152.0.7977.83 (Windows) over a loopback page (a cross-origin frame); null = the API is not exposed."
+  },
+  "screen": {
+    "width": 1440,
+    "height": 900,
+    "availWidth": 1440,
+    "availHeight": 900,
+    "availLeft": 0,
+    "availTop": 0,
+    "colorDepth": 24,
+    "pixelDepth": 24,
+    "isExtended": false,
+    "orientation": {
+      "type": "landscape-primary",
+      "angle": 0
+    },
+    "refreshRate": 56,
+    "_refreshRateNote": "The display refresh rate, MEASURED 2026-10-17 on the owner's Windows PC (a disconnected RDP session's display): Google Chrome 152.0.7977.83 (Windows) runs requestAnimationFrame every 17.9 ms (p10..p90 17.6-18.4) -- 56 Hz. The display, not the browser.",
+    "_availNote": "MEASURED 2026-10-17 in the owner's Windows PC's disconnected RDP session (the capture): Google Chrome 152.0.7977.83 (Windows) there reports availHeight = height (900), availTop 0, though the taskbar is on and not auto-hidden -- a quirk of the session, not of a Windows desktop."
+  },
+  "win": {
+    "innerWidth": 1440,
+    "innerHeight": 813,
+    "outerWidth": 1440,
+    "outerHeight": 900,
+    "screenX": 0,
+    "screenY": 0,
+    "screenLeft": 0,
+    "screenTop": 0,
+    "devicePixelRatio": 1,
+    "scrollX": 0,
+    "scrollY": 0,
+    "originAgentCluster": true,
+    "crossOriginIsolated": false,
+    "visualViewport": {
+      "width": 1440,
+      "height": 813,
+      "scale": 1,
+      "offsetLeft": 0,
+      "offsetTop": 0
+    },
+    "documentElement": {
+      "clientWidth": 1440,
+      "clientHeight": 813
+    }
+  },
+  "memory": {
+    "jsHeapSizeLimit": 4395630592,
+    "totalJSHeapSize": 31904022,
+    "usedJSHeapSize": 16738122,
+    "emptyDocument": {
+      "totalJSHeapSize": 1048748,
+      "usedJSHeapSize": 495304
+    }
+  },
+  "chrome": {
+    "keys": [
+      "loadTimes",
+      "csi",
+      "app"
+    ],
+    "hasRuntime": false,
+    "loadTimes": "function",
+    "csi": "function",
+    "app": [
+      "isInstalled",
+      "getDetails",
+      "getIsInstalled",
+      "installState",
+      "runningState",
+      "InstallState",
+      "RunningState"
+    ]
+  },
+  "intl": {
+    "timeZone": "Asia/Seoul",
+    "locale": "ko",
+    "timeZoneName": "",
+    "offsetMinutes": -540
+  },
+  "fonts": {
+    "present": [
+      "Arial",
+      "Arial Black",
+      "Helvetica",
+      "Times",
+      "Times New Roman",
+      "Courier",
+      "Courier New",
+      "Georgia",
+      "Palatino Linotype",
+      "Comic Sans MS",
+      "Trebuchet MS",
+      "Impact",
+      "Verdana",
+      "Tahoma",
+      "Lucida Console",
+      "Lucida Sans Unicode",
+      "Consolas",
+      "Segoe UI",
+      "Segoe UI Emoji",
+      "Calibri",
+      "Cambria",
+      "Candara",
+      "Constantia",
+      "Corbel",
+      "Franklin Gothic Medium",
+      "Malgun Gothic",
+      "Dotum",
+      "Gulim",
+      "MS Gothic",
+      "MS PGothic",
+      "Yu Gothic",
+      "SimSun",
+      "Microsoft YaHei"
+    ],
+    "count": 33,
+    "generic": {
+      "monospace": 1260,
+      "sans-serif": 1820.4609375,
+      "serif": 1820.4609375
+    },
+    "widths": {
+      "Arial": 1767.76171875,
+      "Arial Black": 2040.1875,
+      "Arial Narrow": 1820.4609375,
+      "Arial Rounded MT Bold": 1820.4609375,
+      "Helvetica": 1767.76171875,
+      "Helvetica Neue": 1820.4609375,
+      "Times": 1695.62109375,
+      "Times New Roman": 1695.62109375,
+      "Courier": 1512.24609375,
+      "Courier New": 1512.24609375,
+      "Georgia": 1828.0546875,
+      "Palatino": 1820.4609375,
+      "Palatino Linotype": 1814.484375,
+      "Garamond": 1820.4609375,
+      "Bookman": 1820.4609375,
+      "Comic Sans MS": 1838.390625,
+      "Trebuchet MS": 1695.09375,
+      "Impact": 1584.73828125,
+      "Verdana": 1979.859375,
+      "Tahoma": 1741.7109375,
+      "Geneva": 1820.4609375,
+      "Lucida Console": 1518.3984375,
+      "Lucida Grande": 1820.4609375,
+      "Lucida Sans Unicode": 1851.3984375,
+      "Monaco": 1820.4609375,
+      "Menlo": 1820.4609375,
+      "Consolas": 1385.5078125,
+      "Segoe UI": 1772.578125,
+      "Segoe UI Emoji": 1772.578125,
+      "Calibri": 1662.75,
+      "Cambria": 1751.94140625,
+      "Candara": 1667.109375,
+      "Constantia": 1804.078125,
+      "Corbel": 1659.65625,
+      "Franklin Gothic Medium": 1737.80859375,
+      "Gill Sans": 1820.4609375,
+      "Optima": 1820.4609375,
+      "Futura": 1820.4609375,
+      "Baskerville": 1820.4609375,
+      "American Typewriter": 1820.4609375,
+      "Andale Mono": 1820.4609375,
+      "Apple Chancery": 1820.4609375,
+      "Apple Color Emoji": 1820.4609375,
+      "AppleGothic": 1820.4609375,
+      "Avenir": 1820.4609375,
+      "Avenir Next": 1820.4609375,
+      "Big Caslon": 1820.4609375,
+      "Brush Script MT": 1820.4609375,
+      "Chalkboard": 1820.4609375,
+      "Cochin": 1820.4609375,
+      "Copperplate": 1820.4609375,
+      "Didot": 1820.4609375,
+      "Herculanum": 1820.4609375,
+      "Hoefler Text": 1820.4609375,
+      "Marker Felt": 1820.4609375,
+      "Noteworthy": 1820.4609375,
+      "Papyrus": 1820.4609375,
+      "Phosphate": 1820.4609375,
+      "Rockwell": 1820.4609375,
+      "Savoye LET": 1820.4609375,
+      "SignPainter": 1820.4609375,
+      "Skia": 1820.4609375,
+      "Snell Roundhand": 1820.4609375,
+      "Zapfino": 1820.4609375,
+      "PT Sans": 1820.4609375,
+      "PT Serif": 1820.4609375,
+      "Roboto": 1820.4609375,
+      "Noto Sans": 1820.4609375,
+      "Noto Serif": 1820.4609375,
+      "Noto Color Emoji": 1820.4609375,
+      "Noto Sans CJK KR": 1820.4609375,
+      "Noto Sans CJK JP": 1820.4609375,
+      "DejaVu Sans": 1820.4609375,
+      "DejaVu Serif": 1820.4609375,
+      "DejaVu Sans Mono": 1820.4609375,
+      "Liberation Sans": 1820.4609375,
+      "Liberation Serif": 1820.4609375,
+      "Liberation Mono": 1820.4609375,
+      "Ubuntu": 1820.4609375,
+      "Cantarell": 1820.4609375,
+      "FreeSans": 1820.4609375,
+      "Malgun Gothic": 1820.4609375,
+      "AppleSDGothicNeo": 1820.4609375,
+      "Apple SD Gothic Neo": 1820.4609375,
+      "Nanum Gothic": 1820.4609375,
+      "NanumGothic": 1820.4609375,
+      "Batang": 1820.4609375,
+      "Dotum": 1820.390625,
+      "Gulim": 1776.3046875,
+      "MS Gothic": 1260,
+      "MS PGothic": 1512.5625,
+      "Meiryo": 1820.4609375,
+      "Yu Gothic": 1787.66015625,
+      "SimSun": 1260,
+      "SimHei": 1820.4609375,
+      "Microsoft YaHei": 1929.62109375,
+      "PingFang SC": 1820.4609375,
+      "Hiragino Sans": 1820.4609375,
+      "Hiragino Kaku Gothic ProN": 1820.4609375,
+      "Songti SC": 1820.4609375,
+      "STHeiti": 1820.4609375,
+      "Heiti SC": 1820.4609375
+    },
+    "check": {
+      "Arial": true,
+      "Arial Black": true,
+      "Arial Narrow": true,
+      "Arial Rounded MT Bold": true,
+      "Helvetica": true,
+      "Helvetica Neue": true,
+      "Times": true,
+      "Times New Roman": true,
+      "Courier": true,
+      "Courier New": true,
+      "Georgia": true,
+      "Palatino": true,
+      "Palatino Linotype": true,
+      "Garamond": true,
+      "Bookman": true,
+      "Comic Sans MS": true,
+      "Trebuchet MS": true,
+      "Impact": true,
+      "Verdana": true,
+      "Tahoma": true,
+      "Geneva": true,
+      "Lucida Console": true,
+      "Lucida Grande": true,
+      "Lucida Sans Unicode": true,
+      "Monaco": true,
+      "Menlo": true,
+      "Consolas": true,
+      "Segoe UI": true,
+      "Segoe UI Emoji": true,
+      "Calibri": true,
+      "Cambria": true,
+      "Candara": true,
+      "Constantia": true,
+      "Corbel": true,
+      "Franklin Gothic Medium": true,
+      "Gill Sans": true,
+      "Optima": true,
+      "Futura": true,
+      "Baskerville": true,
+      "American Typewriter": true,
+      "Andale Mono": true,
+      "Apple Chancery": true,
+      "Apple Color Emoji": true,
+      "AppleGothic": true,
+      "Avenir": true,
+      "Avenir Next": true,
+      "Big Caslon": true,
+      "Brush Script MT": true,
+      "Chalkboard": true,
+      "Cochin": true,
+      "Copperplate": true,
+      "Didot": true,
+      "Herculanum": true,
+      "Hoefler Text": true,
+      "Marker Felt": true,
+      "Noteworthy": true,
+      "Papyrus": true,
+      "Phosphate": true,
+      "Rockwell": true,
+      "Savoye LET": true,
+      "SignPainter": true,
+      "Skia": true,
+      "Snell Roundhand": true,
+      "Zapfino": true,
+      "PT Sans": true,
+      "PT Serif": true,
+      "Roboto": true,
+      "Noto Sans": true,
+      "Noto Serif": true,
+      "Noto Color Emoji": true,
+      "Noto Sans CJK KR": true,
+      "Noto Sans CJK JP": true,
+      "DejaVu Sans": true,
+      "DejaVu Serif": true,
+      "DejaVu Sans Mono": true,
+      "Liberation Sans": true,
+      "Liberation Serif": true,
+      "Liberation Mono": true,
+      "Ubuntu": true,
+      "Cantarell": true,
+      "FreeSans": true,
+      "Malgun Gothic": true,
+      "AppleSDGothicNeo": true,
+      "Apple SD Gothic Neo": true,
+      "Nanum Gothic": true,
+      "NanumGothic": true,
+      "Batang": true,
+      "Dotum": true,
+      "Gulim": true,
+      "MS Gothic": true,
+      "MS PGothic": true,
+      "Meiryo": true,
+      "Yu Gothic": true,
+      "SimSun": true,
+      "SimHei": true,
+      "Microsoft YaHei": true,
+      "PingFang SC": true,
+      "Hiragino Sans": true,
+      "Hiragino Kaku Gothic ProN": true,
+      "Songti SC": true,
+      "STHeiti": true,
+      "Heiti SC": true
+    },
+    "status": "loaded"
+  },
+  "speech": {
+    "voices": [
+      {
+        "name": "Microsoft David - English (United States)",
+        "lang": "en-US",
+        "localService": true,
+        "default": true,
+        "voiceURI": "Microsoft David - English (United States)"
+      },
+      {
+        "name": "Microsoft Mark - English (United States)",
+        "lang": "en-US",
+        "localService": true,
+        "default": false,
+        "voiceURI": "Microsoft Mark - English (United States)"
+      },
+      {
+        "name": "Microsoft Zira - English (United States)",
+        "lang": "en-US",
+        "localService": true,
+        "default": false,
+        "voiceURI": "Microsoft Zira - English (United States)"
+      },
+      {
+        "name": "Google Deutsch",
+        "lang": "de-DE",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google Deutsch"
+      },
+      {
+        "name": "Google US English",
+        "lang": "en-US",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google US English"
+      },
+      {
+        "name": "Google UK English Female",
+        "lang": "en-GB",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google UK English Female"
+      },
+      {
+        "name": "Google UK English Male",
+        "lang": "en-GB",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google UK English Male"
+      },
+      {
+        "name": "Google español",
+        "lang": "es-ES",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google español"
+      },
+      {
+        "name": "Google español de Estados Unidos",
+        "lang": "es-US",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google español de Estados Unidos"
+      },
+      {
+        "name": "Google français",
+        "lang": "fr-FR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google français"
+      },
+      {
+        "name": "Google हिन्दी",
+        "lang": "hi-IN",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google हिन्दी"
+      },
+      {
+        "name": "Google Bahasa Indonesia",
+        "lang": "id-ID",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google Bahasa Indonesia"
+      },
+      {
+        "name": "Google italiano",
+        "lang": "it-IT",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google italiano"
+      },
+      {
+        "name": "Google 日本語",
+        "lang": "ja-JP",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 日本語"
+      },
+      {
+        "name": "Google 한국의",
+        "lang": "ko-KR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 한국의"
+      },
+      {
+        "name": "Google Nederlands",
+        "lang": "nl-NL",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google Nederlands"
+      },
+      {
+        "name": "Google polski",
+        "lang": "pl-PL",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google polski"
+      },
+      {
+        "name": "Google português do Brasil",
+        "lang": "pt-BR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google português do Brasil"
+      },
+      {
+        "name": "Google русский",
+        "lang": "ru-RU",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google русский"
+      },
+      {
+        "name": "Google 普通话（中国大陆）",
+        "lang": "zh-CN",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 普通话（中国大陆）"
+      },
+      {
+        "name": "Google 粤語（香港）",
+        "lang": "zh-HK",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 粤語（香港）"
+      },
+      {
+        "name": "Google 國語（臺灣）",
+        "lang": "zh-TW",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 國語（臺灣）"
+      }
+    ],
+    "_voicesNote": "speechSynthesis.getVoices() after the one voiceschanged, headed, as the capture reads it (Google Chrome 152.0.7977.83 (Windows), 2026-10-17). Stock Chrome lists its built-in Google network voices."
+  },
+  "deviceOracle": {
+    "webgl": {
+      "unmaskedVendor": "Google Inc. (NVIDIA)",
+      "unmaskedRenderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 (0x00002487) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "versionV1": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingV1": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+      "versionV2": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "shadingV2": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+      "paramsByNum": {
+        "32777": 32774,
+        "34877": 32774,
+        "32968": 0,
+        "32969": 1,
+        "32970": 0,
+        "32971": 1,
+        "32773": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "2884": false,
+        "3042": false,
+        "3024": true,
+        "2960": false,
+        "2929": false,
+        "3089": false,
+        "32823": false,
+        "32926": false,
+        "32928": false,
+        "2849": 1,
+        "33901": [
+          1,
+          1024
+        ],
+        "33902": [
+          1,
+          1
+        ],
+        "2885": 1029,
+        "2886": 2305,
+        "2928": [
+          0,
+          1
+        ],
+        "2930": true,
+        "2931": 1,
+        "2932": 513,
+        "2961": 0,
+        "2962": 519,
+        "2964": 7680,
+        "2965": 7680,
+        "2966": 7680,
+        "2967": 0,
+        "2963": 4294967295,
+        "2968": 4294967295,
+        "34816": 519,
+        "34817": 7680,
+        "34818": 7680,
+        "34819": 7680,
+        "36003": 0,
+        "36004": 4294967295,
+        "36005": 4294967295,
+        "2978": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3088": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3106": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "3107": "true,true,true,true",
+        "3317": 4,
+        "3333": 4,
+        "3379": 16384,
+        "3386": [
+          32767,
+          32767
+        ],
+        "3408": 4,
+        "3410": 8,
+        "3411": 8,
+        "3412": 8,
+        "3413": 8,
+        "3414": 24,
+        "3415": 0,
+        "10752": 0,
+        "32824": 0,
+        "32936": 1,
+        "32937": 4,
+        "32938": 1,
+        "32939": false,
+        "34467": [],
+        "33170": 4352,
+        "34921": 16,
+        "36347": 4095,
+        "36348": 30,
+        "35661": 32,
+        "35660": 16,
+        "34930": 16,
+        "36349": 1024,
+        "35724": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+        "7936": "WebKit",
+        "7937": "WebKit WebGL",
+        "7938": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+        "34076": 16384,
+        "34016": 33984,
+        "35738": 5121,
+        "35739": 6408,
+        "34024": 16384,
+        "37440": false,
+        "37441": false,
+        "37443": 37444,
+        "2880": 6914,
+        "10754": false,
+        "34047": 16,
+        "34383": false,
+        "34852": 8,
+        "34853": 1029,
+        "34854": 1029,
+        "34855": 1029,
+        "34856": 1029,
+        "34857": 1029,
+        "34858": 1029,
+        "34859": 1029,
+        "34860": 1029,
+        "35068": 1,
+        "35723": 4352,
+        "36063": 8,
+        "36379": 0,
+        "36392": 0,
+        "36795": false,
+        "37445": "Google Inc. (NVIDIA)",
+        "37446": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 (0x00002487) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "37724": 36001,
+        "37725": 37726
+      },
+      "paramsByNumV2": {
+        "32777": 32774,
+        "34877": 32774,
+        "32968": 0,
+        "32969": 1,
+        "32970": 0,
+        "32971": 1,
+        "32773": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "2884": false,
+        "3042": false,
+        "3024": true,
+        "2960": false,
+        "2929": false,
+        "3089": false,
+        "32823": false,
+        "32926": false,
+        "32928": false,
+        "2849": 1,
+        "33901": [
+          1,
+          1024
+        ],
+        "33902": [
+          1,
+          1
+        ],
+        "2885": 1029,
+        "2886": 2305,
+        "2928": [
+          0,
+          1
+        ],
+        "2930": true,
+        "2931": 1,
+        "2932": 513,
+        "2961": 0,
+        "2962": 519,
+        "2964": 7680,
+        "2965": 7680,
+        "2966": 7680,
+        "2967": 0,
+        "2963": 4294967295,
+        "2968": 4294967295,
+        "34816": 519,
+        "34817": 7680,
+        "34818": 7680,
+        "34819": 7680,
+        "36003": 0,
+        "36004": 4294967295,
+        "36005": 4294967295,
+        "2978": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3088": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3106": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "3107": "true,true,true,true",
+        "3317": 4,
+        "3333": 4,
+        "3379": 16384,
+        "3386": [
+          32767,
+          32767
+        ],
+        "3408": 4,
+        "3410": 8,
+        "3411": 8,
+        "3412": 8,
+        "3413": 8,
+        "3414": 24,
+        "3415": 0,
+        "10752": 0,
+        "32824": 0,
+        "32936": 1,
+        "32937": 4,
+        "32938": 1,
+        "32939": false,
+        "34467": [],
+        "33170": 4352,
+        "34921": 16,
+        "36347": 4095,
+        "36348": 30,
+        "35661": 32,
+        "35660": 16,
+        "34930": 16,
+        "36349": 1024,
+        "7936": "WebKit",
+        "7937": "WebKit WebGL",
+        "34076": 16384,
+        "34016": 33984,
+        "35738": 5121,
+        "35739": 6408,
+        "34024": 16384,
+        "37440": false,
+        "37441": false,
+        "37443": 37444,
+        "3074": 1029,
+        "3314": 0,
+        "3315": 0,
+        "3316": 0,
+        "3330": 0,
+        "3331": 0,
+        "3332": 0,
+        "32877": 0,
+        "32878": 0,
+        "32883": 2048,
+        "33000": 2147483647,
+        "33001": 2147483647,
+        "34045": 2,
+        "34852": 8,
+        "34853": 1029,
+        "34854": 1029,
+        "34855": 1029,
+        "34856": 1029,
+        "34857": 1029,
+        "34858": 1029,
+        "34859": 1029,
+        "34860": 1029,
+        "35657": 4096,
+        "35658": 16380,
+        "35723": 4352,
+        "35071": 2048,
+        "35076": -8,
+        "35077": 7,
+        "35659": 120,
+        "35968": 4,
+        "35977": false,
+        "35978": 120,
+        "35979": 4,
+        "36063": 8,
+        "36183": 8,
+        "35371": 12,
+        "35373": 12,
+        "35374": 24,
+        "35375": 24,
+        "35376": 65536,
+        "35377": 212988,
+        "35379": 200704,
+        "35380": 256,
+        "37154": 120,
+        "37157": 120,
+        "37137": 0,
+        "36387": false,
+        "36388": false,
+        "36203": 4294967294,
+        "37447": 0,
+        "2880": 6914,
+        "3378": 8,
+        "10754": false,
+        "12288": false,
+        "12289": false,
+        "12290": false,
+        "12291": false,
+        "12292": false,
+        "12293": false,
+        "12294": false,
+        "12295": false,
+        "33529": 8,
+        "33530": 8,
+        "34047": 16,
+        "34383": false,
+        "35068": 1,
+        "36379": 0,
+        "36392": 0,
+        "36431": 36430,
+        "36443": -0.5,
+        "36444": 0.4375,
+        "36445": 4,
+        "36795": false,
+        "37445": "Google Inc. (NVIDIA)",
+        "37446": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3060 (0x00002487) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "37724": 36001,
+        "37725": 37726,
+        "38449": 4
+      },
+      "extensions": [
+        "ANGLE_instanced_arrays",
+        "EXT_blend_minmax",
+        "EXT_clip_control",
+        "EXT_color_buffer_half_float",
+        "EXT_depth_clamp",
+        "EXT_disjoint_timer_query",
+        "EXT_float_blend",
+        "EXT_frag_depth",
+        "EXT_polygon_offset_clamp",
+        "EXT_shader_texture_lod",
+        "EXT_texture_compression_bptc",
+        "EXT_texture_compression_rgtc",
+        "EXT_texture_filter_anisotropic",
+        "EXT_texture_mirror_clamp_to_edge",
+        "EXT_sRGB",
+        "KHR_parallel_shader_compile",
+        "OES_element_index_uint",
+        "OES_fbo_render_mipmap",
+        "OES_standard_derivatives",
+        "OES_texture_float",
+        "OES_texture_float_linear",
+        "OES_texture_half_float",
+        "OES_texture_half_float_linear",
+        "OES_vertex_array_object",
+        "WEBGL_blend_func_extended",
+        "WEBGL_color_buffer_float",
+        "WEBGL_compressed_texture_s3tc",
+        "WEBGL_compressed_texture_s3tc_srgb",
+        "WEBGL_debug_renderer_info",
+        "WEBGL_debug_shaders",
+        "WEBGL_depth_texture",
+        "WEBGL_draw_buffers",
+        "WEBGL_lose_context",
+        "WEBGL_multi_draw",
+        "WEBGL_polygon_mode"
+      ],
+      "extensionsV2": [
+        "EXT_clip_control",
+        "EXT_color_buffer_float",
+        "EXT_color_buffer_half_float",
+        "EXT_conservative_depth",
+        "EXT_depth_clamp",
+        "EXT_disjoint_timer_query_webgl2",
+        "EXT_float_blend",
+        "EXT_polygon_offset_clamp",
+        "EXT_render_snorm",
+        "EXT_texture_compression_bptc",
+        "EXT_texture_compression_rgtc",
+        "EXT_texture_filter_anisotropic",
+        "EXT_texture_mirror_clamp_to_edge",
+        "EXT_texture_norm16",
+        "KHR_parallel_shader_compile",
+        "NV_shader_noperspective_interpolation",
+        "OES_draw_buffers_indexed",
+        "OES_sample_variables",
+        "OES_shader_multisample_interpolation",
+        "OES_texture_float_linear",
+        "OVR_multiview2",
+        "WEBGL_blend_func_extended",
+        "WEBGL_clip_cull_distance",
+        "WEBGL_compressed_texture_s3tc",
+        "WEBGL_compressed_texture_s3tc_srgb",
+        "WEBGL_debug_renderer_info",
+        "WEBGL_debug_shaders",
+        "WEBGL_lose_context",
+        "WEBGL_multi_draw",
+        "WEBGL_polygon_mode",
+        "WEBGL_provoking_vertex",
+        "WEBGL_stencil_texturing"
+      ],
+      "contextAttributes": {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "default",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "precision": {
+        "VERTEX_SHADER.LOW_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "VERTEX_SHADER.MEDIUM_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "VERTEX_SHADER.HIGH_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "VERTEX_SHADER.LOW_INT": [
+          31,
+          30,
+          0
+        ],
+        "VERTEX_SHADER.MEDIUM_INT": [
+          31,
+          30,
+          0
+        ],
+        "VERTEX_SHADER.HIGH_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.LOW_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "FRAGMENT_SHADER.MEDIUM_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "FRAGMENT_SHADER.HIGH_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "FRAGMENT_SHADER.LOW_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.MEDIUM_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.HIGH_INT": [
+          31,
+          30,
+          0
+        ]
+      },
+      "internalformatSamples": {
+        "32849": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "32854": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "32855": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "32856": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "32857": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "32859": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33189": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33190": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33321": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33322": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33323": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33324": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33325": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33326": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33327": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "33328": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "34836": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "34842": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "35056": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "35898": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "35907": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "36012": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "36013": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "36168": [
+          8,
+          4,
+          2,
+          1
+        ],
+        "36194": [
+          8,
+          4,
+          2,
+          1
+        ]
+      }
+    },
+    "canvas": {
+      "dataUrl": "data:image/png;base64,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"
+    },
+    "audio": {
+      "sampleRate": 44100,
+      "renderedHash": "d089798d",
+      "classicSum": 124.04347776696522
+    }
+  }
+}

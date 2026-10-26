@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "USBEndpoint",
+    "member": "constructor",
+    "expr": "new USBEndpoint()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "endpointNumber",
+    "expr": "USBEndpoint.prototype.endpointNumber",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "endpointNumber",
+    "expr": "Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"endpointNumber\").get.call(Object.create(USBEndpoint.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "direction",
+    "expr": "USBEndpoint.prototype.direction",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "direction",
+    "expr": "Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"direction\").get.call(Object.create(USBEndpoint.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "type",
+    "expr": "USBEndpoint.prototype.type",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "type",
+    "expr": "Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"type\").get.call(Object.create(USBEndpoint.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "packetSize",
+    "expr": "USBEndpoint.prototype.packetSize",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "packetSize",
+    "expr": "Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"packetSize\").get.call(Object.create(USBEndpoint.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "endpointNumber",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"endpointNumber\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "endpointNumber",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"endpointNumber\").get.call(Object.create(USBEndpoint.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "direction",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"direction\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "direction",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"direction\").get.call(Object.create(USBEndpoint.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "type",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"type\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "type",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"type\").get.call(Object.create(USBEndpoint.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "packetSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"packetSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBEndpoint",
+    "member": "packetSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBEndpoint.prototype, \"packetSize\").get.call(Object.create(USBEndpoint.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

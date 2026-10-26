@@ -1,0 +1,110 @@
+{
+ "addEventListener": [
+  "function",
+  "function addEventListener() { ",
+  true,
+  false
+ ],
+ "alert": [
+  "function",
+  "function alert() { [native cod",
+  true,
+  true
+ ],
+ "close": [
+  "function",
+  "function close() { [native cod",
+  true,
+  true
+ ],
+ "document": [
+  "object",
+  "[object HTMLDocument]",
+  true,
+  true
+ ],
+ "foo": [
+  "object",
+  "DIV",
+  true,
+  false
+ ],
+ "fooForm": [
+  "object",
+  "FORM",
+  true,
+  false
+ ],
+ "forinIds": "document,addEventListener",
+ "forinLen": 243,
+ "globalThisFoo": "object",
+ "gopnIds": "",
+ "hasOwnProperty": [
+  "function",
+  "function hasOwnProperty() { [n",
+  true,
+  false
+ ],
+ "imgName": [
+  "object",
+  "IMG",
+  true,
+  false
+ ],
+ "kQOwR1": [
+  "object",
+  "DIV",
+  true,
+  false
+ ],
+ "keysIds": "",
+ "late": "object",
+ "lateAfterRemove": "undefined",
+ "length": [
+  "number",
+  "0",
+  true,
+  true
+ ],
+ "name": [
+  "string",
+  "",
+  true,
+  true
+ ],
+ "nonexistentX": [
+  "undefined",
+  "undefined",
+  false,
+  false
+ ],
+ "onload": [
+  "object",
+  "null",
+  true,
+  true
+ ],
+ "status": [
+  "string",
+  "",
+  true,
+  true
+ ],
+ "toString": [
+  "function",
+  "function toString() { [native ",
+  true,
+  false
+ ],
+ "valueOf": [
+  "function",
+  "function valueOf() { [native c",
+  true,
+  false
+ ],
+ "wpDesc": "{\"value\":{},\"writable\":true,\"enumerable\":false,\"configurable\":true}",
+ "wpForin": "addEventListener,dispatchEvent,removeEventListener,when",
+ "wpGopn": "",
+ "wpKeys": "",
+ "wpOwn": ""
+}

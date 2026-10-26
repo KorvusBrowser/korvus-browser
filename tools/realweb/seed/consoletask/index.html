@@ -1,0 +1,30 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B20: console.createTask as V8 implements it -- length 0, a non-empty string name, and ONE
+// `run` per realm (length 0) that checks its receiver and its argument.
+const out = {};
+const t = (k, f) => { try { const v = f(); out[k] = v === undefined ? 'undefined' : v === null ? 'null' : typeof v === 'object' ? Object.prototype.toString.call(v) : String(v); } catch (e) { out[k] = 'ERR ' + e.constructor.name + ': ' + e.message; } };
+t('len', () => console.createTask.length);
+t('name', () => console.createTask.name);
+t('noArg', () => console.createTask());
+t('empty', () => console.createTask(''));
+t('number', () => console.createTask(5));
+t('object', () => console.createTask({ toString() { return 'x'; } }));
+const a = console.createTask('a'), b = console.createTask('b');
+t('own', () => Reflect.ownKeys(a).map(String).join());
+t('proto', () => Object.getPrototypeOf(a) === Object.prototype);
+t('runDesc', () => { const d = Object.getOwnPropertyDescriptor(a, 'run'); return [typeof d.value, d.writable, d.enumerable, d.configurable].join(); });
+t('runShape', () => [a.run.name, a.run.length].join());
+t('shared', () => a.run === b.run);
+t('result', () => a.run(() => 42));
+t('thisInFn', () => a.run(function () { return this === undefined ? 'undefined' : this === window ? 'window' : typeof this; }));
+t('extraArgs', () => a.run((...xs) => xs.length, 1, 2));
+t('noFn', () => a.run());
+t('notFn', () => a.run(5));
+t('foreign', () => a.run.call({}, () => 1));
+t('crossTask', () => a.run.call(b, () => 'b'));
+t('throwsThrough', () => a.run(() => { throw new RangeError('inner'); }));
+t('newRun', () => new a.run(() => 1));
+t('runOwn', () => Object.getOwnPropertyNames(a.run).join());
+t('runProtoDesc', () => { const d = Object.getOwnPropertyDescriptor(a.run, 'prototype'); return d ? [d.writable, d.enumerable, d.configurable].join() : 'none'; });
+window.R = JSON.stringify(out);
+</script>

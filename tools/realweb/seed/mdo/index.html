@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>module and defer scripts share one list</title>
+<script>
+// I9: module scripts and DEFERRED classic scripts are one list, run in document order after the parse.
+// coveryourtracks.eff.org loads jQuery with <script type=module> and then front.js with <script defer>;
+// Chrome runs jQuery first, korvus ran front.js first ("$ is not defined").
+window.L = []; window.R = null;
+document.addEventListener('DOMContentLoaded', function () { L.push('DCL'); });
+window.addEventListener('load', function () { L.push('load'); R = L.join(','); });
+</script>
+<script type="module" src="m1.js"></script>
+<script defer src="d1.js"></script>
+<script type="module">L.push('m-inline');</script>
+<script defer src="d2.js"></script>
+<script type="module" src="m2.js"></script>
+<script>L.push('classic');</script>

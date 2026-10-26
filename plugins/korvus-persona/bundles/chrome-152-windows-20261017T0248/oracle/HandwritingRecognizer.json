@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "HandwritingRecognizer",
+    "member": "constructor",
+    "expr": "new HandwritingRecognizer()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,571 @@
+[
+  {
+    "iface": "RTCPeerConnection",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object RTCPeerConnection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setIdentityProvider",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.setIdentityProvider(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setIdentityProvider",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.setIdentityProvider(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getIdentityAssertion",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.getIdentityAssertion(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "peerIdentity",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.peerIdentity; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "idpLoginUrl",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.idpLoginUrl; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "idpErrorInfo",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.idpErrorInfo; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "localDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.localDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "currentLocalDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.currentLocalDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "pendingLocalDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.pendingLocalDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "remoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.remoteDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "currentRemoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.currentRemoteDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "pendingRemoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.pendingRemoteDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "signalingState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.signalingState; })()",
+    "expected": "stable",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "iceGatheringState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.iceGatheringState; })()",
+    "expected": "new",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "iceConnectionState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.iceConnectionState; })()",
+    "expected": "new",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "connectionState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.connectionState; })()",
+    "expected": "new",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "canTrickleIceCandidates",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.canTrickleIceCandidates; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "restartIce",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.restartIce(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setConfiguration",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.setConfiguration(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "close",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onnegotiationneeded",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onnegotiationneeded; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicecandidate",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onicecandidate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicecandidateerror",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onicecandidateerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onsignalingstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onsignalingstatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "oniceconnectionstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.oniceconnectionstatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicegatheringstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onicegatheringstatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onconnectionstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.onconnectionstatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getSenders",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.getSenders(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getReceivers",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.getReceivers(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getTransceivers",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.getTransceivers(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "addTrack",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.addTrack(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "removeTrack",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.removeTrack(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "addTransceiver",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.addTransceiver(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "ontrack",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.ontrack; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "sctp",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.sctp; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createDataChannel",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.createDataChannel(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "ondatachannel",
+    "expr": "(() => { const o = new RTCPeerConnection(); return o.ondatachannel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getIdentityAssertion",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getIdentityAssertion()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "peerIdentity",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.peerIdentity); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createOffer",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.createOffer()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createAnswer",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.createAnswer()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setLocalDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.setLocalDescription()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "localDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.localDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "currentLocalDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.currentLocalDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "pendingLocalDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.pendingLocalDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setRemoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.setRemoteDescription({})); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "remoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.remoteDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "currentRemoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.currentRemoteDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "pendingRemoteDescription",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.pendingRemoteDescription); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "addIceCandidate",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.addIceCandidate()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "signalingState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.signalingState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "iceGatheringState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.iceGatheringState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "iceConnectionState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.iceConnectionState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "connectionState",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.connectionState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getConfiguration",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getConfiguration()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onnegotiationneeded",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onnegotiationneeded); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicecandidate",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onicecandidate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicecandidateerror",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onicecandidateerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onsignalingstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onsignalingstatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "oniceconnectionstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.oniceconnectionstatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onicegatheringstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onicegatheringstatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "onconnectionstatechange",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.onconnectionstatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getSenders",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getSenders()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getReceivers",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getReceivers()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getTransceivers",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getTransceivers()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "ontrack",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.ontrack); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "sctp",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.sctp); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createDataChannel",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.createDataChannel(\"x\")); })()",
+    "expected": "[object RTCDataChannel]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "ondatachannel",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.ondatachannel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getStats",
+    "expr": "(() => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(o.getStats()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getIdentityAssertion",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.getIdentityAssertion(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createOffer",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(await o.createOffer()); })()",
+    "expected": "[object Object]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createAnswer",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.createAnswer(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "createAnswer",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(await o.createAnswer()); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setLocalDescription",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.setLocalDescription(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setRemoteDescription",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.setRemoteDescription({}); })()",
+    "throws": "OperationError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "setRemoteDescription",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.setRemoteDescription(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "addIceCandidate",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return await o.addIceCandidate(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCPeerConnection",
+    "member": "getStats",
+    "expr": "(async () => { const o = new RTCPeerConnection(); return Object.prototype.toString.call(await o.getStats()); })()",
+    "expected": "[object RTCStatsReport]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

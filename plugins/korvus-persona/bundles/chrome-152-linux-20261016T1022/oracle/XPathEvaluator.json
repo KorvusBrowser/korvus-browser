@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "XPathEvaluator",
+    "member": "constructor",
+    "expr": "(() => { const o = new XPathEvaluator(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object XPathEvaluator]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathEvaluator",
+    "member": "createExpression",
+    "expr": "(() => { const o = new XPathEvaluator(); return o.createExpression(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathEvaluator",
+    "member": "createNSResolver",
+    "expr": "(() => { const o = new XPathEvaluator(); return o.createNSResolver(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathEvaluator",
+    "member": "evaluate",
+    "expr": "(() => { const o = new XPathEvaluator(); return o.evaluate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

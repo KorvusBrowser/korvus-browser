@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRInputSourceEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRInputSourceEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "frame",
+    "expr": "XRInputSourceEvent.prototype.frame",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "frame",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"frame\").get.call(Object.create(XRInputSourceEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "inputSource",
+    "expr": "XRInputSourceEvent.prototype.inputSource",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "inputSource",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"inputSource\").get.call(Object.create(XRInputSourceEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "frame",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"frame\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "frame",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"frame\").get.call(Object.create(XRInputSourceEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "inputSource",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"inputSource\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRInputSourceEvent",
+    "member": "inputSource",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceEvent.prototype, \"inputSource\").get.call(Object.create(XRInputSourceEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

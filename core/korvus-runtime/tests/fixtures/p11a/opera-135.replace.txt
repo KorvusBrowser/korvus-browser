@@ -1,0 +1,187 @@
+window.caches = 7 => ok reads unchanged now accessor
+window.clientInformation = 7 => ok reads 7 now data w=true e=true c=true
+window.closed = 7 => ok reads unchanged now accessor
+window.cookieStore = 7 => ok reads unchanged now accessor
+window.crashReport = 7 => ok reads unchanged now accessor
+window.credentialless = 7 => ok reads unchanged now accessor
+window.crossOriginIsolated = 7 => ok reads unchanged now accessor
+window.crypto = 7 => ok reads unchanged now accessor
+window.customElements = 7 => ok reads unchanged now accessor
+window.devicePixelRatio = 7 => ok reads 7 now data w=true e=true c=true
+window.document = 7 => ok reads unchanged now accessor
+window.documentPictureInPicture = 7 => ok reads unchanged now accessor
+window.event = 7 => ok reads 7 now data w=true e=true c=true
+window.external = 7 => ok reads 7 now data w=true e=true c=true
+window.fence = 7 => ok reads unchanged now accessor
+window.frameElement = 7 => ok reads unchanged now accessor
+window.frames = 7 => ok reads 7 now data w=true e=true c=true
+window.history = 7 => ok reads unchanged now accessor
+window.indexedDB = 7 => ok reads unchanged now accessor
+window.innerHeight = 7 => ok reads 7 now data w=true e=true c=true
+window.innerWidth = 7 => ok reads 7 now data w=true e=true c=true
+window.isSecureContext = 7 => ok reads unchanged now accessor
+window.launchQueue = 7 => ok reads unchanged now accessor
+window.length = 7 => ok reads 7 now data w=true e=true c=true
+window.localStorage = 7 => ok reads unchanged now accessor
+window.locationbar = 7 => ok reads 7 now data w=true e=true c=true
+window.menubar = 7 => ok reads 7 now data w=true e=true c=true
+window.name = 7 => ok reads string "7" now accessor
+window.navigation = 7 => ok reads 7 now data w=true e=true c=true
+window.navigator = 7 => ok reads unchanged now accessor
+window.offscreenBuffering = 7 => ok reads 7 now data w=true e=true c=true
+window.onabort = 7 => ok reads unchanged now accessor
+window.onafterprint = 7 => ok reads unchanged now accessor
+window.onanimationcancel = 7 => ok reads unchanged now accessor
+window.onanimationend = 7 => ok reads unchanged now accessor
+window.onanimationiteration = 7 => ok reads unchanged now accessor
+window.onanimationstart = 7 => ok reads unchanged now accessor
+window.onappinstalled = 7 => ok reads unchanged now accessor
+window.onauxclick = 7 => ok reads unchanged now accessor
+window.onbeforeinput = 7 => ok reads unchanged now accessor
+window.onbeforeinstallprompt = 7 => ok reads unchanged now accessor
+window.onbeforematch = 7 => ok reads unchanged now accessor
+window.onbeforeprint = 7 => ok reads unchanged now accessor
+window.onbeforetoggle = 7 => ok reads unchanged now accessor
+window.onbeforeunload = 7 => ok reads unchanged now accessor
+window.onbeforexrselect = 7 => ok reads unchanged now accessor
+window.onblur = 7 => ok reads unchanged now accessor
+window.oncancel = 7 => ok reads unchanged now accessor
+window.oncanplay = 7 => ok reads unchanged now accessor
+window.oncanplaythrough = 7 => ok reads unchanged now accessor
+window.onchange = 7 => ok reads unchanged now accessor
+window.onclick = 7 => ok reads unchanged now accessor
+window.onclose = 7 => ok reads unchanged now accessor
+window.oncommand = 7 => ok reads unchanged now accessor
+window.oncontentvisibilityautostatechange = 7 => ok reads unchanged now accessor
+window.oncontextlost = 7 => ok reads unchanged now accessor
+window.oncontextmenu = 7 => ok reads unchanged now accessor
+window.oncontextrestored = 7 => ok reads unchanged now accessor
+window.oncuechange = 7 => ok reads unchanged now accessor
+window.ondblclick = 7 => ok reads unchanged now accessor
+window.ondevicemotion = 7 => ok reads unchanged now accessor
+window.ondeviceorientation = 7 => ok reads unchanged now accessor
+window.ondeviceorientationabsolute = 7 => ok reads unchanged now accessor
+window.ondrag = 7 => ok reads unchanged now accessor
+window.ondragend = 7 => ok reads unchanged now accessor
+window.ondragenter = 7 => ok reads unchanged now accessor
+window.ondragleave = 7 => ok reads unchanged now accessor
+window.ondragover = 7 => ok reads unchanged now accessor
+window.ondragstart = 7 => ok reads unchanged now accessor
+window.ondrop = 7 => ok reads unchanged now accessor
+window.ondurationchange = 7 => ok reads unchanged now accessor
+window.onemptied = 7 => ok reads unchanged now accessor
+window.onended = 7 => ok reads unchanged now accessor
+window.onerror = 7 => ok reads unchanged now accessor
+window.onfocus = 7 => ok reads unchanged now accessor
+window.onformdata = 7 => ok reads unchanged now accessor
+window.ongamepadconnected = 7 => ok reads unchanged now accessor
+window.ongamepaddisconnected = 7 => ok reads unchanged now accessor
+window.ongotpointercapture = 7 => ok reads unchanged now accessor
+window.onhashchange = 7 => ok reads unchanged now accessor
+window.oninput = 7 => ok reads unchanged now accessor
+window.oninvalid = 7 => ok reads unchanged now accessor
+window.onkeydown = 7 => ok reads unchanged now accessor
+window.onkeypress = 7 => ok reads unchanged now accessor
+window.onkeyup = 7 => ok reads unchanged now accessor
+window.onlanguagechange = 7 => ok reads unchanged now accessor
+window.onload = 7 => ok reads unchanged now accessor
+window.onloadeddata = 7 => ok reads unchanged now accessor
+window.onloadedmetadata = 7 => ok reads unchanged now accessor
+window.onloadstart = 7 => ok reads unchanged now accessor
+window.onlostpointercapture = 7 => ok reads unchanged now accessor
+window.onmessage = 7 => ok reads unchanged now accessor
+window.onmessageerror = 7 => ok reads unchanged now accessor
+window.onmousedown = 7 => ok reads unchanged now accessor
+window.onmouseenter = 7 => ok reads unchanged now accessor
+window.onmouseleave = 7 => ok reads unchanged now accessor
+window.onmousemove = 7 => ok reads unchanged now accessor
+window.onmouseout = 7 => ok reads unchanged now accessor
+window.onmouseover = 7 => ok reads unchanged now accessor
+window.onmouseup = 7 => ok reads unchanged now accessor
+window.onmousewheel = 7 => ok reads unchanged now accessor
+window.onoffline = 7 => ok reads unchanged now accessor
+window.ononline = 7 => ok reads unchanged now accessor
+window.onpagehide = 7 => ok reads unchanged now accessor
+window.onpagereveal = 7 => ok reads unchanged now accessor
+window.onpageshow = 7 => ok reads unchanged now accessor
+window.onpageswap = 7 => ok reads unchanged now accessor
+window.onpause = 7 => ok reads unchanged now accessor
+window.onplay = 7 => ok reads unchanged now accessor
+window.onplaying = 7 => ok reads unchanged now accessor
+window.onpointercancel = 7 => ok reads unchanged now accessor
+window.onpointerdown = 7 => ok reads unchanged now accessor
+window.onpointerenter = 7 => ok reads unchanged now accessor
+window.onpointerleave = 7 => ok reads unchanged now accessor
+window.onpointermove = 7 => ok reads unchanged now accessor
+window.onpointerout = 7 => ok reads unchanged now accessor
+window.onpointerover = 7 => ok reads unchanged now accessor
+window.onpointerrawupdate = 7 => ok reads unchanged now accessor
+window.onpointerup = 7 => ok reads unchanged now accessor
+window.onpopstate = 7 => ok reads unchanged now accessor
+window.onprogress = 7 => ok reads unchanged now accessor
+window.onratechange = 7 => ok reads unchanged now accessor
+window.onrejectionhandled = 7 => ok reads unchanged now accessor
+window.onreset = 7 => ok reads unchanged now accessor
+window.onresize = 7 => ok reads unchanged now accessor
+window.onscroll = 7 => ok reads unchanged now accessor
+window.onscrollend = 7 => ok reads unchanged now accessor
+window.onscrollsnapchange = 7 => ok reads unchanged now accessor
+window.onscrollsnapchanging = 7 => ok reads unchanged now accessor
+window.onsearch = 7 => ok reads unchanged now accessor
+window.onsecuritypolicyviolation = 7 => ok reads unchanged now accessor
+window.onseeked = 7 => ok reads unchanged now accessor
+window.onseeking = 7 => ok reads unchanged now accessor
+window.onselect = 7 => ok reads unchanged now accessor
+window.onselectionchange = 7 => ok reads unchanged now accessor
+window.onselectstart = 7 => ok reads unchanged now accessor
+window.onslotchange = 7 => ok reads unchanged now accessor
+window.onstalled = 7 => ok reads unchanged now accessor
+window.onstorage = 7 => ok reads unchanged now accessor
+window.onsubmit = 7 => ok reads unchanged now accessor
+window.onsuspend = 7 => ok reads unchanged now accessor
+window.ontimeupdate = 7 => ok reads unchanged now accessor
+window.ontoggle = 7 => ok reads unchanged now accessor
+window.ontransitioncancel = 7 => ok reads unchanged now accessor
+window.ontransitionend = 7 => ok reads unchanged now accessor
+window.ontransitionrun = 7 => ok reads unchanged now accessor
+window.ontransitionstart = 7 => ok reads unchanged now accessor
+window.onunhandledrejection = 7 => ok reads unchanged now accessor
+window.onunload = 7 => ok reads unchanged now accessor
+window.onvolumechange = 7 => ok reads unchanged now accessor
+window.onwaiting = 7 => ok reads unchanged now accessor
+window.onwebkitanimationend = 7 => ok reads unchanged now accessor
+window.onwebkitanimationiteration = 7 => ok reads unchanged now accessor
+window.onwebkitanimationstart = 7 => ok reads unchanged now accessor
+window.onwebkittransitionend = 7 => ok reads unchanged now accessor
+window.onwheel = 7 => ok reads unchanged now accessor
+window.opener = 7 => ok reads 7 now data w=true e=true c=true
+window.origin = 7 => ok reads 7 now data w=true e=true c=true
+window.originAgentCluster = 7 => ok reads unchanged now accessor
+window.outerHeight = 7 => ok reads 7 now data w=true e=true c=true
+window.outerWidth = 7 => ok reads 7 now data w=true e=true c=true
+window.pageXOffset = 7 => ok reads 7 now data w=true e=true c=true
+window.pageYOffset = 7 => ok reads 7 now data w=true e=true c=true
+window.parent = 7 => ok reads 7 now data w=true e=true c=true
+window.performance = 7 => ok reads 7 now data w=true e=true c=true
+window.personalbar = 7 => ok reads 7 now data w=true e=true c=true
+window.scheduler = 7 => ok reads 7 now data w=true e=true c=true
+window.screen = 7 => ok reads 7 now data w=true e=true c=true
+window.screenLeft = 7 => ok reads 7 now data w=true e=true c=true
+window.screenTop = 7 => ok reads 7 now data w=true e=true c=true
+window.screenX = 7 => ok reads 7 now data w=true e=true c=true
+window.screenY = 7 => ok reads 7 now data w=true e=true c=true
+window.scrollX = 7 => ok reads 7 now data w=true e=true c=true
+window.scrollY = 7 => ok reads 7 now data w=true e=true c=true
+window.scrollbars = 7 => ok reads 7 now data w=true e=true c=true
+window.self = 7 => ok reads 7 now data w=true e=true c=true
+window.sessionStorage = 7 => ok reads unchanged now accessor
+window.sharedStorage = 7 => ok reads unchanged now accessor
+window.status = 7 => ok reads string "7" now accessor
+window.statusbar = 7 => ok reads 7 now data w=true e=true c=true
+window.styleMedia = 7 => ok reads unchanged now accessor
+window.toolbar = 7 => ok reads 7 now data w=true e=true c=true
+window.top = 7 => ok reads unchanged now accessor
+window.trustedTypes = 7 => ok reads unchanged now accessor
+window.viewport = 7 => ok reads 7 now data w=true e=true c=true
+window.visualViewport = 7 => ok reads 7 now data w=true e=true c=true
+window.window = 7 => ok reads unchanged now accessor

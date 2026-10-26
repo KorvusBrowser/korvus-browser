@@ -1,0 +1,39 @@
+<!doctype html><html><head><style>.b::before{content:"x"} .a::after{content:""}</style></head><body>
+<div id=d class=b>text</div><span id=s>s</span><p id=p class=a>p</p><img id=i alt=""><a id=l href="#">l</a><input id=n><button id=bt>b</button>
+<ul><li id=li>i</li></ul><table><tr><td id=td>t</td></tr></table><svg id=sv width=10 height=10></svg>
+<script>
+// REALWEB C6 (ngenix: html2canvas threw "Error parsing CSS component value, unexpected EOF" on the challenge's
+// render): a computed style answers every property html2canvas reads with a value -- never an EMPTY string --
+// on elements and on their ::before / ::after. Listed: the (element, property) pairs whose value is "".
+var props = ['backgroundClip','backgroundColor','backgroundImage','backgroundOrigin','backgroundPosition','backgroundRepeat','backgroundSize',
+ 'borderTopColor','borderRightColor','borderBottomColor','borderLeftColor','borderTopLeftRadius','borderTopRightRadius','borderBottomRightRadius',
+ 'borderBottomLeftRadius','borderTopStyle','borderRightStyle','borderBottomStyle','borderLeftStyle','borderTopWidth','borderRightWidth',
+ 'borderBottomWidth','borderLeftWidth','boxShadow','color','direction','display','float','cssFloat','fontFamily','fontSize','fontStyle','fontVariant',
+ 'fontWeight','letterSpacing','lineBreak','lineHeight','listStyleImage','listStylePosition','listStyleType','marginTop','marginRight',
+ 'marginBottom','marginLeft','opacity','overflowX','overflowY','overflowWrap','paddingTop','paddingRight','paddingBottom','paddingLeft',
+ 'paintOrder','position','textAlign','textDecorationColor','textDecorationLine','textShadow','textTransform','transform','transformOrigin',
+ 'visibility','webkitTextStrokeColor','webkitTextStrokeWidth','wordBreak','zIndex','objectFit','imageRendering','animationDuration',
+ 'counterIncrement','counterReset','content','quotes','fontVariantLigatures','textDecorationStyle','textDecorationThickness','textUnderlineOffset',
+ 'writingMode','backgroundBlendMode','mixBlendMode','filter','clipPath','maskImage','whiteSpace','textIndent','verticalAlign','boxSizing',
+ 'width','height','top','left','right','bottom','minWidth','minHeight','maxWidth','maxHeight','outlineColor','outlineStyle','outlineWidth','outlineOffset'];
+var check = function (doc, win, tag) {
+  var out = {};
+  ['d','s','p','i','l','n','bt','li','td','sv'].forEach(function (id) {
+    var el = doc.getElementById(id);
+    if (!el) { out[id] = 'missing'; return; }
+    [null, '::before', '::after'].forEach(function (ps) {
+      var cs = win.getComputedStyle(el, ps), bad = [];
+      props.forEach(function (k) { var v = cs[k]; if (v === '') bad.push(k); else if (v === undefined) bad.push(k + '=undef'); });
+      if (bad.length) out[id + (ps || '')] = bad.join(',');
+    });
+  });
+  return out;
+};
+var R = { page: check(document, window) };
+// html2canvas's DocumentCloner: an about:blank iframe, open/write, the page's documentElement adopted in, close.
+var f = document.createElement('iframe'); f.width = 800; f.height = 600; f.style.visibility = 'hidden'; document.body.appendChild(f);
+var cd = f.contentWindow.document; cd.open(); cd.write('<!DOCTYPE html><html></html>');
+cd.replaceChild(cd.adoptNode(document.documentElement.cloneNode(true)), cd.documentElement); cd.close();
+R.clone = check(cd, f.contentWindow);
+document.title = JSON.stringify(R);
+</script></body></html>

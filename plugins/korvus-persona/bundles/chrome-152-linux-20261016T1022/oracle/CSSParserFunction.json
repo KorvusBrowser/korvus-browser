@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "CSSParserFunction",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSParserFunction(\"x\", []); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSParserFunction",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSParserFunction(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

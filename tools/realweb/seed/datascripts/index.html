@@ -1,0 +1,21 @@
+<!doctype html><html><head>
+<script>
+// REALWEB H38: a parser-inserted <script src="data:..."> runs (and fires load) -- every form: a media type with a
+// parameter and a space before ;base64 (instagram.com's), percent-encoded, text/plain, bare. Korvus fetched
+// them over the network client, which refused the URL.
+window.L = [];
+</script>
+<script src="data:application/x-javascript; charset=utf-8;base64,d2luZG93LkExPSJvazEiOw==" onload="L.push('p1-load')" onerror="L.push('p1-error')"></script>
+<script src="data:text/javascript,window.A3=%22ok3%22;" onload="L.push('p3-load')"></script>
+<script src="data:text/javascript;charset=utf-8,window.A4=%22ok4%22;"></script>
+<script src="data:text/plain,window.A5=%22plain%22;" onload="L.push('p5-load')" onerror="L.push('p5-error')"></script>
+<script src="data:,window.A6=%22bare%22;" onload="L.push('p6-load')" onerror="L.push('p6-error')"></script>
+</head><body><script>
+L.push('parsed:' + [window.A1, window.A3, window.A4, window.A5, window.A6].join(','));
+var s = document.createElement('script'); s.src = 'data:text/javascript,window.D1=%22dyn%22;L.push(%22dyn-ran%22)';
+s.onload = function () { L.push('dyn-load:' + window.D1); done(); }; s.onerror = function () { L.push('dyn-error'); done(); };
+document.head.appendChild(s);
+var f = document.createElement('iframe'); f.srcdoc = '<script src="data:text/javascript,parent.L.push(%22frame-ran%22)"><\/script>';
+document.body.appendChild(f);
+function done() { setTimeout(function () { document.title = JSON.stringify(L); }, 300); }
+</script></body></html>

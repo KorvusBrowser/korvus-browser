@@ -1,0 +1,233 @@
+[
+  {
+    "iface": "FormData",
+    "member": "append",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); return f.get('a'); })()",
+    "expected": "1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "append",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('a', '2'); return f.getAll('a').join('|'); })()",
+    "expected": "1|2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "append",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); f.append('a', '3'); return [...f.keys()].join(','); })()",
+    "expected": "a,b,a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "delete",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('a', '2'); f.append('b', '3'); f.delete('a'); return f.has('a') + ',' + [...f.keys()].join(','); })()",
+    "expected": "false,b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "delete",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.delete('nope'); return [...f.keys()].join(','); })()",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "get",
+    "expr": "(() => { const f = new FormData(); return f.get('nope'); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "get",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('a', '2'); return f.get('a'); })()",
+    "expected": "1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "get",
+    "expr": "(() => { const f = new FormData(); f.append('a', ''); return f.get('a') === ''; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "getAll",
+    "expr": "(() => { const f = new FormData(); return f.getAll('nope').length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "getAll",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); f.append('a', '3'); return f.getAll('a').join('|'); })()",
+    "expected": "1|3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "has",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); return f.has('a') + ',' + f.has('b'); })()",
+    "expected": "true,false",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "has",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.delete('a'); return f.has('a'); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "set",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('a', '2'); f.set('a', '3'); return f.getAll('a').join('|'); })()",
+    "expected": "3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "set",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); f.set('a', '9'); return [...f.keys()].join(',') + '=' + f.get('a'); })()",
+    "expected": "a,b=9",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "set",
+    "expr": "(() => { const f = new FormData(); f.set('a', '1'); return f.get('a'); })()",
+    "expected": "1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "forEach",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); const out = []; f.forEach((v, k) => out.push(k + '=' + v)); return out.join(';'); })()",
+    "expected": "a=1;b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "keys",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); return [...f.keys()].join(','); })()",
+    "expected": "a,b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "values",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); return [...f.values()].join(','); })()",
+    "expected": "1,2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "entries",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); f.append('b', '2'); return [...f.entries()].map(p => p.join('=')).join(';'); })()",
+    "expected": "a=1;b=2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "entries",
+    "expr": "(() => { const f = new FormData(); f.append('a', '1'); return [...f][0].join('='); })()",
+    "expected": "a=1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "constructor",
+    "expr": "(() => { const o = new FormData(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object FormData]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "append",
+    "expr": "(() => { const o = new FormData(); return o.append(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "append",
+    "expr": "(() => { const o = new FormData(); return o.append(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "delete",
+    "expr": "(() => { const o = new FormData(); return o.delete(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "delete",
+    "expr": "(() => { const o = new FormData(); return o.delete(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "get",
+    "expr": "(() => { const o = new FormData(); return o.get(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "get",
+    "expr": "(() => { const o = new FormData(); return o.get(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "getAll",
+    "expr": "(() => { const o = new FormData(); return o.getAll(\"x\"); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "getAll",
+    "expr": "(() => { const o = new FormData(); return o.getAll(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "has",
+    "expr": "(() => { const o = new FormData(); return o.has(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "has",
+    "expr": "(() => { const o = new FormData(); return o.has(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "set",
+    "expr": "(() => { const o = new FormData(); return o.set(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FormData",
+    "member": "set",
+    "expr": "(() => { const o = new FormData(); return o.set(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

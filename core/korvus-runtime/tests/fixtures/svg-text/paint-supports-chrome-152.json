@@ -1,0 +1,254 @@
+[
+ [
+  "fill: none",
+  true
+ ],
+ [
+  "fill: red",
+  true
+ ],
+ [
+  "fill: nonsense",
+  false
+ ],
+ [
+  "fill: url(#a)",
+  true
+ ],
+ [
+  "fill: url(#a) none",
+  true
+ ],
+ [
+  "fill: url(#a) red",
+  true
+ ],
+ [
+  "fill: url(#a) nonsense",
+  false
+ ],
+ [
+  "fill: context-fill",
+  true
+ ],
+ [
+  "fill: context-stroke",
+  true
+ ],
+ [
+  "fill: currentcolor",
+  true
+ ],
+ [
+  "fill: red blue",
+  false
+ ],
+ [
+  "fill: #abc",
+  true
+ ],
+ [
+  "fill: transparent",
+  true
+ ],
+ [
+  "stroke: none",
+  true
+ ],
+ [
+  "stroke: nonsense",
+  false
+ ],
+ [
+  "stroke: url(#x) blue",
+  true
+ ],
+ [
+  "stroke: inherit",
+  true
+ ],
+ [
+  "stroke-width: 2",
+  true
+ ],
+ [
+  "stroke-width: 2px",
+  true
+ ],
+ [
+  "stroke-width: -1px",
+  false
+ ],
+ [
+  "stroke-width: -1",
+  false
+ ],
+ [
+  "stroke-width: 0",
+  true
+ ],
+ [
+  "stroke-width: 10%",
+  true
+ ],
+ [
+  "stroke-width: calc(1px + 2px)",
+  true
+ ],
+ [
+  "stroke-width: auto",
+  false
+ ],
+ [
+  "stroke-width: 2em",
+  true
+ ],
+ [
+  "stroke-dashoffset: 3",
+  true
+ ],
+ [
+  "stroke-dashoffset: 3px",
+  true
+ ],
+ [
+  "stroke-dashoffset: -3px",
+  true
+ ],
+ [
+  "stroke-dashoffset: -3",
+  true
+ ],
+ [
+  "stroke-dashoffset: 5%",
+  true
+ ],
+ [
+  "stroke-dashoffset: x",
+  false
+ ],
+ [
+  "stroke-dasharray: none",
+  true
+ ],
+ [
+  "stroke-dasharray: 5 10",
+  true
+ ],
+ [
+  "stroke-dasharray: 5px, 10px",
+  true
+ ],
+ [
+  "stroke-dasharray: 5px 10px",
+  true
+ ],
+ [
+  "stroke-dasharray: -1",
+  false
+ ],
+ [
+  "stroke-dasharray: 5,",
+  false
+ ],
+ [
+  "stroke-dasharray: 5% 2em",
+  true
+ ],
+ [
+  "stroke-dasharray: a",
+  false
+ ],
+ [
+  "stroke-miterlimit: 7",
+  true
+ ],
+ [
+  "stroke-miterlimit: 0.5",
+  true
+ ],
+ [
+  "stroke-miterlimit: -1",
+  false
+ ],
+ [
+  "stroke-miterlimit: 0",
+  true
+ ],
+ [
+  "stroke-miterlimit: 4px",
+  false
+ ],
+ [
+  "letter-spacing: 0",
+  true
+ ],
+ [
+  "letter-spacing: 1",
+  false
+ ],
+ [
+  "letter-spacing: 1px",
+  true
+ ],
+ [
+  "letter-spacing: normal",
+  true
+ ],
+ [
+  "letter-spacing: -1px",
+  true
+ ],
+ [
+  "word-spacing: 0",
+  true
+ ],
+ [
+  "word-spacing: 4",
+  false
+ ],
+ [
+  "word-spacing: 4px",
+  true
+ ],
+ [
+  "word-spacing: normal",
+  true
+ ],
+ [
+  "baseline-shift: 2",
+  true
+ ],
+ [
+  "baseline-shift: 2px",
+  true
+ ],
+ [
+  "baseline-shift: sub",
+  true
+ ],
+ [
+  "baseline-shift: super",
+  true
+ ],
+ [
+  "baseline-shift: baseline",
+  true
+ ],
+ [
+  "baseline-shift: 10%",
+  true
+ ],
+ [
+  "font-size: 20",
+  false
+ ],
+ [
+  "font-size: 20px",
+  true
+ ],
+ [
+  "font-size: -1px",
+  false
+ ]
+]

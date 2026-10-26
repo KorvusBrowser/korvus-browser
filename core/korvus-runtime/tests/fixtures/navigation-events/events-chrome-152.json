@@ -1,0 +1,698 @@
+[
+[
+"navigate #a",
+[
+"navigate type=replace hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#a key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at= cur=@0 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=@-1 cur=#a@0 at=#a trusted=true cancelable=false transition=null",
+"popstate state=null at=#a sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=#a@0 transition=null cancelable=false",
+"committed #a@0 isCur=true",
+"microtask",
+"finished #a@0 isCur=true",
+"hashchange ->#a",
+"task"
+],
+"#a",
+1,
+1,
+0
+],
+[
+"navigate #b replace state info",
+[
+"navigate type=replace hash=true canI=true user=false cancelable=true trusted=true info=I dest=#b key=empty id=empty index=-1 same=true state={\"s\":1} aborted=false form=null dl=null src=null uav=false at=#a cur=#a@0 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=#a@-1 cur=#b@0 at=#b trusted=true cancelable=false transition=null",
+"popstate state=null at=#b sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=#b@0 transition=null cancelable=false",
+"committed #b@0 isCur=true",
+"microtask",
+"finished #b@0 isCur=true",
+"hashchange #a->#b",
+"task"
+],
+"#b",
+1,
+1,
+0
+],
+[
+"getState after",
+[
+"state={\"s\":1}",
+"returned",
+"microtask",
+"task"
+],
+"#b",
+1,
+1,
+0
+],
+[
+"navigate same #b",
+[
+"navigate type=replace hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#b key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#b cur=#b@0 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=#b@-1 cur=#b@0 at=#b trusted=true cancelable=false transition=null",
+"popstate state=null at=#b sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=#b@0 transition=null cancelable=false",
+"committed #b@0 isCur=true",
+"microtask",
+"finished #b@0 isCur=true",
+"task"
+],
+"#b",
+1,
+1,
+0
+],
+[
+"navigate #c push",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#c key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#b cur=#b@0 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#b@0 cur=#c@1 at=#c trusted=true cancelable=false transition=null",
+"popstate state=null at=#c sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=#c@1 transition=null cancelable=false",
+"committed #c@1 isCur=true",
+"microtask",
+"finished #c@1 isCur=true",
+"hashchange #b->#c",
+"task"
+],
+"#c",
+2,
+2,
+1
+],
+[
+"location.hash d",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#d key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#c cur=#c@1 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#c@1 cur=#d@2 at=#d trusted=true cancelable=false transition=null",
+"popstate state=null at=#d sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=#d@2 transition=null cancelable=false",
+"microtask",
+"hashchange #c->#d",
+"task"
+],
+"#d",
+3,
+3,
+2
+],
+[
+"location.hash same d",
+[
+"returned",
+"microtask",
+"task"
+],
+"#d",
+3,
+3,
+2
+],
+[
+"location.href #e",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#e key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#d cur=#d@2 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#d@2 cur=#e@3 at=#e trusted=true cancelable=false transition=null",
+"popstate state=null at=#e sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=#e@3 transition=null cancelable=false",
+"microtask",
+"hashchange #d->#e",
+"task"
+],
+"#e",
+4,
+4,
+3
+],
+[
+"location.replace #f",
+[
+"navigate type=replace hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#f key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#e cur=#e@3 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=#e@-1 cur=#f@3 at=#f trusted=true cancelable=false transition=null",
+"popstate state=null at=#f sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=#f@3 transition=null cancelable=false",
+"microtask",
+"hashchange #e->#f",
+"task"
+],
+"#f",
+4,
+4,
+3
+],
+[
+"anchor click #g",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#g key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=A uav=false at=#f cur=#f@3 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#f@3 cur=#g@4 at=#g trusted=true cancelable=false transition=null",
+"popstate state=null at=#g sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=#g@4 transition=null cancelable=false",
+"microtask",
+"hashchange #f->#g",
+"task"
+],
+"#g",
+5,
+5,
+4
+],
+[
+"pushState #h",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#g cur=#g@4 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#g@4 cur=#h@5 at=#h trusted=true cancelable=false transition=null",
+"returned",
+"success Event cur=#h@5 transition=null cancelable=false",
+"microtask",
+"task"
+],
+"#h",
+6,
+6,
+5
+],
+[
+"replaceState same",
+[
+"navigate type=replace hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@5 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=#h@-1 cur=#h@5 at=#h trusted=true cancelable=false transition=null",
+"returned",
+"success Event cur=#h@5 transition=null cancelable=false",
+"microtask",
+"task"
+],
+"#h",
+6,
+6,
+5
+],
+[
+"pushState no url",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@5 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#h@5 cur=#h@6 at=#h trusted=true cancelable=false transition=null",
+"returned",
+"success Event cur=#h@6 transition=null cancelable=false",
+"microtask",
+"task"
+],
+"#h",
+7,
+7,
+6
+],
+[
+"pushState empty url",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@6 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#h@6 cur=#h@7 at=#h trusted=true cancelable=false transition=null",
+"returned",
+"success Event cur=#h@7 transition=null cancelable=false",
+"microtask",
+"task"
+],
+"#h",
+8,
+8,
+7
+],
+[
+"pushState uncloneable",
+[
+"threw DataCloneError: Failed to execute 'pushState' on 'History': () => 1 could not be cloned.",
+"microtask",
+"task"
+],
+"#h",
+8,
+8,
+7
+],
+[
+"history.state identity",
+[
+"navigate type=replace hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@7 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=replace from=#h@-1 cur=#h@7 at=#h trusted=true cancelable=false transition=null",
+"same=false stable=true eq={\"q\":1}",
+"returned",
+"success Event cur=#h@7 transition=null cancelable=false",
+"microtask",
+"task"
+],
+"#h",
+8,
+8,
+7
+],
+[
+"history.back",
+[
+"returned",
+"microtask",
+"navigate type=traverse hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=listed id=set index=6 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@7 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#h@7 cur=#h@6 at=#h trusted=true cancelable=false transition=null",
+"success Event cur=#h@6 transition=null cancelable=false",
+"popstate state={\"p\":3} at=#h sameAsHistory=true hasUA=false",
+"task"
+],
+"#h",
+8,
+8,
+6
+],
+[
+"history.forward",
+[
+"returned",
+"microtask",
+"navigate type=traverse hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=listed id=set index=7 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@6 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#h@6 cur=#h@7 at=#h trusted=true cancelable=false transition=null",
+"success Event cur=#h@7 transition=null cancelable=false",
+"popstate state={\"q\":1} at=#h sameAsHistory=true hasUA=false",
+"task"
+],
+"#h",
+8,
+8,
+7
+],
+[
+"navigation.back",
+[
+"result keys=committed,finished proto=true",
+"returned",
+"microtask",
+"navigate type=traverse hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=listed id=set index=6 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@7 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#h@7 cur=#h@6 at=#h trusted=true cancelable=false transition=null",
+"committed #h@6 isCur=true",
+"success Event cur=#h@6 transition=null cancelable=false",
+"finished #h@6 isCur=true",
+"popstate state={\"p\":3} at=#h sameAsHistory=true hasUA=false",
+"task"
+],
+"#h",
+8,
+8,
+6
+],
+[
+"navigation.forward",
+[
+"result keys=committed,finished proto=true",
+"returned",
+"microtask",
+"navigate type=traverse hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#h key=listed id=set index=7 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@6 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#h@6 cur=#h@7 at=#h trusted=true cancelable=false transition=null",
+"committed #h@7 isCur=true",
+"success Event cur=#h@7 transition=null cancelable=false",
+"finished #h@7 isCur=true",
+"popstate state={\"q\":1} at=#h sameAsHistory=true hasUA=false",
+"task"
+],
+"#h",
+8,
+8,
+7
+],
+[
+"traverseTo first",
+[
+"result keys=committed,finished proto=true",
+"returned",
+"microtask",
+"navigate type=traverse hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#b key=listed id=set index=0 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#h cur=#h@7 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#h@7 cur=#b@0 at=#b trusted=true cancelable=false transition=null",
+"committed #b@0 isCur=true",
+"success Event cur=#b@0 transition=null cancelable=false",
+"finished #b@0 isCur=true",
+"popstate state=null at=#b sameAsHistory=true hasUA=false",
+"hashchange #h->#b",
+"task"
+],
+"#b",
+8,
+8,
+0
+],
+[
+"go(2)",
+[
+"returned",
+"microtask",
+"navigate type=traverse hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#d key=listed id=set index=2 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#b cur=#b@0 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=#b@0 cur=#d@2 at=#d trusted=true cancelable=false transition=null",
+"success Event cur=#d@2 transition=null cancelable=false",
+"popstate state=null at=#d sameAsHistory=true hasUA=false",
+"hashchange #b->#d",
+"task"
+],
+"#d",
+8,
+8,
+2
+],
+[
+"prevent navigate #i",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#i key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#d cur=#d@2 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/\" line=69 col=58 cancelable=true transition=null",
+"result keys=committed,finished proto=true",
+"returned",
+"committed! AbortError: Navigation was aborted",
+"finished! AbortError: Navigation was aborted",
+"microtask",
+"task"
+],
+"#d",
+8,
+8,
+2
+],
+[
+"prevent location.hash j",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#j key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#d cur=#d@2 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/\" line=70 col=63 cancelable=true transition=null",
+"returned",
+"microtask",
+"task"
+],
+"#d",
+8,
+8,
+2
+],
+[
+"prevent pushState #k",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=#k key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#d cur=#d@2 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/\" line=71 col=54 cancelable=true transition=null",
+"returned",
+"microtask",
+"task"
+],
+"#d",
+8,
+8,
+2
+],
+[
+"intercept #l",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=#l key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#d cur=#d@2 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#d@2 cur=#l@3 at=#l trusted=true cancelable=false transition=push",
+"handler at=#l transition=push/#d@2/#l",
+"result keys=committed,finished proto=true",
+"returned",
+"handler-done",
+"committed #l@3 isCur=true",
+"microtask",
+"success Event cur=#l@3 transition=[object NavigationTransition] cancelable=false",
+"finished #l@3 isCur=true",
+"task"
+],
+"#l",
+4,
+4,
+3
+],
+[
+"intercept cross-doc /p2?x",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x key=empty id=empty index=-1 same=false state=7 aborted=false form=null dl=null src=null uav=false at=#l cur=#l@3 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=#l@3 cur=/p2?x@4 at= trusted=true cancelable=false transition=push",
+"handler path=/p2?x",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=/p2?x@4 transition=[object NavigationTransition] cancelable=false",
+"committed /p2?x@4 isCur=true",
+"microtask",
+"finished /p2?x@4 isCur=true",
+"task"
+],
+"",
+5,
+5,
+4
+],
+[
+"intercept rejecting #m",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#m key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at= cur=/p2?x@4 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x@4 cur=/p2?x#m@5 at=#m trusted=true cancelable=false transition=push",
+"result keys=committed,finished proto=true",
+"returned",
+"error ErrorEvent msg=Uncaught RangeError: no err=RangeError:no file=\"http://127.0.0.1:PORT/\" line=74 col=128 cancelable=true transition=[object NavigationTransition]",
+"committed /p2?x#m@5 isCur=true",
+"microtask",
+"finished! RangeError: no",
+"task"
+],
+"#m",
+6,
+6,
+5
+],
+[
+"intercept pushState #n",
+[
+"navigate type=push hash=false canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#n key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#m cur=/p2?x#m@5 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#m@5 cur=/p2?x#n@6 at=#n trusted=true cancelable=false transition=push",
+"handler",
+"returned",
+"success Event cur=/p2?x#n@6 transition=[object NavigationTransition] cancelable=false",
+"microtask",
+"task"
+],
+"#n",
+7,
+7,
+6
+],
+[
+"intercept twice + scroll",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#o key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#n cur=/p2?x#n@6 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"early scroll threw InvalidStateError: Failed to execute 'scroll' on 'NavigateEvent': scroll() may not be called before commit.",
+"cec type=push from=/p2?x#n@6 cur=/p2?x#o@7 at=#o trusted=true cancelable=false transition=push",
+"scrolled",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=/p2?x#o@7 transition=[object NavigationTransition] cancelable=false",
+"committed /p2?x#o@7 isCur=true",
+"microtask",
+"finished /p2?x#o@7 isCur=true",
+"task"
+],
+"#o",
+8,
+8,
+7
+],
+[
+"intercept late",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#p key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#o cur=/p2?x#o@7 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#o@7 cur=/p2?x#p@8 at=#p trusted=true cancelable=false transition=null",
+"popstate state=null at=#p sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"success Event cur=/p2?x#p@8 transition=null cancelable=false",
+"committed /p2?x#p@8 isCur=true",
+"microtask",
+"finished /p2?x#p@8 isCur=true",
+"hashchange /p2?x#o->/p2?x#p",
+"late threw InvalidStateError: Failed to execute 'intercept' on 'NavigateEvent': intercept() may only be called while the navigate event is being dispatched.",
+"task"
+],
+"#p",
+9,
+9,
+8
+],
+[
+"intercept after prevent",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#q key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#p cur=/p2?x#p@8 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"threw InvalidStateError: Failed to execute 'intercept' on 'NavigateEvent': intercept() may not be called if the event has been canceled.",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/\" line=78 col=62 cancelable=true transition=null",
+"result keys=committed,finished proto=true",
+"returned",
+"committed! AbortError: Navigation was aborted",
+"finished! AbortError: Navigation was aborted",
+"microtask",
+"task"
+],
+"#p",
+9,
+9,
+8
+],
+[
+"navigate during ongoing",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#r key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#p cur=/p2?x#p@8 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#p@8 cur=/p2?x#r@9 at=#r trusted=true cancelable=false transition=push",
+"result keys=committed,finished proto=true",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/\" line=79 col=96 cancelable=true transition=[object NavigationTransition]",
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#s key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#r cur=/p2?x#r@9 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#r@9 cur=/p2?x#s@10 at=#s trusted=true cancelable=false transition=null",
+"popstate state=null at=#s sameAsHistory=true hasUA=false",
+"result keys=committed,finished proto=true",
+"returned",
+"committed /p2?x#r@9 isCur=false",
+"finished! AbortError: Navigation was aborted",
+"success Event cur=/p2?x#s@10 transition=null cancelable=false",
+"committed /p2?x#s@10 isCur=true",
+"microtask",
+"finished /p2?x#s@10 isCur=true",
+"hashchange /p2?x#r->/p2?x#s",
+"task"
+],
+"#s",
+11,
+11,
+10
+],
+[
+"javascript url",
+[
+"result keys=committed,finished proto=true",
+"returned",
+"committed! NotSupportedError: The javascript: protocol is not supported",
+"finished! NotSupportedError: The javascript: protocol is not supported",
+"microtask",
+"task"
+],
+"#s",
+11,
+11,
+10
+],
+[
+"updateCurrentEntry",
+[
+"cec type=null from=/p2?x#s@10 cur=/p2?x#s@10 at=#s trusted=true cancelable=false transition=null",
+"returned",
+"microtask",
+"task"
+],
+"#s",
+11,
+11,
+10
+],
+[
+"dispose",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#t key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#s cur=/p2?x#s@10 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#s@10 cur=/p2?x#t@11 at=#t trusted=true cancelable=false transition=null",
+"popstate state=null at=#t sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=/p2?x#t@11 transition=null cancelable=false",
+"microtask",
+"hashchange /p2?x#s->/p2?x#t",
+"task"
+],
+"#t",
+12,
+12,
+11
+],
+[
+"back then push (dispose)",
+[
+"returned",
+"microtask",
+"navigate type=traverse hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#s key=listed id=set index=10 same=true state=9 aborted=false form=null dl=null src=null uav=false at=#t cur=/p2?x#t@11 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=traverse from=/p2?x#t@11 cur=/p2?x#s@10 at=#s trusted=true cancelable=false transition=null",
+"success Event cur=/p2?x#s@10 transition=null cancelable=false",
+"popstate state=null at=#s sameAsHistory=true hasUA=false",
+"hashchange /p2?x#t->/p2?x#s",
+"task"
+],
+"#s",
+12,
+12,
+10
+],
+[
+"push after back",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#u key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#s cur=/p2?x#s@10 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"cec type=push from=/p2?x#s@10 cur=/p2?x#u@11 at=#u trusted=true cancelable=false transition=null",
+"dispose /p2?x#t trusted=true idx=-1",
+"popstate state=null at=#u sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=/p2?x#u@11 transition=null cancelable=false",
+"microtask",
+"hashchange /p2?x#s->/p2?x#u",
+"task"
+],
+"#u",
+12,
+12,
+11
+],
+[
+"onnavigate attr",
+[
+"navigate type=push hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#v key=empty id=empty index=-1 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#u cur=/p2?x#u@11 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"onnavigate push",
+"cec type=push from=/p2?x#u@11 cur=/p2?x#v@12 at=#v trusted=true cancelable=false transition=null",
+"popstate state=null at=#v sameAsHistory=true hasUA=false",
+"returned",
+"success Event cur=/p2?x#v@12 transition=null cancelable=false",
+"microtask",
+"hashchange /p2?x#u->/p2?x#v",
+"task"
+],
+"#v",
+13,
+13,
+12
+],
+[
+"NavigateEvent ctor",
+[
+"threw TypeError: Failed to construct 'NavigateEvent': Failed to read the 'destination' property from 'NavigateEventInit': Required member is undefined.",
+"dest threw TypeError: Failed to construct 'NavigationDestination': Illegal constructor",
+"returned",
+"microtask",
+"task"
+],
+"#v",
+13,
+13,
+12
+],
+[
+"prevent history.back",
+[
+"returned",
+"microtask",
+"navigate type=traverse hash=true canI=true user=false cancelable=true trusted=true info=undefined dest=/p2?x#u key=listed id=set index=11 same=true state=undefined aborted=false form=null dl=null src=null uav=false at=#v cur=/p2?x#v@12 transition=null bubbles=false composed=false phase=2 proto=NavigateEvent",
+"error ErrorEvent msg=Uncaught  err=AbortError:Navigation was aborted file=\"http://127.0.0.1:PORT/p2?x#v\" line=0 col=0 cancelable=true transition=null",
+"task"
+],
+"#v",
+13,
+13,
+12
+]
+]

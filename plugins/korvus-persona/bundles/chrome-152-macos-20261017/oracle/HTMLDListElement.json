@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HTMLDListElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLDListElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLDListElement",
+    "member": "constructor",
+    "expr": "new HTMLDListElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLDListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"dl\"); return o.compact; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLDListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"dl\"); return (o.compact = true, o.compact); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

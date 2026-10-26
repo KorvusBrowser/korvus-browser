@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SharedWorkerGlobalScope",
+    "member": "constructor",
+    "expr": "new SharedWorkerGlobalScope()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

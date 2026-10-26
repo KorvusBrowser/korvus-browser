@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "IDBKeyRange",
+    "member": "constructor",
+    "expr": "new IDBKeyRange()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "lower",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.lower; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "upper",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.upper; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "lowerOpen",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.lowerOpen; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "upperOpen",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.upperOpen; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "includes",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.includes(1); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "includes",
+    "expr": "(() => { const o = IDBKeyRange.only(1); return o.includes(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "only",
+    "expr": "Object.prototype.toString.call(IDBKeyRange.only(1))",
+    "expected": "[object IDBKeyRange]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "lowerBound",
+    "expr": "Object.prototype.toString.call(IDBKeyRange.lowerBound(1))",
+    "expected": "[object IDBKeyRange]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "upperBound",
+    "expr": "Object.prototype.toString.call(IDBKeyRange.upperBound(1))",
+    "expected": "[object IDBKeyRange]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBKeyRange",
+    "member": "bound",
+    "expr": "Object.prototype.toString.call(IDBKeyRange.bound(1, 1))",
+    "expected": "[object IDBKeyRange]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

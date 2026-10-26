@@ -1,0 +1,236 @@
+# The import-map probe corpus (PARITY IM1) — ONE set of bytes, served to BOTH engines.
+#
+# Chrome 150.0.7871.46 was asked for it over `python3 -m http.server` and its answer is
+# `import-map-probe.chrome-150.txt`; `import_map_live.rs` serves this same file from a `TcpListener`
+# and asserts korvus prints the same lines. The two drivers share these bytes rather than two copies
+# of them, because a probe that drifts between the engine's copy and the browser's copy proves
+# nothing at all.
+#
+# FORMAT. One file per `=== <path> <content-type>` header; the body is every line up to the next
+# header, verbatim (the blank separator line included -- both parsers keep it, so neither has to
+# trim). Lines beginning `#` BEFORE the first header are this comment; after it they are body.
+#
+# THE ORIGIN IS `<origin>` NOWHERE IN HERE and everywhere in the transcript: Chrome was served on a
+# fixed port and the Rust test binds port 0, so both drivers rewrite their own origin to `<origin>`
+# before comparing. Nothing else is normalized.
+#
+# RE-RECORD (an idle box; Chrome's answer was identical on two runs, and two runs is the standard):
+#
+#   1. Lay this file out as a directory -- for each `=== <path> <ctype>` header, write the lines up
+#      to the next header to `<dir>/<path>`.
+#   2. `python3 -m http.server 8931 --bind 127.0.0.1 --directory <dir>`
+#   3. `google-chrome --headless --disable-gpu --no-sandbox --user-data-dir=$(mktemp -d)
+#      --virtual-time-budget=4000 --dump-dom http://127.0.0.1:8931/index.html`
+#   4. Take the text of `<pre id="out">`, replace `http://127.0.0.1:8931` with `<origin>`, and write
+#      it to `import-map-probe.chrome-150.txt`. Repeat step 3 and diff the two before committing.
+
+=== /index.html text/html
+<!doctype html>
+<meta charset=utf-8>
+<title>import-map probe</title>
+<script>
+window.__R = [];
+window.rec = (k, v) => { window.__R.push(k + " = " + v); };
+window.probe = async (label, spec) => {
+  try { const m = await import(spec); window.rec(label, "OK " + m.who); }
+  catch (e) { window.rec(label, "THROW " + e.constructor.name + ": " + e.message); }
+};
+window.meta = (label, fn) => {
+  try { window.rec(label, fn()); }
+  catch (e) { window.rec(label, "THROW " + e.constructor.name + ": " + e.message); }
+};
+window.addEventListener("error", (e) => {
+  window.rec("uncaught", (e.error ? e.error.constructor.name + ": " : "") + e.message);
+}, true);
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "dep": "/js/dep.js",
+    "@theme/": "/js/theme/",
+    "@theme/nested/": "/js/alt/",
+    "@theme/section": "/js/other.js",
+    "nonslash/": "/js/theme",
+    "numval": 42,
+    "arrval": ["/js/dep.js"],
+    "nullish": null,
+    "": "/js/evil.js",
+    "./relative-a.js": "/js/root-a.js",
+    "/absolute-a.js": "/js/root-a.js",
+    "https://example.invalid/x.js": "/js/root-a.js"
+  },
+  "scopes": {
+    "/sub/": { "dep": "/js/s-sub.js" },
+    "/sub/a/": { "dep": "/js/s-deep.js" },
+    "/sub/exact.js": { "dep": "/js/s-exact.js" },
+    "/": { "dep": "/js/s-root.js" },
+    "/fall/": { "other": "/js/other.js" }
+  }
+}
+</script>
+<script type="importmap">
+{
+  "imports": { "dep": "/js/other.js", "extra": "/js/other.js" },
+  "scopes": { "/sub/": { "dep": "/js/other.js" }, "/deep/": { "dep": "/js/s-second.js" } }
+}
+</script>
+<script type="importmap">
+{ "imports": { "broken": "/js/dep.js", }
+</script>
+<script type="importmap">
+[1, 2, 3]
+</script>
+<script type="importmap">
+{ "imports": [1, 2], "scopes": { "/": { "never": "/js/dep.js" } } }
+</script>
+<script type="importmap" src="/late-map.json">
+{ "imports": { "from-src": "/js/dep.js" } }
+</script>
+<script type="importmap"></script>
+<body>
+<script>
+window.classic = window.probe("classic script import()", "dep");
+</script>
+<script type="module">
+// AWAITED FIRST so the transcript has one order: an unawaited classic `import()` settles
+// against the module's own probes and the two interleave differently run to run.
+await window.classic;
+await window.probe("exact key", "dep");
+await window.probe("prefix key", "@theme/index.js");
+await window.probe("longer prefix key wins", "@theme/nested/deep.js");
+await window.probe("exact key beats prefix key", "@theme/section");
+await window.probe("value is not a directory", "nonslash/section.js");
+await window.probe("value is a number", "numval");
+await window.probe("value is an array", "arrval");
+await window.probe("value is null", "nullish");
+await window.probe("empty key maps nothing", "anything");
+await window.probe("no mapping at all", "react/jsx-runtime");
+await window.probe("backtracking out of the prefix", "@theme/../evil.js");
+await window.probe("relative specifier remapped", "./relative-a.js");
+await window.probe("absolute specifier remapped", "/absolute-a.js");
+await window.probe("external specifier remapped", "https://example.invalid/x.js");
+await window.probe("relative specifier not in the map", "./js/plain.js");
+await window.probe("second map cannot overwrite", "dep");
+await window.probe("second map adds a key", "extra");
+await window.probe("a discarded map maps nothing", "broken");
+await window.probe("an external map maps nothing", "from-src");
+await window.probe("a bad-imports map maps nothing", "never");
+await window.probe("scope /sub/a/", "/sub/a/importer.js");
+await window.probe("scope /sub/", "/sub/importer.js");
+await window.probe("scope is an exact file", "/sub/exact.js");
+await window.probe("scope added by the second map", "/deep/importer.js");
+await window.probe("scope with no such key falls to the next scope", "/fall/importer.js");
+await window.probe("a module reached THROUGH the map", "@theme/chain.js");
+window.meta("meta.resolve mapped", () => import.meta.resolve("dep"));
+window.meta("meta.resolve prefix", () => import.meta.resolve("@theme/index.js"));
+window.meta("meta.resolve directory key", () => import.meta.resolve("@theme/"));
+window.meta("meta.resolve unmapped", () => import.meta.resolve("react/jsx-runtime"));
+window.meta("meta.resolve null value", () => import.meta.resolve("nullish"));
+window.meta("meta.resolve backtracking", () => import.meta.resolve("@theme/../evil.js"));
+window.meta("meta.resolve relative", () => import.meta.resolve("./x.js"));
+const injected = document.createElement("script");
+injected.type = "importmap";
+injected.textContent = JSON.stringify({ imports: { injected: "/js/dep.js" } });
+document.head.appendChild(injected);
+await window.probe("a map the page injected", "injected");
+// THE RESOLVED MODULE SET. Everything above has resolved (or failed to), so this last map is the
+// one that may not move what is already settled. `./js/plain.js` resolved and is in no map;
+// `react/jsx-runtime` FAILED; `late-only` has never been mentioned.
+const late = document.createElement("script");
+late.type = "importmap";
+late.textContent = JSON.stringify({ imports: {
+  "/js/plain.js": "/js/other.js",
+  "/js/": "/js/alt/",
+  "react/jsx-runtime": "/js/other.js",
+  "late-only": "/js/other.js"
+} });
+document.head.appendChild(late);
+await new Promise((r) => setTimeout(r, 50));
+window.meta("late map, key already resolved", () => import.meta.resolve("/js/plain.js"));
+window.meta("late map, prefix over a resolved key", () => import.meta.resolve("/js/evil.js"));
+window.meta("late map, key that FAILED to resolve", () => import.meta.resolve("react/jsx-runtime"));
+window.meta("late map, a key nobody asked for", () => import.meta.resolve("late-only"));
+// AN EMPTY IMPORT MAP IS NOT A MAP: HTML returns from "prepare the script element" before the
+// already-started step, so nothing is parsed, nothing is reported, and the element can be retyped
+// and run afterwards. Whitespace is NOT empty and IS reported.
+const blank = document.createElement("script");
+blank.type = "importmap";
+document.head.appendChild(blank);
+const spaces = document.createElement("script");
+spaces.type = "importmap";
+spaces.textContent = "   ";
+document.head.appendChild(spaces);
+blank.type = "text/javascript";
+blank.textContent = "window.rec('the empty map element ran as a classic script', 'yes')";
+document.head.appendChild(blank);
+await new Promise((r) => setTimeout(r, 50));
+window.rec("supports importmap", HTMLScriptElement.supports("importmap"));
+window.rec("import maps in document.scripts", [...document.scripts].filter((s) => s.type === "importmap").length);
+const pre = document.createElement("pre");
+pre.id = "out";
+pre.textContent = window.__R.join("\n");
+document.body.appendChild(pre);
+</script>
+
+=== /js/dep.js text/javascript
+export const who = "js/dep.js";
+
+=== /js/other.js text/javascript
+export const who = "js/other.js";
+
+=== /js/evil.js text/javascript
+export const who = "js/evil.js";
+
+=== /js/root-a.js text/javascript
+export const who = "js/root-a.js";
+
+=== /js/plain.js text/javascript
+export const who = "js/plain.js";
+
+=== /js/theme/index.js text/javascript
+export const who = "js/theme/index.js";
+
+=== /js/theme/chain.js text/javascript
+import { who as inner } from "dep";
+export const who = "js/theme/chain.js -> " + inner;
+
+=== /js/alt/deep.js text/javascript
+export const who = "js/alt/deep.js";
+
+=== /js/s-root.js text/javascript
+export const who = "js/s-root.js";
+
+=== /js/s-sub.js text/javascript
+export const who = "js/s-sub.js";
+
+=== /js/s-deep.js text/javascript
+export const who = "js/s-deep.js";
+
+=== /js/s-exact.js text/javascript
+export const who = "js/s-exact.js";
+
+=== /js/s-second.js text/javascript
+export const who = "js/s-second.js";
+
+=== /sub/importer.js text/javascript
+import { who as got } from "dep";
+export const who = got;
+
+=== /sub/a/importer.js text/javascript
+import { who as got } from "dep";
+export const who = got;
+
+=== /sub/exact.js text/javascript
+import { who as got } from "dep";
+export const who = got;
+
+=== /deep/importer.js text/javascript
+import { who as got } from "dep";
+export const who = got;
+
+=== /fall/importer.js text/javascript
+import { who as got } from "dep";
+export const who = got;
+
+=== /late-map.json application/json
+{ "imports": { "from-src": "/js/other.js" } }

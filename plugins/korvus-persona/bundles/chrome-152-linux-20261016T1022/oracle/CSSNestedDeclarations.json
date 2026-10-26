@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSNestedDeclarations",
+    "member": "constructor",
+    "expr": "new CSSNestedDeclarations()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

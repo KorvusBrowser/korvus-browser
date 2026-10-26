@@ -1,0 +1,12 @@
+<!doctype html><html><body><script>
+// REALWEB F30b: a frame document's open() bails out with no side effects while the frame's own parser runs one of
+// its scripts (the script, and the microtasks after it) or after window.stop() aborted that parser; opened by the
+// page once the frame has loaded, it replaces the frame's content (F30).
+window.R = {};
+var n = 0;
+window.done = function () { if (++n === 2) document.title = JSON.stringify(R); };
+['sync.html', 'micro.html', 'stopped.html'].forEach(function (src) { var f = document.createElement('iframe'); f.src = src; document.body.appendChild(f); });
+var c = document.createElement('iframe'); c.src = 'sync.html'; c.id = 'control';
+c.onload = function () { setTimeout(function () { var d = c.contentDocument; d.open(); d.write('<p id=w>written</p>'); d.close(); R.control = [d.querySelectorAll('p').length, d.getElementById('w') && d.getElementById('w').textContent].join(' '); done(); }, 0); };
+setTimeout(function () { document.body.appendChild(c); }, 100);
+</script></body></html>

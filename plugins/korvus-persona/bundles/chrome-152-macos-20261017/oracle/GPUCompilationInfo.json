@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "GPUCompilationInfo",
+    "member": "constructor",
+    "expr": "new GPUCompilationInfo()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCompilationInfo",
+    "member": "messages",
+    "expr": "GPUCompilationInfo.prototype.messages",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCompilationInfo",
+    "member": "messages",
+    "expr": "Object.getOwnPropertyDescriptor(GPUCompilationInfo.prototype, \"messages\").get.call(Object.create(GPUCompilationInfo.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCompilationInfo",
+    "member": "messages",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCompilationInfo.prototype, \"messages\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCompilationInfo",
+    "member": "messages",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCompilationInfo.prototype, \"messages\").get.call(Object.create(GPUCompilationInfo.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

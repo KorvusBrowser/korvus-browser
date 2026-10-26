@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "RTCDataChannelEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCDataChannelEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCDataChannelEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCDataChannelEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCDataChannelEvent",
+    "member": "channel",
+    "expr": "(() => { const o = new RTCDataChannelEvent(\"x\", { channel: new RTCPeerConnection().createDataChannel(\"c\") }); return Object.prototype.toString.call(o.channel); })()",
+    "expected": "[object RTCDataChannel]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

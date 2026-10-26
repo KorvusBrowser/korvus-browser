@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "XRWebGLDepthInformation",
+    "member": "constructor",
+    "expr": "new XRWebGLDepthInformation()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLDepthInformation",
+    "member": "texture",
+    "expr": "XRWebGLDepthInformation.prototype.texture",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLDepthInformation",
+    "member": "texture",
+    "expr": "Object.getOwnPropertyDescriptor(XRWebGLDepthInformation.prototype, \"texture\").get.call(Object.create(XRWebGLDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLDepthInformation",
+    "member": "texture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLDepthInformation.prototype, \"texture\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRWebGLDepthInformation",
+    "member": "texture",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRWebGLDepthInformation.prototype, \"texture\").get.call(Object.create(XRWebGLDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

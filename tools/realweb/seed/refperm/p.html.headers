@@ -1,0 +1,2 @@
+Referrer-Policy: same-origin
+Permissions-Policy: camera=(), geolocation=(self), sync-xhr=()

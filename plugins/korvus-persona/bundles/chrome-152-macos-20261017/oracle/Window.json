@@ -1,0 +1,2225 @@
+[
+  {
+    "iface": "Window",
+    "member": "constructor",
+    "expr": "new Window()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "credentialless",
+    "expr": "(() => { const o = window; return o.credentialless; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "orientation",
+    "expr": "(() => { const o = window; return o.orientation; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onorientationchange",
+    "expr": "(() => { const o = window; return o.onorientationchange; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "requestResize",
+    "expr": "(() => { const o = window; return o.requestResize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "matchMedia",
+    "expr": "(() => { const o = window; return o.matchMedia(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollX",
+    "expr": "(() => { const o = window; return o.scrollX; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "pageXOffset",
+    "expr": "(() => { const o = window; return o.pageXOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollY",
+    "expr": "(() => { const o = window; return o.scrollY; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "pageYOffset",
+    "expr": "(() => { const o = window; return o.pageYOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "devicePixelRatio",
+    "expr": "(() => { const o = window; return o.devicePixelRatio; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getComputedStyle",
+    "expr": "(() => { const o = window; return o.getComputedStyle(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(() => { const o = window; return o.getDigitalGoodsService(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(() => { const o = window; return o.getDigitalGoodsService(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "event",
+    "expr": "(() => { const o = window; return o.event; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "fence",
+    "expr": "(() => { const o = window; return o.fence; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "fetchLater",
+    "expr": "(() => { const o = window; return o.fetchLater(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "name",
+    "expr": "(() => { const o = window; return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "status",
+    "expr": "(() => { const o = window; return o.status; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "status",
+    "expr": "(() => { const o = window; return (o.status = \"x\", o.status); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "closed",
+    "expr": "(() => { const o = window; return o.closed; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "length",
+    "expr": "(() => { const o = window; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "opener",
+    "expr": "(() => { const o = window; return o.opener; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "opener",
+    "expr": "(() => { const o = window; return (o.opener = 1, o.opener); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "frameElement",
+    "expr": "(() => { const o = window; return o.frameElement; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "originAgentCluster",
+    "expr": "(() => { const o = window; return o.originAgentCluster; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "postMessage",
+    "expr": "(() => { const o = window; return o.postMessage(1, \"x\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "postMessage",
+    "expr": "(() => { const o = window; return o.postMessage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "postMessage",
+    "expr": "(() => { const o = window; return o.postMessage(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "captureEvents",
+    "expr": "(() => { const o = window; return o.captureEvents(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "releaseEvents",
+    "expr": "(() => { const o = window; return o.releaseEvents(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onappinstalled",
+    "expr": "(() => { const o = window; return o.onappinstalled; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeinstallprompt",
+    "expr": "(() => { const o = window; return o.onbeforeinstallprompt; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondeviceorientation",
+    "expr": "(() => { const o = window; return o.ondeviceorientation; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondeviceorientationabsolute",
+    "expr": "(() => { const o = window; return o.ondeviceorientationabsolute; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondevicemotion",
+    "expr": "(() => { const o = window; return o.ondevicemotion; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "portalHost",
+    "expr": "(() => { const o = window; return o.portalHost; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "requestIdleCallback",
+    "expr": "(() => { const o = window; return o.requestIdleCallback(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "cancelIdleCallback",
+    "expr": "(() => { const o = window; return o.cancelIdleCallback(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "cancelIdleCallback",
+    "expr": "(() => { const o = window; return o.cancelIdleCallback(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "minimize",
+    "expr": "(() => { const o = window; return o.minimize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "maximize",
+    "expr": "(() => { const o = window; return o.maximize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "restore",
+    "expr": "(() => { const o = window; return o.restore(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setResizable",
+    "expr": "(() => { const o = window; return o.setResizable(true); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setResizable",
+    "expr": "(() => { const o = window; return o.setResizable(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onabort",
+    "expr": "(() => { const o = window; return o.onabort; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onauxclick",
+    "expr": "(() => { const o = window; return o.onauxclick; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = window; return o.onbeforeinput; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = window; return o.onbeforematch; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = window; return o.onbeforetoggle; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onblur",
+    "expr": "(() => { const o = window; return o.onblur; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncancel",
+    "expr": "(() => { const o = window; return o.oncancel; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncanplay",
+    "expr": "(() => { const o = window; return o.oncanplay; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = window; return o.oncanplaythrough; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onchange",
+    "expr": "(() => { const o = window; return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onclick",
+    "expr": "(() => { const o = window; return o.onclick; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onclose",
+    "expr": "(() => { const o = window; return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncommand",
+    "expr": "(() => { const o = window; return o.oncommand; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = window; return o.oncontextlost; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = window; return o.oncontextmenu; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = window; return o.oncontextrestored; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncopy",
+    "expr": "(() => { const o = window; return o.oncopy; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncuechange",
+    "expr": "(() => { const o = window; return o.oncuechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncut",
+    "expr": "(() => { const o = window; return o.oncut; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondblclick",
+    "expr": "(() => { const o = window; return o.ondblclick; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondrag",
+    "expr": "(() => { const o = window; return o.ondrag; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragend",
+    "expr": "(() => { const o = window; return o.ondragend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragenter",
+    "expr": "(() => { const o = window; return o.ondragenter; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragleave",
+    "expr": "(() => { const o = window; return o.ondragleave; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragover",
+    "expr": "(() => { const o = window; return o.ondragover; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragstart",
+    "expr": "(() => { const o = window; return o.ondragstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondrop",
+    "expr": "(() => { const o = window; return o.ondrop; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = window; return o.ondurationchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onemptied",
+    "expr": "(() => { const o = window; return o.onemptied; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onended",
+    "expr": "(() => { const o = window; return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onerror",
+    "expr": "(() => { const o = window; return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onfocus",
+    "expr": "(() => { const o = window; return o.onfocus; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onformdata",
+    "expr": "(() => { const o = window; return o.onformdata; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oninput",
+    "expr": "(() => { const o = window; return o.oninput; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oninvalid",
+    "expr": "(() => { const o = window; return o.oninvalid; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeydown",
+    "expr": "(() => { const o = window; return o.onkeydown; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeypress",
+    "expr": "(() => { const o = window; return o.onkeypress; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeyup",
+    "expr": "(() => { const o = window; return o.onkeyup; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onload",
+    "expr": "(() => { const o = window; return o.onload; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = window; return o.onloadeddata; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = window; return o.onloadedmetadata; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadstart",
+    "expr": "(() => { const o = window; return o.onloadstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmousedown",
+    "expr": "(() => { const o = window; return o.onmousedown; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = window; return o.onmouseenter; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = window; return o.onmouseleave; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmousemove",
+    "expr": "(() => { const o = window; return o.onmousemove; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseout",
+    "expr": "(() => { const o = window; return o.onmouseout; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseover",
+    "expr": "(() => { const o = window; return o.onmouseover; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseup",
+    "expr": "(() => { const o = window; return o.onmouseup; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpaste",
+    "expr": "(() => { const o = window; return o.onpaste; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpause",
+    "expr": "(() => { const o = window; return o.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onplay",
+    "expr": "(() => { const o = window; return o.onplay; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onplaying",
+    "expr": "(() => { const o = window; return o.onplaying; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onprogress",
+    "expr": "(() => { const o = window; return o.onprogress; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onratechange",
+    "expr": "(() => { const o = window; return o.onratechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onreset",
+    "expr": "(() => { const o = window; return o.onreset; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onresize",
+    "expr": "(() => { const o = window; return o.onresize; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onscroll",
+    "expr": "(() => { const o = window; return o.onscroll; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onscrollend",
+    "expr": "(() => { const o = window; return o.onscrollend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = window; return o.onsecuritypolicyviolation; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onseeked",
+    "expr": "(() => { const o = window; return o.onseeked; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onseeking",
+    "expr": "(() => { const o = window; return o.onseeking; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onselect",
+    "expr": "(() => { const o = window; return o.onselect; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onslotchange",
+    "expr": "(() => { const o = window; return o.onslotchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onstalled",
+    "expr": "(() => { const o = window; return o.onstalled; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsubmit",
+    "expr": "(() => { const o = window; return o.onsubmit; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsuspend",
+    "expr": "(() => { const o = window; return o.onsuspend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = window; return o.ontimeupdate; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ontoggle",
+    "expr": "(() => { const o = window; return o.ontoggle; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = window; return o.onvolumechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwaiting",
+    "expr": "(() => { const o = window; return o.onwaiting; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = window; return o.onwebkitanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = window; return o.onwebkitanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = window; return o.onwebkitanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = window; return o.onwebkittransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwheel",
+    "expr": "(() => { const o = window; return o.onwheel; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onafterprint",
+    "expr": "(() => { const o = window; return o.onafterprint; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = window; return o.onbeforeprint; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = window; return o.onbeforeunload; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onhashchange",
+    "expr": "(() => { const o = window; return o.onhashchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = window; return o.onlanguagechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmessage",
+    "expr": "(() => { const o = window; return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = window; return o.onmessageerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onoffline",
+    "expr": "(() => { const o = window; return o.onoffline; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ononline",
+    "expr": "(() => { const o = window; return o.ononline; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpagehide",
+    "expr": "(() => { const o = window; return o.onpagehide; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = window; return o.onpagereveal; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpageshow",
+    "expr": "(() => { const o = window; return o.onpageshow; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpageswap",
+    "expr": "(() => { const o = window; return o.onpageswap; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpopstate",
+    "expr": "(() => { const o = window; return o.onpopstate; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = window; return o.onrejectionhandled; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onstorage",
+    "expr": "(() => { const o = window; return o.onstorage; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = window; return o.onunhandledrejection; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onunload",
+    "expr": "(() => { const o = window; return o.onunload; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "isSecureContext",
+    "expr": "(() => { const o = window; return o.isSecureContext; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "crossOriginIsolated",
+    "expr": "(() => { const o = window; return o.crossOriginIsolated; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "reportError",
+    "expr": "(() => { const o = window; return o.reportError(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "reportError",
+    "expr": "(() => { const o = window; return o.reportError(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "btoa",
+    "expr": "(() => { const o = window; return o.btoa(\"x\"); })()",
+    "expected": "eA==",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "btoa",
+    "expr": "(() => { const o = window; return o.btoa(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "atob",
+    "expr": "(() => { const o = window; return o.atob(\"x\"); })()",
+    "throws": "InvalidCharacterError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "atob",
+    "expr": "(() => { const o = window; return o.atob(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setTimeout",
+    "expr": "(() => { const o = window; return o.setTimeout(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "clearTimeout",
+    "expr": "(() => { const o = window; return o.clearTimeout(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setInterval",
+    "expr": "(() => { const o = window; return o.setInterval(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "clearInterval",
+    "expr": "(() => { const o = window; return o.clearInterval(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "queueMicrotask",
+    "expr": "(() => { const o = window; return o.queueMicrotask(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "structuredClone",
+    "expr": "(() => { const o = window; return o.structuredClone(1); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "structuredClone",
+    "expr": "(() => { const o = window; return o.structuredClone(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "requestAnimationFrame",
+    "expr": "(() => { const o = window; return o.requestAnimationFrame(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "cancelAnimationFrame",
+    "expr": "(() => { const o = window; return o.cancelAnimationFrame(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "cancelAnimationFrame",
+    "expr": "(() => { const o = window; return o.cancelAnimationFrame(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "pushManager",
+    "expr": "(() => { const o = window; return o.pushManager; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onorientationchange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onorientationchange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "cookieStore",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.cookieStore); })()",
+    "expected": "[object CookieStore]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "crashReport",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.crashReport); })()",
+    "expected": "[object CrashReportContext]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "viewport",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.viewport); })()",
+    "expected": "[object Viewport]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "matchMedia",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.matchMedia(\"x\")); })()",
+    "expected": "[object MediaQueryList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "screen",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.screen); })()",
+    "expected": "[object Screen]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "visualViewport",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.visualViewport); })()",
+    "expected": "[object VisualViewport]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scroll",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scroll()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scroll",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scroll(1, 1)); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollTo",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scrollTo()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollTo",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scrollTo(1, 1)); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollBy",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scrollBy()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollBy",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scrollBy(1, 1)); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.getDigitalGoodsService(\"x\")); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "documentPictureInPicture",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.documentPictureInPicture); })()",
+    "expected": "[object DocumentPictureInPicture]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "event",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.event); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "fence",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.fence); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "window",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.window); })()",
+    "expected": "[object Window]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "self",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.self); })()",
+    "expected": "[object Window]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "document",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.document); })()",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "history",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.history); })()",
+    "expected": "[object History]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "navigation",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.navigation); })()",
+    "expected": "[object Navigation]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "customElements",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.customElements); })()",
+    "expected": "[object CustomElementRegistry]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "locationbar",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.locationbar); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "menubar",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.menubar); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "personalbar",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.personalbar); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "scrollbars",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.scrollbars); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "statusbar",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.statusbar); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "toolbar",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.toolbar); })()",
+    "expected": "[object BarProp]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "frames",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.frames); })()",
+    "expected": "[object Window]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "top",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.top); })()",
+    "expected": "[object Window]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "parent",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.parent); })()",
+    "expected": "[object Window]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "frameElement",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.frameElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "navigator",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.navigator); })()",
+    "expected": "[object Navigator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "clientInformation",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.clientInformation); })()",
+    "expected": "[object Navigator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "external",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.external); })()",
+    "expected": "[object External]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onappinstalled",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onappinstalled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeinstallprompt",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforeinstallprompt); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondeviceorientation",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondeviceorientation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondeviceorientationabsolute",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondeviceorientationabsolute); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondevicemotion",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondevicemotion); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "portalHost",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.portalHost); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getSelection",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.getSelection()); })()",
+    "expected": "[object Selection]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "speechSynthesis",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.speechSynthesis); })()",
+    "expected": "[object SpeechSynthesis]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "launchQueue",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.launchQueue); })()",
+    "expected": "[object LaunchQueue]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getScreenDetails",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.getScreenDetails()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "minimize",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.minimize()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "maximize",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.maximize()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "restore",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.restore()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setResizable",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.setResizable(true)); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onabort",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onabort); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onauxclick",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onauxclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforeinput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforematch); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforetoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onblur",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onblur); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncancel",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncancel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncanplay",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncanplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncanplaythrough); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onchange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onclick",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onclose",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncommand",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncommand); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncontextlost); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncontextmenu); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncontextrestored); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncopy",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncopy); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncuechange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncuechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oncut",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oncut); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondblclick",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondblclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondrag",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondrag); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragend",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondragend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragenter",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondragenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragleave",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondragleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragover",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondragover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondragstart",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondragstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondrop",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondrop); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ondurationchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onemptied",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onemptied); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onended",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onerror",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onfocus",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onfocus); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onformdata",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onformdata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oninput",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oninput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "oninvalid",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.oninvalid); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeydown",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onkeydown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeypress",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onkeypress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onkeyup",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onkeyup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onload",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onloadeddata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onloadedmetadata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onloadstart",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onloadstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmousedown",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmousedown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmouseenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmouseleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmousemove",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmousemove); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseout",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmouseout); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseover",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmouseover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmouseup",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmouseup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpaste",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpaste); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpause",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpause); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onplay",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onplaying",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onplaying); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onprogress",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onprogress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onratechange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onratechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onreset",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onreset); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onresize",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onresize); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onscroll",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onscroll); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onscrollend",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onscrollend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onsecuritypolicyviolation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onseeked",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onseeked); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onseeking",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onseeking); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onselect",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onselect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onslotchange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onslotchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onstalled",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onstalled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsubmit",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onsubmit); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onsuspend",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onsuspend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ontimeupdate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ontoggle",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ontoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onvolumechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwaiting",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwaiting); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwebkitanimationend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwebkitanimationiteration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwebkitanimationstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwebkittransitionend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onwheel",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onwheel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onafterprint",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onafterprint); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeprint",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforeprint); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onbeforeunload",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onbeforeunload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onhashchange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onhashchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onlanguagechange",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onlanguagechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmessage",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onmessageerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onoffline",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onoffline); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "ononline",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.ononline); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpagehide",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpagehide); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpagereveal",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpagereveal); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpageshow",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpageshow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpageswap",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpageswap); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onpopstate",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onpopstate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onrejectionhandled",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onrejectionhandled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onstorage",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onstorage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onunhandledrejection",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onunhandledrejection); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "onunload",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.onunload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "sessionStorage",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.sessionStorage); })()",
+    "expected": "[object Storage]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "localStorage",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.localStorage); })()",
+    "expected": "[object Storage]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "pushManager",
+    "expr": "(() => { const o = window; return Object.prototype.toString.call(o.pushManager); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(async () => { const o = window; return await o.getDigitalGoodsService(\"x\"); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(async () => { const o = window; return Object.prototype.toString.call(await o.getDigitalGoodsService(\"x\")); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getDigitalGoodsService",
+    "expr": "(async () => { const o = window; return await o.getDigitalGoodsService(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getScreenDetails",
+    "expr": "(async () => { const o = window; return await o.getScreenDetails(); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "getScreenDetails",
+    "expr": "(async () => { const o = window; return Object.prototype.toString.call(await o.getScreenDetails()); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "minimize",
+    "expr": "(async () => { const o = window; return await o.minimize(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "maximize",
+    "expr": "(async () => { const o = window; return await o.maximize(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "restore",
+    "expr": "(async () => { const o = window; return await o.restore(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setResizable",
+    "expr": "(async () => { const o = window; return await o.setResizable(true); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "setResizable",
+    "expr": "(async () => { const o = window; return await o.setResizable(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Window",
+    "member": "createImageBitmap",
+    "expr": "(async () => { const o = window; return await o.createImageBitmap(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

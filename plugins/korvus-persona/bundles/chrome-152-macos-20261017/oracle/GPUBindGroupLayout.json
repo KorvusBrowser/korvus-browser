@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "constructor",
+    "expr": "new GPUBindGroupLayout()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "GPUBindGroupLayout.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").get.call(Object.create(GPUBindGroupLayout.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").get.call(Object.create(GPUBindGroupLayout.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUBindGroupLayout",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUBindGroupLayout.prototype, \"label\").set.call(Object.create(GPUBindGroupLayout.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

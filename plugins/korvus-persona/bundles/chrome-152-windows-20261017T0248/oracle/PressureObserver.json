@@ -1,0 +1,25 @@
+[
+  {
+    "iface": "PressureObserver",
+    "member": "knownSources",
+    "expr": "PressureObserver.knownSources",
+    "expected": [
+      "cpu"
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PressureObserver",
+    "member": "constructor",
+    "expr": "new PressureObserver()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PressureObserver",
+    "member": "knownSources",
+    "expr": "Object.prototype.toString.call(PressureObserver.knownSources)",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

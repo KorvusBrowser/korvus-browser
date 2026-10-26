@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "BufferedChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new BufferedChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BufferedChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new BufferedChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

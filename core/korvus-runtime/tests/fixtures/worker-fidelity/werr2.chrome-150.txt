@@ -1,0 +1,12 @@
+[
+ "P1 msg: echo hi",
+ "P1 msg: timer after top-level throw",
+ "P1 page onerror: [\"Uncaught TypeError: top\",\"URL\",1,115,\"null\"]",
+ "P2 msg: timer after rejection",
+ "P2 msg: unhandledrejection: rej",
+ "P2b msg: timer after unlistened rejection",
+ "P3 msg: self.onerror [\"Uncaught Error: later\",\"blob:\",1,147,\"later\"]",
+ "P3 msg: still alive",
+ "P3 page onerror: [\"Uncaught Error: later\",\"URL\",1,147,\"null\"]",
+ "P4 msg: alive"
+]

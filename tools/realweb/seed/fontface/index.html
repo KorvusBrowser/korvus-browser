@@ -1,0 +1,42 @@
+<!doctype html><title>t</title>
+<!-- FontFace loads what it is given (tldraw.com logged 32 NetworkErrors): a font URL resolves and the face is `loaded`,
+     a src list falls through a 404 to the next url, an ArrayBuffer source is parsed at construction, and only what is
+     not a font rejects with NetworkError -- the empty data: URL (the one case the old "every load fails" answer was
+     measured on), a 404, and a truncated woff2 whose magic is right. FontFaceSet.load loads a face it holds. -->
+<script>
+const R = {};
+const settle = p => p.then(v => 'resolved:' + (v instanceof FontFace ? 'FontFace' : Array.isArray(v) ? 'array' + v.length : Object.prototype.toString.call(v)),
+                           e => 'rejected:' + e.name);
+(async () => {
+  const url = new FontFace('KvUrl', 'url(f.ttf)');
+  R.urlBefore = url.status;
+  R.urlLoad = await settle(url.load());
+  R.urlAfter = url.status;
+  R.urlLoaded = await settle(url.loaded);
+  const list = new FontFace('KvList', 'url(missing.woff2) format("woff2"), url(f.ttf) format("truetype")');
+  R.listLoad = await settle(list.load());
+  const bytes = await (await fetch('f.ttf')).arrayBuffer();
+  const buf = new FontFace('KvBuf', bytes);
+  R.bufStatus = buf.status;
+  R.bufLoaded = await settle(buf.loaded);
+  const empty = new FontFace('KvEmpty', 'url(data:,)');
+  R.emptyLoad = await settle(empty.load());
+  R.emptyAfter = empty.status;
+  R.missLoad = await settle(new FontFace('KvMiss', 'url(missing.ttf)').load());
+  R.stubLoad = await settle(new FontFace('KvStub', 'url(stub.woff2)').load());
+  const junk = new FontFace('KvJunk', new Uint8Array([1, 2, 3, 4]));
+  R.junkStatus = junk.status;
+  R.junkLoaded = await settle(junk.loaded);
+  document.fonts.add(url);
+  R.check = document.fonts.check('16px KvUrl');
+  R.setLoad = await settle(document.fonts.load('16px KvUrl'));
+  const lazy = new FontFace('KvLazy', 'url(f.ttf)');
+  document.fonts.add(lazy);
+  R.lazyBefore = lazy.status;
+  R.lazySet = await settle(document.fonts.load('16px KvLazy'));
+  R.lazyAfter = lazy.status;
+  R.ready = await settle(document.fonts.ready);
+  R.setStatus = document.fonts.status;
+  document.title = JSON.stringify(R);
+})().catch(e => { document.title = 'threw ' + e; });
+</script>

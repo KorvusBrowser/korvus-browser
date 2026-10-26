@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "Event",
+    "member": "NONE",
+    "expr": "Event.NONE",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "CAPTURING_PHASE",
+    "expr": "Event.CAPTURING_PHASE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "AT_TARGET",
+    "expr": "Event.AT_TARGET",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "BUBBLING_PHASE",
+    "expr": "Event.BUBBLING_PHASE",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "constructor",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Event]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "constructor",
+    "expr": "(() => { const o = new Event(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "type",
+    "expr": "(() => { const o = new Event(\"x\"); return o.type; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "target",
+    "expr": "(() => { const o = new Event(\"x\"); return o.target; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "srcElement",
+    "expr": "(() => { const o = new Event(\"x\"); return o.srcElement; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "currentTarget",
+    "expr": "(() => { const o = new Event(\"x\"); return o.currentTarget; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "composedPath",
+    "expr": "(() => { const o = new Event(\"x\"); return o.composedPath(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "eventPhase",
+    "expr": "(() => { const o = new Event(\"x\"); return o.eventPhase; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "stopPropagation",
+    "expr": "(() => { const o = new Event(\"x\"); return o.stopPropagation(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "cancelBubble",
+    "expr": "(() => { const o = new Event(\"x\"); return o.cancelBubble; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "cancelBubble",
+    "expr": "(() => { const o = new Event(\"x\"); return (o.cancelBubble = true, o.cancelBubble); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "stopImmediatePropagation",
+    "expr": "(() => { const o = new Event(\"x\"); return o.stopImmediatePropagation(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "bubbles",
+    "expr": "(() => { const o = new Event(\"x\"); return o.bubbles; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "cancelable",
+    "expr": "(() => { const o = new Event(\"x\"); return o.cancelable; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "returnValue",
+    "expr": "(() => { const o = new Event(\"x\"); return o.returnValue; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "returnValue",
+    "expr": "(() => { const o = new Event(\"x\"); return (o.returnValue = true, o.returnValue); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "preventDefault",
+    "expr": "(() => { const o = new Event(\"x\"); return o.preventDefault(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "defaultPrevented",
+    "expr": "(() => { const o = new Event(\"x\"); return o.defaultPrevented; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "composed",
+    "expr": "(() => { const o = new Event(\"x\"); return o.composed; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "isTrusted",
+    "expr": "(() => { const o = new Event(\"x\"); return o.isTrusted; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "initEvent",
+    "expr": "(() => { const o = new Event(\"x\"); return o.initEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "initEvent",
+    "expr": "(() => { const o = new Event(\"x\"); return o.initEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "target",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o.target); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "srcElement",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o.srcElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "currentTarget",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o.currentTarget); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "composedPath",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o.composedPath()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Event",
+    "member": "timeStamp",
+    "expr": "(() => { const o = new Event(\"x\"); return Object.prototype.toString.call(o.timeStamp); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

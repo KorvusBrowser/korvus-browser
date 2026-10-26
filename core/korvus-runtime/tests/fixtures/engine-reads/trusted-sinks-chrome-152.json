@@ -1,0 +1,167 @@
+[
+ [
+  "innerHTML = TrustedHTML",
+  "",
+  "<b>a</b>"
+ ],
+ [
+  "innerHTML = TrustedScript (not its type)",
+  "TrustedScript.@@toPrimitive,TrustedScript.toString",
+  "<i>s</i>"
+ ],
+ [
+  "outerHTML = TrustedHTML",
+  "",
+  "<p>o</p>"
+ ],
+ [
+  "insertAdjacentHTML(TrustedHTML)",
+  "",
+  "<u>x</u>"
+ ],
+ [
+  "setHTMLUnsafe(TrustedHTML)",
+  "",
+  "<s>u</s>"
+ ],
+ [
+  "shadowRoot.innerHTML = TrustedHTML",
+  "",
+  "<em>r</em>"
+ ],
+ [
+  "iframe.srcdoc = TrustedHTML",
+  "",
+  "<p>d</p>"
+ ],
+ [
+  "Range.createContextualFragment(TrustedHTML)",
+  "",
+  "1:A"
+ ],
+ [
+  "DOMParser.parseFromString(TrustedHTML)",
+  "",
+  "<p>z</p>"
+ ],
+ [
+  "Document.parseHTMLUnsafe(TrustedHTML)",
+  "",
+  "<p>q</p>"
+ ],
+ [
+  "setAttribute(name, TrustedHTML)",
+  "",
+  "h1"
+ ],
+ [
+  "setAttribute(name, TrustedScript)",
+  "",
+  "s1"
+ ],
+ [
+  "setAttribute(name, TrustedScriptURL)",
+  "",
+  "u1"
+ ],
+ [
+  "setAttributeNS(null, name, TrustedScriptURL)",
+  "",
+  "n1"
+ ],
+ [
+  "script.src = TrustedScriptURL",
+  "",
+  "/nothing.js"
+ ],
+ [
+  "script.src = TrustedHTML (not its type)",
+  "TrustedHTML.@@toPrimitive,TrustedHTML.toString",
+  "/h.js"
+ ],
+ [
+  "script.text = TrustedScript",
+  "",
+  "var t1 = 1;"
+ ],
+ [
+  "script.textContent = TrustedScript",
+  "",
+  "var t2 = 2;"
+ ],
+ [
+  "script.innerText = TrustedScript",
+  "",
+  "var t3 = 3;"
+ ],
+ [
+  "div.textContent = TrustedScript",
+  "",
+  "tc"
+ ],
+ [
+  "div.innerText = TrustedScript",
+  "",
+  "it"
+ ],
+ [
+  "append(TrustedScript)",
+  "",
+  "ap"
+ ],
+ [
+  "prepend(TrustedScript)",
+  "",
+  "pp"
+ ],
+ [
+  "replaceChildren(TrustedScript)",
+  "",
+  "rc"
+ ],
+ [
+  "before/after/replaceWith(TrustedScript)",
+  "",
+  "bwa"
+ ],
+ [
+  "append(TrustedHTML) (not its type)",
+  "TrustedHTML.@@toPrimitive,TrustedHTML.toString",
+  "<b>x</b>"
+ ],
+ [
+  "embed.src = TrustedScriptURL",
+  "",
+  "/e.bin"
+ ],
+ [
+  "object.data = TrustedScriptURL",
+  "",
+  "/o.bin"
+ ],
+ [
+  "object.codeBase = TrustedScriptURL",
+  "",
+  "/cb/"
+ ],
+ [
+  "svg script href.baseVal = TrustedScriptURL",
+  "",
+  "/svg.js"
+ ],
+ [
+  "new Worker(TrustedScriptURL)",
+  "",
+  "object"
+ ],
+ [
+  "new Worker(TrustedHTML) (not its type)",
+  "TrustedHTML.@@toPrimitive,TrustedHTML.toString",
+  "object"
+ ],
+ [
+  "setTimeout(TrustedScript)",
+  "",
+  "number"
+ ]
+]

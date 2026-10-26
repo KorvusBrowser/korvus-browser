@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "SVG_FECOLORMATRIX_TYPE_UNKNOWN",
+    "expr": "SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "SVG_FECOLORMATRIX_TYPE_MATRIX",
+    "expr": "SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_MATRIX",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "SVG_FECOLORMATRIX_TYPE_SATURATE",
+    "expr": "SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "SVG_FECOLORMATRIX_TYPE_HUEROTATE",
+    "expr": "SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_HUEROTATE",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA",
+    "expr": "SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "constructor",
+    "expr": "new SVGFEColorMatrixElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "values",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.values); })()",
+    "expected": "[object SVGAnimatedNumberList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEColorMatrixElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feColorMatrix\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "MediaQueryList",
+    "member": "constructor",
+    "expr": "new MediaQueryList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaQueryList",
+    "member": "media",
+    "expr": "(() => { const o = matchMedia(\"(min-width: 1px)\"); return o.media; })()",
+    "expected": "(min-width: 1px)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaQueryList",
+    "member": "matches",
+    "expr": "(() => { const o = matchMedia(\"(min-width: 1px)\"); return o.matches; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaQueryList",
+    "member": "addListener",
+    "expr": "(() => { const o = matchMedia(\"(min-width: 1px)\"); return o.addListener(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaQueryList",
+    "member": "removeListener",
+    "expr": "(() => { const o = matchMedia(\"(min-width: 1px)\"); return o.removeListener(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaQueryList",
+    "member": "onchange",
+    "expr": "(() => { const o = matchMedia(\"(min-width: 1px)\"); return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

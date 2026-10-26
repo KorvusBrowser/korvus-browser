@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SpeechSynthesisErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechSynthesisErrorEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechSynthesisErrorEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisErrorEvent",
+    "member": "error",
+    "expr": "(() => { const o = new SpeechSynthesisErrorEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\"), error: \"canceled\" }); return o.error; })()",
+    "expected": "canceled",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

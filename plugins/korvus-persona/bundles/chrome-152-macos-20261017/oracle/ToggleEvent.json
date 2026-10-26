@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "ToggleEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ToggleEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ToggleEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ToggleEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ToggleEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ToggleEvent",
+    "member": "oldState",
+    "expr": "(() => { const o = new ToggleEvent(\"x\"); return o.oldState; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ToggleEvent",
+    "member": "newState",
+    "expr": "(() => { const o = new ToggleEvent(\"x\"); return o.newState; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ToggleEvent",
+    "member": "source",
+    "expr": "(() => { const o = new ToggleEvent(\"x\"); return o.source; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

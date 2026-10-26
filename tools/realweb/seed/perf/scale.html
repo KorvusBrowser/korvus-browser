@@ -1,0 +1,14 @@
+<!doctype html><title>pending</title><body><script>
+const R = {};
+for (const N of [5000, 10000, 20000]) {
+  const root = document.createElement('div'); document.body.appendChild(root);
+  let t = performance.now(); for (let i = 0; i < N; i++) root.appendChild(document.createElement('div')); R['append_' + N] = Math.round(performance.now() - t);
+  t = performance.now(); const c = root.children; let s = 0; for (let i = 0; i < c.length; i++) s += c[i].nodeType; R['children_idx_' + N] = Math.round(performance.now() - t);
+  t = performance.now(); const cn = root.childNodes; for (let i = 0; i < cn.length; i++) s += cn[i].nodeType; R['childNodes_idx_' + N] = Math.round(performance.now() - t);
+  t = performance.now(); for (let n = root.firstChild; n; n = n.nextSibling) s += n.nodeType; R['sibling_walk_' + N] = Math.round(performance.now() - t);
+  t = performance.now(); for (const d of root.children) d.setAttribute('a', '1'); R['children_forof_setAttr_' + N] = Math.round(performance.now() - t);
+  t = performance.now(); for (let n = root.firstElementChild; n; n = n.nextElementSibling) n.setAttribute('b', '1'); R['sibling_setAttr_' + N] = Math.round(performance.now() - t);
+  root.remove();
+}
+document.title = JSON.stringify(R);
+</script>

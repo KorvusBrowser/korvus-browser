@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "NamedNodeMap",
+    "member": "constructor",
+    "expr": "new NamedNodeMap()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "length",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "getNamedItem",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.getNamedItem(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "getNamedItem",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.getNamedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "getNamedItemNS",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.getNamedItemNS(\"x\", \"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "getNamedItemNS",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.getNamedItemNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "setNamedItem",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.setNamedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "setNamedItemNS",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.setNamedItemNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "removeNamedItem",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.removeNamedItem(\"x\"); })()",
+    "throws": "NotFoundError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "removeNamedItem",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.removeNamedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "removeNamedItemNS",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.removeNamedItemNS(\"x\", \"x\"); })()",
+    "throws": "NotFoundError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NamedNodeMap",
+    "member": "removeNamedItemNS",
+    "expr": "(() => { const o = document.createElement(\"div\").attributes; return o.removeNamedItemNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

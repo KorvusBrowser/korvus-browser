@@ -1,0 +1,170 @@
+[
+  {
+    "iface": "Highlight",
+    "member": "constructor",
+    "expr": "(() => { const o = new Highlight(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Highlight]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "priority",
+    "expr": "(() => { const o = new Highlight(); return o.priority; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "priority",
+    "expr": "(() => { const o = new Highlight(); return (o.priority = 1, o.priority); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "type",
+    "expr": "(() => { const o = new Highlight(); return o.type; })()",
+    "expected": "highlight",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "priority",
+    "expr": "(() => { const o = new Highlight(); return (o.priority = \"1\", o.priority); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "type",
+    "expr": "(() => { const o = new Highlight(); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "size",
+    "expr": "(() => { const o = new Highlight(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "add",
+    "expr": "(() => { const o = new Highlight(); o.add(new Range()); return o.size; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "add",
+    "expr": "(() => { const o = new Highlight(); const r = new Range(); o.add(r); o.add(r); return o.size; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "add",
+    "expr": "(() => { const o = new Highlight(); return o.add(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "has",
+    "expr": "(() => { const o = new Highlight(); const r = new Range(); o.add(r); return o.has(r); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "has",
+    "expr": "(() => { const o = new Highlight(); return o.has(new Range()); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "delete",
+    "expr": "(() => { const o = new Highlight(); const r = new Range(); o.add(r); return o.delete(r); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "delete",
+    "expr": "(() => { const o = new Highlight(); return o.delete(new Range()); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "clear",
+    "expr": "(() => { const o = new Highlight(); o.add(new Range()); o.clear(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "clear",
+    "expr": "(() => { const o = new Highlight(); return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "forEach",
+    "expr": "(() => { const o = new Highlight(); o.add(new Range()); let n = 0; o.forEach(function () { n++; }); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "forEach",
+    "expr": "(() => { const o = new Highlight(); return o.forEach(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "keys",
+    "expr": "(() => { const o = new Highlight(); return Object.prototype.toString.call(o.keys()); })()",
+    "expected": "[object Highlight Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "keys",
+    "expr": "(() => { const o = new Highlight(); o.add(new Range()); return [...o.keys()].length; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "values",
+    "expr": "(() => { const o = new Highlight(); return Object.prototype.toString.call(o.values()); })()",
+    "expected": "[object Highlight Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "values",
+    "expr": "(() => { const o = new Highlight(); const r = new Range(); o.add(r); return [...o.values()][0] === r; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "entries",
+    "expr": "(() => { const o = new Highlight(); return Object.prototype.toString.call(o.entries()); })()",
+    "expected": "[object Highlight Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Highlight",
+    "member": "entries",
+    "expr": "(() => { const o = new Highlight(); const r = new Range(); o.add(r); const e = [...o.entries()][0]; return e[0] === r && e[1] === r; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

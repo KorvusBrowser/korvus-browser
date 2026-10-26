@@ -1,0 +1,135 @@
+[
+  {
+    "iface": "SVGAngle",
+    "member": "SVG_ANGLETYPE_UNKNOWN",
+    "expr": "SVGAngle.SVG_ANGLETYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "SVG_ANGLETYPE_UNSPECIFIED",
+    "expr": "SVGAngle.SVG_ANGLETYPE_UNSPECIFIED",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "SVG_ANGLETYPE_DEG",
+    "expr": "SVGAngle.SVG_ANGLETYPE_DEG",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "SVG_ANGLETYPE_RAD",
+    "expr": "SVGAngle.SVG_ANGLETYPE_RAD",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "SVG_ANGLETYPE_GRAD",
+    "expr": "SVGAngle.SVG_ANGLETYPE_GRAD",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "constructor",
+    "expr": "new SVGAngle()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "unitType",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.unitType; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.value; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.valueInSpecifiedUnits; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return (o.valueInSpecifiedUnits = 1, o.valueInSpecifiedUnits); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "valueAsString",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.valueAsString; })()",
+    "expected": "0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "valueAsString",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return (o.valueAsString = \"x\", o.valueAsString); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "newValueSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.newValueSpecifiedUnits(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "newValueSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.newValueSpecifiedUnits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "convertToSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.convertToSpecifiedUnits(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "convertToSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return o.convertToSpecifiedUnits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGAngle",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGAngle(); return (o.valueInSpecifiedUnits = \"1\", o.valueInSpecifiedUnits); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_UNKNOWN",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_NORMAL",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_NORMAL",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_MULTIPLY",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_MULTIPLY",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_SCREEN",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_SCREEN",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_DARKEN",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_DARKEN",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_LIGHTEN",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_LIGHTEN",
+    "expected": 5,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_OVERLAY",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_OVERLAY",
+    "expected": 6,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_COLOR_DODGE",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_COLOR_DODGE",
+    "expected": 7,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_COLOR_BURN",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_COLOR_BURN",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_HARD_LIGHT",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_HARD_LIGHT",
+    "expected": 9,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_SOFT_LIGHT",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_SOFT_LIGHT",
+    "expected": 10,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_DIFFERENCE",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_DIFFERENCE",
+    "expected": 11,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_EXCLUSION",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_EXCLUSION",
+    "expected": 12,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_HUE",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_HUE",
+    "expected": 13,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_SATURATION",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_SATURATION",
+    "expected": 14,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_COLOR",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_COLOR",
+    "expected": 15,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "SVG_FEBLEND_MODE_LUMINOSITY",
+    "expr": "SVGFEBlendElement.SVG_FEBLEND_MODE_LUMINOSITY",
+    "expected": 16,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "constructor",
+    "expr": "new SVGFEBlendElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "in2",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.in2); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "mode",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.mode); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEBlendElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

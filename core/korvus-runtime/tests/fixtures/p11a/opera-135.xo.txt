@@ -1,0 +1,65 @@
+contentDocument => null
+typeof contentWindow => ok object
+get allowed => blur:function close:function closed:boolean focus:function frames:object length:number location:object opener:null parent:object postMessage:function self:object then:undefined top:object window:object
+get refused => SecurityError: Failed to read a named property '%' from '%': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+get refused => SecurityError: Failed to read a named property '%' from 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+get refused => SecurityError: Failed to read an indexed property [0] from 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+get Symbol.toStringTag => ok undefined
+get Symbol.hasInstance => ok undefined
+get Symbol.isConcatSpreadable => ok undefined
+get Symbol.iterator => THROW SecurityError: Failed to read a named property '[Symbol.iterator]' from 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+getOwnPropertyNames => ok string blur close closed focus frames length location opener parent postMessage self then top window
+getOwnPropertyNames list => window self location closed frames length top opener parent blur close focus postMessage then
+keys => ok string 
+getPrototypeOf => ok null
+toString.call => ok string [object Object]
+desc postMessage => data w=false e=false c=true function "postMessage"/1
+desc location => accessor get="get location"/0 set="set location"/1 e=false c=true
+desc close => data w=false e=false c=true function "close"/0
+desc closed => accessor get="get closed"/0 set=undefined e=false c=true
+desc window => accessor get="get window"/0 set=undefined e=false c=true
+desc self => accessor get="get self"/0 set=undefined e=false c=true
+desc top => accessor get="get top"/0 set=undefined e=false c=true
+desc parent => accessor get="get parent"/0 set=undefined e=false c=true
+desc frames => accessor get="get frames"/0 set=undefined e=false c=true
+desc opener => accessor get="get opener"/0 set=undefined e=false c=true
+desc length => accessor get="get length"/0 set=undefined e=false c=true
+desc blur => data w=false e=false c=true function "blur"/0
+desc focus => data w=false e=false c=true function "focus"/0
+desc document => THROW SecurityError: Failed to read a named property 'document' from 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+desc name => THROW SecurityError: Failed to read a named property 'name' from 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+window === w => ok string true self true frames true top true parent true length 0 closed false opener null
+set x => THROW SecurityError: Failed to set a named property 'x' on 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+set name => THROW SecurityError: Failed to set a named property 'name' on 'Window': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+defineProperty => THROW SecurityError: Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+delete document => THROW SecurityError: Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+in document => THROW SecurityError: Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+in postMessage => ok boolean true
+setPrototypeOf => THROW SecurityError: Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+preventExtensions => THROW SecurityError: Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+isExtensible => ok boolean true
+postMessage call => ok undefined
+postMessage same => ok boolean true
+focus call => ok undefined
+typeof location => ok object
+location.href => THROW SecurityError: Failed to read a named property 'href' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.protocol => THROW SecurityError: Failed to read a named property 'protocol' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.host => THROW SecurityError: Failed to read a named property 'host' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.hostname => THROW SecurityError: Failed to read a named property 'hostname' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.port => THROW SecurityError: Failed to read a named property 'port' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.pathname => THROW SecurityError: Failed to read a named property 'pathname' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.search => THROW SecurityError: Failed to read a named property 'search' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.hash => THROW SecurityError: Failed to read a named property 'hash' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.origin => THROW SecurityError: Failed to read a named property 'origin' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.assign => THROW SecurityError: Failed to read a named property 'assign' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.reload => THROW SecurityError: Failed to read a named property 'reload' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.replace => ok function
+location.toString => THROW SecurityError: Failed to read a named property 'toString' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.ancestorOrigins => THROW SecurityError: Failed to read a named property 'ancestorOrigins' from 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location.then => ok undefined
+location getOwnPropertyNames => ok string href replace then
+location.replace same => ok boolean true
+location toString.call => ok string [object Object]
+location set pathname => THROW SecurityError: Failed to set a named property 'pathname' on 'Location': Blocked a frame with origin "<same>" from accessing a cross-origin frame.
+location set href => ok string no throw
+w.location = url => ok string no throw

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "Rewriter",
+    "member": "create",
+    "expr": "Rewriter.create()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Rewriter",
+    "member": "availability",
+    "expr": "Rewriter.availability()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Rewriter",
+    "member": "constructor",
+    "expr": "new Rewriter()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

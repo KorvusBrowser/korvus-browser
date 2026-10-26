@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSContentsBlockRule",
+    "member": "constructor",
+    "expr": "new CSSContentsBlockRule()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

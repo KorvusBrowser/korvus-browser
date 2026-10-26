@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTableRowElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "constructor",
+    "expr": "new HTMLTableRowElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "rowIndex",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.rowIndex; })()",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "sectionRowIndex",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.sectionRowIndex; })()",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "deleteCell",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.deleteCell(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "deleteCell",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.deleteCell(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.ch; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return (o.ch = \"x\", o.ch); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.chOff; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return (o.chOff = \"x\", o.chOff); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.vAlign; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return (o.vAlign = \"x\", o.vAlign); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return o.bgColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return (o.bgColor = \"x\", o.bgColor); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "cells",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return Object.prototype.toString.call(o.cells); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableRowElement",
+    "member": "insertCell",
+    "expr": "(() => { const o = document.createElement(\"tr\"); return Object.prototype.toString.call(o.insertCell()); })()",
+    "expected": "[object HTMLTableCellElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

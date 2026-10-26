@@ -1,0 +1,47 @@
+<!doctype html><title>shadow scope</title>
+<style>.inner{border-left:5px solid} x-slot > b{border-bottom:1px solid;word-spacing:2px} x-ctx{opacity:0.22;outline-offset:22px !important} #host{color:rgb(10, 20, 30)}</style>
+<body>
+<div id="probe" type-style="display-4" part="button" class="inner">p</div>
+<x-card id="host" variant="primary"></x-card>
+<x-ctx id="ctx"></x-ctx>
+<x-slot id="sh"><b id="lb" slot="start">light</b><i id="li">other</i></x-slot>
+<script>
+const h = document.getElementById('host');
+const s = h.attachShadow({mode: 'open'});
+s.innerHTML = '<style>:host{display:block;border-bottom:2px solid} :host([variant="primary"]){border-left:6px solid} :host(.nope){border-top:9px solid} [part~="button"]{border-top:4px solid} [type-style="display-4"]{border-right:7px solid} .inner{padding-left:3px} span{padding-top:9px} :host [part~="button"] span{padding-bottom:11px} div{margin-left:13px}</style><div class="inner" part="button" id="in"><span id="sp">t</span></div>';
+const sh = document.getElementById('sh');
+const s2 = sh.attachShadow({mode: 'open'});
+s2.innerHTML = '<style>::slotted([slot="start"]){outline-offset:8px;word-spacing:3px} ::slotted(*){letter-spacing:4px} b{text-indent:5px}</style><slot name="start"></slot><slot></slot>';
+const cx = document.getElementById('ctx');
+cx.attachShadow({mode: 'open'}).innerHTML = '<style>:host{opacity:0.21;outline-offset:21px !important}</style>x';
+const cs = (el, p) => getComputedStyle(el)[p];
+const inn = s.getElementById('in'), sp = s.getElementById('sp'), probe = document.getElementById('probe');
+const lb = document.getElementById('lb'), li = document.getElementById('li');
+window.R = {
+  leakTop: cs(probe, 'borderTopWidth'),
+  leakRight: cs(probe, 'borderRightWidth'),
+  leakDivMargin: cs(probe, 'marginLeft'),
+  probeBorders: probe.offsetHeight - probe.clientHeight,
+  docIntoShadow: cs(inn, 'borderLeftWidth'),
+  inTop: cs(inn, 'borderTopWidth'),
+  inPad: cs(inn, 'paddingLeft'),
+  inMargin: cs(inn, 'marginLeft'),
+  spanPad: cs(sp, 'paddingTop'),
+  hostDescendant: cs(sp, 'paddingBottom'),
+  hostBottom: cs(h, 'borderBottomWidth'),
+  hostLeft: cs(h, 'borderLeftWidth'),
+  hostNot: cs(h, 'borderTopWidth'),
+  hostDisplay: cs(h, 'display'),
+  hostMargin: cs(h, 'marginLeft'),
+  probeLeft: cs(probe, 'borderLeftWidth'),
+  slottedNamed: cs(lb, 'outlineOffset'),
+  slottedAny: [cs(lb, 'letterSpacing'), cs(li, 'letterSpacing')],
+  slottedNotShadowRule: cs(lb, 'textIndent'),
+  lightRuleOnSlotted: cs(lb, 'borderBottomWidth'),
+  sheetRules: s.querySelector('style').sheet.cssRules.length,
+  ctxNormal: cs(cx, 'opacity'),
+  ctxImportant: cs(cx, 'outlineOffset'),
+  slotCtx: cs(lb, 'wordSpacing'),
+  inheritColor: cs(sp, 'color'),
+};
+</script>

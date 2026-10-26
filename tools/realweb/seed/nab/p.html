@@ -1,0 +1,7 @@
+<!doctype html><title>top</title><body><script>
+// F26: an about:blank / srcdoc document INHERITS its creator's origin -- here the cross-origin frame's,
+// not the top page's. a challenge provider's challenge frame reads `parent.eval` from such a child.
+window.R = null; var got = {};
+addEventListener('message', function (e) { if (e.data && e.data.k) { got[e.data.k] = e.data.v; if (Object.keys(got).length === 2) R = JSON.stringify(got); } });
+var f = document.createElement('iframe'); f.src = 'http://127.0.0.1:18317/b.html'; document.body.appendChild(f);
+</script>

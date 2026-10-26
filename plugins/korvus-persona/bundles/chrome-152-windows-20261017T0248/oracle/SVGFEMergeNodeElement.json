@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "SVGFEMergeNodeElement",
+    "member": "constructor",
+    "expr": "new SVGFEMergeNodeElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFEMergeNodeElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feMergeNode\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

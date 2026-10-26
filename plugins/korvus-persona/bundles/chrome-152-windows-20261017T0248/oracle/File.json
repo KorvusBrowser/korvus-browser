@@ -1,0 +1,184 @@
+[
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "new File(['x'], 'a.txt').name",
+    "expected": "a.txt",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "new File([], '').name",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "new File([], 42).name",
+    "expected": "42",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "new File(['x'], '../dir/f.txt').name",
+    "expected": "../dir/f.txt",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "(() => { 'use strict'; const f = new File(['x'], 'a'); try { f.name = 'b'; return 'no-throw'; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "(() => { const f = new File(['x'], 'a'); f.name = 'b'; return f.name; })()",
+    "expected": "a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(File.prototype, 'name'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined) + ',' + d.enumerable + ',' + d.configurable + ',' + d.get.toString().includes('[native code]'); })()",
+    "expected": "get name,0,true,true,true,true",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "(() => { const f = new File(['x'], 'a'); return Object.getOwnPropertyNames(f).includes('name'); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: 1234567890 }).lastModified",
+    "expected": 1234567890,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "(() => { const before = Date.now(); const f = new File([], 'a'); const after = Date.now(); return f.lastModified >= before && f.lastModified <= after; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: '500' }).lastModified",
+    "expected": 500,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: 12.9 }).lastModified",
+    "expected": 12,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: -7.9 }).lastModified",
+    "expected": -7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: NaN }).lastModified",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: Infinity }).lastModified",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "new File(['x'], 'a', { lastModified: 0 }).lastModified",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "(() => { 'use strict'; const f = new File(['x'], 'a'); try { f.lastModified = 1; return 'no-throw'; } catch (e) { return e.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "lastModified",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(File.prototype, 'lastModified'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined) + ',' + d.get.toString().includes('[native code]'); })()",
+    "expected": "get lastModified,0,true,true",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "webkitRelativePath",
+    "expr": "new File(['x'], 'a').webkitRelativePath",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "webkitRelativePath",
+    "expr": "(() => { const f = new File(['x'], 'a'); f.webkitRelativePath = '/nope'; return f.webkitRelativePath; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "webkitRelativePath",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(File.prototype, 'webkitRelativePath'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined) + ',' + d.get.toString().includes('[native code]'); })()",
+    "expected": "get webkitRelativePath,0,true,true",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "webkitRelativePath",
+    "expr": "(() => { return Object.getOwnPropertyNames(new File(['x'], 'a')).includes('webkitRelativePath'); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "constructor",
+    "expr": "(() => { const o = new File([], \"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object File]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "constructor",
+    "expr": "(() => { const o = new File(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "name",
+    "expr": "(() => { const o = new File([], \"x\"); return o.name; })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "File",
+    "member": "webkitRelativePath",
+    "expr": "(() => { const o = new File([], \"x\"); return o.webkitRelativePath; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

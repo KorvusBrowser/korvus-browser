@@ -1,0 +1,939 @@
+{
+ "note": "The font files a Windows 11 installation ships and the family names each one gives (GDI, en-US and ko-KR), for plugins/korvus-persona/capture/default_fonts.py: which families a default Windows persona has (owner 2026-10-17: the default fonts only).",
+ "list": {
+  "source": "https://learn.microsoft.com/en-us/typography/fonts/windows_11_font_list",
+  "retrieved": "2026-10-17",
+  "page_updated": "2022-06-16",
+  "sections": [
+   "the fonts every Windows 11 installation has (the page's first table)",
+   "Korean Supplemental Fonts (the feature-on-demand Windows installs with Korean, the persona's language)"
+  ],
+  "families": {
+   "base": {
+    "Arial": [
+     "Arial",
+     "Arial Italic",
+     "Arial Bold",
+     "Arial Bold Italic"
+    ],
+    "Arial Black": [
+     "Arial Black"
+    ],
+    "Bahnschrift": [
+     "Bahnschrift"
+    ],
+    "Calibri": [
+     "Calibri Light",
+     "Calibri Light Italic",
+     "Calibri",
+     "Calibri Italic",
+     "Calibri Bold",
+     "Calibri Bold Italic"
+    ],
+    "Cambria": [
+     "Cambria",
+     "Cambria Italic",
+     "Cambria Bold",
+     "Cambria Bold Italic"
+    ],
+    "Cambria Math": [
+     "Cambria Math"
+    ],
+    "Candara": [
+     "Candara Light",
+     "Candara Light Italic",
+     "Candara",
+     "Candara Italic",
+     "Candara Bold",
+     "Candara Bold Italic"
+    ],
+    "Cascadia Code": [
+     "Cascadia Code ExtraLight",
+     "Cascadia Code ExtraLight Italic",
+     "Cascadia Code Light",
+     "Cascadia Code Light Italic",
+     "Cascadia Code SemiLight",
+     "Cascadia Code SemiLight Italic",
+     "Cascadia Code Regular",
+     "Cascadia Code Italic",
+     "Cascadia Code SemiBold",
+     "Cascadia Code SemiBold Italic",
+     "Cascadia Code Bold",
+     "Cascadia Code Bold Italic"
+    ],
+    "Cascadia Mono": [
+     "Cascadia Mono ExtraLight",
+     "Cascadia Mono ExtraLight Italic",
+     "Cascadia Mono Light",
+     "Cascadia Mono Light Italic",
+     "Cascadia Mono SemiLight",
+     "Cascadia Mono SemiLight Italic",
+     "Cascadia Mono Regular",
+     "Cascadia Mono Italic",
+     "Cascadia Mono SemiBold",
+     "Cascadia Mono SemiBold Italic",
+     "Cascadia Mono Bold",
+     "Cascadia Mono Bold Italic"
+    ],
+    "Comic Sans MS": [
+     "Comic Sans MS",
+     "Comic Sans MS Italic",
+     "Comic Sans MS Bold",
+     "Comic Sans MS Bold Italic"
+    ],
+    "Consolas": [
+     "Consolas",
+     "Consolas Italic",
+     "Consolas Bold",
+     "Consolas Bold Italic"
+    ],
+    "Constantia": [
+     "Constantia",
+     "Constantia Italic",
+     "Constantia Bold",
+     "Constantia Bold Italic"
+    ],
+    "Corbel": [
+     "Corbel Light",
+     "Corbel Light Italic",
+     "Corbel",
+     "Corbel Italic",
+     "Corbel Bold",
+     "Corbel Bold Italic"
+    ],
+    "Courier New": [
+     "Courier New",
+     "Courier New Italic",
+     "Courier New Bold",
+     "Courier New Bold Italic"
+    ],
+    "Ebrima": [
+     "Ebrima",
+     "Ebrima Bold"
+    ],
+    "Franklin Gothic Medium": [
+     "Franklin Gothic Medium",
+     "Franklin Gothic Medium Italic"
+    ],
+    "Gabriola": [
+     "Gabriola"
+    ],
+    "Gadugi": [
+     "Gadugi",
+     "Gadugi Bold"
+    ],
+    "Georgia": [
+     "Georgia",
+     "Georgia Italic",
+     "Georgia Bold",
+     "Georgia Bold Italic"
+    ],
+    "HoloLens MDL2 Assets": [
+     "HoloLens MDL2 Assets"
+    ],
+    "Impact": [
+     "Impact"
+    ],
+    "Ink Free": [
+     "Ink Free"
+    ],
+    "Javanese Text": [
+     "Javanese Text"
+    ],
+    "Leelawadee UI": [
+     "Leelawadee UI",
+     "Leelawadee UI Semilight",
+     "Leelawadee UI Bold"
+    ],
+    "Lucida Console": [
+     "Lucida Console"
+    ],
+    "Lucida Sans Unicode": [
+     "Lucida Sans Unicode"
+    ],
+    "Malgun Gothic": [
+     "Malgun Gothic",
+     "Malgun Gothic Bold",
+     "Malgun Gothic Semilight"
+    ],
+    "Marlett": [
+     "Marlett"
+    ],
+    "Microsoft Himalaya": [
+     "Microsoft Himalaya"
+    ],
+    "Microsoft JhengHei": [
+     "Microsoft JhengHei Light",
+     "Microsoft JhengHei",
+     "Microsoft JhengHei Bold",
+     "Microsoft JhengHei UI Light",
+     "Microsoft JhengHei UI",
+     "Microsoft JhengHei UI Bold"
+    ],
+    "Microsoft New Tai Lue": [
+     "Microsoft New Tai Lue",
+     "Microsoft New Tai Lue Bold"
+    ],
+    "Microsoft PhagsPa": [
+     "Microsoft PhagsPa",
+     "Microsoft PhagsPa Bold"
+    ],
+    "Microsoft Sans Serif": [
+     "Microsoft Sans Serif"
+    ],
+    "Microsoft Tai Le": [
+     "Microsoft Tai Le",
+     "Microsoft Tai Le Bold"
+    ],
+    "Microsoft YaHei": [
+     "Microsoft YaHei Light",
+     "Microsoft YaHei",
+     "Microsoft YaHei Bold",
+     "Microsoft YaHei UI Light",
+     "Microsoft YaHei UI",
+     "Microsoft YaHei UI Bold"
+    ],
+    "Microsoft Yi Baiti": [
+     "Microsoft Yi Baiti"
+    ],
+    "MingLiU-ExtB": [
+     "MingLiU-ExtB",
+     "PMingLiU-ExtB",
+     "MingLiU_HKSCS-ExtB"
+    ],
+    "Mongolian Baiti": [
+     "Mongolian Baiti"
+    ],
+    "MS Gothic": [
+     "MS Gothic",
+     "MS PGothic",
+     "MS UI Gothic"
+    ],
+    "MV Boli": [
+     "MV Boli"
+    ],
+    "Myanmar Text": [
+     "Myanmar Text",
+     "Myanmar Text Bold"
+    ],
+    "Nirmala UI": [
+     "Nirmala UI Semilight",
+     "Nirmala UI",
+     "Nirmala UI Bold"
+    ],
+    "Palatino Linotype": [
+     "Palatino Linotype",
+     "Palatino Linotype Italic",
+     "Palatino Linotype Bold",
+     "Palatino Linotype Bold Italic"
+    ],
+    "Segoe Fluent Icons": [
+     "Segoe Fluent Icons"
+    ],
+    "Segoe MDL2 Assets": [
+     "Segoe MDL2 Assets"
+    ],
+    "Segoe Print": [
+     "Segoe Print",
+     "Segoe Print Bold"
+    ],
+    "Segoe Script": [
+     "Segoe Script",
+     "Segoe Script Bold"
+    ],
+    "Segoe UI": [
+     "Segoe UI Light",
+     "Segoe UI Light Italic",
+     "Segoe UI Semilight",
+     "Segoe UI Semilight Italic",
+     "Segoe UI",
+     "Segoe UI Italic",
+     "Segoe UI Semibold",
+     "Segoe UI Semibold Italic",
+     "Segoe UI Bold",
+     "Segoe UI Bold Italic",
+     "Segoe UI Black",
+     "Segoe UI Black Italic"
+    ],
+    "Segoe UI Emoji": [
+     "Segoe UI Emoji"
+    ],
+    "Segoe UI Historic": [
+     "Segoe UI Historic"
+    ],
+    "Segoe UI Symbol": [
+     "Segoe UI Symbol"
+    ],
+    "Segoe UI Variable": [
+     "Segoe UI Variable Display Light",
+     "Segoe UI Variable Display Semilight",
+     "Segoe UI Variable Display Regular",
+     "Segoe UI Variable Display Semibold",
+     "Segoe UI Variable Display Bold",
+     "Segoe UI Variable Small Light",
+     "Segoe UI Variable Small Semilight",
+     "Segoe UI Variable Small Regular",
+     "Segoe UI Variable Small Semibold",
+     "Segoe UI Variable Small Bold",
+     "Segoe UI Variable Text Light",
+     "Segoe UI Variable Text Semilight",
+     "Segoe UI Variable Text Regular",
+     "Segoe UI Variable Text Semibold",
+     "Segoe UI Variable Text Bold"
+    ],
+    "SimSun": [
+     "SimSun",
+     "NSimSun",
+     "SimSun-ExtB"
+    ],
+    "Sitka": [
+     "Sitka Banner",
+     "Sitka Banner Italic",
+     "Sitka Banner Semibold",
+     "Sitka Banner Semibold Italic",
+     "Sitka Banner Bold",
+     "Sitka Banner Bold Italic",
+     "Sitka Display",
+     "Sitka Display Italic",
+     "Sitka Display Semibold",
+     "Sitka Display Semibold Italic",
+     "Sitka Display Bold",
+     "Sitka Display Bold Italic",
+     "Sitka Small",
+     "Sitka Small Italic",
+     "Sitka Small Semibold",
+     "Sitka Small Semibold Italic",
+     "Sitka Small Bold",
+     "Sitka Small Bold Italic",
+     "Sitka Heading",
+     "Sitka Heading Italic",
+     "Sitka Heading Semibold",
+     "Sitka Heading Semibold Italic",
+     "Sitka Heading Bold",
+     "Sitka Heading Bold Italic",
+     "Sitka Subheading",
+     "Sitka Subheading Italic",
+     "Sitka Subheading Semibold",
+     "Sitka Subheading Semibold Italic",
+     "Sitka Subheading Bold",
+     "Sitka Subheading Bold Italic",
+     "Sitka Text",
+     "Sitka Text Italic",
+     "Sitka Text Semibold",
+     "Sitka Text Semibold Italic",
+     "Sitka Text Bold",
+     "Sitka Text Bold Italic"
+    ],
+    "Sylfaen": [
+     "Sylfaen"
+    ],
+    "Symbol": [
+     "Symbol"
+    ],
+    "Tahoma": [
+     "Tahoma",
+     "Tahoma Bold"
+    ],
+    "Times New Roman": [
+     "Times New Roman",
+     "Times New Roman Italic",
+     "Times New Roman Bold",
+     "Times New Roman Bold Italic"
+    ],
+    "Trebuchet MS": [
+     "Trebuchet MS",
+     "Trebuchet MS Italic",
+     "Trebuchet MS Bold",
+     "Trebuchet MS Bold Italic"
+    ],
+    "Verdana": [
+     "Verdana",
+     "Verdana Italic",
+     "Verdana Bold",
+     "Verdana Bold Italic"
+    ],
+    "Webdings": [
+     "Webdings"
+    ],
+    "Wingdings": [
+     "Wingdings"
+    ],
+    "Yu Gothic": [
+     "Yu Gothic Light",
+     "Yu Gothic Regular",
+     "Yu Gothic Medium",
+     "Yu Gothic Bold",
+     "Yu Gothic UI Light",
+     "Yu Gothic UI Semilight",
+     "Yu Gothic UI Regular",
+     "Yu Gothic UI Semibold",
+     "Yu Gothic UI Bold"
+    ]
+   },
+   "korean": {
+    "Batang": [
+     "Batang",
+     "BatangChe"
+    ],
+    "Dotum": [
+     "Dotum",
+     "DotumChe"
+    ],
+    "Gulim": [
+     "Gulim",
+     "GulimChe"
+    ],
+    "Gungsuh": [
+     "Gungsuh",
+     "GungsuhChe"
+    ]
+   }
+  }
+ },
+ "measured": {
+  "on": "the owner's Windows PC: Microsoft Windows Server 2025 Standard 10.0.26100, ko-KR",
+  "how": "each listed file under C:\\Windows\\Fonts loaded into a System.Drawing PrivateFontCollection, every family's GetName(1033) and GetName(1042)",
+  "date": "2026-10-17",
+  "renamed": {
+   "Nirmala.ttf": "Nirmala.ttc",
+   "Nirmalab.ttf": "Nirmala.ttc",
+   "Nirmalas.ttf": "Nirmala.ttc",
+   "CascadiaCode Italic.ttf": "CascadiaCode.ttf",
+   "CascadiaMono Italic.ttf": "CascadiaMono.ttf"
+  },
+  "absent": [
+   "Batang.ttc",
+   "CascadiaCode Italic.ttf",
+   "CascadiaMono Italic.ttf",
+   "Holomdl2.ttf",
+   "Nirmala.ttf",
+   "Nirmalab.ttf",
+   "Nirmalas.ttf"
+  ]
+ },
+ "files": {
+  "Arial.ttf": [
+   "Arial"
+  ],
+  "Arialbd.ttf": [
+   "Arial"
+  ],
+  "Arialbi.ttf": [
+   "Arial"
+  ],
+  "Ariali.ttf": [
+   "Arial"
+  ],
+  "Ariblk.ttf": [
+   "Arial Black"
+  ],
+  "Bahnschrift.ttf": [
+   "Bahnschrift",
+   "Bahnschrift Condensed",
+   "Bahnschrift Light",
+   "Bahnschrift Light Condensed",
+   "Bahnschrift Light SemiCondensed",
+   "Bahnschrift SemiBold",
+   "Bahnschrift SemiBold Condensed",
+   "Bahnschrift SemiBold SemiConden",
+   "Bahnschrift SemiCondensed",
+   "Bahnschrift SemiLight",
+   "Bahnschrift SemiLight Condensed",
+   "Bahnschrift SemiLight SemiConde"
+  ],
+  "Calibri.ttf": [
+   "Calibri"
+  ],
+  "Calibrib.ttf": [
+   "Calibri"
+  ],
+  "Calibrii.ttf": [
+   "Calibri"
+  ],
+  "Calibril.ttf": [
+   "Calibri Light"
+  ],
+  "Calibrili.ttf": [
+   "Calibri Light"
+  ],
+  "Calibriz.ttf": [
+   "Calibri"
+  ],
+  "Cambria.ttc": [
+   "Cambria",
+   "Cambria Math"
+  ],
+  "Cambriab.ttf": [
+   "Cambria"
+  ],
+  "Cambriai.ttf": [
+   "Cambria"
+  ],
+  "Cambriaz.ttf": [
+   "Cambria"
+  ],
+  "Candara.ttf": [
+   "Candara"
+  ],
+  "Candarab.ttf": [
+   "Candara"
+  ],
+  "Candarai.ttf": [
+   "Candara"
+  ],
+  "Candaral.ttf": [
+   "Candara Light"
+  ],
+  "Candarali.ttf": [
+   "Candara Light"
+  ],
+  "Candaraz.ttf": [
+   "Candara"
+  ],
+  "CascadiaCode.ttf": [
+   "Cascadia Code",
+   "Cascadia Code ExtraLight",
+   "Cascadia Code Light",
+   "Cascadia Code SemiBold",
+   "Cascadia Code SemiLight"
+  ],
+  "CascadiaMono.ttf": [
+   "Cascadia Mono",
+   "Cascadia Mono ExtraLight",
+   "Cascadia Mono Light",
+   "Cascadia Mono SemiBold",
+   "Cascadia Mono SemiLight"
+  ],
+  "Comic.ttf": [
+   "Comic Sans MS"
+  ],
+  "Comicbd.ttf": [
+   "Comic Sans MS"
+  ],
+  "Comici.ttf": [
+   "Comic Sans MS"
+  ],
+  "Comicz.ttf": [
+   "Comic Sans MS"
+  ],
+  "Consola.ttf": [
+   "Consolas"
+  ],
+  "Consolab.ttf": [
+   "Consolas"
+  ],
+  "Consolai.ttf": [
+   "Consolas"
+  ],
+  "Consolaz.ttf": [
+   "Consolas"
+  ],
+  "Constan.ttf": [
+   "Constantia"
+  ],
+  "Constanb.ttf": [
+   "Constantia"
+  ],
+  "Constani.ttf": [
+   "Constantia"
+  ],
+  "Constanz.ttf": [
+   "Constantia"
+  ],
+  "Corbel.ttf": [
+   "Corbel"
+  ],
+  "Corbelb.ttf": [
+   "Corbel"
+  ],
+  "Corbeli.ttf": [
+   "Corbel"
+  ],
+  "Corbell.ttf": [
+   "Corbel Light"
+  ],
+  "Corbelli.ttf": [
+   "Corbel Light"
+  ],
+  "Corbelz.ttf": [
+   "Corbel"
+  ],
+  "Cour.ttf": [
+   "Courier New"
+  ],
+  "Courbd.ttf": [
+   "Courier New"
+  ],
+  "Courbi.ttf": [
+   "Courier New"
+  ],
+  "Couri.ttf": [
+   "Courier New"
+  ],
+  "Ebrima.ttf": [
+   "Ebrima"
+  ],
+  "Ebrimabd.ttf": [
+   "Ebrima"
+  ],
+  "Framd.ttf": [
+   "Franklin Gothic Medium"
+  ],
+  "Framdit.ttf": [
+   "Franklin Gothic Medium"
+  ],
+  "Gabriola.ttf": [
+   "Gabriola"
+  ],
+  "Gadugi.ttf": [
+   "Gadugi"
+  ],
+  "Gadugib.ttf": [
+   "Gadugi"
+  ],
+  "Georgia.ttf": [
+   "Georgia"
+  ],
+  "Georgiab.ttf": [
+   "Georgia"
+  ],
+  "Georgiai.ttf": [
+   "Georgia"
+  ],
+  "Georgiaz.ttf": [
+   "Georgia"
+  ],
+  "Gulim.ttc": [
+   "Gulim",
+   "굴림",
+   "GulimChe",
+   "굴림체",
+   "Dotum",
+   "돋움",
+   "DotumChe",
+   "돋움체"
+  ],
+  "Himalaya.ttf": [
+   "Microsoft Himalaya"
+  ],
+  "Impact.ttf": [
+   "Impact"
+  ],
+  "Inkfree.ttf": [
+   "Ink Free"
+  ],
+  "Javatext.ttf": [
+   "Javanese Text"
+  ],
+  "L_10646.ttf": [
+   "Lucida Sans Unicode"
+  ],
+  "Leelauib.ttf": [
+   "Leelawadee UI"
+  ],
+  "Leelawui.ttf": [
+   "Leelawadee UI"
+  ],
+  "Leeluisl.ttf": [
+   "Leelawadee UI Semilight"
+  ],
+  "Lucon.ttf": [
+   "Lucida Console"
+  ],
+  "Malgun.ttf": [
+   "Malgun Gothic",
+   "맑은 고딕"
+  ],
+  "Malgunbd.ttf": [
+   "Malgun Gothic",
+   "맑은 고딕"
+  ],
+  "Malgunsl.ttf": [
+   "Malgun Gothic Semilight",
+   "맑은 고딕 Semilight"
+  ],
+  "Marlett.ttf": [
+   "Marlett"
+  ],
+  "Micross.ttf": [
+   "Microsoft Sans Serif"
+  ],
+  "Mingliub.ttc": [
+   "MingLiU-ExtB",
+   "MingLiU_HKSCS-ExtB",
+   "MingLiU_MSCS-ExtB",
+   "PMingLiU-ExtB"
+  ],
+  "Mmrtext.ttf": [
+   "Myanmar Text"
+  ],
+  "Mmrtextb.ttf": [
+   "Myanmar Text"
+  ],
+  "Monbaiti.ttf": [
+   "Mongolian Baiti"
+  ],
+  "Msgothic.ttc": [
+   "MS Gothic",
+   "MS PGothic",
+   "MS UI Gothic"
+  ],
+  "Msjh.ttc": [
+   "Microsoft JhengHei",
+   "Microsoft JhengHei UI"
+  ],
+  "MSJHBD.ttc": [
+   "Microsoft JhengHei",
+   "Microsoft JhengHei UI"
+  ],
+  "Msjhl.ttc": [
+   "Microsoft JhengHei Light",
+   "Microsoft JhengHei UI Light"
+  ],
+  "Msyh.ttc": [
+   "Microsoft YaHei",
+   "Microsoft YaHei UI"
+  ],
+  "Msyhbd.ttc": [
+   "Microsoft YaHei",
+   "Microsoft YaHei UI"
+  ],
+  "Msyhl.ttc": [
+   "Microsoft YaHei Light",
+   "Microsoft YaHei UI Light"
+  ],
+  "Msyi.ttf": [
+   "Microsoft Yi Baiti"
+  ],
+  "Mvboli.ttf": [
+   "MV Boli"
+  ],
+  "Ntailu.ttf": [
+   "Microsoft New Tai Lue"
+  ],
+  "Ntailub.ttf": [
+   "Microsoft New Tai Lue"
+  ],
+  "Pala.ttf": [
+   "Palatino Linotype"
+  ],
+  "Palab.ttf": [
+   "Palatino Linotype"
+  ],
+  "Palabi.ttf": [
+   "Palatino Linotype"
+  ],
+  "Palai.ttf": [
+   "Palatino Linotype"
+  ],
+  "Phagspa.ttf": [
+   "Microsoft PhagsPa"
+  ],
+  "PhagsPaB.ttf": [
+   "Microsoft PhagsPa"
+  ],
+  "Segmdl2.ttf": [
+   "Segoe MDL2 Assets"
+  ],
+  "SegoeIcons.ttf": [
+   "Segoe Fluent Icons"
+  ],
+  "Segoepr.ttf": [
+   "Segoe Print"
+  ],
+  "Segoeprb.ttf": [
+   "Segoe Print"
+  ],
+  "Segoesc.ttf": [
+   "Segoe Script"
+  ],
+  "Segoescb.ttf": [
+   "Segoe Script"
+  ],
+  "Segoeui.ttf": [
+   "Segoe UI"
+  ],
+  "Segoeuib.ttf": [
+   "Segoe UI"
+  ],
+  "Segoeuii.ttf": [
+   "Segoe UI"
+  ],
+  "Segoeuil.ttf": [
+   "Segoe UI Light"
+  ],
+  "Segoeuisl.ttf": [
+   "Segoe UI Semilight"
+  ],
+  "Segoeuiz.ttf": [
+   "Segoe UI"
+  ],
+  "Seguibl.ttf": [
+   "Segoe UI Black"
+  ],
+  "Seguibli.ttf": [
+   "Segoe UI Black"
+  ],
+  "Seguiemj.ttf": [
+   "Segoe UI Emoji"
+  ],
+  "Seguihis.ttf": [
+   "Segoe UI Historic"
+  ],
+  "Seguili.ttf": [
+   "Segoe UI Light"
+  ],
+  "Seguisb.ttf": [
+   "Segoe UI Semibold"
+  ],
+  "Seguisbi.ttf": [
+   "Segoe UI Semibold"
+  ],
+  "Seguisli.ttf": [
+   "Segoe UI Semilight"
+  ],
+  "Seguisym.ttf": [
+   "Segoe UI Symbol"
+  ],
+  "SegUIVar.ttf": [
+   "Segoe UI Variable Display",
+   "Segoe UI Variable Display Light",
+   "Segoe UI Variable Display Semib",
+   "Segoe UI Variable Display Semil",
+   "Segoe UI Variable Small",
+   "Segoe UI Variable Small Light",
+   "Segoe UI Variable Small Semibol",
+   "Segoe UI Variable Small Semilig",
+   "Segoe UI Variable Text",
+   "Segoe UI Variable Text Light",
+   "Segoe UI Variable Text Semibold",
+   "Segoe UI Variable Text Semiligh"
+  ],
+  "Simsun.ttc": [
+   "NSimSun",
+   "SimSun"
+  ],
+  "Simsunb.ttf": [
+   "SimSun-ExtB"
+  ],
+  "SitkaVF-Italic.ttf": [
+   "Sitka Banner",
+   "Sitka Banner Semibold",
+   "Sitka Display",
+   "Sitka Display Semibold",
+   "Sitka Heading",
+   "Sitka Heading Semibold",
+   "Sitka Small",
+   "Sitka Small Semibold",
+   "Sitka Subheading",
+   "Sitka Subheading Semibold",
+   "Sitka Text",
+   "Sitka Text Semibold"
+  ],
+  "SitkaVF.ttf": [
+   "Sitka Banner",
+   "Sitka Banner Semibold",
+   "Sitka Display",
+   "Sitka Display Semibold",
+   "Sitka Heading",
+   "Sitka Heading Semibold",
+   "Sitka Small",
+   "Sitka Small Semibold",
+   "Sitka Subheading",
+   "Sitka Subheading Semibold",
+   "Sitka Text",
+   "Sitka Text Semibold"
+  ],
+  "Sylfaen.ttf": [
+   "Sylfaen"
+  ],
+  "Symbol.ttf": [
+   "Symbol"
+  ],
+  "Tahoma.ttf": [
+   "Tahoma"
+  ],
+  "Tahomabd.ttf": [
+   "Tahoma"
+  ],
+  "Taile.ttf": [
+   "Microsoft Tai Le"
+  ],
+  "TaiLeb.ttf": [
+   "Microsoft Tai Le"
+  ],
+  "Times.ttf": [
+   "Times New Roman"
+  ],
+  "Timesbd.ttf": [
+   "Times New Roman"
+  ],
+  "Timesbi.ttf": [
+   "Times New Roman"
+  ],
+  "Timesi.ttf": [
+   "Times New Roman"
+  ],
+  "Trebuc.ttf": [
+   "Trebuchet MS"
+  ],
+  "Trebucbd.ttf": [
+   "Trebuchet MS"
+  ],
+  "Trebucbi.ttf": [
+   "Trebuchet MS"
+  ],
+  "Trebucit.ttf": [
+   "Trebuchet MS"
+  ],
+  "Verdana.ttf": [
+   "Verdana"
+  ],
+  "Verdanab.ttf": [
+   "Verdana"
+  ],
+  "Verdanai.ttf": [
+   "Verdana"
+  ],
+  "Verdanaz.ttf": [
+   "Verdana"
+  ],
+  "Webdings.ttf": [
+   "Webdings"
+  ],
+  "Wingding.ttf": [
+   "Wingdings"
+  ],
+  "YuGothB.ttc": [
+   "Yu Gothic",
+   "Yu Gothic UI",
+   "Yu Gothic UI Semibold"
+  ],
+  "YuGothL.ttc": [
+   "Yu Gothic Light",
+   "Yu Gothic UI Light"
+  ],
+  "Yugothm.ttc": [
+   "Yu Gothic Medium",
+   "Yu Gothic UI"
+  ],
+  "YuGothR.ttc": [
+   "Yu Gothic",
+   "Yu Gothic UI Semilight"
+  ],
+  "Nirmala.ttc": [
+   "Nirmala Text",
+   "Nirmala Text Semilight",
+   "Nirmala UI",
+   "Nirmala UI Semilight"
+  ]
+ },
+ "alternates": {
+  "_note": "Blink's AlternateFamilyName (third_party/blink/renderer/platform/fonts/alternate_font_family.h): a name Chrome answers with another family's font, on Windows too",
+  "Courier": "Courier New",
+  "Times": "Times New Roman",
+  "Times New Roman": "Times",
+  "Helvetica": "Arial",
+  "Arial": "Helvetica"
+ }
+}

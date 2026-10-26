@@ -1,0 +1,2035 @@
+{
+ "chrome": "150.0.7871.46",
+ "pairs": {
+  "header/log": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "log"
+  },
+  "header/none": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "none"
+  },
+  "header/partial": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "partial"
+  },
+  "header/nul": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "nul"
+  },
+  "header/thr": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "thr"
+  },
+  "header/child": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "child"
+  },
+  "report-only/log": {
+   "header": [
+    "Content-Security-Policy-Report-Only",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "log"
+  },
+  "report-only/none": {
+   "header": [
+    "Content-Security-Policy-Report-Only",
+    "require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "none"
+  },
+  "meta/log": {
+   "header": null,
+   "meta": "require-trusted-types-for 'script'",
+   "case": "log"
+  },
+  "meta/none": {
+   "header": null,
+   "meta": "require-trusted-types-for 'script'",
+   "case": "none"
+  },
+  "nocsp/log": {
+   "header": null,
+   "meta": null,
+   "case": "log"
+  },
+  "names": {
+   "header": [
+    "Content-Security-Policy",
+    "trusted-types a default; require-trusted-types-for 'script'"
+   ],
+   "meta": null,
+   "case": "names"
+  },
+  "dupes": {
+   "header": null,
+   "meta": null,
+   "case": "dupes"
+  },
+  "evalmsg/script-src": {
+   "header": [
+    "Content-Security-Policy",
+    "script-src 'unsafe-inline' 'self'"
+   ],
+   "meta": null,
+   "case": "evalmsg"
+  },
+  "evalmsg/default-src": {
+   "header": [
+    "Content-Security-Policy",
+    "default-src 'self' 'unsafe-inline'"
+   ],
+   "meta": null,
+   "case": "evalmsg"
+  },
+  "evalmsg/tt": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'; script-src 'unsafe-inline' 'unsafe-eval'"
+   ],
+   "meta": null,
+   "case": "evalmsg"
+  },
+  "srcdoc": {
+   "header": [
+    "Content-Security-Policy",
+    "require-trusted-types-for 'script'; script-src 'unsafe-inline' 'unsafe-eval'"
+   ],
+   "meta": null,
+   "case": "srcdoc"
+  }
+ },
+ "answers": {
+  "header/log": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "createHTML(<b>a</b>|TrustedHTML|Element innerHTML)",
+    "<b>a</b>#"
+   ],
+   [
+    "innerHTML = null",
+    "createHTML(|TrustedHTML|Element innerHTML)",
+    "#"
+   ],
+   [
+    "outerHTML",
+    "createHTML(<p>o</p>|TrustedHTML|Element outerHTML)",
+    "<p>o</p>#"
+   ],
+   [
+    "insertAdjacentHTML",
+    "createHTML(<u>x</u>|TrustedHTML|Element insertAdjacentHTML)",
+    "<u>x</u>#"
+   ],
+   [
+    "setHTMLUnsafe",
+    "createHTML(<s>u</s>|TrustedHTML|Element setHTMLUnsafe)",
+    "<s>u</s>#"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "createHTML(<em>r</em>|TrustedHTML|ShadowRoot innerHTML)",
+    "<em>r</em>#"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "createHTML(<em>s</em>|TrustedHTML|ShadowRoot setHTMLUnsafe)",
+    "<em>s</em>#"
+   ],
+   [
+    "iframe.srcdoc",
+    "createHTML(<p>d</p>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<p>d</p>#"
+   ],
+   [
+    "Range.createContextualFragment",
+    "createHTML(<a>f</a>|TrustedHTML|Range createContextualFragment)",
+    "2:f#"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "createHTML(<p>z</p>|TrustedHTML|DOMParser parseFromString)",
+    "<p>z</p>#"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "createHTML(<p>q</p>|TrustedHTML|Document parseHTMLUnsafe)",
+    "<p>q</p>#"
+   ],
+   [
+    "document.write (a new document)",
+    "createHTML(<p>w</p>|TrustedHTML|Document write)",
+    "<p>w</p>#"
+   ],
+   [
+    "script.src",
+    "createScriptURL(/nothing.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/nothing.js#"
+   ],
+   [
+    "script.text",
+    "createScript(var t1 = 1;|TrustedScript|HTMLScriptElement text)",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "createScript(var t2 = 2;|TrustedScript|HTMLScriptElement textContent)",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "createScript(var t3 = 3;|TrustedScript|HTMLScriptElement innerText)",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "createScriptURL(/sa.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/sa.js#"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "createHTML(<i>sd</i>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<i>sd</i>#"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript(go()|TrustedScript|Element onclick)",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "createScriptURL(/ns.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/ns.js#"
+   ],
+   [
+    "Attr.value (script src)",
+    "createScriptURL(|TrustedScriptURL|HTMLScriptElement src) ; createScriptURL(/av.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av.js#"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "createScriptURL(/av2.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av2.js#"
+   ],
+   [
+    "embed.src",
+    "createScriptURL(/e.bin|TrustedScriptURL|HTMLEmbedElement src)",
+    "/e.bin#"
+   ],
+   [
+    "object.data",
+    "createScriptURL(/o.bin|TrustedScriptURL|HTMLObjectElement data)",
+    "/o.bin#"
+   ],
+   [
+    "object.codeBase",
+    "createScriptURL(/cb/|TrustedScriptURL|HTMLObjectElement codeBase)",
+    "/cb/#"
+   ],
+   [
+    "svg script href.baseVal",
+    "createScriptURL(/svg.js|TrustedScriptURL|SVGScriptElement href)",
+    "/svg.js#"
+   ],
+   [
+    "new Worker(string)",
+    "createScriptURL(/w.js|TrustedScriptURL|Worker constructor)",
+    "made"
+   ],
+   [
+    "setTimeout(string)",
+    "createScript(window.__t = 1|TrustedScript|Window setTimeout)",
+    "number"
+   ],
+   [
+    "eval",
+    "createScript(1+1|TrustedScript|eval)",
+    "2"
+   ]
+  ],
+  "header/none": [
+   [
+    "default policy",
+    "",
+    "none"
+   ],
+   [
+    "innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "innerHTML = null",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "outerHTML",
+    "",
+    "threw TypeError: Failed to set the 'outerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "insertAdjacentHTML",
+    "",
+    "threw TypeError: Failed to execute 'insertAdjacentHTML' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'ShadowRoot': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'ShadowRoot': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "iframe.srcdoc",
+    "",
+    "threw TypeError: Failed to set the 'srcdoc' property on 'HTMLIFrameElement': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "Range.createContextualFragment",
+    "",
+    "threw TypeError: Failed to execute 'createContextualFragment' on 'Range': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "DOMParser.parseFromString",
+    "",
+    "threw TypeError: Failed to execute 'parseFromString' on 'DOMParser': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'parseHTMLUnsafe' on 'Document': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "document.write (a new document)",
+    "",
+    "threw TypeError: Failed to execute 'write' on 'Document': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "script.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLScriptElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "script.text",
+    "",
+    "threw TypeError: Failed to set the 'text' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.textContent",
+    "",
+    "threw TypeError: Failed to set the 'textContent' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.innerText",
+    "",
+    "threw TypeError: Failed to set the 'innerText' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNS' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "Attr.value (script src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNode' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "",
+    "threw TypeError: Failed to set the 'value' property on 'Attr': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "embed.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLEmbedElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "object.data",
+    "",
+    "threw TypeError: Failed to set the 'data' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "object.codeBase",
+    "",
+    "threw TypeError: Failed to set the 'codeBase' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "svg script href.baseVal",
+    "",
+    "threw TypeError: Failed to set the 'baseVal' property on 'SVGAnimatedString': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "new Worker(string)",
+    "",
+    "threw TypeError: Failed to construct 'Worker': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "threw TypeError: Failed to execute 'setTimeout' on 'Window': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "eval",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ]
+  ],
+  "header/partial": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "innerHTML = null",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "outerHTML",
+    "",
+    "threw TypeError: Failed to set the 'outerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "insertAdjacentHTML",
+    "",
+    "threw TypeError: Failed to execute 'insertAdjacentHTML' on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'ShadowRoot': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'ShadowRoot': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "iframe.srcdoc",
+    "",
+    "threw TypeError: Failed to set the 'srcdoc' property on 'HTMLIFrameElement': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "Range.createContextualFragment",
+    "",
+    "threw TypeError: Failed to execute 'createContextualFragment' on 'Range': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "DOMParser.parseFromString",
+    "",
+    "threw TypeError: Failed to execute 'parseFromString' on 'DOMParser': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'parseHTMLUnsafe' on 'Document': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "document.write (a new document)",
+    "",
+    "threw TypeError: Failed to execute 'write' on 'Document': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "script.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLScriptElement': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "script.text",
+    "createScript(var t1 = 1;|TrustedScript|HTMLScriptElement text)",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "createScript(var t2 = 2;|TrustedScript|HTMLScriptElement textContent)",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "createScript(var t3 = 3;|TrustedScript|HTMLScriptElement innerText)",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedHTML' assignment and no 'default' policy for 'TrustedHTML' has been defined."
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript(go()|TrustedScript|Element onclick)",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNS' on 'Element': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "Attr.value (script src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNode' on 'Element': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "",
+    "threw TypeError: Failed to set the 'value' property on 'Attr': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "embed.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLEmbedElement': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "object.data",
+    "",
+    "threw TypeError: Failed to set the 'data' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "object.codeBase",
+    "",
+    "threw TypeError: Failed to set the 'codeBase' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "svg script href.baseVal",
+    "",
+    "threw TypeError: Failed to set the 'baseVal' property on 'SVGAnimatedString': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "new Worker(string)",
+    "",
+    "threw TypeError: Failed to construct 'Worker': This document requires 'TrustedScriptURL' assignment and no 'default' policy for 'TrustedScriptURL' has been defined."
+   ],
+   [
+    "setTimeout(string)",
+    "createScript(window.__t = 1|TrustedScript|Window setTimeout)",
+    "number"
+   ],
+   [
+    "eval",
+    "createScript(1+1|TrustedScript|eval)",
+    "2"
+   ]
+  ],
+  "header/nul": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "createHTML",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "innerHTML = null",
+    "createHTML",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "outerHTML",
+    "createHTML",
+    "threw TypeError: Failed to set the 'outerHTML' property on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "insertAdjacentHTML",
+    "createHTML",
+    "threw TypeError: Failed to execute 'insertAdjacentHTML' on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "setHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "createHTML",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'ShadowRoot': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'ShadowRoot': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "iframe.srcdoc",
+    "createHTML",
+    "threw TypeError: Failed to set the 'srcdoc' property on 'HTMLIFrameElement': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "Range.createContextualFragment",
+    "createHTML",
+    "threw TypeError: Failed to execute 'createContextualFragment' on 'Range': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "DOMParser.parseFromString",
+    "createHTML",
+    "threw TypeError: Failed to execute 'parseFromString' on 'DOMParser': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: Failed to execute 'parseHTMLUnsafe' on 'Document': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "document.write (a new document)",
+    "createHTML",
+    "threw TypeError: Failed to execute 'write' on 'Document': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "script.src",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLScriptElement': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "script.text",
+    "createScript",
+    "threw TypeError: Failed to set the 'text' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "script.textContent",
+    "createScript",
+    "threw TypeError: Failed to set the 'textContent' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "script.innerText",
+    "createScript",
+    "threw TypeError: Failed to set the 'innerText' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "createScriptURL",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "createHTML",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedHTML' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScript' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "createScriptURL",
+    "threw TypeError: Failed to execute 'setAttributeNS' on 'Element': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "Attr.value (script src)",
+    "createScriptURL",
+    "threw TypeError: Failed to execute 'setAttributeNode' on 'Element': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'value' property on 'Attr': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "embed.src",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLEmbedElement': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "object.data",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'data' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "object.codeBase",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'codeBase' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "svg script href.baseVal",
+    "createScriptURL",
+    "threw TypeError: Failed to set the 'baseVal' property on 'SVGAnimatedString': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "new Worker(string)",
+    "createScriptURL",
+    "threw TypeError: Failed to construct 'Worker': This document requires 'TrustedScriptURL' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "setTimeout(string)",
+    "createScript",
+    "threw TypeError: Failed to execute 'setTimeout' on 'Window': This document requires 'TrustedScript' assignment and the 'default' policy failed to execute."
+   ],
+   [
+    "eval",
+    "createScript",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ]
+  ],
+  "header/thr": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "innerHTML = null",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "outerHTML",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "insertAdjacentHTML",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "setHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "iframe.srcdoc",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "Range.createContextualFragment",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "document.write (a new document)",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "script.src",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "script.text",
+    "createScript",
+    "threw TypeError: pol"
+   ],
+   [
+    "script.textContent",
+    "createScript",
+    "threw TypeError: pol"
+   ],
+   [
+    "script.innerText",
+    "createScript",
+    "threw TypeError: pol"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "createHTML",
+    "threw TypeError: pol"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript",
+    "threw TypeError: pol"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "Attr.value (script src)",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "embed.src",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "object.data",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "object.codeBase",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "svg script href.baseVal",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "new Worker(string)",
+    "createScriptURL",
+    "threw TypeError: pol"
+   ],
+   [
+    "setTimeout(string)",
+    "createScript",
+    "threw TypeError: pol"
+   ],
+   [
+    "eval",
+    "createScript",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ]
+  ],
+  "header/child": [
+   [
+    "child: createPolicy(default)",
+    "",
+    "default"
+   ],
+   [
+    "child div.innerHTML",
+    "createHTML(<b>t</b>|TrustedHTML|Element innerHTML)",
+    ""
+   ],
+   [
+    "child eval",
+    "createScript(0|TrustedScript|eval)",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ],
+   [
+    "child script.src",
+    "createScriptURL(data:,0|TrustedScriptURL|HTMLScriptElement src)",
+    "about:blank"
+   ],
+   [
+    "child setTimeout(string)",
+    "createScript(0|TrustedScript|Window setTimeout)",
+    "number"
+   ],
+   [
+    "child setAttribute(onclick)",
+    "createScript(x()|TrustedScript|Element onclick)",
+    ""
+   ],
+   [
+    "parent div.innerHTML (no parent default policy)",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "parent-made div moved into the child",
+    "createHTML(<b>m</b>|TrustedHTML|Element innerHTML)",
+    ""
+   ],
+   [
+    "child-made div moved into the parent",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "child Element.prototype.innerHTML setter on a parent div",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "srcdoc on the parent (no parent default policy)",
+    "",
+    "threw TypeError: Failed to set the 'srcdoc' property on 'HTMLIFrameElement': This document requires 'TrustedHTML' assignment."
+   ]
+  ],
+  "report-only/log": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "createHTML(<b>a</b>|TrustedHTML|Element innerHTML)",
+    "<b>a</b>#"
+   ],
+   [
+    "innerHTML = null",
+    "createHTML(|TrustedHTML|Element innerHTML)",
+    "#"
+   ],
+   [
+    "outerHTML",
+    "createHTML(<p>o</p>|TrustedHTML|Element outerHTML)",
+    "<p>o</p>#"
+   ],
+   [
+    "insertAdjacentHTML",
+    "createHTML(<u>x</u>|TrustedHTML|Element insertAdjacentHTML)",
+    "<u>x</u>#"
+   ],
+   [
+    "setHTMLUnsafe",
+    "createHTML(<s>u</s>|TrustedHTML|Element setHTMLUnsafe)",
+    "<s>u</s>#"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "createHTML(<em>r</em>|TrustedHTML|ShadowRoot innerHTML)",
+    "<em>r</em>#"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "createHTML(<em>s</em>|TrustedHTML|ShadowRoot setHTMLUnsafe)",
+    "<em>s</em>#"
+   ],
+   [
+    "iframe.srcdoc",
+    "createHTML(<p>d</p>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<p>d</p>#"
+   ],
+   [
+    "Range.createContextualFragment",
+    "createHTML(<a>f</a>|TrustedHTML|Range createContextualFragment)",
+    "2:f#"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "createHTML(<p>z</p>|TrustedHTML|DOMParser parseFromString)",
+    "<p>z</p>#"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "createHTML(<p>q</p>|TrustedHTML|Document parseHTMLUnsafe)",
+    "<p>q</p>#"
+   ],
+   [
+    "document.write (a new document)",
+    "createHTML(<p>w</p>|TrustedHTML|Document write)",
+    "<p>w</p>#"
+   ],
+   [
+    "script.src",
+    "createScriptURL(/nothing.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/nothing.js#"
+   ],
+   [
+    "script.text",
+    "createScript(var t1 = 1;|TrustedScript|HTMLScriptElement text)",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "createScript(var t2 = 2;|TrustedScript|HTMLScriptElement textContent)",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "createScript(var t3 = 3;|TrustedScript|HTMLScriptElement innerText)",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "createScriptURL(/sa.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/sa.js#"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "createHTML(<i>sd</i>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<i>sd</i>#"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript(go()|TrustedScript|Element onclick)",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "createScriptURL(/ns.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/ns.js#"
+   ],
+   [
+    "Attr.value (script src)",
+    "createScriptURL(|TrustedScriptURL|HTMLScriptElement src) ; createScriptURL(/av.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av.js#"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "createScriptURL(/av2.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av2.js#"
+   ],
+   [
+    "embed.src",
+    "createScriptURL(/e.bin|TrustedScriptURL|HTMLEmbedElement src)",
+    "/e.bin#"
+   ],
+   [
+    "object.data",
+    "createScriptURL(/o.bin|TrustedScriptURL|HTMLObjectElement data)",
+    "/o.bin#"
+   ],
+   [
+    "object.codeBase",
+    "createScriptURL(/cb/|TrustedScriptURL|HTMLObjectElement codeBase)",
+    "/cb/#"
+   ],
+   [
+    "svg script href.baseVal",
+    "createScriptURL(/svg.js|TrustedScriptURL|SVGScriptElement href)",
+    "/svg.js#"
+   ],
+   [
+    "new Worker(string)",
+    "createScriptURL(/w.js|TrustedScriptURL|Worker constructor)",
+    "made"
+   ],
+   [
+    "setTimeout(string)",
+    "createScript(window.__t = 1|TrustedScript|Window setTimeout)",
+    "number"
+   ],
+   [
+    "eval",
+    "createScript(1+1|TrustedScript|eval)",
+    "2"
+   ]
+  ],
+  "report-only/none": [
+   [
+    "default policy",
+    "",
+    "none"
+   ],
+   [
+    "innerHTML",
+    "",
+    "<b>a</b>"
+   ],
+   [
+    "innerHTML = null",
+    "",
+    ""
+   ],
+   [
+    "outerHTML",
+    "",
+    "<p>o</p>"
+   ],
+   [
+    "insertAdjacentHTML",
+    "",
+    "<u>x</u>"
+   ],
+   [
+    "setHTMLUnsafe",
+    "",
+    "<s>u</s>"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "",
+    "<em>r</em>"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "",
+    "<em>s</em>"
+   ],
+   [
+    "iframe.srcdoc",
+    "",
+    "<p>d</p>"
+   ],
+   [
+    "Range.createContextualFragment",
+    "",
+    "1:f"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "",
+    "<p>z</p>"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "",
+    "<p>q</p>"
+   ],
+   [
+    "document.write (a new document)",
+    "",
+    "<p>w</p>"
+   ],
+   [
+    "script.src",
+    "",
+    "/nothing.js"
+   ],
+   [
+    "script.text",
+    "",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "",
+    "/sa.js"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "",
+    "<i>sd</i>"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "",
+    "/ns.js"
+   ],
+   [
+    "Attr.value (script src)",
+    "",
+    "/av.js"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "",
+    "/av2.js"
+   ],
+   [
+    "embed.src",
+    "",
+    "/e.bin"
+   ],
+   [
+    "object.data",
+    "",
+    "/o.bin"
+   ],
+   [
+    "object.codeBase",
+    "",
+    "/cb/"
+   ],
+   [
+    "svg script href.baseVal",
+    "",
+    "/svg.js"
+   ],
+   [
+    "new Worker(string)",
+    "",
+    "made"
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "number"
+   ],
+   [
+    "eval",
+    "",
+    "2"
+   ]
+  ],
+  "meta/log": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "createHTML(<b>a</b>|TrustedHTML|Element innerHTML)",
+    "<b>a</b>#"
+   ],
+   [
+    "innerHTML = null",
+    "createHTML(|TrustedHTML|Element innerHTML)",
+    "#"
+   ],
+   [
+    "outerHTML",
+    "createHTML(<p>o</p>|TrustedHTML|Element outerHTML)",
+    "<p>o</p>#"
+   ],
+   [
+    "insertAdjacentHTML",
+    "createHTML(<u>x</u>|TrustedHTML|Element insertAdjacentHTML)",
+    "<u>x</u>#"
+   ],
+   [
+    "setHTMLUnsafe",
+    "createHTML(<s>u</s>|TrustedHTML|Element setHTMLUnsafe)",
+    "<s>u</s>#"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "createHTML(<em>r</em>|TrustedHTML|ShadowRoot innerHTML)",
+    "<em>r</em>#"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "createHTML(<em>s</em>|TrustedHTML|ShadowRoot setHTMLUnsafe)",
+    "<em>s</em>#"
+   ],
+   [
+    "iframe.srcdoc",
+    "createHTML(<p>d</p>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<p>d</p>#"
+   ],
+   [
+    "Range.createContextualFragment",
+    "createHTML(<a>f</a>|TrustedHTML|Range createContextualFragment)",
+    "2:f#"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "createHTML(<p>z</p>|TrustedHTML|DOMParser parseFromString)",
+    "<p>z</p>#"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "createHTML(<p>q</p>|TrustedHTML|Document parseHTMLUnsafe)",
+    "<p>q</p>#"
+   ],
+   [
+    "document.write (a new document)",
+    "createHTML(<p>w</p>|TrustedHTML|Document write)",
+    "<p>w</p>#"
+   ],
+   [
+    "script.src",
+    "createScriptURL(/nothing.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/nothing.js#"
+   ],
+   [
+    "script.text",
+    "createScript(var t1 = 1;|TrustedScript|HTMLScriptElement text)",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "createScript(var t2 = 2;|TrustedScript|HTMLScriptElement textContent)",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "createScript(var t3 = 3;|TrustedScript|HTMLScriptElement innerText)",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "createScriptURL(/sa.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/sa.js#"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "createHTML(<i>sd</i>|TrustedHTML|HTMLIFrameElement srcdoc)",
+    "<i>sd</i>#"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "createScript(go()|TrustedScript|Element onclick)",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "createScriptURL(/ns.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/ns.js#"
+   ],
+   [
+    "Attr.value (script src)",
+    "createScriptURL(|TrustedScriptURL|HTMLScriptElement src) ; createScriptURL(/av.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av.js#"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "createScriptURL(/av2.js|TrustedScriptURL|HTMLScriptElement src)",
+    "/av2.js#"
+   ],
+   [
+    "embed.src",
+    "createScriptURL(/e.bin|TrustedScriptURL|HTMLEmbedElement src)",
+    "/e.bin#"
+   ],
+   [
+    "object.data",
+    "createScriptURL(/o.bin|TrustedScriptURL|HTMLObjectElement data)",
+    "/o.bin#"
+   ],
+   [
+    "object.codeBase",
+    "createScriptURL(/cb/|TrustedScriptURL|HTMLObjectElement codeBase)",
+    "/cb/#"
+   ],
+   [
+    "svg script href.baseVal",
+    "createScriptURL(/svg.js|TrustedScriptURL|SVGScriptElement href)",
+    "/svg.js#"
+   ],
+   [
+    "new Worker(string)",
+    "createScriptURL(/w.js|TrustedScriptURL|Worker constructor)",
+    "made"
+   ],
+   [
+    "setTimeout(string)",
+    "createScript(window.__t = 1|TrustedScript|Window setTimeout)",
+    "number"
+   ],
+   [
+    "eval",
+    "createScript(1+1|TrustedScript|eval)",
+    "2"
+   ]
+  ],
+  "meta/none": [
+   [
+    "default policy",
+    "",
+    "none"
+   ],
+   [
+    "innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "innerHTML = null",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "outerHTML",
+    "",
+    "threw TypeError: Failed to set the 'outerHTML' property on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "insertAdjacentHTML",
+    "",
+    "threw TypeError: Failed to execute 'insertAdjacentHTML' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "",
+    "threw TypeError: Failed to set the 'innerHTML' property on 'ShadowRoot': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'setHTMLUnsafe' on 'ShadowRoot': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "iframe.srcdoc",
+    "",
+    "threw TypeError: Failed to set the 'srcdoc' property on 'HTMLIFrameElement': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "Range.createContextualFragment",
+    "",
+    "threw TypeError: Failed to execute 'createContextualFragment' on 'Range': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "DOMParser.parseFromString",
+    "",
+    "threw TypeError: Failed to execute 'parseFromString' on 'DOMParser': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "",
+    "threw TypeError: Failed to execute 'parseHTMLUnsafe' on 'Document': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "document.write (a new document)",
+    "",
+    "threw TypeError: Failed to execute 'write' on 'Document': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "script.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLScriptElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "script.text",
+    "",
+    "threw TypeError: Failed to set the 'text' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.textContent",
+    "",
+    "threw TypeError: Failed to set the 'textContent' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.innerText",
+    "",
+    "threw TypeError: Failed to set the 'innerText' property on 'HTMLScriptElement': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedHTML' assignment."
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "",
+    "threw TypeError: Failed to execute 'setAttribute' on 'Element': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNS' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "Attr.value (script src)",
+    "",
+    "threw TypeError: Failed to execute 'setAttributeNode' on 'Element': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "",
+    "threw TypeError: Failed to set the 'value' property on 'Attr': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "embed.src",
+    "",
+    "threw TypeError: Failed to set the 'src' property on 'HTMLEmbedElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "object.data",
+    "",
+    "threw TypeError: Failed to set the 'data' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "object.codeBase",
+    "",
+    "threw TypeError: Failed to set the 'codeBase' property on 'HTMLObjectElement': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "svg script href.baseVal",
+    "",
+    "threw TypeError: Failed to set the 'baseVal' property on 'SVGAnimatedString': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "new Worker(string)",
+    "",
+    "threw TypeError: Failed to construct 'Worker': This document requires 'TrustedScriptURL' assignment."
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "threw TypeError: Failed to execute 'setTimeout' on 'Window': This document requires 'TrustedScript' assignment."
+   ],
+   [
+    "eval",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ]
+  ],
+  "nocsp/log": [
+   [
+    "default policy",
+    "",
+    "default"
+   ],
+   [
+    "innerHTML",
+    "",
+    "<b>a</b>"
+   ],
+   [
+    "innerHTML = null",
+    "",
+    ""
+   ],
+   [
+    "outerHTML",
+    "",
+    "<p>o</p>"
+   ],
+   [
+    "insertAdjacentHTML",
+    "",
+    "<u>x</u>"
+   ],
+   [
+    "setHTMLUnsafe",
+    "",
+    "<s>u</s>"
+   ],
+   [
+    "shadowRoot.innerHTML",
+    "",
+    "<em>r</em>"
+   ],
+   [
+    "shadowRoot.setHTMLUnsafe",
+    "",
+    "<em>s</em>"
+   ],
+   [
+    "iframe.srcdoc",
+    "",
+    "<p>d</p>"
+   ],
+   [
+    "Range.createContextualFragment",
+    "",
+    "1:f"
+   ],
+   [
+    "DOMParser.parseFromString",
+    "",
+    "<p>z</p>"
+   ],
+   [
+    "Document.parseHTMLUnsafe",
+    "",
+    "<p>q</p>"
+   ],
+   [
+    "document.write (a new document)",
+    "",
+    "<p>w</p>"
+   ],
+   [
+    "script.src",
+    "",
+    "/nothing.js"
+   ],
+   [
+    "script.text",
+    "",
+    "var t1 = 1;"
+   ],
+   [
+    "script.textContent",
+    "",
+    "var t2 = 2;"
+   ],
+   [
+    "script.innerText",
+    "",
+    "var t3 = 3;"
+   ],
+   [
+    "script.append(string)",
+    "",
+    "var t4 = 4;"
+   ],
+   [
+    "script.appendChild(text)",
+    "",
+    "var t5 = 5;"
+   ],
+   [
+    "div.textContent",
+    "",
+    "tc"
+   ],
+   [
+    "setAttribute(script, src)",
+    "",
+    "/sa.js"
+   ],
+   [
+    "setAttribute(iframe, srcdoc)",
+    "",
+    "<i>sd</i>"
+   ],
+   [
+    "setAttribute(div, onclick)",
+    "",
+    "go()"
+   ],
+   [
+    "setAttribute(div, data-x)",
+    "",
+    "dx"
+   ],
+   [
+    "setAttributeNS(null, script, src)",
+    "",
+    "/ns.js"
+   ],
+   [
+    "Attr.value (script src)",
+    "",
+    "/av.js"
+   ],
+   [
+    "Attr.value (an attached script src)",
+    "",
+    "/av2.js"
+   ],
+   [
+    "embed.src",
+    "",
+    "/e.bin"
+   ],
+   [
+    "object.data",
+    "",
+    "/o.bin"
+   ],
+   [
+    "object.codeBase",
+    "",
+    "/cb/"
+   ],
+   [
+    "svg script href.baseVal",
+    "",
+    "/svg.js"
+   ],
+   [
+    "new Worker(string)",
+    "",
+    "made"
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "number"
+   ],
+   [
+    "eval",
+    "",
+    "2"
+   ]
+  ],
+  "names": [
+   [
+    "createPolicy(a)",
+    "",
+    "a"
+   ],
+   [
+    "createPolicy(a) again",
+    "",
+    "threw TypeError: Failed to execute 'createPolicy' on 'TrustedTypePolicyFactory': Policy with name \"a\" already exists."
+   ],
+   [
+    "createPolicy(b)",
+    "",
+    "threw TypeError: Failed to execute 'createPolicy' on 'TrustedTypePolicyFactory': Policy \"b\" disallowed."
+   ],
+   [
+    "createPolicy(default)",
+    "",
+    "default"
+   ],
+   [
+    "createPolicy(default) again",
+    "",
+    "threw TypeError: Failed to execute 'createPolicy' on 'TrustedTypePolicyFactory': Policy with name \"default\" already exists."
+   ]
+  ],
+  "dupes": [
+   [
+    "createPolicy(default)",
+    "",
+    "default"
+   ],
+   [
+    "createPolicy(default) again",
+    "",
+    "threw TypeError: Failed to execute 'createPolicy' on 'TrustedTypePolicyFactory': Policy with name \"default\" already exists."
+   ],
+   [
+    "createPolicy(x)",
+    "",
+    "x"
+   ],
+   [
+    "createPolicy(x) again",
+    "",
+    "x"
+   ]
+  ],
+  "evalmsg/script-src": [
+   [
+    "eval",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'unsafe-inline' 'self'\".\n"
+   ],
+   [
+    "new Function",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'unsafe-inline' 'self'\".\n"
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "0"
+   ]
+  ],
+  "evalmsg/default-src": [
+   [
+    "eval",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: default-src 'self' 'unsafe-inline'\".\n"
+   ],
+   [
+    "new Function",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: default-src 'self' 'unsafe-inline'\".\n"
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "0"
+   ]
+  ],
+  "evalmsg/tt": [
+   [
+    "eval",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ],
+   [
+    "new Function",
+    "",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ],
+   [
+    "setTimeout(string)",
+    "",
+    "threw TypeError: Failed to execute 'setTimeout' on 'Window': This document requires 'TrustedScript' assignment."
+   ]
+  ],
+  "srcdoc": [
+   [
+    "srcdoc: its default policy",
+    "",
+    "default"
+   ],
+   [
+    "srcdoc: eval(this)",
+    "createScript(this|TrustedScript|eval)",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ],
+   [
+    "srcdoc: Function",
+    "createScript((function anonymous(\n) {\nreturn 1\n})|TrustedScript|Function)",
+    "threw EvalError: Evaluating a string as JavaScript violates this document's Trusted Type assignment requirements."
+   ],
+   [
+    "srcdoc: setTimeout(string)",
+    "createScript(0|TrustedScript|Window setTimeout)",
+    "0"
+   ],
+   [
+    "srcdoc: div.innerHTML",
+    "createHTML(<b>s</b>|TrustedHTML|Element innerHTML)",
+    "<b>s</b>#"
+   ]
+  ]
+ }
+}

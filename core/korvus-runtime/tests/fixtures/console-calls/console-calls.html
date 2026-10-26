@@ -1,0 +1,62 @@
+<!doctype html><body><script>
+window.__r = [];
+let hits = [];
+const hit = (n, v) => function () { hits.push(n); return v === undefined ? n : v; };
+const mk = () => {
+  const e = new Error('x');
+  Object.defineProperty(e, 'name', {get: hit('err.name', 'N')});
+  Object.defineProperty(e, 'message', {get: hit('err.message', 'M')});
+  Object.defineProperty(e, 'stack', {get: hit('err.stack', 'S')});
+  const r = /a/; r.toString = hit('re.toString');
+  const f = function () {}; f.toString = hit('fn.toString');
+  const o = { toString: hit('obj.toString'), valueOf: hit('obj.valueOf', 7), get id() { hits.push('obj.id'); return 1; } };
+  const p = { [Symbol.toPrimitive]: hit('obj.toPrimitive') };
+  const t = { [Symbol.toStringTag]: 'T' }; Object.defineProperty(t, Symbol.toStringTag, {get: hit('obj.toStringTag', 'T')});
+  const d = document.createElement('div'); Object.defineProperty(d, 'id', {get: hit('div.id')});
+  const a = [1, 2]; Object.defineProperty(a, 0, {get: hit('arr[0]')});
+  const n = Object.create(null); n.k = 1;
+  const pr = new Proxy({}, { get: (t, k) => { hits.push('proxy.get:' + String(k)); return undefined; } });
+  const w = new Number(5); w.valueOf = hit('wrap.valueOf', 5); w.toString = hit('wrap.toString', '5');
+  const dt = new Date(0); dt.toString = hit('date.toString');
+  const boom = { toString() { hits.push('boom'); throw new Error('boom'); } };
+  const errBoom = new Error('y'); Object.defineProperty(errBoom, 'name', {get() { hits.push('errBoom.name'); throw new Error('nameboom'); }});
+  const s1 = { toString() { hits.push('s1'); return '%d'; } }, s2 = { toString() { hits.push('s2'); return '7'; } };
+  return {e, r, f, o, p, t, d, a, n, pr, w, dt, boom, errBoom, s1, s2};
+};
+const calls = {
+  'log(o)': x => console.log(x.o), 'log(p)': x => console.log(x.p), 'log(t)': x => console.log(x.t), 'log(e)': x => console.log(x.e), 'log(r)': x => console.log(x.r),
+  'log(f)': x => console.log(x.f), 'log(d)': x => console.log(x.d), 'log(a)': x => console.log(x.a), 'log(n)': x => console.log(x.n), 'log(pr)': x => console.log(x.pr),
+  'log(w)': x => console.log(x.w), 'log(dt)': x => console.log(x.dt), 'log([o,e,null,a])': x => console.log([x.o, x.e, null, x.a]),
+  'log(s,o)': x => console.log('s', x.o), 'log(o,o)': x => console.log(x.o, x.o), 'log(%c%d,css,o)': x => console.log('%c%d', 'c', x.o),
+  'log(%c%d,css,e)': x => console.log('%c%d', 'c', x.e), 'log(%s,p)': x => console.log('%s', x.p), 'log(%d,o)': x => console.log('%d', x.o),
+  'log(%i,o)': x => console.log('%i', x.o), 'log(%f,o)': x => console.log('%f', x.o), 'log(%o,o)': x => console.log('%o', x.o), 'log(%O,o)': x => console.log('%O', x.o),
+  'log(%c,o)': x => console.log('%c', x.o), 'log(%_,o)': x => console.log('%_', x.o), 'log(%%%d,o)': x => console.log('%%%d', x.o), 'log(%x%d,o)': x => console.log('%x%d', x.o),
+  'log(s,e)': x => console.log('s', x.e), 'log(s,a)': x => console.log('s', x.a), 'log(%s,s1,s2)': x => console.log('%s', x.s1, x.s2),
+  'log(%d,sym)': x => console.log('%d', Symbol('q')), 'log(%s,sym)': x => console.log('%s', Symbol('q')),
+  'log(%d,boom)': x => console.log('%d', x.boom), 'log(%s,boom)': x => console.log('%s', x.boom), 'log(boom)': x => console.log(x.boom), 'log(errBoom)': x => console.log(x.errBoom),
+  'log([errBoom,o,e])': x => console.log([x.errBoom, x.o, x.e]),
+  'debug(o)': x => console.debug(x.o), 'info(e)': x => console.info(x.e), 'warn(o)': x => console.warn(x.o), 'error(%d,o)': x => console.error('%d', x.o),
+  'dir(e)': x => console.dir(x.e), 'dir(%d,o)': x => console.dir('%d', x.o), 'dirxml(d)': x => console.dirxml(x.d), 'table([o,e])': x => console.table([x.o, x.e]), 'trace(e)': x => console.trace(x.e),
+  'assert(false,o)': x => console.assert(false, x.o), 'assert(false,%d,o)': x => console.assert(false, '%d', x.o), 'assert(true,%d,o)': x => console.assert(true, '%d', x.o), 'assert(0,e)': x => console.assert(0, x.e),
+  'count(o)': x => console.count(x.o), 'countReset(o)': x => console.countReset(x.o), 'count(boom)': x => console.count(x.boom),
+  'group(e)': x => { console.group(x.e); console.groupEnd(x.e); }, 'groupCollapsed(%d,o)': x => { console.groupCollapsed('%d', x.o); console.groupEnd(); },
+  'time(o)': x => { console.time(x.o); console.timeEnd(x.o); }, 'timeLog(t,e)': x => { console.time('t'); console.timeLog('t', x.e); console.timeEnd('t'); },
+  'timeStamp(o)': x => console.timeStamp(x.o), 'profile(o)': x => { console.profile(x.o); console.profileEnd(x.o); }, 'time(boom)': x => console.time(x.boom),
+  'context(o)': x => console.context(x.o), 'context(boom)': x => console.context(x.boom), 'clear(e)': x => console.clear(x.e),
+};
+for (const [k, fn] of Object.entries(calls)) {
+  const x = mk(); hits = []; let r;
+  try { fn(x); r = 'ok'; } catch (e) { r = 'threw:' + e.message; }
+  __r.push(k + ' ' + r + ' [' + hits.join(',') + ']');
+}
+const c = console.context('n'), c2 = console.context();
+const P = Object.getPrototypeOf(c);
+__r.push('context ' + JSON.stringify([Object.getOwnPropertyNames(c).join(','), P === Object.prototype, Object.getPrototypeOf(P) === Object.prototype, Object.getOwnPropertyNames(P).length, Object.getPrototypeOf(c2) === P, c.log === c2.log, Object.prototype.toString.call(c)]));
+const dsc = Object.getOwnPropertyDescriptor(c, 'log');
+__r.push('context.log ' + JSON.stringify([dsc.writable, dsc.enumerable, dsc.configurable, c.log.name, c.log.length, String(c.log), 'prototype' in c.log, c.dirXml.name]));
+__r.push('context.new ' + (() => { try { new c.log(); return 'constructed'; } catch (e) { return e.constructor.name; } })());
+hits = []; c.log(mk().e); __r.push('context.log(e) [' + hits.join(',') + ']');
+__r.push('lengths ' + Object.getOwnPropertyNames(console).map(k => k + ':' + (typeof console[k] === 'function' ? console[k].length : typeof console[k])).join(' '));
+// for a run with no DevTools client (google-chrome --dump-dom): the list, in the document
+const out = document.createElement('pre'); out.id = 'out'; out.textContent = 'RES:' + JSON.stringify(__r); document.body.append(out);
+</script>

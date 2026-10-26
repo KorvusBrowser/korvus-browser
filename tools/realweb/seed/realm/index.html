@@ -1,0 +1,5 @@
+<!doctype html><html><body><script>
+window.R = null;
+addEventListener('message', function (e) { window.R = e.data; });
+var f = document.createElement('iframe'); f.src = 'frame.html'; document.body.appendChild(f);
+</script></body></html>

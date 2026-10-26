@@ -1,0 +1,21 @@
+<!doctype html><body><script>
+// Challenge-probe fixture: the Server-Timing headers of the document and three scripts, as the timeline exposes them.
+window.__r = [];
+const port = location.port;
+const add = src => new Promise(r => { const s = document.createElement('script'); s.src = src; s.onload = s.onerror = r; document.body.append(s); });
+const show = list => JSON.stringify(list.map(s => [s.name, s.duration, s.description]));
+Promise.all([add('/sub.js'), add(`http://localhost:${port}/xo.js`), add(`http://localhost:${port}/xo-tao.js`)]).then(() => {
+  const nav = performance.getEntriesByType('navigation')[0];
+  __r.push('nav ' + show(nav.serverTiming));
+  for (const name of ['/sub.js', '/xo.js', '/xo-tao.js']) {
+    const e = performance.getEntriesByType('resource').find(x => x.name.endsWith(name));
+    __r.push(name + ' ' + (e ? show(e.serverTiming) : 'no entry'));
+  }
+  const a = nav.serverTiming, b = nav.serverTiming;
+  __r.push('array ' + JSON.stringify([a === b, Object.isFrozen(a), Array.isArray(a), a[0] === b[0], Object.getOwnPropertyNames(a[0]), Object.prototype.toString.call(a[0]), a[0] instanceof PerformanceServerTiming]));
+  __r.push('toJSON ' + JSON.stringify(a[0].toJSON()) + ' ' + JSON.stringify(nav.toJSON().serverTiming));
+  __r.push('proto ' + JSON.stringify([Object.getOwnPropertyNames(PerformanceServerTiming.prototype), PerformanceServerTiming.length]));
+  try { new PerformanceServerTiming(); __r.push('ctor constructed'); } catch (e) { __r.push('ctor ' + e.constructor.name + ': ' + e.message); }
+  __r.push('done');
+});
+</script>

@@ -1,0 +1,8 @@
+<!doctype html><title>pending</title><script>
+// REALWEB H48: FileReader fires real, trusted ProgressEvents -- it dispatched plain objects.
+const fr = new FileReader(), log = [];
+for (const t of ['loadstart', 'progress', 'load', 'loadend', 'error', 'abort'])
+  fr.addEventListener(t, e => log.push([e.type, e.constructor.name, e.isTrusted, e.lengthComputable, e.loaded, e.total, e.bubbles, e.cancelable, e.target === fr, e.eventPhase, Object.getOwnPropertyNames(e).join('+')].join(':')));
+fr.onloadend = () => { document.title = log.join(' ') + ' | ' + fr.result; };
+fr.readAsText(new Blob(['hello h48']));
+</script>

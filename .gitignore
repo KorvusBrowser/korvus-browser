@@ -1,0 +1,37 @@
+/target
+**/*.rs.bk
+.DS_Store
+*.log
+/tmp
+
+# Local reference material (cloned repos, downloaded docs) — not part of the repo
+/reference
+
+# Claude Code's per-checkout dir (settings, local state, worktrees) — machine-local, not tracked; its skills are
+# the project's procedures and are tracked
+.claude/*
+!.claude/skills/
+
+# Bench outputs: regenerated each run (scoreboard.json + report.md).
+/tools/report/
+
+# Raw browser captures land here; they are 5 MB each and are promoted into
+# fixtures deliberately, never committed as-is.
+reference/captures/*.json
+
+# Python bytecode caches from tools/ scripts — regenerated, never tracked
+__pycache__/
+
+# Parity replay recordings (L3): the flow files are megabytes of someone else's bytes, and the
+# replay CA is a local secret. The MANIFEST beside each flow is committed — it carries the date,
+# the oracle's id, the request count and the flow's sha256, so a replay can prove it is serving
+# the recording whose determinism was measured, and a missing flow fails loudly instead of
+# silently fetching live. Re-create either with tools/parity/record.py.
+/tools/parity/recordings/*/flow
+/tools/parity/recordings/_ca/
+# The competitor benchmark's recordings (tools/bench, spec 2026-10-21): the same rule as parity's —
+# the flow is someone else's bytes and stays local; its manifest (with the flow's sha256) is committed.
+/tools/bench/recordings/*/flow
+# Chrome 150's Skia source, made by scripts/skia-source.sh (a link into ~/.cache): not tracked
+/third_party/skia-chrome
+/third_party/libvpx-chrome

@@ -1,0 +1,24 @@
+<!doctype html><html><body><script>
+// REALWEB H26 (PERF's finding): BroadcastChannel clones like postMessage does -- a [Serializable] platform
+// object arrives as its own interface with its values, anything else platform throws DataCloneError at the
+// sender, in order.
+(async function () {
+  var a = new BroadcastChannel('k'), b = new BroadcastChannel('k'), out = [];
+  var show = function (d) {
+    var t = Object.prototype.toString.call(d);
+    if (d instanceof DOMRectReadOnly) return t + ' ' + [d.x, d.y, d.width, d.height].join(',');
+    if (d instanceof DOMPointReadOnly) return t + ' ' + [d.x, d.y, d.z, d.w].join(',');
+    if (d instanceof DOMMatrixReadOnly) return t + ' ' + d.is2D + ' ' + d.e + ',' + d.f;
+    if (d instanceof DOMException) return t + ' ' + d.name + ': ' + d.message;
+    if (d instanceof Blob) return t + ' ' + d.size + ' ' + d.type;
+    return t + ' ' + JSON.stringify(d);
+  };
+  var vals = [new DOMPoint(1, 2), new Event('x'), { p: 1 }, new DOMRect(1, 2, 3, 4), new DOMMatrix([1, 0, 0, 1, 5, 6]),
+    new DOMException('m', 'AbortError'), new Blob(['abc'], { type: 'text/plain' }), document.body];
+  var expect = 0;
+  var got = new Promise(function (res) { b.onmessage = function (e) { out.push('got ' + show(e.data)); if (out.filter(function (s) { return s.indexOf('got') === 0; }).length === expect) res(); }; });
+  vals.forEach(function (v) { try { a.postMessage(v); expect++; } catch (e) { out.push('throw ' + e.name + ': ' + e.message); } });
+  await Promise.race([got, new Promise(function (r) { setTimeout(r, 600); })]);
+  document.title = JSON.stringify(out);
+})();
+</script></body></html>

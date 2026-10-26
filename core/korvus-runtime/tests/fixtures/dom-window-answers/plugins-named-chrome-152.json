@@ -1,0 +1,134 @@
+[
+[
+"plugins.length",
+5
+],
+[
+"mimeTypes.length",
+2
+],
+[
+"for-in plugins",
+"0,1,2,3,4,length,item,namedItem,refresh"
+],
+[
+"Object.keys plugins",
+"0,1,2,3,4"
+],
+[
+"own names plugins",
+"0,1,2,3,4,PDF Viewer,Chrome PDF Viewer,Chromium PDF Viewer,Microsoft Edge PDF Viewer,WebKit built-in PDF"
+],
+[
+"JSON plugins",
+"{\"0\":{\"0\":{},\"1\":{}},\"1\":{\"0\":{},\"1\":{}},\"2\":{\"0\":{},\"1\":{}},\"3\":{\"0\":{},\"1\":{}},\"4\":{\"0\":{},\"1\":{}}}"
+],
+[
+"entries keys plugins",
+"0,1,2,3,4"
+],
+[
+"for-in plugins[0]",
+"0,1,name,filename,description,length,item,namedItem"
+],
+[
+"Object.keys plugins[0]",
+"0,1"
+],
+[
+"own names plugins[0]",
+"0,1,application/pdf,text/pdf"
+],
+[
+"JSON plugins[0]",
+"{\"0\":{},\"1\":{}}"
+],
+[
+"entries keys plugins[0]",
+"0,1"
+],
+[
+"for-in mimeTypes",
+"0,1,length,item,namedItem"
+],
+[
+"Object.keys mimeTypes",
+"0,1"
+],
+[
+"own names mimeTypes",
+"0,1,application/pdf,text/pdf"
+],
+[
+"JSON mimeTypes",
+"{\"0\":{},\"1\":{}}"
+],
+[
+"entries keys mimeTypes",
+"0,1"
+],
+[
+"descriptor plugins[0] 0",
+"{\"e\":true,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"descriptor plugins[0] application/pdf",
+"{\"e\":false,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"descriptor plugins 0",
+"{\"e\":true,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"descriptor plugins PDF Viewer",
+"{\"e\":false,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"descriptor mimeTypes 0",
+"{\"e\":true,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"descriptor mimeTypes text/pdf",
+"{\"e\":false,\"w\":false,\"c\":true,\"t\":\"object\"}"
+],
+[
+"propertyIsEnumerable plugins PDF Viewer",
+false
+],
+[
+"in plugins PDF Viewer",
+true
+],
+[
+"namedItem is index 0",
+true
+],
+[
+"mimeTypes[0] for-in",
+"type,suffixes,description,enabledPlugin"
+],
+[
+"plugin string (for-in over each plugin)",
+"PDF Viewer::application/pdf~text/pdf;Chrome PDF Viewer::application/pdf~text/pdf;Chromium PDF Viewer::application/pdf~text/pdf;Microsoft Edge PDF Viewer::application/pdf~text/pdf;WebKit built-in PDF::application/pdf~text/pdf"
+],
+[
+"assign named in strict",
+"TypeError"
+],
+[
+"assign named sloppy keeps",
+true
+],
+[
+"define named",
+"THROW TypeError"
+],
+[
+"delete named",
+false
+],
+[
+"after delete named",
+"object"
+]
+]

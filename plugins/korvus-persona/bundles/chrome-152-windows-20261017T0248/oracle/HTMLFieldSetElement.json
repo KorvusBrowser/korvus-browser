@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLFieldSetElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "constructor",
+    "expr": "new HTMLFieldSetElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return (o.disabled = true, o.disabled); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.type; })()",
+    "expected": "fieldset",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "willValidate",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.willValidate; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "validationMessage",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.validationMessage; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.setCustomValidity(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return o.setCustomValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return Object.prototype.toString.call(o.form); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "elements",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return Object.prototype.toString.call(o.elements); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFieldSetElement",
+    "member": "validity",
+    "expr": "(() => { const o = document.createElement(\"fieldset\"); return Object.prototype.toString.call(o.validity); })()",
+    "expected": "[object ValidityState]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

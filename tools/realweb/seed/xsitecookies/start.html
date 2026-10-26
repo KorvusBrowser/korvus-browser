@@ -1,0 +1,4 @@
+<!doctype html><title>start</title>
+<!-- REALWEB T9: set both cookies FIRST-party (top level on localhost), then go to a page on 127.0.0.1 -- another
+     site -- that frames localhost. What the cross-site frame's own request and its subresources carry: -->
+<script>location.replace('http://127.0.0.1:' + location.port + '/main.html?k=main');</script>

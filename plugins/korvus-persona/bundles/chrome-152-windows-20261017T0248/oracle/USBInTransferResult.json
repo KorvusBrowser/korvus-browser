@@ -1,0 +1,114 @@
+[
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "new USBInTransferResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new USBInTransferResult(\"ok\"))",
+    "expected": "[object USBInTransferResult]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "new USBInTransferResult(\"ok\") instanceof USBInTransferResult",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "new USBInTransferResult(\"bogus\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "new USBInTransferResult(\"ok\", 5)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "constructor",
+    "expr": "USBInTransferResult(\"ok\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "status",
+    "expr": "new USBInTransferResult(\"ok\").status",
+    "expected": "ok",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "status",
+    "expr": "new USBInTransferResult(\"stall\").status",
+    "expected": "stall",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "status",
+    "expr": "new USBInTransferResult(\"babble\").status",
+    "expected": "babble",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "status",
+    "expr": "(() => { const r = new USBInTransferResult(\"ok\"); r.status = \"stall\"; return r.status; })()",
+    "expected": "ok",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "new USBInTransferResult(\"ok\").data",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "new USBInTransferResult(\"ok\", null).data",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "Object.prototype.toString.call(new USBInTransferResult(\"ok\", new DataView(new ArrayBuffer(4))).data)",
+    "expected": "[object DataView]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "new USBInTransferResult(\"ok\", new DataView(new ArrayBuffer(4))).data.byteLength",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "new USBInTransferResult(\"ok\", new DataView(new ArrayBuffer(8), 2, 4)).data.byteOffset",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBInTransferResult",
+    "member": "data",
+    "expr": "(() => { const d = new DataView(new ArrayBuffer(4)); return new USBInTransferResult(\"ok\", d).data === d; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

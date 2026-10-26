@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "constructor",
+    "expr": "new PerformanceObserverEntryList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntries",
+    "expr": "PerformanceObserverEntryList.prototype.getEntries.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntries",
+    "expr": "PerformanceObserverEntryList.prototype.getEntries.name",
+    "expected": "getEntries",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByName",
+    "expr": "PerformanceObserverEntryList.prototype.getEntriesByName.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByName",
+    "expr": "PerformanceObserverEntryList.prototype.getEntriesByName.name",
+    "expected": "getEntriesByName",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByType",
+    "expr": "PerformanceObserverEntryList.prototype.getEntriesByType.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByType",
+    "expr": "PerformanceObserverEntryList.prototype.getEntriesByType.name",
+    "expected": "getEntriesByType",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntries",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceObserverEntryList.prototype.getEntries.call(Object.create(PerformanceObserverEntryList.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByName",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceObserverEntryList.prototype.getEntriesByName.call(Object.create(PerformanceObserverEntryList.prototype), \"n\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceObserverEntryList",
+    "member": "getEntriesByType",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceObserverEntryList.prototype.getEntriesByType.call(Object.create(PerformanceObserverEntryList.prototype), \"t\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

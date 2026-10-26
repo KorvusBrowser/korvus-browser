@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SVGFEFuncGElement",
+    "member": "constructor",
+    "expr": "new SVGFEFuncGElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

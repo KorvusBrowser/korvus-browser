@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "AnalyserNode",
+    "member": "constructor",
+    "expr": "new AnalyserNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "getFloatFrequencyData",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.getFloatFrequencyData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "getByteFrequencyData",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.getByteFrequencyData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "getFloatTimeDomainData",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.getFloatTimeDomainData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "getByteTimeDomainData",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.getByteTimeDomainData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "fftSize",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.fftSize; })()",
+    "expected": 2048,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "fftSize",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.fftSize = 1, o.fftSize); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "frequencyBinCount",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.frequencyBinCount; })()",
+    "expected": 1024,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "minDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.minDecibels; })()",
+    "expected": -100,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "minDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.minDecibels = 1, o.minDecibels); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "maxDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.maxDecibels; })()",
+    "expected": -30,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "maxDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.maxDecibels = 1, o.maxDecibels); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "smoothingTimeConstant",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return o.smoothingTimeConstant; })()",
+    "expected": 0.8,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "smoothingTimeConstant",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.smoothingTimeConstant = 1, o.smoothingTimeConstant); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "fftSize",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.fftSize = \"1\", o.fftSize); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "minDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.minDecibels = \"1\", o.minDecibels); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "maxDecibels",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.maxDecibels = \"1\", o.maxDecibels); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnalyserNode",
+    "member": "smoothingTimeConstant",
+    "expr": "(() => { const o = new AnalyserNode(new OfflineAudioContext(1, 1, 44100)); return (o.smoothingTimeConstant = \"1\", o.smoothingTimeConstant); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

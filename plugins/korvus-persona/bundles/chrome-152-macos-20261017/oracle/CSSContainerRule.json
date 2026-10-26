@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CSSContainerRule",
+    "member": "constructor",
+    "expr": "new CSSContainerRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSContainerRule",
+    "member": "containerName",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@container (min-width: 1px) { a { color: red } }\"); return s.cssRules[0]; })(); return o.containerName; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSContainerRule",
+    "member": "containerQuery",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@container (min-width: 1px) { a { color: red } }\"); return s.cssRules[0]; })(); return o.containerQuery; })()",
+    "expected": "(min-width: 1px)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSContainerRule",
+    "member": "conditions",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@container (min-width: 1px) { a { color: red } }\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.conditions); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

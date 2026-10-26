@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "Geolocation",
+    "member": "constructor",
+    "expr": "new Geolocation()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Geolocation",
+    "member": "getCurrentPosition",
+    "expr": "(() => { const o = navigator.geolocation; return o.getCurrentPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Geolocation",
+    "member": "watchPosition",
+    "expr": "(() => { const o = navigator.geolocation; return o.watchPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Geolocation",
+    "member": "clearWatch",
+    "expr": "(() => { const o = navigator.geolocation; return o.clearWatch(1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Geolocation",
+    "member": "clearWatch",
+    "expr": "(() => { const o = navigator.geolocation; return o.clearWatch(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "MediaStreamAudioSourceNode",
+    "member": "constructor",
+    "expr": "new MediaStreamAudioSourceNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaStreamAudioSourceNode",
+    "member": "mediaStream",
+    "expr": "(() => { const o = (() => { const c = new AudioContext(); return new MediaStreamAudioSourceNode(c, { mediaStream: new MediaStreamAudioDestinationNode(c).stream }); })(); return Object.prototype.toString.call(o.mediaStream); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

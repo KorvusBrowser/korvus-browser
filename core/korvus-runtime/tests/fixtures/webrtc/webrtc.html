@@ -1,0 +1,57 @@
+<!doctype html><body><script>
+// Challenge-probe fixture: an RTCPeerConnection's configuration, offer and ICE gathering, against the fixture STUN
+// server named by ?stun=<port> (it answers every Binding Request with 203.0.113.9 and the request's port).
+window.__r = [];
+const log = s => __r.push(s);
+const stun = 'stun:127.0.0.1:' + new URLSearchParams(location.search).get('stun');
+const norm = s => s.replaceAll(stun, 'STUN')
+  .replace(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.local/g, 'MDNS.local')
+  .replace(/candidate:\d+/g, 'candidate:F').replace(/ (\d{2,5}) typ /g, ' PORT typ ').replace(/ufrag \S+/g, 'ufrag U');
+const t = (k, f) => { try { const r = f(); log(k + ' ok ' + (r === undefined ? '' : JSON.stringify(r))); } catch (e) { log(k + ' ' + e.name + ': ' + e.message); } };
+const P = c => new RTCPeerConnection(c);
+// the configuration
+const reads = []; const spy = (n, o) => new Proxy(o, { get(t, k, r) { if (typeof k === 'string') reads.push(n + '.' + k); return Reflect.get(t, k, r); } });
+P(spy('cfg', {iceServers: [spy('server', {urls: 'stun:a.example.com:3478'})]}));
+log('reads ' + reads.join(','));
+t('getConfiguration', () => P({iceServers: [{urls: ['stun:a.example.com', 'STUN:B.example.com:19302']}, {urls: 'turn:t.example.com?transport=tcp', username: 'u', credential: 'c'}], iceCandidatePoolSize: 2, bundlePolicy: 'max-bundle'}).getConfiguration());
+for (const [k, c] of [['bundle x', {bundlePolicy: 'x'}], ['pool 300', {iceCandidatePoolSize: 300}], ['pool NaN', {iceCandidatePoolSize: NaN}], ['servers 5', {iceServers: 5}],
+  ['servers [5]', {iceServers: [5]}], ['servers [{}]', {iceServers: [{}]}], ['http', {iceServers: [{urls: 'http://x'}]}], ['stun:', {iceServers: [{urls: 'stun:'}]}],
+  ['turn no creds', {iceServers: [{urls: 'turn:x.example.com'}]}], ['stun query', {iceServers: [{urls: 'stun:x.example.com?transport=udp'}]}], ['urls []', {iceServers: [{urls: []}]}],
+  ['user@host', {iceServers: [{urls: 'stun:u@a.example.com'}]}], ['port', {iceServers: [{urls: 'stun:a.example.com:99999'}]}], ['host', {iceServers: [{urls: 'stun:a b'}]}],
+  ['turn sctp', {iceServers: [{urls: 'turn:a.example.com?transport=sctp', username: 'u', credential: 'c'}]}], ['certs', {certificates: [{}]}], ['cfg 5', 5]]) t(k, () => { P(c); });
+const pcs = P({}); t('set bundle', () => pcs.setConfiguration({bundlePolicy: 'max-bundle'})); t('set reset', () => { pcs.setConfiguration({iceServers: [{urls: 'stun:b.example.com'}], iceCandidatePoolSize: 3}); pcs.setConfiguration({}); return pcs.getConfiguration(); });
+// the event
+const c0 = new RTCIceCandidate({candidate: 'candidate:1 1 udp 2113937151 1.2.3.4 5 typ host', sdpMid: '0'});
+const E = RTCPeerConnectionIceEvent;
+log('event ' + JSON.stringify([new E('icecandidate', {candidate: c0}).candidate === c0, new E('icecandidate').candidate, Object.getOwnPropertyNames(E.prototype), E.length]));
+t('event bad candidate', () => new E('x', {candidate: {}}));
+// the offer, and gathering on its three transports
+(async () => {
+  const pc = P({iceServers: [{urls: stun}]});
+  pc.createDataChannel('');
+  const optReads = []; const opts = new Proxy({offerToReceiveAudio: 1, offerToReceiveVideo: 1}, { get(t, k, r) { if (typeof k === 'string') optReads.push(k); return Reflect.get(t, k, r); } });
+  const offer = await pc.createOffer(opts);
+  log('offer reads ' + optReads.join(','));
+  const lines = offer.sdp.split('\r\n');
+  log('offer ' + lines.length + ' lines; m= ' + lines.filter(l => l.startsWith('m=')).join(' | ') + '; ' + lines.filter(l => /^a=(group|mid|recvonly|sctp-port|max-message-size|setup)/.test(l)).join(','));
+  log('transceivers ' + JSON.stringify(pc.getTransceivers().map(x => [x.mid, x.direction, x.receiver.track.kind])));
+  const seq = [];
+  await new Promise(res => {
+    pc.addEventListener('icegatheringstatechange', () => seq.push('state ' + pc.iceGatheringState));
+    pc.addEventListener('icecandidate', e => {
+      const c = e.candidate;
+      seq.push(c ? ['cand', e.constructor.name, Object.getOwnPropertyNames(e).join('|'), c.sdpMid, c.sdpMLineIndex, c.type, norm(c.candidate), norm(c.url), c.relatedAddress, c.relatedPort, c.usernameFragment === pc.localDescription.sdp.match(/ice-ufrag:(\S+)/)[1]].join(' ') : 'null');
+      if (!c) res();
+    });
+    pc.setLocalDescription(offer);
+  });
+  log('transceivers after ' + JSON.stringify(pc.getTransceivers().map(x => [x.mid, x.direction])));
+  // the order a fast STUN server gives (srflx before host) is the network's; the set is the engine's
+  log('gathering ' + JSON.stringify([seq[0], seq.slice(1, -2).sort(), seq.slice(-2)]));
+  // each section's candidates (their order, and with it the default address, is the network's)
+  const secs = pc.localDescription.sdp.split('\r\nm=').slice(1).map(sec => sec.split(' ')[0] + ': ' + sec.split('\r\n').filter(l => l.startsWith('a=candidate')).map(norm).sort().join(' + '));
+  log('local ' + secs.join(' | '));
+  pc.close();
+  log('done');
+})();
+</script>

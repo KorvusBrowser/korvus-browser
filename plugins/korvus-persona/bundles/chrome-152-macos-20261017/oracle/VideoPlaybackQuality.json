@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "VideoPlaybackQuality",
+    "member": "constructor",
+    "expr": "new VideoPlaybackQuality()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VideoPlaybackQuality",
+    "member": "creationTime",
+    "expr": "(() => { const o = document.createElement(\"video\").getVideoPlaybackQuality(); return Object.prototype.toString.call(o.creationTime); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VideoPlaybackQuality",
+    "member": "droppedVideoFrames",
+    "expr": "(() => { const o = document.createElement(\"video\").getVideoPlaybackQuality(); return o.droppedVideoFrames; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VideoPlaybackQuality",
+    "member": "totalVideoFrames",
+    "expr": "(() => { const o = document.createElement(\"video\").getVideoPlaybackQuality(); return o.totalVideoFrames; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "VideoPlaybackQuality",
+    "member": "corruptedVideoFrames",
+    "expr": "(() => { const o = document.createElement(\"video\").getVideoPlaybackQuality(); return o.corruptedVideoFrames; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  }
+]

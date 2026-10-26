@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "VideoTrackList",
+    "member": "constructor",
+    "expr": "new VideoTrackList()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

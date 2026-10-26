@@ -1,0 +1,30 @@
+[
+ [
+  "shadow element: opacity right after",
+  "1"
+ ],
+ [
+  "shadow element: getAnimations",
+  "CSSTransition"
+ ],
+ [
+  "unslotted child: getAnimations",
+  0
+ ],
+ [
+  "below an unslotted child: getAnimations",
+  0
+ ],
+ [
+  "slotted child: getAnimations",
+  1
+ ],
+ [
+  "events at the document",
+  "animationstart:found:kf animationend:found:kf"
+ ],
+ [
+  "events at the shadow element",
+  "transitionrun transitionend"
+ ]
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "CompositionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CompositionEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CompositionEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CompositionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CompositionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CompositionEvent",
+    "member": "data",
+    "expr": "(() => { const o = new CompositionEvent(\"x\"); return o.data; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CompositionEvent",
+    "member": "initCompositionEvent",
+    "expr": "(() => { const o = new CompositionEvent(\"x\"); return o.initCompositionEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CompositionEvent",
+    "member": "initCompositionEvent",
+    "expr": "(() => { const o = new CompositionEvent(\"x\"); return o.initCompositionEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

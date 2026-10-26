@@ -1,0 +1,4 @@
+<!doctype html><html><body><script>
+window.R = null;
+addEventListener('message', function (e) { if (e.data && e.data.log) { window.R = e.data.log; document.title = JSON.stringify(e.data.log); } });
+</script><iframe src="sc.html"></iframe></body></html>

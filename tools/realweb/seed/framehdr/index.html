@@ -1,0 +1,16 @@
+<!doctype html><title>t</title>
+<!-- T11-T14: the requests of a CROSS-SITE frame (localhost under 127.0.0.1) and of a worker it starts, as Brave 151
+     sends them: a frame's element loads resolve and refer from the FRAME (not the top document); a worker's fetch is
+     same-origin to the worker and carries no client hints; page-set headers sit after sec-ch-ua in the order set;
+     Sec-Fetch-Storage-Access says what the persona's third-party cookie policy allows. -->
+<script>
+const B = 'http://localhost:' + (+location.port + 1);
+addEventListener('message', async e => {
+  if (e.data !== 'done') return;
+  const [a, b] = await Promise.all([fetch('/report').then(r => r.json()), fetch(B + '/report').then(r => r.json())]);
+  window.__hdr = Object.assign({}, a, b);
+  document.title = 'done';
+});
+</script>
+<iframe id=f></iframe>
+<script>document.getElementById('f').src = B + '/frame.html?k=frame-nav';</script>

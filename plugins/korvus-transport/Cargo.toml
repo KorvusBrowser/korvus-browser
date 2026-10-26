@@ -1,0 +1,102 @@
+[package]
+name = "korvus-transport"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# One binary for every integration test: see tests/all.rs for the measurement.
+# `autotests = false` stops Cargo auto-discovering tests/*.rs as separate binaries.
+autotests = false
+
+[[test]]
+name = "all"
+path = "tests/all.rs"
+
+[lib]
+name = "transport"
+
+# G1.7 adds `wreq` + `wreq-util` (BoringSSL impersonation). G1.0 is a placeholder.
+[dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+# Used for ONE thing: reading `wreq_util::Profile`'s own declared preset name back off the variant, so
+# `emulation_for` resolves the library's list instead of a hand-typed match (see `profile_names`).
+serde_json = "1"
+spec = { workspace = true }
+# `macros`, `time`, `io-util`: the WebSocket channel (`src/websocket.rs`) selects over its command
+# queue, its frame reader and its closing-handshake timers, and reads/writes the upgraded stream.
+# Features of a crate already in the graph (wreq enables most of them) -- no new crate.
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "sync", "macros", "time", "io-util"] }
+# 0.16 / 0.2, not 5.3 / 2.2: the project reset its versioning on 2026-08-22, so crates.io's
+# `max_version` still points at a frozen 6.0.0-rc line while the newest RELEASE is 0.16.1. The bump is
+# not optional -- `wreq 5.3.0` is YANKED (`cargo update -p wreq` fails outright) and `wreq-util 2.2.6`
+# is GPL-3.0 inside a workspace that declares MIT OR Apache-2.0. Both are Apache-2.0 at these versions.
+# CONTENT COMPRESSION is one capability split across both crates, and the halves are required together.
+# `wreq-util/emulation-compression` makes the Chrome persona advertise `accept-encoding: gzip, deflate,
+# br, zstd` -- the header real Chrome ALWAYS sends. Without it we advertised nothing (a bot tell), so
+# most servers fell back to identity -- which is why plain documents loaded -- while a CDN that gzips
+# unconditionally (observablehq) handed us raw gzip bytes that got eval'd as a script => SyntaxError.
+# `wreq`'s gzip/deflate/brotli/zstd features are the DECODE half: tower-http transparently inflates any
+# response whose `Content-Encoding` matches, and strips Content-Encoding/Content-Length, so the same
+# `resp.text()` returns real text with no other code change. The four decode features MUST cover the
+# four advertised codings, or a server could compress with one we cannot inflate and a working site
+# would regress. The decode layer only adds Accept-Encoding when a request lacks one, so the persona's
+# exact header -- and its wire order, already reserved in CHROME_HEADER_ORDER -- is preserved untouched;
+# only Range requests are forced to `identity`, which is what the Fetch spec itself requires.
+# `socks`: a context behind a SOCKS5 proxy (goal 1020 step 4, item 4.5), with its login.
+wreq = { version = "0.16", features = ["cookies", "gzip", "deflate", "brotli", "zstd", "socks"] }
+# `emulation-serde` is what makes the preset table READABLE instead of re-typed. It puts serde's derive
+# on `Profile`, carrying each variant's `serde(rename)` -- the very string the library's own
+# `define_enum!` wrote beside it -- so a name resolves to a variant, and a variant reports its name,
+# without this crate keeping a second copy of the list that can drift. It pulls `dep:serde` and
+# nothing else.
+wreq-util = { version = "0.2", features = ["emulation-compression", "emulation-serde"] }
+# The DECODERS for the four codings the persona advertises, run by `content_coding` so the wire bytes
+# are counted (`encodedBodySize`); the client's own decoding is switched off per request. The same
+# versions wreq's decode layer already links (no crate is added to the graph).
+flate2 = "1"
+brotli = "8"
+zstd = "0.13"
+url = "2"
+# A response DevTools made up (`Fetch.fulfillRequest`) is built as an `http::Response` and handed to
+# the hop as the `wreq::Response` it converts into (`intercept::fulfilled_response`). Already in the graph (wreq's).
+http = "1"
+psl = "2.1.223"
+# The WebSocket client (`src/websocket.rs`): the handshake key and its Sec-WebSocket-Accept (base64 of
+# SHA-1), crypto-random keys and frame masks, and permessage-deflate. All four are already in
+# Cargo.lock at these versions (korvus-webapi and korvus-runtime use sha1/base64/getrandom; flate2
+# arrives with wreq's decompression layer), so naming them adds no crate.
+base64 = "0.22"
+sha1 = "0.10"
+getrandom = "0.2"
+# The `network` plugin slot: every request hop and response passes the loaded plugins.
+plugin_host = { workspace = true }
+# The context store's frames (`context_store.rs`), the workspace's one bincode (korvus-render's GPU link pins it).
+bincode = "=1.3.3"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+# `tests/clienthello.rs` reads the ClientHello this process puts on a loopback socket. It needs the
+# same two crates the lib uses (to build a client with a custom `TlsOptions` and measure the result)
+# and sha2 to state the answer as a JA4, which is the form the bundles' `known_incoherence` records.
+wreq = { version = "0.16", features = ["cookies"] }
+wreq-util = { version = "0.2", features = ["emulation-compression", "emulation-serde"] }
+sha2 = "0.10"
+spec = { workspace = true }
+# `tests/persona_headers.rs` asks the REAL shipped bundles what they send, rather than a hand-built
+# stand-in: "the persona drives the header" is only proved by loading two different devices and
+# watching the header follow. `korvus-persona` depends on `spec`, `serde` and `toml` and on nothing
+# in this crate, so there is no cycle and the test binary grows by three small crates.
+persona = { workspace = true }
+# ADDS NO CRATE TO THE GRAPH. `wreq` already links btls 0.5.6 (the BoringSSL wrapper under its TLS
+# layer); it is the only `btls` in Cargo.lock and it is Apache-2.0 like the rest. Naming it here makes
+# it callable from a test, and nothing else changes -- it is a dev-dependency, so it is not linked
+# into `korvus` at all.
+#
+# WHY A TEST NEEDS IT. `mldsa_codepoints_are_rejected_by_the_raw_api_too` measures the OTHER half of
+# the `tls-version` ceiling: not "wreq accepts only names" (measured through wreq already) but "the
+# raw-codepoint route refuses these codepoints too". `wreq` neither re-exports btls nor hands out an
+# `SslContextBuilder`, so `SSL_CTX_set_verify_algorithm_prefs` is unreachable from this crate without
+# naming btls directly -- and a ceiling reported off an unexercised mechanism is exactly what the
+# previous entry got wrong.
+btls = "0.5.6"

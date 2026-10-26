@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "MediaQueryListEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaQueryListEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MediaQueryListEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaQueryListEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaQueryListEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaQueryListEvent",
+    "member": "media",
+    "expr": "(() => { const o = new MediaQueryListEvent(\"x\"); return o.media; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaQueryListEvent",
+    "member": "matches",
+    "expr": "(() => { const o = new MediaQueryListEvent(\"x\"); return o.matches; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

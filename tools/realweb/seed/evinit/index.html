@@ -1,0 +1,35 @@
+<!doctype html><html><body><script>
+// REALWEB H23: an Event subclass's constructor stores the members of its init dictionary (PERF's probe,
+// ~/.local/share/korvus-perf/b9/reflect.js, narrowed to named interfaces so the surface cannot move it):
+// every getter whose default is a number, string or boolean gets a distinct init value, and the members
+// that give their own value back are listed.
+var names = ['CharacterBoundsUpdateEvent', 'CloseEvent', 'CommandEvent', 'CompositionEvent', 'ContentVisibilityAutoStateChangeEvent',
+  'DeviceMotionEvent', 'DeviceOrientationEvent', 'DragEvent', 'MediaEncryptedEvent', 'MediaQueryListEvent', 'PageTransitionEvent',
+  'PaymentMethodChangeEvent', 'PopStateEvent', 'SpeechRecognitionErrorEvent', 'SpeechRecognitionEvent', 'TextUpdateEvent', 'ToggleEvent',
+  'WebGLContextEvent', 'webkitSpeechRecognitionError', 'webkitSpeechRecognitionEvent', 'MouseEvent', 'HashChangeEvent'];
+var out = {};
+names.forEach(function (n) {
+  var C = window[n];
+  if (typeof C !== 'function') { out[n] = 'absent'; return; }
+  var inst; try { inst = new C('x'); } catch (e) { out[n] = 'bare throws ' + e.name; return; }
+  var init = {}, j = 0;
+  for (var p = C.prototype; p && p !== Object.prototype; p = Object.getPrototypeOf(p)) {
+    Object.getOwnPropertyNames(p).forEach(function (k) {
+      var d = Object.getOwnPropertyDescriptor(p, k);
+      if (!d.get || k in init) return;
+      var v; try { v = d.get.call(inst); } catch (e) { return; }
+      j++;
+      if (typeof v === 'number') init[k] = j; else if (typeof v === 'string') init[k] = 's' + j; else if (typeof v === 'boolean') init[k] = !v;
+    });
+  }
+  var ev; try { ev = new C('x', init); } catch (e) { out[n] = 'init throws ' + e.name; return; }
+  out[n] = Object.keys(init).filter(function (k) { try { return ev[k] === init[k]; } catch (e) { return false; } }).sort().join(',');
+});
+var ie = function (t) { try { return new InputEvent('input', { inputType: t }).inputType; } catch (e) { return 'throws ' + e.name; } };
+out.inputType = [ie('insertText'), ie('nonsense'), ie(''), ie('deleteContentBackward')];
+if (typeof VirtualKeyboardGeometryChangeEvent === 'function') {
+  var vk = new VirtualKeyboardGeometryChangeEvent('g', { bubbles: true, cancelable: true, composed: true });
+  out.vkFlags = [vk.bubbles, vk.cancelable, vk.composed];
+} else out.vkFlags = 'absent';
+document.title = JSON.stringify(out);
+</script></body></html>

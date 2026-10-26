@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+var calls = 0;
+var q = window.queueMicrotask; window.queueMicrotask = function () { calls++; return q.apply(this, arguments); };
+var st = window.setTimeout; window.setTimeout = function () { calls++; return st.apply(this, arguments); };
+addEventListener('message', function (e) {
+  window.__report = JSON.stringify([JSON.parse(e.data), ['page-wrapper-calls', calls]]);
+  fetch('/report', {method: 'POST', body: window.__report});
+});
+var f = document.createElement('iframe');
+f.src = 'http://localhost:' + location.port + '/f';
+document.body.appendChild(f);
+</script></body></html>

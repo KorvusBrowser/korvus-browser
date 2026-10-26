@@ -1,0 +1,9 @@
+<!doctype html><html><body>
+<script type="module">
+import { val } from 'data:text/javascript,export%20const%20val=42';
+const dyn = await import('data:text/javascript,export%20default%208');
+const meta = typeof import.meta.url === 'string';
+globalThis.__obstacle = 'esm:ran:' + val + ':' + dyn.default + ':' + meta;
+export const marker = 1;
+</script>
+</body></html>

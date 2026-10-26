@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "TaskPriorityChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TaskPriorityChangeEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TaskPriorityChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TaskPriorityChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TaskPriorityChangeEvent",
+    "member": "previousPriority",
+    "expr": "(() => { const o = new TaskPriorityChangeEvent(\"x\", { previousPriority: \"user-blocking\" }); return o.previousPriority; })()",
+    "expected": "user-blocking",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

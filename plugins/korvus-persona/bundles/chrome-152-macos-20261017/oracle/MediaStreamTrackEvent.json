@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "MediaStreamTrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaStreamTrackEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaStreamTrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaStreamTrackEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

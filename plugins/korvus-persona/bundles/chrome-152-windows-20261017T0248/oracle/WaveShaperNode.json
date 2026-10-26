@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "WaveShaperNode",
+    "member": "constructor",
+    "expr": "new WaveShaperNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WaveShaperNode",
+    "member": "curve",
+    "expr": "(() => { const o = new WaveShaperNode(new OfflineAudioContext(1, 1, 44100)); return o.curve; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WaveShaperNode",
+    "member": "curve",
+    "expr": "(() => { const o = new WaveShaperNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.curve); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WaveShaperNode",
+    "member": "oversample",
+    "expr": "(() => { const o = new WaveShaperNode(new OfflineAudioContext(1, 1, 44100)); return o.oversample; })()",
+    "expected": "none",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WaveShaperNode",
+    "member": "oversample",
+    "expr": "(() => { const o = new WaveShaperNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.oversample); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

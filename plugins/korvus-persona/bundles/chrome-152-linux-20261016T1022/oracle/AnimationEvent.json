@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "AnimationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object AnimationEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AnimationEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "animation",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return o.animation; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "animationName",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return o.animationName; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "elapsedTime",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return o.elapsedTime; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "pseudoElement",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return o.pseudoElement; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEvent",
+    "member": "animation",
+    "expr": "(() => { const o = new AnimationEvent(\"x\"); return Object.prototype.toString.call(o.animation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

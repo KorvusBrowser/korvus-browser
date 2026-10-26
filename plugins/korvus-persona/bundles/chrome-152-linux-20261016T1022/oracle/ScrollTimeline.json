@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "ScrollTimeline",
+    "member": "constructor",
+    "expr": "(() => { const o = new ScrollTimeline(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ScrollTimeline]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScrollTimeline",
+    "member": "axis",
+    "expr": "(() => { const o = new ScrollTimeline(); return o.axis; })()",
+    "expected": "block",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScrollTimeline",
+    "member": "source",
+    "expr": "(() => { const o = new ScrollTimeline(); return Object.prototype.toString.call(o.source); })()",
+    "expected": "[object HTMLHtmlElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScrollTimeline",
+    "member": "axis",
+    "expr": "(() => { const o = new ScrollTimeline(); return Object.prototype.toString.call(o.axis); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

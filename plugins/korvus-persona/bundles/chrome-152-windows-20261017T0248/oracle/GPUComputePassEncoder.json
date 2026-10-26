@@ -1,0 +1,394 @@
+[
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "constructor",
+    "expr": "new GPUComputePassEncoder()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "GPUComputePassEncoder.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").get.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUComputePassEncoder.prototype.insertDebugMarker.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUComputePassEncoder.prototype.insertDebugMarker.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUComputePassEncoder.prototype.pushDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUComputePassEncoder.prototype.pushDebugGroup.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroups",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroups.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroups",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroups.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroupsIndirect",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroupsIndirect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroupsIndirect",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroupsIndirect.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "end",
+    "expr": "GPUComputePassEncoder.prototype.end.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "end",
+    "expr": "GPUComputePassEncoder.prototype.end.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPUComputePassEncoder.prototype.popDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPUComputePassEncoder.prototype.popDebugGroup.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPUComputePassEncoder.prototype.setBindGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPUComputePassEncoder.prototype.setBindGroup.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setPipeline",
+    "expr": "GPUComputePassEncoder.prototype.setPipeline.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setPipeline",
+    "expr": "GPUComputePassEncoder.prototype.setPipeline.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPUComputePassEncoder.prototype.writeTimestamp.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPUComputePassEncoder.prototype.writeTimestamp.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setImmediates",
+    "expr": "GPUComputePassEncoder.prototype.setImmediates.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setImmediates",
+    "expr": "GPUComputePassEncoder.prototype.setImmediates.call(Object.create(GPUComputePassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUComputePassEncoder.prototype.insertDebugMarker.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUComputePassEncoder.prototype.pushDebugGroup.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroups",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroups.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroupsIndirect",
+    "expr": "GPUComputePassEncoder.prototype.dispatchWorkgroupsIndirect.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPUComputePassEncoder.prototype.setBindGroup.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setPipeline",
+    "expr": "GPUComputePassEncoder.prototype.setPipeline.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPUComputePassEncoder.prototype.writeTimestamp.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setImmediates",
+    "expr": "GPUComputePassEncoder.prototype.setImmediates.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").get.call(Object.create(GPUComputePassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUComputePassEncoder.prototype, \"label\").set.call(Object.create(GPUComputePassEncoder.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"insertDebugMarker\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"insertDebugMarker\"].call(Object.create(GPUComputePassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"pushDebugGroup\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"pushDebugGroup\"].call(Object.create(GPUComputePassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroups",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"dispatchWorkgroups\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroups",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"dispatchWorkgroups\"].call(Object.create(GPUComputePassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroupsIndirect",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"dispatchWorkgroupsIndirect\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "dispatchWorkgroupsIndirect",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"dispatchWorkgroupsIndirect\"].call(Object.create(GPUComputePassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "end",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"end\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "end",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"end\"].call(Object.create(GPUComputePassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"popDebugGroup\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"popDebugGroup\"].call(Object.create(GPUComputePassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setBindGroup\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setBindGroup\"].call(Object.create(GPUComputePassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setPipeline\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setPipeline\"].call(Object.create(GPUComputePassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "writeTimestamp",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"writeTimestamp\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "writeTimestamp",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"writeTimestamp\"].call(Object.create(GPUComputePassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setImmediates\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUComputePassEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPUComputePassEncoder.prototype[\"setImmediates\"].call(Object.create(GPUComputePassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

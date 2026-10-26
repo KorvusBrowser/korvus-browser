@@ -1,0 +1,290 @@
+(() => {
+  let failed = false;
+  let observed_ids = {};
+  let eventuallies = [];
+  let async_capture = null;
+  let current_script_id = null;
+
+  // can only have 1 async test per <script>, this tracks it
+  let async_seen = new Set();
+
+  // runner will wait until this is empty (or timeout)
+  let async_pending = new Set();
+
+  function expectTrue(actual) {
+     expectEqual(true, actual);
+  }
+
+  function expectFalse(actual) {
+     expectEqual(false, actual);
+  }
+
+  function expectEqual(expected, actual, opts) {
+    if (_equal(expected, actual)) {
+      _registerObservation('ok', opts);
+      return;
+    }
+    failed = true;
+    _registerObservation('fail', opts);
+    let err = `expected: ${_displayValue(expected)}, got: ${_displayValue(actual)}\n  script_id: ${_currentScriptId()}`;
+    if (async_capture) {
+      err += `\n stack: ${async_capture.stack}`;
+    }
+    console.error(err);
+    throw new Error('expectEqual failed');
+  }
+
+  function fail(reason) {
+    failed = true;
+    console.error(reason);
+    throw new Error('testing.fail()');
+  }
+
+  function expectError(expected, fn) {
+    withError((err) => {
+      if (!err.toString().includes(expected)) {
+        console.error(`Expecte error to contains: ${expected}, was: ${err.toString()}`);
+        expectEqual(true, false);
+      } else {
+        // to record a successful case
+        expectTrue(true);
+      }
+    }, fn);
+  }
+
+  function withError(cb, fn) {
+    try{
+      fn();
+    } catch (err) {
+      cb(err);
+      return;
+    }
+
+    console.error(`expected error but no error received\n`);
+    throw new Error('no error');
+  }
+
+  function onload(cb) {
+    const script_id = _currentScriptId();
+    if (!script_id) {
+      throw new Error('testing.onload called outside of a script');
+    }
+    eventuallies.push({
+      callback: cb,
+      script_id: script_id,
+    });
+  }
+
+  async function async() {
+    // currentScript is null while a module runs in FF/Chrome (the test runner
+    // does set it), which leaves us with no way to attribute the observations.
+    const script_id = document.currentScript ? document.currentScript.id : 'cannot track module id in FF/Chrome';
+
+    if (async_seen.has(script_id) && IS_TEST_RUNNER) {
+      throw new Error(`testing.async() called more than once for script '${script_id}'. A script may only register one async block (the runner can declare success in the gap between two of them); split the test into separate <script> tags.`);
+    }
+    async_seen.add(script_id);
+
+    let resolve = null
+    const promise = new Promise((r) => { resolve = r});
+    async_pending.add(script_id);
+
+    return {
+      promise: promise,
+      resolve: resolve,
+      capture: {script_id: script_id, stack: new Error().stack},
+      done: async function(cb) {
+        const res = await this.promise;
+        async_pending.delete(script_id);
+        async_capture = this.capture;
+        try {
+          cb(res);
+        } catch (err) {
+          console.warn(script_id, err);
+          failed = true;
+        }
+        async_capture = false;
+      }
+    };
+  }
+
+  function assertOk() {
+    if (failed) {
+      throw new Error('Failed');
+    }
+
+    if (async_pending.size > 0) {
+      return false;
+    }
+
+    for (let e of eventuallies) {
+      current_script_id = e.script_id;
+      e.callback();
+      current_script_id = null;
+    }
+
+    const script_ids = Object.keys(observed_ids);
+    if (script_ids.length === 0) {
+      throw new Error('no test observations were recorded');
+    }
+
+    const scripts = document.getElementsByTagName('script');
+    for (let script of scripts) {
+      const script_id = script.id;
+      if (!script_id) {
+        continue;
+      }
+
+      const status = observed_ids[script_id];
+      if (status !== 'ok') {
+         throw new Error(`script id: '${script_id}' failed: ${status || 'no assertions'}`);
+      }
+    }
+
+    return true;
+  }
+
+  function printTimeoutState() {
+    console.warn('Pending count:', Array.from(async_pending.keys()));
+  }
+
+  const IS_TEST_RUNNER = window.navigator.userAgent.startsWith("Agent/");
+
+  window.testing = {
+    fail: fail,
+    async: async,
+    assertOk: assertOk,
+    expectTrue: expectTrue,
+    expectFalse: expectFalse,
+    expectEqual: expectEqual,
+    expectError: expectError,
+    withError: withError,
+    printTimeoutState: printTimeoutState,
+    onload: onload,
+    IS_TEST_RUNNER: IS_TEST_RUNNER,
+    HOST: '127.0.0.1',
+    ORIGIN: 'http://127.0.0.1:9582',
+    BASE_URL: 'http://127.0.0.1:9582/src/browser/tests/',
+  };
+
+  if (IS_TEST_RUNNER === false) {
+    // The page is running in a different browser. Probably a developer making sure
+    // a test is correct. There are a few tweaks we need to do to make this a
+    // seamless, namely around adapting paths/urls.
+    console.warn(`The page is not being executed in the test runner, certain behavior has been adjusted`);
+    window.testing.HOST = location.hostname;
+    window.testing.ORIGIN = location.origin;
+    window.testing.BASE_URL = location.origin + '/src/browser/tests/';
+    window.addEventListener('load', testing.assertOk);
+  }
+
+
+  window.$ = function(sel) {
+    return document.querySelector(sel);
+  }
+
+  window.$$ = function(sel) {
+    return document.querySelectorAll(sel);
+  }
+
+  function _equal(expected, actual) {
+    if (expected === actual) {
+      return true;
+    }
+    if (expected === null || actual === null) {
+      return false;
+    }
+    if (typeof expected !== 'object' || typeof actual !== 'object') {
+      return false;
+    }
+
+    if (Object.keys(expected).length != Object.keys(actual).length) {
+      return false;
+    }
+
+    if (expected instanceof Node) {
+      if (!(actual instanceof Node)) {
+         return false;
+      }
+      return expected.isSameNode(actual);
+    }
+
+    for (property in expected) {
+      if (actual.hasOwnProperty(property) === false) {
+        return false;
+      }
+      if (_equal(expected[property], actual[property]) === false) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  function _registerObservation(status, opts) {
+    script_id = opts?.script_id || _currentScriptId();
+    if (!script_id) {
+      return;
+    }
+    if (observed_ids[script_id] === 'fail') {
+      return;
+    }
+
+    observed_ids[script_id] = status;
+
+    if (document.currentScript != null) {
+      if (document.currentScript.onerror === null) {
+        document.currentScript.onerror = function() {
+          observed_ids[document.currentScript.id] = 'fail';
+          failed = true;
+        }
+      }
+    }
+  }
+
+  function _currentScriptId() {
+    if (current_script_id) {
+      return current_script_id;
+    }
+
+    if (async_capture) {
+      return async_capture.script_id;
+    }
+
+    const current_script = document.currentScript;
+
+    if (!current_script) {
+      return null;
+    }
+    return current_script.id;
+  }
+
+  function _displayValue(value) {
+    if (value instanceof Element) {
+      return `HTMLElement: ${value.outerHTML}`;
+    }
+    if (value instanceof Attr) {
+      return `Attribute: ${value.name}: ${value.value}`;
+    }
+    if (value instanceof Node) {
+      return value.nodeName;
+    }
+    if (value === window) {
+      return '#window';
+    }
+    if (value instanceof Array) {
+      return `array: \n${value.map(_displayValue).join('\n')}\n`;
+    }
+
+    const seen = [];
+    return JSON.stringify(value, function(key, val) {
+      if (val != null && typeof val == "object") {
+          if (seen.indexOf(val) >= 0) {
+              return;
+          }
+          seen.push(val);
+      }
+      return val;
+    });
+  }
+})();

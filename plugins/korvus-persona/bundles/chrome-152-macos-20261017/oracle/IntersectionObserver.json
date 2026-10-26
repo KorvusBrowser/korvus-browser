@@ -1,0 +1,81 @@
+[
+  {
+    "iface": "IntersectionObserver",
+    "member": "constructor",
+    "expr": "new IntersectionObserver()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "root",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.root; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "rootMargin",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.rootMargin; })()",
+    "expected": "0px 0px 0px 0px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "scrollMargin",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.scrollMargin; })()",
+    "expected": "0px 0px 0px 0px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "thresholds",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.thresholds; })()",
+    "expected": [
+      0
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "delay",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.delay; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "trackVisibility",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.trackVisibility; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "observe",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.observe(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "unobserve",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.unobserve(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "disconnect",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.disconnect(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IntersectionObserver",
+    "member": "takeRecords",
+    "expr": "(() => { const o = new IntersectionObserver(() => {}); return o.takeRecords(); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  }
+]

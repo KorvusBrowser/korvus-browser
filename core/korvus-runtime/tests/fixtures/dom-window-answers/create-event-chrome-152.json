@@ -1,0 +1,2514 @@
+[
+[
+"",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('') is invalid."
+],
+[
+"AnimationEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('AnimationEvent') is invalid."
+],
+[
+"AnimationEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('animationevent') is invalid."
+],
+[
+"AnimationEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ANIMATIONEVENT') is invalid."
+],
+[
+"AnimationPlaybackEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('AnimationPlaybackEvent') is invalid."
+],
+[
+"AnimationPlaybackEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('animationplaybackevent') is invalid."
+],
+[
+"AnimationPlaybackEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ANIMATIONPLAYBACKEVENT') is invalid."
+],
+[
+"AudioProcessingEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('AudioProcessingEvent') is invalid."
+],
+[
+"AudioProcessingEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('audioprocessingevent') is invalid."
+],
+[
+"AudioProcessingEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('AUDIOPROCESSINGEVENT') is invalid."
+],
+[
+"BeforeInstallPromptEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BeforeInstallPromptEvent') is invalid."
+],
+[
+"BeforeInstallPromptEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('beforeinstallpromptevent') is invalid."
+],
+[
+"BeforeInstallPromptEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BEFOREINSTALLPROMPTEVENT') is invalid."
+],
+[
+"BeforeUnloadEvent",
+"ok",
+"[object BeforeUnloadEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"BeforeUnloadEvent (lower)",
+"ok",
+"[object BeforeUnloadEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"BeforeUnloadEvent (upper)",
+"ok",
+"[object BeforeUnloadEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"BeforeUnloadEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BeforeUnloadEvents') is invalid."
+],
+[
+"BeforeUnloadEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('beforeunloadevents') is invalid."
+],
+[
+"BeforeUnloadEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BEFOREUNLOADEVENTS') is invalid."
+],
+[
+"BlobEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BlobEvent') is invalid."
+],
+[
+"BlobEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('blobevent') is invalid."
+],
+[
+"BlobEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('BLOBEVENT') is invalid."
+],
+[
+"CharacterBoundsUpdateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CharacterBoundsUpdateEvent') is invalid."
+],
+[
+"CharacterBoundsUpdateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('characterboundsupdateevent') is invalid."
+],
+[
+"CharacterBoundsUpdateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CHARACTERBOUNDSUPDATEEVENT') is invalid."
+],
+[
+"ClipboardChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ClipboardChangeEvent') is invalid."
+],
+[
+"ClipboardChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('clipboardchangeevent') is invalid."
+],
+[
+"ClipboardChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CLIPBOARDCHANGEEVENT') is invalid."
+],
+[
+"ClipboardEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ClipboardEvent') is invalid."
+],
+[
+"ClipboardEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('clipboardevent') is invalid."
+],
+[
+"ClipboardEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CLIPBOARDEVENT') is invalid."
+],
+[
+"CloseEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CloseEvent') is invalid."
+],
+[
+"CloseEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('closeevent') is invalid."
+],
+[
+"CloseEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CLOSEEVENT') is invalid."
+],
+[
+"CommandEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CommandEvent') is invalid."
+],
+[
+"CommandEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('commandevent') is invalid."
+],
+[
+"CommandEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('COMMANDEVENT') is invalid."
+],
+[
+"CompositionEvent",
+"ok",
+"[object CompositionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CompositionEvent (lower)",
+"ok",
+"[object CompositionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CompositionEvent (upper)",
+"ok",
+"[object CompositionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CompositionEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CompositionEvents') is invalid."
+],
+[
+"CompositionEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('compositionevents') is invalid."
+],
+[
+"CompositionEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('COMPOSITIONEVENTS') is invalid."
+],
+[
+"ContentVisibilityAutoStateChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ContentVisibilityAutoStateChangeEvent') is invalid."
+],
+[
+"ContentVisibilityAutoStateChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('contentvisibilityautostatechangeevent') is invalid."
+],
+[
+"ContentVisibilityAutoStateChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CONTENTVISIBILITYAUTOSTATECHANGEEVENT') is invalid."
+],
+[
+"CookieChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CookieChangeEvent') is invalid."
+],
+[
+"CookieChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('cookiechangeevent') is invalid."
+],
+[
+"CookieChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('COOKIECHANGEEVENT') is invalid."
+],
+[
+"CustomEvent",
+"ok",
+"[object CustomEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CustomEvent (lower)",
+"ok",
+"[object CustomEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CustomEvent (upper)",
+"ok",
+"[object CustomEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"CustomEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CustomEvents') is invalid."
+],
+[
+"CustomEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('customevents') is invalid."
+],
+[
+"CustomEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('CUSTOMEVENTS') is invalid."
+],
+[
+"DeviceMotionEvent",
+"ok",
+"[object DeviceMotionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DeviceMotionEvent (lower)",
+"ok",
+"[object DeviceMotionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DeviceMotionEvent (upper)",
+"ok",
+"[object DeviceMotionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DeviceMotionEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DeviceMotionEvents') is invalid."
+],
+[
+"DeviceMotionEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('devicemotionevents') is invalid."
+],
+[
+"DeviceMotionEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DEVICEMOTIONEVENTS') is invalid."
+],
+[
+"DeviceOrientationEvent",
+"ok",
+"[object DeviceOrientationEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DeviceOrientationEvent (lower)",
+"ok",
+"[object DeviceOrientationEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DeviceOrientationEvent (upper)",
+"ok",
+"[object DeviceOrientationEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DocumentPictureInPictureEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DocumentPictureInPictureEvent') is invalid."
+],
+[
+"DocumentPictureInPictureEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('documentpictureinpictureevent') is invalid."
+],
+[
+"DocumentPictureInPictureEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DOCUMENTPICTUREINPICTUREEVENT') is invalid."
+],
+[
+"DragEvent",
+"ok",
+"[object DragEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DragEvent (lower)",
+"ok",
+"[object DragEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DragEvent (upper)",
+"ok",
+"[object DragEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"DragEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DragEvents') is invalid."
+],
+[
+"DragEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('dragevents') is invalid."
+],
+[
+"DragEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('DRAGEVENTS') is invalid."
+],
+[
+"ErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ErrorEvent') is invalid."
+],
+[
+"ErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('errorevent') is invalid."
+],
+[
+"ErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ERROREVENT') is invalid."
+],
+[
+"Event",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"Event (lower)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"Event (upper)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"Events",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"Events (lower)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"Events (upper)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"FocusEvent",
+"ok",
+"[object FocusEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"FocusEvent (lower)",
+"ok",
+"[object FocusEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"FocusEvent (upper)",
+"ok",
+"[object FocusEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"FocusEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FocusEvents') is invalid."
+],
+[
+"FocusEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('focusevents') is invalid."
+],
+[
+"FocusEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FOCUSEVENTS') is invalid."
+],
+[
+"FontFaceSetLoadEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FontFaceSetLoadEvent') is invalid."
+],
+[
+"FontFaceSetLoadEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('fontfacesetloadevent') is invalid."
+],
+[
+"FontFaceSetLoadEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FONTFACESETLOADEVENT') is invalid."
+],
+[
+"FormDataEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FormDataEvent') is invalid."
+],
+[
+"FormDataEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('formdataevent') is invalid."
+],
+[
+"FormDataEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('FORMDATAEVENT') is invalid."
+],
+[
+"GPUUncapturedErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('GPUUncapturedErrorEvent') is invalid."
+],
+[
+"GPUUncapturedErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('gpuuncapturederrorevent') is invalid."
+],
+[
+"GPUUncapturedErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('GPUUNCAPTUREDERROREVENT') is invalid."
+],
+[
+"GamepadEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('GamepadEvent') is invalid."
+],
+[
+"GamepadEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('gamepadevent') is invalid."
+],
+[
+"GamepadEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('GAMEPADEVENT') is invalid."
+],
+[
+"HIDConnectionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HIDConnectionEvent') is invalid."
+],
+[
+"HIDConnectionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('hidconnectionevent') is invalid."
+],
+[
+"HIDConnectionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HIDCONNECTIONEVENT') is invalid."
+],
+[
+"HIDInputReportEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HIDInputReportEvent') is invalid."
+],
+[
+"HIDInputReportEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('hidinputreportevent') is invalid."
+],
+[
+"HIDInputReportEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HIDINPUTREPORTEVENT') is invalid."
+],
+[
+"HTMLEvents",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HTMLEvents (lower)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HTMLEvents (upper)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HashChangeEvent",
+"ok",
+"[object HashChangeEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HashChangeEvent (lower)",
+"ok",
+"[object HashChangeEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HashChangeEvent (upper)",
+"ok",
+"[object HashChangeEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"HashChangeEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HashChangeEvents') is invalid."
+],
+[
+"HashChangeEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('hashchangeevents') is invalid."
+],
+[
+"HashChangeEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('HASHCHANGEEVENTS') is invalid."
+],
+[
+"IDBVersionChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('IDBVersionChangeEvent') is invalid."
+],
+[
+"IDBVersionChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('idbversionchangeevent') is invalid."
+],
+[
+"IDBVersionChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('IDBVERSIONCHANGEEVENT') is invalid."
+],
+[
+"InputEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('InputEvent') is invalid."
+],
+[
+"InputEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('inputevent') is invalid."
+],
+[
+"InputEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('INPUTEVENT') is invalid."
+],
+[
+"InterestEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('InterestEvent') is invalid."
+],
+[
+"InterestEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('interestevent') is invalid."
+],
+[
+"InterestEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('INTERESTEVENT') is invalid."
+],
+[
+"KeyboardEvent",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"KeyboardEvent (lower)",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"KeyboardEvent (upper)",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"KeyboardEvents",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"KeyboardEvents (lower)",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"KeyboardEvents (upper)",
+"ok",
+"[object KeyboardEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MIDIConnectionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MIDIConnectionEvent') is invalid."
+],
+[
+"MIDIConnectionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('midiconnectionevent') is invalid."
+],
+[
+"MIDIConnectionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MIDICONNECTIONEVENT') is invalid."
+],
+[
+"MIDIMessageEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MIDIMessageEvent') is invalid."
+],
+[
+"MIDIMessageEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('midimessageevent') is invalid."
+],
+[
+"MIDIMessageEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MIDIMESSAGEEVENT') is invalid."
+],
+[
+"MediaEncryptedEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MediaEncryptedEvent') is invalid."
+],
+[
+"MediaEncryptedEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mediaencryptedevent') is invalid."
+],
+[
+"MediaEncryptedEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MEDIAENCRYPTEDEVENT') is invalid."
+],
+[
+"MediaKeyMessageEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MediaKeyMessageEvent') is invalid."
+],
+[
+"MediaKeyMessageEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mediakeymessageevent') is invalid."
+],
+[
+"MediaKeyMessageEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MEDIAKEYMESSAGEEVENT') is invalid."
+],
+[
+"MediaQueryListEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MediaQueryListEvent') is invalid."
+],
+[
+"MediaQueryListEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mediaquerylistevent') is invalid."
+],
+[
+"MediaQueryListEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MEDIAQUERYLISTEVENT') is invalid."
+],
+[
+"MediaStreamEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MediaStreamEvent') is invalid."
+],
+[
+"MediaStreamEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mediastreamevent') is invalid."
+],
+[
+"MediaStreamEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MEDIASTREAMEVENT') is invalid."
+],
+[
+"MediaStreamTrackEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MediaStreamTrackEvent') is invalid."
+],
+[
+"MediaStreamTrackEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mediastreamtrackevent') is invalid."
+],
+[
+"MediaStreamTrackEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MEDIASTREAMTRACKEVENT') is invalid."
+],
+[
+"MessageEvent",
+"ok",
+"[object MessageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MessageEvent (lower)",
+"ok",
+"[object MessageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MessageEvent (upper)",
+"ok",
+"[object MessageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MessageEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MessageEvents') is invalid."
+],
+[
+"MessageEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('messageevents') is invalid."
+],
+[
+"MessageEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MESSAGEEVENTS') is invalid."
+],
+[
+"MouseEvent",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MouseEvent (lower)",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MouseEvent (upper)",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MouseEvents",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MouseEvents (lower)",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MouseEvents (upper)",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"MutationEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MutationEvent') is invalid."
+],
+[
+"MutationEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mutationevent') is invalid."
+],
+[
+"MutationEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MUTATIONEVENT') is invalid."
+],
+[
+"MutationEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MutationEvents') is invalid."
+],
+[
+"MutationEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('mutationevents') is invalid."
+],
+[
+"MutationEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('MUTATIONEVENTS') is invalid."
+],
+[
+"NavigateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('NavigateEvent') is invalid."
+],
+[
+"NavigateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('navigateevent') is invalid."
+],
+[
+"NavigateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('NAVIGATEEVENT') is invalid."
+],
+[
+"NavigationCurrentEntryChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('NavigationCurrentEntryChangeEvent') is invalid."
+],
+[
+"NavigationCurrentEntryChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('navigationcurrententrychangeevent') is invalid."
+],
+[
+"NavigationCurrentEntryChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('NAVIGATIONCURRENTENTRYCHANGEEVENT') is invalid."
+],
+[
+"OfflineAudioCompletionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('OfflineAudioCompletionEvent') is invalid."
+],
+[
+"OfflineAudioCompletionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('offlineaudiocompletionevent') is invalid."
+],
+[
+"OfflineAudioCompletionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('OFFLINEAUDIOCOMPLETIONEVENT') is invalid."
+],
+[
+"OrientationEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('OrientationEvent') is invalid."
+],
+[
+"OrientationEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('orientationevent') is invalid."
+],
+[
+"OrientationEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ORIENTATIONEVENT') is invalid."
+],
+[
+"PageRevealEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PageRevealEvent') is invalid."
+],
+[
+"PageRevealEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('pagerevealevent') is invalid."
+],
+[
+"PageRevealEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PAGEREVEALEVENT') is invalid."
+],
+[
+"PageSwapEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PageSwapEvent') is invalid."
+],
+[
+"PageSwapEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('pageswapevent') is invalid."
+],
+[
+"PageSwapEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PAGESWAPEVENT') is invalid."
+],
+[
+"PageTransitionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PageTransitionEvent') is invalid."
+],
+[
+"PageTransitionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('pagetransitionevent') is invalid."
+],
+[
+"PageTransitionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PAGETRANSITIONEVENT') is invalid."
+],
+[
+"PaymentMethodChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PaymentMethodChangeEvent') is invalid."
+],
+[
+"PaymentMethodChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('paymentmethodchangeevent') is invalid."
+],
+[
+"PaymentMethodChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PAYMENTMETHODCHANGEEVENT') is invalid."
+],
+[
+"PaymentRequestUpdateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PaymentRequestUpdateEvent') is invalid."
+],
+[
+"PaymentRequestUpdateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('paymentrequestupdateevent') is invalid."
+],
+[
+"PaymentRequestUpdateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PAYMENTREQUESTUPDATEEVENT') is invalid."
+],
+[
+"PictureInPictureEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PictureInPictureEvent') is invalid."
+],
+[
+"PictureInPictureEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('pictureinpictureevent') is invalid."
+],
+[
+"PictureInPictureEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PICTUREINPICTUREEVENT') is invalid."
+],
+[
+"PointerEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PointerEvent') is invalid."
+],
+[
+"PointerEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('pointerevent') is invalid."
+],
+[
+"PointerEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('POINTEREVENT') is invalid."
+],
+[
+"PopStateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PopStateEvent') is invalid."
+],
+[
+"PopStateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('popstateevent') is invalid."
+],
+[
+"PopStateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('POPSTATEEVENT') is invalid."
+],
+[
+"PresentationConnectionAvailableEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PresentationConnectionAvailableEvent') is invalid."
+],
+[
+"PresentationConnectionAvailableEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('presentationconnectionavailableevent') is invalid."
+],
+[
+"PresentationConnectionAvailableEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PRESENTATIONCONNECTIONAVAILABLEEVENT') is invalid."
+],
+[
+"PresentationConnectionCloseEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PresentationConnectionCloseEvent') is invalid."
+],
+[
+"PresentationConnectionCloseEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('presentationconnectioncloseevent') is invalid."
+],
+[
+"PresentationConnectionCloseEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PRESENTATIONCONNECTIONCLOSEEVENT') is invalid."
+],
+[
+"ProgressEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ProgressEvent') is invalid."
+],
+[
+"ProgressEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('progressevent') is invalid."
+],
+[
+"ProgressEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PROGRESSEVENT') is invalid."
+],
+[
+"PromiseRejectionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PromiseRejectionEvent') is invalid."
+],
+[
+"PromiseRejectionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('promiserejectionevent') is invalid."
+],
+[
+"PromiseRejectionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('PROMISEREJECTIONEVENT') is invalid."
+],
+[
+"RTCDTMFToneChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCDTMFToneChangeEvent') is invalid."
+],
+[
+"RTCDTMFToneChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtcdtmftonechangeevent') is invalid."
+],
+[
+"RTCDTMFToneChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCDTMFTONECHANGEEVENT') is invalid."
+],
+[
+"RTCDataChannelEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCDataChannelEvent') is invalid."
+],
+[
+"RTCDataChannelEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtcdatachannelevent') is invalid."
+],
+[
+"RTCDataChannelEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCDATACHANNELEVENT') is invalid."
+],
+[
+"RTCErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCErrorEvent') is invalid."
+],
+[
+"RTCErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtcerrorevent') is invalid."
+],
+[
+"RTCErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCERROREVENT') is invalid."
+],
+[
+"RTCPeerConnectionIceErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCPeerConnectionIceErrorEvent') is invalid."
+],
+[
+"RTCPeerConnectionIceErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtcpeerconnectioniceerrorevent') is invalid."
+],
+[
+"RTCPeerConnectionIceErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCPEERCONNECTIONICEERROREVENT') is invalid."
+],
+[
+"RTCPeerConnectionIceEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCPeerConnectionIceEvent') is invalid."
+],
+[
+"RTCPeerConnectionIceEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtcpeerconnectioniceevent') is invalid."
+],
+[
+"RTCPeerConnectionIceEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCPEERCONNECTIONICEEVENT') is invalid."
+],
+[
+"RTCTrackEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCTrackEvent') is invalid."
+],
+[
+"RTCTrackEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('rtctrackevent') is invalid."
+],
+[
+"RTCTrackEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('RTCTRACKEVENT') is invalid."
+],
+[
+"SVGEvents",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"SVGEvents (lower)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"SVGEvents (upper)",
+"ok",
+"[object Event]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"SVGZoomEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SVGZoomEvents') is invalid."
+],
+[
+"SVGZoomEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('svgzoomevents') is invalid."
+],
+[
+"SVGZoomEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SVGZOOMEVENTS') is invalid."
+],
+[
+"SecurityPolicyViolationEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SecurityPolicyViolationEvent') is invalid."
+],
+[
+"SecurityPolicyViolationEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('securitypolicyviolationevent') is invalid."
+],
+[
+"SecurityPolicyViolationEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SECURITYPOLICYVIOLATIONEVENT') is invalid."
+],
+[
+"SensorErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SensorErrorEvent') is invalid."
+],
+[
+"SensorErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('sensorerrorevent') is invalid."
+],
+[
+"SensorErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SENSORERROREVENT') is invalid."
+],
+[
+"SnapEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SnapEvent') is invalid."
+],
+[
+"SnapEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('snapevent') is invalid."
+],
+[
+"SnapEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SNAPEVENT') is invalid."
+],
+[
+"SpeechRecognitionErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SpeechRecognitionErrorEvent') is invalid."
+],
+[
+"SpeechRecognitionErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('speechrecognitionerrorevent') is invalid."
+],
+[
+"SpeechRecognitionErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SPEECHRECOGNITIONERROREVENT') is invalid."
+],
+[
+"SpeechRecognitionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SpeechRecognitionEvent') is invalid."
+],
+[
+"SpeechRecognitionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('speechrecognitionevent') is invalid."
+],
+[
+"SpeechRecognitionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SPEECHRECOGNITIONEVENT') is invalid."
+],
+[
+"SpeechSynthesisErrorEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SpeechSynthesisErrorEvent') is invalid."
+],
+[
+"SpeechSynthesisErrorEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('speechsynthesiserrorevent') is invalid."
+],
+[
+"SpeechSynthesisErrorEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SPEECHSYNTHESISERROREVENT') is invalid."
+],
+[
+"SpeechSynthesisEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SpeechSynthesisEvent') is invalid."
+],
+[
+"SpeechSynthesisEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('speechsynthesisevent') is invalid."
+],
+[
+"SpeechSynthesisEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SPEECHSYNTHESISEVENT') is invalid."
+],
+[
+"StorageEvent",
+"ok",
+"[object StorageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"StorageEvent (lower)",
+"ok",
+"[object StorageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"StorageEvent (upper)",
+"ok",
+"[object StorageEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"StorageEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('StorageEvents') is invalid."
+],
+[
+"StorageEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('storageevents') is invalid."
+],
+[
+"StorageEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('STORAGEEVENTS') is invalid."
+],
+[
+"SubmitEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SubmitEvent') is invalid."
+],
+[
+"SubmitEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('submitevent') is invalid."
+],
+[
+"SubmitEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('SUBMITEVENT') is invalid."
+],
+[
+"TaskPriorityChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TaskPriorityChangeEvent') is invalid."
+],
+[
+"TaskPriorityChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('taskprioritychangeevent') is invalid."
+],
+[
+"TaskPriorityChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TASKPRIORITYCHANGEEVENT') is invalid."
+],
+[
+"TextEvent",
+"ok",
+"[object TextEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"TextEvent (lower)",
+"ok",
+"[object TextEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"TextEvent (upper)",
+"ok",
+"[object TextEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"TextEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TextEvents') is invalid."
+],
+[
+"TextEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('textevents') is invalid."
+],
+[
+"TextEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TEXTEVENTS') is invalid."
+],
+[
+"TextFormatUpdateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TextFormatUpdateEvent') is invalid."
+],
+[
+"TextFormatUpdateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('textformatupdateevent') is invalid."
+],
+[
+"TextFormatUpdateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TEXTFORMATUPDATEEVENT') is invalid."
+],
+[
+"TextUpdateEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TextUpdateEvent') is invalid."
+],
+[
+"TextUpdateEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('textupdateevent') is invalid."
+],
+[
+"TextUpdateEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TEXTUPDATEEVENT') is invalid."
+],
+[
+"ToggleEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('ToggleEvent') is invalid."
+],
+[
+"ToggleEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('toggleevent') is invalid."
+],
+[
+"ToggleEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TOGGLEEVENT') is invalid."
+],
+[
+"TouchEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TouchEvent') is invalid."
+],
+[
+"TouchEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('touchevent') is invalid."
+],
+[
+"TouchEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TOUCHEVENT') is invalid."
+],
+[
+"TouchEvents",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TouchEvents') is invalid."
+],
+[
+"TouchEvents (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('touchevents') is invalid."
+],
+[
+"TouchEvents (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TOUCHEVENTS') is invalid."
+],
+[
+"TrackEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TrackEvent') is invalid."
+],
+[
+"TrackEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('trackevent') is invalid."
+],
+[
+"TrackEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TRACKEVENT') is invalid."
+],
+[
+"TransitionEvent",
+"ok",
+"[object TransitionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"TransitionEvent (lower)",
+"ok",
+"[object TransitionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"TransitionEvent (upper)",
+"ok",
+"[object TransitionEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvent",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvent (lower)",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvent (upper)",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvents",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvents (lower)",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"UIEvents (upper)",
+"ok",
+"[object UIEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"USBConnectionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('USBConnectionEvent') is invalid."
+],
+[
+"USBConnectionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('usbconnectionevent') is invalid."
+],
+[
+"USBConnectionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('USBCONNECTIONEVENT') is invalid."
+],
+[
+"VirtualKeyboardGeometryChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('VirtualKeyboardGeometryChangeEvent') is invalid."
+],
+[
+"VirtualKeyboardGeometryChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('virtualkeyboardgeometrychangeevent') is invalid."
+],
+[
+"VirtualKeyboardGeometryChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('VIRTUALKEYBOARDGEOMETRYCHANGEEVENT') is invalid."
+],
+[
+"WebGLContextEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WebGLContextEvent') is invalid."
+],
+[
+"WebGLContextEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webglcontextevent') is invalid."
+],
+[
+"WebGLContextEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WEBGLCONTEXTEVENT') is invalid."
+],
+[
+"WebKitAnimationEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WebKitAnimationEvent') is invalid."
+],
+[
+"WebKitAnimationEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkitanimationevent') is invalid."
+],
+[
+"WebKitAnimationEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WEBKITANIMATIONEVENT') is invalid."
+],
+[
+"WebKitTransitionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WebKitTransitionEvent') is invalid."
+],
+[
+"WebKitTransitionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkittransitionevent') is invalid."
+],
+[
+"WebKitTransitionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WEBKITTRANSITIONEVENT') is invalid."
+],
+[
+"WheelEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WheelEvent') is invalid."
+],
+[
+"WheelEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('wheelevent') is invalid."
+],
+[
+"WheelEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WHEELEVENT') is invalid."
+],
+[
+"WindowControlsOverlayGeometryChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WindowControlsOverlayGeometryChangeEvent') is invalid."
+],
+[
+"WindowControlsOverlayGeometryChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('windowcontrolsoverlaygeometrychangeevent') is invalid."
+],
+[
+"WindowControlsOverlayGeometryChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WINDOWCONTROLSOVERLAYGEOMETRYCHANGEEVENT') is invalid."
+],
+[
+"XMLHttpRequestProgressEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XMLHttpRequestProgressEvent') is invalid."
+],
+[
+"XMLHttpRequestProgressEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xmlhttprequestprogressevent') is invalid."
+],
+[
+"XMLHttpRequestProgressEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XMLHTTPREQUESTPROGRESSEVENT') is invalid."
+],
+[
+"XRInputSourceEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRInputSourceEvent') is invalid."
+],
+[
+"XRInputSourceEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrinputsourceevent') is invalid."
+],
+[
+"XRInputSourceEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRINPUTSOURCEEVENT') is invalid."
+],
+[
+"XRInputSourcesChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRInputSourcesChangeEvent') is invalid."
+],
+[
+"XRInputSourcesChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrinputsourceschangeevent') is invalid."
+],
+[
+"XRInputSourcesChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRINPUTSOURCESCHANGEEVENT') is invalid."
+],
+[
+"XRLayerEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRLayerEvent') is invalid."
+],
+[
+"XRLayerEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrlayerevent') is invalid."
+],
+[
+"XRLayerEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRLAYEREVENT') is invalid."
+],
+[
+"XRReferenceSpaceEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRReferenceSpaceEvent') is invalid."
+],
+[
+"XRReferenceSpaceEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrreferencespaceevent') is invalid."
+],
+[
+"XRReferenceSpaceEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRREFERENCESPACEEVENT') is invalid."
+],
+[
+"XRSessionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRSessionEvent') is invalid."
+],
+[
+"XRSessionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrsessionevent') is invalid."
+],
+[
+"XRSessionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRSESSIONEVENT') is invalid."
+],
+[
+"XRVisibilityMaskChangeEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRVisibilityMaskChangeEvent') is invalid."
+],
+[
+"XRVisibilityMaskChangeEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('xrvisibilitymaskchangeevent') is invalid."
+],
+[
+"XRVisibilityMaskChangeEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('XRVISIBILITYMASKCHANGEEVENT') is invalid."
+],
+[
+"webkitSpeechRecognitionError",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkitSpeechRecognitionError') is invalid."
+],
+[
+"webkitSpeechRecognitionError (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkitspeechrecognitionerror') is invalid."
+],
+[
+"webkitSpeechRecognitionError (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WEBKITSPEECHRECOGNITIONERROR') is invalid."
+],
+[
+"webkitSpeechRecognitionEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkitSpeechRecognitionEvent') is invalid."
+],
+[
+"webkitSpeechRecognitionEvent (lower)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('webkitspeechrecognitionevent') is invalid."
+],
+[
+"webkitSpeechRecognitionEvent (upper)",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('WEBKITSPEECHRECOGNITIONEVENT') is invalid."
+],
+[
+"no argument",
+"throw",
+"TypeError",
+"Failed to execute 'createEvent' on 'Document': 1 argument required, but only 0 present."
+],
+[
+"undefined",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('undefined') is invalid."
+],
+[
+"null",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('null') is invalid."
+],
+[
+"object with toString",
+"ok",
+"[object MouseEvent]",
+true,
+"\"\"",
+false,
+false,
+false,
+"InvalidStateError"
+],
+[
+"symbol",
+"throw",
+"TypeError",
+"Failed to execute 'createEvent' on 'Document': Cannot convert a Symbol value to a string"
+],
+[
+"foreign receiver",
+"throw",
+"TypeError",
+"Illegal invocation"
+],
+[
+"frame realm",
+true,
+false
+],
+[
+"frame TouchEvent",
+"throw",
+"NotSupportedError",
+"Failed to execute 'createEvent' on 'Document': The provided event type ('TouchEvent') is invalid."
+]
+]

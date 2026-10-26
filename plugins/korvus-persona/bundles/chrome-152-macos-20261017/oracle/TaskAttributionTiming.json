@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "TaskAttributionTiming",
+    "member": "constructor",
+    "expr": "new TaskAttributionTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

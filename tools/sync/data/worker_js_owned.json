@@ -1,0 +1,4 @@
+{
+ "why": "EMPTY, and it stays empty (SSOT W6.2, goal invariant I8: 'no worker-only JS, no second shell set'). This list named the worker interfaces the Rust installer left to hand-written JS because of a live handshake it could not reproduce. `WorkerGlobalScope` and `DedicatedWorkerGlobalScope` left it when they became hand `interface!` tables and `install_worker_global_scope` took over the reparent that `worker-finalize.js` used to do; `XMLHttpRequest` left it when the WINDOW's table gained a worker selector (`WORKER_XHR_MEMBERS`), which is what `worker-native.js`'s twenty-one builder ops and `generated_worker_shells.js`'s recorded shape existed to approximate. All three JS files are deleted. An entry here is now a rig bug: it would put a Web API member back in a JS file, which `scripts/freeze.sh`'s `js_files_runtime` ratchet counts.",
+ "interfaces": []
+}

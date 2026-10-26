@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "RTCIceTransport",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCIceTransport(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

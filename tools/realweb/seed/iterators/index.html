@@ -1,0 +1,25 @@
+<!doctype html><html><body><form id=theForm><input name=a><select id=theSelect><option>x</option></select></form><script>
+// REALWEB H35: an interface the capture records as ITERABLE has its iterator -- an own `@@iterator` (Array's
+// `values`, or its own `values`/`entries`), writable, not enumerable, configurable, the prototype's last key,
+// after `Symbol.toStringTag`. 22 shell interfaces and 12 tables had NONE (`[...navigator.plugins]`,
+// `[...document.fonts]`, `for (const p of getComputedStyle(el))` threw), and a few set theirs ahead of the tag.
+var L = ["TouchList", "TextTrackList", "TextTrackCueList", "SourceBufferList", "SVGTransformList", "SVGStringList", "SVGPointList", "SVGNumberList", "SVGLengthList", "PluginArray", "Plugin", "MimeTypeArray", "MediaList", "HTMLSelectElement", "HTMLFormElement", "FontFaceSet", "CSSUnparsedValue", "CSSTransformValue", "CSSStyleDeclaration", "CSSPositionTryDescriptors", "CSSNumericArray", "CSSKeyframesRule", "AudioParamMap", "GPUSupportedFeatures", "ImageTrackList", "KeyboardLayoutMap", "MIDIInputMap", "MIDIOutputMap", "MediaKeyStatusMap", "XRAnchorSet", "XRHand", "XRInputSourceArray", "XRPlaneSet", "CSSFunctionDescriptors", "SpeechGrammarList", "TimelineTriggerRangeList"], O = ["NodeList", "Headers", "FormData", "URLSearchParams", "Highlight", "HighlightRegistry", "FileSystemDirectoryHandle", "ReadableStream", "DOMTokenList", "FileList"], r = {shape: {}, order: {}, use: {}};
+for (var n of L) {
+  var C = self[n]; if (!C || !C.prototype) { r.shape[n] = 'absent'; continue; }
+  var P = C.prototype, s = Symbol.iterator in P ? Symbol.iterator : Symbol.asyncIterator, own = Object.getOwnPropertyDescriptor(P, s), f = P[s];
+  var who = f === Array.prototype.values ? 'Array.values' : f === P.values ? 'values' : f === P.entries ? 'entries' : (f ? 'other' : 'none');
+  var ks = Reflect.ownKeys(P);
+  r.shape[n] = [who, own ? [own.writable, own.enumerable, own.configurable].join('/') : 'inherited', own ? String(ks[ks.length - 1] === s) : ''].join(' ');
+}
+for (var n of O) { var P = self[n] && self[n].prototype; r.order[n] = P ? Reflect.ownKeys(P).filter(function (k) { return typeof k === 'symbol'; }).map(String).join('+') : 'absent'; }
+function t(k, f) { try { r.use[k] = f(); } catch (e) { r.use[k] = 'THROW ' + e.name; } }
+t('plugins', function () { return [...navigator.plugins].length === navigator.plugins.length; });
+t('mimeTypes', function () { return [...navigator.mimeTypes].length === navigator.mimeTypes.length; });
+t('fonts', function () { return [...document.fonts].length; });
+t('computedStyle', function () { var n = 0; for (var p of getComputedStyle(document.body)) n++; return n > 100; });
+t('form', function () { return [...document.getElementById('theForm')].map(function (e) { return e.tagName; }).join(); });
+t('speechGrammarList', function () { var g = new SpeechGrammarList(); return Object.prototype.toString.call(g) + ' ' + [...g].length; });
+t('select', function () { return [...document.getElementById('theSelect')].length; });
+t('media', function () { var m = new CSSStyleSheet({media: 'screen, print'}).media; return [...m].join() + ' ' + m[1] + ' ' + (0 in m) + ' ' + Object.keys(m).join(); });
+document.title = JSON.stringify(r);
+</script></body></html>

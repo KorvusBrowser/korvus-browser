@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "ContentIndex",
+    "member": "constructor",
+    "expr": "new ContentIndex()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

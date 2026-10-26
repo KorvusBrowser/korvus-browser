@@ -1,0 +1,28 @@
+<!doctype html><html><head><style>
+[data-state=open] { color: rgb(1, 0, 0) }
+#b:not([data-off]) { color: rgb(0, 2, 0) }
+#c:has(> [data-hot]) { color: rgb(0, 0, 3) }
+#d[data-n^="1"] + #e { color: rgb(4, 4, 0) }
+#f::before { content: attr(data-label) }
+</style></head><body>
+<div id=a>a</div><div id=b>b</div><div id=c><span id=cs>c</span></div><div id=d>d</div><div id=e>e</div><div id=f>f</div>
+<script>
+// REALWEB P6: a write to a `data-*` attribute keeps every element's matched rules (it moves no selector that does
+// not name it) -- and the rules that DO name one are matched again, so each of these must follow each write.
+var cs = function (el, p) { return getComputedStyle(el, p ? '::before' : null)[p ? 'content' : 'color']; };
+var r = [];
+function snap(tag) { r.push(tag + ': ' + [cs(a), cs(b), cs(c), cs(e), cs(f, 1)].join(' | ')); }
+snap('start');
+a.dataset.state = 'open'; snap('open');
+a.setAttribute('data-state', 'closed'); snap('closed');
+b.dataset.off = ''; snap('off');
+b.removeAttribute('data-off'); snap('on');
+cs_ = document.getElementById('cs'); cs_.dataset.hot = '1'; snap('hot');
+delete cs_.dataset.hot; snap('cold');
+d.dataset.n = '12'; snap('n12');
+d.dataset.n = '21'; snap('n21');
+f.dataset.label = 'L1'; snap('label');
+f.setAttribute('data-label', 'L2'); snap('label2');
+for (var i = 0; i < 50; i++) { a.dataset.i = i; a.offsetHeight; } snap('loop');
+document.title = JSON.stringify(r);
+</script></body></html>

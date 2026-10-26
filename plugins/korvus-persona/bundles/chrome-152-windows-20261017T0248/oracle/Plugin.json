@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "Plugin",
+    "member": "constructor",
+    "expr": "new Plugin()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "length",
+    "expr": "(() => { const o = navigator.plugins[0]; return o.length; })()",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "item",
+    "expr": "(() => { const o = navigator.plugins[0]; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "namedItem",
+    "expr": "(() => { const o = navigator.plugins[0]; return o.namedItem(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "namedItem",
+    "expr": "(() => { const o = navigator.plugins[0]; return o.namedItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "item",
+    "expr": "(() => { const o = navigator.plugins[0]; return Object.prototype.toString.call(o.item(1)); })()",
+    "expected": "[object MimeType]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Plugin",
+    "member": "namedItem",
+    "expr": "(() => { const o = navigator.plugins[0]; return Object.prototype.toString.call(o.namedItem(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

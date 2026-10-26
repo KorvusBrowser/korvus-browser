@@ -1,0 +1,268 @@
+[
+  {
+    "iface": "XRCompositionLayer",
+    "member": "constructor",
+    "expr": "new XRCompositionLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "layout",
+    "expr": "XRCompositionLayer.prototype.layout",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "layout",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"layout\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "XRCompositionLayer.prototype.blendTextureSourceAlpha",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "XRCompositionLayer.prototype.forceMonoPresentation",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "XRCompositionLayer.prototype.opacity",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "mipLevels",
+    "expr": "XRCompositionLayer.prototype.mipLevels",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "mipLevels",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"mipLevels\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "needsRedraw",
+    "expr": "XRCompositionLayer.prototype.needsRedraw",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "needsRedraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"needsRedraw\").get.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "destroy",
+    "expr": "XRCompositionLayer.prototype.destroy.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "destroy",
+    "expr": "XRCompositionLayer.prototype.destroy.call(Object.create(XRCompositionLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "layout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"layout\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "layout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"layout\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "blendTextureSourceAlpha",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"blendTextureSourceAlpha\").set.call(Object.create(XRCompositionLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "forceMonoPresentation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"forceMonoPresentation\").set.call(Object.create(XRCompositionLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "opacity",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"opacity\").set.call(Object.create(XRCompositionLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "mipLevels",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"mipLevels\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "mipLevels",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"mipLevels\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "needsRedraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"needsRedraw\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "needsRedraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCompositionLayer.prototype, \"needsRedraw\").get.call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "destroy",
+    "expr": "(() => { try { const v = XRCompositionLayer.prototype[\"destroy\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRCompositionLayer",
+    "member": "destroy",
+    "expr": "(() => { try { const v = XRCompositionLayer.prototype[\"destroy\"].call(Object.create(XRCompositionLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

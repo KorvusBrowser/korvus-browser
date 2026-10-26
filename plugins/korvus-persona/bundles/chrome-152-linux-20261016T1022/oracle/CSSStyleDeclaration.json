@@ -1,0 +1,114 @@
+[
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "constructor",
+    "expr": "new CSSStyleDeclaration()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "cssText",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.cssText; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "cssText",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return (o.cssText = \"x\", o.cssText); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "length",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.item(1); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "getPropertyValue",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.getPropertyValue(\"x\"); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "getPropertyValue",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.getPropertyValue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "getPropertyPriority",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.getPropertyPriority(\"x\"); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "getPropertyPriority",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.getPropertyPriority(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "setProperty",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.setProperty(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "setProperty",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.setProperty(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "removeProperty",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.removeProperty(\"x\"); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "removeProperty",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.removeProperty(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "parentRule",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return o.parentRule; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSStyleDeclaration",
+    "member": "parentRule",
+    "expr": "(() => { const o = document.createElement(\"div\").style; return Object.prototype.toString.call(o.parentRule); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

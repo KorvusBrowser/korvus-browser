@@ -1,0 +1,6 @@
+desc crypto => accessor get=get crypto/0 set=undefined e=true c=true
+desc indexedDB => accessor get=get indexedDB/0 set=undefined e=true c=true
+desc caches => accessor get=get caches/0 set=undefined e=true c=true
+desc createImageBitmap => data w=true function createImageBitmap/1 e=true c=true
+crypto same object => true
+indexedDB same object => [object IDBFactory]

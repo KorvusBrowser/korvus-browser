@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "XMLSerializer",
+    "member": "constructor",
+    "expr": "(() => { const o = new XMLSerializer(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object XMLSerializer]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XMLSerializer",
+    "member": "serializeToString",
+    "expr": "(() => { const o = new XMLSerializer(); return o.serializeToString(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

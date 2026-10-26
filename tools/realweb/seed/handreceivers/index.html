@@ -1,0 +1,38 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P8 B32: the members whose bodies were mounted by hand, without the receiver check every table
+// member makes, refuse a receiver that is not their interface's instance -- `{}` and `Object.create(P)` -- in
+// stock Chrome: a TypeError, or for a promise member a rejection naming the member.
+const probes = [
+  ['ValidityState', 'valueMissing'], ['ValidityState', 'valid'], ['ValidityState', 'customError'],
+  ['UserActivation', 'hasBeenActive'], ['UserActivation', 'isActive'],
+  ['Scheduling', 'isInputPending'],
+  ['NavigatorUAData', 'getHighEntropyValues'], ['NavigatorUAData', 'toJSON'], ['NavigatorUAData', 'brands'],
+  ['StorageManager', 'estimate'], ['StorageManager', 'persisted'], ['StorageManager', 'persist'],
+  ['MediaDevices', 'enumerateDevices'], ['Clipboard', 'readText'], ['Permissions', 'query'],
+];
+const out = {};
+const pending = [];
+const call = (k, f, recv) => {
+  try {
+    const r = f.call(recv, { name: 'geolocation' }, ['platform']);
+    if (r && typeof r.then === 'function') {
+      out[k] = 'pending';
+      pending.push(r.then(() => { out[k] = 'resolves'; }, (e) => { out[k] = 'rejects ' + (e && e.constructor && e.constructor.name) + ': ' + (e && e.message); }));
+    } else { out[k] = 'answers ' + (r === null ? 'null' : typeof r); }
+  } catch (e) { out[k] = 'throws ' + e.constructor.name + ': ' + e.message; }
+};
+for (const [I, m] of probes) {
+  const C = self[I];
+  if (!C) { out[I + '.' + m] = 'no-iface'; continue; }
+  const d = Object.getOwnPropertyDescriptor(C.prototype, m);
+  if (!d) { out[I + '.' + m] = 'no-member'; continue; }
+  const f = d.get || d.value;
+  call(I + '.' + m + ' {}', f, {});
+  call(I + '.' + m + ' fake', f, Object.create(C.prototype));
+}
+// a real instance still answers
+out.real = [typeof document.createElement('input').validity.valid, typeof navigator.userActivation.isActive,
+            typeof navigator.userAgentData.toJSON()].join(',');
+const done = () => { window.R = JSON.stringify(out); };
+Promise.all(pending).then(done, done);
+</script>

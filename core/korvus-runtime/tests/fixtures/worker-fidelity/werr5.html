@@ -1,0 +1,17 @@
+<!doctype html><body><script>
+window.__r=[];
+window.onerror = (m, f, l, c, e) => { window.__r.push('window.onerror ' + JSON.stringify([m, f && f.slice(0, 5), l, c, String(e)])) };
+const b = s => URL.createObjectURL(new Blob([s],{type:'text/javascript'}));
+// W1: worker throws, page has no Worker error handler at all
+new Worker(b(`setTimeout(() => { throw new Error('w1') }, 10)`));
+// W2: nested -- outer has self.onerror + a listener on the inner Worker object; inner throws
+const inner = b(`setTimeout(() => { throw new Error('inner') }, 10)`);
+const w2 = new Worker(b(`self.onerror = (m, f, l, c, e) => { postMessage('outer self.onerror ' + JSON.stringify([m, f.slice(0,5), l, c, String(e)])) };
+  const i = new Worker(${JSON.stringify(inner)}); i.onerror = e => postMessage('outer sees inner Worker error ' + JSON.stringify([e.constructor.name, e.message, e.filename.slice(0,5), e.lineno, e.colno, String(e.error)]));`));
+w2.onmessage = e => window.__r.push('W2 ' + e.data);
+w2.onerror = e => window.__r.push('W2 page error ' + JSON.stringify([e.constructor.name, e.message, e.filename.slice(0,5), e.lineno, e.colno]));
+// W3: nested, outer does NOT listen on the inner Worker; inner throws
+const w3 = new Worker(b(`self.onerror = (m) => { postMessage('outer3 self.onerror ' + m) }; new Worker(${JSON.stringify(b(`setTimeout(() => { throw new Error('inner3') }, 10)`))});`));
+w3.onmessage = e => window.__r.push('W3 ' + e.data);
+w3.onerror = e => window.__r.push('W3 page error ' + JSON.stringify([e.constructor.name, e.message, e.filename.slice(0,5), e.lineno, e.colno]));
+</script>

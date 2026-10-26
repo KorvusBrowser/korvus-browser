@@ -1,0 +1,11 @@
+<!doctype html><html><body>
+<img src="logo.png" id="i1">
+<img src="logo.png" id="i2" style="width:auto;height:auto">
+<img src="logo.png" id="i3" style="max-height:20px">
+<div style="display:flex"><img src="logo.png" id="i4"></div>
+<div style="display:flex"><div style="display:flex"><img src="logo.png" id="i5" style="height:auto;max-height:70px;width:auto"></div></div>
+<div style="display:flex;width:max-content"><div style="display:flex;flex-shrink:0"><img src="logo.png" id="i6" style="height:auto;max-height:70px;width:auto"></div></div>
+<img src="logo.png" id="i7" width="60">
+<div style="width:max-content"><img src="logo.png" id="i8"></div>
+<script>addEventListener('load', function () { var R = {}; for (var k = 1; k <= 8; k++) { var e = document.getElementById('i' + k); var r = e.getBoundingClientRect(); R['i' + k] = [e.width, e.height, Math.round(r.width), Math.round(r.height)].join('/'); } window.R = JSON.stringify(R); });</script>
+</body></html>

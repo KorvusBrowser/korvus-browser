@@ -1,0 +1,94 @@
+[
+  {
+    "iface": "VideoEncoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new VideoEncoder({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new VideoEncoder(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "state",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.state; })()",
+    "expected": "unconfigured",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "encodeQueueSize",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.encodeQueueSize; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.ondequeue; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "configure",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.configure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "encode",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.encode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "reset",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "close",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "state",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.state); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.ondequeue); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "flush",
+    "expr": "(() => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.flush()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoEncoder",
+    "member": "flush",
+    "expr": "(async () => { const o = new VideoEncoder({ output: () => {}, error: () => {} }); return await o.flush(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

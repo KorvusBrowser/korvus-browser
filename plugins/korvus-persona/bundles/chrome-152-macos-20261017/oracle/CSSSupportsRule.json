@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "CSSSupportsRule",
+    "member": "constructor",
+    "expr": "new CSSSupportsRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSSupportsRule",
+    "member": "matches",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@supports (color: red) { a { color: red } }\"); return s.cssRules[0]; })(); return o.matches; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

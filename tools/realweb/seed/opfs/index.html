@@ -1,0 +1,97 @@
+<!doctype html><html><body><script>
+// REALWEB H32: the origin private file system, page-side and in a dedicated worker (one store per origin: the page
+// lists what the worker made). Chrome 150, measured; each value is the operation's result or its error, verbatim.
+async function probe(inWorker) {
+  var r = {};
+  async function t(k, f) { try { var v = await f(); r[k] = typeof v === 'object' && v !== null ? Object.prototype.toString.call(v) + JSON.stringify(v) : String(v); } catch (e) { r[k] = 'THROW ' + (e && e.name) + ': ' + (e && e.message); } }
+  var pre = inWorker ? 'w' : 'p';
+  var root = await navigator.storage.getDirectory();
+  var D = FileSystemDirectoryHandle.prototype;
+  await t('rootKindName', () => root.kind + '|' + root.name);
+  await t('sameRoot', async () => [root === await navigator.storage.getDirectory(), await root.isSameEntry(await navigator.storage.getDirectory())]);
+  for (var bad of ['', '.', '..', 'a/b', 'a\\b']) await t('badName[' + bad + ']', () => root.getFileHandle(bad, { create: true }));
+  await t('badDirName', () => root.getDirectoryHandle('..', { create: true }));
+  await t('badRemoveName', () => root.removeEntry('a/b'));
+  await t('missing', () => root.getFileHandle(pre + 'nope'));
+  var d = await root.getDirectoryHandle(pre + 'dir', { create: true });
+  await t('dirAsFile', () => root.getFileHandle(pre + 'dir'));
+  var fh = await d.getFileHandle('f1', { create: true });
+  await t('handleAgain', async () => { var h = await d.getFileHandle('f1'); return [h === fh, await h.isSameEntry(fh), await fh.isSameEntry(d)]; });
+  await t('resolve', async () => [await root.resolve(fh), await root.resolve(root), await d.resolve(root)]);
+  await t('isSameEntryBad', () => root.isSameEntry({}));
+  await t('resolveBad', () => root.resolve({}));
+  await t('permissions', async () => [await root.queryPermission(), await root.queryPermission({ mode: 'readwrite' }), await fh.requestPermission({ mode: 'readwrite' })]);
+  await t('file0', async () => { var f = await fh.getFile(); return [f.name, f.size, f.type, typeof f.lastModified, Object.prototype.toString.call(f)]; });
+  if (inWorker) {
+    var ah = await fh.createSyncAccessHandle();
+    await t('ahMode', () => ah.mode);
+    await t('secondSync', () => fh.createSyncAccessHandle());
+    await t('writableWhileSync', () => fh.createWritable());
+    await t('writeAt10', () => ah.write(new Uint8Array([65, 66]), { at: 10 }));
+    await t('size', () => ah.getSize());
+    await t('readAll', () => { var b = new Uint8Array(20); return ah.read(b, { at: 0 }) + ':' + Array.from(b).join(','); });
+    await t('readPastEnd', () => ah.read(new Uint8Array(4), { at: 100 }));
+    await t('cursor', () => { var a = ah.write(new Uint8Array([67])); var b = ah.write(new Uint8Array([68])); var x = new Uint8Array(3); return [a, b, ah.read(x), ah.getSize()].join(','); });
+    await t('truncate', () => { ah.truncate(4); return ah.getSize() + ',' + ah.write(new DataView(new ArrayBuffer(2))) + ',' + ah.getSize(); });
+    await t('readTypes', () => { var o = []; for (var b of [new ArrayBuffer(2), new DataView(new ArrayBuffer(2)), 'x', null]) { try { o.push(String(ah.read(b, { at: 0 }))); } catch (e) { o.push(e.name + ': ' + e.message); } } try { ah.read(new Uint8Array(1), { at: -1 }); } catch (e) { o.push(e.name + ': ' + e.message); } try { ah.read(); } catch (e) { o.push(e.name + ': ' + e.message); } try { ah.write('xy'); } catch (e) { o.push(e.name + ': ' + e.message); } return o; });
+    await t('flushClose', () => { ah.flush(); ah.close(); ah.close(); return 'ok'; });
+    await t('closedMsgs', () => { var o = []; for (var f of [() => ah.read(new Uint8Array(1)), () => ah.write(new Uint8Array(1)), () => ah.truncate(0), () => ah.flush(), () => ah.getSize()]) { try { f(); o.push('ok'); } catch (e) { o.push(e.name + ': ' + e.message); } } return o; });
+    await t('fileAfterSync', async () => { var f = await fh.getFile(); return f.size + ':' + Array.from(new Uint8Array(await f.arrayBuffer())).join(','); });
+    await t('readOnly', async () => { var a = await fh.createSyncAccessHandle({ mode: 'read-only' }); var b = await fh.createSyncAccessHandle({ mode: 'read-only' }); var w; try { a.write(new Uint8Array(1)); w = 'wrote'; } catch (e) { w = e.name + ': ' + e.message; } var m = a.mode + ' ' + b.mode; var x; try { await fh.createSyncAccessHandle(); x = 'opened'; } catch (e) { x = e.name; } a.close(); b.close(); return [m, w, x]; });
+    await t('unsafeMode', async () => { var a = await fh.createSyncAccessHandle({ mode: 'readwrite-unsafe' }); var b = await fh.createSyncAccessHandle({ mode: 'readwrite-unsafe' }); var m = a.mode; a.close(); b.close(); return m; });
+    await t('badSyncMode', () => fh.createSyncAccessHandle({ mode: 'bogus' }));
+  } else {
+    await t('pageHasSync', () => typeof fh.createSyncAccessHandle);
+  }
+  var ws = await fh.createWritable();
+  await t('ws', () => [Object.prototype.toString.call(ws), ws instanceof WritableStream, ws.locked, ws.mode]);
+  await t('swapWhileOpen', async () => { var w2 = await fh.createWritable(); var ks = []; for await (var k of d.keys()) ks.push(k); await w2.abort(); return ks; });
+  await t('removeWhileOpen', () => d.removeEntry('f1'));
+  await t('removeSwap', () => d.removeEntry('f1.crswap'));
+  await t('syncWhileWritable', () => fh.createSyncAccessHandle ? fh.createSyncAccessHandle().then(() => 'opened') : 'n/a');
+  await ws.write('hello world');
+  await t('fileBeforeClose', async () => (await fh.getFile()).size);
+  await ws.seek(6);
+  await ws.write(new Uint8Array([87, 79]));
+  await ws.write({ type: 'write', position: 20, data: 'Z' });
+  await ws.truncate(22);
+  await t('badType', () => ws.write({ type: 'bogus' }));
+  await t('noType', () => ws.write({}));
+  await t('nullChunk', () => ws.write(null));
+  await ws.close();
+  await t('afterClose', async () => { var f = await fh.getFile(); return [f.size, JSON.stringify(await f.text())]; });
+  await t('closedStream', async () => { var o = []; for (var f of [() => ws.write('x'), () => ws.seek(0), () => ws.truncate(0), () => ws.close(), () => ws.abort()]) { try { await f(); o.push('ok'); } catch (e) { o.push(e.name + ': ' + e.message); } } return o; });
+  await t('keepExisting', async () => { var w = await fh.createWritable({ keepExistingData: true }); await w.write('Q'); await w.close(); return JSON.stringify(await (await fh.getFile()).text()); });
+  await t('lastCloseWins', async () => { var a = await fh.createWritable(), b = await fh.createWritable(); await a.write('A'); await b.write('BB'); await b.close(); await a.close(); return (await fh.getFile()).text(); });
+  var errDir = await root.getDirectoryHandle(pre + 'err', { create: true });
+  await t('params', async () => { var o = [], i = 0; for (var p of [{ type: 'write' }, { type: 'seek' }, { type: 'truncate' }, { type: 'write', data: null }]) { var w = await (await errDir.getFileHandle('p' + (i++), { create: true })).createWritable(); try { await w.write(p); o.push('ok'); } catch (e) { o.push(e.name + ': ' + e.message); } try { await w.write('x'); o.push('then ok'); } catch (e) { o.push('then ' + e.name); } try { await w.abort(); } catch (e) {} } return o; });
+  await t('blobAndSeekPastEnd', async () => { var w = await fh.createWritable(); await w.write({ type: 'write', position: 3, data: new Blob(['bb']) }); await w.seek(8); await w.write('c'); await w.close(); return Array.from(new Uint8Array(await (await fh.getFile()).arrayBuffer())).join(','); });
+  await t('writerLocked', async () => { var w = await (await errDir.getFileHandle('wl', { create: true })).createWritable(); var wr = w.getWriter(); var a; try { await w.write('a'); a = 'ok'; } catch (e) { a = e.name + ': ' + e.message; } var b; try { await wr.write({ type: 'bogus' }); b = 'ok'; } catch (e) { b = e.name + ': ' + e.message; } var c; try { await wr.write('x'); c = 'ok'; } catch (e) { c = e.name; } try { await wr.abort(); } catch (e) {} return [a, b, c]; });
+  await t('writableModes', async () => { var w = await fh.createWritable({ mode: 'exclusive' }); var m = w.mode; var s; try { await fh.createWritable(); s = 'second-ok'; } catch (e) { s = e.name + ': ' + e.message; } await w.abort(); return [m, s]; });
+  await t('badWritableMode', () => fh.createWritable({ mode: 'bogus' }));
+  var sub = await d.getDirectoryHandle('sub', { create: true });
+  await sub.getFileHandle('g', { create: true });
+  await d.getFileHandle('a0', { create: true });
+  await t('entries', async () => { var o = []; for await (var [k, v] of d.entries()) o.push(k + ':' + v.kind); return o; });
+  await t('valuesKeysIter', async () => { var a = [], b = [], c = []; for await (var v of d.values()) a.push(v.name); for await (var k of d.keys()) b.push(k); for await (var [k2] of d) c.push(k2); return [a.join(), b.join(), c.join()]; });
+  await t('iterShape', () => { var it = d.keys(); var p = Object.getPrototypeOf(it); return [Object.prototype.toString.call(it), Object.getOwnPropertyNames(p).join(), p === Object.getPrototypeOf(d.entries()), D[Symbol.asyncIterator] === D.entries, typeof Object.getPrototypeOf(p)[Symbol.asyncIterator]]; });
+  await t('iterSnapshot', async () => { var it = d.keys(); await d.getFileHandle('late', { create: true }); var o = []; for await (var k of it) o.push(k); await d.removeEntry('late'); return o; });
+  await t('order', async () => { var od = await d.getDirectoryHandle('ord', { create: true }); for (var n of ['b', 'a', 'c', 'aa', 'B', '1', '10', '2', 'éa', 'a b']) await od.getFileHandle(n, { create: true }); var o = []; for await (var k of od.keys()) o.push(k); return o; });
+  await t('removeNonEmpty', () => d.removeEntry('sub'));
+  await t('removeRecursive', () => d.removeEntry('sub', { recursive: true }));
+  await t('removeMissing', () => d.removeEntry('sub'));
+  await t('move', async () => { var m = await d.getFileHandle('m1', { create: true }); await m.move('m2'); var a = m.name; var o = await d.getDirectoryHandle('mdir', { create: true }); await m.move(o); var b = JSON.stringify(await d.resolve(m)); await m.move(d, 'm3'); var c = JSON.stringify(await d.resolve(m)); await d.getFileHandle('m4', { create: true }); await m.move('m4'); var e; try { await m.move('a/b'); } catch (x) { e = x.name + ': ' + x.message; } return [a, b, c, m.name, e]; });
+  await t('handleRemove', async () => { var h = await d.getFileHandle('rm', { create: true }); await h.remove(); try { await h.getFile(); return 'still'; } catch (e) { return e.name; } });
+  await t('types', async () => { var o = []; for (var n of ['x.txt', 'x.TXT', 'x.json', 'x.png', 'x.js', 'x.mjs', 'x.html', 'x.css', 'x.bin', 'x', 'x.jpeg', 'x.mp4', 'x.wasm', 'x.svg', 'x.pdf', 'x.zip', 'x.csv', 'x.webp', 'x.xml', 'x.gif', 'x.ico', 'x.unknownext']) { var h = await d.getFileHandle(n, { create: true }); o.push(n + '=' + (await h.getFile()).type); } return o.join(' '); });
+  await t('goneDir', async () => { await root.removeEntry(pre + 'dir', { recursive: true }); var o = []; for (var f of [() => fh.getFile(), () => fh.createWritable(), () => d.getFileHandle('x', { create: true })]) { try { await f(); o.push('ok'); } catch (e) { o.push(e.name); } } try { for await (var k of d.keys()) {} o.push('iter ok'); } catch (e) { o.push('iter ' + e.name); } return o; });
+  return r;
+}
+var out = {};
+var ifr = document.createElement('iframe'); ifr.sandbox = 'allow-scripts'; ifr.srcdoc = '<script>navigator.storage.getDirectory().then(function (d) { parent.postMessage("ok " + d.kind, "*"); }, function (e) { parent.postMessage(e.name + ": " + e.message, "*"); });<\/script>';
+addEventListener('message', function (e) { if (typeof e.data === 'string') { out.sandboxed = e.data; finish(); } });
+document.body.appendChild(ifr);
+var w = new Worker(URL.createObjectURL(new Blob(['var probe = ' + probe.toString() + ';\nonmessage = async function () { var r; try { r = await probe(true); } catch (e) { r = { FATAL: e.name + ": " + e.message }; } postMessage(r); };'], { type: 'text/javascript' })));
+w.onmessage = function (e) { out.worker = e.data; probe(false).then(function (r) { out.page = r; }, function (e) { out.page = { FATAL: e.name + ': ' + e.message }; }).then(function () { (async function () { var root = await navigator.storage.getDirectory(); var ks = []; for await (var k of root.keys()) ks.push(k); for (var k2 of ks) { try { await root.removeEntry(k2, { recursive: true }); } catch (e) {} } finish(); })(); }); };
+w.postMessage(1);
+var parts = 0; function finish() { if (++parts === 2) document.title = JSON.stringify(out); }
+</script></body></html>

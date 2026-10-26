@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "ClipboardEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ClipboardEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ClipboardEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ClipboardEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ClipboardEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ClipboardEvent",
+    "member": "clipboardData",
+    "expr": "(() => { const o = new ClipboardEvent(\"x\"); return o.clipboardData; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

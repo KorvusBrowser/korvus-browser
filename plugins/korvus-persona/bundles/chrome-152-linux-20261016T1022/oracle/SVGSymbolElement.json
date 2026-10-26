@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGSymbolElement",
+    "member": "constructor",
+    "expr": "new SVGSymbolElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSymbolElement",
+    "member": "viewBox",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"symbol\"); return Object.prototype.toString.call(o.viewBox); })()",
+    "expected": "[object SVGAnimatedRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGSymbolElement",
+    "member": "preserveAspectRatio",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"symbol\"); return Object.prototype.toString.call(o.preserveAspectRatio); })()",
+    "expected": "[object SVGAnimatedPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

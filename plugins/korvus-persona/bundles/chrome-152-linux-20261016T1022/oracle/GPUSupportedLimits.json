@@ -1,0 +1,1017 @@
+[
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "constructor",
+    "expr": "new GPUSupportedLimits()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension1D",
+    "expr": "GPUSupportedLimits.prototype.maxTextureDimension1D",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension1D",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension1D\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension2D",
+    "expr": "GPUSupportedLimits.prototype.maxTextureDimension2D",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension2D",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension2D\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension3D",
+    "expr": "GPUSupportedLimits.prototype.maxTextureDimension3D",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension3D",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension3D\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureArrayLayers",
+    "expr": "GPUSupportedLimits.prototype.maxTextureArrayLayers",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureArrayLayers",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureArrayLayers\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroups",
+    "expr": "GPUSupportedLimits.prototype.maxBindGroups",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroups",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroups\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroupsPlusVertexBuffers",
+    "expr": "GPUSupportedLimits.prototype.maxBindGroupsPlusVertexBuffers",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroupsPlusVertexBuffers",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroupsPlusVertexBuffers\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindingsPerBindGroup",
+    "expr": "GPUSupportedLimits.prototype.maxBindingsPerBindGroup",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindingsPerBindGroup",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindingsPerBindGroup\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicUniformBuffersPerPipelineLayout",
+    "expr": "GPUSupportedLimits.prototype.maxDynamicUniformBuffersPerPipelineLayout",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicUniformBuffersPerPipelineLayout",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicUniformBuffersPerPipelineLayout\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicStorageBuffersPerPipelineLayout",
+    "expr": "GPUSupportedLimits.prototype.maxDynamicStorageBuffersPerPipelineLayout",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicStorageBuffersPerPipelineLayout",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicStorageBuffersPerPipelineLayout\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSampledTexturesPerShaderStage",
+    "expr": "GPUSupportedLimits.prototype.maxSampledTexturesPerShaderStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSampledTexturesPerShaderStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSampledTexturesPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSamplersPerShaderStage",
+    "expr": "GPUSupportedLimits.prototype.maxSamplersPerShaderStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSamplersPerShaderStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSamplersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersPerShaderStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageBuffersPerShaderStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersPerShaderStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesPerShaderStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageTexturesPerShaderStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesPerShaderStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBuffersPerShaderStage",
+    "expr": "GPUSupportedLimits.prototype.maxUniformBuffersPerShaderStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBuffersPerShaderStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBuffersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBufferBindingSize",
+    "expr": "GPUSupportedLimits.prototype.maxUniformBufferBindingSize",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBufferBindingSize",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBufferBindingSize\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBufferBindingSize",
+    "expr": "GPUSupportedLimits.prototype.maxStorageBufferBindingSize",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBufferBindingSize",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBufferBindingSize\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minUniformBufferOffsetAlignment",
+    "expr": "GPUSupportedLimits.prototype.minUniformBufferOffsetAlignment",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minUniformBufferOffsetAlignment",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minUniformBufferOffsetAlignment\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minStorageBufferOffsetAlignment",
+    "expr": "GPUSupportedLimits.prototype.minStorageBufferOffsetAlignment",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minStorageBufferOffsetAlignment",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minStorageBufferOffsetAlignment\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBuffers",
+    "expr": "GPUSupportedLimits.prototype.maxVertexBuffers",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBuffers",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBuffers\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBufferSize",
+    "expr": "GPUSupportedLimits.prototype.maxBufferSize",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBufferSize",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBufferSize\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexAttributes",
+    "expr": "GPUSupportedLimits.prototype.maxVertexAttributes",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexAttributes",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexAttributes\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBufferArrayStride",
+    "expr": "GPUSupportedLimits.prototype.maxVertexBufferArrayStride",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBufferArrayStride",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBufferArrayStride\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxInterStageShaderVariables",
+    "expr": "GPUSupportedLimits.prototype.maxInterStageShaderVariables",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxInterStageShaderVariables",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxInterStageShaderVariables\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachments",
+    "expr": "GPUSupportedLimits.prototype.maxColorAttachments",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachments",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachments\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachmentBytesPerSample",
+    "expr": "GPUSupportedLimits.prototype.maxColorAttachmentBytesPerSample",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachmentBytesPerSample",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachmentBytesPerSample\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupStorageSize",
+    "expr": "GPUSupportedLimits.prototype.maxComputeWorkgroupStorageSize",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupStorageSize",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupStorageSize\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeInvocationsPerWorkgroup",
+    "expr": "GPUSupportedLimits.prototype.maxComputeInvocationsPerWorkgroup",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeInvocationsPerWorkgroup",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeInvocationsPerWorkgroup\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeX",
+    "expr": "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeX",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeX",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeX\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeY",
+    "expr": "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeY",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeY",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeY\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeZ",
+    "expr": "GPUSupportedLimits.prototype.maxComputeWorkgroupSizeZ",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeZ",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeZ\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupsPerDimension",
+    "expr": "GPUSupportedLimits.prototype.maxComputeWorkgroupsPerDimension",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupsPerDimension",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupsPerDimension\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxImmediateSize",
+    "expr": "GPUSupportedLimits.prototype.maxImmediateSize",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxImmediateSize",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxImmediateSize\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInFragmentStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageBuffersInFragmentStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInFragmentStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInFragmentStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInFragmentStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageTexturesInFragmentStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInFragmentStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInFragmentStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInVertexStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageBuffersInVertexStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInVertexStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInVertexStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInVertexStage",
+    "expr": "GPUSupportedLimits.prototype.maxStorageTexturesInVertexStage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInVertexStage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInVertexStage\").get.call(Object.create(GPUSupportedLimits.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension1D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension1D\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension1D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension1D\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension2D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension2D\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension2D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension2D\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension3D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension3D\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureDimension3D",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureDimension3D\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureArrayLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureArrayLayers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxTextureArrayLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxTextureArrayLayers\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroups",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroups\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroups",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroups\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroupsPlusVertexBuffers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroupsPlusVertexBuffers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindGroupsPlusVertexBuffers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindGroupsPlusVertexBuffers\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindingsPerBindGroup",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindingsPerBindGroup\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBindingsPerBindGroup",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBindingsPerBindGroup\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicUniformBuffersPerPipelineLayout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicUniformBuffersPerPipelineLayout\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicUniformBuffersPerPipelineLayout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicUniformBuffersPerPipelineLayout\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicStorageBuffersPerPipelineLayout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicStorageBuffersPerPipelineLayout\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxDynamicStorageBuffersPerPipelineLayout",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxDynamicStorageBuffersPerPipelineLayout\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSampledTexturesPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSampledTexturesPerShaderStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSampledTexturesPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSampledTexturesPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSamplersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSamplersPerShaderStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxSamplersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxSamplersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersPerShaderStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesPerShaderStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBuffersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBuffersPerShaderStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBuffersPerShaderStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBuffersPerShaderStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBufferBindingSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBufferBindingSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxUniformBufferBindingSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxUniformBufferBindingSize\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBufferBindingSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBufferBindingSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBufferBindingSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBufferBindingSize\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minUniformBufferOffsetAlignment",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minUniformBufferOffsetAlignment\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minUniformBufferOffsetAlignment",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minUniformBufferOffsetAlignment\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minStorageBufferOffsetAlignment",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minStorageBufferOffsetAlignment\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "minStorageBufferOffsetAlignment",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"minStorageBufferOffsetAlignment\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBuffers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBuffers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBuffers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBuffers\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBufferSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBufferSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxBufferSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxBufferSize\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexAttributes",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexAttributes\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexAttributes",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexAttributes\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBufferArrayStride",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBufferArrayStride\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxVertexBufferArrayStride",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxVertexBufferArrayStride\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxInterStageShaderVariables",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxInterStageShaderVariables\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxInterStageShaderVariables",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxInterStageShaderVariables\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachments",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachments\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachments",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachments\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachmentBytesPerSample",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachmentBytesPerSample\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxColorAttachmentBytesPerSample",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxColorAttachmentBytesPerSample\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupStorageSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupStorageSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupStorageSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupStorageSize\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeInvocationsPerWorkgroup",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeInvocationsPerWorkgroup\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeInvocationsPerWorkgroup",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeInvocationsPerWorkgroup\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeX",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeX\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeX",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeX\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeY",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeY\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeY",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeY\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeZ",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeZ\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupSizeZ",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupSizeZ\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupsPerDimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupsPerDimension\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxComputeWorkgroupsPerDimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxComputeWorkgroupsPerDimension\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxImmediateSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxImmediateSize\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxImmediateSize",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxImmediateSize\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInFragmentStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInFragmentStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInFragmentStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInFragmentStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInFragmentStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInFragmentStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInFragmentStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInFragmentStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInVertexStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInVertexStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageBuffersInVertexStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageBuffersInVertexStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInVertexStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInVertexStage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedLimits",
+    "member": "maxStorageTexturesInVertexStage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedLimits.prototype, \"maxStorageTexturesInVertexStage\").get.call(Object.create(GPUSupportedLimits.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "XRDepthInformation",
+    "member": "constructor",
+    "expr": "new XRDepthInformation()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "width",
+    "expr": "XRDepthInformation.prototype.width",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"width\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "height",
+    "expr": "XRDepthInformation.prototype.height",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"height\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "normDepthBufferFromNormView",
+    "expr": "XRDepthInformation.prototype.normDepthBufferFromNormView",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "normDepthBufferFromNormView",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"normDepthBufferFromNormView\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "rawValueToMeters",
+    "expr": "XRDepthInformation.prototype.rawValueToMeters",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "rawValueToMeters",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"rawValueToMeters\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "projectionMatrix",
+    "expr": "XRDepthInformation.prototype.projectionMatrix",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "projectionMatrix",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"projectionMatrix\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "transform",
+    "expr": "XRDepthInformation.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"transform\").get.call(Object.create(XRDepthInformation.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"width\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"width\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"height\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"height\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "normDepthBufferFromNormView",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"normDepthBufferFromNormView\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "normDepthBufferFromNormView",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"normDepthBufferFromNormView\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "rawValueToMeters",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"rawValueToMeters\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "rawValueToMeters",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"rawValueToMeters\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "projectionMatrix",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"projectionMatrix\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "projectionMatrix",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"projectionMatrix\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRDepthInformation",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRDepthInformation.prototype, \"transform\").get.call(Object.create(XRDepthInformation.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

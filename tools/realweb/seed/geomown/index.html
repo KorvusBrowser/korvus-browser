@@ -1,0 +1,24 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B9: the geometry interfaces are this engine's own classes (not deno_core op2 classes).
+const t = (f) => { try { const v = f(); return typeof v + ':' + String(v); } catch (e) { return e.name + ': ' + e.message + (e.code !== undefined ? ' [code ' + e.code + ']' : ''); } };
+const g = (P, k) => Object.getOwnPropertyDescriptor(P.prototype, k);
+window.R = JSON.stringify({
+  quadStatics: Object.getOwnPropertyNames(DOMQuad).join(),
+  matrixStatics: Object.getOwnPropertyNames(DOMMatrixReadOnly).join(),
+  getterForeign: t(() => g(DOMPointReadOnly, 'x').get.call({})),
+  getterCreated: t(() => g(DOMPointReadOnly, 'x').get.call(Object.create(DOMPoint.prototype))),
+  setterForeign: t(() => { g(DOMRect, 'x').set.call({}, 1); return 'no throw'; }),
+  methodForeign: t(() => DOMMatrixReadOnly.prototype.multiply.call({})),
+  methodOtherClass: t(() => DOMQuad.prototype.getBounds.call(new DOMPoint())),
+  toJSONForeign: t(() => DOMRectReadOnly.prototype.toJSON.call(1)),
+  childOnParent: t(() => g(DOMRectReadOnly, 'width').get.call(new DOMRect(0, 0, 5))),
+  setterToNumber: t(() => { const p = new DOMPoint(); p.x = '7'; p.y = 'abc'; return p.x + ',' + p.y; }),
+  callNoNew: t(() => DOMMatrix()),
+  subclass: t(() => { class S extends DOMRect {} const s = new S(1, 2, 3, 4); return (s instanceof S) + ',' + (s instanceof DOMRect) + ',' + s.right; }),
+  quadPoints: t(() => { const q = DOMQuad.fromRect({ x: 1, y: 2, width: 3, height: 4 }); return q.p3.constructor.name + ':' + q.p3.x + ',' + q.p3.y + ':' + q.getBounds().constructor.name; }),
+  matrixChain: t(() => { const m = new DOMMatrix().translate(10, 20).scale(2); return m.constructor.name + ':' + m.toString() + ':' + m.transformPoint(new DOMPoint(1, 1)).x; }),
+  webkitAlias: t(() => WebKitCSSMatrix === DOMMatrix && new WebKitCSSMatrix('scale(3)').a === 3),
+  fromFloat: t(() => DOMMatrixReadOnly.fromFloat64Array(new Float64Array([1, 2, 3, 4, 5, 6])).toFloat32Array().join()),
+  pointTransform: t(() => new DOMPoint(1, 2).matrixTransform({ a: 2, d: 3 }).toJSON().y),
+});
+</script>

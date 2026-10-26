@@ -1,0 +1,163 @@
+[
+  {
+    "iface": "RTCIceCandidate",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCIceCandidate(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "candidate",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.candidate; })()",
+    "expected": "candidate:1 1 UDP 1 127.0.0.1 1 typ host",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "sdpMid",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.sdpMid; })()",
+    "expected": "0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "sdpMLineIndex",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.sdpMLineIndex; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "foundation",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.foundation; })()",
+    "expected": "1",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "component",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.component; })()",
+    "expected": "rtp",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "priority",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.priority; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "address",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.address; })()",
+    "expected": "127.0.0.1",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "protocol",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.protocol; })()",
+    "expected": "udp",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "port",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.port; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "type",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.type; })()",
+    "expected": "host",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "tcpType",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.tcpType; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "relatedAddress",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.relatedAddress; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "relatedPort",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.relatedPort; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "usernameFragment",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.usernameFragment; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "relayProtocol",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.relayProtocol; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "url",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return o.url; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "component",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.component); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "protocol",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.protocol); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "type",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "tcpType",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.tcpType); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "relayProtocol",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.relayProtocol); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCIceCandidate",
+    "member": "toJSON",
+    "expr": "(() => { const o = new RTCIceCandidate({ candidate: \"candidate:1 1 UDP 1 127.0.0.1 1 typ host\", sdpMid: \"0\" }); return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

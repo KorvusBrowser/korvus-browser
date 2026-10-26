@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "Touch",
+    "member": "constructor",
+    "expr": "(() => { const o = new Touch({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "constructor",
+    "expr": "(() => { const o = new Touch(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "identifier",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.identifier; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "screenX",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.screenX; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "screenY",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.screenY; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "clientX",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.clientX; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "clientY",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.clientY; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "pageX",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.pageX; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "pageY",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.pageY; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "radiusX",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.radiusX; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "radiusY",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.radiusY; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "rotationAngle",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.rotationAngle; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "force",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.force; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "altitudeAngle",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.altitudeAngle; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "azimuthAngle",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.azimuthAngle; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "touchType",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return o.touchType; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "target",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return Object.prototype.toString.call(o.target); })()",
+    "expected": "[object HTMLHtmlElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Touch",
+    "member": "touchType",
+    "expr": "(() => { const o = new Touch({ identifier: 1, target: document.documentElement, clientX: 0, clientY: 0, screenX: 0, screenY: 0, pageX: 0, pageY: 0 }); return Object.prototype.toString.call(o.touchType); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

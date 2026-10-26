@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "address",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", { errorCode: 701 }); return o.address; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "port",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", { errorCode: 701 }); return o.port; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "url",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", { errorCode: 701 }); return o.url; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "errorCode",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", { errorCode: 701 }); return o.errorCode; })()",
+    "expected": 701,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "RTCPeerConnectionIceErrorEvent",
+    "member": "errorText",
+    "expr": "(() => { const o = new RTCPeerConnectionIceErrorEvent(\"x\", { errorCode: 701 }); return o.errorText; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

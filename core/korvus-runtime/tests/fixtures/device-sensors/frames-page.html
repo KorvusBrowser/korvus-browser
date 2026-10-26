@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+var TYPES = ['devicemotion', 'deviceorientation', 'deviceorientationabsolute'];
+function row(e) { return [e.type, e.isTrusted, e.type === 'devicemotion' ? e.interval : e.absolute]; }
+var r = {
+  sc: isSecureContext,
+  handlers: TYPES.map(function (t) { return 'on' + t in window; }),
+  ifaces: [typeof DeviceMotionEvent, typeof DeviceOrientationEvent],
+  requestPermission: [typeof DeviceMotionEvent === 'function' && 'requestPermission' in DeviceMotionEvent, typeof DeviceOrientationEvent === 'function' && 'requestPermission' in DeviceOrientationEvent],
+  main: [], frames: {}, hidden: document.hidden
+};
+addEventListener('visibilitychange', function () { r.hidden = r.hidden || document.hidden; });
+TYPES.forEach(function (t) { addEventListener(t, function (e) { r.main.push(row(e)); }); });
+var SEC = location.hostname === '127.0.0.1';
+var X = SEC ? 'http://localhost:PORT' : 'http://127.0.0.1:PORT';
+var specs = [
+  ['same', '/f?same', null],
+  ['cross', X + '/f?cross', null],
+  ['crossAllow2', X + '/f?crossAllow2', 'accelerometer; gyroscope'],
+  ['crossAllow3', X + '/f?crossAllow3', 'accelerometer; gyroscope; magnetometer'],
+  ['sameNoGyro', '/f?sameNoGyro', "gyroscope 'none'"],
+  ['sameNoMagnet', '/f?sameNoMagnet', "magnetometer 'none'"]
+];
+var want = specs.length + 1;
+specs.forEach(function (s) {
+  var f = document.createElement('iframe');
+  if (s[2] !== null) f.allow = s[2];
+  f.src = s[1];
+  document.body.appendChild(f);
+});
+var sb = document.createElement('iframe');
+sb.sandbox = 'allow-scripts';
+sb.srcdoc = '<script>var ev = [];' + JSON.stringify(TYPES) + '.forEach(function (t) { addEventListener(t, function (e) { ev.push([e.type, e.isTrusted, e.type === "devicemotion" ? e.interval : e.absolute]); }); });' +
+  'setTimeout(function () { parent.postMessage({who: "sandboxed", sc: isSecureContext, ev: ev}, "*"); }, 1200);<\/script>';
+document.body.appendChild(sb);
+// a blank frame the PARENT listens on: the events go to the frame's window
+var blank = document.createElement('iframe');
+document.body.appendChild(blank);
+var bw = blank.contentWindow, bev = [];
+TYPES.forEach(function (t) { bw.addEventListener(t, function (e) { bev.push(row(e).concat([e.target === bw])); }); });
+// a DETACHED frame's window: nothing
+var gone = document.createElement('iframe');
+document.body.appendChild(gone);
+var gw = gone.contentWindow, gev = [];
+gone.remove();
+TYPES.forEach(function (t) { gw.addEventListener(t, function (e) { gev.push(row(e)); }); });
+addEventListener('message', function (e) {
+  if (!e.data || !e.data.who) return;
+  r.frames[e.data.who] = {sc: e.data.sc, ev: e.data.ev};
+  done();
+});
+var sent = false;
+function done() {
+  if (sent || Object.keys(r.frames).length < want) return;
+  sent = true;
+  setTimeout(function () {
+    r.frames.blank = {ev: bev};
+    r.frames.detached = {ev: gev};
+    var keys = Object.keys(r.frames).sort(), fr = {};
+    // the three types' events land in one millisecond, in an order a fresh browser varies: sorted
+    keys.forEach(function (k) { fr[k] = r.frames[k]; fr[k].ev.sort(); });
+    r.main.sort();
+    r.frames = fr;
+    window.__r = JSON.stringify(r);
+    fetch('/report', {method: 'POST', body: window.__r});
+  }, 200);
+}
+setTimeout(function () { want = 0; done(); }, 6000);
+</script></body></html>

@@ -1,0 +1,70 @@
+[
+[
+"S1 srcdoc in markup, at insertion",
+"object/undefined/loadTimes,csi href=about:blank"
+],
+[
+"S2 srcdoc set before append, at insertion",
+"object/undefined/loadTimes,csi href=about:blank"
+],
+[
+"S3 same-origin src, at insertion",
+"object/undefined/loadTimes,csi href=about:blank"
+],
+[
+"S4 no src, at insertion",
+"object/object/loadTimes,csi,app href=about:blank"
+],
+[
+"S4 then srcdoc set",
+"object/object/loadTimes,csi,app href=about:blank"
+],
+[
+"S5 untouched, srcdoc set, then read",
+"object/object/loadTimes,csi,app href=about:blank"
+],
+[
+"S6 src about:blank, at insertion",
+"object/object/loadTimes,csi,app href=about:blank"
+],
+[
+"S0 top window",
+"object/object/loadTimes,csi,app href=http://127.0.0.1:PORT/"
+],
+[
+"S1 +600ms",
+"object/object/loadTimes,csi,app href=about:srcdoc"
+],
+[
+"S1 the chrome object held at insertion, +600ms",
+"object same:true keys:loadTimes,csi,app"
+],
+[
+"S1 the window read at insertion, +600ms",
+"object/object/loadTimes,csi,app href=about:srcdoc"
+],
+[
+"S2 +600ms",
+"object/object/loadTimes,csi,app href=about:srcdoc"
+],
+[
+"S3 +600ms",
+"object/object/loadTimes,csi,app href=http://127.0.0.1:PORT/framed"
+],
+[
+"S4 +600ms",
+"object/object/loadTimes,csi,app href=about:srcdoc"
+],
+[
+"S5 +600ms",
+"object/object/loadTimes,csi,app href=about:srcdoc"
+],
+[
+"S6 +600ms",
+"object/object/loadTimes,csi,app href=about:blank"
+],
+[
+"S7 +600ms",
+"object/object/loadTimes,csi,app href=about:blank"
+]
+]

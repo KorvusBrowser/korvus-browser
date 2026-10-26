@@ -1,0 +1,8 @@
+<!doctype html><html><head><script>window.R = {};</script>
+<script src="b.js?k=frameSync"></script><script async src="b.js?k=frameAsync"></script>
+<script>Promise.resolve().then(function () { var c = document.currentScript; R.frameInline_mt = c ? c.tagName : String(c); window.frameFlag = 1; });</script>
+<script>R.frameFlagAtNext = window.frameFlag || 0;</script>
+</head><body><script>
+var s = document.createElement('script'); s.src = 'b.js?k=frameDyn'; document.head.appendChild(s);
+addEventListener('load', function () { setTimeout(function () { parent.postMessage({ R: R }, '*'); }, 200); });
+</script></body></html>

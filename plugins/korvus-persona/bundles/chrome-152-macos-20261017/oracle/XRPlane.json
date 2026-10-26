@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "XRPlane",
+    "member": "constructor",
+    "expr": "new XRPlane()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "planeSpace",
+    "expr": "XRPlane.prototype.planeSpace",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "planeSpace",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlane.prototype, \"planeSpace\").get.call(Object.create(XRPlane.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "polygon",
+    "expr": "XRPlane.prototype.polygon",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "polygon",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlane.prototype, \"polygon\").get.call(Object.create(XRPlane.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "orientation",
+    "expr": "XRPlane.prototype.orientation",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "orientation",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlane.prototype, \"orientation\").get.call(Object.create(XRPlane.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "lastChangedTime",
+    "expr": "XRPlane.prototype.lastChangedTime",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "lastChangedTime",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlane.prototype, \"lastChangedTime\").get.call(Object.create(XRPlane.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "semanticLabel",
+    "expr": "XRPlane.prototype.semanticLabel",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "semanticLabel",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlane.prototype, \"semanticLabel\").get.call(Object.create(XRPlane.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "planeSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"planeSpace\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "planeSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"planeSpace\").get.call(Object.create(XRPlane.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "polygon",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"polygon\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "polygon",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"polygon\").get.call(Object.create(XRPlane.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "orientation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"orientation\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "orientation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"orientation\").get.call(Object.create(XRPlane.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "lastChangedTime",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"lastChangedTime\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "lastChangedTime",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"lastChangedTime\").get.call(Object.create(XRPlane.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "semanticLabel",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"semanticLabel\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlane",
+    "member": "semanticLabel",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlane.prototype, \"semanticLabel\").get.call(Object.create(XRPlane.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

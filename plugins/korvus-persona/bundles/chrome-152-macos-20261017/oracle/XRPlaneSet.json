@@ -1,0 +1,191 @@
+[
+  {
+    "iface": "XRPlaneSet",
+    "member": "constructor",
+    "expr": "new XRPlaneSet()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "size",
+    "expr": "XRPlaneSet.prototype.size",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "size",
+    "expr": "Object.getOwnPropertyDescriptor(XRPlaneSet.prototype, \"size\").get.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "entries",
+    "expr": "XRPlaneSet.prototype.entries.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "entries",
+    "expr": "XRPlaneSet.prototype.entries.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "forEach",
+    "expr": "XRPlaneSet.prototype.forEach.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "forEach",
+    "expr": "XRPlaneSet.prototype.forEach.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "has",
+    "expr": "XRPlaneSet.prototype.has.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "has",
+    "expr": "XRPlaneSet.prototype.has.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "keys",
+    "expr": "XRPlaneSet.prototype.keys.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "keys",
+    "expr": "XRPlaneSet.prototype.keys.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "values",
+    "expr": "XRPlaneSet.prototype.values.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "values",
+    "expr": "XRPlaneSet.prototype.values.call(Object.create(XRPlaneSet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "forEach",
+    "expr": "XRPlaneSet.prototype.forEach.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "has",
+    "expr": "XRPlaneSet.prototype.has.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlaneSet.prototype, \"size\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRPlaneSet.prototype, \"size\").get.call(Object.create(XRPlaneSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"entries\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"entries\"].call(Object.create(XRPlaneSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"forEach\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"forEach\"].call(Object.create(XRPlaneSet.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "has",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"has\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "has",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"has\"].call(Object.create(XRPlaneSet.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"keys\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"keys\"].call(Object.create(XRPlaneSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "values",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"values\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRPlaneSet",
+    "member": "values",
+    "expr": "(() => { try { const v = XRPlaneSet.prototype[\"values\"].call(Object.create(XRPlaneSet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

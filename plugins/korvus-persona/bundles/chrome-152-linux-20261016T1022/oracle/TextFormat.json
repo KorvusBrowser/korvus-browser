@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "TextFormat",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextFormat(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextFormat]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextFormat",
+    "member": "rangeStart",
+    "expr": "(() => { const o = new TextFormat(); return o.rangeStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextFormat",
+    "member": "rangeEnd",
+    "expr": "(() => { const o = new TextFormat(); return o.rangeEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextFormat",
+    "member": "underlineStyle",
+    "expr": "(() => { const o = new TextFormat(); return o.underlineStyle; })()",
+    "expected": "none",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextFormat",
+    "member": "underlineThickness",
+    "expr": "(() => { const o = new TextFormat(); return o.underlineThickness; })()",
+    "expected": "none",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

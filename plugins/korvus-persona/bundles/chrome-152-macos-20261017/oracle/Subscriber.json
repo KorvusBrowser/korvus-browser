@@ -1,0 +1,167 @@
+[
+  {
+    "iface": "Subscriber",
+    "member": "constructor",
+    "expr": "new Subscriber()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "active",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; }).subscribe(); return sub.active; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "active",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; s.complete(); }).subscribe(); return sub.active; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "active",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; s.error(new Error(\"e\")); }).subscribe({ error: function () {} }); return sub.active; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "active",
+    "expr": "Object.getOwnPropertyDescriptor(Subscriber.prototype, \"active\").get.call(Object.create(Subscriber.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "signal",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; }).subscribe(); return sub.signal instanceof AbortSignal; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "signal",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; }).subscribe(); return sub.signal.aborted; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "signal",
+    "expr": "(function () { var sub; new Observable(function (s) { sub = s; s.complete(); }).subscribe(); return sub.signal.aborted; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "signal",
+    "expr": "Object.getOwnPropertyDescriptor(Subscriber.prototype, \"signal\").get.call(Object.create(Subscriber.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "next",
+    "expr": "(function () { var o = []; new Observable(function (s) { s.next(7); }).subscribe(function (v) { o.push(v); }); return o; })()",
+    "expected": [
+      7
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "next",
+    "expr": "(function () { var o = []; new Observable(function (s) { s.next(1); s.complete(); s.next(2); }).subscribe(function (v) { o.push(v); }); return o; })()",
+    "expected": [
+      1
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "next",
+    "expr": "Subscriber.prototype.next.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "next",
+    "expr": "Subscriber.prototype.next.call(Object.create(Subscriber.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "complete",
+    "expr": "(function () { var n = 0; new Observable(function (s) { s.complete(); s.complete(); }).subscribe({ complete: function () { n++; } }); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "complete",
+    "expr": "Subscriber.prototype.complete.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "complete",
+    "expr": "Subscriber.prototype.complete.call(Object.create(Subscriber.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "error",
+    "expr": "(function () { var n = \"\"; new Observable(function (s) { s.error(new SyntaxError(\"x\")); }).subscribe({ error: function (e) { n = e.name; } }); return n; })()",
+    "expected": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "error",
+    "expr": "(function () { var n = 0; new Observable(function (s) { s.complete(); s.error(new Error(\"x\")); }).subscribe({ error: function () { n++; } }); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "error",
+    "expr": "Subscriber.prototype.error.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "addTeardown",
+    "expr": "(function () { var t = 0; new Observable(function (s) { s.addTeardown(function () { t++; }); s.complete(); }).subscribe(); return t; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "addTeardown",
+    "expr": "(function () { var t = 0; new Observable(function (s) { s.addTeardown(function () { t++; }); }).subscribe(); return t; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "addTeardown",
+    "expr": "Subscriber.prototype.addTeardown.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Subscriber",
+    "member": "addTeardown",
+    "expr": "Subscriber.prototype.addTeardown.call(Object.create(Subscriber.prototype), function () {})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

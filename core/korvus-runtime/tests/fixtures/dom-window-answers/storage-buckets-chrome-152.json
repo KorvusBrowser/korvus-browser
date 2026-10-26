@@ -1,0 +1,322 @@
+[
+[
+"typeof",
+"object",
+"[object StorageBucketManager]",
+true
+],
+[
+"manager proto names",
+"delete,keys,open,constructor"
+],
+[
+"bucket proto names",
+"name,indexedDB,caches,estimate,expires,getDirectory,persisted,setExpires,constructor,persist"
+],
+[
+"keys before",
+"ok",
+"[object Array] []"
+],
+[
+"open",
+"[object StorageBucket]",
+"fxbucket",
+0
+],
+[
+"open again",
+false,
+false
+],
+[
+"open \"A\"",
+"reject",
+"TypeError",
+"The bucket name 'A' is not a valid name."
+],
+[
+"open \"\"",
+"reject",
+"TypeError",
+"The bucket name '' is not a valid name."
+],
+[
+"open \"_a\"",
+"reject",
+"TypeError",
+"The bucket name '_a' is not a valid name."
+],
+[
+"open \"-a\"",
+"reject",
+"TypeError",
+"The bucket name '-a' is not a valid name."
+],
+[
+"open \"a_b-c\"",
+"ok",
+"string a_b-c"
+],
+[
+"open \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+"ok",
+"string aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+],
+[
+"open \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"",
+"reject",
+"TypeError",
+"The bucket name 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' is not a valid name."
+],
+[
+"open \"a b\"",
+"reject",
+"TypeError",
+"The bucket name 'a b' is not a valid name."
+],
+[
+"open \"\u00e9\"",
+"reject",
+"TypeError",
+"The bucket name '\u00e9' is not a valid name."
+],
+[
+"open \"default\"",
+"ok",
+"string default"
+],
+[
+"open number",
+"ok",
+"string 1"
+],
+[
+"open no args",
+"reject",
+"TypeError",
+"Failed to execute 'open' on 'StorageBucketManager': 1 argument required, but only 0 present."
+],
+[
+"open quota 0",
+"reject",
+"TypeError",
+"The bucket's quota cannot equal zero."
+],
+[
+"open quota -1",
+"reject",
+"TypeError",
+"Failed to execute 'open' on 'StorageBucketManager': Failed to read the 'quota' property from 'StorageBucketOptions': Value is outside the 'unsigned long long' value range."
+],
+[
+"open quota 1000",
+"ok",
+"string 1000/0"
+],
+[
+"open options 5",
+"reject",
+"TypeError",
+"Failed to execute 'open' on 'StorageBucketManager': The provided value is not of type 'StorageBucketOptions'."
+],
+[
+"open durability",
+"ok",
+"string q4"
+],
+[
+"open persisted true",
+"ok",
+"boolean false"
+],
+[
+"open expires",
+"ok",
+"number 4102444800000"
+],
+[
+"keys",
+"ok",
+"[object Array] [\"1\",\"a_b-c\",\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"default\",\"fxbucket\",\"q2\",\"q4\",\"q5\",\"q6\"]"
+],
+[
+"delete A",
+"reject",
+"TypeError",
+"The bucket name A is not a valid name."
+],
+[
+"delete missing",
+"ok",
+"undefined"
+],
+[
+"delete no args",
+"reject",
+"TypeError",
+"Failed to execute 'delete' on 'StorageBucketManager': 1 argument required, but only 0 present."
+],
+[
+"name",
+"ok",
+"string fxbucket"
+],
+[
+"persisted",
+"ok",
+"boolean false"
+],
+[
+"persist",
+"ok",
+"boolean false"
+],
+[
+"persisted after persist",
+"ok",
+"boolean false"
+],
+[
+"expires",
+"ok",
+"null"
+],
+[
+"setExpires",
+"ok",
+"undefined"
+],
+[
+"expires after set",
+"ok",
+"number 4102444800000"
+],
+[
+"setExpires past",
+"ok",
+"undefined"
+],
+[
+"setExpires no args",
+"reject",
+"TypeError",
+"Failed to execute 'setExpires' on 'StorageBucket': 1 argument required, but only 0 present."
+],
+[
+"estimate keys",
+"quota,usage,usageDetails",
+"{}",
+0,
+true,
+"number",
+true
+],
+[
+"indexedDB",
+"[object IDBFactory]",
+true,
+false
+],
+[
+"caches",
+"[object CacheStorage]",
+true,
+false
+],
+[
+"locks",
+"undefined",
+"undefined"
+],
+[
+"bucket databases before",
+"ok",
+"[object Array] []"
+],
+[
+"bucket idb",
+"stored"
+],
+[
+"bucket databases after",
+"ok",
+"[object Array] [{\"name\":\"1\",\"version\":1}]"
+],
+[
+"window databases after",
+"ok",
+"[object Array] []"
+],
+[
+"caches keys",
+"ok",
+"[object Array] []"
+],
+[
+"caches open",
+"ok",
+"string [object Cache]"
+],
+[
+"bucket caches keys after",
+"ok",
+"[object Array] [\"c\"]"
+],
+[
+"window caches keys",
+"ok",
+"[object Array] []"
+],
+[
+"getDirectory",
+"ok",
+"string directory/\"\""
+],
+[
+"getDirectory isSameEntry root",
+"ok",
+"boolean false"
+],
+[
+"keys before delete",
+"ok",
+"[object Array] [\"1\",\"a_b-c\",\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"default\",\"q2\",\"q4\",\"q5\",\"q6\"]"
+],
+[
+"delete fxbucket",
+"ok",
+"undefined"
+],
+[
+"keys after delete",
+"ok",
+"[object Array] [\"1\",\"a_b-c\",\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"default\",\"q2\",\"q4\",\"q5\",\"q6\"]"
+],
+[
+"foreign persisted",
+"no throw"
+],
+[
+"foreign persisted promise",
+"reject",
+"TypeError",
+"Failed to execute 'persisted' on 'StorageBucket': Illegal invocation"
+],
+[
+"foreign name",
+"TypeError",
+"Illegal invocation"
+],
+[
+"foreign keys",
+"reject",
+"TypeError",
+"Failed to execute 'keys' on 'StorageBucketManager': Illegal invocation"
+],
+[
+"new StorageBucket",
+"TypeError",
+"Failed to construct 'StorageBucket': Illegal constructor"
+]
+]

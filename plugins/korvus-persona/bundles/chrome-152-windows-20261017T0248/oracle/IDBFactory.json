@@ -1,0 +1,74 @@
+[
+  {
+    "iface": "IDBFactory",
+    "member": "constructor",
+    "expr": "new IDBFactory()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "open",
+    "expr": "(() => { const o = indexedDB; return o.open(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "deleteDatabase",
+    "expr": "(() => { const o = indexedDB; return o.deleteDatabase(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "cmp",
+    "expr": "(() => { const o = indexedDB; return o.cmp(1, 1); })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "cmp",
+    "expr": "(() => { const o = indexedDB; return o.cmp(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "open",
+    "expr": "(() => { const o = indexedDB; return Object.prototype.toString.call(o.open(\"x\")); })()",
+    "expected": "[object IDBOpenDBRequest]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "deleteDatabase",
+    "expr": "(() => { const o = indexedDB; return Object.prototype.toString.call(o.deleteDatabase(\"x\")); })()",
+    "expected": "[object IDBOpenDBRequest]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "databases",
+    "expr": "(() => { const o = indexedDB; return Object.prototype.toString.call(o.databases()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "databases",
+    "expr": "(async () => { const o = indexedDB; return await o.databases(); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBFactory",
+    "member": "databases",
+    "expr": "(async () => { const o = indexedDB; return Object.prototype.toString.call(await o.databases()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

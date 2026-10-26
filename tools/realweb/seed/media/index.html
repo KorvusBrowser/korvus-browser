@@ -1,0 +1,26 @@
+<!doctype html><html><head><title>m1</title></head><body><script>
+window.R = {};
+function probe(key, setup) {
+  var v = document.createElement('video');
+  var log = [];
+  ['loadstart','loadedmetadata','loadeddata','canplay','play','playing','pause','error','emptied','abort','suspend','stalled','waiting'].forEach(function (t) {
+    v.addEventListener(t, function () { log.push(t); });
+  });
+  setup(v);
+  document.body.appendChild(v);
+  var out = R[key] = { sync: { cur: v.currentSrc, ns: v.networkState, rs: v.readyState } };
+  var p;
+  try { p = v.play(); } catch (e) { out.playThrew = e.name; }
+  out.playReturns = Object.prototype.toString.call(p);
+  if (p && p.then) p.then(function () { out.play = 'resolved'; }, function (e) { out.play = 'rejected ' + e.name + ': ' + e.message; });
+  setTimeout(function () {
+    out.after = { cur: v.currentSrc.replace(location.origin, ''), ns: v.networkState, rs: v.readyState, paused: v.paused, err: v.error && v.error.code, dur: String(v.duration) };
+    out.events = log.join(',');
+    if (!out.play) out.play = 'pending';
+  }, 1500);
+}
+probe('mp4muted', function (v) { v.muted = true; v.src = 'v.mp4'; });
+probe('mp4unmuted', function (v) { v.src = 'v.mp4'; });
+probe('nosrc', function (v) {});
+probe('bad', function (v) { v.muted = true; v.src = 'bad.xyz'; });
+</script></body></html>

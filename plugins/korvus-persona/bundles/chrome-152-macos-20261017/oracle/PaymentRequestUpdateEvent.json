@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "PaymentRequestUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentRequestUpdateEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PaymentRequestUpdateEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PaymentRequestUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentRequestUpdateEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PaymentRequestUpdateEvent",
+    "member": "updateWith",
+    "expr": "(() => { const o = new PaymentRequestUpdateEvent(\"x\"); return o.updateWith(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

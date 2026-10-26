@@ -1,0 +1,1312 @@
+[
+[
+"plain frames",
+"TypeError: Cannot read properties of null (reading '0')\n    at CI (blob:URL#24#31)\n    at wrap (blob:URL#25#76)\n    at blob:URL#25#84\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#25#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"constructor frame",
+"Error: ctor\n    at new Foo (blob:URL#26#31)\n    at blob:URL#27#55\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#27#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"method frame",
+"Error: m\n    at Object.m (blob:URL#28#39)\n    at blob:URL#31#52\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#31#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"method frame [as alias]",
+"Error: m\n    at Object.m (blob:URL#28#39)\n    at blob:URL#32#63\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#32#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"getter frame",
+"Error: g\n    at get g (blob:URL#28#81)\n    at blob:URL#33#52\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#33#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"symbol method frame",
+"Error: sym\n    at o.<computed> (blob:URL#30#47)\n    at blob:URL#34#75\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#34#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"class frames",
+[
+"Error: s\n    at K.s (blob:URL#35#35)\n    at blob:URL#36#53\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#36#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: i\n    at K.i (blob:URL#35#72)\n    at blob:URL#36#71\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#36#5)\n    at http://127.0.0.1:PORT/#249#35"
+]
+],
+[
+"builtin frames",
+[
+"Error: map\n    at blob:URL#38#48\n    at Array.map (<anonymous>)\n    at blob:URL#38#23\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#37#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: rep\n    at blob:URL#39#51\n    at String.replace (<anonymous>)\n    at blob:URL#39#17\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#37#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: p\n    at blob:URL#40#65\n    at new Promise (<anonymous>)\n    at blob:URL#40#35\n    at blob:URL#40#103\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#37#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: rev\n    at Object.<anonymous> (blob:URL#41#67)\n    at JSON.parse (<anonymous>)\n    at blob:URL#41#18\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#37#5)\n    at http://127.0.0.1:PORT/#249#35"
+]
+],
+[
+"eval frames",
+[
+"Error: direct\n    at eval (eval at <anonymous> (blob:URL#44#19), <anonymous>#1#1)\n    at blob:URL#44#19\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#43#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: indirect\n    at eval (eval at <anonymous> (blob:URL#45#22), <anonymous>#1#1)\n    at eval (<anonymous>)\n    at blob:URL#45#22\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#43#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: named\n    at eval (zz.js#1#1)\n    at eval (<anonymous>)\n    at blob:URL#46#22\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#43#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: fn\n    at eval (eval at <anonymous> (blob:URL#47#13), <anonymous>#3#8)\n    at blob:URL#47#57\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#43#5)\n    at http://127.0.0.1:PORT/#249#35",
+"Error: fnnamed\n    at eval (ff.js#3#8)\n    at blob:URL#48#83\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#43#5)\n    at http://127.0.0.1:PORT/#249#35"
+]
+],
+[
+"sloppy frames (new Function)",
+"Error: sloppy\n    at blob:URL#52#41\n    at Object.inner (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#35)\n    at eval (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#44)\n    at blob:URL#52#18\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#50#5)\n    at http://127.0.0.1:PORT/#249#35"
+],
+[
+"stackTraceLimit 10 truncates",
+[
+11,
+"    at deep (blob:URL#55#37)"
+]
+],
+[
+"async frames",
+"Error: async\n    at a1 (blob:URL#61#45)\n    at async a2 (blob:URL#62#27)\n    at async Module.cases (blob:URL#64#11)"
+],
+[
+"Promise.all frames",
+"Error: async\n    at a1 (blob:URL#61#45)\n    at async Promise.all (index 1)\n    at async pa (blob:URL#63#27)\n    at async Module.cases (blob:URL#65#11)"
+],
+[
+"async call sites",
+[
+[
+"blob:URL",
+61,
+45,
+"a1",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+61,
+5,
+3575,
+"string",
+"a1 (blob:URL#61#45)",
+"a1 (blob:URL#61#45)"
+],
+[
+null,
+null,
+null,
+"all",
+"all",
+"Promise",
+"function",
+false,
+"function",
+false,
+false,
+false,
+false,
+true,
+true,
+1,
+null,
+null,
+null,
+null,
+1,
+"string",
+"async Promise.all (index 1)",
+"async Promise.all (index 1)"
+],
+[
+"blob:URL",
+63,
+27,
+"pa",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+true,
+false,
+null,
+"blob:URL",
+null,
+63,
+5,
+3663,
+"string",
+"async pa (blob:URL#63#27)",
+"async pa (blob:URL#63#27)"
+],
+[
+"blob:URL",
+68,
+11,
+"cases",
+null,
+"Module",
+"undefined",
+false,
+"undefined",
+false,
+false,
+false,
+false,
+true,
+false,
+null,
+"blob:URL",
+null,
+1,
+20,
+3973,
+"string",
+"async Module.cases (blob:URL#68#11)",
+"async Module.cases (blob:URL#68#11)"
+]
+]
+],
+[
+"call sites: module frames",
+[
+[
+"blob:URL",
+73,
+124,
+"wrap",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+73,
+96,
+4258,
+"string",
+"wrap (blob:URL#73#124)",
+"wrap (blob:URL#73#124)"
+],
+[
+"blob:URL",
+73,
+165,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+73,
+74,
+4299,
+"string",
+"blob:URL#73#165",
+"blob:URL#73#165"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+],
+[
+"blob:URL",
+73,
+59,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+73,
+38,
+4193,
+"string",
+"blob:URL#73#59",
+"blob:URL#73#59"
+],
+[
+"blob:URL",
+5,
+31,
+"row",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+4,
+5,
+152,
+"string",
+"row (blob:URL#5#31)",
+"row (blob:URL#5#31)"
+]
+]
+],
+[
+"call sites: sloppy frames",
+[
+[
+"blob:URL",
+77,
+39,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+77,
+18,
+4538,
+"string",
+"blob:URL#77#39",
+"blob:URL#77#39"
+],
+[
+null,
+3,
+35,
+"inner",
+null,
+"Object",
+"undefined",
+false,
+"undefined",
+false,
+true,
+false,
+false,
+false,
+false,
+null,
+null,
+"eval at <anonymous> (blob:URL#51#15)",
+3,
+9,
+61,
+"string",
+"Object.inner (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#35)",
+"Object.inner (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#35)"
+],
+[
+null,
+3,
+44,
+"eval",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+true,
+false,
+false,
+false,
+false,
+null,
+null,
+"eval at <anonymous> (blob:URL#51#15)",
+1,
+2,
+70,
+"string",
+"eval (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#44)",
+"eval (eval at <anonymous> (blob:URL#51#15), <anonymous>#3#44)"
+],
+[
+"blob:URL",
+77,
+16,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+75,
+29,
+4515,
+"string",
+"blob:URL#77#16",
+"blob:URL#77#16"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+]
+]
+],
+[
+"call sites: constructor and method",
+[
+[
+[
+"blob:URL",
+26,
+31,
+"Foo",
+null,
+null,
+"undefined",
+false,
+"undefined",
+false,
+false,
+false,
+true,
+false,
+false,
+null,
+"blob:URL",
+null,
+26,
+5,
+1502,
+"string",
+"new Foo (blob:URL#26#31)",
+"new Foo (blob:URL#26#31)"
+],
+[
+"blob:URL",
+81,
+51,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+81,
+29,
+4692,
+"string",
+"blob:URL#81#51",
+"blob:URL#81#51"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+],
+[
+"blob:URL",
+81,
+14,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+80,
+47,
+4655,
+"string",
+"blob:URL#81#14",
+"blob:URL#81#14"
+],
+[
+"blob:URL",
+5,
+31,
+"row",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+4,
+5,
+152,
+"string",
+"row (blob:URL#5#31)",
+"row (blob:URL#5#31)"
+]
+],
+[
+[
+"blob:URL",
+28,
+39,
+"m",
+"m",
+"Object",
+"undefined",
+false,
+"undefined",
+false,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+28,
+18,
+1639,
+"string",
+"Object.m (blob:URL#28#39)",
+"Object.m (blob:URL#28#39)"
+],
+[
+"blob:URL",
+81,
+66,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+81,
+29,
+4707,
+"string",
+"blob:URL#81#66",
+"blob:URL#81#66"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+],
+[
+"blob:URL",
+81,
+14,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+80,
+47,
+4655,
+"string",
+"blob:URL#81#14",
+"blob:URL#81#14"
+],
+[
+"blob:URL",
+5,
+31,
+"row",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+4,
+5,
+152,
+"string",
+"row (blob:URL#5#31)",
+"row (blob:URL#5#31)"
+]
+],
+[
+[
+"blob:URL",
+28,
+81,
+"get g",
+"g",
+"Object",
+"undefined",
+false,
+"undefined",
+false,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+28,
+64,
+1681,
+"string",
+"get g (blob:URL#28#81)",
+"get g (blob:URL#28#81)"
+],
+[
+"blob:URL",
+81,
+77,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+81,
+29,
+4718,
+"string",
+"blob:URL#81#77",
+"blob:URL#81#77"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+],
+[
+"blob:URL",
+81,
+14,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+80,
+47,
+4655,
+"string",
+"blob:URL#81#14",
+"blob:URL#81#14"
+],
+[
+"blob:URL",
+5,
+31,
+"row",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+4,
+5,
+152,
+"string",
+"row (blob:URL#5#31)",
+"row (blob:URL#5#31)"
+]
+]
+]
+],
+[
+"call sites: builtin frames",
+[
+[
+"blob:URL",
+84,
+79,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+84,
+58,
+4864,
+"string",
+"blob:URL#84#79",
+"blob:URL#84#79"
+],
+[
+null,
+null,
+null,
+"map",
+"map",
+"Array",
+"undefined",
+false,
+"undefined",
+false,
+false,
+false,
+false,
+false,
+false,
+null,
+null,
+null,
+null,
+null,
+0,
+"string",
+"Array.map (<anonymous>)",
+"Array.map (<anonymous>)"
+],
+[
+"blob:URL",
+84,
+54,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+84,
+29,
+4839,
+"string",
+"blob:URL#84#54",
+"blob:URL#84#54"
+],
+[
+"blob:URL",
+10,
+20,
+"pstWith",
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+7,
+5,
+408,
+"string",
+"pstWith (blob:URL#10#20)",
+"pstWith (blob:URL#10#20)"
+],
+[
+"blob:URL",
+84,
+14,
+null,
+null,
+null,
+"undefined",
+false,
+"undefined",
+true,
+false,
+false,
+false,
+false,
+false,
+null,
+"blob:URL",
+null,
+83,
+39,
+4799,
+"string",
+"blob:URL#84#14",
+"blob:URL#84#14"
+]
+]
+],
+[
+"call site objects",
+[
+true,
+false,
+"[object Object]",
+"constructor,getColumnNumber,getEnclosingColumnNumber,getEnclosingLineNumber,getEvalOrigin,getFileName,getFunction,getFunctionName,getLineNumber,getMethodName,getPosition,getPromiseIndex,getScriptHash,getScriptNameOrSourceURL,getThis,getTypeName,isAsync,isConstructor,isEval,isNative,isPromiseAll,isToplevel,toString",
+0,
+0,
+true,
+"function",
+"CallSite",
+0,
+[
+false,
+false,
+false
+],
+"getFileName",
+0,
+0,
+[
+"TypeError",
+"CallSite method getFileName expects CallSite as receiver"
+],
+[
+"Error",
+"Not supported"
+],
+"{}",
+0,
+true
+]
+],
+[
+"prepareStackTrace this, arguments",
+[
+"R",
+[
+true,
+2,
+true,
+"object"
+]
+]
+],
+[
+"prepareStackTrace returns an object",
+[
+"object",
+"{\"k\":1}"
+]
+],
+[
+"prepareStackTrace throws",
+[
+[
+"first threw",
+"RangeError",
+"in pst"
+],
+[
+"second threw",
+"RangeError",
+"in pst"
+]
+]
+],
+[
+"prepareStackTrace recursion formats the inner error by default",
+"outer|Error: inner\n    at Error.prepareStackTrace (blob:URL#120#58)\n    at blob:URL#120#124\n    at pstWith (blob:URL#10#20)\n    at blob:URL#120#14\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#119#5)"
+],
+[
+"prepareStackTrace not a function",
+"Error: x\n    at blob:URL#122#103\n    at pstWith (blob:URL#10#20)\n    at blob:URL#122#66\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#122#5)"
+],
+[
+"prepareStackTrace set after construction, before the first read",
+"formatted late"
+],
+[
+"prepareStackTrace read off the intrinsic Error, not the global",
+"Error: x\n    at blob:URL#130#24\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#127#5)"
+],
+[
+"prepareStackTrace for captureStackTrace on a plain object",
+[
+[
+true,
+true
+],
+"P"
+]
+],
+[
+"captureStackTrace on a plain object",
+[
+null,
+"Error\n    at blob:URL#141#21\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#139#5)",
+"function",
+"function",
+"undefined",
+false,
+true,
+null
+]
+],
+[
+"captureStackTrace skipping frames",
+"Error\n    at caller (blob:URL#147#46)\n    at blob:URL#147#58\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#145#5)"
+],
+[
+"captureStackTrace name and message",
+"N: M"
+],
+[
+"captureStackTrace on a frozen object",
+"THREW",
+"TypeError",
+"Cannot define property stack, object is not extensible",
+"TypeError: Cannot define property stack, object is not extensible\n    at Error.captureStackTrace (<anonymous>)\n    at blob:URL#154#96\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#154#5)"
+],
+[
+"own stack of an Error",
+[
+"stack,message",
+true,
+"function",
+"undefined",
+false,
+true,
+null
+]
+],
+[
+"stackTraceLimit and its descriptor",
+[
+10,
+true,
+true,
+true,
+2,
+"captureStackTrace"
+]
+],
+[
+"stackTraceLimit 0, 2, a string, deleted",
+[
+"Error: z",
+"Error: two\n    at blob:URL#166#47\n    at row (blob:URL#5#31)",
+[
+"undefined",
+true
+],
+[
+"undefined",
+true
+]
+]
+],
+[
+"name and message changed before the first read",
+"Renamed: m"
+],
+[
+"name changed after the first read",
+[
+true,
+"Error: m"
+]
+],
+[
+"a symbol name",
+"<error: TypeError: Cannot convert a Symbol value to a string>"
+],
+[
+"empty name, empty message",
+[
+"",
+"only message",
+"OnlyName"
+]
+],
+[
+"subclass",
+"MyErr: sub\n    at blob:URL#181#126\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#181#5)"
+],
+[
+"a thrown non-Error, captured",
+"Error"
+],
+[
+"DOMException from createElement",
+[
+"InvalidCharacterError",
+"InvalidCharacterError: Failed to execute 'createElement' on 'Document': The tag name provided ('1') is not a valid name.\n    at blob:URL#186#95\n    at caught (blob:URL#185#32)\n    at blob:URL#186#65\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#186#5)",
+"stack",
+"function",
+"undefined"
+]
+],
+[
+"DOMException from querySelector",
+[
+"SyntaxError",
+"SyntaxError: Failed to execute 'querySelector' on 'Document': '<<<' is not a valid selector.\n    at blob:URL#187#95\n    at caught (blob:URL#185#32)\n    at blob:URL#187#65\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#187#5)",
+"stack",
+"function",
+"undefined"
+]
+],
+[
+"DOMException from atob",
+[
+"InvalidCharacterError",
+"InvalidCharacterError: Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.\n    at blob:URL#188#77\n    at caught (blob:URL#185#32)\n    at blob:URL#188#56\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#188#5)",
+"stack",
+"function",
+"undefined"
+]
+],
+[
+"TypeError from appendChild",
+[
+"TypeError",
+"TypeError: parameter 1 is not of type 'Node'.\n    at blob:URL#189#95\n    at caught (blob:URL#185#32)\n    at blob:URL#189#60\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#189#5)",
+"stack,message",
+"function",
+"undefined"
+]
+],
+[
+"TypeError from new URL",
+[
+"TypeError",
+"TypeError: Invalid URL\n    at blob:URL#190#77\n    at caught (blob:URL#185#32)\n    at blob:URL#190#56\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#190#5)",
+"stack,message",
+"function",
+"undefined"
+]
+],
+[
+"TypeError from an illegal invocation",
+[
+"TypeError",
+"TypeError: Illegal invocation\n    at blob:URL#191#118\n    at caught (blob:URL#185#32)\n    at blob:URL#191#70\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#191#5)",
+"stack,message",
+"function",
+"undefined"
+]
+],
+[
+"TypeError from a constructor called as a function",
+[
+"TypeError",
+"TypeError: Please use the 'new' operator, this DOM object constructor cannot be called as a function.\n    at blob:URL#192#104\n    at caught (blob:URL#185#32)\n    at blob:URL#192#83\n    at row (blob:URL#5#31)\n    at Module.cases (blob:URL#192#5)",
+"stack,message",
+"function",
+"undefined"
+]
+],
+[
+"a page-made DOMException has no stack",
+[
+true,
+""
+]
+],
+[
+"platform DOMException through prepareStackTrace",
+[
+"InvalidCharacterError",
+true,
+"blob:URL",
+196,
+38
+]
+],
+[
+"prepareStackTrace of the realm that made the error",
+[
+"frame",
+"frame",
+"top",
+"frame"
+]
+],
+[
+"module + inline source map",
+"TypeError: Cannot read properties of null (reading '0')\n    at CI (blob:URL#3#31)\n    at wrap (blob:URL#4#78)\n    at Module.mapped (blob:URL#4#86)\n    at http://127.0.0.1:PORT/#251#35"
+],
+[
+"call sites in a module with an inline source map",
+[
+[
+"blob:URL",
+3,
+31,
+"CI (blob:URL#3#31)"
+],
+[
+"blob:URL",
+7,
+100,
+"wrap (blob:URL#7#100)"
+],
+[
+"blob:URL",
+7,
+108,
+"Module.mapped (blob:URL#7#108)"
+]
+]
+],
+[
+"eval with sourceURL and an inline map",
+"TypeError: Cannot read properties of null (reading 'x')\n    at eval (evalmapped.js#1#6)\n    at eval (<anonymous>)\n    at Module.mapped (blob:URL#8#20)\n    at http://127.0.0.1:PORT/#251#35"
+],
+[
+"module with a sourceURL",
+"TypeError: Cannot read properties of null (reading '0')\n    at Module.named (named-module.js#3#15)\n    at http://127.0.0.1:PORT/#253#35"
+],
+[
+"module with a sourceURL and an inline map",
+"TypeError: Cannot read properties of null (reading '0')\n    at Module.named (named-mapped.js#3#15)\n    at http://127.0.0.1:PORT/#255#35"
+]
+]

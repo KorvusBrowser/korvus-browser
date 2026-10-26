@@ -1,0 +1,136 @@
+[
+  {
+    "iface": "VideoFrame",
+    "member": "constructor",
+    "expr": "new VideoFrame()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "format",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.format; })()",
+    "expected": "BGRA",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "codedWidth",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.codedWidth; })()",
+    "expected": 300,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "codedHeight",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.codedHeight; })()",
+    "expected": 150,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "rotation",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.rotation; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "flip",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.flip; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "displayWidth",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.displayWidth; })()",
+    "expected": 300,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "displayHeight",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.displayHeight; })()",
+    "expected": 150,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "duration",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.duration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "timestamp",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.timestamp; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "allocationSize",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.allocationSize(); })()",
+    "expected": 180000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "close",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "format",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.format); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "codedRect",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.codedRect); })()",
+    "expected": "[object DOMRectReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "visibleRect",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.visibleRect); })()",
+    "expected": "[object DOMRectReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "colorSpace",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.colorSpace); })()",
+    "expected": "[object VideoColorSpace]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "metadata",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.metadata()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "clone",
+    "expr": "(() => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object VideoFrame]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoFrame",
+    "member": "copyTo",
+    "expr": "(async () => { const o = new VideoFrame(document.createElement(\"canvas\"), { timestamp: 0 }); return await o.copyTo(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

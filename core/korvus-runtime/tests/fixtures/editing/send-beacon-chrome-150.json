@@ -1,0 +1,193 @@
+[
+ [
+  "relative string",
+  true,
+  ""
+ ],
+ [
+  "no data",
+  true,
+  ""
+ ],
+ [
+  "null data",
+  true,
+  ""
+ ],
+ [
+  "undefined data",
+  true,
+  ""
+ ],
+ [
+  "blob safelisted",
+  true,
+  ""
+ ],
+ [
+  "blob json",
+  true,
+  ""
+ ],
+ [
+  "form data",
+  true,
+  ""
+ ],
+ [
+  "url params",
+  true,
+  ""
+ ],
+ [
+  "array buffer",
+  true,
+  ""
+ ],
+ [
+  "typed array",
+  true,
+  ""
+ ],
+ [
+  "object to string",
+  true,
+  "toString"
+ ],
+ [
+  "number",
+  true,
+  ""
+ ],
+ [
+  "stream",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': sendBeacon cannot have a ReadableStream body.",
+  ""
+ ],
+ [
+  "too big",
+  false,
+  ""
+ ],
+ [
+  "just under quota",
+  true,
+  ""
+ ],
+ [
+  "ill-formed url",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': The URL argument is ill-formed or unsupported.",
+  ""
+ ],
+ [
+  "data url",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': Beacons are only supported over HTTP(S).",
+  ""
+ ],
+ [
+  "javascript url",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': Beacons are only supported over HTTP(S).",
+  ""
+ ],
+ [
+  "ftp url",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': Beacons are only supported over HTTP(S).",
+  ""
+ ],
+ [
+  "no args",
+  "throw:TypeError: Failed to execute 'sendBeacon' on 'Navigator': 1 argument required, but only 0 present.",
+  ""
+ ],
+ [
+  "entry b1",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b2",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b3",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b4",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b5",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b6",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b7",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b8",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b9",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b10",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b11",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b12",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ],
+ [
+  "entry b15",
+  "beacon",
+  200,
+  "non-blocking",
+  "http/1.1"
+ ]
+]

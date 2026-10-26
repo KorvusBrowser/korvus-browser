@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "RTCError",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCError({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCError(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "httpRequestStatusCode",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.httpRequestStatusCode; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "errorDetail",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.errorDetail; })()",
+    "expected": "data-channel-failure",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "sdpLineNumber",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.sdpLineNumber; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "sctpCauseCode",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.sctpCauseCode; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "receivedAlert",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.receivedAlert; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCError",
+    "member": "sentAlert",
+    "expr": "(() => { const o = new RTCError({ errorDetail: \"data-channel-failure\" }); return o.sentAlert; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

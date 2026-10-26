@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "SVGImageElement",
+    "member": "constructor",
+    "expr": "new SVGImageElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return o.crossOrigin; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return (o.crossOrigin = \"x\", o.crossOrigin); })()",
+    "expected": "anonymous",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "preserveAspectRatio",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.preserveAspectRatio); })()",
+    "expected": "[object SVGAnimatedPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGImageElement",
+    "member": "href",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"image\"); return Object.prototype.toString.call(o.href); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

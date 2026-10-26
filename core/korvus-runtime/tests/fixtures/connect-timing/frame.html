@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+// connect-timing probe, the frame (https://localhost:P/frame), reached through a CONNECT proxy that holds every
+// tunnel HOLD ms before answering: its navigation opened a NEW connection, so its entry carries that connection's
+// phases. Then, one after another: /r1 and /r2 on the frame's own origin (the navigation's connection again: reused),
+// /tao on 127.0.0.1 (another origin, credentials omitted -- a new connection; Timing-Allow-Origin: *) and /notao
+// (the same, without Timing-Allow-Origin). Every row is a shape or a bound, never a millisecond value.
+var HOLD = 40;
+function shape(rows, p, e) {
+  rows[p + ' nextHopProtocol'] = e.nextHopProtocol;
+  rows[p + ' lookup is fetchStart'] = e.domainLookupStart === e.fetchStart && e.domainLookupEnd === e.fetchStart;
+  rows[p + ' phases in order'] = e.fetchStart <= e.domainLookupStart && e.domainLookupStart <= e.domainLookupEnd &&
+    e.domainLookupEnd <= e.connectStart && e.connectStart <= e.secureConnectionStart &&
+    e.secureConnectionStart <= e.connectEnd && e.connectEnd <= e.requestStart && e.requestStart <= e.responseStart;
+  rows[p + ' connect phases collapse to fetchStart'] = [e.domainLookupStart, e.domainLookupEnd, e.connectStart,
+    e.secureConnectionStart, e.connectEnd].every(function (v) { return v === e.fetchStart; });
+  rows[p + ' tcp (secureConnectionStart - connectStart) >= 3/4 of the hold'] = e.secureConnectionStart - e.connectStart >= HOLD * 0.75;
+  rows[p + ' tls (connectEnd - secureConnectionStart) > 0'] = e.connectEnd - e.secureConnectionStart > 0;
+}
+function report() {
+  var rows = {}, info = {};
+  var n = performance.getEntriesByType('navigation')[0];
+  shape(rows, 'navigation', n);
+  var t = performance.timing;
+  rows['timing secureConnectionStart > 0'] = t.secureConnectionStart > 0;
+  rows['timing lookup is fetchStart'] = t.domainLookupStart === t.fetchStart && t.domainLookupEnd === t.fetchStart;
+  rows['timing tcp >= 3/4 of the hold'] = t.secureConnectionStart - t.connectStart >= HOLD * 0.75;
+  rows['timing connectEnd >= secureConnectionStart'] = t.connectEnd >= t.secureConnectionStart;
+  var others = 'https://127.0.0.1:' + location.port;
+  [['r1', '/r1'], ['r2', '/r2'], ['tao', others + '/tao']].forEach(function (k) {
+    var e = performance.getEntriesByName(new URL(k[1], location.href).href)[0];
+    if (e) shape(rows, k[0], e); else rows[k[0] + ' entry'] = 'missing';
+  });
+  var x = performance.getEntriesByName(others + '/notao')[0];
+  rows['notao connection phases all 0'] = !!x && [x.domainLookupStart, x.domainLookupEnd, x.connectStart,
+    x.secureConnectionStart, x.connectEnd].every(function (v) { return v === 0; });
+  [['navigation', n], ['tao', performance.getEntriesByName(others + '/tao')[0]]].forEach(function (k) {
+    var e = k[1];
+    if (e) info[k[0]] = {fetchStart: e.fetchStart, domainLookupStart: e.domainLookupStart, domainLookupEnd: e.domainLookupEnd,
+      connectStart: e.connectStart, secureConnectionStart: e.secureConnectionStart, connectEnd: e.connectEnd,
+      requestStart: e.requestStart};
+  });
+  parent.postMessage(JSON.stringify({rows: rows, info: info}), '*');
+}
+addEventListener('load', function () { setTimeout(function () {
+  var get = function (u) { return fetch(u).then(function (r) { return r.text(); }).catch(function () {}); };
+  var others = 'https://127.0.0.1:' + location.port;
+  get('/r1').then(function () { return get('/r2'); }).then(function () { return get(others + '/tao'); })
+    .then(function () { return get(others + '/notao'); })
+    .then(function () { setTimeout(report, 300); });
+}, 200); });
+</script></body></html>

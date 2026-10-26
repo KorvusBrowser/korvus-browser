@@ -1,0 +1,213 @@
+[
+  {
+    "iface": "XRRenderState",
+    "member": "constructor",
+    "expr": "new XRRenderState()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthNear",
+    "expr": "XRRenderState.prototype.depthNear",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthNear",
+    "expr": "Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthNear\").get.call(Object.create(XRRenderState.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthFar",
+    "expr": "XRRenderState.prototype.depthFar",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthFar",
+    "expr": "Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthFar\").get.call(Object.create(XRRenderState.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "inlineVerticalFieldOfView",
+    "expr": "XRRenderState.prototype.inlineVerticalFieldOfView",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "inlineVerticalFieldOfView",
+    "expr": "Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"inlineVerticalFieldOfView\").get.call(Object.create(XRRenderState.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "XRRenderState.prototype.baseLayer",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"baseLayer\").get.call(Object.create(XRRenderState.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "XRRenderState.prototype.layers",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"layers\").get.call(Object.create(XRRenderState.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthNear",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthNear\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthNear",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthNear\").get.call(Object.create(XRRenderState.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthFar",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthFar\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthFar",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"depthFar\").get.call(Object.create(XRRenderState.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "inlineVerticalFieldOfView",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"inlineVerticalFieldOfView\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "inlineVerticalFieldOfView",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"inlineVerticalFieldOfView\").get.call(Object.create(XRRenderState.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"baseLayer\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"baseLayer\").get.call(Object.create(XRRenderState.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"layers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRRenderState.prototype, \"layers\").get.call(Object.create(XRRenderState.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthNear",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.depthNear; })()",
+    "expected": 0.1,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "depthFar",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.depthFar; })()",
+    "expected": 1000,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "passthroughFullyObscured",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.passthroughFullyObscured; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "inlineVerticalFieldOfView",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.inlineVerticalFieldOfView; })()",
+    "expected": 1.5707963267948966,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.baseLayer; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "baseLayer",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return Object.prototype.toString.call(o.baseLayer); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return o.layers; })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRRenderState",
+    "member": "layers",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.renderState)); return Object.prototype.toString.call(o.layers); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

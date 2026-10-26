@@ -1,0 +1,524 @@
+[
+ [
+  "ns-names",
+  "string:Hz,Q,cap,ch,cm,cqb,cqh,cqi,cqmax,cqmin,cqw,deg,dpcm,dpi,dppx,dvb,dvh,dvi,dvmax,dvmin,dvw,em,escape,ex,fr,grad,highlights,ic,in,kHz,lh,lvb,lvh,lvi,lvmax,lvmin,lvw,mm,ms,number,paintWorklet,pc,percent,pt,px,rad,rcap,rch,registerProperty,rem,rex,ric,rlh,s,supports,svb,svh,svi,svmax,svmin,svw,turn,vb,vh,vi,vmax,vmin,vw,x"
+ ],
+ [
+  "px-desc",
+  "string:[[\"value\",\"function\"],[\"writable\",\"boolean\"],[\"enumerable\",\"boolean\"],[\"configurable\",\"boolean\"]]"
+ ],
+ [
+  "px-len",
+  "number:1"
+ ],
+ [
+  "px-name",
+  "string:px"
+ ],
+ [
+  "px1",
+  "[object CSSUnitValue] 1px"
+ ],
+ [
+  "px1-unit",
+  "string:px"
+ ],
+ [
+  "px1-value",
+  "number:2.5"
+ ],
+ [
+  "pct",
+  "string:50%|percent"
+ ],
+ [
+  "number",
+  "string:2|number"
+ ],
+ [
+  "fr",
+  "string:1fr|90deg|1s|2dppx|1.5em|3cqw|1q"
+ ],
+ [
+  "px-nan",
+  "threw TypeError",
+  "Failed to execute 'px' on 'CSS': The provided double value is non-finite."
+ ],
+ [
+  "px-noarg",
+  "threw TypeError",
+  "Failed to execute 'px' on 'CSS': 1 argument required, but only 0 present."
+ ],
+ [
+  "unit-ctor",
+  "string:1px"
+ ],
+ [
+  "unit-ctor-bad",
+  "string:1x"
+ ],
+ [
+  "unit-ctor-bad-unit",
+  "string:x"
+ ],
+ [
+  "unit-ctor-PX",
+  "string:px"
+ ],
+ [
+  "unit-ctor-pct",
+  "string:percent|percent"
+ ],
+ [
+  "unit-ctor-num",
+  "string:1"
+ ],
+ [
+  "unit-ctor-inf",
+  "threw TypeError",
+  "Failed to construct 'CSSUnitValue': The provided double value is non-finite."
+ ],
+ [
+  "unit-set-nan",
+  "threw TypeError",
+  "Failed to set the 'value' property on 'CSSUnitValue': The provided double value is non-finite."
+ ],
+ [
+  "unit-type",
+  "string:{\"length\":1}"
+ ],
+ [
+  "unit-type-pct",
+  "string:{\"percent\":1}{}{\"angle\":1}"
+ ],
+ [
+  "kw",
+  "string:auto"
+ ],
+ [
+  "kw-empty",
+  "threw TypeError",
+  "Failed to construct 'CSSKeywordValue': CSSKeywordValue does not support empty strings"
+ ],
+ [
+  "kw-set",
+  "string:b"
+ ],
+ [
+  "kw-set-empty",
+  "threw TypeError",
+  "Failed to set the 'value' property on 'CSSKeywordValue': CSSKeywordValue does not support empty strings"
+ ],
+ [
+  "sum",
+  "string:calc(1px + 2px)"
+ ],
+ [
+  "sum-op",
+  "string:sum"
+ ],
+ [
+  "sum-vals",
+  "[object CSSNumericArray] [object CSSNumericArray]"
+ ],
+ [
+  "sum-vals-len",
+  "number:2"
+ ],
+ [
+  "sum-vals-0",
+  "string:1px"
+ ],
+ [
+  "sum-vals-same",
+  "boolean:true"
+ ],
+ [
+  "sum-num",
+  "string:calc(1 + 2)"
+ ],
+ [
+  "sum-mixed",
+  "threw TypeError",
+  "Failed to construct 'CSSMathSum': Incompatible types"
+ ],
+ [
+  "sum-pct",
+  "string:calc(1px + 2%)"
+ ],
+ [
+  "sum-str",
+  "threw TypeError",
+  "Failed to construct 'CSSMathSum': The provided double value is non-finite."
+ ],
+ [
+  "max",
+  "string:max(1px, 2px)|max"
+ ],
+ [
+  "min",
+  "string:min(1px, 2em)|min"
+ ],
+ [
+  "product",
+  "string:calc(1px * 2)|product"
+ ],
+ [
+  "product-px-px",
+  "string:calc(1px * 2px)"
+ ],
+ [
+  "negate",
+  "string:calc(-1px)|negate|1px"
+ ],
+ [
+  "invert",
+  "string:calc(1 / 2px)|invert"
+ ],
+ [
+  "clamp",
+  "string:clamp(1px, 2px, 3px)|clamp"
+ ],
+ [
+  "nested",
+  "string:calc(1px - 2px)"
+ ],
+ [
+  "nested2",
+  "string:calc(1px / 2)"
+ ],
+ [
+  "nested3",
+  "string:calc((1px * 2) + 3px)"
+ ],
+ [
+  "nested4",
+  "string:calc((1px + 2px) * 3)"
+ ],
+ [
+  "arr-ctor",
+  "threw TypeError",
+  "Failed to construct 'CSSNumericArray': Illegal constructor"
+ ],
+ [
+  "parse",
+  "string:1px|[object CSSUnitValue]"
+ ],
+ [
+  "parse-x",
+  "threw SyntaxError",
+  "Failed to execute 'parse' on 'CSSNumericValue': Invalid math expression"
+ ],
+ [
+  "parse-num",
+  "string:3|number"
+ ],
+ [
+  "parse-pct",
+  "string:percent"
+ ],
+ [
+  "parse-PX",
+  "string:1px|100px"
+ ],
+ [
+  "parse-calc",
+  "string:calc(3px)"
+ ],
+ [
+  "parse-calc-type",
+  "string:[object CSSMathSum]"
+ ],
+ [
+  "parse-badunit",
+  "threw SyntaxError",
+  "Failed to execute 'parse' on 'CSSNumericValue': Invalid math expression"
+ ],
+ [
+  "add",
+  "string:3px|[object CSSUnitValue]"
+ ],
+ [
+  "add-mixed",
+  "string:calc(1px + 2em)"
+ ],
+ [
+  "sub",
+  "string:3px"
+ ],
+ [
+  "mul",
+  "string:10px|calc(5px * 2px)"
+ ],
+ [
+  "div",
+  "string:3px|calc(6px / 2px)"
+ ],
+ [
+  "div0",
+  "threw RangeError",
+  "Failed to execute 'div' on 'CSSNumericValue': Can't divide-by-zero"
+ ],
+ [
+  "max-m",
+  "string:3px|min(1px, 3em)"
+ ],
+ [
+  "equals",
+  "string:true|false|true"
+ ],
+ [
+  "to",
+  "string:1in|3.14159rad|1000ms"
+ ],
+ [
+  "to-bad",
+  "threw TypeError",
+  "Failed to execute 'to' on 'CSSNumericValue': Cannot convert to deg"
+ ],
+ [
+  "tosum",
+  "string:calc(1px)|calc(1px + 1em)"
+ ],
+ [
+  "tosum-none",
+  "string:calc(1em + 1px)"
+ ],
+ [
+  "translate",
+  "string:translate(1px, 2px)"
+ ],
+ [
+  "translate-3d",
+  "string:translate3d(1px, 2px, 3px)|false"
+ ],
+ [
+  "translate-bad",
+  "threw TypeError",
+  "Failed to construct 'CSSTranslate': Must pass length or percentage to X and Y of CSSTranslate"
+ ],
+ [
+  "translate-num",
+  "threw TypeError",
+  "Failed to construct 'CSSTranslate': parameter 1 is not of type 'CSSNumericValue'."
+ ],
+ [
+  "translate-x",
+  "string:1px|0px"
+ ],
+ [
+  "rotate",
+  "string:rotate(45deg)|rotate3d(1, 2, 3, 4deg)"
+ ],
+ [
+  "rotate-x",
+  "string:0|1|true"
+ ],
+ [
+  "scale",
+  "string:scale(2, 3)|scale3d(2, 3, 4)|2"
+ ],
+ [
+  "skew",
+  "string:skew(1deg, 2deg)|skewX(1deg)|skewY(1deg)"
+ ],
+ [
+  "persp",
+  "string:perspective(10px)"
+ ],
+ [
+  "matrixc",
+  "string:matrix(1, 0, 0, 1, 5, 6)"
+ ],
+ [
+  "tv",
+  "string:translate(1px, 2px) scale(2, 2)"
+ ],
+ [
+  "tv-len",
+  "number:1"
+ ],
+ [
+  "tv-0",
+  "string:translate(1px, 2px)"
+ ],
+ [
+  "tv-mat",
+  "string:matrix(1, 0, 0, 1, 1, 2)"
+ ],
+ [
+  "tv-mat2",
+  "string:matrix(2, 0, 0, 3, 2, 6)"
+ ],
+ [
+  "tv-mat-rot",
+  "string:matrix(0, 1, -1, 0, 0, 0)"
+ ],
+ [
+  "tv-mat-em",
+  "threw TypeError",
+  "Failed to execute 'toMatrix' on 'CSSTransformValue': Cannot create matrix if units are not compatible with px"
+ ],
+ [
+  "tv-empty",
+  "threw TypeError",
+  "Failed to construct 'CSSTransformValue': CSSTransformValue must have at least one component"
+ ],
+ [
+  "tv-is2d",
+  "boolean:false"
+ ],
+ [
+  "tv-iter",
+  "number:1"
+ ],
+ [
+  "tv-set",
+  "string:scale(2, 2)"
+ ],
+ [
+  "comp-tomatrix",
+  "string:matrix(1, 0, 0, 1, 1, 2)"
+ ],
+ [
+  "unparsed",
+  "string:a/**/var(--x)"
+ ],
+ [
+  "unparsed-len",
+  "string:2|b"
+ ],
+ [
+  "varref",
+  "string:[object CSSVariableReferenceValue]|[object CSSVariableReferenceValue]"
+ ],
+ [
+  "varref-bad",
+  "threw TypeError",
+  "Failed to construct 'CSSVariableReferenceValue': Invalid custom property name"
+ ],
+ [
+  "varref-set",
+  "threw TypeError",
+  "Failed to set the 'variable' property on 'CSSVariableReferenceValue': Invalid custom property name"
+ ],
+ [
+  "varref-set-ok",
+  "string:--y"
+ ],
+ [
+  "style-parse",
+  "string:10px|[object CSSUnitValue]"
+ ],
+ [
+  "style-parse-kw",
+  "string:[object CSSKeywordValue]auto"
+ ],
+ [
+  "style-parse-bad",
+  "threw TypeError",
+  "Failed to execute 'parse' on 'CSSStyleValue': The value provided ('x') could not be parsed as a 'x'."
+ ],
+ [
+  "style-parse-badval",
+  "threw TypeError",
+  "Failed to execute 'parse' on 'CSSStyleValue': The value provided ('red') could not be parsed as a 'width'."
+ ],
+ [
+  "style-parseall",
+  "number:1"
+ ],
+ [
+  "spm-set-x",
+  "threw TypeError",
+  "Failed to execute 'set' on 'StylePropertyMap': Invalid type for property"
+ ],
+ [
+  "spm-set-w",
+  "string:5px|5px"
+ ],
+ [
+  "spm-set-w-str",
+  "string:7px|1"
+ ],
+ [
+  "spm-set-w-bad",
+  "threw TypeError",
+  "Failed to execute 'set' on 'StylePropertyMap': Invalid type for property"
+ ],
+ [
+  "spm-set-noval",
+  "threw TypeError",
+  "Failed to execute 'set' on 'StylePropertyMap': Invalid type for property"
+ ],
+ [
+  "spm-get",
+  "string:[object CSSUnitValue]3px|px"
+ ],
+ [
+  "spm-get-kw",
+  "string:[object CSSKeywordValue]flex"
+ ],
+ [
+  "spm-get-none",
+  "undefined"
+ ],
+ [
+  "spm-get-bad",
+  "undefined"
+ ],
+ [
+  "spm-has",
+  "string:true|1"
+ ],
+ [
+  "spm-delete",
+  "string:|"
+ ],
+ [
+  "spm-clear",
+  "string:"
+ ],
+ [
+  "spm-append",
+  "undefined"
+ ],
+ [
+  "spm-append-w",
+  "threw TypeError",
+  "Failed to execute 'append' on 'StylePropertyMap': Property does not support multiple values"
+ ],
+ [
+  "spm-entries",
+  "string:width,color"
+ ],
+ [
+  "csm",
+  "string:[object StylePropertyMapReadOnly]476|block|auto|1"
+ ],
+ [
+  "csm-get-x",
+  "undefined"
+ ],
+ [
+  "csm-detached-size",
+  "number:0"
+ ],
+ [
+  "rule-stylemap",
+  "string:[object StylePropertyMap]2|3px"
+ ],
+ [
+  "rule-stylemap-same",
+  "boolean:true"
+ ],
+ [
+  "pagerule-sel",
+  "string:|:first|x|x|@page x { margin: 1px; }"
+ ],
+ [
+  "kw-ctor-noargs",
+  "threw TypeError",
+  "Failed to construct 'CSSKeywordValue': 1 argument required, but only 0 present."
+ ]
+]

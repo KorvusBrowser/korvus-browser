@@ -1,0 +1,88 @@
+{
+  "_provenance": {
+    "measured_from": "Google Chrome 150.0.7871.46, --headless=new --dump-dom, http://127.0.0.1 (a secure context)",
+    "measured_at": "2026-09-23T02:09:46+09:00",
+    "probe": "docs/goal-conformance/findings/header-guard-probe.html",
+    "method": "build one Headers per guard (none / request / request-no-cors / response), set(name, value) on each, then get(name): null means the guard DROPPED it",
+    "control": "x-custom answers SET under guard `none`; if it ever reads DROP the probe is broken, not the browser",
+    "why_not_the_spec": "AUTONOMOUS-GOAL.md R3 and the project rule that webref is wrong in BOTH directions. The candidate NAMES below are only what was asked; every ANSWER is the browser's.",
+    "limits": "one browser, one build, one origin. A name absent here was not probed -- it is not a measurement that the name is allowed."
+  },
+  "_provenance_widened": {
+    "measured_from": "Google Chrome 150.0.7871.46, --headless=new --dump-dom, http://127.0.0.1 -- the SAME build as above",
+    "measured_at": "2026-09-23T14:40:00+09:00",
+    "by": "CONF GUARD1, before writing the engine half",
+    "why": "the name table alone could not answer four questions the implementation had to decide, and R3 forbids answering them from the spec. Each one is now the browser's answer, with a control beside it. The CASES section of the probe page is the script.",
+    "limits": "same single browser/build/origin. Case H (is the NAME rule applied to `delete` too?) could NOT be measured: a forbidden name can never enter a guarded list in the first place, so no public API observes it. The engine applies the same rule to `delete` for one-implementation reasons, not because this file says so."
+  },
+
+  "forbidden_request_header_names": [
+    "accept-charset", "accept-encoding", "access-control-request-headers",
+    "access-control-request-method", "connection", "content-length", "cookie", "cookie2",
+    "date", "dnt", "expect", "host", "keep-alive", "origin", "referer", "set-cookie", "te",
+    "trailer", "transfer-encoding", "upgrade", "via", "proxy-authorization", "user-agent"
+  ],
+  "_user_agent_evidence": "Chrome 150.0.7871.46, 2026-09-25 (REALWEB T6): `new Request(u, {headers: {'User-Agent': 'x'}}).headers` has no user-agent, and fetch(crossOrigin, {headers: {'User-Agent': 'page-ua'}}) goes out as a SIMPLE GET carrying the browser's own user-agent. Fetch removed User-Agent from the forbidden list; Chromium still drops it (crbug 571722). A bare `new Headers({'User-Agent': 'x'})` (guard none) keeps it in both.",
+  "forbidden_request_header_prefixes": ["proxy-", "sec-"],
+  "_prefix_evidence": "`proxy-foo` and `sec-foo` are not real header names and both DROP, so the rule is a PREFIX rule and not a fixed list. `sec-fetch-mode` drops for the same reason.",
+  "cors_safelisted_request_headers": ["accept", "accept-language", "content-language", "content-type"],
+  "_safelist_evidence": "under guard `request-no-cors` exactly these four survive; `range` is SET under `request` and DROP under `request-no-cors`, so it is NOT safelisted in this build.",
+  "forbidden_response_header_names": ["set-cookie", "set-cookie2"],
+  "_response_evidence": "only these two drop under guard `response`. Note the asymmetry a copied list gets wrong: `set-cookie` is forbidden as a REQUEST header too, `set-cookie2` is not (it is SET under `request`).",
+
+  "cors_safelist_is_value_aware": true,
+  "_value_aware_evidence": {
+    "case": "probe CASES section A",
+    "control": "`content-type: text/plain` under request-no-cors -> SET",
+    "readings": {
+      "content-type: application/json": "DROP -- so the NAME being safelisted is not enough",
+      "accept: 'a' x 200": "DROP -- a value longer than 128 bytes",
+      "accept-language: '('": "DROP -- a CORS-unsafe byte",
+      "accept: '('": "DROP"
+    },
+    "consequence": "the request-no-cors guard must ask the same question the wire path already asked, which in this engine is `modules/fetch/fetch_global.rs::no_cors_safelisted` -- promoted to pub(crate) rather than copied."
+  },
+
+  "guard_of_a_new_header_list": {
+    "_method": "probe CASES sections C, D, E, G, I -- construct the list, then set(name, value) and read it back",
+    "new Headers()": "none",
+    "new Headers(anotherHeaders)": "none -- a COPY of a guarded list is unguarded (case I3: the copy of a Request's headers takes `cookie`)",
+    "new Request(url, init).headers": "request",
+    "new Request(url, {mode: 'no-cors'}).headers": "request-no-cors",
+    "new Request(otherRequest).headers": "the mode it INHERITS decides (case E: a Request built from a no-cors Request drops `range` and keeps `accept`)",
+    "requestOrResponse.clone().headers": "the original's guard, carried (case D, all three)",
+    "new Response(body, init).headers": "response",
+    "Response.json(...).headers": "response -- drops set-cookie, keeps x-custom (case G3/G4)",
+    "Response.error().headers": "immutable -- THROWS (case G5)",
+    "Response.redirect(url).headers": "immutable -- THROWS (case G1), while `location` reads back (case G2)",
+    "(await fetch(url)).headers": "immutable -- THROWS"
+  },
+
+  "the_guard_filters_the_init": true,
+  "_init_evidence": "case C: `new Request('/x', {headers: {cookie: 'x', 'x-custom': '1'}}).headers.get('cookie')` is null while `x-custom` is '1'. The guard is not only a check on LATER mutations -- the list is filled through it, so a forbidden name never enters.",
+
+  "the_body_content_type_is_not_exempt": true,
+  "_body_content_type_evidence": "case B: `new Request(u, {mode: 'no-cors', method: 'POST', body: new Blob(['x'], {type: 'application/json'})}).headers.get('content-type')` is null; the CONTROL, the same request in `cors` mode, answers `application/json`, and a string body (text/plain;charset=UTF-8) survives under no-cors. So the Content-Type the body extraction adds goes through the guard like any other append -- an engine that stamps the guard AFTER that append keeps it and is wrong.",
+
+  "append_judges_the_combined_value": true,
+  "_combined_value_evidence": {
+    "case": "probe CASES section J (CONF GUARD1.2)",
+    "rule": "under request-no-cors, `append(name, value)` is judged against what `get(name)` WOULD answer afterwards -- the values already present for that name, then value, joined with ', '. `set` is NOT, because `set` replaces.",
+    "controls": {
+      "two 10-byte appends": "len=22, both kept",
+      "the same 100+100 pair under guard `none`": "len=202",
+      "set() twice with 100 bytes each": "len=100 -- no combining",
+      "append x-custom twice under no-cors": "null -- a non-safelisted name never gets the chance to combine"
+    },
+    "readings": {
+      "append accept 100 bytes, then another 100": "len=100 -- the SECOND dropped, because 202 > 128",
+      "append accept 120 's', then '', then 120 's'": "len=122, not 244",
+      "append accept-language 'en' then '('": "'en'",
+      "append content-type 'text/plain' then 'application/json'": "'text/plain'"
+    },
+    "consequence": "a guard applied to a list that is already full must REPLAY the fill rather than filter entry by entry, because each entry's verdict depends on the ones kept before it."
+  },
+
+  "a_dropped_name_is_a_silent_no_op": true,
+  "_no_op_evidence": "every DROP above was a `get` answering null with nothing thrown. Only `immutable` throws, and its words are `Failed to execute '<member>' on 'Headers': Headers are immutable`."
+}

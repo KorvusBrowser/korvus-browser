@@ -1,0 +1,95 @@
+[
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "requestPermission",
+    "expr": "DeviceMotionEvent.requestPermission()",
+    "throws": "TypeError",
+    "source": "brave-151-linux"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DeviceMotionEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceMotionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "acceleration",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return o.acceleration; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "accelerationIncludingGravity",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return o.accelerationIncludingGravity; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "rotationRate",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return o.rotationRate; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "interval",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return o.interval; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "requestPermission",
+    "expr": "Object.prototype.toString.call(DeviceMotionEvent.requestPermission())",
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "requestPermission",
+    "expr": "(async () => { return await DeviceMotionEvent.requestPermission(); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "requestPermission",
+    "expr": "(async () => { return Object.prototype.toString.call(await DeviceMotionEvent.requestPermission()); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "acceleration",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return Object.prototype.toString.call(o.acceleration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "accelerationIncludingGravity",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return Object.prototype.toString.call(o.accelerationIncludingGravity); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DeviceMotionEvent",
+    "member": "rotationRate",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\"); return Object.prototype.toString.call(o.rotationRate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

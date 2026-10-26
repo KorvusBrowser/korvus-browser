@@ -1,0 +1,137 @@
+[
+  {
+    "iface": "OffscreenCanvas",
+    "member": "constructor",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(o); })()",
+    "expected": "[object OffscreenCanvas]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "constructor",
+    "expr": "(() => { const o = new OffscreenCanvas(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "constructor",
+    "expr": "(() => { const o = new OffscreenCanvas(\"1\", \"1\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object OffscreenCanvas]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "width",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.width; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "width",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return (o.width = 1, o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "height",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.height; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "height",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return (o.height = 1, o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "getContext",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.getContext(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "transferToImageBitmap",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.transferToImageBitmap(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.oncontextlost; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return o.oncontextrestored; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "width",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return (o.width = \"1\", o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "height",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return (o.height = \"1\", o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "transferToImageBitmap",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(o.transferToImageBitmap()); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "convertToBlob",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(o.convertToBlob()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(o.oncontextlost); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(o.oncontextrestored); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "convertToBlob",
+    "expr": "(async () => { const o = new OffscreenCanvas(1, 1); return await o.convertToBlob(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "OffscreenCanvas",
+    "member": "convertToBlob",
+    "expr": "(async () => { const o = new OffscreenCanvas(1, 1); return Object.prototype.toString.call(await o.convertToBlob()); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

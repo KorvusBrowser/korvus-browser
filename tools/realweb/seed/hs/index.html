@@ -1,0 +1,19 @@
+<!doctype html><html><head><title>t</title>
+<style>
+meta.fmq { font-family: "/only screen/"; width: 0em; }
+meta.fns { font-family: false; }
+title { font-family: "title-font"; color: rgb(1, 2, 3); }
+head { font-size: 7px; }
+.hidden-div { display: none; font-family: "hidden-font"; }
+</style>
+<meta class="fmq"><meta class="fns">
+</head><body><div class="hidden-div"><span id="in-hidden">x</span></div><script>
+var cs = function (el, p) { return getComputedStyle(el)[p]; };
+var m1 = document.querySelector('meta.fmq'), m2 = document.querySelector('meta.fns');
+var dyn = document.createElement('meta'); dyn.className = 'fmq'; document.head.appendChild(dyn);
+window.R = JSON.stringify({
+  metaFont: cs(m1, 'fontFamily'), metaWidth: cs(m1, 'width'), metaDisplay: cs(m1, 'display'), nsFont: cs(m2, 'fontFamily'),
+  dynMetaFont: cs(dyn, 'fontFamily'), titleFont: cs(document.querySelector('title'), 'fontFamily'), titleColor: cs(document.querySelector('title'), 'color'),
+  headFontSize: cs(document.head, 'fontSize'), headDisplay: cs(document.head, 'display'), hiddenDivFont: cs(document.querySelector('.hidden-div'), 'fontFamily'),
+  inHiddenFont: cs(document.getElementById('in-hidden'), 'fontFamily'), jq: null });
+</script></body></html>

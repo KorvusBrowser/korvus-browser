@@ -1,0 +1,114 @@
+[package]
+name = "korvus-runtime"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# One binary for every integration test: see tests/all.rs for the measurement (23.5 GB -> 215 MB of
+# linker output per full build). `autotests = false` is what stops Cargo auto-discovering tests/*.rs
+# as 118 separate binaries; every test target is therefore declared explicitly below.
+autotests = false
+
+[[test]]
+name = "all"
+path = "tests/all.rs"
+
+# Its own process on purpose: it sets KORVUS_NO_PAGE, which Engine construction reads live, so it
+# cannot share a process with tests that build Engines. tests/all.rs's header carries the full reason.
+[[test]]
+name = "no_page_plugin"
+path = "tests/no_page_plugin.rs"
+
+# Its own process on purpose: it reads the INSTALL LEDGER, which is process-global because
+# a worker realm is assembled on another thread and its verdicts have to reach the gate somehow. In
+# one process every other test's `Engine` writes into that ledger too -- 750 of them, in eight threads,
+# in configurations this gate never asked for -- and the answer then depends on which engine ran last.
+# Measured: the same tree reported 41 second writers run alone and 36 run inside `all`, with three
+# rows appearing and eight disappearing. A gate whose number moves with its neighbours is not a gate.
+[[test]]
+name = "install_ledger"
+path = "tests/install_ledger.rs"
+
+[lib]
+name = "engine"
+
+# INVARIANT: `rusty_v8` (the `v8` crate, via deno_core) may be imported ONLY
+# by this crate.
+[features]
+# The template impact recorder, forwarded (see korvus-webapi's `touch-log`).
+touch-log = ["webapi/touch-log"]
+# korvus-analysis Layer 1: the call capture (webapi) and its writer (the plugin), together.
+analysis = ["webapi/analysis", "dep:analysis"]
+# tools/v8-trace: the patched V8's builtin reports, see korvus-webapi's.
+analysis-v8 = ["analysis", "webapi/analysis-v8"]
+# WebRTC send-path core that needs NO libvpx (goal A, Slice 1c): SRTP_AES128_CM_SHA1_80 protect + the RTP
+# (RFC 3550/7741) packetizer, built on the aes/hmac/sha1 crates already linked. Kept a sub-feature so this
+# crypto/byte-building can be unit-tested without the 8s libvpx source build the encoder (webrtc-media) needs.
+webrtc-srtp = []
+# WebRTC send-path media (goal A, Slice 1): VP8 encode via the VENDORED libvpx (scripts/vpx-source.sh
+# builds the revision Chrome pins) + the SRTP above. OFF BY DEFAULT: `cargo build`/`cargo test --workspace`
+# resolve only default features, so `libvpx-sys` is never in the graph, its build.rs never runs, and no
+# machine needs libvpx for the normal build. `dep:` keeps the optional crate from adding an implicit feature.
+webrtc-media = ["webrtc-srtp", "dep:libvpx-sys"]
+
+[dependencies]
+spec = { workspace = true }
+webapi = { workspace = true }
+render = { workspace = true }
+# The page pipeline: the CSSOM reads through to its parsed rules (P0), and geometry will follow.
+page = { workspace = true }
+behavior = { workspace = true }
+analysis = { workspace = true, optional = true }
+# Raw VP8 FFI over the VENDORED libvpx (VPX_LIB_DIR/VPX_INCLUDE_DIR in .cargo/config.toml), NEVER system
+# libvpx / pkg-config (J6/I6). Optional + off by default; only the `webrtc-media` feature pulls it in, and
+# it is NOT a workspace member, so `cargo test --workspace` without the feature never compiles it.
+libvpx-sys = { path = "../../vendor/libvpx-sys", optional = true }
+deno_core = "0.410"
+serde_json = "1"
+anyhow = "1"
+# `sync` is the timer task source's wake-up (`scheduler.rs`): a timer armed with an EARLIER deadline
+# than the one the parked task source is sleeping to has to be able to wake it, or `setTimeout(f, 1000)`
+# followed by `setTimeout(g, 0)` would hold `g` for a second.
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time", "sync"] }
+url = "2"
+deno_error = "0.7"
+transport = { workspace = true }
+plugin_host = { workspace = true }
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+sha1 = "0.10"
+hmac = "0.12"
+aes = "0.8"
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+getrandom = "0.2"
+base64 = "0.22"
+percent-encoding = "2" # decode data: URL ES-module sources in the module loader
+encoding_rs = "0.8" # TextDecoder label support (Shift_JIS, EUC-JP, ISO-8859-*, …) per WHATWG Encoding
+# DTLS-SRTP for the WebRTC send path (`rtc_media.rs`): a real DTLS handshake over the gathered ICE socket,
+# on the SAME BoringSSL `wreq` already links (the workspace `[patch]` pins its rev) -- so this adds NO crate to
+# the graph, only names it directly. No features (`prefix-symbols` stays OFF, as `wreq` leaves it). The
+# `tests/*_live.rs` TLS/HTTP2 servers that already named `btls`/`tokio-btls` as dev-deps now use this one.
+# (The DTLS loss-retransmit timer -- `DTLSv1_handle_timeout` via `btls-sys` -- is a deferred hardening; a
+# direct, loopback send path never drops a flight, so Slice 0 does not need it.)
+btls = "0.5.6"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "macros", "time", "net", "io-util", "test-util"] }
+spec = { workspace = true }
+persona = { workspace = true }
+# The v8-free test kit, for `webapi_gen::order`: the own-global ORDER metric. It is ONE
+# implementation on purpose -- the worker realm's gate is in korvus-webapi and the window realm's is
+# here, and a metric copied into both crates would be two truths about one property, which is the
+# defect this whole goal exists to remove. A dev-dependency, so nothing of the grader links into the
+# engine; the crate is already compiled for korvus-webapi's own dev-deps, so it costs no build time.
+korvus-webapi-gen = { path = "../korvus-webapi/gen" }
+# A content-coded response for `tests/performance_entries_live.rs` (already in the graph via the transport).
+flate2 = "1"
+png = "0.17" # R2.cal only: decode the Brave reference dataURL to diff full pixels vs Korvus
+# The HTTP/2 server of `tests/h2_priority_live.rs`: the h2 crate the client speaks (the workspace
+# `[patch]` makes it `vendor/http2`), over the async face of the same BoringSSL. ADDS NO CRATE TO THE GRAPH: `wreq`
+# links all four already.
+http2 = "0.5"
+tokio-btls = "0.5.6"
+http = "1"
+bytes = "1"

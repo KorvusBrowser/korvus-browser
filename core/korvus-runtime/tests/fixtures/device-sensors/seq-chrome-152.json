@@ -1,0 +1,327 @@
+{
+ "hidden": false,
+ "shapes": [
+  {
+   "type": "devicemotion",
+   "trusted": true,
+   "bubbles": false,
+   "cancelable": false,
+   "composed": false,
+   "phase": 2,
+   "target": true,
+   "currentTarget": true,
+   "tag": "[object DeviceMotionEvent]",
+   "stamp": true,
+   "windowEvent": true,
+   "ownKeys": "isTrusted",
+   "acceleration": [
+    "[object DeviceMotionEventAcceleration]",
+    null,
+    null,
+    null,
+    0,
+    true,
+    true
+   ],
+   "gravity": [
+    "[object DeviceMotionEventAcceleration]",
+    null,
+    null,
+    null,
+    false
+   ],
+   "rotation": [
+    "[object DeviceMotionEventRotationRate]",
+    null,
+    null,
+    null,
+    true
+   ],
+   "interval": 16
+  },
+  {
+   "type": "deviceorientation",
+   "trusted": true,
+   "bubbles": false,
+   "cancelable": false,
+   "composed": false,
+   "phase": 2,
+   "target": true,
+   "currentTarget": true,
+   "tag": "[object DeviceOrientationEvent]",
+   "stamp": true,
+   "windowEvent": true,
+   "ownKeys": "isTrusted",
+   "angles": [
+    null,
+    null,
+    null,
+    false
+   ]
+  },
+  {
+   "type": "deviceorientationabsolute",
+   "trusted": true,
+   "bubbles": false,
+   "cancelable": false,
+   "composed": false,
+   "phase": 2,
+   "target": true,
+   "currentTarget": true,
+   "tag": "[object DeviceOrientationEvent]",
+   "stamp": true,
+   "windowEvent": true,
+   "ownKeys": "isTrusted",
+   "angles": [
+    null,
+    null,
+    null,
+    true
+   ]
+  }
+ ],
+ "order": [
+  "timeout 0",
+  [
+   "devicemotion",
+   "deviceorientation",
+   "deviceorientationabsolute"
+  ],
+  "timeout 250"
+ ],
+ "log": [
+  [
+   "step",
+   "shape"
+  ],
+  [
+   "step",
+   "add l1"
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "step",
+   "add l2"
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l2",
+   "devicemotion",
+   true
+  ],
+  [
+   "step",
+   "re-add l1"
+  ],
+  [
+   "step",
+   "re-add l1 capture"
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l2",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "step",
+   "ondevicemotion"
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l2",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-on",
+   "devicemotion",
+   true
+  ],
+  [
+   "step",
+   "ondevicemotion again"
+  ],
+  [
+   "step",
+   "ondevicemotion null then set"
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l2",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-l1",
+   "devicemotion",
+   true
+  ],
+  [
+   "dm-on3",
+   "devicemotion",
+   true
+  ],
+  [
+   "step",
+   "do add+remove"
+  ],
+  [
+   "step",
+   "do add, remove in 5 ms"
+  ],
+  [
+   "step",
+   "do add, signal abort in 5 ms"
+  ],
+  [
+   "step",
+   "do add, remove + re-add"
+  ],
+  [
+   "do-l1",
+   "deviceorientation",
+   true
+  ],
+  [
+   "step",
+   "do add, keep second"
+  ],
+  [
+   "do-l1",
+   "deviceorientation",
+   true
+  ],
+  [
+   "do-l2",
+   "deviceorientation",
+   true
+  ],
+  [
+   "step",
+   "doa capture + once"
+  ],
+  [
+   "doa-cap",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "doa-once",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "step",
+   "doa third"
+  ],
+  [
+   "doa-cap",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "doa-3",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "step",
+   "doa adds during dispatch"
+  ],
+  [
+   "doa-cap",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "doa-3",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "doa-adder",
+   "deviceorientationabsolute",
+   true
+  ],
+  [
+   "step",
+   "doa nothing"
+  ],
+  [
+   "step",
+   "dm: other target types"
+  ],
+  [
+   "step",
+   "end"
+  ]
+ ],
+ "ctor": {
+  "motionInit": [
+   "[object DeviceMotionEventAcceleration]",
+   1,
+   null,
+   null,
+   "[object DeviceMotionEventAcceleration]",
+   null,
+   null,
+   3,
+   true,
+   false
+  ],
+  "motionNullMember": [
+   "[object DeviceMotionEventRotationRate]",
+   null
+  ],
+  "motionBare": [
+   null,
+   null,
+   null,
+   0
+  ],
+  "orientation": [
+   5,
+   null,
+   null,
+   true,
+   false
+  ],
+  "illegalCtor": "TypeError: Failed to construct 'DeviceMotionEventAcceleration': Illegal constructor",
+  "foreignGetter": "TypeError: Illegal invocation",
+  "requestPermission": [
+   "function",
+   "function"
+  ]
+ }
+}

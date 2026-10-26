@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PeriodicWave",
+    "member": "constructor",
+    "expr": "new PeriodicWave()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

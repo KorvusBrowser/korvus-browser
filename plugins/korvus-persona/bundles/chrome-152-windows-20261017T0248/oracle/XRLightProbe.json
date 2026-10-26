@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "XRLightProbe",
+    "member": "constructor",
+    "expr": "new XRLightProbe()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "probeSpace",
+    "expr": "XRLightProbe.prototype.probeSpace",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "probeSpace",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"probeSpace\").get.call(Object.create(XRLightProbe.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "XRLightProbe.prototype.onreflectionchange",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").get.call(Object.create(XRLightProbe.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "probeSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"probeSpace\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "probeSpace",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"probeSpace\").get.call(Object.create(XRLightProbe.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").get.call(Object.create(XRLightProbe.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightProbe",
+    "member": "onreflectionchange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRLightProbe.prototype, \"onreflectionchange\").set.call(Object.create(XRLightProbe.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

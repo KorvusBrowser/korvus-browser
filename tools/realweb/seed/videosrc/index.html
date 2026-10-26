@@ -1,0 +1,21 @@
+<!doctype html><title>t</title>
+<!-- U23: a <video>'s <source src> is a MEDIA resource, fetched (as `video`, with a Range) only when the element loads
+     -- never as an image, and not at all for preload=none until play() (wayfair.com's hero carousel: korvus
+     fetched each mp4 as an image too, and the image loads held the document's load event for the whole files). -->
+<video id=a preload=none muted loop crossorigin><source src="v.mp4?k=none-idle" type="video/mp4"></video>
+<video id=b preload=none muted loop crossorigin><source src="v.mp4?k=none-play" type="video/mp4"></video>
+<video id=c preload=metadata muted><source src="v.mp4?k=meta-idle" type="video/mp4"></video>
+<picture><source srcset="p.png?k=picture-source" type="image/png"><img src="p.png?k=picture-img" alt=""></picture>
+<script>
+// built in script, children first, as React builds it: <source> gets its src before it has a parent
+const v = document.createElement('video'); v.preload = 'none'; v.muted = true; v.setAttribute('crossorigin', '');
+const sEl = document.createElement('source'); sEl.src = 'v.mp4?k=dyn-idle'; sEl.type = 'video/mp4'; v.appendChild(sEl);
+document.body.appendChild(v);
+const v2 = document.createElement('video'); v2.preload = 'none'; v2.muted = true;
+const s2 = document.createElement('source'); s2.setAttribute('src', 'v.mp4?k=dyn-play'); v2.appendChild(s2); document.body.appendChild(v2);
+addEventListener('load', () => {
+  v2.play().catch(() => 0);
+  document.getElementById('b').play().catch(() => 0);
+  setTimeout(async () => { window.__hdr = await fetch('/report').then(r => r.json()); document.title = 'done'; }, 1500);
+});
+</script>

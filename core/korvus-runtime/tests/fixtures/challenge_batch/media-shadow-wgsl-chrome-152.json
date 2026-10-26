@@ -1,0 +1,116 @@
+[
+ [
+  "wgsl",
+  "string:packed_4x8_integer_dot_product,subgroup_uniformity,immediate_address_space,linear_indexing,subgroup_id,readonly_and_readwrite_storage_textures,unrestricted_pointer_parameters,pointer_composite_access,texture_and_sampler_let,uniform_buffer_standard_layout"
+ ],
+ [
+  "wgsl-size",
+  "number:10"
+ ],
+ [
+  "sr-efp",
+  "string:HTML"
+ ],
+ [
+  "sr-efp-attached",
+  "string:HTML"
+ ],
+ [
+  "sr-efp-big",
+  "string:HTML"
+ ],
+ [
+  "sr-efp1",
+  "string:[object HTMLHtmlElement] [object HTMLHtmlElement]"
+ ],
+ [
+  "doc-efp",
+  "string:HTML"
+ ],
+ [
+  "sr-sel",
+  "string:[object Selection] |false|true"
+ ],
+ [
+  "tt",
+  "string:hidden|[object TextTrackCueList] [object TextTrackCueList]|[object TextTrackCueList] [object TextTrackCueList]"
+ ],
+ [
+  "tt-cue",
+  "string:[object TextTrackCueList] [object TextTrackCueList]|1|[object TextTrackCueList] [object TextTrackCueList]|0"
+ ],
+ [
+  "tt-dis",
+  "string:null|null"
+ ],
+ [
+  "tt-show",
+  "string:[object TextTrackCueList] [object TextTrackCueList]|[object TextTrackCueList] [object TextTrackCueList]|0"
+ ],
+ [
+  "tt-same",
+  "string:true|true"
+ ],
+ [
+  "track-el",
+  "string:disabled|null|null"
+ ],
+ [
+  "cuehtml",
+  "string:[object DocumentFragment] [object DocumentFragment]|1|#text|x"
+ ],
+ [
+  "cuehtml2",
+  "string:<b>bold</b>|\" \"|<i>it</i>|\" \"|<span class=\"cls\">c</span>|\" \"|<span title=\"Bob\">hi</span>|\" & \"|<u>u</u>|\" \"|<ruby>r<rt>t</rt></ruby>|\" \"|\"00:00:01.000\"|\"ts \"|<span lang=\"en\">l</span>"
+ ],
+ [
+  "cuehtml3",
+  "string:#text:\"a\\nb\""
+ ],
+ [
+  "cuehtml-same",
+  "boolean:false"
+ ],
+ [
+  "cuehtml-ns",
+  "boolean:false"
+ ],
+ [
+  "ms-addsb",
+  "threw InvalidStateError",
+  "Failed to execute 'addSourceBuffer' on 'MediaSource': The MediaSource's readyState is not 'open'."
+ ],
+ [
+  "ms-addsb-bad",
+  "threw NotSupportedError",
+  "Failed to execute 'addSourceBuffer' on 'MediaSource': The type provided ('video/foo') is unsupported."
+ ],
+ [
+  "ms-addsb-empty",
+  "threw TypeError",
+  "Failed to execute 'addSourceBuffer' on 'MediaSource': The type provided is empty"
+ ],
+ [
+  "ms-its",
+  "string:true,true,true,true,true,true,true,true,false,true,false,false"
+ ],
+ [
+  "ms-state",
+  "string:closed"
+ ],
+ [
+  "ms-remove",
+  "threw TypeError",
+  "Failed to execute 'removeSourceBuffer' on 'MediaSource': parameter 1 is not of type 'SourceBuffer'."
+ ],
+ [
+  "ms-eos",
+  "threw InvalidStateError",
+  "Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+ ],
+ [
+  "ms-dur",
+  "threw InvalidStateError",
+  "Failed to set the 'duration' property on 'MediaSource': The MediaSource's readyState is not 'open'."
+ ]
+]

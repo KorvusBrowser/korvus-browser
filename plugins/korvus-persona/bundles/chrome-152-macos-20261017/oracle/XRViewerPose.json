@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "XRViewerPose",
+    "member": "constructor",
+    "expr": "new XRViewerPose()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRViewerPose",
+    "member": "views",
+    "expr": "XRViewerPose.prototype.views",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRViewerPose",
+    "member": "views",
+    "expr": "Object.getOwnPropertyDescriptor(XRViewerPose.prototype, \"views\").get.call(Object.create(XRViewerPose.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRViewerPose",
+    "member": "views",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewerPose.prototype, \"views\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRViewerPose",
+    "member": "views",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewerPose.prototype, \"views\").get.call(Object.create(XRViewerPose.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

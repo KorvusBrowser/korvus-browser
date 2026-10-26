@@ -1,0 +1,171 @@
+[
+  {
+    "iface": "TreeWalker",
+    "member": "constructor",
+    "expr": "new TreeWalker()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "root",
+    "expr": "(() => { const d = document.createElement('div'); return document.createTreeWalker(d).root === d; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "whatToShow",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.whatToShow; })()",
+    "expected": 4294967295,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "whatToShow",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement, 42, null); return o.whatToShow; })()",
+    "expected": 42
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "whatToShow",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement, null, null); return o.whatToShow; })()",
+    "expected": 0
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "filter",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.filter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "filter",
+    "expr": "(() => { const f = { acceptNode() { return 1; } }; return document.createTreeWalker(document.documentElement, 0xFFFFFFFF, f).filter === f; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "currentNode",
+    "expr": "(() => { const d = document.createElement('div'); return document.createTreeWalker(d).currentNode === d; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "currentNode",
+    "expr": "(() => { const w = document.createTreeWalker(document.createElement('div'), NodeFilter.SHOW_ELEMENT); w.currentNode = document.head; return w.currentNode === document.head; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "currentNode",
+    "expr": "(() => { const w = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_ELEMENT); w.currentNode = null; return 'no-throw'; })()",
+    "throws": "TypeError"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "parentNode",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.parentNode(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "parentNode",
+    "expr": "(() => { const r = document.createElement('div'); const c = document.createElement('span'); r.appendChild(c); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); w.currentNode = c; return w.parentNode() === r; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "firstChild",
+    "expr": "(() => { const r = document.createElement('div'); const c = document.createElement('span'); r.appendChild(c); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); return w.firstChild() === c; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "firstChild",
+    "expr": "document.createTreeWalker(document.createElement('div'), NodeFilter.SHOW_ELEMENT).firstChild()",
+    "expected": null
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "firstChild",
+    "expr": "(() => { const r = document.createElement('div'); r.appendChild(document.createElement('span')); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT, { acceptNode: 'foo' }); w.firstChild(); return 'no-throw'; })()",
+    "throws": "TypeError"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "lastChild",
+    "expr": "(() => { const r = document.createElement('div'); const a = document.createElement('span'); const b = document.createElement('b'); r.appendChild(a); r.appendChild(b); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); return w.lastChild() === b; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "lastChild",
+    "expr": "document.createTreeWalker(document.createElement('div'), NodeFilter.SHOW_ELEMENT).lastChild()",
+    "expected": null
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextSibling",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.nextSibling(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextSibling",
+    "expr": "(() => { const r = document.createElement('div'); const a = document.createElement('span'); const b = document.createElement('b'); r.appendChild(a); r.appendChild(b); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); w.currentNode = a; return w.nextSibling() === b; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "previousSibling",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.previousSibling(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "previousSibling",
+    "expr": "(() => { const r = document.createElement('div'); const a = document.createElement('span'); const b = document.createElement('b'); r.appendChild(a); r.appendChild(b); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); w.currentNode = b; return w.previousSibling() === a; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "previousNode",
+    "expr": "(() => { const o = document.createTreeWalker(document.documentElement); return o.previousNode(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "previousNode",
+    "expr": "(() => { const r = document.createElement('div'); const c = document.createElement('span'); r.appendChild(c); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); w.currentNode = c; return w.previousNode() === r; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextNode",
+    "expr": "(() => { const r = document.createElement('div'); const c = document.createElement('span'); r.appendChild(c); const w = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT); return w.nextNode() === c && w.nextNode() === null; })()",
+    "expected": true
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextNode",
+    "expr": "(() => { const r = document.createElement('div'); const a = document.createElement('div'); const b = document.createElement('span'); const c = document.createElement('p'); r.appendChild(a); r.appendChild(c); a.appendChild(b); const reject = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT, { acceptNode(n) { return n === a ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; } }); const skip = document.createTreeWalker(r, NodeFilter.SHOW_ELEMENT, { acceptNode(n) { return n === a ? NodeFilter.FILTER_SKIP : NodeFilter.FILTER_ACCEPT; } }); const seen = (w) => { const s = []; let n; while ((n = w.nextNode())) s.push(n.tagName); return s.join(','); }; return seen(reject) + ';' + seen(skip); })()",
+    "expected": "P;SPAN,P"
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextNode",
+    "expr": "(() => { let calls = 0; const w = document.createTreeWalker(document.createElement('div'), NodeFilter.SHOW_TEXT, function () { calls++; return NodeFilter.FILTER_ACCEPT; }); w.nextNode(); return calls; })()",
+    "expected": 0
+  },
+  {
+    "iface": "TreeWalker",
+    "member": "nextNode",
+    "expr": "(() => { let depth = 0; const r = document.createElement('div'); r.appendChild(document.createElement('span')); const w = document.createTreeWalker(r, NodeFilter.SHOW_ALL, function () { if (depth++ === 0) w.firstChild(); return NodeFilter.FILTER_ACCEPT; }); w.nextNode(); return 'no-throw'; })()",
+    "throws": "InvalidStateError"
+  }
+]

@@ -1,0 +1,13 @@
+{
+ "provenance": "chrome-152-windows-20261017T0248",
+ "note": "The capture's layoutMetrics block: `offsetWidth - clientWidth` of an `overflow: scroll` box per `scrollbar-width`, and an empty `<select>` at `font-size: 0` for the theme's menu-list paddings. px.",
+ "scrollbar": {
+  "thickness": 15,
+  "thinThickness": 10,
+  "noneThickness": 0
+ },
+ "menuList": {
+  "inlinePadding": 20,
+  "blockPadding": 2
+ }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "Translator",
+    "member": "create",
+    "expr": "Translator.create({})",
+    "throws": "ReferenceError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Translator",
+    "member": "availability",
+    "expr": "Translator.availability({})",
+    "throws": "ReferenceError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Translator",
+    "member": "constructor",
+    "expr": "new Translator()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

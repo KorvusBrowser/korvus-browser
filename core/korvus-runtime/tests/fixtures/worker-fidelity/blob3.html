@@ -1,0 +1,23 @@
+<!doctype html><body><script>
+window.__r=[];
+const log = s => window.__r.push(s);
+const modUrl = URL.createObjectURL(new Blob(['export const v = "mod ok";'],{type:'text/javascript'}));
+const src = `onmessage = e => {
+  if (e.data.mod) import(e.data.mod).then(m => postMessage('import: ' + m.v), x => postMessage('import failed: ' + x.name));
+  if (e.data.mint) postMessage({minted: URL.createObjectURL(new Blob(['w-bytes']))});
+}`;
+const w = new Worker(URL.createObjectURL(new Blob([src],{type:'text/javascript'})));
+const get = u => fetch(u).then(r => r.text(), x => 'fetch failed: ' + x.name);
+w.onmessage = async e => {
+  if (e.data.minted) {
+    const u = e.data.minted;
+    log('alive: ' + await get(u));
+    w.terminate();
+    await new Promise(r => setTimeout(r, 300));
+    log('after terminate: ' + await get(u));
+    log('done');
+  } else log(e.data);
+};
+w.postMessage({mod: modUrl});
+setTimeout(() => w.postMessage({mint: 1}), 200);
+</script>

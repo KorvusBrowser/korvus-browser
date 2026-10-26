@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSHSL",
+    "member": "constructor",
+    "expr": "new CSSHSL()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "iface": "CharacterData",
+    "member": "constructor",
+    "expr": "new CharacterData()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "data",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.data; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "data",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return (o.data = \"x\", o.data); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "length",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "substringData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.substringData(1, 1); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "substringData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.substringData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "appendData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.appendData(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "appendData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.appendData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "insertData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.insertData(1, \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "insertData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.insertData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "deleteData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.deleteData(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "deleteData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.deleteData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "replaceData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.replaceData(1, 1, \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "replaceData",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.replaceData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "previousElementSibling",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.previousElementSibling; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "nextElementSibling",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.nextElementSibling; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "before",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.before(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "after",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.after(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "replaceWith",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.replaceWith(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterData",
+    "member": "remove",
+    "expr": "(() => { const o = document.createTextNode(\"x\"); return o.remove(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

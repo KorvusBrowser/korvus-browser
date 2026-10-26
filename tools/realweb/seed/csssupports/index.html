@@ -1,0 +1,11 @@
+<!doctype html><title>t</title><body><script>
+const pairs = [['color','red'],['color','not-a-color'],['width','10px'],['width','10zz'],['width','-5px'],['display','grid'],['display','nope'],
+  ['text-wrap','pretty'],['text-wrap','balance'],['text-wrap','wrap pretty'],['text-wrap','bogus'],['text-wrap-style','pretty'],['corner-shape','squircle'],
+  ['corner-shape','bogus'],['margin','1px 2px 3px 4px'],['margin','1px 2px 3px 4px 5px'],['font','12px serif'],['font','bogus'],['position','sticky'],
+  ['position','bogus'],['opacity','0.5'],['opacity','abc'],['z-index','2'],['z-index','2.5'],['transform','rotate(10deg)'],['transform','bogus(1)'],
+  ['--x','anything'],['korvus-not-a-prop','1'],['-webkit-line-clamp','2'],['line-clamp','2'],['field-sizing','content'],['interpolate-size','allow-keywords'],
+  ['anchor-name','--a'],['view-transition-name','x'],['text-box-trim','trim-both'],['reading-flow','normal'],['scroll-marker-group','after']];
+const r = {};
+for (const [p, v] of pairs) r[p + ': ' + v] = [CSS.supports(p, v), CSS.supports(p + ': ' + v), CSS.supports('(' + p + ': ' + v + ')')];
+document.title = JSON.stringify(r);
+</script>

@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "TransitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TransitionEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TransitionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "animation",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return o.animation; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "propertyName",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return o.propertyName; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "elapsedTime",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return o.elapsedTime; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "pseudoElement",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return o.pseudoElement; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TransitionEvent",
+    "member": "animation",
+    "expr": "(() => { const o = new TransitionEvent(\"x\"); return Object.prototype.toString.call(o.animation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

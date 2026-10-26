@@ -1,0 +1,8 @@
+<!doctype html><title>pending</title><script>
+// REALWEB H44: atob is the infra spec's forgiving-base64 decode -- whitespace anywhere, padding only on a
+// length of 4n and at most two, 4n+1 fails, a stray `=` fails, and a final group's spare bits are DISCARDED
+// (a non-canonical token still decodes). Each case: its result, or the error's name.
+const cases = ['YQ', 'YQ==', 'YQ=', ' Y Q = = ', 'Y\nQ\t', 'YWI', 'YWJj', 'YQ===', 'Y', '-_', 'YQ==YQ==', ' YQ', 'YQ\f', '', '=',
+  'YWJjZA', 'YW=Jj', 'YR', 'YWK', 'YWJjZA==', 'YWJjZA====', 'YWJjZA=', 'Y Q =', 'Y===', 'aGk\r\n', 'AP8=', '/w'];
+document.title = cases.map(c => { try { return [...atob(c)].map(ch => ch.charCodeAt(0)).join('.') || 'empty'; } catch (e) { return e.name; } }).join(' ');
+</script>

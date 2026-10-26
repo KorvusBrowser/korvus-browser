@@ -1,0 +1,499 @@
+[
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "constructor",
+    "expr": "new GPURenderBundleEncoder()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "GPURenderBundleEncoder.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").get.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "finish",
+    "expr": "GPURenderBundleEncoder.prototype.finish.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "finish",
+    "expr": "GPURenderBundleEncoder.prototype.finish.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderBundleEncoder.prototype.insertDebugMarker.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderBundleEncoder.prototype.insertDebugMarker.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderBundleEncoder.prototype.pushDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderBundleEncoder.prototype.pushDebugGroup.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setIndexBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setIndexBuffer.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "draw",
+    "expr": "GPURenderBundleEncoder.prototype.draw.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "draw",
+    "expr": "GPURenderBundleEncoder.prototype.draw.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexed.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexed.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexedIndirect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexedIndirect.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndirect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndirect.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPURenderBundleEncoder.prototype.popDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPURenderBundleEncoder.prototype.popDebugGroup.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderBundleEncoder.prototype.setBindGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderBundleEncoder.prototype.setBindGroup.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderBundleEncoder.prototype.setPipeline.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderBundleEncoder.prototype.setPipeline.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setVertexBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setVertexBuffer.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderBundleEncoder.prototype.setImmediates.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderBundleEncoder.prototype.setImmediates.call(Object.create(GPURenderBundleEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderBundleEncoder.prototype.insertDebugMarker.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderBundleEncoder.prototype.pushDebugGroup.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setIndexBuffer.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "draw",
+    "expr": "GPURenderBundleEncoder.prototype.draw.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexed.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndexedIndirect.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderBundleEncoder.prototype.drawIndirect.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderBundleEncoder.prototype.setBindGroup.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderBundleEncoder.prototype.setPipeline.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderBundleEncoder.prototype.setVertexBuffer.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderBundleEncoder.prototype.setImmediates.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").get.call(Object.create(GPURenderBundleEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderBundleEncoder.prototype, \"label\").set.call(Object.create(GPURenderBundleEncoder.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "finish",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"finish\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "finish",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"finish\"].call(Object.create(GPURenderBundleEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"insertDebugMarker\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"insertDebugMarker\"].call(Object.create(GPURenderBundleEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"pushDebugGroup\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"pushDebugGroup\"].call(Object.create(GPURenderBundleEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setIndexBuffer",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setIndexBuffer\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setIndexBuffer",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setIndexBuffer\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "draw",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"draw\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "draw",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"draw\"].call(Object.create(GPURenderBundleEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexed",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndexed\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexed",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndexed\"].call(Object.create(GPURenderBundleEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndexedIndirect\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndexedIndirect\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndirect",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndirect\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "drawIndirect",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"drawIndirect\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"popDebugGroup\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"popDebugGroup\"].call(Object.create(GPURenderBundleEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setBindGroup\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setBindGroup\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setPipeline\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setPipeline\"].call(Object.create(GPURenderBundleEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setVertexBuffer",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setVertexBuffer\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setVertexBuffer",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setVertexBuffer\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setImmediates\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderBundleEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPURenderBundleEncoder.prototype[\"setImmediates\"].call(Object.create(GPURenderBundleEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

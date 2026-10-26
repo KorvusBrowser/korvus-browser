@@ -1,0 +1,516 @@
+{
+ "_source": "stock Chrome 150.0.7871.46, headless, fresh profile, raw CDP (~/bench-lean/cdp/probe/a1s3_record.mjs, a1s3b_record.mjs, a1s3c_record.mjs; chrome150-a1s3*.json, 2026-10-12)",
+ "paused_document": {
+  "keys": [
+   "requestId",
+   "request",
+   "frameId",
+   "resourceType",
+   "networkId"
+  ],
+  "request_keys": [
+   "url",
+   "method",
+   "headers",
+   "initialPriority",
+   "referrerPolicy"
+  ],
+  "resourceType": "Document",
+  "requestId": "interception-job-1.0",
+  "header_names": [
+   "Accept",
+   "Upgrade-Insecure-Requests",
+   "User-Agent",
+   "sec-ch-ua",
+   "sec-ch-ua-mobile",
+   "sec-ch-ua-platform"
+  ],
+  "networkId_is_loaderId": true
+ },
+ "paused_fetch": {
+  "keys": [
+   "requestId",
+   "request",
+   "frameId",
+   "resourceType",
+   "networkId"
+  ],
+  "request_keys": [
+   "url",
+   "method",
+   "headers",
+   "initialPriority",
+   "referrerPolicy"
+  ],
+  "resourceType": "XHR",
+  "header_names": [
+   "Accept",
+   "Referer",
+   "User-Agent",
+   "sec-ch-ua",
+   "sec-ch-ua-mobile",
+   "sec-ch-ua-platform"
+  ]
+ },
+ "paused_post": {
+  "request_keys": [
+   "url",
+   "method",
+   "headers",
+   "postData",
+   "hasPostData",
+   "postDataEntries",
+   "initialPriority",
+   "referrerPolicy"
+  ],
+  "postData": "a=1&b=2",
+  "postDataEntries": [
+   {
+    "bytes": "YT0xJmI9Mg=="
+   }
+  ]
+ },
+ "paused_redirect_hop": {
+  "keys": [
+   "requestId",
+   "request",
+   "frameId",
+   "resourceType",
+   "networkId",
+   "redirectedRequestId"
+  ],
+  "requestId": "interception-job-8.1",
+  "redirectedRequestId": "interception-job-8.0"
+ },
+ "not_paused": "a data: image, a blob: fetch, the WebSocket handshake (chrome150-a1s3.json)",
+ "refusals": {
+  "continue_when_disabled": {
+   "code": -32000,
+   "message": "Fetch domain is not enabled"
+  },
+  "continue_unknown_id": {
+   "code": -32602,
+   "message": "Invalid InterceptionId."
+  },
+  "fail_unknown_reason": {
+   "code": -32602,
+   "message": "Unknown errorReason"
+  },
+  "fulfill_code_without_phrase": {
+   "code": -32602,
+   "message": "Invalid http status code or phrase"
+  },
+  "second_answer": {
+   "code": -32000,
+   "message": "Invalid state for continueInterceptedRequest"
+  },
+  "continue_after_disable": {
+   "code": -32000,
+   "message": "Fetch domain is not enabled"
+  }
+ },
+ "fulfill_page": {
+  "code_201_no_phrase": [
+   "201",
+   "Created",
+   "1",
+   "null"
+  ],
+  "phrase_given": "200|Yay",
+  "binary_headers": "text/x-bin|2"
+ },
+ "fulfill_set_cookie": {
+  "body": "{\"v\":\"mocked\"}",
+  "documentCookie": "chips_c=3; script_c=1; from_fulfill=1",
+  "storeHasIt": true
+ },
+ "fail_blocked_by_client": {
+  "page": "rejected TypeError: Failed to fetch",
+  "loadingFailed": {
+   "type": "Fetch",
+   "errorText": "net::ERR_BLOCKED_BY_CLIENT.Inspector",
+   "canceled": false,
+   "blockedReason": "inspector"
+  },
+  "loadingFailed_keys": [
+   "requestId",
+   "timestamp",
+   "type",
+   "errorText",
+   "canceled",
+   "blockedReason"
+  ]
+ },
+ "override_cross_scheme": {
+  "answer": {},
+  "page": "rejected TypeError: Failed to fetch"
+ },
+ "override_same_scheme": "http://localhost:9898/other.json false {\"v\":\"net\"}",
+ "header_override_on_the_wire": [
+  "Host",
+  "Connection",
+  "X-Added",
+  "Sec-Fetch-Site",
+  "Sec-Fetch-Mode",
+  "Sec-Fetch-Dest",
+  "Referer",
+  "User-Agent",
+  "Accept-Encoding",
+  "Accept-Language"
+ ],
+ "cookie_keys": [
+  "name",
+  "value",
+  "domain",
+  "path",
+  "expires",
+  "size",
+  "httpOnly",
+  "secure",
+  "session",
+  "priority",
+  "sourceScheme",
+  "sourcePort"
+ ],
+ "cookies_page": {
+  "networkGetCookies": {
+   "cookies": [
+    {
+     "name": "script_c",
+     "value": "1",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 9,
+     "httpOnly": false,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    },
+    {
+     "name": "http_c",
+     "value": "2",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 7,
+     "httpOnly": true,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    },
+    {
+     "name": "chips_c",
+     "value": "3",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 8,
+     "httpOnly": false,
+     "secure": true,
+     "session": true,
+     "sameSite": "None",
+     "priority": "Medium",
+     "sourceScheme": "Secure",
+     "sourcePort": 9898,
+     "partitionKey": {
+      "topLevelSite": "http://localhost",
+      "hasCrossSiteAncestor": false
+     }
+    }
+   ]
+  },
+  "networkGetCookiesUrls": {
+   "cookies": [
+    {
+     "name": "script_c",
+     "value": "1",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 9,
+     "httpOnly": false,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    },
+    {
+     "name": "http_c",
+     "value": "2",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 7,
+     "httpOnly": true,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    },
+    {
+     "name": "chips_c",
+     "value": "3",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 8,
+     "httpOnly": false,
+     "secure": true,
+     "session": true,
+     "sameSite": "None",
+     "priority": "Medium",
+     "sourceScheme": "Secure",
+     "sourcePort": 9898,
+     "partitionKey": {
+      "topLevelSite": "http://localhost",
+      "hasCrossSiteAncestor": false
+     }
+    }
+   ]
+  },
+  "storageGetCookies": {
+   "cookies": [
+    {
+     "name": "http_c",
+     "value": "2",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 7,
+     "httpOnly": true,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    },
+    {
+     "name": "chips_c",
+     "value": "3",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 8,
+     "httpOnly": false,
+     "secure": true,
+     "session": true,
+     "sameSite": "None",
+     "priority": "Medium",
+     "sourceScheme": "Secure",
+     "sourcePort": 9898,
+     "partitionKey": {
+      "topLevelSite": "http://localhost",
+      "hasCrossSiteAncestor": false
+     }
+    },
+    {
+     "name": "script_c",
+     "value": "1",
+     "domain": "localhost",
+     "path": "/",
+     "expires": -1,
+     "size": 9,
+     "httpOnly": false,
+     "secure": false,
+     "session": true,
+     "priority": "Medium",
+     "sourceScheme": "NonSecure",
+     "sourcePort": 9898
+    }
+   ]
+  },
+  "documentCookie": "chips_c=3; script_c=1"
+ },
+ "set_cookie": {
+  "byUrl": {
+   "success": true
+  },
+  "byDomainDot": {
+   "success": true
+  },
+  "byDomain": {
+   "success": true
+  },
+  "secureHttp": {
+   "success": true
+  },
+  "none": {
+   "error": {
+    "code": -32602,
+    "message": "At least one of the url or domain needs to be specified"
+   }
+  },
+  "badScheme": {
+   "error": {
+    "code": -32602,
+    "message": "URL must have scheme http or https"
+   }
+  },
+  "badName": {
+   "error": {
+    "code": -32602,
+    "message": "Sanitizing cookie failed"
+   }
+  },
+  "badPath": {
+   "error": {
+    "code": -32602,
+    "message": "Sanitizing cookie failed"
+   }
+  },
+  "many": {},
+  "manyBad": {
+   "error": {
+    "code": -32602,
+    "message": "Invalid cookie fields"
+   }
+  },
+  "storage": {}
+ },
+ "after_set": {
+  "cookies": [
+   {
+    "name": "d2",
+    "value": "v3",
+    "domain": "localhost",
+    "path": "/sub",
+    "expires": 1826344364.271584,
+    "size": 4,
+    "httpOnly": true,
+    "secure": false,
+    "session": false,
+    "sameSite": "Lax",
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   },
+   {
+    "name": "u1",
+    "value": "v1",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 4,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   },
+   {
+    "name": "d1",
+    "value": "v2",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 4,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   },
+   {
+    "name": "s1",
+    "value": "v4",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 4,
+    "httpOnly": false,
+    "secure": true,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+   },
+   {
+    "name": "m1",
+    "value": "1",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 3,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   },
+   {
+    "name": "m2",
+    "value": "2",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 3,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   },
+   {
+    "name": "st",
+    "value": "5",
+    "domain": "localhost",
+    "path": "/",
+    "expires": -1,
+    "size": 3,
+    "httpOnly": false,
+    "secure": false,
+    "session": true,
+    "priority": "Medium",
+    "sourceScheme": "NonSecure",
+    "sourcePort": 80
+   }
+  ]
+ },
+ "delete_cookies": {
+  "noTarget": {
+   "error": {
+    "code": -32602,
+    "message": "At least one of the url and domain needs to be specified"
+   }
+  },
+  "byUrl": {},
+  "byDomainWrong": {},
+  "byDomainDot": {},
+  "wrongPath": {}
+ },
+ "after_delete": [
+  "d2",
+  "s1",
+  "m1",
+  "m2",
+  "st"
+ ],
+ "cache_disabled_wire": [
+  "Host",
+  "Connection",
+  "Pragma",
+  "Cache-Control",
+  "sec-ch-ua-platform",
+  "User-Agent",
+  "sec-ch-ua",
+  "sec-ch-ua-mobile",
+  "Accept",
+  "Sec-Fetch-Site",
+  "Sec-Fetch-Mode",
+  "Sec-Fetch-Dest",
+  "Referer",
+  "Accept-Encoding",
+  "Accept-Language"
+ ]
+}

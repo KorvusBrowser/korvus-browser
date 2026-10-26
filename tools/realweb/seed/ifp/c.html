@@ -1,0 +1,29 @@
+<!doctype html><html><head><script>
+const R = window.__R = {log: []}; const t0 = performance.now(); const L = s => R.log.push(s + '@' + Math.round(performance.now() - t0));
+L('head-inline'); R.readyStateAtHead = document.readyState;
+R.currentScriptInline = !!document.currentScript;
+document.addEventListener('DOMContentLoaded', () => L('DOMContentLoaded'));
+addEventListener('load', () => L('load'));
+setTimeout(() => L('timeout0'), 0);
+requestAnimationFrame(() => L('raf'));
+Promise.resolve().then(() => L('microtask'));
+</script><script src="ext.js"></script><script src="ext_async.js" async></script><script src="ext_defer.js" defer></script>
+<script type="module">L('module-inline');</script></head><body><p id="b">x</p><script>
+const q = (k, f) => { try { R[k] = f(); } catch (e) { R[k] = 'THROW ' + e.name + ': ' + e.message; } };
+q('self!=top', () => window.self !== window.top);
+q('top.location.href', () => top.location.href);
+q('parent.document', () => typeof parent.document);
+q('referrer', () => document.referrer);
+q('ancestorOrigins', () => location.ancestorOrigins ? Array.from(location.ancestorOrigins).join(',') : 'absent');
+q('innerSize', () => innerWidth + 'x' + innerHeight);
+q('visibility', () => document.visibilityState);
+q('hasFocus', () => document.hasFocus());
+q('frameElement', () => String(window.frameElement));
+q('localStorage', () => { localStorage.setItem('k', '1'); return localStorage.getItem('k'); });
+q('cookieWrite', () => { document.cookie = 'ifc=1; SameSite=None; Secure'; document.cookie = 'ifl=1'; return document.cookie; });
+q('cryptoSubtle', () => typeof crypto.subtle);
+q('bodyRect', () => { const r = document.getElementById('b').getBoundingClientRect(); return r.width + 'x' + r.height; });
+fetch('/echo?m=fetchpost', {method: 'POST', body: 'a=1'}).then(r => L('fetch-post-' + r.status)).catch(e => L('fetch-post-ERR ' + e.message));
+const x = new XMLHttpRequest(); x.open('POST', '/echo?m=xhrpost'); x.onload = () => L('xhr-post-' + x.status); x.onerror = () => L('xhr-post-ERR'); x.send('b=2');
+setTimeout(() => parent.postMessage({ifp: R}, '*'), 1500);
+</script></body></html>

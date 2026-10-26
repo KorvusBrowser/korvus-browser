@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "HTMLLabelElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLLabelElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLLabelElement",
+    "member": "constructor",
+    "expr": "new HTMLLabelElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLLabelElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"label\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLLabelElement",
+    "member": "htmlFor",
+    "expr": "(() => { const o = document.createElement(\"label\"); return o.htmlFor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLLabelElement",
+    "member": "htmlFor",
+    "expr": "(() => { const o = document.createElement(\"label\"); return (o.htmlFor = \"x\", o.htmlFor); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLLabelElement",
+    "member": "control",
+    "expr": "(() => { const o = document.createElement(\"label\"); return o.control; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

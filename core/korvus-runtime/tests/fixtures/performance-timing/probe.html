@@ -1,0 +1,74 @@
+<!doctype html><html><head><title>t</title><script>
+// Navigation Timing L1 (`performance.timing`) as a document reads it: only answers that do not race -- which fields
+// are 0 when, their order, how they relate to the navigation entry, User Timing's L1 names, `chrome.loadTimes()` /
+// `csi()`, and a frame's. Read in the head, then after the load event; `window.__r` is the answer.
+function l1(w) {
+  var t = w.performance.timing, j = t.toJSON();
+  return {t: t, j: j, keys: Object.keys(j).join(','), zero: Object.keys(j).filter(function (k) { return j[k] === 0; }).sort().join(',')};
+}
+function err(f) { try { f(); return 'no throw'; } catch (e) { return e.name + ': ' + e.message; } }
+var CHAIN = ['fetchStart', 'domainLookupStart', 'domainLookupEnd', 'connectStart', 'connectEnd', 'requestStart', 'responseStart',
+             'responseEnd', 'domLoading', 'domInteractive', 'domContentLoadedEventStart', 'domContentLoadedEventEnd', 'domComplete',
+             'loadEventStart', 'loadEventEnd'];
+function ordered(j) { return CHAIN.every(function (k, i) { return i === 0 || j[k] === 0 || j[CHAIN[i - 1]] <= j[k]; }); }
+function nearOrigin(w) { var d = w.performance.timing.navigationStart - w.performance.timeOrigin; return d <= 0 && d > -1; }
+var e = l1(window);
+window.__early = {
+  keys: e.keys,
+  // not `responseEnd`: whether the body has finished arriving when a head script runs is the network's (Chrome parses
+  // the bytes as they come; a small page's inline head script reads it 0, its external one usually not)
+  zero: e.zero.split(',').filter(function (k) { return k !== 'responseEnd'; }).join(','),
+  ordered: ordered(e.j),
+  navigationStartAtOrigin: nearOrigin(window),
+  measureFromUnhappened: err(function () { performance.measure('e', 'loadEventEnd'); }),
+  markNamedAfterField: err(function () { performance.mark('fetchStart'); }),
+  constructMarkNamedAfterField: err(function () { new PerformanceMark('loadEventEnd'); }),
+  loadTimesBeforeLoad: [chrome.loadTimes().finishDocumentLoadTime, chrome.loadTimes().finishLoadTime, chrome.csi().onloadT].join(','),
+};
+addEventListener('load', function () {
+  window.__inLoad = {loadEventStart: performance.timing.loadEventStart > 0, loadEventEnd: performance.timing.loadEventEnd};
+  setTimeout(function () {
+    var f = document.createElement('iframe');
+    f.srcdoc = '<p>x</p>';
+    f.onload = function () { setTimeout(function () { finish(f); }, 50); };
+    document.body.appendChild(f);
+  }, 30);
+});
+function finish(f) {
+  var p = l1(window), n = performance.getEntriesByType('navigation')[0], lt = chrome.loadTimes(), c = chrome.csi();
+  var fw = f.contentWindow, s = l1(fw), nf = document.getElementById('net').contentWindow, net = l1(nf);
+  var get = Object.getOwnPropertyDescriptor(PerformanceTiming.prototype, 'navigationStart').get;
+  window.__r = JSON.stringify({
+    early: window.__early,
+    inLoad: window.__inLoad,
+    late: {
+      keys: p.keys,
+      zero: p.zero,
+      ordered: ordered(p.j),
+      navigationStartAtOrigin: nearOrigin(window),
+      // each L1 field is its navigation-entry time on the epoch, floored: L1 - navigationStart is floor(L2) or one more
+      floorOfEntry: ['responseStart', 'domInteractive', 'domContentLoadedEventEnd', 'loadEventEnd'].filter(function (k) {
+        var d = p.j[k] - p.j.navigationStart, fl = Math.floor(n[k]);
+        return !(d === fl || d === fl + 1);
+      }).join(','),
+      measureFromField: performance.measure('m', 'responseEnd').startTime === p.j.responseEnd - p.j.navigationStart,
+      loadTimes: [lt.requestTime * 1000 === p.j.navigationStart, lt.startLoadTime * 1000 === p.j.navigationStart,
+                  lt.commitLoadTime * 1000 === p.j.responseStart, lt.finishDocumentLoadTime * 1000 === p.j.domContentLoadedEventEnd,
+                  lt.finishLoadTime * 1000 === p.j.loadEventEnd].join(','),
+      csi: [c.startE === p.j.navigationStart, c.onloadT === p.j.domContentLoadedEventEnd].join(','),
+    },
+    // an <iframe srcdoc> made after the load: no response, so no network fields
+    srcdoc: {keys: s.keys, zero: s.zero, laterThanPage: s.j.navigationStart > p.j.navigationStart,
+             // its "response" ends after its document began and before it was interactive; the rest in order
+             responseEndAfterDomLoading: s.j.responseEnd >= s.j.domLoading, interactiveAfterResponseEnd: s.j.domInteractive >= s.j.responseEnd,
+             milestonesOrdered: CHAIN.slice(CHAIN.indexOf('domInteractive')).every(function (k, i, a) { return i === 0 || s.j[a[i - 1]] <= s.j[k]; }),
+             // the page's getter on the frame's object answers the FRAME's document
+             crossRealmGetter: get.call(s.t) === s.j.navigationStart},
+    // a same-origin frame its navigation fetched (its `navigationStart - timeOrigin` is not stable in Chrome: a window
+    // reused from the frame's initial about:blank can keep that document's time origin)
+    network: {keys: net.keys, zero: net.zero, ordered: ordered(net.j)},
+  });
+  var out = document.getElementById('out');
+  if (out) out.textContent = window.__r;
+}
+</script></head><body><pre id="out"></pre><iframe id="net" src="/frame"></iframe></body></html>

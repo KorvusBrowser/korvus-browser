@@ -1,0 +1,12 @@
+<!doctype html><html><body><div id="challenge-stage"></div><script>
+var viaFn = Function('return this')();
+var viaEval = (0, eval)('this');
+var out = {
+  fnIsSelf: viaFn === window, evalIsSelf: viaEval === window,
+  fnDocIsMine: viaFn.document === document, evalDocIsMine: viaEval.document === document,
+  fnFindsStage: !!(viaFn.document && viaFn.document.getElementById('challenge-stage')),
+  globalThisIsSelf: globalThis === window,
+  arrayIsParents: Array === parent.Array
+};
+parent.postMessage(JSON.stringify(out), '*');
+</script></body></html>

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "PortalActivateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PortalActivateEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PortalActivateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PortalActivateEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

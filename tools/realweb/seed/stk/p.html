@@ -1,0 +1,7 @@
+<!doctype html><title>p</title><script>
+window.__r = {main: new Error('m').stack.split('\n').slice(0,3).join(' | ')};
+addEventListener('message', e => { if (e.data && e.data.stk) window.__r[e.data.kind] = e.data.stk; });
+</script>
+<iframe src="http://127.0.0.1:18122/c.html"></iframe>
+<iframe src="c2.html"></iframe>
+<script src="ext.js"></script>

@@ -1,0 +1,254 @@
+{
+  "why": "SYNC 2026-10-08: registry rows whose whole behaviour is one Blink fact -- an attribute's initial value (and its setter's IDL conversion) or a method's precondition refusal -- for the `blink_member` kit (core/korvus-webapi/src/install/blink_member.rs; the entry format is documented there). Each entry names the Blink source it reads; every value was also measured on stock Chrome 150 (core/korvus-runtime/tests/fixtures/blink_members/). A row whose answer needs real state does NOT belong here.",
+  "entries": {
+    "SpeechRecognition.lang": {
+      "value": "",
+      "set": "DOMString",
+      "src": "speech_recognition.h: lang_ empty"
+    },
+    "SpeechRecognition.continuous": {
+      "value": false,
+      "set": "boolean",
+      "src": "speech_recognition.cc: continuous_(false)"
+    },
+    "SpeechRecognition.interimResults": {
+      "value": false,
+      "set": "boolean",
+      "src": "speech_recognition.cc: interim_results_(false)"
+    },
+    "SpeechRecognition.unspokenPunctuation": {
+      "value": false,
+      "set": "boolean",
+      "src": "speech_recognition.h (Chrome 152): bool unspoken_punctuation_ = false"
+    },
+    "SpeechRecognition.maxAlternatives": {
+      "value": 1,
+      "set": "unsigned long",
+      "src": "speech_recognition.cc: max_alternatives_(1)"
+    },
+    "SpeechRecognition.processLocally": {
+      "value": false,
+      "set": "boolean",
+      "src": "speech_recognition.h: process_locally_ = false"
+    },
+    "SpeechRecognition.phrases": {
+      "array": [],
+      "frozen": false,
+      "src": "speech_recognition.idl: attribute ObservableArray<SpeechRecognitionPhrase> phrases"
+    },
+    "SpeechRecognition.grammars": {
+      "new": "SpeechGrammarList",
+      "set": "iface:SpeechGrammarList",
+      "src": "speech_recognition.cc: grammars_(SpeechGrammarList::Create())"
+    },
+    "SpeechRecognition.available": {
+      "reject": [
+        "TypeError",
+        "Failed to execute 'available' on 'SpeechRecognition': Failed to read the 'langs' property from 'SpeechRecognitionOptions': Required member is undefined."
+      ],
+      "src": "SpeechRecognitionOptions: required sequence<DOMString> langs"
+    },
+    "SpeechRecognition.install": {
+      "reject": [
+        "TypeError",
+        "Failed to execute 'install' on 'SpeechRecognition': Failed to read the 'langs' property from 'SpeechRecognitionOptions': Required member is undefined."
+      ],
+      "src": "SpeechRecognitionOptions: required sequence<DOMString> langs"
+    },
+    "MediaSession.playbackState": {
+      "value": "none",
+      "set": "enum:none,paused,playing",
+      "src": "media_session.cc: playback_state_ kNone"
+    },
+    "MediaSession.setMicrophoneActive": {
+      "return": null,
+      "src": "media_session.idl: undefined setMicrophoneActive(boolean)",
+      "required": 1
+    },
+    "MediaSession.setCameraActive": {
+      "return": null,
+      "src": "media_session.idl: undefined setCameraActive(boolean)",
+      "required": 1
+    },
+    "HTMLGeolocationElement.invalidReason": {
+      "value": "",
+      "src": "html_permission_element: invalid reason empty while valid"
+    },
+    "HTMLGeolocationElement.initialPermissionStatus": {
+      "value": "prompt",
+      "src": "html_permission_element: initial status ask -> \"prompt\""
+    },
+    "HTMLGeolocationElement.permissionStatus": {
+      "value": "prompt",
+      "src": "html_permission_element: status ask -> \"prompt\""
+    },
+    "CaptureController.getSupportedZoomLevels": {
+      "throw": [
+        "InvalidStateError",
+        "Failed to execute 'getSupportedZoomLevels' on 'CaptureController': Not actively capturing."
+      ],
+      "src": "capture_controller.cc"
+    },
+    "CaptureController.increaseZoomLevel": {
+      "reject": [
+        "InvalidStateError",
+        "getDisplayMedia() not called yet."
+      ],
+      "src": "capture_controller.cc: kGetDisplayMediaNotCalled"
+    },
+    "CaptureController.decreaseZoomLevel": {
+      "reject": [
+        "InvalidStateError",
+        "getDisplayMedia() not called yet."
+      ],
+      "src": "capture_controller.cc: kGetDisplayMediaNotCalled"
+    },
+    "CaptureController.resetZoomLevel": {
+      "reject": [
+        "InvalidStateError",
+        "getDisplayMedia() not called yet."
+      ],
+      "src": "capture_controller.cc: kGetDisplayMediaNotCalled"
+    },
+    "Credential.isConditionalMediationAvailable": {
+      "resolve": false,
+      "src": "credential.cc: base Credential has no conditional mediation"
+    },
+    "PublicKeyCredential.isConditionalMediationAvailable": {
+      "resolve": true,
+      "src": "public_key_credential.cc: conditional mediation supported on desktop"
+    },
+    "PublicKeyCredential.signalUnknownCredential": {
+      "reject": [
+        "TypeError",
+        "Failed to execute 'signalUnknownCredential' on 'PublicKeyCredential': Failed to read the 'credentialId' property from 'UnknownCredentialOptions': Required member is undefined."
+      ],
+      "src": "UnknownCredentialOptions: required credentialId"
+    },
+    "PublicKeyCredential.signalAllAcceptedCredentials": {
+      "reject": [
+        "TypeError",
+        "Failed to execute 'signalAllAcceptedCredentials' on 'PublicKeyCredential': Failed to read the 'allAcceptedCredentialIds' property from 'AllAcceptedCredentialsOptions': Required member is undefined."
+      ],
+      "src": "AllAcceptedCredentialsOptions: required allAcceptedCredentialIds"
+    },
+    "PublicKeyCredential.signalCurrentUserDetails": {
+      "reject": [
+        "TypeError",
+        "Failed to execute 'signalCurrentUserDetails' on 'PublicKeyCredential': Failed to read the 'displayName' property from 'CurrentUserDetailsOptions': Required member is undefined."
+      ],
+      "src": "CurrentUserDetailsOptions: required displayName"
+    },
+    "DigitalCredential.userAgentAllowsProtocol": {
+      "return": true,
+      "src": "digital_credential.cc: userAgentAllowsProtocol returns true"
+    },
+    "WebSocket.binaryType": {
+      "value": "blob",
+      "set": "enum:blob,arraybuffer",
+      "src": "dom_websocket.cc: binary_type_ kBlob"
+    },
+    "DevicePosture.type": {
+      "value": "continuous",
+      "src": "device_posture.cc: kContinuous on a non-foldable"
+    },
+    "TextFormat.underlineStyle": {
+      "value": "none",
+      "src": "text_format.cc: underline style none"
+    },
+    "TextFormat.underlineThickness": {
+      "value": "none",
+      "src": "text_format.cc: underline thickness none"
+    },
+    "ViewTimeline.subject": {
+      "value": null,
+      "src": "view_timeline.cc: no subject"
+    },
+    "ViewTimeline.startOffset": {
+      "value": null,
+      "src": "view_timeline.cc: offsets null without a subject"
+    },
+    "ViewTimeline.endOffset": {
+      "value": null,
+      "src": "view_timeline.cc: offsets null without a subject"
+    },
+    "BeforeInstallPromptEvent.prompt": {
+      "reject": [
+        "InvalidStateError",
+        "Failed to execute 'prompt' on 'BeforeInstallPromptEvent': The prompt() method cannot be called."
+      ],
+      "src": "before_install_prompt_event.cc: no banner service for a constructed event"
+    },
+    "AudioDecoder.state": {
+      "value": "unconfigured",
+      "src": "decoder_template.cc: state_ kUnconfigured"
+    },
+    "VideoDecoder.state": {
+      "value": "unconfigured",
+      "src": "decoder_template.cc: state_ kUnconfigured"
+    },
+    "AudioEncoder.state": {
+      "value": "unconfigured",
+      "src": "encoder_base.cc: state_ kUnconfigured"
+    },
+    "VideoEncoder.state": {
+      "value": "unconfigured",
+      "src": "encoder_base.cc: state_ kUnconfigured"
+    },
+    "AudioDecoder.flush": {
+      "reject": [
+        "InvalidStateError",
+        "Failed to execute 'flush' on 'AudioDecoder': Cannot call 'flush' on an unconfigured codec."
+      ],
+      "src": "decoder_template.cc: ThrowIfCodecStateUnconfigured"
+    },
+    "VideoDecoder.flush": {
+      "reject": [
+        "InvalidStateError",
+        "Failed to execute 'flush' on 'VideoDecoder': Cannot call 'flush' on an unconfigured codec."
+      ],
+      "src": "decoder_template.cc: ThrowIfCodecStateUnconfigured"
+    },
+    "AudioEncoder.flush": {
+      "reject": [
+        "InvalidStateError",
+        "Failed to execute 'flush' on 'AudioEncoder': Cannot call 'flush' on an unconfigured codec."
+      ],
+      "src": "encoder_base.cc: ThrowIfCodecStateUnconfigured"
+    },
+    "VideoEncoder.flush": {
+      "reject": [
+        "InvalidStateError",
+        "Failed to execute 'flush' on 'VideoEncoder': Cannot call 'flush' on an unconfigured codec."
+      ],
+      "src": "encoder_base.cc: ThrowIfCodecStateUnconfigured"
+    },
+    "PressureObserver.knownSources": {
+      "array": [
+        "cpu"
+      ],
+      "frozen": true,
+      "src": "pressure_observer.cc: knownSources [\"cpu\"]"
+    },
+    "PushManager.supportedContentEncodings": {
+      "array": [
+        "aes128gcm",
+        "aesgcm"
+      ],
+      "frozen": true,
+      "src": "push_manager.cc: supportedContentEncodings"
+    },
+    "HTMLUserMediaElement.error": {
+      "value": null,
+      "src": "html_media_capture_element_base.cc (Chrome 152): error_ is null until an activation fails"
+    },
+    "HTMLUserMediaElement.stream": {
+      "value": null,
+      "src": "html_user_media_element_media_stream.cc (Chrome 152): no MediaStream until the user grants one"
+    },
+    "HTMLUserMediaElement.setConstraints": {
+      "return": null,
+      "src": "user_media_element_constraints.idl (Chrome 152): undefined setConstraints(optional HTMLMediaStreamConstraints = {}) stores the constraints the next prompt uses"
+    }
+  }
+}

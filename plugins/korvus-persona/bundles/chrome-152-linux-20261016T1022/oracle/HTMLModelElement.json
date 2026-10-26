@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "HTMLModelElement",
+    "member": "constructor",
+    "expr": "new HTMLModelElement()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

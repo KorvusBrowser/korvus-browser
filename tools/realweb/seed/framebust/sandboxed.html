@@ -1,0 +1,13 @@
+<!doctype html><html><body><script>
+// REALWEB F35: a frame sandboxed without allow-top-navigation does not navigate the top -- href throws, open()
+// answers null, a _top link does nothing -- while allow-top-navigation-by-user-activation needs an activation.
+window.L = [];
+addEventListener('message', function (e) { if (e.data && e.data.r) { L.push(e.data.r); } });
+setTimeout(function () { document.title = JSON.stringify({ at: location.pathname, log: L.sort() }); }, 1500);
+var host = 'http://localhost:' + location.port;
+['allow-scripts', 'allow-scripts allow-top-navigation-by-user-activation'].forEach(function (sb) {
+  ['href', 'open', 'anchor'].forEach(function (how) {
+    var f = document.createElement('iframe'); f.setAttribute('sandbox', sb); f.src = host + '/x.html?how=' + how; document.body.appendChild(f);
+  });
+});
+</script></body></html>

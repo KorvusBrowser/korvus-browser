@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "RTCSctpTransport",
+    "member": "constructor",
+    "expr": "new RTCSctpTransport()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

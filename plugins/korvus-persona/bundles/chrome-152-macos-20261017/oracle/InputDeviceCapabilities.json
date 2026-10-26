@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "InputDeviceCapabilities",
+    "member": "constructor",
+    "expr": "(() => { const o = new InputDeviceCapabilities(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object InputDeviceCapabilities]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "InputDeviceCapabilities",
+    "member": "firesTouchEvents",
+    "expr": "(() => { const o = new InputDeviceCapabilities(); return o.firesTouchEvents; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "InputDeviceCapabilities",
+    "member": "pointerMovementScrolls",
+    "expr": "(() => { const o = new InputDeviceCapabilities(); return o.pointerMovementScrolls; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

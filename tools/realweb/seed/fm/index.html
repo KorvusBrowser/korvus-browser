@@ -1,0 +1,17 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"></head><body><script>
+(function () {
+var LIST = ["Arial", "Helvetica", "Times New Roman", "Courier New", "Georgia", "Verdana", "Segoe UI", "Apple Color Emoji", "Roboto", "Noto Sans", "Noto Serif", "Noto Color Emoji", "Noto Sans CJK KR", "DejaVu Sans", "Liberation Sans", "Ubuntu", "Malgun Gothic", "MS Gothic", "SimSun", "Calibri", "Tahoma"];
+var cx = document.createElement("canvas").getContext("2d");
+var BASE = ["monospace", "sans-serif", "serif"], TEST = "mmmmmmmmmmlli WWWWWWWWWW 0123456789";
+var w72 = function (fam) { cx.font = "72px " + fam; return cx.measureText(TEST).width; };
+var baseW = {}; BASE.forEach(function (b) { baseW[b] = w72(b); });
+var present = LIST.filter(function (f) { return BASE.some(function (b) { return Math.abs(w72('"' + f + '",' + b) - baseW[b]) > 0.05; }); });
+var W = {};
+[['16px Arial', 'Hello, World!'], ['16px "Noto Sans"', 'Hello, World!'], ['16px sans-serif', 'Hello, World!'], ['16px serif', 'Hello, World!'], ['16px monospace', 'Hello, World!'],
+ ['16px sans-serif', '가나다라마바사'], ['16px Arial', '가나다라'], ['16px serif', '日本語テキスト'], ['16px sans-serif', '😀👍🎉'], ['16px "Noto Sans CJK KR"', 'AV To 1.5'], ['bold 16px Arial', 'Bold AV']
+].forEach(function (p) { cx.font = p[0]; W[p[0] + '|' + p[1]] = Math.round(cx.measureText(p[1]).width * 1000) / 1000; });
+var span = document.createElement("span"); span.style.whiteSpace = "pre"; span.style.fontSize = "16px"; document.body.appendChild(span);
+var D = {}; ["Hello, world!", "가나다라마바사", "0123456789"].forEach(function (t) { span.textContent = t; var r = span.getBoundingClientRect(); D[t] = [Math.round(r.width * 1000) / 1000, Math.round(r.height * 1000) / 1000]; });
+window.R = JSON.stringify({ present: present, defaultFamily: getComputedStyle(document.body).fontFamily, generic: Object.keys(baseW).map(function (k) { return k + ':' + Math.round(baseW[k] * 100) / 100; }).join(','), measure: W, dom16: D });
+})();
+</script></body></html>

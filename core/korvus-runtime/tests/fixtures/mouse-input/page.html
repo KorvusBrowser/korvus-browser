@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+  body { margin: 0; width: 900px; height: 700px }
+  div, button, input, label, iframe { position: absolute; box-sizing: border-box; margin: 0 }
+  #outer { left: 40px; top: 40px; width: 400px; height: 300px; background: #eee }
+  #mid { left: 20px; top: 20px; width: 300px; height: 200px; background: #ddd }
+  #inner { left: 20px; top: 20px; width: 200px; height: 100px; background: #ccc }
+  #spn { position: absolute; display: block; left: 10px; top: 10px; width: 50px; height: 20px; background: #bbb }
+  #host { left: 500px; top: 40px; width: 160px; height: 100px; background: #eef }
+  #btn { left: 40px; top: 380px; width: 100px; height: 30px; padding: 0; border: 0 }
+  #cb { left: 160px; top: 385px; width: 20px; height: 20px }
+  #lbl { left: 220px; top: 380px; width: 80px; height: 30px; display: block; background: #efe }
+  #cb2 { left: 600px; top: 600px; width: 20px; height: 20px }
+  #fr { left: 500px; top: 200px; width: 300px; height: 150px }
+  #cap { left: 40px; top: 450px; width: 100px; height: 40px; background: #fee }
+</style></head><body>
+<div id="outer"><div id="mid"><div id="inner"><span id="spn">x</span></div></div></div>
+<div id="host"></div>
+<button id="btn">b</button>
+<input id="cb" type="checkbox">
+<label id="lbl" for="cb2">L</label>
+<input id="cb2" type="checkbox">
+<div id="cap"></div>
+<iframe id="fr" srcdoc="<!doctype html><html><head><style>body{margin:0}#fin{position:absolute;left:30px;top:30px;width:100px;height:50px;background:#fde}</style></head><body><div id=fin></div></body></html>"></iframe>
+<script>
+// The C6 mouse-input fixture (FIXER C6, 2026-10-11): every trusted mouse, pointer and wheel event a real mouse makes
+// over nested boxes, a closed shadow root, form controls and a same-origin frame, one row per event as a CAPTURING
+// listener on each window (and on the shadow root) sees it. Timing values are not recorded; order is.
+(function () {
+  const rows = [];
+  globalThis.__rows = rows;
+  const host = document.getElementById("host");
+  const sr = host.attachShadow({ mode: "closed" });
+  sr.innerHTML = '<div id="sin" style="position:absolute;left:10px;top:10px;width:100px;height:50px;background:#99f"></div>';
+  const frameWin = () => document.getElementById("fr").contentWindow;
+  const label = (n) => {
+    if (n === null || n === undefined) return "null";
+    if (n === window) return "#window";
+    if (n === document) return "#document";
+    try { if (n === frameWin()) return "#fwindow"; if (n === frameWin().document) return "#fdocument"; } catch (e) {}
+    if (n === sr) return "#shadowroot";
+    if (n.nodeType === 3) return "#text";
+    if (n.nodeType === 1) return n.id ? "#" + n.id : n.localName;
+    return "?" + Object.prototype.toString.call(n);
+  };
+  const num = (v) => (typeof v === "number" ? String(Math.round(v * 10000) / 10000) : String(v));
+  // The content area's screen origin as derived from the window's own geometry: the window frame is centred
+  // horizontally around the content and the toolbar strip sits above it (no bottom chrome).
+  const origin = () => {
+    const side = (outerWidth - innerWidth) / 2;
+    return [screenX + side, screenY + (outerHeight - innerHeight) - side];
+  };
+  const rec = (where, win) => (ev) => {
+    const r = [where, ev.type, ev.constructor.name, label(ev.target), label(ev.relatedTarget),
+      label(ev.toElement), label(ev.fromElement), label(ev.srcElement), ev.isTrusted, ev.composed, ev.bubbles,
+      ev.cancelable, ev.view === win ? "win" : label(ev.view), ev.detail, ev.button, ev.buttons, ev.which,
+      ev.clientX, ev.clientY];
+    const o = origin();
+    r.push("soff=" + (ev.screenX - ev.clientX - o[0]) + "," + (ev.screenY - ev.clientY - o[1]));
+    r.push("page=" + (ev.pageX - ev.clientX) + "," + (ev.pageY - ev.clientY));
+    r.push("off=" + num(ev.offsetX) + "," + num(ev.offsetY));
+    r.push("mv=" + ev.movementX + "," + ev.movementY);
+    r.push("path=" + ev.composedPath().map(label).join(">"));
+    r.push("active=" + label(document.activeElement));
+    if (ev instanceof PointerEvent) {
+      r.push("ptr=" + [ev.pointerId, ev.pointerType, ev.isPrimary, num(ev.width), num(ev.height), num(ev.pressure),
+        ev.tiltX, ev.tiltY, ev.twist, num(ev.altitudeAngle), num(ev.azimuthAngle), num(ev.tangentialPressure),
+        ev.persistentDeviceId, ev.getCoalescedEvents().length, ev.getPredictedEvents().length].join(","));
+    }
+    if (ev instanceof WheelEvent) {
+      r.push("wheel=" + [ev.deltaMode, Math.sign(ev.deltaY), Math.sign(ev.deltaX), Math.sign(ev.wheelDeltaY)].join(","));
+    }
+    if (ev.type === "click" || ev.type === "input" || ev.type === "change") {
+      r.push("checked=" + document.getElementById("cb").checked + "," + document.getElementById("cb2").checked);
+    }
+    rows.push(r.join("|"));
+    if (ev.type === "contextmenu") ev.preventDefault();
+  };
+  const TYPES = ["pointerover", "pointerenter", "pointerout", "pointerleave", "pointerdown", "pointerup", "pointermove",
+    "pointerrawupdate", "pointercancel", "gotpointercapture", "lostpointercapture", "mouseover", "mouseenter",
+    "mouseout", "mouseleave", "mousedown", "mouseup", "mousemove", "click", "dblclick", "auxclick", "contextmenu",
+    "wheel", "focus", "blur", "focusin", "focusout", "input", "change"];
+  const listen = (target, where, win) => { for (const t of TYPES) target.addEventListener(t, rec(where, win), true); };
+  listen(window, "W", window);
+  // Pointer capture: #cap captures the mouse pointer on its pointerdown; an id no pointer has is refused.
+  const cap = document.getElementById("cap");
+  cap.addEventListener("pointerdown", (ev) => {
+    let err = "none";
+    try { cap.setPointerCapture(99); } catch (e) { err = e.name + ":" + e.message; }
+    cap.setPointerCapture(ev.pointerId);
+    rows.push("CAP|" + err + "|" + cap.hasPointerCapture(ev.pointerId) + "|" + cap.hasPointerCapture(2));
+  });
+  listen(sr, "SR", window);
+  // Non-capturing enter/leave listeners: on the document (is the document in the boundary chain?) and on #mid
+  // (Blink dispatches an enter/leave only at a node with a listener for it, or under a capturing one).
+  for (const t of ["mouseenter", "mouseleave", "pointerenter", "pointerleave"]) {
+    document.addEventListener(t, rec("D", window));
+    document.getElementById("mid").addEventListener(t, rec("E", window));
+  }
+  const fr = document.getElementById("fr");
+  const hookFrame = () => { try { listen(fr.contentWindow, "F", fr.contentWindow); } catch (e) {} };
+  if (fr.contentDocument && fr.contentDocument.readyState === "complete" && fr.contentDocument.getElementById("fin")) hookFrame();
+  else fr.addEventListener("load", hookFrame);
+  // The recorder finds the content area's screen origin from the first trusted move it makes, and reads the rows
+  // back at the end; korvus's test reads `__rows` directly.
+  let calibrated = false;
+  addEventListener("mousemove", (ev) => {
+    if (calibrated || !ev.isTrusted) return;
+    calibrated = true;
+    fetch("/calib", { method: "POST", body: JSON.stringify({ sx: ev.screenX, sy: ev.screenY, cx: ev.clientX, cy: ev.clientY,
+      win: [screenX, screenY, outerWidth, outerHeight, innerWidth, innerHeight, devicePixelRatio] }) }).catch(() => {});
+  });
+  globalThis.__report = () => fetch("/rows", { method: "POST", body: JSON.stringify({ rows,
+    win: [screenX, screenY, outerWidth, outerHeight, innerWidth, innerHeight, devicePixelRatio] }) }).catch(() => {});
+  // The sequence ends with a wheel notch: the rows go up once the input has settled.
+  let pending = 0;
+  addEventListener("wheel", () => { clearTimeout(pending); pending = setTimeout(globalThis.__report, 400); });
+})();
+</script></body></html>

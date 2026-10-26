@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PresentationConnection",
+    "member": "constructor",
+    "expr": "new PresentationConnection()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,55 @@
+<!doctype html><title>t</title>
+<!-- V22: GLSL ES 3.00 `switch` compiles and runs (zed.dev's and replicate.com's shaders): case, a braced case,
+     fall-through into the next case, default, and a `continue` inside a switch inside a loop, which belongs to the loop. -->
+<canvas id=c width=1 height=1></canvas>
+<script>
+const R = {};
+const gl = document.getElementById('c').getContext('webgl2', { preserveDrawingBuffer: true, antialias: false });
+const VS = `#version 300 es
+in vec2 p; void main() { gl_Position = vec4(p, 0.0, 1.0); }`;
+const FS = `#version 300 es
+precision highp float;
+uniform int u_kind;
+out vec4 o;
+void main() {
+  vec4 c = vec4(0.0, 0.0, 0.0, 1.0);
+  switch (u_kind) {
+    case 0: c.r = 1.0; break;
+    case 1: { c.g = 1.0; break; }
+    case 2: c.b = 1.0;
+    case 3: c.r = 0.5; break;
+    case 4: {
+      float acc = 0.0;
+      for (int i = 0; i < 4; i++) {
+        switch (i) { case 1: continue; default: acc += 0.25; }
+      }
+      c.g = acc;
+      break;
+    }
+    default: c = vec4(1.0);
+  }
+  o = c;
+}`;
+function sh(type, src) {
+  const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+  return [s, gl.getShaderParameter(s, gl.COMPILE_STATUS), gl.getShaderInfoLog(s)];
+}
+if (!gl) { R.gl = 'none'; } else {
+  const [v, vok] = sh(gl.VERTEX_SHADER, VS), [f, fok, flog] = sh(gl.FRAGMENT_SHADER, FS);
+  R.compiled = vok && fok; if (!fok) R.log = String(flog).slice(0, 120);
+  const prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
+  R.linked = gl.getProgramParameter(prog, gl.LINK_STATUS);
+  if (R.linked) {
+    gl.useProgram(prog);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const u = gl.getUniformLocation(prog, 'u_kind'), px = new Uint8Array(4);
+    for (let k = 0; k <= 5; k++) {
+      gl.uniform1i(u, k); gl.drawArrays(gl.TRIANGLES, 0, 3);
+      gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px); R['k' + k] = Array.from(px).join(',');
+    }
+  }
+}
+document.title = JSON.stringify(R);
+</script>

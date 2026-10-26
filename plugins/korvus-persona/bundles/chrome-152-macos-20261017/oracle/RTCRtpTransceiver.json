@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "constructor",
+    "expr": "new RTCRtpTransceiver()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "mid",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.mid; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "direction",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.direction; })()",
+    "expected": "sendrecv",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "currentDirection",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.currentDirection; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "stop",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.stop(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "setCodecPreferences",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.setCodecPreferences([]); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "setCodecPreferences",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return o.setCodecPreferences(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "sender",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return Object.prototype.toString.call(o.sender); })()",
+    "expected": "[object RTCRtpSender]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "receiver",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return Object.prototype.toString.call(o.receiver); })()",
+    "expected": "[object RTCRtpReceiver]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "direction",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return Object.prototype.toString.call(o.direction); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCRtpTransceiver",
+    "member": "currentDirection",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\"); return Object.prototype.toString.call(o.currentDirection); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,9 @@
+{
+ "bodyonly": "",
+ "empty": "",
+ "hidden": "",
+ "none": "",
+ "offscreen": "",
+ "visible": "first-paint,first-contentful-paint",
+ "zero": ""
+}

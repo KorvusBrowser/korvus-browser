@@ -1,0 +1,6 @@
+<!doctype html><html><body><script>
+var out = { url: document.URL, uri: document.documentURI, href: location.href, base: document.baseURI, top: window === top };
+document.hasStorageAccess().then(function (v) { out.has = v; }, function (e) { out.has = 'reject ' + e.name; })
+.then(function () { return document.hasUnpartitionedCookieAccess().then(function (v) { out.unpart = v; }, function (e) { out.unpart = 'reject ' + e.name; }); })
+.then(function () { parent.postMessage({ k: 'frame', out: out }, '*'); });
+</script></body></html>

@@ -1,0 +1,268 @@
+[
+  {
+    "iface": "HTMLTableElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTableElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "constructor",
+    "expr": "new HTMLTableElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "caption",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.caption; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "deleteCaption",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.deleteCaption(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "tHead",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.tHead; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "deleteTHead",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.deleteTHead(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "tFoot",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.tFoot; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "deleteTFoot",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.deleteTFoot(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "deleteRow",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.deleteRow(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "deleteRow",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.deleteRow(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "border",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.border; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "border",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.border = \"x\", o.border); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "frame",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.frame; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "frame",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.frame = \"x\", o.frame); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "rules",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.rules; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "rules",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.rules = \"x\", o.rules); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "summary",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.summary; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "summary",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.summary = \"x\", o.summary); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.bgColor; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.bgColor = \"x\", o.bgColor); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "cellPadding",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.cellPadding; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "cellPadding",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.cellPadding = \"x\", o.cellPadding); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "cellSpacing",
+    "expr": "(() => { const o = document.createElement(\"table\"); return o.cellSpacing; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "cellSpacing",
+    "expr": "(() => { const o = document.createElement(\"table\"); return (o.cellSpacing = \"x\", o.cellSpacing); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "caption",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.caption); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "createCaption",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.createCaption()); })()",
+    "expected": "[object HTMLTableCaptionElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "tHead",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.tHead); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "createTHead",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.createTHead()); })()",
+    "expected": "[object HTMLTableSectionElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "tFoot",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.tFoot); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "createTFoot",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.createTFoot()); })()",
+    "expected": "[object HTMLTableSectionElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "tBodies",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.tBodies); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "createTBody",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.createTBody()); })()",
+    "expected": "[object HTMLTableSectionElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "rows",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.rows); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLTableElement",
+    "member": "insertRow",
+    "expr": "(() => { const o = document.createElement(\"table\"); return Object.prototype.toString.call(o.insertRow()); })()",
+    "expected": "[object HTMLTableRowElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

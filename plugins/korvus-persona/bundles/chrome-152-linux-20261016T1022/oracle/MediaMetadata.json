@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "MediaMetadata",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaMetadata(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MediaMetadata]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "title",
+    "expr": "(() => { const o = new MediaMetadata(); return o.title; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "title",
+    "expr": "(() => { const o = new MediaMetadata(); return (o.title = \"x\", o.title); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "artist",
+    "expr": "(() => { const o = new MediaMetadata(); return o.artist; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "artist",
+    "expr": "(() => { const o = new MediaMetadata(); return (o.artist = \"x\", o.artist); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "album",
+    "expr": "(() => { const o = new MediaMetadata(); return o.album; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "album",
+    "expr": "(() => { const o = new MediaMetadata(); return (o.album = \"x\", o.album); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "artwork",
+    "expr": "(() => { const o = new MediaMetadata(); return o.artwork; })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaMetadata",
+    "member": "chapterInfo",
+    "expr": "(() => { const o = new MediaMetadata(); return o.chapterInfo; })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

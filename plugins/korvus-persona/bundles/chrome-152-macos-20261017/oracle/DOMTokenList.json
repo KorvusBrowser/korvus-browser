@@ -1,0 +1,519 @@
+[
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "document.createElement('div').classList.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b c'; return d.classList.length; })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "(() => { const d = document.createElement('div'); d.className = '  a  a  b '; return d.classList.length; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; d.classList.remove('a', 'b'); return d.classList.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.add('x', 'y'); return d.classList.length; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.item(0); })()",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.item(1); })()",
+    "expected": "b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.item(2); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.item(-1); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const d = document.createElement('div'); return d.classList.item(0); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.contains('a'); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.contains('c'); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.contains('A'); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.contains('a b'); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.contains(''); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const d = document.createElement('div'); return d.classList.contains('a'); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.add('x'); return d.getAttribute('class'); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.add('a', 'b', 'a'); return d.className; })()",
+    "expected": "a b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a'; d.classList.add('a'); return d.className; })()",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.add(''); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.add('a b'); })()",
+    "throws": "InvalidCharacterError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const d = document.createElement('div'); try { d.classList.add('ok', ''); } catch (e) { return d.className; } })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b c'; d.classList.remove('b'); return d.className; })()",
+    "expected": "a c",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b c'; d.classList.remove('a', 'c'); return d.className; })()",
+    "expected": "b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.remove('x'); return d.getAttribute('class'); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a'; d.classList.remove('a'); return d.getAttribute('class'); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.remove(''); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a'; return [d.classList.toggle('a'), d.className]; })()",
+    "expected": [
+      false,
+      ""
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a'; return [d.classList.toggle('b'), d.className]; })()",
+    "expected": [
+      true,
+      "a b"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.className = '  a  '; return [d.classList.toggle('a', true), d.getAttribute('class')]; })()",
+    "expected": [
+      true,
+      "  a  "
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'b'; return [d.classList.toggle('a', false), d.className]; })()",
+    "expected": [
+      false,
+      "b"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'b'; return [d.classList.toggle('b', true), d.className]; })()",
+    "expected": [
+      true,
+      "b"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.toggle(''); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.toggle('a b'); })()",
+    "throws": "InvalidCharacterError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return [d.classList.replace('b', 'c'), d.className]; })()",
+    "expected": [
+      true,
+      "a c"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b c'; return [d.classList.replace('c', 'a'), d.className]; })()",
+    "expected": [
+      true,
+      "a b"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return [d.classList.replace('x', 'y'), d.className]; })()",
+    "expected": [
+      false,
+      "a b"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.replace('a', ''); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.replace('a', 'b c'); })()",
+    "throws": "InvalidCharacterError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "supports",
+    "expr": "document.createElement('div').classList.supports('foo')",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "supports",
+    "expr": "document.createElement('div').classList.supports('')",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.value; })()",
+    "expected": "a b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); d.className = '  a  a '; return d.classList.value; })()",
+    "expected": "  a  a ",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); return d.classList.value; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); d.classList.value = 'x y'; return [d.getAttribute('class'), d.classList.length]; })()",
+    "expected": [
+      "x y",
+      2
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); d.setAttribute('class', 'm n'); return d.classList.value; })()",
+    "expected": "m n",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const d = document.createElement('div'); return String(d.classList); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "forEach",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; const out = []; d.classList.forEach((v, i) => out.push(i + ':' + v)); return out.join(','); })()",
+    "expected": "0:a,1:b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "forEach",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a'; const out = []; d.classList.forEach(function (v) { out.push(this.t + v); }, { t: 'x' }); return out.join(','); })()",
+    "expected": "xa",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "entries",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return Array.from(d.classList.entries(), (e) => e.join('=')).join(';'); })()",
+    "expected": "0=a;1=b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "keys",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return Array.from(d.classList.keys()).join(','); })()",
+    "expected": "0,1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "values",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return Array.from(d.classList.values()).join(','); })()",
+    "expected": "a,b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "Symbol.iterator",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return Array.from(d.classList).join(','); })()",
+    "expected": "a,b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toString",
+    "expr": "(() => { const d = document.createElement('div'); d.className = 'a b'; return d.classList.toString(); })()",
+    "expected": "a b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "constructor",
+    "expr": "new DOMTokenList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "length",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "item",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.contains(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "contains",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.contains(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "add",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.add(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "remove",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.remove(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.toggle(\"x\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "toggle",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.toggle(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.replace(\"x\", \"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "replace",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.replace(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "supports",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.supports(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "supports",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.supports(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMTokenList",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"div\").classList; return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,261 @@
+[
+  {
+    "iface": "IDBIndex",
+    "member": "constructor",
+    "expr": "new IDBIndex()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"name\").get.call(Object.create(IDBIndex.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"name\").get.name",
+    "expected": "get name",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"name\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"name\").set.call(Object.create(IDBIndex.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "objectStore",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"objectStore\").get.call(Object.create(IDBIndex.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "objectStore",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"objectStore\").get.name",
+    "expected": "get objectStore",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "keyPath",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"keyPath\").get.call(Object.create(IDBIndex.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "keyPath",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"keyPath\").get.name",
+    "expected": "get keyPath",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "multiEntry",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"multiEntry\").get.call(Object.create(IDBIndex.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "multiEntry",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"multiEntry\").get.name",
+    "expected": "get multiEntry",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "unique",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"unique\").get.call(Object.create(IDBIndex.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "unique",
+    "expr": "Object.getOwnPropertyDescriptor(IDBIndex.prototype, \"unique\").get.name",
+    "expected": "get unique",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "count",
+    "expr": "IDBIndex.prototype.count.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "count",
+    "expr": "IDBIndex.prototype.count.name",
+    "expected": "count",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "get",
+    "expr": "IDBIndex.prototype.get.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "get",
+    "expr": "IDBIndex.prototype.get.name",
+    "expected": "get",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAll",
+    "expr": "IDBIndex.prototype.getAll.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAll",
+    "expr": "IDBIndex.prototype.getAll.name",
+    "expected": "getAll",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllKeys",
+    "expr": "IDBIndex.prototype.getAllKeys.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllKeys",
+    "expr": "IDBIndex.prototype.getAllKeys.name",
+    "expected": "getAllKeys",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllRecords",
+    "expr": "IDBIndex.prototype.getAllRecords.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllRecords",
+    "expr": "IDBIndex.prototype.getAllRecords.name",
+    "expected": "getAllRecords",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getKey",
+    "expr": "IDBIndex.prototype.getKey.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getKey",
+    "expr": "IDBIndex.prototype.getKey.name",
+    "expected": "getKey",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openCursor",
+    "expr": "IDBIndex.prototype.openCursor.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openCursor",
+    "expr": "IDBIndex.prototype.openCursor.name",
+    "expected": "openCursor",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openKeyCursor",
+    "expr": "IDBIndex.prototype.openKeyCursor.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openKeyCursor",
+    "expr": "IDBIndex.prototype.openKeyCursor.name",
+    "expected": "openKeyCursor",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "get",
+    "expr": "IDBIndex.prototype.get.call(Object.create(IDBIndex.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getKey",
+    "expr": "IDBIndex.prototype.getKey.call(Object.create(IDBIndex.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "count",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.count.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAll",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.getAll.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllKeys",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.getAllKeys.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "getAllRecords",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.getAllRecords.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openCursor",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.openCursor.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBIndex",
+    "member": "openKeyCursor",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBIndex.prototype.openKeyCursor.call(Object.create(IDBIndex.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "SVGScriptElement",
+    "member": "constructor",
+    "expr": "new SVGScriptElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGScriptElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"script\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGScriptElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"script\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGScriptElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"script\"); return o.crossOrigin; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGScriptElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"script\"); return (o.crossOrigin = \"x\", o.crossOrigin); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGScriptElement",
+    "member": "href",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"script\"); return Object.prototype.toString.call(o.href); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

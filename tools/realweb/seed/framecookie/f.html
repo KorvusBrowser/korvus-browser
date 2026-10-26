@@ -1,0 +1,15 @@
+<!doctype html><script>
+const who = new URLSearchParams(location.search).get('who');
+const r = {};
+if (who === 'xsite2') {
+  // Reads once the first cross-site frame has run (frames load in either order): what that frame managed to store.
+  setTimeout(() => { r.later = document.cookie; parent.postMessage({ who, r }, '*'); }, 300);
+} else {
+  r.before = document.cookie;
+  document.cookie = 'f_' + who + '=1; path=/';
+  document.cookie = 'fnone_' + who + '=1; path=/; SameSite=None';
+  document.cookie = 'fsecure_' + who + '=1; path=/; SameSite=None; Secure';
+  r.after = document.cookie;
+  parent.postMessage({ who, r }, '*');
+}
+</script>

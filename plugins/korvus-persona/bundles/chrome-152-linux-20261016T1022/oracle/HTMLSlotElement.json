@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "HTMLSlotElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLSlotElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "constructor",
+    "expr": "new HTMLSlotElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"slot\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"slot\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "assignedNodes",
+    "expr": "(() => { const o = document.createElement(\"slot\"); return o.assignedNodes(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "assignedElements",
+    "expr": "(() => { const o = document.createElement(\"slot\"); return o.assignedElements(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLSlotElement",
+    "member": "assign",
+    "expr": "(() => { const o = document.createElement(\"slot\"); return o.assign(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

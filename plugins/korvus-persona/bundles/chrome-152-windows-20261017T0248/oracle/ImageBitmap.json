@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "ImageBitmap",
+    "member": "constructor",
+    "expr": "new ImageBitmap()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "width",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return b.width; })()",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "height",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return b.height; })()",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "width",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return typeof b.width; })()",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "width",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return (b.width = 99, b.width); })()",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "height",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return (b.height = 99, b.height); })()",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return b.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); b.close(); return b.width; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); b.close(); return b.height; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); b.close(); b.close(); return b.width; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); return b.close.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "close",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); b.close(); const o = new OffscreenCanvas(4, 4).getContext(\"2d\"); return o.drawImage(b, 0, 0); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ImageBitmap",
+    "member": "width",
+    "expr": "(() => { const c = new OffscreenCanvas(7, 11); c.getContext(\"2d\"); const b = c.transferToImageBitmap(); const c2 = new OffscreenCanvas(3, 5); c2.getContext(\"2d\"); return c2.transferToImageBitmap().width; })()",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

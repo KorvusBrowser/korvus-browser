@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLGeolocationElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "constructor",
+    "expr": "new HTMLGeolocationElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "position",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.position; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "error",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.error; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "autolocate",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.autolocate; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "autolocate",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return (o.autolocate = true, o.autolocate); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "watch",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.watch; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "watch",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return (o.watch = true, o.watch); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onlocation",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.onlocation; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "isValid",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.isValid; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "invalidReason",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.invalidReason; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onvalidationstatuschange",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.onvalidationstatuschange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "initialPermissionStatus",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.initialPermissionStatus; })()",
+    "expected": "prompt",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "permissionStatus",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.permissionStatus; })()",
+    "expected": "prompt",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onpromptaction",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.onpromptaction; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onpromptdismiss",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return o.onpromptdismiss; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "position",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.position); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "error",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.error); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onlocation",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.onlocation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "invalidReason",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.invalidReason); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onvalidationstatuschange",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.onvalidationstatuschange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "initialPermissionStatus",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.initialPermissionStatus); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "permissionStatus",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.permissionStatus); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onpromptaction",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.onpromptaction); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLGeolocationElement",
+    "member": "onpromptdismiss",
+    "expr": "(() => { const o = document.createElement(\"geolocation\"); return Object.prototype.toString.call(o.onpromptdismiss); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,205 @@
+[
+  {
+    "iface": "DOMException",
+    "member": "INDEX_SIZE_ERR",
+    "expr": "DOMException.INDEX_SIZE_ERR",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "DOMSTRING_SIZE_ERR",
+    "expr": "DOMException.DOMSTRING_SIZE_ERR",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "HIERARCHY_REQUEST_ERR",
+    "expr": "DOMException.HIERARCHY_REQUEST_ERR",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "WRONG_DOCUMENT_ERR",
+    "expr": "DOMException.WRONG_DOCUMENT_ERR",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INVALID_CHARACTER_ERR",
+    "expr": "DOMException.INVALID_CHARACTER_ERR",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NO_DATA_ALLOWED_ERR",
+    "expr": "DOMException.NO_DATA_ALLOWED_ERR",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NO_MODIFICATION_ALLOWED_ERR",
+    "expr": "DOMException.NO_MODIFICATION_ALLOWED_ERR",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NOT_FOUND_ERR",
+    "expr": "DOMException.NOT_FOUND_ERR",
+    "expected": 8,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NOT_SUPPORTED_ERR",
+    "expr": "DOMException.NOT_SUPPORTED_ERR",
+    "expected": 9,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INUSE_ATTRIBUTE_ERR",
+    "expr": "DOMException.INUSE_ATTRIBUTE_ERR",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INVALID_STATE_ERR",
+    "expr": "DOMException.INVALID_STATE_ERR",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "SYNTAX_ERR",
+    "expr": "DOMException.SYNTAX_ERR",
+    "expected": 12,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INVALID_MODIFICATION_ERR",
+    "expr": "DOMException.INVALID_MODIFICATION_ERR",
+    "expected": 13,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NAMESPACE_ERR",
+    "expr": "DOMException.NAMESPACE_ERR",
+    "expected": 14,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INVALID_ACCESS_ERR",
+    "expr": "DOMException.INVALID_ACCESS_ERR",
+    "expected": 15,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "VALIDATION_ERR",
+    "expr": "DOMException.VALIDATION_ERR",
+    "expected": 16,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "TYPE_MISMATCH_ERR",
+    "expr": "DOMException.TYPE_MISMATCH_ERR",
+    "expected": 17,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "SECURITY_ERR",
+    "expr": "DOMException.SECURITY_ERR",
+    "expected": 18,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "NETWORK_ERR",
+    "expr": "DOMException.NETWORK_ERR",
+    "expected": 19,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "ABORT_ERR",
+    "expr": "DOMException.ABORT_ERR",
+    "expected": 20,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "URL_MISMATCH_ERR",
+    "expr": "DOMException.URL_MISMATCH_ERR",
+    "expected": 21,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "QUOTA_EXCEEDED_ERR",
+    "expr": "DOMException.QUOTA_EXCEEDED_ERR",
+    "expected": 22,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "TIMEOUT_ERR",
+    "expr": "DOMException.TIMEOUT_ERR",
+    "expected": 23,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "INVALID_NODE_TYPE_ERR",
+    "expr": "DOMException.INVALID_NODE_TYPE_ERR",
+    "expected": 24,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "DATA_CLONE_ERR",
+    "expr": "DOMException.DATA_CLONE_ERR",
+    "expected": 25,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMException(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMException]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "name",
+    "expr": "(() => { const o = new DOMException(); return o.name; })()",
+    "expected": "Error",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "message",
+    "expr": "(() => { const o = new DOMException(); return o.message; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMException",
+    "member": "code",
+    "expr": "(() => { const o = new DOMException(); return o.code; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

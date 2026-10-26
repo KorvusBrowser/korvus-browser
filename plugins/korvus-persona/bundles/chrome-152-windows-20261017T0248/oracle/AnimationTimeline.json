@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "AnimationTimeline",
+    "member": "constructor",
+    "expr": "new AnimationTimeline()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnimationTimeline",
+    "member": "duration",
+    "expr": "(() => { const o = document.timeline; return o.duration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnimationTimeline",
+    "member": "play",
+    "expr": "(() => { const o = document.timeline; return o.play(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnimationTimeline",
+    "member": "currentTime",
+    "expr": "(() => { const o = document.timeline; return Object.prototype.toString.call(o.currentTime); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnimationTimeline",
+    "member": "duration",
+    "expr": "(() => { const o = document.timeline; return Object.prototype.toString.call(o.duration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AnimationTimeline",
+    "member": "play",
+    "expr": "(() => { const o = document.timeline; return Object.prototype.toString.call(o.play()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

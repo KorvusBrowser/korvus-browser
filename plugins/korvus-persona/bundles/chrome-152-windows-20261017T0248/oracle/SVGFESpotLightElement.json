@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "constructor",
+    "expr": "new SVGFESpotLightElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "z",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.z); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "pointsAtX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.pointsAtX); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "pointsAtY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.pointsAtY); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "pointsAtZ",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.pointsAtZ); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "specularExponent",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.specularExponent); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGFESpotLightElement",
+    "member": "limitingConeAngle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feSpotLight\"); return Object.prototype.toString.call(o.limitingConeAngle); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

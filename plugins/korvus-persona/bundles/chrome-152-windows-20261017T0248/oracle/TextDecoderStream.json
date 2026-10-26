@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "TextDecoderStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextDecoderStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextDecoderStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextDecoderStream",
+    "member": "encoding",
+    "expr": "(() => { const o = new TextDecoderStream(); return o.encoding; })()",
+    "expected": "utf-8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextDecoderStream",
+    "member": "fatal",
+    "expr": "(() => { const o = new TextDecoderStream(); return o.fatal; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextDecoderStream",
+    "member": "ignoreBOM",
+    "expr": "(() => { const o = new TextDecoderStream(); return o.ignoreBOM; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextDecoderStream",
+    "member": "readable",
+    "expr": "(() => { const o = new TextDecoderStream(); return Object.prototype.toString.call(o.readable); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TextDecoderStream",
+    "member": "writable",
+    "expr": "(() => { const o = new TextDecoderStream(); return Object.prototype.toString.call(o.writable); })()",
+    "expected": "[object WritableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,9 @@
+<!doctype html><html><body><script>
+addEventListener('message', function (e) {
+  if (e.data && e.data.k === 'ready') e.source.postMessage({ k: 'probe', arr: [1, 2] }, '*');
+  if (e.data && e.data.k === 'done') window.R = JSON.stringify(e.data.out);
+});
+// The page's crash-report context is initialized before the frame exists: the frame's is its own.
+if (window.crashReport) crashReport.initialize(100);
+var f = document.createElement('iframe'); f.src = 'f.html'; document.body.appendChild(f);
+</script></body></html>

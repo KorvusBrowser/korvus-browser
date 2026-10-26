@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SensorErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SensorErrorEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SensorErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SensorErrorEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SensorErrorEvent",
+    "member": "error",
+    "expr": "(() => { const o = new SensorErrorEvent(\"x\", { error: new DOMException(\"m\", \"NotAllowedError\") }); return Object.prototype.toString.call(o.error); })()",
+    "expected": "[object DOMException]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

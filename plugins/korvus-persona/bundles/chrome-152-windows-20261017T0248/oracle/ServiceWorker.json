@@ -1,0 +1,114 @@
+[
+  {
+    "iface": "ServiceWorker",
+    "member": "constructor",
+    "expr": "new ServiceWorker()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "scriptURL",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"scriptURL\").get.call(Object.create(ServiceWorker.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "scriptURL",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"scriptURL\").get.name",
+    "expected": "get scriptURL",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "state",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"state\").get.call(Object.create(ServiceWorker.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "state",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"state\").get.name",
+    "expected": "get state",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onstatechange",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onstatechange\").get.call(Object.create(ServiceWorker.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onstatechange",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onstatechange\").get.name",
+    "expected": "get onstatechange",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onstatechange",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onstatechange\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onstatechange",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onstatechange\").set.call(Object.create(ServiceWorker.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "postMessage",
+    "expr": "ServiceWorker.prototype.postMessage.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "postMessage",
+    "expr": "ServiceWorker.prototype.postMessage.name",
+    "expected": "postMessage",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onerror\").get.call(Object.create(ServiceWorker.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onerror\").get.name",
+    "expected": "get onerror",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onerror\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(ServiceWorker.prototype, \"onerror\").set.call(Object.create(ServiceWorker.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ServiceWorker",
+    "member": "postMessage",
+    "expr": "ServiceWorker.prototype.postMessage.call(Object.create(ServiceWorker.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

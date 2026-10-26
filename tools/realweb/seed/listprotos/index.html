@@ -1,0 +1,39 @@
+<!doctype html><meta charset=utf-8><body>
+<form id=f><input name=a><input type=radio name=r value=1><input type=radio name=r value=2><select id=s><option>x</option><option>y</option></select></form>
+<div id=d class="p q" title=t><span>1</span><span>2</span></div>
+<style>b { color: red }</style>
+<script>
+// TEMPLATES P8 B33: a platform list the engine makes is an instance of the REALM's interface -- the
+// prototype the realm was created with -- whatever the page has written since to the global of that name.
+// Each list is first read AFTER the global is replaced or deleted ([SameObject] members cache it).
+const ifaces = ['NodeList', 'HTMLCollection', 'DOMTokenList', 'NamedNodeMap', 'HTMLFormControlsCollection',
+  'HTMLOptionsCollection', 'RadioNodeList', 'CSSRuleList', 'StyleSheetList', 'DOMRectList'];
+const P = {};
+for (const I of ifaces) P[I] = self[I].prototype;
+// half replaced by a function of the same name, half deleted
+ifaces.forEach((I, i) => { if (i % 2) delete self[I]; else self[I] = function () {}; });
+const f = document.getElementById('f'), d = document.getElementById('d'), s = document.getElementById('s');
+const make = {
+  NodeList: () => d.querySelectorAll('span'),
+  HTMLCollection: () => d.children,
+  DOMTokenList: () => d.classList,
+  NamedNodeMap: () => d.attributes,
+  HTMLFormControlsCollection: () => f.elements,
+  HTMLOptionsCollection: () => s.options,
+  RadioNodeList: () => f.elements.namedItem('r'),
+  CSSRuleList: () => document.styleSheets[0].cssRules,
+  StyleSheetList: () => document.styleSheets,
+  DOMRectList: () => d.getClientRects(),
+};
+const out = {};
+for (const I of ifaces) {
+  try {
+    const o = make[I]();
+    const p = Object.getPrototypeOf(o);
+    const page = self[I] && self[I].prototype;
+    const which = p === P[I] ? 'realm' : p === Object.prototype ? 'Object.prototype' : (page && p === page) ? 'page' : 'other';
+    out[I] = which + ' ' + Object.prototype.toString.call(o) + ' ' + (o.length > 0 ? typeof o[0] : 'empty');
+  } catch (e) { out[I] = 'throws ' + e.constructor.name + ': ' + e.message; }
+}
+window.R = JSON.stringify(out);
+</script>

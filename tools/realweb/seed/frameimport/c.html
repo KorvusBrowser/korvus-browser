@@ -1,0 +1,4 @@
+<!doctype html><html><body><script>
+var FRAMEVAR = 'frame';
+import('./m.js').then(function (m) { parent.postMessage({ probe: m.probe() }, '*'); }, function (e) { parent.postMessage({ probe: 'REJECT ' + e }, '*'); });
+</script></body></html>

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "MediaStreamTrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaStreamTrackEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStreamTrackEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaStreamTrackEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

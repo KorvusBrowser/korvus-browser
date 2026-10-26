@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "AudioData",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioData({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioData(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "format",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.format; })()",
+    "expected": "f32",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "sampleRate",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.sampleRate; })()",
+    "expected": 44100,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "numberOfFrames",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.numberOfFrames; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "numberOfChannels",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.numberOfChannels; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "duration",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.duration; })()",
+    "expected": 22,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "timestamp",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.timestamp; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "allocationSize",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.allocationSize({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "allocationSize",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.allocationSize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "copyTo",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.copyTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "close",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "format",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return Object.prototype.toString.call(o.format); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioData",
+    "member": "clone",
+    "expr": "(() => { const o = new AudioData({ format: \"f32\", sampleRate: 44100, numberOfFrames: 1, numberOfChannels: 1, timestamp: 0, data: new Float32Array(1) }); return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object AudioData]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

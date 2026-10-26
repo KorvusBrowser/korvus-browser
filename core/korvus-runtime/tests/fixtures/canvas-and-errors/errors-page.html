@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset=utf-8></head><body>
+<script>
+window.__r = [];
+window.onerror = function (msg, url, line, col, err) { window.__r.push([String(msg), String(url), line, col]); return true; };
+</script>
+<script>
+var e1 = new Error('classic-split');
+  throw e1;
+</script>
+<script>
+    throw new Error('classic-inline');
+</script>
+<script>
+  throw   'classic-string';
+</script>
+<script>
+function mk() { return new Error('classic-made-in-fn'); }
+   throw mk();
+</script>
+<script>
+  throw {toString: function () { return 'custom-object'; }};
+</script>
+<script>
+setTimeout(function () { var e2 = new Error('timer-split');
+     throw e2; }, 0);
+setTimeout('var e3 = new Error(\'strtimer-split\');\n   throw e3;', 5);
+setTimeout(function () { var d = document.createElement('div'); d.addEventListener('x', function () { var e4 = new Error('listener-split');
+       throw e4; }); d.dispatchEvent(new Event('x')); }, 10);
+queueMicrotask(function () { var e5 = new Error('microtask-split');
+      throw e5; });
+setTimeout(function () { throw {}; }, 15);
+setTimeout(function () { window.__report = JSON.stringify(window.__r); fetch('/report', {method: 'POST', body: window.__report}); }, 300);
+</script>
+</body></html>

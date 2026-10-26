@@ -1,0 +1,33 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P7: a frame navigated to a new realm behind the same WindowProxy, and code of its OLD document
+// reading interface names it never read before. The old global keeps its own names, each read the same
+// object, and the new global's are its own. (A lazily-made interface global once replaced itself through
+// the proxy onto the NEW global -- the second such read killed the process: un.org's re-navigated embeds.)
+const out = {};
+const f = document.createElement('iframe');
+let step = 0, readA = null, hB = null;
+const t = (k, fn) => { try { out[k] = fn(); } catch (e) { out[k] = 'ERR ' + e.name + ': ' + e.message; } };
+f.onload = () => {
+  step++;
+  if (step === 1) {
+    readA = f.contentWindow.readNames;
+    t('beforeType', () => typeof f.contentWindow.readFormData());
+    f.src = 'b.html';
+    return;
+  }
+  const w = f.contentWindow;
+  t('sameProxy', () => String(w === f.contentWindow));
+  const first = readA(), second = readA();
+  t('oldHeadersType', () => typeof first.Headers);
+  t('oldHeadersStable', () => String(first.Headers === second.Headers));
+  t('oldDOMRectStable', () => String(first.DOMRect === second.DOMRect));
+  t('oldIsNotNew', () => String(first.Headers !== w.Headers && first.DOMRect !== w.DOMRect));
+  t('newHeadersType', () => typeof w.Headers + ':' + w.Headers.name);
+  t('newIsNewRealm', () => String(new w.Headers() instanceof w.Headers && !(new w.Headers() instanceof first.Headers)));
+  t('newStableAfter', () => String(w.Headers === w.Headers && w.DOMRect === w.DOMRect));
+  t('oldFormDataType', () => typeof second.FormData);
+  window.R = JSON.stringify(out);
+};
+f.src = 'a.html';
+document.body.appendChild(f);
+</script>

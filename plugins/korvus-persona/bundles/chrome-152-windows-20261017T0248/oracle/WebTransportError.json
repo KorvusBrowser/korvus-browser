@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "WebTransportError",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebTransportError(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object WebTransportError]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransportError",
+    "member": "source",
+    "expr": "(() => { const o = new WebTransportError(); return o.source; })()",
+    "expected": "stream",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransportError",
+    "member": "streamErrorCode",
+    "expr": "(() => { const o = new WebTransportError(); return o.streamErrorCode; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

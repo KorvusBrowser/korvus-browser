@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CharacterBoundsUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CharacterBoundsUpdateEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CharacterBoundsUpdateEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterBoundsUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CharacterBoundsUpdateEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterBoundsUpdateEvent",
+    "member": "rangeStart",
+    "expr": "(() => { const o = new CharacterBoundsUpdateEvent(\"x\"); return o.rangeStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CharacterBoundsUpdateEvent",
+    "member": "rangeEnd",
+    "expr": "(() => { const o = new CharacterBoundsUpdateEvent(\"x\"); return o.rangeEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

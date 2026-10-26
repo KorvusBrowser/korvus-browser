@@ -1,0 +1,47 @@
+{
+ "why": "UIEvent/MouseEvent/KeyboardEvent prototype rows a slot read is the WRONG answer for (gen_event_protos): op = a real native op called as ops[name](member, length); null = a getter answering null (the value a browser gives for a member on an event that has no target, no pseudo-element and no related element, which is every event constructed here); alias = the same private slot under a second name (`x`/`y` ARE clientX/clientY; fromElement/toElement are the legacy directions of relatedTarget and null on a constructed event; pseudoTarget is Chrome-only and null for an event from no pseudo-element). Goal W5.1 (events lane) turns these into table rows.",
+ "interfaces": [
+  "UIEvent",
+  "MouseEvent",
+  "KeyboardEvent"
+ ],
+ "bespoke": {
+  "UIEvent.initUIEvent": [
+   "op",
+   "op_evt_init_ui_event"
+  ],
+  "UIEvent.pseudoTarget": [
+   "null"
+  ],
+  "MouseEvent.x": [
+   "alias",
+   "clientX"
+  ],
+  "MouseEvent.y": [
+   "alias",
+   "clientY"
+  ],
+  "MouseEvent.fromElement": [
+   "null"
+  ],
+  "MouseEvent.toElement": [
+   "null"
+  ],
+  "MouseEvent.getModifierState": [
+   "op",
+   "op_evt_get_modifier_state"
+  ],
+  "MouseEvent.initMouseEvent": [
+   "op",
+   "op_evt_init_mouse_event"
+  ],
+  "KeyboardEvent.getModifierState": [
+   "op",
+   "op_evt_get_modifier_state"
+  ],
+  "KeyboardEvent.initKeyboardEvent": [
+   "op",
+   "op_evt_init_keyboard_event"
+  ]
+ }
+}

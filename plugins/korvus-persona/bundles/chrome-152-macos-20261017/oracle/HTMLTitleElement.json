@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HTMLTitleElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTitleElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTitleElement",
+    "member": "constructor",
+    "expr": "new HTMLTitleElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTitleElement",
+    "member": "text",
+    "expr": "(() => { const o = document.createElement(\"title\"); return o.text; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTitleElement",
+    "member": "text",
+    "expr": "(() => { const o = document.createElement(\"title\"); return (o.text = \"x\", o.text); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  }
+]

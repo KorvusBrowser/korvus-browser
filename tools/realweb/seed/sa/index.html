@@ -1,0 +1,4 @@
+<!doctype html><html><body><script>
+addEventListener('message', function (e) { if (e.data && e.data.k === 'frame') { var R = { frame: e.data.out }; document.hasStorageAccess().then(function (v) { R.page = v; window.R = JSON.stringify(R); }); } });
+var f = document.createElement('iframe'); f.src = 'f.html?q=1#h'; document.body.appendChild(f);
+</script></body></html>

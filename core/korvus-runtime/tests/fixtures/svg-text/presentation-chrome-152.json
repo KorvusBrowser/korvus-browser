@@ -1,0 +1,175 @@
+[
+ [
+  "text: font attrs",
+  [
+   "font-size=20px",
+   "font-family=\"DejaVu Sans\"",
+   "text-anchor=middle",
+   "fill=rgb(255, 0, 0)",
+   "stroke-width=2px",
+   "letter-spacing=1px",
+   "font-weight=700",
+   "font-style=italic"
+  ],
+  241.96875
+ ],
+ [
+  "text: 20 serif",
+  [
+   "font-size=20px",
+   "font-family=serif"
+  ],
+  214.8125,
+  29
+ ],
+ [
+  "g attrs inherited",
+  [
+   "font-size=30px",
+   "fill=rgb(0, 0, 255)",
+   "font-family=\"Liberation Mono\""
+  ],
+  126.03125
+ ],
+ [
+  "inline style beats attr",
+  [
+   "font-size=30px"
+  ]
+ ],
+ [
+  "sheet beats attr",
+  [
+   "font-size=40px",
+   "fill=rgb(0, 0, 255)"
+  ]
+ ],
+ [
+  "invalid values dropped whole",
+  [
+   "fill=rgb(0, 0, 0)",
+   "display=block",
+   "font-size=16px",
+   "stroke=none"
+  ]
+ ],
+ [
+  "bad numbers, opacity, visibility",
+  [
+   "font-size=16px",
+   "stroke-width=1px",
+   "opacity=0.5",
+   "visibility=hidden"
+  ]
+ ],
+ [
+  "paint attribute none",
+  [
+   "fill=none",
+   "stroke=none"
+  ]
+ ],
+ [
+  "paint attribute url(#a)",
+  [
+   "fill=url(\"#a\")",
+   "stroke=url(\"#a\")"
+  ]
+ ],
+ [
+  "paint attribute url(#a) red",
+  [
+   "fill=url(\"#a\") rgb(255, 0, 0)",
+   "stroke=url(\"#a\") rgb(255, 0, 0)"
+  ]
+ ],
+ [
+  "paint attribute context-stroke",
+  [
+   "fill=context-stroke",
+   "stroke=context-stroke"
+  ]
+ ],
+ [
+  "paint attribute currentcolor",
+  [
+   "fill=rgb(0, 128, 0)",
+   "stroke=rgb(0, 128, 0)"
+  ]
+ ],
+ [
+  "path stroke attrs",
+  [
+   "stroke-dasharray=5px, 10px",
+   "stroke-dashoffset=3px",
+   "stroke-linecap=round",
+   "stroke-miterlimit=7",
+   "fill-rule=evenodd",
+   "stroke-opacity=0.25"
+  ]
+ ],
+ [
+  "lengths unitless",
+  [
+   "baseline-shift=2px",
+   "word-spacing=4px",
+   "transform-origin=10px 20px",
+   "letter-spacing=normal",
+   "dominant-baseline=middle",
+   "writing-mode=vertical-rl"
+  ]
+ ],
+ [
+  "html element ignores them",
+  [
+   "fill=rgb(0, 0, 0)",
+   "font-size=16px"
+  ]
+ ],
+ [
+  "names are case-sensitive",
+  [
+   "fill=rgb(0, 0, 0)",
+   "font-size=16px"
+  ]
+ ],
+ [
+  "display none",
+  [
+   "display=none"
+  ],
+  0,
+  0
+ ],
+ [
+  "quoted family, currentColor",
+  [
+   "font-family=\"Liberation Mono\", monospace",
+   "fill=rgb(255, 0, 0)",
+   "color=rgb(255, 0, 0)"
+  ],
+  28.8125
+ ],
+ [
+  "xml:space preserve",
+  [
+   "white-space-collapse=preserve"
+  ],
+  8
+ ],
+ [
+  "attr change restyles",
+  33.828125,
+  67.640625,
+  [
+   "font-size=40px"
+  ]
+ ],
+ [
+  "attr removed",
+  27.0625,
+  [
+   "font-size=16px"
+  ]
+ ]
+]

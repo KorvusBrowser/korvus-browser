@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SVGPathSegment",
+    "member": "constructor",
+    "expr": "new SVGPathSegment()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

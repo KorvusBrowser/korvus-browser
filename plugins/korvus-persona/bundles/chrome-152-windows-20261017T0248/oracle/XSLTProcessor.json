@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "XSLTProcessor",
+    "member": "constructor",
+    "expr": "(() => { const o = new XSLTProcessor(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object XSLTProcessor]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "importStylesheet",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.importStylesheet(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "transformToFragment",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.transformToFragment(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "transformToDocument",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.transformToDocument(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "setParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.setParameter(\"x\", \"x\", 1); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "setParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.setParameter(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "getParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.getParameter(\"x\", \"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "getParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.getParameter(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "removeParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.removeParameter(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "removeParameter",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.removeParameter(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "clearParameters",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.clearParameters(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XSLTProcessor",
+    "member": "reset",
+    "expr": "(() => { const o = new XSLTProcessor(); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

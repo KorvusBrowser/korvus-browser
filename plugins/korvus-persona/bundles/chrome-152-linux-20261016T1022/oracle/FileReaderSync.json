@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "FileReaderSync",
+    "member": "constructor",
+    "expr": "(() => { const o = new FileReaderSync(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

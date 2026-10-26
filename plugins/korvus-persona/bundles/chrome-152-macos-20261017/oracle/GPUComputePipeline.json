@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "GPUComputePipeline",
+    "member": "constructor",
+    "expr": "new GPUComputePipeline()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "GPUComputePipeline.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").get.call(Object.create(GPUComputePipeline.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPUComputePipeline.prototype.getBindGroupLayout.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPUComputePipeline.prototype.getBindGroupLayout.call(Object.create(GPUComputePipeline.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPUComputePipeline.prototype.getBindGroupLayout.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").get.call(Object.create(GPUComputePipeline.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUComputePipeline.prototype, \"label\").set.call(Object.create(GPUComputePipeline.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "getBindGroupLayout",
+    "expr": "(() => { try { const v = GPUComputePipeline.prototype[\"getBindGroupLayout\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUComputePipeline",
+    "member": "getBindGroupLayout",
+    "expr": "(() => { try { const v = GPUComputePipeline.prototype[\"getBindGroupLayout\"].call(Object.create(GPUComputePipeline.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

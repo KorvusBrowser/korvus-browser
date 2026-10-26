@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "StyleSheetList",
+    "member": "constructor",
+    "expr": "new StyleSheetList()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "StyleSheetList",
+    "member": "item",
+    "expr": "(() => { const o = document.styleSheets; return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "StyleSheetList",
+    "member": "item",
+    "expr": "(() => { const o = document.styleSheets; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "StyleSheetList",
+    "member": "length",
+    "expr": "(() => { const o = document.styleSheets; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

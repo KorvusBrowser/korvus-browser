@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "TransformStreamDefaultController",
+    "member": "constructor",
+    "expr": "new TransformStreamDefaultController()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

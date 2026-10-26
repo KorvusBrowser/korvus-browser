@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "TextTrackList",
+    "member": "constructor",
+    "expr": "new TextTrackList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "length",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "getTrackById",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.getTrackById(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "getTrackById",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return Object.prototype.toString.call(o.getTrackById(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "getTrackById",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.getTrackById(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onaddtrack",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.onaddtrack; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onaddtrack",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return Object.prototype.toString.call(o.onaddtrack); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onremovetrack",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return o.onremovetrack; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrackList",
+    "member": "onremovetrack",
+    "expr": "(() => { const o = document.createElement(\"video\").textTracks; return Object.prototype.toString.call(o.onremovetrack); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

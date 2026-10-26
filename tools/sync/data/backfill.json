@@ -1,0 +1,31 @@
+{
+ "why": "Interfaces whose prototype PRE-EXISTS natively (the arena/cppgc spine, the native singletons, a hand-written class that stores nothing as own properties) and which the installer's backfill pass may therefore fill with the catalogued members the prototype does not own. Anything ending in `Element` qualifies by rule (gen_shells.backfillable); the slot-backed set (slot_backed.json) qualifies too. NOT permanent: an interface joins when its constructor stops assigning own properties (a getter-only prototype accessor would throw in strict mode on `this.x = ...`). Goal W8 says this becomes DERIVED from the table inventory + the cppgc `webapi_objects!` scan once every entry is a table or a cppgc class; until then each entry says why it is here.",
+ "interfaces": {
+  "Attr": "the arena/cppgc node spine",
+  "BroadcastChannel": "a native cppgc object whose remaining gap is readonly attributes or event handlers (BroadcastChannel's two on* get the real handler pair)",
+  "CDATASection": "the arena/cppgc node spine",
+  "CSSStyleDeclaration": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "CharacterData": "the arena/cppgc node spine",
+  "Comment": "the arena/cppgc node spine",
+  "Crypto": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "DOMStringMap": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "DOMTokenList": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "Document": "the arena/cppgc node spine",
+  "DocumentFragment": "the arena/cppgc node spine",
+  "DocumentType": "the arena/cppgc node spine",
+  "Element": "the arena/cppgc node spine",
+  "ElementInternals": "a hand-written JS class (dom/09l-element-internals.js) that owns every catalogued member except its 44 aria [Reflect] rows, which the backfill adds (SSOT W2.3b)",
+  "HTMLElement": "the arena/cppgc node spine",
+  "History": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "IntersectionObserver": "a native cppgc object whose remaining gap is readonly attributes or event handlers (BroadcastChannel's two on* get the real handler pair)",
+  "Location": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "MathMLElement": "the arena/cppgc node spine",
+  "Node": "the arena/cppgc node spine",
+  "Performance": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "ProcessingInstruction": "the arena/cppgc node spine",
+  "SVGElement": "the arena/cppgc node spine",
+  "Screen": "a native singleton (cppgc or op-backed), no JS constructor assigns to it",
+  "Selection": "a native cppgc object whose remaining gap is readonly attributes or event handlers (BroadcastChannel's two on* get the real handler pair)",
+  "Text": "the arena/cppgc node spine"
+ }
+}

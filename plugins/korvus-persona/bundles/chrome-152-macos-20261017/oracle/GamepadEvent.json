@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "GamepadEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new GamepadEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object GamepadEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GamepadEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new GamepadEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GamepadEvent",
+    "member": "gamepad",
+    "expr": "(() => { const o = new GamepadEvent(\"x\"); return o.gamepad; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

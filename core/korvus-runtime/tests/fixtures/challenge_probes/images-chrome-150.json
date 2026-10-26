@@ -1,0 +1,68 @@
+{
+ "ci1.png": {
+  "ev": "load",
+  "size": [
+   65,
+   51,
+   65,
+   true
+  ],
+  "earlyDecode": "resolved 65",
+  "lateDecode": "resolved",
+  "bitmapImg": "THROW InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The ImageBitmap could not be allocated.",
+  "draw": "0,0,0,0,0,0,0,0",
+  "pattern": "[object CanvasPattern]",
+  "bitmapBlob": "THROW InvalidStateError: The source image could not be decoded."
+ },
+ "good.png": {
+  "ev": "load",
+  "size": [
+   2,
+   2,
+   2,
+   true
+  ],
+  "earlyDecode": "resolved 2",
+  "lateDecode": "resolved",
+  "bitmapImg": [
+   2,
+   2
+  ],
+  "draw": "10,10,10,255,20,20,20,255",
+  "pattern": "[object CanvasPattern]",
+  "bitmapBlob": [
+   2,
+   2
+  ]
+ },
+ "trunc.png": {
+  "ev": "load",
+  "size": [
+   2,
+   2,
+   2,
+   true
+  ],
+  "earlyDecode": "resolved 2",
+  "lateDecode": "resolved",
+  "bitmapImg": "THROW InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The ImageBitmap could not be allocated.",
+  "draw": "10,10,10,255,20,20,20,255",
+  "pattern": "[object CanvasPattern]",
+  "bitmapBlob": "THROW InvalidStateError: The source image could not be decoded."
+ },
+ "notpng.png": {
+  "ev": "error",
+  "size": [
+   0,
+   0,
+   0,
+   true
+  ],
+  "earlyDecode": "rejected EncodingError: The source image cannot be decoded.",
+  "lateDecode": "rejected EncodingError: The source image cannot be decoded.",
+  "bitmapImg": "THROW InvalidStateError: Failed to execute 'createImageBitmap' on 'Window': The HTMLImageElement provided is in the 'broken' state.",
+  "draw": "THROW InvalidStateError: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.",
+  "pattern": "THROW InvalidStateError: Failed to execute 'createPattern' on 'CanvasRenderingContext2D': Source image is in the 'broken' state.",
+  "bitmapBlob": "THROW InvalidStateError: The source image could not be decoded."
+ }
+}

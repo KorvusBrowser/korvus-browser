@@ -1,0 +1,48 @@
+<!doctype html><title>t</title><style>
+body{margin:0;font:16px/20px sans-serif}
+.fc{display:flex;flex-direction:column;height:100px;width:200px}
+.fr{display:flex;width:50px}
+.tall{height:300px}
+</style><body>
+<!-- REALWEB L10: `min-width`/`min-height: auto` is the initial value, and a flex or grid ITEM is not shrunk
+     below its content (the automatic minimum size) unless it is a scroll container. getComputedStyle reports
+     `auto` for an item and `0px` for anything else (Blink's MinWidthOrMinHeightAuto). Measured on Chrome 150. -->
+<div id=block>x</div>
+<div class=fc><div id=fitem><div class=tall></div></div></div>
+<div class=fc><div id=fhidden style="overflow:hidden"><div class=tall></div></div></div>
+<div class=fc><div id=fclip style="overflow:clip"><div class=tall></div></div></div>
+<div class=fc><div id=fzero style="min-height:0"><div class=tall></div></div></div>
+<div class=fc style="position:relative"><div id=fabs style="position:absolute"><div class=tall></div></div></div>
+<div class=fc><div id=fnone style="display:none"></div></div>
+<div class=fc><div style="display:contents"><div id=fcontents><div class=tall></div></div></div></div>
+<div class=fr><div id=rowitem>Supercalifragilisticexpialidocious</div></div>
+<div class=fr><div id=rowhidden style="overflow:hidden">Supercalifragilisticexpialidocious</div></div>
+<div style="display:grid;height:100px;width:200px"><div id=gitem><div class=tall></div></div></div>
+<div class=fc><div id=flogical style="min-block-size:auto"><div class=tall></div></div></div>
+<div class=fc id=fcbefore></div><style>#fcbefore::before{content:'a'}</style>
+<div style="display:flex"><div id=finh><div id=inh style="min-width:inherit;min-height:inherit">x</div></div></div>
+<!-- The shape that hid a prefetch on etherpad.org: a page-high flex column whose scrolling child must not be
+     shrunk to the viewport, or the link below it is clipped out of an IntersectionObserver's 200px margin. -->
+<div id=page style="display:flex;flex-direction:column;height:300px"><div id=pagechild style="display:flex;flex-direction:column"><div id=scroller style="overflow:auto;flex:1 1 auto"><div style="height:340px"></div><a id=link href="#x">x</a></div></div></div>
+<!-- A stretched item's cross size is definite only when its container's is (CSS Flexbox 9.8): a 120x40 image with
+     max-height:70px in an auto-height row keeps 120x40, in a 200px-high row it stretches to 70 and widens to 210. -->
+<div style="display:flex"><img id=imgauto src="logo.png" style="max-height:70px"></div>
+<div style="display:flex;height:200px"><img id=imgdef src="logo.png" style="max-height:70px"></div>
+<script>
+const io = new IntersectionObserver(es => { for (const e of es) seen.push(e.isIntersecting); }, {rootMargin: '0px 0px 200px 0px', root: null});
+const seen = [];
+addEventListener('load', () => setTimeout(() => {
+  const r = {}, g = id => document.getElementById(id);
+  for (const id of ['block', 'fitem', 'fhidden', 'fclip', 'fzero', 'fabs', 'fnone', 'fcontents', 'rowitem', 'rowhidden', 'gitem', 'flogical', 'inh']) {
+    const e = g(id), cs = getComputedStyle(e);
+    r[id] = [cs.minWidth, cs.minHeight, id === 'block' ? 0 : e.offsetWidth, e.offsetHeight];
+  }
+  const cs = getComputedStyle(g('flogical'));
+  r.logical = [cs.minInlineSize, cs.minBlockSize, getComputedStyle(g('block')).minInlineSize];
+  const b = getComputedStyle(g('fcbefore'), '::before');
+  r.before = [b.minWidth, b.minHeight];
+  r.page = [g('pagechild').offsetHeight, g('scroller').offsetHeight];
+  r.img = [g('imgauto').offsetWidth, g('imgauto').offsetHeight, g('imgdef').offsetWidth, g('imgdef').offsetHeight];
+  document.title = JSON.stringify(r);
+}, 200));
+</script>

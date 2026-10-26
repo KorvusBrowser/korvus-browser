@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "Selection",
+    "member": "constructor",
+    "expr": "new Selection()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "anchorNode",
+    "expr": "(() => { const o = getSelection(); return o.anchorNode; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "anchorOffset",
+    "expr": "(() => { const o = getSelection(); return o.anchorOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "focusNode",
+    "expr": "(() => { const o = getSelection(); return o.focusNode; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "focusOffset",
+    "expr": "(() => { const o = getSelection(); return o.focusOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "isCollapsed",
+    "expr": "(() => { const o = getSelection(); return o.isCollapsed; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "rangeCount",
+    "expr": "(() => { const o = getSelection(); return o.rangeCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "type",
+    "expr": "(() => { const o = getSelection(); return o.type; })()",
+    "expected": "None",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "direction",
+    "expr": "(() => { const o = getSelection(); return o.direction; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "getRangeAt",
+    "expr": "(() => { const o = getSelection(); return o.getRangeAt(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "getRangeAt",
+    "expr": "(() => { const o = getSelection(); return o.getRangeAt(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "addRange",
+    "expr": "(() => { const o = getSelection(); return o.addRange(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "removeRange",
+    "expr": "(() => { const o = getSelection(); return o.removeRange(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "removeAllRanges",
+    "expr": "(() => { const o = getSelection(); return o.removeAllRanges(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "empty",
+    "expr": "(() => { const o = getSelection(); return o.empty(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "getComposedRanges",
+    "expr": "(() => { const o = getSelection(); return o.getComposedRanges(); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "collapse",
+    "expr": "(() => { const o = getSelection(); return o.collapse(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "setPosition",
+    "expr": "(() => { const o = getSelection(); return o.setPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "collapseToStart",
+    "expr": "(() => { const o = getSelection(); return o.collapseToStart(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "collapseToEnd",
+    "expr": "(() => { const o = getSelection(); return o.collapseToEnd(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "extend",
+    "expr": "(() => { const o = getSelection(); return o.extend(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "setBaseAndExtent",
+    "expr": "(() => { const o = getSelection(); return o.setBaseAndExtent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "selectAllChildren",
+    "expr": "(() => { const o = getSelection(); return o.selectAllChildren(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "modify",
+    "expr": "(() => { const o = getSelection(); return o.modify(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "deleteFromDocument",
+    "expr": "(() => { const o = getSelection(); return o.deleteFromDocument(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "containsNode",
+    "expr": "(() => { const o = getSelection(); return o.containsNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "toString",
+    "expr": "(() => { const o = getSelection(); return o.toString(); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "anchorNode",
+    "expr": "(() => { const o = getSelection(); return Object.prototype.toString.call(o.anchorNode); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "focusNode",
+    "expr": "(() => { const o = getSelection(); return Object.prototype.toString.call(o.focusNode); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "getRangeAt",
+    "expr": "(() => { const o = getSelection(); return Object.prototype.toString.call(o.getRangeAt(1)); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Selection",
+    "member": "getComposedRanges",
+    "expr": "(() => { const o = getSelection(); return Object.prototype.toString.call(o.getComposedRanges()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "TextTrack",
+    "member": "constructor",
+    "expr": "new TextTrack()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "kind",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.kind; })()",
+    "expected": "subtitles",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "kind",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.kind); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "label",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.label; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "language",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.language; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "id",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.id; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "inBandMetadataTrackDispatchType",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.inBandMetadataTrackDispatchType; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "mode",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.mode; })()",
+    "expected": "hidden",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "mode",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.mode); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "cues",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.cues); })()",
+    "expected": "[object TextTrackCueList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "activeCues",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.activeCues); })()",
+    "expected": "[object TextTrackCueList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "addCue",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.addCue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "removeCue",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.removeCue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.oncuechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.oncuechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "sourceBuffer",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return o.sourceBuffer; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextTrack",
+    "member": "sourceBuffer",
+    "expr": "(() => { const o = document.createElement(\"video\").addTextTrack(\"subtitles\"); return Object.prototype.toString.call(o.sourceBuffer); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

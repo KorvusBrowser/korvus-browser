@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "USBConfiguration",
+    "member": "constructor",
+    "expr": "new USBConfiguration()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationValue",
+    "expr": "USBConfiguration.prototype.configurationValue",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationValue",
+    "expr": "Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationValue\").get.call(Object.create(USBConfiguration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationName",
+    "expr": "USBConfiguration.prototype.configurationName",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationName",
+    "expr": "Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationName\").get.call(Object.create(USBConfiguration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "interfaces",
+    "expr": "USBConfiguration.prototype.interfaces",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "interfaces",
+    "expr": "Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"interfaces\").get.call(Object.create(USBConfiguration.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationValue",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationValue\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationValue",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationValue\").get.call(Object.create(USBConfiguration.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationName\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "configurationName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"configurationName\").get.call(Object.create(USBConfiguration.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "interfaces",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"interfaces\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBConfiguration",
+    "member": "interfaces",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBConfiguration.prototype, \"interfaces\").get.call(Object.create(USBConfiguration.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

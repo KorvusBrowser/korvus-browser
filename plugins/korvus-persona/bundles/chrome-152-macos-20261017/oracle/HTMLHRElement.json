@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "HTMLHRElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLHRElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "constructor",
+    "expr": "new HTMLHRElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "color",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return o.color; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "color",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return (o.color = \"x\", o.color); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "noShade",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return o.noShade; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "noShade",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return (o.noShade = true, o.noShade); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "size",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return o.size; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "size",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return (o.size = \"x\", o.size); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLHRElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"hr\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  }
+]

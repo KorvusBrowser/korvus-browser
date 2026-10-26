@@ -1,0 +1,226 @@
+[
+  {
+    "iface": "IDBTransaction",
+    "member": "constructor",
+    "expr": "new IDBTransaction()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "objectStoreNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"objectStoreNames\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "objectStoreNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"objectStoreNames\").get.name",
+    "expected": "get objectStoreNames",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"mode\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"mode\").get.name",
+    "expected": "get mode",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "durability",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"durability\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "durability",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"durability\").get.name",
+    "expected": "get durability",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "db",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"db\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "db",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"db\").get.name",
+    "expected": "get db",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "error",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"error\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "error",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"error\").get.name",
+    "expected": "get error",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onabort\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onabort\").get.name",
+    "expected": "get onabort",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onabort\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onabort\").set.call(Object.create(IDBTransaction.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "oncomplete",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"oncomplete\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "oncomplete",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"oncomplete\").get.name",
+    "expected": "get oncomplete",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "oncomplete",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"oncomplete\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "oncomplete",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"oncomplete\").set.call(Object.create(IDBTransaction.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onerror\").get.call(Object.create(IDBTransaction.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onerror\").get.name",
+    "expected": "get onerror",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onerror\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBTransaction.prototype, \"onerror\").set.call(Object.create(IDBTransaction.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "abort",
+    "expr": "IDBTransaction.prototype.abort.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "abort",
+    "expr": "IDBTransaction.prototype.abort.name",
+    "expected": "abort",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "commit",
+    "expr": "IDBTransaction.prototype.commit.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "commit",
+    "expr": "IDBTransaction.prototype.commit.name",
+    "expected": "commit",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "objectStore",
+    "expr": "IDBTransaction.prototype.objectStore.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "objectStore",
+    "expr": "IDBTransaction.prototype.objectStore.name",
+    "expected": "objectStore",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "objectStore",
+    "expr": "IDBTransaction.prototype.objectStore.call(Object.create(IDBTransaction.prototype), \"s\")",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "abort",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBTransaction.prototype.abort.call(Object.create(IDBTransaction.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBTransaction",
+    "member": "commit",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBTransaction.prototype.commit.call(Object.create(IDBTransaction.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,22 @@
+[
+["context rate", 48000],
+["8 zero bytes, callbacks", ["returned byteLength=0", "microtask", "errorCb DOMException:EncodingError:Unable to decode audio data:true:0 this=true", "rejected DOMException:EncodingError:Unable to decode audio data:true:0"]],
+["8 zero bytes, promise only", ["returned byteLength=0", "microtask", "rejected DOMException:EncodingError:Unable to decode audio data:true:0"]],
+["empty buffer, callbacks", ["returned byteLength=0", "microtask", "errorCb DOMException:EncodingError:Unable to decode audio data:true:0 this=true", "rejected DOMException:EncodingError:Unable to decode audio data:true:0"]],
+["16-bit 8 kHz mono, callbacks", ["returned byteLength=0", "microtask", "successCb [object AudioBuffer] this=true", "resolved [object AudioBuffer]"]],
+["16-bit 8 kHz decoded", 1, 1800, 48000, -680112775, "0.0076068,0.0369957,0.0752180,0.1209369,0.1722313,0.2266820"],
+["detached (same buffer again), callbacks", ["errorCb DOMException:DataCloneError:Cannot decode detached ArrayBuffer:true:25 this=true", "returned byteLength=0", "microtask", "rejected DOMException:DataCloneError:Cannot decode detached ArrayBuffer:true:25"]],
+["8-bit 48 kHz stereo, promise only", ["returned byteLength=0", "microtask", "resolved [object AudioBuffer]"]],
+["8-bit 48 kHz decoded", 2, 200, 48000, -214505305, 1382521164],
+["16-bit 22050 Hz mono, promise only", ["returned byteLength=0", "microtask", "resolved [object AudioBuffer]"]],
+["16-bit 22050 Hz decoded", 1, 2176, 48000, 465920903],
+["Uint8Array, callbacks", ["returned byteLength=8", "microtask", "rejected TypeError:TypeError:Failed to execute 'decodeAudioData' on 'BaseAudioContext': parameter 1 is not of type 'ArrayBuffer'.:false:undefined"]],
+["enumerateDevices order", "microtask,resolved"],
+["enumerateDevices", 1, "[object Array]", true],
+["device 0", ["[object MediaDeviceInfo]", true, false, "", "deviceId,kind,label,groupId,toJSON", "", "audiooutput", "", "", "{\"deviceId\":\"\",\"kind\":\"audiooutput\",\"label\":\"\",\"groupId\":\"\"}", "{\"deviceId\":\"\",\"kind\":\"audiooutput\",\"label\":\"\",\"groupId\":\"\"}", true]],
+["same objects across calls", false],
+["MediaDeviceInfo ctor", "TypeError: Failed to construct 'MediaDeviceInfo': Illegal constructor"],
+["getter on proto", "TypeError: Illegal invocation"],
+["toJSON on plain", "TypeError: Illegal invocation"],
+["proto keys", "deviceId,kind,label,groupId,toJSON,constructor", "getCapabilities,constructor"]
+]

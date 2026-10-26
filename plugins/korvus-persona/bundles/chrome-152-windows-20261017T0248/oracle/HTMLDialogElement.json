@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "HTMLDialogElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLDialogElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "constructor",
+    "expr": "new HTMLDialogElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "open",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.open; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "open",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return (o.open = true, o.open); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "returnValue",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.returnValue; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "returnValue",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return (o.returnValue = \"x\", o.returnValue); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "closedBy",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.closedBy; })()",
+    "expected": "none",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "closedBy",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return (o.closedBy = \"x\", o.closedBy); })()",
+    "expected": "none",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "show",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.show(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "showModal",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.showModal(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "close",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLDialogElement",
+    "member": "requestClose",
+    "expr": "(() => { const o = document.createElement(\"dialog\"); return o.requestClose(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

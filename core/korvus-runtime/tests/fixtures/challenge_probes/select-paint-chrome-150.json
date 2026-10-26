@@ -1,0 +1,34 @@
+{
+ "A": [
+  "first-paint"
+ ],
+ "B": [
+  "first-paint",
+  "first-contentful-paint"
+ ],
+ "C": [
+  "first-paint"
+ ],
+ "D": [
+  "first-paint",
+  "first-contentful-paint"
+ ],
+ "E": [
+  "first-paint",
+  "first-contentful-paint"
+ ],
+ "F": [
+  "first-paint"
+ ],
+ "G": [
+  "first-paint"
+ ],
+ "H": [
+  "first-paint"
+ ],
+ "I": [
+  "first-paint",
+  "first-contentful-paint"
+ ],
+ "J": []
+}

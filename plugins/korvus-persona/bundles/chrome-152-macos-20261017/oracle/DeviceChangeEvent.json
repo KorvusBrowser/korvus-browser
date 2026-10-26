@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "DeviceChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DeviceChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "MediaEncryptedEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaEncryptedEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MediaEncryptedEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaEncryptedEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaEncryptedEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaEncryptedEvent",
+    "member": "initDataType",
+    "expr": "(() => { const o = new MediaEncryptedEvent(\"x\"); return o.initDataType; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaEncryptedEvent",
+    "member": "initData",
+    "expr": "(() => { const o = new MediaEncryptedEvent(\"x\"); return o.initData; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

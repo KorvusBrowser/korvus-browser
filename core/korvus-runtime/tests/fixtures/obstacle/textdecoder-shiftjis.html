@@ -1,0 +1,9 @@
+<!doctype html><html><body>
+<script>
+// Shift_JIS bytes for "こんにちは" (konnichiwa). A UTF-8-only decoder would mojibake these.
+const sjis = new Uint8Array([0x82,0xB1,0x82,0xF1,0x82,0xC9,0x82,0xBF,0x82,0xCD]);
+const dec = new TextDecoder('shift-jis');
+const out = dec.decode(sjis);
+globalThis.__obstacle = 'sjis:' + out + ':' + dec.encoding;
+</script>
+</body></html>

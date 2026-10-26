@@ -1,0 +1,408 @@
+[
+  {
+    "iface": "IDBObjectStore",
+    "member": "constructor",
+    "expr": "new IDBObjectStore()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"name\").get.call(Object.create(IDBObjectStore.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"name\").get.name",
+    "expected": "get name",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"name\").set.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"name\").set.call(Object.create(IDBObjectStore.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "keyPath",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"keyPath\").get.call(Object.create(IDBObjectStore.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "keyPath",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"keyPath\").get.name",
+    "expected": "get keyPath",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "indexNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"indexNames\").get.call(Object.create(IDBObjectStore.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "indexNames",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"indexNames\").get.name",
+    "expected": "get indexNames",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "transaction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"transaction\").get.call(Object.create(IDBObjectStore.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "transaction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"transaction\").get.name",
+    "expected": "get transaction",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "autoIncrement",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"autoIncrement\").get.call(Object.create(IDBObjectStore.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "autoIncrement",
+    "expr": "Object.getOwnPropertyDescriptor(IDBObjectStore.prototype, \"autoIncrement\").get.name",
+    "expected": "get autoIncrement",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "add",
+    "expr": "IDBObjectStore.prototype.add.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "add",
+    "expr": "IDBObjectStore.prototype.add.name",
+    "expected": "add",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "clear",
+    "expr": "IDBObjectStore.prototype.clear.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "clear",
+    "expr": "IDBObjectStore.prototype.clear.name",
+    "expected": "clear",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "count",
+    "expr": "IDBObjectStore.prototype.count.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "count",
+    "expr": "IDBObjectStore.prototype.count.name",
+    "expected": "count",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "createIndex",
+    "expr": "IDBObjectStore.prototype.createIndex.length",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "createIndex",
+    "expr": "IDBObjectStore.prototype.createIndex.name",
+    "expected": "createIndex",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "delete",
+    "expr": "IDBObjectStore.prototype.delete.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "delete",
+    "expr": "IDBObjectStore.prototype.delete.name",
+    "expected": "delete",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "deleteIndex",
+    "expr": "IDBObjectStore.prototype.deleteIndex.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "deleteIndex",
+    "expr": "IDBObjectStore.prototype.deleteIndex.name",
+    "expected": "deleteIndex",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "get",
+    "expr": "IDBObjectStore.prototype.get.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "get",
+    "expr": "IDBObjectStore.prototype.get.name",
+    "expected": "get",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAll",
+    "expr": "IDBObjectStore.prototype.getAll.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAll",
+    "expr": "IDBObjectStore.prototype.getAll.name",
+    "expected": "getAll",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllKeys",
+    "expr": "IDBObjectStore.prototype.getAllKeys.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllKeys",
+    "expr": "IDBObjectStore.prototype.getAllKeys.name",
+    "expected": "getAllKeys",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllRecords",
+    "expr": "IDBObjectStore.prototype.getAllRecords.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllRecords",
+    "expr": "IDBObjectStore.prototype.getAllRecords.name",
+    "expected": "getAllRecords",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getKey",
+    "expr": "IDBObjectStore.prototype.getKey.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getKey",
+    "expr": "IDBObjectStore.prototype.getKey.name",
+    "expected": "getKey",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "index",
+    "expr": "IDBObjectStore.prototype.index.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "index",
+    "expr": "IDBObjectStore.prototype.index.name",
+    "expected": "index",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openCursor",
+    "expr": "IDBObjectStore.prototype.openCursor.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openCursor",
+    "expr": "IDBObjectStore.prototype.openCursor.name",
+    "expected": "openCursor",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openKeyCursor",
+    "expr": "IDBObjectStore.prototype.openKeyCursor.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openKeyCursor",
+    "expr": "IDBObjectStore.prototype.openKeyCursor.name",
+    "expected": "openKeyCursor",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "put",
+    "expr": "IDBObjectStore.prototype.put.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "put",
+    "expr": "IDBObjectStore.prototype.put.name",
+    "expected": "put",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "add",
+    "expr": "IDBObjectStore.prototype.add.call(Object.create(IDBObjectStore.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "put",
+    "expr": "IDBObjectStore.prototype.put.call(Object.create(IDBObjectStore.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "get",
+    "expr": "IDBObjectStore.prototype.get.call(Object.create(IDBObjectStore.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "index",
+    "expr": "IDBObjectStore.prototype.index.call(Object.create(IDBObjectStore.prototype), \"i\")",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "createIndex",
+    "expr": "IDBObjectStore.prototype.createIndex.call(Object.create(IDBObjectStore.prototype), \"i\", \"kp\")",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "deleteIndex",
+    "expr": "IDBObjectStore.prototype.deleteIndex.call(Object.create(IDBObjectStore.prototype), \"i\")",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "delete",
+    "expr": "IDBObjectStore.prototype.delete.call(Object.create(IDBObjectStore.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "clear",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.clear.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "count",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.count.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAll",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.getAll.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllKeys",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.getAllKeys.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getAllRecords",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.getAllRecords.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "getKey",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.getKey.call(Object.create(IDBObjectStore.prototype), 1)); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openCursor",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.openCursor.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IDBObjectStore",
+    "member": "openKeyCursor",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBObjectStore.prototype.openKeyCursor.call(Object.create(IDBObjectStore.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

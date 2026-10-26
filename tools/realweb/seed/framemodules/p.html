@@ -1,0 +1,5 @@
+<!doctype html><html><body><script>
+var PAGEVAR = 'page'; window.R = null;
+addEventListener('message', function (e) { if (e.data && e.data.r) { window.R = e.data.r; document.title = JSON.stringify(e.data.r); } });
+import('./pm.js').then(function (m) { window.PAGE_IMPORT = m.who(); });
+</script><iframe src="c.html"></iframe></body></html>

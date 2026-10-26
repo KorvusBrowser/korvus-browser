@@ -1,0 +1,11 @@
+<!doctype html><html><body>
+<input id="i" type="number" step="5" value="10">
+<script>
+const i = document.getElementById('i');
+const start = i.valueAsNumber;
+i.stepUp();
+i.stepUp(2);
+const end = i.valueAsNumber;
+globalThis.__obstacle = 'step:' + start + ':' + end + ':' + i.value;
+</script>
+</body></html>

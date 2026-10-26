@@ -1,0 +1,26 @@
+[
+  {
+    "iface": "PushManager",
+    "member": "supportedContentEncodings",
+    "expr": "PushManager.supportedContentEncodings",
+    "expected": [
+      "aes128gcm",
+      "aesgcm"
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PushManager",
+    "member": "constructor",
+    "expr": "new PushManager()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PushManager",
+    "member": "supportedContentEncodings",
+    "expr": "Object.prototype.toString.call(PushManager.supportedContentEncodings)",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "CSSRule",
+    "member": "KEYFRAMES_RULE",
+    "expr": "CSSRule.KEYFRAMES_RULE",
+    "expected": 7,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "KEYFRAME_RULE",
+    "expr": "CSSRule.KEYFRAME_RULE",
+    "expected": 8,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "SUPPORTS_RULE",
+    "expr": "CSSRule.SUPPORTS_RULE",
+    "expected": 12,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "COUNTER_STYLE_RULE",
+    "expr": "CSSRule.COUNTER_STYLE_RULE",
+    "expected": 11,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "FONT_FEATURE_VALUES_RULE",
+    "expr": "CSSRule.FONT_FEATURE_VALUES_RULE",
+    "expected": 14,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "STYLE_RULE",
+    "expr": "CSSRule.STYLE_RULE",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "CHARSET_RULE",
+    "expr": "CSSRule.CHARSET_RULE",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "IMPORT_RULE",
+    "expr": "CSSRule.IMPORT_RULE",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "MEDIA_RULE",
+    "expr": "CSSRule.MEDIA_RULE",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "FONT_FACE_RULE",
+    "expr": "CSSRule.FONT_FACE_RULE",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "PAGE_RULE",
+    "expr": "CSSRule.PAGE_RULE",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "MARGIN_RULE",
+    "expr": "CSSRule.MARGIN_RULE",
+    "expected": 9,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "NAMESPACE_RULE",
+    "expr": "CSSRule.NAMESPACE_RULE",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSRule",
+    "member": "constructor",
+    "expr": "new CSSRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

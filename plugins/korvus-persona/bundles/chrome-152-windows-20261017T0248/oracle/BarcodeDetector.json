@@ -1,0 +1,39 @@
+[
+  {
+    "iface": "BarcodeDetector",
+    "member": "getSupportedFormats",
+    "expr": "BarcodeDetector.getSupportedFormats()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BarcodeDetector",
+    "member": "constructor",
+    "expr": "(() => { const o = new BarcodeDetector(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BarcodeDetector",
+    "member": "getSupportedFormats",
+    "expr": "Object.prototype.toString.call(BarcodeDetector.getSupportedFormats())",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BarcodeDetector",
+    "member": "getSupportedFormats",
+    "expr": "(async () => { return await BarcodeDetector.getSupportedFormats(); })()",
+    "throws": "ReferenceError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BarcodeDetector",
+    "member": "getSupportedFormats",
+    "expr": "(async () => { return Object.prototype.toString.call(await BarcodeDetector.getSupportedFormats()); })()",
+    "throws": "ReferenceError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

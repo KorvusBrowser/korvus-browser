@@ -1,0 +1,78 @@
+[
+  {
+    "iface": "Clipboard",
+    "member": "constructor",
+    "expr": "new Clipboard()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "read",
+    "expr": "(() => { const o = navigator.clipboard; return Object.prototype.toString.call(o.read()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "readText",
+    "expr": "(() => { const o = navigator.clipboard; return Object.prototype.toString.call(o.readText()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "writeText",
+    "expr": "(() => { const o = navigator.clipboard; return Object.prototype.toString.call(o.writeText(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "read",
+    "expr": "(async () => { const o = navigator.clipboard; return await o.read(); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "read",
+    "expr": "(async () => { const o = navigator.clipboard; return Object.prototype.toString.call(await o.read()); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "readText",
+    "expr": "(async () => { const o = navigator.clipboard; return await o.readText(); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "write",
+    "expr": "(async () => { const o = navigator.clipboard; return await o.write(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "writeText",
+    "expr": "(async () => { const o = navigator.clipboard; return await o.writeText(\"x\"); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Clipboard",
+    "member": "writeText",
+    "expr": "(async () => { const o = navigator.clipboard; return await o.writeText(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

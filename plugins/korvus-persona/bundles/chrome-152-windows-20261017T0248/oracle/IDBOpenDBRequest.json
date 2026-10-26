@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "constructor",
+    "expr": "new IDBOpenDBRequest()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onblocked",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onblocked\").get.call(Object.create(IDBOpenDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onblocked",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onblocked\").get.name",
+    "expected": "get onblocked",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onblocked",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onblocked\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onblocked",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onblocked\").set.call(Object.create(IDBOpenDBRequest.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onupgradeneeded",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onupgradeneeded\").get.call(Object.create(IDBOpenDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onupgradeneeded",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onupgradeneeded\").get.name",
+    "expected": "get onupgradeneeded",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onupgradeneeded",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onupgradeneeded\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBOpenDBRequest",
+    "member": "onupgradeneeded",
+    "expr": "Object.getOwnPropertyDescriptor(IDBOpenDBRequest.prototype, \"onupgradeneeded\").set.call(Object.create(IDBOpenDBRequest.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

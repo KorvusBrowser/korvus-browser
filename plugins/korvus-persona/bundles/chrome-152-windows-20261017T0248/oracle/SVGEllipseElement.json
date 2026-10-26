@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "SVGEllipseElement",
+    "member": "constructor",
+    "expr": "new SVGEllipseElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGEllipseElement",
+    "member": "cx",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"ellipse\"); return Object.prototype.toString.call(o.cx); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGEllipseElement",
+    "member": "cy",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"ellipse\"); return Object.prototype.toString.call(o.cy); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGEllipseElement",
+    "member": "rx",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"ellipse\"); return Object.prototype.toString.call(o.rx); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGEllipseElement",
+    "member": "ry",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"ellipse\"); return Object.prototype.toString.call(o.ry); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

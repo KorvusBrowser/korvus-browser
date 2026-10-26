@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "OVR_multiview2",
+    "member": "FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR",
+    "expr": "OVR_multiview2.FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OVR_multiview2",
+    "member": "FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR",
+    "expr": "OVR_multiview2.FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OVR_multiview2",
+    "member": "MAX_VIEWS_OVR",
+    "expr": "OVR_multiview2.MAX_VIEWS_OVR",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OVR_multiview2",
+    "member": "FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR",
+    "expr": "OVR_multiview2.FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "OVR_multiview2",
+    "member": "constructor",
+    "expr": "new OVR_multiview2()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

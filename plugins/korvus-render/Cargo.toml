@@ -1,0 +1,61 @@
+[package]
+name = "korvus-render"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "render"
+
+[dependencies]
+spec = { workspace = true }
+# C2/C6 (goal 1021, plugin ABI 3 wave 1): the viewport override a plugin forces (`set_viewport`) and the
+# frame-tap gate (`has_frames`) are read from the plugin host. Pure Rust, no V8, no cycle (plugin_host
+# depends only on libloading + serde_json). The frame tap and `encode_png` live in this crate; the host
+# is read for the override value and the gate.
+plugin_host = { workspace = true }
+# R2: real Skia (Chrome's rasterizer) for bit-identical 2D. macOS/arm64 pulls prebuilt binaries, so no
+# from-source Skia build (no ninja/gn needed). CoreText-backed SkFontMgr matches Chrome's macOS fonts.
+# PHASE 3 F7: `webp-encode` builds Skia's SkWebpEncoder over the libwebp Chrome 150 links (scripts/skia-source.sh
+# puts it in the source tree), the encoder Blink's `toDataURL('image/webp')` runs.
+skia-safe = { version = "0.99", features = ["webp-encode"] }
+# PNG through the encoder Chrome 150 uses (`SkPngRustEncoder` is this crate). 0.18.1 is
+# already in the lock (tiny-skia's), so this adds no package.
+png = "=0.18.1"
+# Text shaped as Chrome shapes it (HarfBuzz, pure-Rust port) -- the `locl` forms
+# a language selects (Korean punctuation is centred), GPOS kerning, cluster structure -- for the ink
+# boxes `measureText` reports.
+rustybuzz = "0.20.1"
+# Glyph outlines as Chrome 152 draws them on Linux. Its font manager is fontconfig over
+# Skia's Fontations scanner (`skia/ext/font_utils.cc`: `SkFontMgr_New_FCI(fci, SkFontScanner_Make_Fontations())`),
+# so every system font is outlined and hinted by skrifa, not FreeType: the version Chromium 152 vendors
+# (`third_party/rust/chromium_crates_io/vendor/skrifa-v0_44`, unpatched, default features).
+skrifa = "=0.44.0"
+# ANGLE at the revision Chrome ships (`libEGL.so` + `libGLESv2.so`, scripts/angle-source.sh) is loaded at run
+# time, as Chrome's GPU process loads it -- no GL crate, no link-time dependency on a driver. 0.8.9 is already in the lock.
+libloading = "0.8"
+# The device's `deviceOracle.webgl` values cross to the bindings as JSON, as the persona's recording does.
+serde_json = "1"
+# G6: the GPU service's link -- requests and answers as bincode frames over a socket to its own process. Both are
+# already in the lock.
+serde = { version = "1", features = ["derive"] }
+bincode = "=1.3.3"
+# Chrome 152's Web Audio FFT (`WebAudioRustFft`, stable): the version Chromium vendors
+# (`third_party/rust/chromium_crates_io/Cargo.toml`), with the features its BUILD.gn enables -- the crate's
+# defaults (avx, sse, neon), so `FftPlanner::new()` picks the kernels Chrome's build picks on the same CPU.
+rustfft = "=6.4.1"
+# WebP and AVIF, which Chrome decodes and this Skia build does not (`modern_decode`): image-rs's pure-Rust WebP
+# decoder; the AVIF container parser; the Rust port of dav1d without its assembly (no build needs nasm).
+image-webp = "=0.2.4"
+avif-parse = "=2.1.0"
+rav1d = { version = "=1.1.0", default-features = false, features = ["bitdepth_8", "bitdepth_16"] }
+# A `<video>`'s H.264 (`video_decode`): Cisco's OpenH264 decoder, built from the source the crate carries (BSD-2), its
+# assembly through nasm where the machine has one and plain C where it does not. AV1 is the `rav1d` above.
+openh264 = "=0.9.9"
+# A page's web fonts (`web_fonts`): WOFF 1.0 and WOFF2 bodies back to the sfnt Skia and skrifa read -- WOFF2's
+# glyf/loca and hmtx transforms included. Pure Rust; its brotli and zlib decoders are already in the lock.
+wuff = "=0.2.9"
+
+[build-dependencies]
+# The vendored fdlibm (third_party/fdlibm): Chrome's math for the dynamics compressor.
+cc = "1.4.3"

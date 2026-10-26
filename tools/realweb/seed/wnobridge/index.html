@@ -1,0 +1,17 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P7 B28: a worker's global -- dedicated, shared, service -- has no own symbol-keyed member and
+// nothing under Symbol.for('korvus.bridge'), as Chrome's has not (see probe.js).
+const got = {};
+// in a fixed key order: the three answers arrive in no fixed order
+const done = () => { if (got.dedicated && got.shared && got.service) window.R = JSON.stringify({ dedicated: got.dedicated, shared: got.shared, service: got.service }); };
+const w = new Worker('d.js');
+w.onmessage = (e) => { got.dedicated = e.data; done(); };
+const s = new SharedWorker('s.js');
+s.port.onmessage = (e) => { got.shared = e.data; done(); };
+s.port.start();
+navigator.serviceWorker.addEventListener('message', (e) => { got.service = e.data; done(); });
+navigator.serviceWorker.register('sw.js').then(async (reg) => {
+  await navigator.serviceWorker.ready;
+  (reg.active || reg.waiting || reg.installing).postMessage('go');
+}).catch((e) => { got.service = 'register failed: ' + e; done(); });
+</script>

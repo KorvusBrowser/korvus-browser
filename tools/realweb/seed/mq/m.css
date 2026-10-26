@@ -1,0 +1,7 @@
+.a,.b,.c,.d,.e,.f{display:block}
+@media(prefers-reduced-motion:reduce){.a{display:none}}
+@media(max-width:10px){.b{display:none}}
+@media (max-width:10px){.c{display:none}}
+@media screen and(max-width:10px){.d{display:none}}
+@media(min-width:10px){.e{display:inline}}
+@media not all and(prefers-reduced-motion:reduce){.f{display:inline}}

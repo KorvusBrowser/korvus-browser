@@ -1,0 +1,15 @@
+<!doctype html><title>t</title><body style="margin:0">
+<div id=on style="content-visibility:auto">onscreen auto</div>
+<div id=hid style="content-visibility:hidden">hidden text</div>
+<div style="height:3000px"></div>
+<div id=off style="content-visibility:auto">offscreen auto</div>
+<div id=offsized style="content-visibility:auto;contain-intrinsic-size:auto 100px">offscreen sized</div>
+<div id=plain>plain tail</div>
+<script>
+addEventListener('load', () => setTimeout(() => {
+  const r = {}, g = id => document.getElementById(id);
+  r.body = document.body.innerText;
+  for (const id of ['on', 'hid', 'off', 'offsized', 'plain']) r[id] = [g(id).innerText, g(id).offsetHeight, g(id).textContent.length];
+  document.title = JSON.stringify(r);
+}, 300));
+</script>

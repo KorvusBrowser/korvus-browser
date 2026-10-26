@@ -1,0 +1,443 @@
+[
+  {
+    "iface": "XRFrame",
+    "member": "constructor",
+    "expr": "new XRFrame()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "session",
+    "expr": "XRFrame.prototype.session",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "session",
+    "expr": "Object.getOwnPropertyDescriptor(XRFrame.prototype, \"session\").get.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getPose",
+    "expr": "XRFrame.prototype.getPose.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getPose",
+    "expr": "XRFrame.prototype.getPose.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getViewerPose",
+    "expr": "XRFrame.prototype.getViewerPose.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getViewerPose",
+    "expr": "XRFrame.prototype.getViewerPose.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "trackedAnchors",
+    "expr": "XRFrame.prototype.trackedAnchors",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "trackedAnchors",
+    "expr": "Object.getOwnPropertyDescriptor(XRFrame.prototype, \"trackedAnchors\").get.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "createAnchor",
+    "expr": "Object.prototype.toString.call(XRFrame.prototype.createAnchor.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "createAnchor",
+    "expr": "Object.prototype.toString.call(XRFrame.prototype.createAnchor.call(Object.create(XRFrame.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillJointRadii",
+    "expr": "XRFrame.prototype.fillJointRadii.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillJointRadii",
+    "expr": "XRFrame.prototype.fillJointRadii.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillPoses",
+    "expr": "XRFrame.prototype.fillPoses.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillPoses",
+    "expr": "XRFrame.prototype.fillPoses.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getDepthInformation",
+    "expr": "XRFrame.prototype.getDepthInformation.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getDepthInformation",
+    "expr": "XRFrame.prototype.getDepthInformation.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResults",
+    "expr": "XRFrame.prototype.getHitTestResults.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResults",
+    "expr": "XRFrame.prototype.getHitTestResults.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResultsForTransientInput",
+    "expr": "XRFrame.prototype.getHitTestResultsForTransientInput.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResultsForTransientInput",
+    "expr": "XRFrame.prototype.getHitTestResultsForTransientInput.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getJointPose",
+    "expr": "XRFrame.prototype.getJointPose.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getJointPose",
+    "expr": "XRFrame.prototype.getJointPose.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getLightEstimate",
+    "expr": "XRFrame.prototype.getLightEstimate.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getLightEstimate",
+    "expr": "XRFrame.prototype.getLightEstimate.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "detectedPlanes",
+    "expr": "XRFrame.prototype.detectedPlanes",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "detectedPlanes",
+    "expr": "Object.getOwnPropertyDescriptor(XRFrame.prototype, \"detectedPlanes\").get.call(Object.create(XRFrame.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getPose",
+    "expr": "XRFrame.prototype.getPose.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getViewerPose",
+    "expr": "XRFrame.prototype.getViewerPose.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "createAnchor",
+    "expr": "Object.prototype.toString.call(XRFrame.prototype.createAnchor.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillJointRadii",
+    "expr": "XRFrame.prototype.fillJointRadii.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillPoses",
+    "expr": "XRFrame.prototype.fillPoses.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getDepthInformation",
+    "expr": "XRFrame.prototype.getDepthInformation.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResults",
+    "expr": "XRFrame.prototype.getHitTestResults.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResultsForTransientInput",
+    "expr": "XRFrame.prototype.getHitTestResultsForTransientInput.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getJointPose",
+    "expr": "XRFrame.prototype.getJointPose.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getLightEstimate",
+    "expr": "XRFrame.prototype.getLightEstimate.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"session\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"session\").get.call(Object.create(XRFrame.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getPose\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getPose\"].call(Object.create(XRFrame.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getViewerPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getViewerPose\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getViewerPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getViewerPose\"].call(Object.create(XRFrame.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "trackedAnchors",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"trackedAnchors\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "trackedAnchors",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"trackedAnchors\").get.call(Object.create(XRFrame.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "createAnchor",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"createAnchor\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "createAnchor",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"createAnchor\"].call(Object.create(XRFrame.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillJointRadii",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"fillJointRadii\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillJointRadii",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"fillJointRadii\"].call(Object.create(XRFrame.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillPoses",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"fillPoses\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "fillPoses",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"fillPoses\"].call(Object.create(XRFrame.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getDepthInformation",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getDepthInformation\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getDepthInformation",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getDepthInformation\"].call(Object.create(XRFrame.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResults",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getHitTestResults\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResults",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getHitTestResults\"].call(Object.create(XRFrame.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResultsForTransientInput",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getHitTestResultsForTransientInput\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getHitTestResultsForTransientInput",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getHitTestResultsForTransientInput\"].call(Object.create(XRFrame.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getJointPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getJointPose\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getJointPose",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getJointPose\"].call(Object.create(XRFrame.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getLightEstimate",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getLightEstimate\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "getLightEstimate",
+    "expr": "(() => { try { const v = XRFrame.prototype[\"getLightEstimate\"].call(Object.create(XRFrame.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "detectedPlanes",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"detectedPlanes\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRFrame",
+    "member": "detectedPlanes",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRFrame.prototype, \"detectedPlanes\").get.call(Object.create(XRFrame.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

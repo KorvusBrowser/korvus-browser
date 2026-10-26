@@ -1,0 +1,13 @@
+<!doctype html><title>w</title><body><script>
+const r = {};
+const tryWorker = (k, url) => new Promise(res => { let w; try { w = new Worker(url); } catch (e) { r[k] = 'THROW ' + e.message; return res(); }
+  const t = setTimeout(() => { r[k] = 'no-message (timeout)'; res(); }, 1500);
+  w.onmessage = e => { clearTimeout(t); r[k] = 'ok ' + e.data; res(); }; w.onerror = e => { clearTimeout(t); r[k] = 'error ' + (e.message || ''); res(); }; });
+(async () => {
+  await tryWorker('blobWorker', URL.createObjectURL(new Blob(['postMessage(typeof self.navigator + "/" + typeof navigator.hardwareConcurrency)'], {type: 'text/javascript'})));
+  await tryWorker('dataWorker', 'data:text/javascript,postMessage("d")');
+  const code = 'onmessage=e=>postMessage(e.data*2)'; const u = URL.createObjectURL(new Blob([code])); 
+  await new Promise(res => { try { const w = new Worker(u); w.onmessage = e => { r.blobWorkerEcho = e.data; res(); }; w.onerror = () => { r.blobWorkerEcho = 'error'; res(); }; w.postMessage(21); setTimeout(res, 1500); } catch (e) { r.blobWorkerEcho = 'THROW ' + e.message; res(); } });
+  document.title = JSON.stringify(r);
+})();
+</script></body>

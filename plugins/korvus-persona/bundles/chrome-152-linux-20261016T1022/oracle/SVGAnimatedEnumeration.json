@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "SVGAnimatedEnumeration",
+    "member": "constructor",
+    "expr": "new SVGAnimatedEnumeration()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedEnumeration",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\").mode; return o.baseVal; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedEnumeration",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\").mode; return (o.baseVal = 1, o.baseVal); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedEnumeration",
+    "member": "animVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\").mode; return o.animVal; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedEnumeration",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feBlend\").mode; return (o.baseVal = \"1\", o.baseVal); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

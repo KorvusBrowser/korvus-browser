@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "VideoColorSpace",
+    "member": "constructor",
+    "expr": "(() => { const o = new VideoColorSpace(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object VideoColorSpace]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "primaries",
+    "expr": "(() => { const o = new VideoColorSpace(); return o.primaries; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "transfer",
+    "expr": "(() => { const o = new VideoColorSpace(); return o.transfer; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "matrix",
+    "expr": "(() => { const o = new VideoColorSpace(); return o.matrix; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "fullRange",
+    "expr": "(() => { const o = new VideoColorSpace(); return o.fullRange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "primaries",
+    "expr": "(() => { const o = new VideoColorSpace(); return Object.prototype.toString.call(o.primaries); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "transfer",
+    "expr": "(() => { const o = new VideoColorSpace(); return Object.prototype.toString.call(o.transfer); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "matrix",
+    "expr": "(() => { const o = new VideoColorSpace(); return Object.prototype.toString.call(o.matrix); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "VideoColorSpace",
+    "member": "toJSON",
+    "expr": "(() => { const o = new VideoColorSpace(); return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

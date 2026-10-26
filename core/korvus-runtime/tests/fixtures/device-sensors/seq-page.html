@@ -1,0 +1,83 @@
+<!doctype html><html><head><meta charset=utf-8></head><body><script>
+// Which listeners hear the null device events Chrome fires when a listener is added, step by step (300 ms apart).
+var log = [], r = {hidden: document.hidden};
+addEventListener('visibilitychange', function () { r.hidden = r.hidden || document.hidden; });
+function L(tag) { return function (e) { log.push([tag, e.type, e.isTrusted]); }; }
+function err(f) { try { f(); return 'no throw'; } catch (e) { return e.name + ': ' + e.message; } }
+function shape(e) {
+  var o = {type: e.type, trusted: e.isTrusted, bubbles: e.bubbles, cancelable: e.cancelable, composed: e.composed, phase: e.eventPhase,
+    target: e.target === window, currentTarget: e.currentTarget === window, tag: Object.prototype.toString.call(e), stamp: e.timeStamp > 0,
+    windowEvent: window.event === e, ownKeys: Object.getOwnPropertyNames(e).join(',')};
+  if (e.type === 'devicemotion') {
+    var a = e.acceleration, g = e.accelerationIncludingGravity, rr = e.rotationRate;
+    o.acceleration = [Object.prototype.toString.call(a), a.x, a.y, a.z, Object.keys(a).length, a === e.acceleration, a instanceof DeviceMotionEventAcceleration];
+    o.gravity = [Object.prototype.toString.call(g), g.x, g.y, g.z, g === a];
+    o.rotation = [Object.prototype.toString.call(rr), rr.alpha, rr.beta, rr.gamma, rr === e.rotationRate];
+    o.interval = e.interval;
+  } else {
+    o.angles = [e.alpha, e.beta, e.gamma, e.absolute];
+  }
+  return o;
+}
+var steps = [];
+function step(name, f) { steps.push([name, f]); }
+var shapes = [], beforeFirst = [];
+step('shape', function () {
+  setTimeout(function () { beforeFirst.push('timeout 0'); }, 0);
+  setTimeout(function () { beforeFirst.push('timeout 250'); }, 250);
+  ['devicemotion', 'deviceorientation', 'deviceorientationabsolute'].forEach(function (t) {
+    addEventListener(t, function (e) { shapes.push(shape(e)); beforeFirst.push(t); }, {once: true});
+  });
+});
+var l1 = L('dm-l1'), l2 = L('dm-l2');
+step('add l1', function () { addEventListener('devicemotion', l1); });
+step('add l2', function () { addEventListener('devicemotion', l2); });
+step('re-add l1', function () { addEventListener('devicemotion', l1); });
+step('re-add l1 capture', function () { addEventListener('devicemotion', l1, true); });
+step('ondevicemotion', function () { window.ondevicemotion = L('dm-on'); });
+step('ondevicemotion again', function () { window.ondevicemotion = L('dm-on2'); });
+step('ondevicemotion null then set', function () { window.ondevicemotion = null; window.ondevicemotion = L('dm-on3'); });
+var o1 = L('do-l1');
+step('do add+remove', function () { addEventListener('deviceorientation', o1); removeEventListener('deviceorientation', o1); });
+step('do add, remove in 5 ms', function () { addEventListener('deviceorientation', o1); setTimeout(function () { removeEventListener('deviceorientation', o1); }, 5); });
+step('do add, signal abort in 5 ms', function () { var c = new AbortController(); addEventListener('deviceorientation', o1, {signal: c.signal}); setTimeout(function () { c.abort(); }, 5); });
+step('do add, remove + re-add', function () { addEventListener('deviceorientation', o1); removeEventListener('deviceorientation', o1); addEventListener('deviceorientation', o1); });
+step('do add, keep second', function () { addEventListener('deviceorientation', L('do-l2')); });
+step('doa capture + once', function () { addEventListener('deviceorientationabsolute', L('doa-cap'), true); addEventListener('deviceorientationabsolute', L('doa-once'), {once: true}); });
+step('doa third', function () { addEventListener('deviceorientationabsolute', L('doa-3')); });
+var inner = L('doa-added-in-dispatch');
+step('doa adds during dispatch', function () {
+  var done = false;
+  addEventListener('deviceorientationabsolute', function f(e) { log.push(['doa-adder', e.type, e.isTrusted]); if (!done) { done = true; addEventListener('deviceorientationabsolute', inner); } });
+});
+step('doa nothing', function () {});
+step('dm: other target types', function () { document.addEventListener('devicemotion', L('doc-dm')); document.body.addEventListener('devicemotion', L('body-dm')); });
+step('end', function () {});
+var i = 0;
+function next() {
+  var s = steps[i++];
+  log.push(['step', s[0]]);
+  s[1]();
+  if (i < steps.length) setTimeout(next, 300);
+  else finish();
+}
+function finish() {
+  shapes.sort(function (a, b) { return a.type < b.type ? -1 : 1; });
+  r.shapes = shapes;
+  r.order = [beforeFirst[0], beforeFirst.slice(1, 4).sort(), beforeFirst[4]];
+  r.log = log;
+  r.ctor = {
+    motionInit: (function () { var e = new DeviceMotionEvent('x', {acceleration: {x: 1}, accelerationIncludingGravity: {}, interval: 3}); var a = e.acceleration;
+      return [Object.prototype.toString.call(a), a.x, a.y, a.z, Object.prototype.toString.call(e.accelerationIncludingGravity), e.accelerationIncludingGravity.x, e.rotationRate, e.interval, a === e.acceleration, e.isTrusted]; })(),
+    motionNullMember: (function () { var e = new DeviceMotionEvent('x', {rotationRate: null}); return [Object.prototype.toString.call(e.rotationRate), e.rotationRate && e.rotationRate.alpha]; })(),
+    motionBare: (function () { var e = new DeviceMotionEvent('x'); return [e.acceleration, e.accelerationIncludingGravity, e.rotationRate, e.interval]; })(),
+    orientation: (function () { var e = new DeviceOrientationEvent('x', {alpha: 5, absolute: true}); return [e.alpha, e.beta, e.gamma, e.absolute, e.bubbles]; })(),
+    illegalCtor: err(function () { new DeviceMotionEventAcceleration(); }),
+    foreignGetter: err(function () { Object.getOwnPropertyDescriptor(DeviceMotionEventAcceleration.prototype, 'x').get.call({}); }),
+    requestPermission: [typeof DeviceMotionEvent.requestPermission, typeof DeviceOrientationEvent.requestPermission]
+  };
+  window.__r = JSON.stringify(r);
+  fetch('/report', {method: 'POST', body: window.__r});
+}
+next();
+</script></body></html>

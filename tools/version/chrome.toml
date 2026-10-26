@@ -1,0 +1,29 @@
+# The Chrome release korvus wears, and every pin that follows from it -- one file, so a version update is one diff.
+#
+#   tools/version/next.py pins <version> --write    rewrites it from that release's src/DEPS (and this repository's
+#                                                   libpng configuration from the same release)
+#   tools/version/next.py check                      the gate's question: do Cargo.lock, Cargo.toml and the shipped
+#                                                   persona agree with it?
+#
+# scripts/skia-source.sh and scripts/angle-source.sh read the revisions below; nothing else in the tree names them.
+# The policy (owner 2026-10-15): the release is the last one of the milestone whose V8 the newest `v8` crate on
+# crates.io carries -- `next.py target` names it.
+
+chrome = "152.0.7977.82"
+v8_crate = "152.2.0"
+skrifa = "0.44.0"
+
+skia_revision = "0873ec164a06966b90ae0d43ef783cfb180084ae"
+angle_revision = "7df613367a1d4ca9aea9ece344d4580d32d132a9"
+# libvpx (VP8), the revision Chrome pins, for the WebRTC send path's encoder (scripts/vpx-source.sh builds it;
+# only `--features webrtc-media` links it). The VP8 bitstream is fingerprintable, so it tracks Chrome's revision.
+libvpx_revision = "ade52487a37ef76a0f209bd39bea9fe67d6db4c4"
+
+# The libraries Skia's build compiles, at the revisions Chrome pins (not Skia's own DEPS pins):
+# skia_dep.<name> = "<repository> <revision> <path in the repository> <path under skia/third_party/externals>"
+skia_dep.expat = "https://chromium.googlesource.com/external/github.com/libexpat/libexpat.git a851869e111c06fbcdc89edf639abf5fc2b6deba expat/lib expat/expat/lib"
+skia_dep.libpng = "https://github.com/pnggroup/libpng.git 3061454d980de7d53608f594194cfac722721d2a . libpng"
+skia_dep.zlib = "https://chromium.googlesource.com/chromium/src/third_party/zlib.git 42c2f19a14d33b4ed327ab898fe7b652013aa740 . zlib"
+skia_dep.libjpeg-turbo = "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo.git 640f254ad0fa03f6b1f29f89b7dd9366f2f6e533 . libjpeg-turbo"
+skia_dep.wuffs = "https://skia.googlesource.com/external/github.com/google/wuffs-mirror-release-c.git 7411f488fe2e2c205c3d3b3d28638b7356522930 . wuffs"
+skia_dep.libwebp = "https://chromium.googlesource.com/webm/libwebp.git b43b2caa710c0c997c066cb32c7fea1391fad70a . libwebp"

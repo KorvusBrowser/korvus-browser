@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSContentsBlockRule",
+    "member": "constructor",
+    "expr": "new CSSContentsBlockRule()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

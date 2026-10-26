@@ -1,0 +1,12 @@
+<!doctype html><title>a</title><body><script>
+const r = {};
+const render = async (withComp, type = 'triangle') => { const ctx = new OfflineAudioContext(1, 5000, 44100); const o = ctx.createOscillator(); o.type = type; o.frequency.value = 10000;
+  let last = o; if (withComp) { const c = ctx.createDynamicsCompressor(); c.threshold.value = -50; c.knee.value = 40; c.ratio.value = 12; c.attack.value = 0; c.release.value = 0.25; o.connect(c); last = c; }
+  last.connect(ctx.destination); o.start(0); const b = await ctx.startRendering(); const d = b.getChannelData(0); let s = 0; for (let i = 4500; i < 5000; i++) s += Math.abs(d[i]); return {sum: s.toFixed(6), first: Array.from(d.slice(0, 6)).map(v => v.toFixed(5)).join(','), max: Math.max(...d).toFixed(5)}; };
+(async () => {
+  r.osc_triangle = await render(false); r.osc_sine = await render(false, 'sine'); r.comp_triangle = await render(true);
+  try { const ctx = new OfflineAudioContext(1, 44100, 44100); const o = ctx.createOscillator(); const a = ctx.createAnalyser(); o.connect(a); a.connect(ctx.destination); o.start(0);
+    await ctx.startRendering(); const f = new Float32Array(a.frequencyBinCount); a.getFloatFrequencyData(f); r.analyser = f.slice(0, 4).map(v => v.toFixed(3)).join(','); } catch (e) { r.analyser = 'THROW ' + e.message; }
+  document.title = JSON.stringify(r);
+})();
+</script></body>

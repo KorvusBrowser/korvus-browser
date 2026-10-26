@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGAnimatedRect",
+    "member": "constructor",
+    "expr": "new SVGAnimatedRect()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedRect",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").viewBox; return Object.prototype.toString.call(o.baseVal); })()",
+    "expected": "[object SVGRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedRect",
+    "member": "animVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").viewBox; return Object.prototype.toString.call(o.animVal); })()",
+    "expected": "[object SVGRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

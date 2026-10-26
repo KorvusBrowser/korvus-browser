@@ -1,0 +1,15 @@
+<!doctype html><title>p</title><body><script>
+window.__r = {};
+addEventListener('message', e => { if (e.data && e.data.frame) window.__r[e.data.frame] = 'loaded+ran'; });
+const mk = (tag) => { const f = document.createElement('iframe'); f.setAttribute('src', 'http://127.0.0.1:18152/c.html?' + tag); return f; };
+// A: iframe into a DETACHED div, then the div is attached
+const d1 = document.createElement('div'); d1.appendChild(mk('detachedDiv')); document.body.appendChild(d1);
+// B: iframe into a closed shadow root of a DETACHED host, then the host is attached (a challenge provider's order)
+const h = document.createElement('div'); const sr = h.attachShadow({mode: 'closed'}); sr.appendChild(mk('detachedShadowHost')); document.body.appendChild(h);
+// C: iframe into a detached fragment, then fragment appended
+const fr = document.createDocumentFragment(); fr.appendChild(mk('fragment')); document.body.appendChild(fr);
+// D: src set AFTER connection
+const f4 = document.createElement('iframe'); document.body.appendChild(f4); f4.src = 'http://127.0.0.1:18152/c.html?srcAfterConnect';
+// E: innerHTML
+document.body.insertAdjacentHTML('beforeend', '<iframe src="http://127.0.0.1:18152/c.html?innerHTML"></iframe>');
+</script></body>

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "DOMRectList",
+    "member": "constructor",
+    "expr": "new DOMRectList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMRectList",
+    "member": "length",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); return d.getClientRects(); })(); return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMRectList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); return d.getClientRects(); })(); return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMRectList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); return d.getClientRects(); })(); return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

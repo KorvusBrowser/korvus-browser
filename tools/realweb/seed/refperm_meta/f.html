@@ -1,0 +1,12 @@
+<!doctype html><meta charset=utf-8><body>frame<script>
+(async () => {
+  const P = n => navigator.permissions.query({name: n}).then(s => s.state, e => 'THROW ' + e.name);
+  const d = {fk: new URLSearchParams(location.search).get('k'), referrer: document.referrer,
+    camera: await P('camera'), geolocation: await P('geolocation'), notifications: await P('notifications'), microphone: await P('microphone'),
+    storageAccess: await P('storage-access'), allowed: document.featurePolicy.allowedFeatures().length,
+    allowsCamera: document.featurePolicy.allowsFeature('camera'), allowsGeo: document.featurePolicy.allowsFeature('geolocation'),
+    vv: window.visualViewport ? [visualViewport.width, visualViewport.height] : null, inner: [innerWidth, innerHeight], oac: originAgentCluster};
+  try { const x = new XMLHttpRequest(); x.open('GET', location.pathname, false); x.send(); d.syncXhr = 'ok'; } catch (e) { d.syncXhr = 'THROW ' + e.name; }
+  parent.postMessage(d, '*');
+})();
+</script>

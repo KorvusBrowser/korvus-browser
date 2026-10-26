@@ -1,0 +1,18 @@
+<!doctype html>
+<script>
+const A = 'http://127.0.0.1:' + (+location.port - 1);
+const s = document.createElement('script'); s.src = A + '/s.js?k=frame-xo-script'; document.head.appendChild(s);
+(async () => {
+  await new Promise(r => { s.onload = s.onerror = r; });
+  const x = new XMLHttpRequest(); x.open('POST', '/r/?k=frame-xhr-post'); x.setRequestHeader('x-kv-one', 'a');
+  x.setRequestHeader('content-type', 'text/plain;charset=UTF-8'); x.setRequestHeader('x-kv-two', 'b'); x.send('v=1');
+  await new Promise(r => x.onloadend = r);
+  await fetch('/r/?k=frame-fetch-post', {method: 'POST', body: 'v=2', headers: {'x-kv-one': 'a'}});
+  await fetch('/r/?k=frame-fetch-get');
+  const src = "fetch(self.O + '/r/?k=worker-fetch-get').then(() => fetch(self.O + '/r/?k=worker-fetch-post', {method: 'POST', body: 'w'})).then(() => postMessage('ok'))";
+  const w = new Worker(URL.createObjectURL(new Blob(['self.O = ' + JSON.stringify(location.origin) + ';' + src], {type: 'text/javascript'})));
+  await new Promise(r => w.onmessage = r);
+  const i = new Image(); i.src = 'p.png?k=frame-img'; await new Promise(r => { i.onload = i.onerror = r; });
+  parent.postMessage('done', '*');
+})();
+</script>

@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "constructor",
+    "expr": "new PerformancePaintTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "paintTime",
+    "expr": "Object.getOwnPropertyDescriptor(PerformancePaintTiming.prototype, \"paintTime\").get.call(Object.create(PerformancePaintTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "paintTime",
+    "expr": "Object.getOwnPropertyDescriptor(PerformancePaintTiming.prototype, \"paintTime\").get.name",
+    "expected": "get paintTime",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "presentationTime",
+    "expr": "Object.getOwnPropertyDescriptor(PerformancePaintTiming.prototype, \"presentationTime\").get.call(Object.create(PerformancePaintTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "presentationTime",
+    "expr": "Object.getOwnPropertyDescriptor(PerformancePaintTiming.prototype, \"presentationTime\").get.name",
+    "expected": "get presentationTime",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "toJSON",
+    "expr": "PerformancePaintTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "toJSON",
+    "expr": "PerformancePaintTiming.prototype.toJSON.name",
+    "expected": "toJSON",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformancePaintTiming",
+    "member": "toJSON",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformancePaintTiming.prototype.toJSON.call(Object.create(PerformancePaintTiming.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

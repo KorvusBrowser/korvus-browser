@@ -1,0 +1,835 @@
+[
+  {
+    "iface": "GPUDevice",
+    "member": "constructor",
+    "expr": "new GPUDevice()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "features",
+    "expr": "GPUDevice.prototype.features",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "features",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"features\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "limits",
+    "expr": "GPUDevice.prototype.limits",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "limits",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"limits\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "adapterInfo",
+    "expr": "GPUDevice.prototype.adapterInfo",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "adapterInfo",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"adapterInfo\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "lost",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.lost)",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "lost",
+    "expr": "Object.prototype.toString.call(Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"lost\").get.call(Object.create(GPUDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "queue",
+    "expr": "GPUDevice.prototype.queue",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "queue",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"queue\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "GPUDevice.prototype.onuncapturederror",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "GPUDevice.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").get.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroup",
+    "expr": "GPUDevice.prototype.createBindGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroup",
+    "expr": "GPUDevice.prototype.createBindGroup.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroupLayout",
+    "expr": "GPUDevice.prototype.createBindGroupLayout.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroupLayout",
+    "expr": "GPUDevice.prototype.createBindGroupLayout.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBuffer",
+    "expr": "GPUDevice.prototype.createBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBuffer",
+    "expr": "GPUDevice.prototype.createBuffer.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createCommandEncoder",
+    "expr": "GPUDevice.prototype.createCommandEncoder.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createCommandEncoder",
+    "expr": "GPUDevice.prototype.createCommandEncoder.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipeline",
+    "expr": "GPUDevice.prototype.createComputePipeline.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipeline",
+    "expr": "GPUDevice.prototype.createComputePipeline.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createComputePipelineAsync.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createComputePipelineAsync.call(Object.create(GPUDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createPipelineLayout",
+    "expr": "GPUDevice.prototype.createPipelineLayout.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createPipelineLayout",
+    "expr": "GPUDevice.prototype.createPipelineLayout.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createQuerySet",
+    "expr": "GPUDevice.prototype.createQuerySet.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createQuerySet",
+    "expr": "GPUDevice.prototype.createQuerySet.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderBundleEncoder",
+    "expr": "GPUDevice.prototype.createRenderBundleEncoder.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderBundleEncoder",
+    "expr": "GPUDevice.prototype.createRenderBundleEncoder.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipeline",
+    "expr": "GPUDevice.prototype.createRenderPipeline.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipeline",
+    "expr": "GPUDevice.prototype.createRenderPipeline.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createRenderPipelineAsync.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createRenderPipelineAsync.call(Object.create(GPUDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createSampler",
+    "expr": "GPUDevice.prototype.createSampler.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createSampler",
+    "expr": "GPUDevice.prototype.createSampler.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createShaderModule",
+    "expr": "GPUDevice.prototype.createShaderModule.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createShaderModule",
+    "expr": "GPUDevice.prototype.createShaderModule.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createTexture",
+    "expr": "GPUDevice.prototype.createTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createTexture",
+    "expr": "GPUDevice.prototype.createTexture.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "destroy",
+    "expr": "GPUDevice.prototype.destroy.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "destroy",
+    "expr": "GPUDevice.prototype.destroy.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "importExternalTexture",
+    "expr": "GPUDevice.prototype.importExternalTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "importExternalTexture",
+    "expr": "GPUDevice.prototype.importExternalTexture.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "popErrorScope",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.popErrorScope.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "popErrorScope",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.popErrorScope.call(Object.create(GPUDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "pushErrorScope",
+    "expr": "GPUDevice.prototype.pushErrorScope.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "pushErrorScope",
+    "expr": "GPUDevice.prototype.pushErrorScope.call(Object.create(GPUDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroup",
+    "expr": "GPUDevice.prototype.createBindGroup.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroupLayout",
+    "expr": "GPUDevice.prototype.createBindGroupLayout.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBuffer",
+    "expr": "GPUDevice.prototype.createBuffer.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipeline",
+    "expr": "GPUDevice.prototype.createComputePipeline.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createComputePipelineAsync.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createPipelineLayout",
+    "expr": "GPUDevice.prototype.createPipelineLayout.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createQuerySet",
+    "expr": "GPUDevice.prototype.createQuerySet.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderBundleEncoder",
+    "expr": "GPUDevice.prototype.createRenderBundleEncoder.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipeline",
+    "expr": "GPUDevice.prototype.createRenderPipeline.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipelineAsync",
+    "expr": "Object.prototype.toString.call(GPUDevice.prototype.createRenderPipelineAsync.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createShaderModule",
+    "expr": "GPUDevice.prototype.createShaderModule.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createTexture",
+    "expr": "GPUDevice.prototype.createTexture.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "importExternalTexture",
+    "expr": "GPUDevice.prototype.importExternalTexture.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "pushErrorScope",
+    "expr": "GPUDevice.prototype.pushErrorScope.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "features",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"features\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "features",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"features\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "limits",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"limits\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "limits",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"limits\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "adapterInfo",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"adapterInfo\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "adapterInfo",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"adapterInfo\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "queue",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"queue\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "queue",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"queue\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "onuncapturederror",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"onuncapturederror\").set.call(Object.create(GPUDevice.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").get.call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUDevice.prototype, \"label\").set.call(Object.create(GPUDevice.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroup",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBindGroup\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroup",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBindGroup\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroupLayout",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBindGroupLayout\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBindGroupLayout",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBindGroupLayout\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBuffer",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBuffer\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createBuffer",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createBuffer\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createCommandEncoder",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createCommandEncoder\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createCommandEncoder",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createCommandEncoder\"].call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipeline",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createComputePipeline\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipeline",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createComputePipeline\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipelineAsync",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createComputePipelineAsync\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createComputePipelineAsync",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createComputePipelineAsync\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createPipelineLayout",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createPipelineLayout\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createPipelineLayout",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createPipelineLayout\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createQuerySet",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createQuerySet\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createQuerySet",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createQuerySet\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderBundleEncoder",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderBundleEncoder\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderBundleEncoder",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderBundleEncoder\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipeline",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderPipeline\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipeline",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderPipeline\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipelineAsync",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderPipelineAsync\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createRenderPipelineAsync",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createRenderPipelineAsync\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createSampler",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createSampler\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createSampler",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createSampler\"].call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createShaderModule",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createShaderModule\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createShaderModule",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createShaderModule\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createTexture",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createTexture\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "createTexture",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"createTexture\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"destroy\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"destroy\"].call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "importExternalTexture",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"importExternalTexture\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "importExternalTexture",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"importExternalTexture\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "popErrorScope",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"popErrorScope\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "popErrorScope",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"popErrorScope\"].call(Object.create(GPUDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "pushErrorScope",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"pushErrorScope\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUDevice",
+    "member": "pushErrorScope",
+    "expr": "(() => { try { const v = GPUDevice.prototype[\"pushErrorScope\"].call(Object.create(GPUDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

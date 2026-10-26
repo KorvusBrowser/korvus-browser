@@ -1,0 +1,6 @@
+<!doctype html><html><body><script>
+var cases = ['"title-font"', '"serif"', 'serif', '"Noto Sans"', 'Noto Sans', 'Noto   Sans', "'x'", '"1abc"', '"-x"', '"--x"', '"a,b"', '"inherit"', '"default"', 'Arial, "Times New Roman", serif', '"Times New Roman"', 'sans-serif,monospace', '"a\\"b"', '"\\41 bc"', 'system-ui', '"system-ui"', 'Ω', '"Ω x"', '"x\\ty"'];
+var out = {};
+cases.forEach(function (c) { var d = document.createElement('div'); d.style.fontFamily = c; document.body.appendChild(d); out[c] = [d.style.fontFamily, getComputedStyle(d).fontFamily]; });
+window.R = JSON.stringify(out);
+</script></body></html>

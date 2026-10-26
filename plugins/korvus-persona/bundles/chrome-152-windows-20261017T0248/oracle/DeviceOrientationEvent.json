@@ -1,0 +1,74 @@
+[
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "requestPermission",
+    "expr": "DeviceOrientationEvent.requestPermission()",
+    "throws": "TypeError",
+    "source": "brave-151-linux"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceOrientationEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DeviceOrientationEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new DeviceOrientationEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "alpha",
+    "expr": "(() => { const o = new DeviceOrientationEvent(\"x\"); return o.alpha; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "beta",
+    "expr": "(() => { const o = new DeviceOrientationEvent(\"x\"); return o.beta; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "gamma",
+    "expr": "(() => { const o = new DeviceOrientationEvent(\"x\"); return o.gamma; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "absolute",
+    "expr": "(() => { const o = new DeviceOrientationEvent(\"x\"); return o.absolute; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "requestPermission",
+    "expr": "Object.prototype.toString.call(DeviceOrientationEvent.requestPermission())",
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "requestPermission",
+    "expr": "(async () => { return await DeviceOrientationEvent.requestPermission(); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "DeviceOrientationEvent",
+    "member": "requestPermission",
+    "expr": "(async () => { return Object.prototype.toString.call(await DeviceOrientationEvent.requestPermission()); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  }
+]

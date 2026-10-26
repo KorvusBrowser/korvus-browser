@@ -1,0 +1,254 @@
+[
+  {
+    "iface": "HTMLButtonElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLButtonElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "constructor",
+    "expr": "new HTMLButtonElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "command",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.command; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "command",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.command = \"x\", o.command); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "commandForElement",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.commandForElement; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.disabled = true, o.disabled); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formEnctype",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.formEnctype; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formEnctype",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.formEnctype = \"x\", o.formEnctype); })()",
+    "expected": "application/x-www-form-urlencoded",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formMethod",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.formMethod; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formMethod",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.formMethod = \"x\", o.formMethod); })()",
+    "expected": "get",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formNoValidate",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.formNoValidate; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formNoValidate",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.formNoValidate = true, o.formNoValidate); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formTarget",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.formTarget; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "formTarget",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.formTarget = \"x\", o.formTarget); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.type; })()",
+    "expected": "submit",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.type = \"x\", o.type); })()",
+    "expected": "submit",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "willValidate",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.willValidate; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "validationMessage",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.validationMessage; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.setCustomValidity(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.setCustomValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "popoverTargetElement",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.popoverTargetElement; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "popoverTargetAction",
+    "expr": "(() => { const o = document.createElement(\"button\"); return o.popoverTargetAction; })()",
+    "expected": "toggle",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "popoverTargetAction",
+    "expr": "(() => { const o = document.createElement(\"button\"); return (o.popoverTargetAction = \"x\", o.popoverTargetAction); })()",
+    "expected": "toggle",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "commandForElement",
+    "expr": "(() => { const o = document.createElement(\"button\"); return Object.prototype.toString.call(o.commandForElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"button\"); return Object.prototype.toString.call(o.form); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "validity",
+    "expr": "(() => { const o = document.createElement(\"button\"); return Object.prototype.toString.call(o.validity); })()",
+    "expected": "[object ValidityState]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "labels",
+    "expr": "(() => { const o = document.createElement(\"button\"); return Object.prototype.toString.call(o.labels); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLButtonElement",
+    "member": "popoverTargetElement",
+    "expr": "(() => { const o = document.createElement(\"button\"); return Object.prototype.toString.call(o.popoverTargetElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

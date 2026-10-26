@@ -1,0 +1,135 @@
+[
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "constructor",
+    "expr": "new PerformanceNavigationTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "redirectCount",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.redirectCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "criticalCHRestart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.criticalCHRestart; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "notRestoredReasons",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.notRestoredReasons; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "activationStart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.activationStart; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "unloadEventStart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.unloadEventStart); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "unloadEventEnd",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.unloadEventEnd); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "domInteractive",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.domInteractive); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "domContentLoadedEventStart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.domContentLoadedEventStart); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "domContentLoadedEventEnd",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.domContentLoadedEventEnd); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "domComplete",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.domComplete); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "loadEventStart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.loadEventStart); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "loadEventEnd",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.loadEventEnd); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "type",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "criticalCHRestart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.criticalCHRestart); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "notRestoredReasons",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.notRestoredReasons); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "confidence",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.confidence); })()",
+    "expected": "[object PerformanceTimingConfidence]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "toJSON",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigationTiming",
+    "member": "activationStart",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.activationStart); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

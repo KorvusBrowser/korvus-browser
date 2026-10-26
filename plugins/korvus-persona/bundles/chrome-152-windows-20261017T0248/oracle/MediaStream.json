@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "MediaStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getAudioTracks",
+    "expr": "(() => { const o = new MediaStream(); return o.getAudioTracks(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getVideoTracks",
+    "expr": "(() => { const o = new MediaStream(); return o.getVideoTracks(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getTracks",
+    "expr": "(() => { const o = new MediaStream(); return o.getTracks(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getTrackById",
+    "expr": "(() => { const o = new MediaStream(); return o.getTrackById(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getTrackById",
+    "expr": "(() => { const o = new MediaStream(); return o.getTrackById(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "addTrack",
+    "expr": "(() => { const o = new MediaStream(); return o.addTrack(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "removeTrack",
+    "expr": "(() => { const o = new MediaStream(); return o.removeTrack(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "active",
+    "expr": "(() => { const o = new MediaStream(); return o.active; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "onaddtrack",
+    "expr": "(() => { const o = new MediaStream(); return o.onaddtrack; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "onremovetrack",
+    "expr": "(() => { const o = new MediaStream(); return o.onremovetrack; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getAudioTracks",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.getAudioTracks()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getVideoTracks",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.getVideoTracks()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getTracks",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.getTracks()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "getTrackById",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.getTrackById(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "clone",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "onaddtrack",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.onaddtrack); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStream",
+    "member": "onremovetrack",
+    "expr": "(() => { const o = new MediaStream(); return Object.prototype.toString.call(o.onremovetrack); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

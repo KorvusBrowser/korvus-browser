@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "AuthenticatorAttestationResponse",
+    "member": "constructor",
+    "expr": "new AuthenticatorAttestationResponse()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

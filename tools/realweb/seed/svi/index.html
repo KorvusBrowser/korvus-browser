@@ -1,0 +1,22 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>an SVG image drawn</title>
+<!-- U15: an <img> of an SVG is not rasterized: createImageBitmap rejects "The image source is not usable"
+     and drawImage paints nothing (play2048.co builds its board from an SVG data URL). Needs an SVG
+     rasterizer -- a new dependency, so PARKED for a human decision. -->
+<script>
+window.R = null;
+var svg = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20"><rect width="40" height="20" fill="rgb(255,0,0)"/><rect x="20" width="20" height="20" fill="rgb(0,0,255)"/></svg>');
+var img = new Image();
+img.onload = async function () {
+  var r = { natural: img.naturalWidth + 'x' + img.naturalHeight };
+  try { var b = await createImageBitmap(img); r.bitmap = b.width + 'x' + b.height; } catch (e) { r.bitmap = 'threw ' + e.name; }
+  var c = document.createElement('canvas'); c.width = 40; c.height = 20; var x = c.getContext('2d');
+  x.drawImage(img, 0, 0);
+  r.left = Array.from(x.getImageData(5, 10, 1, 1).data).join(',');
+  r.right = Array.from(x.getImageData(35, 10, 1, 1).data).join(',');
+  window.R = JSON.stringify(r);
+};
+img.onerror = function () { window.R = 'img error'; };
+img.src = svg;
+</script>

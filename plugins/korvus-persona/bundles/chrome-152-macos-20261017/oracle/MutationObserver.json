@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "MutationObserver",
+    "member": "constructor",
+    "expr": "new MutationObserver()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MutationObserver",
+    "member": "observe",
+    "expr": "(() => { const o = new MutationObserver(() => {}); return o.observe(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MutationObserver",
+    "member": "disconnect",
+    "expr": "(() => { const o = new MutationObserver(() => {}); return o.disconnect(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MutationObserver",
+    "member": "takeRecords",
+    "expr": "(() => { const o = new MutationObserver(() => {}); return o.takeRecords(); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "constructor",
+    "expr": "new GPUSupportedFeatures()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "size",
+    "expr": "GPUSupportedFeatures.prototype.size",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "size",
+    "expr": "Object.getOwnPropertyDescriptor(GPUSupportedFeatures.prototype, \"size\").get.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "entries",
+    "expr": "GPUSupportedFeatures.prototype.entries.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "entries",
+    "expr": "GPUSupportedFeatures.prototype.entries.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "forEach",
+    "expr": "GPUSupportedFeatures.prototype.forEach.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "forEach",
+    "expr": "GPUSupportedFeatures.prototype.forEach.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "has",
+    "expr": "GPUSupportedFeatures.prototype.has.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "has",
+    "expr": "GPUSupportedFeatures.prototype.has.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "keys",
+    "expr": "GPUSupportedFeatures.prototype.keys.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "keys",
+    "expr": "GPUSupportedFeatures.prototype.keys.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "values",
+    "expr": "GPUSupportedFeatures.prototype.values.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "values",
+    "expr": "GPUSupportedFeatures.prototype.values.call(Object.create(GPUSupportedFeatures.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "forEach",
+    "expr": "GPUSupportedFeatures.prototype.forEach.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "has",
+    "expr": "GPUSupportedFeatures.prototype.has.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedFeatures.prototype, \"size\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "size",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUSupportedFeatures.prototype, \"size\").get.call(Object.create(GPUSupportedFeatures.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "entries",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"entries\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "entries",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"entries\"].call(Object.create(GPUSupportedFeatures.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "forEach",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"forEach\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "forEach",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"forEach\"].call(Object.create(GPUSupportedFeatures.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "has",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"has\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "has",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"has\"].call(Object.create(GPUSupportedFeatures.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "keys",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"keys\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "keys",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"keys\"].call(Object.create(GPUSupportedFeatures.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "values",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"values\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUSupportedFeatures",
+    "member": "values",
+    "expr": "(() => { try { const v = GPUSupportedFeatures.prototype[\"values\"].call(Object.create(GPUSupportedFeatures.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

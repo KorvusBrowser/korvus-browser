@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "Screen",
+    "member": "constructor",
+    "expr": "new Screen()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "availWidth",
+    "expr": "(() => { const o = screen; return o.availWidth; })()",
+    "expected": 1920,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "availHeight",
+    "expr": "(() => { const o = screen; return o.availHeight; })()",
+    "expected": 1080,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "width",
+    "expr": "(() => { const o = screen; return o.width; })()",
+    "expected": 1920,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "height",
+    "expr": "(() => { const o = screen; return o.height; })()",
+    "expected": 1080,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "colorDepth",
+    "expr": "(() => { const o = screen; return o.colorDepth; })()",
+    "expected": 24,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "pixelDepth",
+    "expr": "(() => { const o = screen; return o.pixelDepth; })()",
+    "expected": 24,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "isExtended",
+    "expr": "(() => { const o = screen; return o.isExtended; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "onchange",
+    "expr": "(() => { const o = screen; return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "orientation",
+    "expr": "(() => { const o = screen; return Object.prototype.toString.call(o.orientation); })()",
+    "expected": "[object ScreenOrientation]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Screen",
+    "member": "onchange",
+    "expr": "(() => { const o = screen; return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

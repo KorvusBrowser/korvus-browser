@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "BarProp",
+    "member": "constructor",
+    "expr": "new BarProp()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "BarProp",
+    "member": "visible",
+    "expr": "(() => { const o = locationbar; return o.visible; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

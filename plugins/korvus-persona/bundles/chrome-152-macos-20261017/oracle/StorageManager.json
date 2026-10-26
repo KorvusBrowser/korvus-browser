@@ -1,0 +1,69 @@
+[
+  {
+    "iface": "StorageManager",
+    "member": "constructor",
+    "expr": "new StorageManager()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "getDirectory",
+    "expr": "(() => { const o = navigator.storage; return Object.prototype.toString.call(o.getDirectory()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "persisted",
+    "expr": "(() => { const o = navigator.storage; return Object.prototype.toString.call(o.persisted()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "persist",
+    "expr": "(() => { const o = navigator.storage; return Object.prototype.toString.call(o.persist()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "estimate",
+    "expr": "(() => { const o = navigator.storage; return Object.prototype.toString.call(o.estimate()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "getDirectory",
+    "expr": "(async () => { const o = navigator.storage; return Object.prototype.toString.call(await o.getDirectory()); })()",
+    "expected": "[object FileSystemDirectoryHandle]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "persisted",
+    "expr": "(async () => { const o = navigator.storage; return await o.persisted(); })()",
+    "expected": false,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "persist",
+    "expr": "(async () => { const o = navigator.storage; return await o.persist(); })()",
+    "expected": false,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "StorageManager",
+    "member": "estimate",
+    "expr": "(async () => { const o = navigator.storage; return Object.prototype.toString.call(await o.estimate()); })()",
+    "expected": "[object Object]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,21 @@
+<!doctype html><title>t</title>
+<!-- served with COOP same-origin + COEP require-corp (index.html.headers): the page, its blob worker and a COEP
+     iframe are cross-origin isolated -- crossOriginIsolated true, SharedArrayBuffer exposed, a 5 us clock.
+     plain.html (no headers) is not: no SharedArrayBuffer, a 100 us clock. Cloudflare's managed challenge sends these
+     two headers and reads all three facts. -->
+<script src="probe.js"></script>
+<script>
+const R = { page: facts() };
+const src = 'var gran=' + gran + ';var facts=' + facts + ';postMessage(facts())';
+const w = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
+w.onmessage = e => {
+  R.worker = e.data;
+  const f = document.createElement('iframe'); f.src = 'frame.html';
+  addEventListener('message', m => {
+    if (m.source !== f.contentWindow) return;
+    R.frame = m.data;
+    document.title = JSON.stringify(R);
+  });
+  document.body.appendChild(f);
+};
+</script>

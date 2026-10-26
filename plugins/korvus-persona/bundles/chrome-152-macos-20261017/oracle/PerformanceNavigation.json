@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "PerformanceNavigation",
+    "member": "TYPE_NAVIGATE",
+    "expr": "PerformanceNavigation.TYPE_NAVIGATE",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "TYPE_RELOAD",
+    "expr": "PerformanceNavigation.TYPE_RELOAD",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "TYPE_BACK_FORWARD",
+    "expr": "PerformanceNavigation.TYPE_BACK_FORWARD",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "TYPE_RESERVED",
+    "expr": "PerformanceNavigation.TYPE_RESERVED",
+    "expected": 255,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "constructor",
+    "expr": "new PerformanceNavigation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "type",
+    "expr": "(() => { const o = performance.navigation; return o.type; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "redirectCount",
+    "expr": "(() => { const o = performance.navigation; return o.redirectCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceNavigation",
+    "member": "toJSON",
+    "expr": "(() => { const o = performance.navigation; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "Navigation",
+    "member": "constructor",
+    "expr": "new Navigation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "updateCurrentEntry",
+    "expr": "(() => { const o = navigation; return o.updateCurrentEntry({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "updateCurrentEntry",
+    "expr": "(() => { const o = navigation; return o.updateCurrentEntry(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "transition",
+    "expr": "(() => { const o = navigation; return o.transition; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "canGoBack",
+    "expr": "(() => { const o = navigation; return o.canGoBack; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "canGoForward",
+    "expr": "(() => { const o = navigation; return o.canGoForward; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigate",
+    "expr": "(() => { const o = navigation; return o.onnavigate; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigatesuccess",
+    "expr": "(() => { const o = navigation; return o.onnavigatesuccess; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigateerror",
+    "expr": "(() => { const o = navigation; return o.onnavigateerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "oncurrententrychange",
+    "expr": "(() => { const o = navigation; return o.oncurrententrychange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "entries",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.entries()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "currentEntry",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.currentEntry); })()",
+    "expected": "[object NavigationHistoryEntry]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "transition",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.transition); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "activation",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.activation); })()",
+    "expected": "[object NavigationActivation]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigate",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.onnavigate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigatesuccess",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.onnavigatesuccess); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "onnavigateerror",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.onnavigateerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Navigation",
+    "member": "oncurrententrychange",
+    "expr": "(() => { const o = navigation; return Object.prototype.toString.call(o.oncurrententrychange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

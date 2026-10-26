@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf-8><meta name="referrer" content="no-referrer"><title>meta</title><body><p>meta referrer and Origin-Agent-Cluster ?0 fixture.</p>
+<img src="http://127.0.0.1:18503/r/x.png?k=m_img">
+<iframe src="http://127.0.0.1:18503/f.html?k=m_frame" width=300 height=65></iframe>
+<script>
+window.__r = {frames: {}, oac: originAgentCluster};
+addEventListener('message', e => { if (e.data && e.data.fk) window.__r.frames[e.data.fk] = {referrer: e.data.referrer, oac: e.data.oac}; });
+fetch('http://127.0.0.1:18503/r/x?k=m_fetch', {mode: 'no-cors'}).then(() => setTimeout(async () => {
+  window.__r.echoB = await (await fetch('http://127.0.0.1:18503/report')).json(); window.__r.done = 1; }, 1500));
+</script>

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HTMLMenuElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLMenuElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMenuElement",
+    "member": "constructor",
+    "expr": "new HTMLMenuElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMenuElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"menu\"); return o.compact; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMenuElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"menu\"); return (o.compact = true, o.compact); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

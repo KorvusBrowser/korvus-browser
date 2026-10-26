@@ -1,0 +1,34 @@
+<!doctype html><meta charset=utf-8><body>
+<script>
+// TEMPLATES P8 B34: what the engine makes -- a parsed or created document, a TaskController's signal, an
+// IndexedDB `upgradeneeded` event -- is an instance of the REALM's interface, the prototype the realm was
+// created with, whatever the page has written since to the global of that name (as B33 for the lists).
+const names = ['HTMLDocument', 'XMLDocument', 'Document', 'TaskSignal', 'Event', 'IDBVersionChangeEvent'];
+const P = {};
+for (const n of names) P[n] = self[n] && self[n].prototype;
+const tag = (o) => Object.prototype.toString.call(o);
+const which = (o, n) => {
+  const p = Object.getPrototypeOf(o);
+  return p === P[n] ? 'realm' : p === Object.prototype ? 'Object.prototype' : p === null ? 'null' : 'other';
+};
+self.HTMLDocument = function () {};
+delete self.XMLDocument;
+self.TaskSignal = function () {};
+self.Event = function () {};
+delete self.IDBVersionChangeEvent;
+const out = {};
+const t = (k, f) => { try { out[k] = f(); } catch (e) { out[k] = 'throws ' + e.constructor.name + ': ' + e.message; } };
+t('createHTMLDocument', () => { const d = document.implementation.createHTMLDocument('t'); return which(d, 'HTMLDocument') + ' ' + tag(d); });
+t('parseHTML', () => { const d = new DOMParser().parseFromString('<p>x</p>', 'text/html'); return which(d, 'HTMLDocument') + ' ' + tag(d); });
+t('parseXML', () => { const d = new DOMParser().parseFromString('<a/>', 'text/xml'); return which(d, 'XMLDocument') + ' ' + tag(d); });
+t('createDocument', () => { const d = document.implementation.createDocument(null, 'r'); return which(d, 'XMLDocument') + ' ' + tag(d); });
+t('taskSignal', () => { const s = new TaskController().signal; return which(s, 'TaskSignal') + ' ' + tag(s) + ' aborted=' + s.aborted + ' priority=' + s.priority; });
+const req = indexedDB.open('b34-' + Math.random().toString(36).slice(2), 1);
+req.onupgradeneeded = (ev) => {
+  out.upgradeneeded = which(ev, 'IDBVersionChangeEvent') + ' ' + tag(ev) + ' ' + ev.type + ' ' + ev.oldVersion + '->' + ev.newVersion +
+    ' target=' + (ev.target === req);
+};
+const done = () => { window.R = JSON.stringify(out); };
+req.onsuccess = () => { req.result.close(); done(); };
+req.onerror = () => { out.idbError = String(req.error); done(); };
+</script>

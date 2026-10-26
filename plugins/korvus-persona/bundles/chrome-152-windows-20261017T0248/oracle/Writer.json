@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "Writer",
+    "member": "create",
+    "expr": "Writer.create()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Writer",
+    "member": "availability",
+    "expr": "Writer.availability()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Writer",
+    "member": "constructor",
+    "expr": "new Writer()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

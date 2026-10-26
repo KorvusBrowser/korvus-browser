@@ -1,0 +1,149 @@
+{
+ "what": "F12 (N27): Network.* events of stock Chrome 150.0.7871.46 (headed, Xvfb, fresh profile, one raw CDP client, Network.enable then Page.navigate /nav-r1), recorded with abprog/fixes/F12/rec_cdp.py, 3 runs identical. Per request, keyed by its first path; Date dropped. The fixture server is tests/redirect_hops.rs's twin.",
+ "requests": {
+  "/nav-r1": [
+   {
+    "event": "requestWillBeSent",
+    "url": "/nav-r1",
+    "method": "GET",
+    "type": "Document",
+    "documentURL": "/nav-r1"
+   },
+   {
+    "event": "requestWillBeSent",
+    "url": "/nav-r2",
+    "method": "GET",
+    "type": "Document",
+    "documentURL": "/nav-r2",
+    "redirectResponse": {
+     "url": "/nav-r1",
+     "status": 302,
+     "statusText": "Found",
+     "headers": {
+      "Cache-Control": "no-store",
+      "Content-Length": "0",
+      "Content-Type": "text/plain",
+      "Location": "/nav-r2",
+      "Server": "BaseHTTP/0.6 Python/3.12.3",
+      "X-Dup": "one\ntwo"
+     },
+     "mimeType": "text/plain"
+    }
+   },
+   {
+    "event": "requestWillBeSent",
+    "url": "/landing",
+    "method": "GET",
+    "type": "Document",
+    "documentURL": "/landing",
+    "redirectResponse": {
+     "url": "/nav-r2",
+     "status": 301,
+     "statusText": "Moved Permanently",
+     "headers": {
+      "Cache-Control": "no-store",
+      "Content-Length": "0",
+      "Content-Type": "text/plain",
+      "Location": "/landing",
+      "Server": "BaseHTTP/0.6 Python/3.12.3",
+      "X-Dup": "one\ntwo"
+     },
+     "mimeType": "text/plain"
+    }
+   },
+   {
+    "event": "responseReceived",
+    "url": "/landing",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+     "Cache-Control": "no-store",
+     "Content-Length": "190",
+     "Content-Type": "text/html; charset=utf-8",
+     "Server": "BaseHTTP/0.6 Python/3.12.3",
+     "X-Dup": "one\ntwo"
+    },
+    "mimeType": "text/html",
+    "type": "Document"
+   },
+   {
+    "event": "loadingFinished"
+   }
+  ],
+  "/f-r1": [
+   {
+    "event": "requestWillBeSent",
+    "url": "/f-r1",
+    "method": "GET",
+    "type": "Fetch",
+    "documentURL": "/landing"
+   },
+   {
+    "event": "requestWillBeSent",
+    "url": "/f-r2",
+    "method": "GET",
+    "type": "Fetch",
+    "documentURL": "/landing",
+    "redirectResponse": {
+     "url": "/f-r1",
+     "status": 307,
+     "statusText": "Temporary Redirect",
+     "headers": {
+      "Cache-Control": "no-store",
+      "Location": "/f-r2",
+      "Content-Length": "0",
+      "Content-Type": "text/plain",
+      "X-Dup": "one, two",
+      "Server": "BaseHTTP/0.6 Python/3.12.3"
+     },
+     "mimeType": "text/plain"
+    }
+   },
+   {
+    "event": "responseReceived",
+    "url": "/f-r2",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+     "Cache-Control": "no-store",
+     "Content-Length": "9",
+     "Content-Type": "text/plain",
+     "Server": "BaseHTTP/0.6 Python/3.12.3",
+     "X-Dup": "one, two"
+    },
+    "mimeType": "text/plain",
+    "type": "Fetch"
+   },
+   {
+    "event": "loadingFinished"
+   }
+  ],
+  "/dup": [
+   {
+    "event": "requestWillBeSent",
+    "url": "/dup",
+    "method": "GET",
+    "type": "Fetch",
+    "documentURL": "/landing"
+   },
+   {
+    "event": "responseReceived",
+    "url": "/dup",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+     "Cache-Control": "no-store",
+     "Content-Length": "8",
+     "Content-Type": "text/plain",
+     "Server": "BaseHTTP/0.6 Python/3.12.3",
+     "X-Dup": "one, two"
+    },
+    "mimeType": "text/plain",
+    "type": "Fetch"
+   },
+   {
+    "event": "loadingFinished"
+   }
+  ]
+ }
+}

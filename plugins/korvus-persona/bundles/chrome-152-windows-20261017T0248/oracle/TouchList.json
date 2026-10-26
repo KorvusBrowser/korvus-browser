@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "TouchList",
+    "member": "constructor",
+    "expr": "new TouchList()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TouchList",
+    "member": "length",
+    "expr": "(() => { const o = new TouchEvent(\"touchstart\", { touches: [new Touch({ identifier: 1, target: document.documentElement })] }).touches; return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TouchList",
+    "member": "item",
+    "expr": "(() => { const o = new TouchEvent(\"touchstart\", { touches: [new Touch({ identifier: 1, target: document.documentElement })] }).touches; return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "TouchList",
+    "member": "item",
+    "expr": "(() => { const o = new TouchEvent(\"touchstart\", { touches: [new Touch({ identifier: 1, target: document.documentElement })] }).touches; return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

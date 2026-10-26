@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "GPUError",
+    "member": "constructor",
+    "expr": "new GPUError()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUError",
+    "member": "message",
+    "expr": "(() => { const o = new GPUValidationError(\"m\"); return o.message; })()",
+    "expected": "m",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUError",
+    "member": "message",
+    "expr": "new GPUValidationError(\"boom\").message",
+    "expected": "boom",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUError",
+    "member": "message",
+    "expr": "new GPUOutOfMemoryError(\"oom\").message",
+    "expected": "oom",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUError",
+    "member": "message",
+    "expr": "new GPUInternalError(\"ie\").message",
+    "expected": "ie",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUError",
+    "member": "message",
+    "expr": "(() => { const e = new GPUValidationError(\"boom\"); e.message = \"x\"; return e.message; })()",
+    "expected": "boom",
+    "source": "chrome-152-macos-20261017"
+  }
+]

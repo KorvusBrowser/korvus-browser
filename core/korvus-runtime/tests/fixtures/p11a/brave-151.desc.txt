@@ -1,0 +1,1240 @@
+window.AbortController => data w=true e=false c=true function "AbortController"/0
+window.AbortSignal => data w=true e=false c=true function "AbortSignal"/0
+window.AbsoluteOrientationSensor => data w=true e=false c=true function "AbsoluteOrientationSensor"/0
+window.AbstractRange => data w=true e=false c=true function "AbstractRange"/0
+window.Accelerometer => data w=true e=false c=true function "Accelerometer"/0
+window.AggregateError => data w=true e=false c=true function "AggregateError"/2
+window.AnalyserNode => data w=true e=false c=true function "AnalyserNode"/1
+window.Animation => data w=true e=false c=true function "Animation"/0
+window.AnimationEffect => data w=true e=false c=true function "AnimationEffect"/0
+window.AnimationEvent => data w=true e=false c=true function "AnimationEvent"/1
+window.AnimationPlaybackEvent => data w=true e=false c=true function "AnimationPlaybackEvent"/1
+window.AnimationTimeline => data w=true e=false c=true function "AnimationTimeline"/0
+window.AnimationTrigger => data w=true e=false c=true function "AnimationTrigger"/0
+window.Array => data w=true e=false c=true function "Array"/1
+window.ArrayBuffer => data w=true e=false c=true function "ArrayBuffer"/1
+window.AsyncDisposableStack => data w=true e=false c=true function "AsyncDisposableStack"/0
+window.Atomics => data w=true e=false c=true object
+window.Attr => data w=true e=false c=true function "Attr"/0
+window.Audio => data w=true e=false c=true function "Audio"/0
+window.AudioBuffer => data w=true e=false c=true function "AudioBuffer"/1
+window.AudioBufferSourceNode => data w=true e=false c=true function "AudioBufferSourceNode"/1
+window.AudioContext => data w=true e=false c=true function "AudioContext"/0
+window.AudioData => data w=true e=false c=true function "AudioData"/1
+window.AudioDecoder => data w=true e=false c=true function "AudioDecoder"/1
+window.AudioDestinationNode => data w=true e=false c=true function "AudioDestinationNode"/0
+window.AudioEncoder => data w=true e=false c=true function "AudioEncoder"/1
+window.AudioListener => data w=true e=false c=true function "AudioListener"/0
+window.AudioNode => data w=true e=false c=true function "AudioNode"/0
+window.AudioParam => data w=true e=false c=true function "AudioParam"/0
+window.AudioParamMap => data w=true e=false c=true function "AudioParamMap"/0
+window.AudioPlaybackStats => data w=true e=false c=true function "AudioPlaybackStats"/0
+window.AudioProcessingEvent => data w=true e=false c=true function "AudioProcessingEvent"/2
+window.AudioScheduledSourceNode => data w=true e=false c=true function "AudioScheduledSourceNode"/0
+window.AudioSinkInfo => data w=true e=false c=true function "AudioSinkInfo"/0
+window.AudioWorklet => data w=true e=false c=true function "AudioWorklet"/0
+window.AudioWorkletNode => data w=true e=false c=true function "AudioWorkletNode"/2
+window.AuthenticatorAssertionResponse => data w=true e=false c=true function "AuthenticatorAssertionResponse"/0
+window.AuthenticatorAttestationResponse => data w=true e=false c=true function "AuthenticatorAttestationResponse"/0
+window.AuthenticatorResponse => data w=true e=false c=true function "AuthenticatorResponse"/0
+window.BackgroundFetchManager => data w=true e=false c=true function "BackgroundFetchManager"/0
+window.BackgroundFetchRecord => data w=true e=false c=true function "BackgroundFetchRecord"/0
+window.BackgroundFetchRegistration => data w=true e=false c=true function "BackgroundFetchRegistration"/0
+window.BarProp => data w=true e=false c=true function "BarProp"/0
+window.BaseAudioContext => data w=true e=false c=true function "BaseAudioContext"/0
+window.BatteryManager => data w=true e=false c=true function "BatteryManager"/0
+window.BeforeInstallPromptEvent => data w=true e=false c=true function "BeforeInstallPromptEvent"/1
+window.BeforeUnloadEvent => data w=true e=false c=true function "BeforeUnloadEvent"/0
+window.BigInt => data w=true e=false c=true function "BigInt"/1
+window.BigInt64Array => data w=true e=false c=true function "BigInt64Array"/3
+window.BigUint64Array => data w=true e=false c=true function "BigUint64Array"/3
+window.BiquadFilterNode => data w=true e=false c=true function "BiquadFilterNode"/1
+window.Blob => data w=true e=false c=true function "Blob"/0
+window.BlobEvent => data w=true e=false c=true function "BlobEvent"/2
+window.Boolean => data w=true e=false c=true function "Boolean"/1
+window.BroadcastChannel => data w=true e=false c=true function "BroadcastChannel"/1
+window.BrowserCaptureMediaStreamTrack => data w=true e=false c=true function "BrowserCaptureMediaStreamTrack"/0
+window.ByteLengthQueuingStrategy => data w=true e=false c=true function "ByteLengthQueuingStrategy"/1
+window.CDATASection => data w=true e=false c=true function "CDATASection"/0
+window.CSPViolationReportBody => data w=true e=false c=true function "CSPViolationReportBody"/0
+window.CSS => data w=true e=false c=true object
+window.CSSAnimation => data w=true e=false c=true function "CSSAnimation"/0
+window.CSSConditionRule => data w=true e=false c=true function "CSSConditionRule"/0
+window.CSSContainerRule => data w=true e=false c=true function "CSSContainerRule"/0
+window.CSSCounterStyleRule => data w=true e=false c=true function "CSSCounterStyleRule"/0
+window.CSSFontFaceRule => data w=true e=false c=true function "CSSFontFaceRule"/0
+window.CSSFontFeatureValuesRule => data w=true e=false c=true function "CSSFontFeatureValuesRule"/0
+window.CSSFontPaletteValuesRule => data w=true e=false c=true function "CSSFontPaletteValuesRule"/0
+window.CSSFunctionDeclarations => data w=true e=false c=true function "CSSFunctionDeclarations"/0
+window.CSSFunctionDescriptors => data w=true e=false c=true function "CSSFunctionDescriptors"/0
+window.CSSFunctionRule => data w=true e=false c=true function "CSSFunctionRule"/0
+window.CSSGroupingRule => data w=true e=false c=true function "CSSGroupingRule"/0
+window.CSSImageValue => data w=true e=false c=true function "CSSImageValue"/0
+window.CSSImportRule => data w=true e=false c=true function "CSSImportRule"/0
+window.CSSKeyframeRule => data w=true e=false c=true function "CSSKeyframeRule"/0
+window.CSSKeyframesRule => data w=true e=false c=true function "CSSKeyframesRule"/0
+window.CSSKeywordValue => data w=true e=false c=true function "CSSKeywordValue"/1
+window.CSSLayerBlockRule => data w=true e=false c=true function "CSSLayerBlockRule"/0
+window.CSSLayerStatementRule => data w=true e=false c=true function "CSSLayerStatementRule"/0
+window.CSSMarginRule => data w=true e=false c=true function "CSSMarginRule"/0
+window.CSSMathClamp => data w=true e=false c=true function "CSSMathClamp"/3
+window.CSSMathInvert => data w=true e=false c=true function "CSSMathInvert"/1
+window.CSSMathMax => data w=true e=false c=true function "CSSMathMax"/0
+window.CSSMathMin => data w=true e=false c=true function "CSSMathMin"/0
+window.CSSMathNegate => data w=true e=false c=true function "CSSMathNegate"/1
+window.CSSMathProduct => data w=true e=false c=true function "CSSMathProduct"/0
+window.CSSMathSum => data w=true e=false c=true function "CSSMathSum"/0
+window.CSSMathValue => data w=true e=false c=true function "CSSMathValue"/0
+window.CSSMatrixComponent => data w=true e=false c=true function "CSSMatrixComponent"/1
+window.CSSMediaRule => data w=true e=false c=true function "CSSMediaRule"/0
+window.CSSNamespaceRule => data w=true e=false c=true function "CSSNamespaceRule"/0
+window.CSSNestedDeclarations => data w=true e=false c=true function "CSSNestedDeclarations"/0
+window.CSSNumericArray => data w=true e=false c=true function "CSSNumericArray"/0
+window.CSSNumericValue => data w=true e=false c=true function "CSSNumericValue"/0
+window.CSSPageRule => data w=true e=false c=true function "CSSPageRule"/0
+window.CSSPerspective => data w=true e=false c=true function "CSSPerspective"/1
+window.CSSPositionTryDescriptors => data w=true e=false c=true function "CSSPositionTryDescriptors"/0
+window.CSSPositionTryRule => data w=true e=false c=true function "CSSPositionTryRule"/0
+window.CSSPositionValue => data w=true e=false c=true function "CSSPositionValue"/2
+window.CSSPropertyRule => data w=true e=false c=true function "CSSPropertyRule"/0
+window.CSSPseudoElement => data w=true e=false c=true function "CSSPseudoElement"/0
+window.CSSRotate => data w=true e=false c=true function "CSSRotate"/1
+window.CSSRule => data w=true e=false c=true function "CSSRule"/0
+window.CSSRuleList => data w=true e=false c=true function "CSSRuleList"/0
+window.CSSScale => data w=true e=false c=true function "CSSScale"/2
+window.CSSScopeRule => data w=true e=false c=true function "CSSScopeRule"/0
+window.CSSSkew => data w=true e=false c=true function "CSSSkew"/2
+window.CSSSkewX => data w=true e=false c=true function "CSSSkewX"/1
+window.CSSSkewY => data w=true e=false c=true function "CSSSkewY"/1
+window.CSSStartingStyleRule => data w=true e=false c=true function "CSSStartingStyleRule"/0
+window.CSSStyleDeclaration => data w=true e=false c=true function "CSSStyleDeclaration"/0
+window.CSSStyleRule => data w=true e=false c=true function "CSSStyleRule"/0
+window.CSSStyleSheet => data w=true e=false c=true function "CSSStyleSheet"/0
+window.CSSStyleValue => data w=true e=false c=true function "CSSStyleValue"/0
+window.CSSSupportsRule => data w=true e=false c=true function "CSSSupportsRule"/0
+window.CSSTransformComponent => data w=true e=false c=true function "CSSTransformComponent"/0
+window.CSSTransformValue => data w=true e=false c=true function "CSSTransformValue"/1
+window.CSSTransition => data w=true e=false c=true function "CSSTransition"/0
+window.CSSTranslate => data w=true e=false c=true function "CSSTranslate"/2
+window.CSSUnitValue => data w=true e=false c=true function "CSSUnitValue"/2
+window.CSSUnparsedValue => data w=true e=false c=true function "CSSUnparsedValue"/1
+window.CSSVariableReferenceValue => data w=true e=false c=true function "CSSVariableReferenceValue"/1
+window.CSSViewTransitionRule => data w=true e=false c=true function "CSSViewTransitionRule"/0
+window.Cache => data w=true e=false c=true function "Cache"/0
+window.CacheStorage => data w=true e=false c=true function "CacheStorage"/0
+window.CanvasCaptureMediaStreamTrack => data w=true e=false c=true function "CanvasCaptureMediaStreamTrack"/0
+window.CanvasGradient => data w=true e=false c=true function "CanvasGradient"/0
+window.CanvasPattern => data w=true e=false c=true function "CanvasPattern"/0
+window.CanvasRenderingContext2D => data w=true e=false c=true function "CanvasRenderingContext2D"/0
+window.CaptureController => data w=true e=false c=true function "CaptureController"/0
+window.CaretPosition => data w=true e=false c=true function "CaretPosition"/0
+window.ChannelMergerNode => data w=true e=false c=true function "ChannelMergerNode"/1
+window.ChannelSplitterNode => data w=true e=false c=true function "ChannelSplitterNode"/1
+window.ChapterInformation => data w=true e=false c=true function "ChapterInformation"/0
+window.CharacterBoundsUpdateEvent => data w=true e=false c=true function "CharacterBoundsUpdateEvent"/1
+window.CharacterData => data w=true e=false c=true function "CharacterData"/0
+window.Clipboard => data w=true e=false c=true function "Clipboard"/0
+window.ClipboardChangeEvent => data w=true e=false c=true function "ClipboardChangeEvent"/0
+window.ClipboardEvent => data w=true e=false c=true function "ClipboardEvent"/1
+window.ClipboardItem => data w=true e=false c=true function "ClipboardItem"/1
+window.CloseEvent => data w=true e=false c=true function "CloseEvent"/1
+window.CloseWatcher => data w=true e=false c=true function "CloseWatcher"/0
+window.CommandEvent => data w=true e=false c=true function "CommandEvent"/1
+window.Comment => data w=true e=false c=true function "Comment"/0
+window.CompositionEvent => data w=true e=false c=true function "CompositionEvent"/1
+window.CompressionStream => data w=true e=false c=true function "CompressionStream"/1
+window.ConstantSourceNode => data w=true e=false c=true function "ConstantSourceNode"/1
+window.ContentVisibilityAutoStateChangeEvent => data w=true e=false c=true function "ContentVisibilityAutoStateChangeEvent"/1
+window.ConvolverNode => data w=true e=false c=true function "ConvolverNode"/1
+window.CookieChangeEvent => data w=true e=false c=true function "CookieChangeEvent"/1
+window.CookieStore => data w=true e=false c=true function "CookieStore"/0
+window.CookieStoreManager => data w=true e=false c=true function "CookieStoreManager"/0
+window.CountQueuingStrategy => data w=true e=false c=true function "CountQueuingStrategy"/1
+window.CrashReportContext => data w=true e=false c=true function "CrashReportContext"/0
+window.CreateMonitor => data w=true e=false c=true function "CreateMonitor"/0
+window.Credential => data w=true e=false c=true function "Credential"/0
+window.CredentialsContainer => data w=true e=false c=true function "CredentialsContainer"/0
+window.CropTarget => data w=true e=false c=true function "CropTarget"/0
+window.Crypto => data w=true e=false c=true function "Crypto"/0
+window.CryptoKey => data w=true e=false c=true function "CryptoKey"/0
+window.CustomElementRegistry => data w=true e=false c=true function "CustomElementRegistry"/0
+window.CustomEvent => data w=true e=false c=true function "CustomEvent"/1
+window.CustomStateSet => data w=true e=false c=true function "CustomStateSet"/0
+window.DOMError => data w=true e=false c=true function "DOMError"/1
+window.DOMException => data w=true e=false c=true function "DOMException"/0
+window.DOMImplementation => data w=true e=false c=true function "DOMImplementation"/0
+window.DOMMatrix => data w=true e=false c=true function "DOMMatrix"/0
+window.DOMMatrixReadOnly => data w=true e=false c=true function "DOMMatrixReadOnly"/0
+window.DOMParser => data w=true e=false c=true function "DOMParser"/0
+window.DOMPoint => data w=true e=false c=true function "DOMPoint"/0
+window.DOMPointReadOnly => data w=true e=false c=true function "DOMPointReadOnly"/0
+window.DOMQuad => data w=true e=false c=true function "DOMQuad"/0
+window.DOMRect => data w=true e=false c=true function "DOMRect"/0
+window.DOMRectList => data w=true e=false c=true function "DOMRectList"/0
+window.DOMRectReadOnly => data w=true e=false c=true function "DOMRectReadOnly"/0
+window.DOMStringList => data w=true e=false c=true function "DOMStringList"/0
+window.DOMStringMap => data w=true e=false c=true function "DOMStringMap"/0
+window.DOMTokenList => data w=true e=false c=true function "DOMTokenList"/0
+window.DataTransfer => data w=true e=false c=true function "DataTransfer"/0
+window.DataTransferItem => data w=true e=false c=true function "DataTransferItem"/0
+window.DataTransferItemList => data w=true e=false c=true function "DataTransferItemList"/0
+window.DataView => data w=true e=false c=true function "DataView"/1
+window.Date => data w=true e=false c=true function "Date"/7
+window.DecompressionStream => data w=true e=false c=true function "DecompressionStream"/1
+window.DelayNode => data w=true e=false c=true function "DelayNode"/1
+window.DelegatedInkTrailPresenter => data w=true e=false c=true function "DelegatedInkTrailPresenter"/0
+window.DeviceMotionEvent => data w=true e=false c=true function "DeviceMotionEvent"/1
+window.DeviceMotionEventAcceleration => data w=true e=false c=true function "DeviceMotionEventAcceleration"/0
+window.DeviceMotionEventRotationRate => data w=true e=false c=true function "DeviceMotionEventRotationRate"/0
+window.DeviceOrientationEvent => data w=true e=false c=true function "DeviceOrientationEvent"/1
+window.DevicePosture => data w=true e=false c=true function "DevicePosture"/0
+window.DisposableStack => data w=true e=false c=true function "DisposableStack"/0
+window.Document => data w=true e=false c=true function "Document"/0
+window.DocumentFragment => data w=true e=false c=true function "DocumentFragment"/0
+window.DocumentPictureInPicture => data w=true e=false c=true function "DocumentPictureInPicture"/0
+window.DocumentPictureInPictureEvent => data w=true e=false c=true function "DocumentPictureInPictureEvent"/2
+window.DocumentTimeline => data w=true e=false c=true function "DocumentTimeline"/0
+window.DocumentType => data w=true e=false c=true function "DocumentType"/0
+window.DragEvent => data w=true e=false c=true function "DragEvent"/1
+window.DynamicsCompressorNode => data w=true e=false c=true function "DynamicsCompressorNode"/1
+window.EditContext => data w=true e=false c=true function "EditContext"/0
+window.Element => data w=true e=false c=true function "Element"/0
+window.ElementInternals => data w=true e=false c=true function "ElementInternals"/0
+window.EncodedAudioChunk => data w=true e=false c=true function "EncodedAudioChunk"/1
+window.EncodedVideoChunk => data w=true e=false c=true function "EncodedVideoChunk"/1
+window.Error => data w=true e=false c=true function "Error"/1
+window.ErrorEvent => data w=true e=false c=true function "ErrorEvent"/1
+window.EvalError => data w=true e=false c=true function "EvalError"/1
+window.Event => data w=true e=false c=true function "Event"/1
+window.EventCounts => data w=true e=false c=true function "EventCounts"/0
+window.EventSource => data w=true e=false c=true function "EventSource"/1
+window.EventTarget => data w=true e=false c=true function "EventTarget"/0
+window.External => data w=true e=false c=true function "External"/0
+window.EyeDropper => data w=true e=false c=true function "EyeDropper"/0
+window.FeaturePolicy => data w=true e=false c=true function "FeaturePolicy"/0
+window.FederatedCredential => data w=true e=false c=true function "FederatedCredential"/1
+window.FetchLaterResult => data w=true e=false c=true function "FetchLaterResult"/0
+window.File => data w=true e=false c=true function "File"/2
+window.FileList => data w=true e=false c=true function "FileList"/0
+window.FileReader => data w=true e=false c=true function "FileReader"/0
+window.FileSystemDirectoryHandle => data w=true e=false c=true function "FileSystemDirectoryHandle"/0
+window.FileSystemFileHandle => data w=true e=false c=true function "FileSystemFileHandle"/0
+window.FileSystemHandle => data w=true e=false c=true function "FileSystemHandle"/0
+window.FileSystemObserver => data w=true e=false c=true function "FileSystemObserver"/1
+window.FileSystemWritableFileStream => data w=true e=false c=true function "FileSystemWritableFileStream"/0
+window.FinalizationRegistry => data w=true e=false c=true function "FinalizationRegistry"/1
+window.Float16Array => data w=true e=false c=true function "Float16Array"/3
+window.Float32Array => data w=true e=false c=true function "Float32Array"/3
+window.Float64Array => data w=true e=false c=true function "Float64Array"/3
+window.FocusEvent => data w=true e=false c=true function "FocusEvent"/1
+window.FontData => data w=true e=false c=true function "FontData"/0
+window.FontFace => data w=true e=false c=true function "FontFace"/2
+window.FontFaceSet => data w=true e=false c=true function "FontFaceSet"/0
+window.FontFaceSetLoadEvent => data w=true e=false c=true function "FontFaceSetLoadEvent"/1
+window.FormData => data w=true e=false c=true function "FormData"/0
+window.FormDataEvent => data w=true e=false c=true function "FormDataEvent"/2
+window.FragmentDirective => data w=true e=false c=true function "FragmentDirective"/0
+window.Function => data w=true e=false c=true function "Function"/1
+window.GPU => data w=true e=false c=true function "GPU"/0
+window.GPUAdapter => data w=true e=false c=true function "GPUAdapter"/0
+window.GPUAdapterInfo => data w=true e=false c=true function "GPUAdapterInfo"/0
+window.GPUBindGroup => data w=true e=false c=true function "GPUBindGroup"/0
+window.GPUBindGroupLayout => data w=true e=false c=true function "GPUBindGroupLayout"/0
+window.GPUBuffer => data w=true e=false c=true function "GPUBuffer"/0
+window.GPUBufferUsage => data w=true e=false c=true object
+window.GPUCanvasContext => data w=true e=false c=true function "GPUCanvasContext"/0
+window.GPUColorWrite => data w=true e=false c=true object
+window.GPUCommandBuffer => data w=true e=false c=true function "GPUCommandBuffer"/0
+window.GPUCommandEncoder => data w=true e=false c=true function "GPUCommandEncoder"/0
+window.GPUCompilationInfo => data w=true e=false c=true function "GPUCompilationInfo"/0
+window.GPUCompilationMessage => data w=true e=false c=true function "GPUCompilationMessage"/0
+window.GPUComputePassEncoder => data w=true e=false c=true function "GPUComputePassEncoder"/0
+window.GPUComputePipeline => data w=true e=false c=true function "GPUComputePipeline"/0
+window.GPUDevice => data w=true e=false c=true function "GPUDevice"/0
+window.GPUDeviceLostInfo => data w=true e=false c=true function "GPUDeviceLostInfo"/0
+window.GPUError => data w=true e=false c=true function "GPUError"/0
+window.GPUExternalTexture => data w=true e=false c=true function "GPUExternalTexture"/0
+window.GPUInternalError => data w=true e=false c=true function "GPUInternalError"/1
+window.GPUMapMode => data w=true e=false c=true object
+window.GPUOutOfMemoryError => data w=true e=false c=true function "GPUOutOfMemoryError"/1
+window.GPUPipelineError => data w=true e=false c=true function "GPUPipelineError"/1
+window.GPUPipelineLayout => data w=true e=false c=true function "GPUPipelineLayout"/0
+window.GPUQuerySet => data w=true e=false c=true function "GPUQuerySet"/0
+window.GPUQueue => data w=true e=false c=true function "GPUQueue"/0
+window.GPURenderBundle => data w=true e=false c=true function "GPURenderBundle"/0
+window.GPURenderBundleEncoder => data w=true e=false c=true function "GPURenderBundleEncoder"/0
+window.GPURenderPassEncoder => data w=true e=false c=true function "GPURenderPassEncoder"/0
+window.GPURenderPipeline => data w=true e=false c=true function "GPURenderPipeline"/0
+window.GPUSampler => data w=true e=false c=true function "GPUSampler"/0
+window.GPUShaderModule => data w=true e=false c=true function "GPUShaderModule"/0
+window.GPUShaderStage => data w=true e=false c=true object
+window.GPUSupportedFeatures => data w=true e=false c=true function "GPUSupportedFeatures"/0
+window.GPUSupportedLimits => data w=true e=false c=true function "GPUSupportedLimits"/0
+window.GPUTexture => data w=true e=false c=true function "GPUTexture"/0
+window.GPUTextureUsage => data w=true e=false c=true object
+window.GPUTextureView => data w=true e=false c=true function "GPUTextureView"/0
+window.GPUUncapturedErrorEvent => data w=true e=false c=true function "GPUUncapturedErrorEvent"/2
+window.GPUValidationError => data w=true e=false c=true function "GPUValidationError"/1
+window.GainNode => data w=true e=false c=true function "GainNode"/1
+window.Gamepad => data w=true e=false c=true function "Gamepad"/0
+window.GamepadButton => data w=true e=false c=true function "GamepadButton"/0
+window.GamepadEvent => data w=true e=false c=true function "GamepadEvent"/1
+window.GamepadHapticActuator => data w=true e=false c=true function "GamepadHapticActuator"/0
+window.Geolocation => data w=true e=false c=true function "Geolocation"/0
+window.GeolocationCoordinates => data w=true e=false c=true function "GeolocationCoordinates"/0
+window.GeolocationPosition => data w=true e=false c=true function "GeolocationPosition"/0
+window.GeolocationPositionError => data w=true e=false c=true function "GeolocationPositionError"/0
+window.GravitySensor => data w=true e=false c=true function "GravitySensor"/0
+window.Gyroscope => data w=true e=false c=true function "Gyroscope"/0
+window.HID => data w=true e=false c=true function "HID"/0
+window.HIDConnectionEvent => data w=true e=false c=true function "HIDConnectionEvent"/2
+window.HIDDevice => data w=true e=false c=true function "HIDDevice"/0
+window.HIDInputReportEvent => data w=true e=false c=true function "HIDInputReportEvent"/0
+window.HTMLAllCollection => data w=true e=false c=true function "HTMLAllCollection"/0
+window.HTMLAnchorElement => data w=true e=false c=true function "HTMLAnchorElement"/0
+window.HTMLAreaElement => data w=true e=false c=true function "HTMLAreaElement"/0
+window.HTMLAudioElement => data w=true e=false c=true function "HTMLAudioElement"/0
+window.HTMLBRElement => data w=true e=false c=true function "HTMLBRElement"/0
+window.HTMLBaseElement => data w=true e=false c=true function "HTMLBaseElement"/0
+window.HTMLBodyElement => data w=true e=false c=true function "HTMLBodyElement"/0
+window.HTMLButtonElement => data w=true e=false c=true function "HTMLButtonElement"/0
+window.HTMLCanvasElement => data w=true e=false c=true function "HTMLCanvasElement"/0
+window.HTMLCollection => data w=true e=false c=true function "HTMLCollection"/0
+window.HTMLDListElement => data w=true e=false c=true function "HTMLDListElement"/0
+window.HTMLDataElement => data w=true e=false c=true function "HTMLDataElement"/0
+window.HTMLDataListElement => data w=true e=false c=true function "HTMLDataListElement"/0
+window.HTMLDetailsElement => data w=true e=false c=true function "HTMLDetailsElement"/0
+window.HTMLDialogElement => data w=true e=false c=true function "HTMLDialogElement"/0
+window.HTMLDirectoryElement => data w=true e=false c=true function "HTMLDirectoryElement"/0
+window.HTMLDivElement => data w=true e=false c=true function "HTMLDivElement"/0
+window.HTMLDocument => data w=true e=false c=true function "HTMLDocument"/0
+window.HTMLElement => data w=true e=false c=true function "HTMLElement"/0
+window.HTMLEmbedElement => data w=true e=false c=true function "HTMLEmbedElement"/0
+window.HTMLFieldSetElement => data w=true e=false c=true function "HTMLFieldSetElement"/0
+window.HTMLFontElement => data w=true e=false c=true function "HTMLFontElement"/0
+window.HTMLFormControlsCollection => data w=true e=false c=true function "HTMLFormControlsCollection"/0
+window.HTMLFormElement => data w=true e=false c=true function "HTMLFormElement"/0
+window.HTMLFrameElement => data w=true e=false c=true function "HTMLFrameElement"/0
+window.HTMLFrameSetElement => data w=true e=false c=true function "HTMLFrameSetElement"/0
+window.HTMLGeolocationElement => data w=true e=false c=true function "HTMLGeolocationElement"/0
+window.HTMLHRElement => data w=true e=false c=true function "HTMLHRElement"/0
+window.HTMLHeadElement => data w=true e=false c=true function "HTMLHeadElement"/0
+window.HTMLHeadingElement => data w=true e=false c=true function "HTMLHeadingElement"/0
+window.HTMLHtmlElement => data w=true e=false c=true function "HTMLHtmlElement"/0
+window.HTMLIFrameElement => data w=true e=false c=true function "HTMLIFrameElement"/0
+window.HTMLImageElement => data w=true e=false c=true function "HTMLImageElement"/0
+window.HTMLInputElement => data w=true e=false c=true function "HTMLInputElement"/0
+window.HTMLLIElement => data w=true e=false c=true function "HTMLLIElement"/0
+window.HTMLLabelElement => data w=true e=false c=true function "HTMLLabelElement"/0
+window.HTMLLegendElement => data w=true e=false c=true function "HTMLLegendElement"/0
+window.HTMLLinkElement => data w=true e=false c=true function "HTMLLinkElement"/0
+window.HTMLMapElement => data w=true e=false c=true function "HTMLMapElement"/0
+window.HTMLMarqueeElement => data w=true e=false c=true function "HTMLMarqueeElement"/0
+window.HTMLMediaElement => data w=true e=false c=true function "HTMLMediaElement"/0
+window.HTMLMenuElement => data w=true e=false c=true function "HTMLMenuElement"/0
+window.HTMLMetaElement => data w=true e=false c=true function "HTMLMetaElement"/0
+window.HTMLMeterElement => data w=true e=false c=true function "HTMLMeterElement"/0
+window.HTMLModElement => data w=true e=false c=true function "HTMLModElement"/0
+window.HTMLOListElement => data w=true e=false c=true function "HTMLOListElement"/0
+window.HTMLObjectElement => data w=true e=false c=true function "HTMLObjectElement"/0
+window.HTMLOptGroupElement => data w=true e=false c=true function "HTMLOptGroupElement"/0
+window.HTMLOptionElement => data w=true e=false c=true function "HTMLOptionElement"/0
+window.HTMLOptionsCollection => data w=true e=false c=true function "HTMLOptionsCollection"/0
+window.HTMLOutputElement => data w=true e=false c=true function "HTMLOutputElement"/0
+window.HTMLParagraphElement => data w=true e=false c=true function "HTMLParagraphElement"/0
+window.HTMLParamElement => data w=true e=false c=true function "HTMLParamElement"/0
+window.HTMLPictureElement => data w=true e=false c=true function "HTMLPictureElement"/0
+window.HTMLPreElement => data w=true e=false c=true function "HTMLPreElement"/0
+window.HTMLProgressElement => data w=true e=false c=true function "HTMLProgressElement"/0
+window.HTMLQuoteElement => data w=true e=false c=true function "HTMLQuoteElement"/0
+window.HTMLScriptElement => data w=true e=false c=true function "HTMLScriptElement"/0
+window.HTMLSelectElement => data w=true e=false c=true function "HTMLSelectElement"/0
+window.HTMLSelectedContentElement => data w=true e=false c=true function "HTMLSelectedContentElement"/0
+window.HTMLSlotElement => data w=true e=false c=true function "HTMLSlotElement"/0
+window.HTMLSourceElement => data w=true e=false c=true function "HTMLSourceElement"/0
+window.HTMLSpanElement => data w=true e=false c=true function "HTMLSpanElement"/0
+window.HTMLStyleElement => data w=true e=false c=true function "HTMLStyleElement"/0
+window.HTMLTableCaptionElement => data w=true e=false c=true function "HTMLTableCaptionElement"/0
+window.HTMLTableCellElement => data w=true e=false c=true function "HTMLTableCellElement"/0
+window.HTMLTableColElement => data w=true e=false c=true function "HTMLTableColElement"/0
+window.HTMLTableElement => data w=true e=false c=true function "HTMLTableElement"/0
+window.HTMLTableRowElement => data w=true e=false c=true function "HTMLTableRowElement"/0
+window.HTMLTableSectionElement => data w=true e=false c=true function "HTMLTableSectionElement"/0
+window.HTMLTemplateElement => data w=true e=false c=true function "HTMLTemplateElement"/0
+window.HTMLTextAreaElement => data w=true e=false c=true function "HTMLTextAreaElement"/0
+window.HTMLTimeElement => data w=true e=false c=true function "HTMLTimeElement"/0
+window.HTMLTitleElement => data w=true e=false c=true function "HTMLTitleElement"/0
+window.HTMLTrackElement => data w=true e=false c=true function "HTMLTrackElement"/0
+window.HTMLUListElement => data w=true e=false c=true function "HTMLUListElement"/0
+window.HTMLUnknownElement => data w=true e=false c=true function "HTMLUnknownElement"/0
+window.HTMLVideoElement => data w=true e=false c=true function "HTMLVideoElement"/0
+window.HashChangeEvent => data w=true e=false c=true function "HashChangeEvent"/1
+window.Headers => data w=true e=false c=true function "Headers"/0
+window.Highlight => data w=true e=false c=true function "Highlight"/0
+window.HighlightRegistry => data w=true e=false c=true function "HighlightRegistry"/0
+window.History => data w=true e=false c=true function "History"/0
+window.IDBCursor => data w=true e=false c=true function "IDBCursor"/0
+window.IDBCursorWithValue => data w=true e=false c=true function "IDBCursorWithValue"/0
+window.IDBDatabase => data w=true e=false c=true function "IDBDatabase"/0
+window.IDBFactory => data w=true e=false c=true function "IDBFactory"/0
+window.IDBIndex => data w=true e=false c=true function "IDBIndex"/0
+window.IDBKeyRange => data w=true e=false c=true function "IDBKeyRange"/0
+window.IDBObjectStore => data w=true e=false c=true function "IDBObjectStore"/0
+window.IDBOpenDBRequest => data w=true e=false c=true function "IDBOpenDBRequest"/0
+window.IDBRecord => data w=true e=false c=true function "IDBRecord"/0
+window.IDBRequest => data w=true e=false c=true function "IDBRequest"/0
+window.IDBTransaction => data w=true e=false c=true function "IDBTransaction"/0
+window.IDBVersionChangeEvent => data w=true e=false c=true function "IDBVersionChangeEvent"/1
+window.IIRFilterNode => data w=true e=false c=true function "IIRFilterNode"/2
+window.IdleDeadline => data w=true e=false c=true function "IdleDeadline"/0
+window.IdleDetector => data w=true e=false c=true function "IdleDetector"/0
+window.Image => data w=true e=false c=true function "Image"/0
+window.ImageBitmap => data w=true e=false c=true function "ImageBitmap"/0
+window.ImageBitmapRenderingContext => data w=true e=false c=true function "ImageBitmapRenderingContext"/0
+window.ImageCapture => data w=true e=false c=true function "ImageCapture"/1
+window.ImageData => data w=true e=false c=true function "ImageData"/2
+window.ImageDecoder => data w=true e=false c=true function "ImageDecoder"/1
+window.ImageTrack => data w=true e=false c=true function "ImageTrack"/0
+window.ImageTrackList => data w=true e=false c=true function "ImageTrackList"/0
+window.Infinity => data w=false e=false c=false number
+window.Ink => data w=true e=false c=true function "Ink"/0
+window.InputDeviceCapabilities => data w=true e=false c=true function "InputDeviceCapabilities"/0
+window.InputDeviceInfo => data w=true e=false c=true function "InputDeviceInfo"/0
+window.InputEvent => data w=true e=false c=true function "InputEvent"/1
+window.Int16Array => data w=true e=false c=true function "Int16Array"/3
+window.Int32Array => data w=true e=false c=true function "Int32Array"/3
+window.Int8Array => data w=true e=false c=true function "Int8Array"/3
+window.IntegrityViolationReportBody => data w=true e=false c=true function "IntegrityViolationReportBody"/0
+window.InteractionContentfulPaint => data w=true e=false c=true function "InteractionContentfulPaint"/0
+window.InterestEvent => data w=true e=false c=true function "InterestEvent"/1
+window.IntersectionObserver => data w=true e=false c=true function "IntersectionObserver"/1
+window.IntersectionObserverEntry => data w=true e=false c=true function "IntersectionObserverEntry"/0
+window.Intl => data w=true e=false c=true object
+window.Iterator => data w=true e=false c=true function "Iterator"/0
+window.JSON => data w=true e=false c=true object
+window.Keyboard => data w=true e=false c=true function "Keyboard"/0
+window.KeyboardEvent => data w=true e=false c=true function "KeyboardEvent"/1
+window.KeyboardLayoutMap => data w=true e=false c=true function "KeyboardLayoutMap"/0
+window.KeyframeEffect => data w=true e=false c=true function "KeyframeEffect"/1
+window.LargestContentfulPaint => data w=true e=false c=true function "LargestContentfulPaint"/0
+window.LaunchParams => data w=true e=false c=true function "LaunchParams"/0
+window.LaunchQueue => data w=true e=false c=true function "LaunchQueue"/0
+window.LayoutShift => data w=true e=false c=true function "LayoutShift"/0
+window.LayoutShiftAttribution => data w=true e=false c=true function "LayoutShiftAttribution"/0
+window.LinearAccelerationSensor => data w=true e=false c=true function "LinearAccelerationSensor"/0
+window.Location => data w=true e=false c=true function "Location"/0
+window.Lock => data w=true e=false c=true function "Lock"/0
+window.LockManager => data w=true e=false c=true function "LockManager"/0
+window.MIDIAccess => data w=true e=false c=true function "MIDIAccess"/0
+window.MIDIConnectionEvent => data w=true e=false c=true function "MIDIConnectionEvent"/1
+window.MIDIInput => data w=true e=false c=true function "MIDIInput"/0
+window.MIDIInputMap => data w=true e=false c=true function "MIDIInputMap"/0
+window.MIDIMessageEvent => data w=true e=false c=true function "MIDIMessageEvent"/1
+window.MIDIOutput => data w=true e=false c=true function "MIDIOutput"/0
+window.MIDIOutputMap => data w=true e=false c=true function "MIDIOutputMap"/0
+window.MIDIPort => data w=true e=false c=true function "MIDIPort"/0
+window.Map => data w=true e=false c=true function "Map"/0
+window.Math => data w=true e=false c=true object
+window.MathMLElement => data w=true e=false c=true function "MathMLElement"/0
+window.MediaCapabilities => data w=true e=false c=true function "MediaCapabilities"/0
+window.MediaDeviceInfo => data w=true e=false c=true function "MediaDeviceInfo"/0
+window.MediaDevices => data w=true e=false c=true function "MediaDevices"/0
+window.MediaElementAudioSourceNode => data w=true e=false c=true function "MediaElementAudioSourceNode"/2
+window.MediaEncryptedEvent => data w=true e=false c=true function "MediaEncryptedEvent"/1
+window.MediaError => data w=true e=false c=true function "MediaError"/0
+window.MediaKeyMessageEvent => data w=true e=false c=true function "MediaKeyMessageEvent"/2
+window.MediaKeySession => data w=true e=false c=true function "MediaKeySession"/0
+window.MediaKeyStatusMap => data w=true e=false c=true function "MediaKeyStatusMap"/0
+window.MediaKeySystemAccess => data w=true e=false c=true function "MediaKeySystemAccess"/0
+window.MediaKeys => data w=true e=false c=true function "MediaKeys"/0
+window.MediaList => data w=true e=false c=true function "MediaList"/0
+window.MediaMetadata => data w=true e=false c=true function "MediaMetadata"/0
+window.MediaQueryList => data w=true e=false c=true function "MediaQueryList"/0
+window.MediaQueryListEvent => data w=true e=false c=true function "MediaQueryListEvent"/1
+window.MediaRecorder => data w=true e=false c=true function "MediaRecorder"/1
+window.MediaSession => data w=true e=false c=true function "MediaSession"/0
+window.MediaSource => data w=true e=false c=true function "MediaSource"/0
+window.MediaSourceHandle => data w=true e=false c=true function "MediaSourceHandle"/0
+window.MediaStream => data w=true e=false c=true function "MediaStream"/0
+window.MediaStreamAudioDestinationNode => data w=true e=false c=true function "MediaStreamAudioDestinationNode"/1
+window.MediaStreamAudioSourceNode => data w=true e=false c=true function "MediaStreamAudioSourceNode"/2
+window.MediaStreamEvent => data w=true e=false c=true function "MediaStreamEvent"/1
+window.MediaStreamTrack => data w=true e=false c=true function "MediaStreamTrack"/0
+window.MediaStreamTrackAudioStats => data w=true e=false c=true function "MediaStreamTrackAudioStats"/0
+window.MediaStreamTrackEvent => data w=true e=false c=true function "MediaStreamTrackEvent"/2
+window.MediaStreamTrackGenerator => data w=true e=false c=true function "MediaStreamTrackGenerator"/1
+window.MediaStreamTrackProcessor => data w=true e=false c=true function "MediaStreamTrackProcessor"/1
+window.MediaStreamTrackVideoStats => data w=true e=false c=true function "MediaStreamTrackVideoStats"/0
+window.MessageChannel => data w=true e=false c=true function "MessageChannel"/0
+window.MessageEvent => data w=true e=false c=true function "MessageEvent"/1
+window.MessagePort => data w=true e=false c=true function "MessagePort"/0
+window.MimeType => data w=true e=false c=true function "MimeType"/0
+window.MimeTypeArray => data w=true e=false c=true function "MimeTypeArray"/0
+window.MouseEvent => data w=true e=false c=true function "MouseEvent"/1
+window.MutationObserver => data w=true e=false c=true function "MutationObserver"/1
+window.MutationRecord => data w=true e=false c=true function "MutationRecord"/0
+window.NaN => data w=false e=false c=false number
+window.NamedNodeMap => data w=true e=false c=true function "NamedNodeMap"/0
+window.NavigateEvent => data w=true e=false c=true function "NavigateEvent"/2
+window.Navigation => data w=true e=false c=true function "Navigation"/0
+window.NavigationActivation => data w=true e=false c=true function "NavigationActivation"/0
+window.NavigationCurrentEntryChangeEvent => data w=true e=false c=true function "NavigationCurrentEntryChangeEvent"/2
+window.NavigationDestination => data w=true e=false c=true function "NavigationDestination"/0
+window.NavigationHistoryEntry => data w=true e=false c=true function "NavigationHistoryEntry"/0
+window.NavigationPrecommitController => data w=true e=false c=true function "NavigationPrecommitController"/0
+window.NavigationPreloadManager => data w=true e=false c=true function "NavigationPreloadManager"/0
+window.NavigationTransition => data w=true e=false c=true function "NavigationTransition"/0
+window.Navigator => data w=true e=false c=true function "Navigator"/0
+window.NavigatorManagedData => data w=true e=false c=true function "NavigatorManagedData"/0
+window.NavigatorUAData => data w=true e=false c=true function "NavigatorUAData"/0
+window.NetworkInformation => data w=true e=false c=true function "NetworkInformation"/0
+window.Node => data w=true e=false c=true function "Node"/0
+window.NodeFilter => data w=true e=false c=true function "NodeFilter"/0
+window.NodeIterator => data w=true e=false c=true function "NodeIterator"/0
+window.NodeList => data w=true e=false c=true function "NodeList"/0
+window.NotRestoredReasonDetails => data w=true e=false c=true function "NotRestoredReasonDetails"/0
+window.NotRestoredReasons => data w=true e=false c=true function "NotRestoredReasons"/0
+window.Notification => data w=true e=false c=true function "Notification"/1
+window.Number => data w=true e=false c=true function "Number"/1
+window.Object => data w=true e=false c=true function "Object"/1
+window.Observable => data w=true e=false c=true function "Observable"/1
+window.OfflineAudioCompletionEvent => data w=true e=false c=true function "OfflineAudioCompletionEvent"/2
+window.OfflineAudioContext => data w=true e=false c=true function "OfflineAudioContext"/1
+window.OffscreenCanvas => data w=true e=false c=true function "OffscreenCanvas"/2
+window.OffscreenCanvasRenderingContext2D => data w=true e=false c=true function "OffscreenCanvasRenderingContext2D"/0
+window.Option => data w=true e=false c=true function "Option"/0
+window.OrientationSensor => data w=true e=false c=true function "OrientationSensor"/0
+window.Origin => data w=true e=false c=true function "Origin"/0
+window.OscillatorNode => data w=true e=false c=true function "OscillatorNode"/1
+window.OverconstrainedError => data w=true e=false c=true function "OverconstrainedError"/1
+window.PageRevealEvent => data w=true e=false c=true function "PageRevealEvent"/1
+window.PageSwapEvent => data w=true e=false c=true function "PageSwapEvent"/1
+window.PageTransitionEvent => data w=true e=false c=true function "PageTransitionEvent"/1
+window.PannerNode => data w=true e=false c=true function "PannerNode"/1
+window.PasswordCredential => data w=true e=false c=true function "PasswordCredential"/1
+window.Path2D => data w=true e=false c=true function "Path2D"/0
+window.PaymentAddress => data w=true e=false c=true function "PaymentAddress"/0
+window.PaymentManager => data w=true e=false c=true function "PaymentManager"/0
+window.PaymentMethodChangeEvent => data w=true e=false c=true function "PaymentMethodChangeEvent"/1
+window.PaymentRequest => data w=true e=false c=true function "PaymentRequest"/1
+window.PaymentRequestUpdateEvent => data w=true e=false c=true function "PaymentRequestUpdateEvent"/1
+window.PaymentResponse => data w=true e=false c=true function "PaymentResponse"/0
+window.Performance => data w=true e=false c=true function "Performance"/0
+window.PerformanceElementTiming => data w=true e=false c=true function "PerformanceElementTiming"/0
+window.PerformanceEntry => data w=true e=false c=true function "PerformanceEntry"/0
+window.PerformanceEventTiming => data w=true e=false c=true function "PerformanceEventTiming"/0
+window.PerformanceLongAnimationFrameTiming => data w=true e=false c=true function "PerformanceLongAnimationFrameTiming"/0
+window.PerformanceLongTaskTiming => data w=true e=false c=true function "PerformanceLongTaskTiming"/0
+window.PerformanceMark => data w=true e=false c=true function "PerformanceMark"/1
+window.PerformanceMeasure => data w=true e=false c=true function "PerformanceMeasure"/0
+window.PerformanceNavigation => data w=true e=false c=true function "PerformanceNavigation"/0
+window.PerformanceNavigationTiming => data w=true e=false c=true function "PerformanceNavigationTiming"/0
+window.PerformanceObserver => data w=true e=false c=true function "PerformanceObserver"/1
+window.PerformanceObserverEntryList => data w=true e=false c=true function "PerformanceObserverEntryList"/0
+window.PerformancePaintTiming => data w=true e=false c=true function "PerformancePaintTiming"/0
+window.PerformanceResourceTiming => data w=true e=false c=true function "PerformanceResourceTiming"/0
+window.PerformanceScriptTiming => data w=true e=false c=true function "PerformanceScriptTiming"/0
+window.PerformanceServerTiming => data w=true e=false c=true function "PerformanceServerTiming"/0
+window.PerformanceSoftNavigation => data w=true e=false c=true function "PerformanceSoftNavigation"/0
+window.PerformanceTiming => data w=true e=false c=true function "PerformanceTiming"/0
+window.PerformanceTimingConfidence => data w=true e=false c=true function "PerformanceTimingConfidence"/0
+window.PeriodicSyncManager => data w=true e=false c=true function "PeriodicSyncManager"/0
+window.PeriodicWave => data w=true e=false c=true function "PeriodicWave"/1
+window.PermissionStatus => data w=true e=false c=true function "PermissionStatus"/0
+window.Permissions => data w=true e=false c=true function "Permissions"/0
+window.PictureInPictureEvent => data w=true e=false c=true function "PictureInPictureEvent"/2
+window.PictureInPictureWindow => data w=true e=false c=true function "PictureInPictureWindow"/0
+window.Plugin => data w=true e=false c=true function "Plugin"/0
+window.PluginArray => data w=true e=false c=true function "PluginArray"/0
+window.PointerEvent => data w=true e=false c=true function "PointerEvent"/1
+window.PopStateEvent => data w=true e=false c=true function "PopStateEvent"/1
+window.Presentation => data w=true e=false c=true function "Presentation"/0
+window.PresentationAvailability => data w=true e=false c=true function "PresentationAvailability"/0
+window.PresentationConnection => data w=true e=false c=true function "PresentationConnection"/0
+window.PresentationConnectionAvailableEvent => data w=true e=false c=true function "PresentationConnectionAvailableEvent"/2
+window.PresentationConnectionCloseEvent => data w=true e=false c=true function "PresentationConnectionCloseEvent"/2
+window.PresentationConnectionList => data w=true e=false c=true function "PresentationConnectionList"/0
+window.PresentationReceiver => data w=true e=false c=true function "PresentationReceiver"/0
+window.PresentationRequest => data w=true e=false c=true function "PresentationRequest"/1
+window.PressureObserver => data w=true e=false c=true function "PressureObserver"/1
+window.PressureRecord => data w=true e=false c=true function "PressureRecord"/0
+window.ProcessingInstruction => data w=true e=false c=true function "ProcessingInstruction"/0
+window.Profiler => data w=true e=false c=true function "Profiler"/1
+window.ProgressEvent => data w=true e=false c=true function "ProgressEvent"/1
+window.Promise => data w=true e=false c=true function "Promise"/1
+window.PromiseRejectionEvent => data w=true e=false c=true function "PromiseRejectionEvent"/2
+window.ProtectedAudience => data w=true e=false c=true function "ProtectedAudience"/0
+window.Proxy => data w=true e=false c=true function "Proxy"/2
+window.PublicKeyCredential => data w=true e=false c=true function "PublicKeyCredential"/0
+window.PushManager => data w=true e=false c=true function "PushManager"/0
+window.PushSubscription => data w=true e=false c=true function "PushSubscription"/0
+window.PushSubscriptionOptions => data w=true e=false c=true function "PushSubscriptionOptions"/0
+window.QuotaExceededError => data w=true e=false c=true function "QuotaExceededError"/0
+window.RTCCertificate => data w=true e=false c=true function "RTCCertificate"/0
+window.RTCDTMFSender => data w=true e=false c=true function "RTCDTMFSender"/0
+window.RTCDTMFToneChangeEvent => data w=true e=false c=true function "RTCDTMFToneChangeEvent"/2
+window.RTCDataChannel => data w=true e=false c=true function "RTCDataChannel"/0
+window.RTCDataChannelEvent => data w=true e=false c=true function "RTCDataChannelEvent"/2
+window.RTCDtlsTransport => data w=true e=false c=true function "RTCDtlsTransport"/0
+window.RTCEncodedAudioFrame => data w=true e=false c=true function "RTCEncodedAudioFrame"/1
+window.RTCEncodedVideoFrame => data w=true e=false c=true function "RTCEncodedVideoFrame"/1
+window.RTCError => data w=true e=false c=true function "RTCError"/1
+window.RTCErrorEvent => data w=true e=false c=true function "RTCErrorEvent"/2
+window.RTCIceCandidate => data w=true e=false c=true function "RTCIceCandidate"/0
+window.RTCIceTransport => data w=true e=false c=true function "RTCIceTransport"/0
+window.RTCPeerConnection => data w=true e=false c=true function "RTCPeerConnection"/0
+window.RTCPeerConnectionIceErrorEvent => data w=true e=false c=true function "RTCPeerConnectionIceErrorEvent"/2
+window.RTCPeerConnectionIceEvent => data w=true e=false c=true function "RTCPeerConnectionIceEvent"/1
+window.RTCRtpReceiver => data w=true e=false c=true function "RTCRtpReceiver"/0
+window.RTCRtpScriptTransform => data w=true e=false c=true function "RTCRtpScriptTransform"/1
+window.RTCRtpSender => data w=true e=false c=true function "RTCRtpSender"/0
+window.RTCRtpTransceiver => data w=true e=false c=true function "RTCRtpTransceiver"/0
+window.RTCSctpTransport => data w=true e=false c=true function "RTCSctpTransport"/0
+window.RTCSessionDescription => data w=true e=false c=true function "RTCSessionDescription"/0
+window.RTCStatsReport => data w=true e=false c=true function "RTCStatsReport"/0
+window.RTCTrackEvent => data w=true e=false c=true function "RTCTrackEvent"/2
+window.RadioNodeList => data w=true e=false c=true function "RadioNodeList"/0
+window.Range => data w=true e=false c=true function "Range"/0
+window.RangeError => data w=true e=false c=true function "RangeError"/1
+window.ReadableByteStreamController => data w=true e=false c=true function "ReadableByteStreamController"/0
+window.ReadableStream => data w=true e=false c=true function "ReadableStream"/0
+window.ReadableStreamBYOBReader => data w=true e=false c=true function "ReadableStreamBYOBReader"/1
+window.ReadableStreamBYOBRequest => data w=true e=false c=true function "ReadableStreamBYOBRequest"/0
+window.ReadableStreamDefaultController => data w=true e=false c=true function "ReadableStreamDefaultController"/0
+window.ReadableStreamDefaultReader => data w=true e=false c=true function "ReadableStreamDefaultReader"/1
+window.ReferenceError => data w=true e=false c=true function "ReferenceError"/1
+window.Reflect => data w=true e=false c=true object
+window.RegExp => data w=true e=false c=true function "RegExp"/2
+window.RelativeOrientationSensor => data w=true e=false c=true function "RelativeOrientationSensor"/0
+window.RemotePlayback => data w=true e=false c=true function "RemotePlayback"/0
+window.ReportBody => data w=true e=false c=true function "ReportBody"/0
+window.ReportingObserver => data w=true e=false c=true function "ReportingObserver"/1
+window.Request => data w=true e=false c=true function "Request"/1
+window.ResizeObserver => data w=true e=false c=true function "ResizeObserver"/1
+window.ResizeObserverEntry => data w=true e=false c=true function "ResizeObserverEntry"/0
+window.ResizeObserverSize => data w=true e=false c=true function "ResizeObserverSize"/0
+window.Response => data w=true e=false c=true function "Response"/0
+window.RestrictionTarget => data w=true e=false c=true function "RestrictionTarget"/0
+window.SVGAElement => data w=true e=false c=true function "SVGAElement"/0
+window.SVGAngle => data w=true e=false c=true function "SVGAngle"/0
+window.SVGAnimateElement => data w=true e=false c=true function "SVGAnimateElement"/0
+window.SVGAnimateMotionElement => data w=true e=false c=true function "SVGAnimateMotionElement"/0
+window.SVGAnimateTransformElement => data w=true e=false c=true function "SVGAnimateTransformElement"/0
+window.SVGAnimatedAngle => data w=true e=false c=true function "SVGAnimatedAngle"/0
+window.SVGAnimatedBoolean => data w=true e=false c=true function "SVGAnimatedBoolean"/0
+window.SVGAnimatedEnumeration => data w=true e=false c=true function "SVGAnimatedEnumeration"/0
+window.SVGAnimatedInteger => data w=true e=false c=true function "SVGAnimatedInteger"/0
+window.SVGAnimatedLength => data w=true e=false c=true function "SVGAnimatedLength"/0
+window.SVGAnimatedLengthList => data w=true e=false c=true function "SVGAnimatedLengthList"/0
+window.SVGAnimatedNumber => data w=true e=false c=true function "SVGAnimatedNumber"/0
+window.SVGAnimatedNumberList => data w=true e=false c=true function "SVGAnimatedNumberList"/0
+window.SVGAnimatedPreserveAspectRatio => data w=true e=false c=true function "SVGAnimatedPreserveAspectRatio"/0
+window.SVGAnimatedRect => data w=true e=false c=true function "SVGAnimatedRect"/0
+window.SVGAnimatedString => data w=true e=false c=true function "SVGAnimatedString"/0
+window.SVGAnimatedTransformList => data w=true e=false c=true function "SVGAnimatedTransformList"/0
+window.SVGAnimationElement => data w=true e=false c=true function "SVGAnimationElement"/0
+window.SVGCircleElement => data w=true e=false c=true function "SVGCircleElement"/0
+window.SVGClipPathElement => data w=true e=false c=true function "SVGClipPathElement"/0
+window.SVGComponentTransferFunctionElement => data w=true e=false c=true function "SVGComponentTransferFunctionElement"/0
+window.SVGDefsElement => data w=true e=false c=true function "SVGDefsElement"/0
+window.SVGDescElement => data w=true e=false c=true function "SVGDescElement"/0
+window.SVGElement => data w=true e=false c=true function "SVGElement"/0
+window.SVGEllipseElement => data w=true e=false c=true function "SVGEllipseElement"/0
+window.SVGFEBlendElement => data w=true e=false c=true function "SVGFEBlendElement"/0
+window.SVGFEColorMatrixElement => data w=true e=false c=true function "SVGFEColorMatrixElement"/0
+window.SVGFEComponentTransferElement => data w=true e=false c=true function "SVGFEComponentTransferElement"/0
+window.SVGFECompositeElement => data w=true e=false c=true function "SVGFECompositeElement"/0
+window.SVGFEConvolveMatrixElement => data w=true e=false c=true function "SVGFEConvolveMatrixElement"/0
+window.SVGFEDiffuseLightingElement => data w=true e=false c=true function "SVGFEDiffuseLightingElement"/0
+window.SVGFEDisplacementMapElement => data w=true e=false c=true function "SVGFEDisplacementMapElement"/0
+window.SVGFEDistantLightElement => data w=true e=false c=true function "SVGFEDistantLightElement"/0
+window.SVGFEDropShadowElement => data w=true e=false c=true function "SVGFEDropShadowElement"/0
+window.SVGFEFloodElement => data w=true e=false c=true function "SVGFEFloodElement"/0
+window.SVGFEFuncAElement => data w=true e=false c=true function "SVGFEFuncAElement"/0
+window.SVGFEFuncBElement => data w=true e=false c=true function "SVGFEFuncBElement"/0
+window.SVGFEFuncGElement => data w=true e=false c=true function "SVGFEFuncGElement"/0
+window.SVGFEFuncRElement => data w=true e=false c=true function "SVGFEFuncRElement"/0
+window.SVGFEGaussianBlurElement => data w=true e=false c=true function "SVGFEGaussianBlurElement"/0
+window.SVGFEImageElement => data w=true e=false c=true function "SVGFEImageElement"/0
+window.SVGFEMergeElement => data w=true e=false c=true function "SVGFEMergeElement"/0
+window.SVGFEMergeNodeElement => data w=true e=false c=true function "SVGFEMergeNodeElement"/0
+window.SVGFEMorphologyElement => data w=true e=false c=true function "SVGFEMorphologyElement"/0
+window.SVGFEOffsetElement => data w=true e=false c=true function "SVGFEOffsetElement"/0
+window.SVGFEPointLightElement => data w=true e=false c=true function "SVGFEPointLightElement"/0
+window.SVGFESpecularLightingElement => data w=true e=false c=true function "SVGFESpecularLightingElement"/0
+window.SVGFESpotLightElement => data w=true e=false c=true function "SVGFESpotLightElement"/0
+window.SVGFETileElement => data w=true e=false c=true function "SVGFETileElement"/0
+window.SVGFETurbulenceElement => data w=true e=false c=true function "SVGFETurbulenceElement"/0
+window.SVGFilterElement => data w=true e=false c=true function "SVGFilterElement"/0
+window.SVGForeignObjectElement => data w=true e=false c=true function "SVGForeignObjectElement"/0
+window.SVGGElement => data w=true e=false c=true function "SVGGElement"/0
+window.SVGGeometryElement => data w=true e=false c=true function "SVGGeometryElement"/0
+window.SVGGradientElement => data w=true e=false c=true function "SVGGradientElement"/0
+window.SVGGraphicsElement => data w=true e=false c=true function "SVGGraphicsElement"/0
+window.SVGImageElement => data w=true e=false c=true function "SVGImageElement"/0
+window.SVGLength => data w=true e=false c=true function "SVGLength"/0
+window.SVGLengthList => data w=true e=false c=true function "SVGLengthList"/0
+window.SVGLineElement => data w=true e=false c=true function "SVGLineElement"/0
+window.SVGLinearGradientElement => data w=true e=false c=true function "SVGLinearGradientElement"/0
+window.SVGMPathElement => data w=true e=false c=true function "SVGMPathElement"/0
+window.SVGMarkerElement => data w=true e=false c=true function "SVGMarkerElement"/0
+window.SVGMaskElement => data w=true e=false c=true function "SVGMaskElement"/0
+window.SVGMatrix => data w=true e=false c=true function "SVGMatrix"/0
+window.SVGMetadataElement => data w=true e=false c=true function "SVGMetadataElement"/0
+window.SVGNumber => data w=true e=false c=true function "SVGNumber"/0
+window.SVGNumberList => data w=true e=false c=true function "SVGNumberList"/0
+window.SVGPathElement => data w=true e=false c=true function "SVGPathElement"/0
+window.SVGPatternElement => data w=true e=false c=true function "SVGPatternElement"/0
+window.SVGPoint => data w=true e=false c=true function "SVGPoint"/0
+window.SVGPointList => data w=true e=false c=true function "SVGPointList"/0
+window.SVGPolygonElement => data w=true e=false c=true function "SVGPolygonElement"/0
+window.SVGPolylineElement => data w=true e=false c=true function "SVGPolylineElement"/0
+window.SVGPreserveAspectRatio => data w=true e=false c=true function "SVGPreserveAspectRatio"/0
+window.SVGRadialGradientElement => data w=true e=false c=true function "SVGRadialGradientElement"/0
+window.SVGRect => data w=true e=false c=true function "SVGRect"/0
+window.SVGRectElement => data w=true e=false c=true function "SVGRectElement"/0
+window.SVGSVGElement => data w=true e=false c=true function "SVGSVGElement"/0
+window.SVGScriptElement => data w=true e=false c=true function "SVGScriptElement"/0
+window.SVGSetElement => data w=true e=false c=true function "SVGSetElement"/0
+window.SVGStopElement => data w=true e=false c=true function "SVGStopElement"/0
+window.SVGStringList => data w=true e=false c=true function "SVGStringList"/0
+window.SVGStyleElement => data w=true e=false c=true function "SVGStyleElement"/0
+window.SVGSwitchElement => data w=true e=false c=true function "SVGSwitchElement"/0
+window.SVGSymbolElement => data w=true e=false c=true function "SVGSymbolElement"/0
+window.SVGTSpanElement => data w=true e=false c=true function "SVGTSpanElement"/0
+window.SVGTextContentElement => data w=true e=false c=true function "SVGTextContentElement"/0
+window.SVGTextElement => data w=true e=false c=true function "SVGTextElement"/0
+window.SVGTextPathElement => data w=true e=false c=true function "SVGTextPathElement"/0
+window.SVGTextPositioningElement => data w=true e=false c=true function "SVGTextPositioningElement"/0
+window.SVGTitleElement => data w=true e=false c=true function "SVGTitleElement"/0
+window.SVGTransform => data w=true e=false c=true function "SVGTransform"/0
+window.SVGTransformList => data w=true e=false c=true function "SVGTransformList"/0
+window.SVGUnitTypes => data w=true e=false c=true function "SVGUnitTypes"/0
+window.SVGUseElement => data w=true e=false c=true function "SVGUseElement"/0
+window.SVGViewElement => data w=true e=false c=true function "SVGViewElement"/0
+window.Sanitizer => data w=true e=false c=true function "Sanitizer"/0
+window.Scheduler => data w=true e=false c=true function "Scheduler"/0
+window.Scheduling => data w=true e=false c=true function "Scheduling"/0
+window.Screen => data w=true e=false c=true function "Screen"/0
+window.ScreenDetailed => data w=true e=false c=true function "ScreenDetailed"/0
+window.ScreenDetails => data w=true e=false c=true function "ScreenDetails"/0
+window.ScreenOrientation => data w=true e=false c=true function "ScreenOrientation"/0
+window.ScriptProcessorNode => data w=true e=false c=true function "ScriptProcessorNode"/0
+window.ScrollTimeline => data w=true e=false c=true function "ScrollTimeline"/0
+window.SecurityPolicyViolationEvent => data w=true e=false c=true function "SecurityPolicyViolationEvent"/1
+window.Selection => data w=true e=false c=true function "Selection"/0
+window.Sensor => data w=true e=false c=true function "Sensor"/0
+window.SensorErrorEvent => data w=true e=false c=true function "SensorErrorEvent"/2
+window.Serial => data w=true e=false c=true function "Serial"/0
+window.SerialPort => data w=true e=false c=true function "SerialPort"/0
+window.ServiceWorker => data w=true e=false c=true function "ServiceWorker"/0
+window.ServiceWorkerContainer => data w=true e=false c=true function "ServiceWorkerContainer"/0
+window.ServiceWorkerRegistration => data w=true e=false c=true function "ServiceWorkerRegistration"/0
+window.Set => data w=true e=false c=true function "Set"/0
+window.ShadowRoot => data w=true e=false c=true function "ShadowRoot"/0
+window.SharedWorker => data w=true e=false c=true function "SharedWorker"/1
+window.SnapEvent => data w=true e=false c=true function "SnapEvent"/0
+window.SourceBuffer => data w=true e=false c=true function "SourceBuffer"/0
+window.SourceBufferList => data w=true e=false c=true function "SourceBufferList"/0
+window.SpeechGrammar => data w=true e=false c=true function "SpeechGrammar"/0
+window.SpeechGrammarList => data w=true e=false c=true function "SpeechGrammarList"/0
+window.SpeechRecognition => data w=true e=false c=true function "SpeechRecognition"/0
+window.SpeechRecognitionErrorEvent => data w=true e=false c=true function "SpeechRecognitionErrorEvent"/1
+window.SpeechRecognitionEvent => data w=true e=false c=true function "SpeechRecognitionEvent"/1
+window.SpeechRecognitionPhrase => data w=true e=false c=true function "SpeechRecognitionPhrase"/1
+window.SpeechSynthesis => data w=true e=false c=true function "SpeechSynthesis"/0
+window.SpeechSynthesisErrorEvent => data w=true e=false c=true function "SpeechSynthesisErrorEvent"/2
+window.SpeechSynthesisEvent => data w=true e=false c=true function "SpeechSynthesisEvent"/2
+window.SpeechSynthesisUtterance => data w=true e=false c=true function "SpeechSynthesisUtterance"/0
+window.SpeechSynthesisVoice => data w=true e=false c=true function "SpeechSynthesisVoice"/0
+window.StaticRange => data w=true e=false c=true function "StaticRange"/1
+window.StereoPannerNode => data w=true e=false c=true function "StereoPannerNode"/1
+window.Storage => data w=true e=false c=true function "Storage"/0
+window.StorageBucket => data w=true e=false c=true function "StorageBucket"/0
+window.StorageBucketManager => data w=true e=false c=true function "StorageBucketManager"/0
+window.StorageEvent => data w=true e=false c=true function "StorageEvent"/1
+window.StorageManager => data w=true e=false c=true function "StorageManager"/0
+window.String => data w=true e=false c=true function "String"/1
+window.StylePropertyMap => data w=true e=false c=true function "StylePropertyMap"/0
+window.StylePropertyMapReadOnly => data w=true e=false c=true function "StylePropertyMapReadOnly"/0
+window.StyleSheet => data w=true e=false c=true function "StyleSheet"/0
+window.StyleSheetList => data w=true e=false c=true function "StyleSheetList"/0
+window.SubmitEvent => data w=true e=false c=true function "SubmitEvent"/1
+window.Subscriber => data w=true e=false c=true function "Subscriber"/0
+window.SubtleCrypto => data w=true e=false c=true function "SubtleCrypto"/0
+window.SuppressedError => data w=true e=false c=true function "SuppressedError"/3
+window.Symbol => data w=true e=false c=true function "Symbol"/0
+window.SyncManager => data w=true e=false c=true function "SyncManager"/0
+window.SyntaxError => data w=true e=false c=true function "SyntaxError"/1
+window.TaskAttributionTiming => data w=true e=false c=true function "TaskAttributionTiming"/0
+window.TaskController => data w=true e=false c=true function "TaskController"/0
+window.TaskPriorityChangeEvent => data w=true e=false c=true function "TaskPriorityChangeEvent"/2
+window.TaskSignal => data w=true e=false c=true function "TaskSignal"/0
+window.Temporal => data w=true e=false c=true object
+window.Text => data w=true e=false c=true function "Text"/0
+window.TextDecoder => data w=true e=false c=true function "TextDecoder"/0
+window.TextDecoderStream => data w=true e=false c=true function "TextDecoderStream"/0
+window.TextEncoder => data w=true e=false c=true function "TextEncoder"/0
+window.TextEncoderStream => data w=true e=false c=true function "TextEncoderStream"/0
+window.TextEvent => data w=true e=false c=true function "TextEvent"/0
+window.TextFormat => data w=true e=false c=true function "TextFormat"/0
+window.TextFormatUpdateEvent => data w=true e=false c=true function "TextFormatUpdateEvent"/1
+window.TextMetrics => data w=true e=false c=true function "TextMetrics"/0
+window.TextTrack => data w=true e=false c=true function "TextTrack"/0
+window.TextTrackCue => data w=true e=false c=true function "TextTrackCue"/0
+window.TextTrackCueList => data w=true e=false c=true function "TextTrackCueList"/0
+window.TextTrackList => data w=true e=false c=true function "TextTrackList"/0
+window.TextUpdateEvent => data w=true e=false c=true function "TextUpdateEvent"/1
+window.TimeRanges => data w=true e=false c=true function "TimeRanges"/0
+window.TimelineTrigger => data w=true e=false c=true function "TimelineTrigger"/0
+window.TimelineTriggerRange => data w=true e=false c=true function "TimelineTriggerRange"/0
+window.TimelineTriggerRangeList => data w=true e=false c=true function "TimelineTriggerRangeList"/0
+window.ToggleEvent => data w=true e=false c=true function "ToggleEvent"/1
+window.Touch => data w=true e=false c=true function "Touch"/1
+window.TouchEvent => data w=true e=false c=true function "TouchEvent"/1
+window.TouchList => data w=true e=false c=true function "TouchList"/0
+window.TrackEvent => data w=true e=false c=true function "TrackEvent"/1
+window.TransformStream => data w=true e=false c=true function "TransformStream"/0
+window.TransformStreamDefaultController => data w=true e=false c=true function "TransformStreamDefaultController"/0
+window.TransitionEvent => data w=true e=false c=true function "TransitionEvent"/1
+window.TreeWalker => data w=true e=false c=true function "TreeWalker"/0
+window.TrustedHTML => data w=true e=false c=true function "TrustedHTML"/0
+window.TrustedScript => data w=true e=false c=true function "TrustedScript"/0
+window.TrustedScriptURL => data w=true e=false c=true function "TrustedScriptURL"/0
+window.TrustedTypePolicy => data w=true e=false c=true function "TrustedTypePolicy"/0
+window.TrustedTypePolicyFactory => data w=true e=false c=true function "TrustedTypePolicyFactory"/0
+window.TypeError => data w=true e=false c=true function "TypeError"/1
+window.UIEvent => data w=true e=false c=true function "UIEvent"/1
+window.URIError => data w=true e=false c=true function "URIError"/1
+window.URL => data w=true e=false c=true function "URL"/1
+window.URLPattern => data w=true e=false c=true function "URLPattern"/0
+window.URLSearchParams => data w=true e=false c=true function "URLSearchParams"/0
+window.USB => data w=true e=false c=true function "USB"/0
+window.USBAlternateInterface => data w=true e=false c=true function "USBAlternateInterface"/2
+window.USBConfiguration => data w=true e=false c=true function "USBConfiguration"/2
+window.USBConnectionEvent => data w=true e=false c=true function "USBConnectionEvent"/2
+window.USBDevice => data w=true e=false c=true function "USBDevice"/0
+window.USBEndpoint => data w=true e=false c=true function "USBEndpoint"/3
+window.USBInTransferResult => data w=true e=false c=true function "USBInTransferResult"/1
+window.USBInterface => data w=true e=false c=true function "USBInterface"/2
+window.USBIsochronousInTransferPacket => data w=true e=false c=true function "USBIsochronousInTransferPacket"/1
+window.USBIsochronousInTransferResult => data w=true e=false c=true function "USBIsochronousInTransferResult"/1
+window.USBIsochronousOutTransferPacket => data w=true e=false c=true function "USBIsochronousOutTransferPacket"/1
+window.USBIsochronousOutTransferResult => data w=true e=false c=true function "USBIsochronousOutTransferResult"/1
+window.USBOutTransferResult => data w=true e=false c=true function "USBOutTransferResult"/1
+window.Uint16Array => data w=true e=false c=true function "Uint16Array"/3
+window.Uint32Array => data w=true e=false c=true function "Uint32Array"/3
+window.Uint8Array => data w=true e=false c=true function "Uint8Array"/3
+window.Uint8ClampedArray => data w=true e=false c=true function "Uint8ClampedArray"/3
+window.UserActivation => data w=true e=false c=true function "UserActivation"/0
+window.VTTCue => data w=true e=false c=true function "VTTCue"/3
+window.ValidityState => data w=true e=false c=true function "ValidityState"/0
+window.VideoColorSpace => data w=true e=false c=true function "VideoColorSpace"/0
+window.VideoDecoder => data w=true e=false c=true function "VideoDecoder"/1
+window.VideoEncoder => data w=true e=false c=true function "VideoEncoder"/1
+window.VideoFrame => data w=true e=false c=true function "VideoFrame"/1
+window.VideoPlaybackQuality => data w=true e=false c=true function "VideoPlaybackQuality"/0
+window.ViewTimeline => data w=true e=false c=true function "ViewTimeline"/0
+window.ViewTransition => data w=true e=false c=true function "ViewTransition"/0
+window.ViewTransitionTypeSet => data w=true e=false c=true function "ViewTransitionTypeSet"/0
+window.Viewport => data w=true e=false c=true function "Viewport"/0
+window.VirtualKeyboard => data w=true e=false c=true function "VirtualKeyboard"/0
+window.VirtualKeyboardGeometryChangeEvent => data w=true e=false c=true function "VirtualKeyboardGeometryChangeEvent"/1
+window.VisibilityStateEntry => data w=true e=false c=true function "VisibilityStateEntry"/0
+window.VisualViewport => data w=true e=false c=true function "VisualViewport"/0
+window.WGSLLanguageFeatures => data w=true e=false c=true function "WGSLLanguageFeatures"/0
+window.WakeLock => data w=true e=false c=true function "WakeLock"/0
+window.WakeLockSentinel => data w=true e=false c=true function "WakeLockSentinel"/0
+window.WaveShaperNode => data w=true e=false c=true function "WaveShaperNode"/1
+window.WeakMap => data w=true e=false c=true function "WeakMap"/0
+window.WeakRef => data w=true e=false c=true function "WeakRef"/1
+window.WeakSet => data w=true e=false c=true function "WeakSet"/0
+window.WebAssembly => data w=true e=false c=true object
+window.WebGL2RenderingContext => data w=true e=false c=true function "WebGL2RenderingContext"/0
+window.WebGLActiveInfo => data w=true e=false c=true function "WebGLActiveInfo"/0
+window.WebGLBuffer => data w=true e=false c=true function "WebGLBuffer"/0
+window.WebGLContextEvent => data w=true e=false c=true function "WebGLContextEvent"/1
+window.WebGLFramebuffer => data w=true e=false c=true function "WebGLFramebuffer"/0
+window.WebGLObject => data w=true e=false c=true function "WebGLObject"/0
+window.WebGLProgram => data w=true e=false c=true function "WebGLProgram"/0
+window.WebGLQuery => data w=true e=false c=true function "WebGLQuery"/0
+window.WebGLRenderbuffer => data w=true e=false c=true function "WebGLRenderbuffer"/0
+window.WebGLRenderingContext => data w=true e=false c=true function "WebGLRenderingContext"/0
+window.WebGLSampler => data w=true e=false c=true function "WebGLSampler"/0
+window.WebGLShader => data w=true e=false c=true function "WebGLShader"/0
+window.WebGLShaderPrecisionFormat => data w=true e=false c=true function "WebGLShaderPrecisionFormat"/0
+window.WebGLSync => data w=true e=false c=true function "WebGLSync"/0
+window.WebGLTexture => data w=true e=false c=true function "WebGLTexture"/0
+window.WebGLTransformFeedback => data w=true e=false c=true function "WebGLTransformFeedback"/0
+window.WebGLUniformLocation => data w=true e=false c=true function "WebGLUniformLocation"/0
+window.WebGLVertexArrayObject => data w=true e=false c=true function "WebGLVertexArrayObject"/0
+window.WebKitCSSMatrix => data w=true e=false c=true function "DOMMatrix"/0
+window.WebKitMutationObserver => data w=true e=false c=true function "MutationObserver"/1
+window.WebSocket => data w=true e=false c=true function "WebSocket"/1
+window.WebSocketError => data w=true e=false c=true function "WebSocketError"/0
+window.WebSocketStream => data w=true e=false c=true function "WebSocketStream"/1
+window.WebTransport => data w=true e=false c=true function "WebTransport"/1
+window.WebTransportBidirectionalStream => data w=true e=false c=true function "WebTransportBidirectionalStream"/0
+window.WebTransportDatagramDuplexStream => data w=true e=false c=true function "WebTransportDatagramDuplexStream"/0
+window.WebTransportError => data w=true e=false c=true function "WebTransportError"/0
+window.WheelEvent => data w=true e=false c=true function "WheelEvent"/1
+window.Window => data w=true e=false c=true function "Window"/0
+window.WindowControlsOverlay => data w=true e=false c=true function "WindowControlsOverlay"/0
+window.WindowControlsOverlayGeometryChangeEvent => data w=true e=false c=true function "WindowControlsOverlayGeometryChangeEvent"/2
+window.Worker => data w=true e=false c=true function "Worker"/1
+window.Worklet => data w=true e=false c=true function "Worklet"/0
+window.WritableStream => data w=true e=false c=true function "WritableStream"/0
+window.WritableStreamDefaultController => data w=true e=false c=true function "WritableStreamDefaultController"/0
+window.WritableStreamDefaultWriter => data w=true e=false c=true function "WritableStreamDefaultWriter"/1
+window.XMLDocument => data w=true e=false c=true function "XMLDocument"/0
+window.XMLHttpRequest => data w=true e=false c=true function "XMLHttpRequest"/0
+window.XMLHttpRequestEventTarget => data w=true e=false c=true function "XMLHttpRequestEventTarget"/0
+window.XMLHttpRequestUpload => data w=true e=false c=true function "XMLHttpRequestUpload"/0
+window.XMLSerializer => data w=true e=false c=true function "XMLSerializer"/0
+window.XPathEvaluator => data w=true e=false c=true function "XPathEvaluator"/0
+window.XPathExpression => data w=true e=false c=true function "XPathExpression"/0
+window.XPathResult => data w=true e=false c=true function "XPathResult"/0
+window.XRAnchor => data w=true e=false c=true function "XRAnchor"/0
+window.XRAnchorSet => data w=true e=false c=true function "XRAnchorSet"/0
+window.XRBoundedReferenceSpace => data w=true e=false c=true function "XRBoundedReferenceSpace"/0
+window.XRCPUDepthInformation => data w=true e=false c=true function "XRCPUDepthInformation"/0
+window.XRCamera => data w=true e=false c=true function "XRCamera"/0
+window.XRCompositionLayer => data w=true e=false c=true function "XRCompositionLayer"/0
+window.XRCubeLayer => data w=true e=false c=true function "XRCubeLayer"/0
+window.XRCylinderLayer => data w=true e=false c=true function "XRCylinderLayer"/0
+window.XRDOMOverlayState => data w=true e=false c=true function "XRDOMOverlayState"/0
+window.XRDepthInformation => data w=true e=false c=true function "XRDepthInformation"/0
+window.XREquirectLayer => data w=true e=false c=true function "XREquirectLayer"/0
+window.XRFrame => data w=true e=false c=true function "XRFrame"/0
+window.XRHand => data w=true e=false c=true function "XRHand"/0
+window.XRHitTestResult => data w=true e=false c=true function "XRHitTestResult"/0
+window.XRHitTestSource => data w=true e=false c=true function "XRHitTestSource"/0
+window.XRInputSource => data w=true e=false c=true function "XRInputSource"/0
+window.XRInputSourceArray => data w=true e=false c=true function "XRInputSourceArray"/0
+window.XRInputSourceEvent => data w=true e=false c=true function "XRInputSourceEvent"/2
+window.XRInputSourcesChangeEvent => data w=true e=false c=true function "XRInputSourcesChangeEvent"/2
+window.XRJointPose => data w=true e=false c=true function "XRJointPose"/0
+window.XRJointSpace => data w=true e=false c=true function "XRJointSpace"/0
+window.XRLayer => data w=true e=false c=true function "XRLayer"/0
+window.XRLayerEvent => data w=true e=false c=true function "XRLayerEvent"/2
+window.XRLightEstimate => data w=true e=false c=true function "XRLightEstimate"/0
+window.XRLightProbe => data w=true e=false c=true function "XRLightProbe"/0
+window.XRPlane => data w=true e=false c=true function "XRPlane"/0
+window.XRPlaneSet => data w=true e=false c=true function "XRPlaneSet"/0
+window.XRPose => data w=true e=false c=true function "XRPose"/0
+window.XRProjectionLayer => data w=true e=false c=true function "XRProjectionLayer"/0
+window.XRQuadLayer => data w=true e=false c=true function "XRQuadLayer"/0
+window.XRRay => data w=true e=false c=true function "XRRay"/0
+window.XRReferenceSpace => data w=true e=false c=true function "XRReferenceSpace"/0
+window.XRReferenceSpaceEvent => data w=true e=false c=true function "XRReferenceSpaceEvent"/2
+window.XRRenderState => data w=true e=false c=true function "XRRenderState"/0
+window.XRRigidTransform => data w=true e=false c=true function "XRRigidTransform"/0
+window.XRSession => data w=true e=false c=true function "XRSession"/0
+window.XRSessionEvent => data w=true e=false c=true function "XRSessionEvent"/2
+window.XRSpace => data w=true e=false c=true function "XRSpace"/0
+window.XRSubImage => data w=true e=false c=true function "XRSubImage"/0
+window.XRSystem => data w=true e=false c=true function "XRSystem"/0
+window.XRTransientInputHitTestResult => data w=true e=false c=true function "XRTransientInputHitTestResult"/0
+window.XRTransientInputHitTestSource => data w=true e=false c=true function "XRTransientInputHitTestSource"/0
+window.XRView => data w=true e=false c=true function "XRView"/0
+window.XRViewerPose => data w=true e=false c=true function "XRViewerPose"/0
+window.XRViewport => data w=true e=false c=true function "XRViewport"/0
+window.XRVisibilityMaskChangeEvent => data w=true e=false c=true function "XRVisibilityMaskChangeEvent"/2
+window.XRWebGLBinding => data w=true e=false c=true function "XRWebGLBinding"/2
+window.XRWebGLDepthInformation => data w=true e=false c=true function "XRWebGLDepthInformation"/0
+window.XRWebGLLayer => data w=true e=false c=true function "XRWebGLLayer"/2
+window.XRWebGLSubImage => data w=true e=false c=true function "XRWebGLSubImage"/0
+window.XSLTProcessor => data w=true e=false c=true function "XSLTProcessor"/0
+window.alert => data w=true e=true c=true function "alert"/0
+window.atob => data w=true e=true c=true function "atob"/1
+window.blur => data w=true e=true c=true function "blur"/0
+window.braveEthereum => data w=false e=true c=false object
+window.braveSolana => data w=false e=true c=false object
+window.btoa => data w=true e=true c=true function "btoa"/1
+window.caches => accessor get="get caches"/0 set=undefined e=true c=true
+window.cancelAnimationFrame => data w=true e=true c=true function "cancelAnimationFrame"/1
+window.cancelIdleCallback => data w=true e=true c=true function "cancelIdleCallback"/1
+window.captureEvents => data w=true e=true c=true function "captureEvents"/0
+window.cardano => data w=false e=true c=false object
+window.chrome => data w=true e=true c=false object
+window.clearInterval => data w=true e=true c=true function "clearInterval"/0
+window.clearTimeout => data w=true e=true c=true function "clearTimeout"/0
+window.clientInformation => accessor get="get clientInformation"/0 set="set clientInformation"/1 e=true c=true
+window.close => data w=true e=true c=true function "close"/0
+window.closed => accessor get="get closed"/0 set=undefined e=true c=true
+window.confirm => data w=true e=true c=true function "confirm"/0
+window.console => data w=true e=false c=true object
+window.cookieStore => accessor get="get cookieStore"/0 set=undefined e=true c=true
+window.crashReport => accessor get="get crashReport"/0 set=undefined e=true c=true
+window.createImageBitmap => data w=true e=true c=true function "createImageBitmap"/1
+window.credentialless => accessor get="get credentialless"/0 set=undefined e=true c=true
+window.crossOriginIsolated => accessor get="get crossOriginIsolated"/0 set=undefined e=true c=true
+window.crypto => accessor get="get crypto"/0 set=undefined e=true c=true
+window.customElements => accessor get="get customElements"/0 set=undefined e=true c=true
+window.decodeURI => data w=true e=false c=true function "decodeURI"/1
+window.decodeURIComponent => data w=true e=false c=true function "decodeURIComponent"/1
+window.devicePixelRatio => accessor get="get devicePixelRatio"/0 set="set devicePixelRatio"/1 e=true c=true
+window.document => accessor get="get document"/0 set=undefined e=true c=false
+window.documentPictureInPicture => accessor get="get documentPictureInPicture"/0 set=undefined e=true c=true
+window.encodeURI => data w=true e=false c=true function "encodeURI"/1
+window.encodeURIComponent => data w=true e=false c=true function "encodeURIComponent"/1
+window.escape => data w=true e=false c=true function "escape"/1
+window.eval => data w=true e=false c=true function "eval"/1
+window.event => accessor get="get event"/0 set="set event"/1 e=true c=true
+window.external => accessor get="get external"/0 set="set external"/1 e=true c=true
+window.fetch => data w=true e=true c=true function "fetch"/1
+window.fetchLater => data w=true e=true c=true function "fetchLater"/1
+window.find => data w=true e=true c=true function "find"/0
+window.focus => data w=true e=true c=true function "focus"/0
+window.frameElement => accessor get="get frameElement"/0 set=undefined e=true c=true
+window.frames => accessor get="get frames"/0 set="set frames"/1 e=true c=true
+window.getComputedStyle => data w=true e=true c=true function "getComputedStyle"/1
+window.getScreenDetails => data w=true e=true c=true function "getScreenDetails"/0
+window.getSelection => data w=true e=true c=true function "getSelection"/0
+window.globalThis => data w=true e=false c=true object
+window.history => accessor get="get history"/0 set=undefined e=true c=true
+window.indexedDB => accessor get="get indexedDB"/0 set=undefined e=true c=true
+window.innerHeight => accessor get="get innerHeight"/0 set="set innerHeight"/1 e=true c=true
+window.innerWidth => accessor get="get innerWidth"/0 set="set innerWidth"/1 e=true c=true
+window.isFinite => data w=true e=false c=true function "isFinite"/1
+window.isNaN => data w=true e=false c=true function "isNaN"/1
+window.isSecureContext => accessor get="get isSecureContext"/0 set=undefined e=true c=true
+window.launchQueue => accessor get="get launchQueue"/0 set=undefined e=true c=true
+window.length => accessor get="get length"/0 set="set length"/1 e=true c=true
+window.localStorage => accessor get="get localStorage"/0 set=undefined e=true c=true
+window.location => accessor get="get location"/0 set="set location"/1 e=true c=false
+window.locationbar => accessor get="get locationbar"/0 set="set locationbar"/1 e=true c=true
+window.matchMedia => data w=true e=true c=true function "matchMedia"/1
+window.menubar => accessor get="get menubar"/0 set="set menubar"/1 e=true c=true
+window.moveBy => data w=true e=true c=true function "moveBy"/2
+window.moveTo => data w=true e=true c=true function "moveTo"/2
+window.name => accessor get="get name"/0 set="set name"/1 e=true c=true
+window.navigation => accessor get="get navigation"/0 set="set navigation"/1 e=true c=true
+window.navigator => accessor get="get navigator"/0 set=undefined e=true c=true
+window.offscreenBuffering => accessor get="get offscreenBuffering"/0 set="set offscreenBuffering"/1 e=false c=true
+window.onabort => accessor get="get onabort"/0 set="set onabort"/1 e=true c=true
+window.onafterprint => accessor get="get onafterprint"/0 set="set onafterprint"/1 e=true c=true
+window.onanimationcancel => accessor get="get onanimationcancel"/0 set="set onanimationcancel"/1 e=true c=true
+window.onanimationend => accessor get="get onanimationend"/0 set="set onanimationend"/1 e=true c=true
+window.onanimationiteration => accessor get="get onanimationiteration"/0 set="set onanimationiteration"/1 e=true c=true
+window.onanimationstart => accessor get="get onanimationstart"/0 set="set onanimationstart"/1 e=true c=true
+window.onappinstalled => accessor get="get onappinstalled"/0 set="set onappinstalled"/1 e=true c=true
+window.onauxclick => accessor get="get onauxclick"/0 set="set onauxclick"/1 e=true c=true
+window.onbeforeinput => accessor get="get onbeforeinput"/0 set="set onbeforeinput"/1 e=true c=true
+window.onbeforeinstallprompt => accessor get="get onbeforeinstallprompt"/0 set="set onbeforeinstallprompt"/1 e=true c=true
+window.onbeforematch => accessor get="get onbeforematch"/0 set="set onbeforematch"/1 e=true c=true
+window.onbeforeprint => accessor get="get onbeforeprint"/0 set="set onbeforeprint"/1 e=true c=true
+window.onbeforetoggle => accessor get="get onbeforetoggle"/0 set="set onbeforetoggle"/1 e=true c=true
+window.onbeforeunload => accessor get="get onbeforeunload"/0 set="set onbeforeunload"/1 e=true c=true
+window.onbeforexrselect => accessor get="get onbeforexrselect"/0 set="set onbeforexrselect"/1 e=true c=true
+window.onblur => accessor get="get onblur"/0 set="set onblur"/1 e=true c=true
+window.oncancel => accessor get="get oncancel"/0 set="set oncancel"/1 e=true c=true
+window.oncanplay => accessor get="get oncanplay"/0 set="set oncanplay"/1 e=true c=true
+window.oncanplaythrough => accessor get="get oncanplaythrough"/0 set="set oncanplaythrough"/1 e=true c=true
+window.onchange => accessor get="get onchange"/0 set="set onchange"/1 e=true c=true
+window.onclick => accessor get="get onclick"/0 set="set onclick"/1 e=true c=true
+window.onclose => accessor get="get onclose"/0 set="set onclose"/1 e=true c=true
+window.oncommand => accessor get="get oncommand"/0 set="set oncommand"/1 e=true c=true
+window.oncontentvisibilityautostatechange => accessor get="get oncontentvisibilityautostatechange"/0 set="set oncontentvisibilityautostatechange"/1 e=true c=true
+window.oncontextlost => accessor get="get oncontextlost"/0 set="set oncontextlost"/1 e=true c=true
+window.oncontextmenu => accessor get="get oncontextmenu"/0 set="set oncontextmenu"/1 e=true c=true
+window.oncontextrestored => accessor get="get oncontextrestored"/0 set="set oncontextrestored"/1 e=true c=true
+window.oncuechange => accessor get="get oncuechange"/0 set="set oncuechange"/1 e=true c=true
+window.ondblclick => accessor get="get ondblclick"/0 set="set ondblclick"/1 e=true c=true
+window.ondevicemotion => accessor get="get ondevicemotion"/0 set="set ondevicemotion"/1 e=true c=true
+window.ondeviceorientation => accessor get="get ondeviceorientation"/0 set="set ondeviceorientation"/1 e=true c=true
+window.ondeviceorientationabsolute => accessor get="get ondeviceorientationabsolute"/0 set="set ondeviceorientationabsolute"/1 e=true c=true
+window.ondrag => accessor get="get ondrag"/0 set="set ondrag"/1 e=true c=true
+window.ondragend => accessor get="get ondragend"/0 set="set ondragend"/1 e=true c=true
+window.ondragenter => accessor get="get ondragenter"/0 set="set ondragenter"/1 e=true c=true
+window.ondragleave => accessor get="get ondragleave"/0 set="set ondragleave"/1 e=true c=true
+window.ondragover => accessor get="get ondragover"/0 set="set ondragover"/1 e=true c=true
+window.ondragstart => accessor get="get ondragstart"/0 set="set ondragstart"/1 e=true c=true
+window.ondrop => accessor get="get ondrop"/0 set="set ondrop"/1 e=true c=true
+window.ondurationchange => accessor get="get ondurationchange"/0 set="set ondurationchange"/1 e=true c=true
+window.onemptied => accessor get="get onemptied"/0 set="set onemptied"/1 e=true c=true
+window.onended => accessor get="get onended"/0 set="set onended"/1 e=true c=true
+window.onerror => accessor get="get onerror"/0 set="set onerror"/1 e=true c=true
+window.onfocus => accessor get="get onfocus"/0 set="set onfocus"/1 e=true c=true
+window.onformdata => accessor get="get onformdata"/0 set="set onformdata"/1 e=true c=true
+window.ongamepadconnected => accessor get="get ongamepadconnected"/0 set="set ongamepadconnected"/1 e=true c=true
+window.ongamepaddisconnected => accessor get="get ongamepaddisconnected"/0 set="set ongamepaddisconnected"/1 e=true c=true
+window.ongotpointercapture => accessor get="get ongotpointercapture"/0 set="set ongotpointercapture"/1 e=true c=true
+window.onhashchange => accessor get="get onhashchange"/0 set="set onhashchange"/1 e=true c=true
+window.oninput => accessor get="get oninput"/0 set="set oninput"/1 e=true c=true
+window.oninvalid => accessor get="get oninvalid"/0 set="set oninvalid"/1 e=true c=true
+window.onkeydown => accessor get="get onkeydown"/0 set="set onkeydown"/1 e=true c=true
+window.onkeypress => accessor get="get onkeypress"/0 set="set onkeypress"/1 e=true c=true
+window.onkeyup => accessor get="get onkeyup"/0 set="set onkeyup"/1 e=true c=true
+window.onlanguagechange => accessor get="get onlanguagechange"/0 set="set onlanguagechange"/1 e=true c=true
+window.onload => accessor get="get onload"/0 set="set onload"/1 e=true c=true
+window.onloadeddata => accessor get="get onloadeddata"/0 set="set onloadeddata"/1 e=true c=true
+window.onloadedmetadata => accessor get="get onloadedmetadata"/0 set="set onloadedmetadata"/1 e=true c=true
+window.onloadstart => accessor get="get onloadstart"/0 set="set onloadstart"/1 e=true c=true
+window.onlostpointercapture => accessor get="get onlostpointercapture"/0 set="set onlostpointercapture"/1 e=true c=true
+window.onmessage => accessor get="get onmessage"/0 set="set onmessage"/1 e=true c=true
+window.onmessageerror => accessor get="get onmessageerror"/0 set="set onmessageerror"/1 e=true c=true
+window.onmousedown => accessor get="get onmousedown"/0 set="set onmousedown"/1 e=true c=true
+window.onmouseenter => accessor get="get onmouseenter"/0 set="set onmouseenter"/1 e=true c=true
+window.onmouseleave => accessor get="get onmouseleave"/0 set="set onmouseleave"/1 e=true c=true
+window.onmousemove => accessor get="get onmousemove"/0 set="set onmousemove"/1 e=true c=true
+window.onmouseout => accessor get="get onmouseout"/0 set="set onmouseout"/1 e=true c=true
+window.onmouseover => accessor get="get onmouseover"/0 set="set onmouseover"/1 e=true c=true
+window.onmouseup => accessor get="get onmouseup"/0 set="set onmouseup"/1 e=true c=true
+window.onmousewheel => accessor get="get onmousewheel"/0 set="set onmousewheel"/1 e=true c=true
+window.onoffline => accessor get="get onoffline"/0 set="set onoffline"/1 e=true c=true
+window.ononline => accessor get="get ononline"/0 set="set ononline"/1 e=true c=true
+window.onpagehide => accessor get="get onpagehide"/0 set="set onpagehide"/1 e=true c=true
+window.onpagereveal => accessor get="get onpagereveal"/0 set="set onpagereveal"/1 e=true c=true
+window.onpageshow => accessor get="get onpageshow"/0 set="set onpageshow"/1 e=true c=true
+window.onpageswap => accessor get="get onpageswap"/0 set="set onpageswap"/1 e=true c=true
+window.onpause => accessor get="get onpause"/0 set="set onpause"/1 e=true c=true
+window.onplay => accessor get="get onplay"/0 set="set onplay"/1 e=true c=true
+window.onplaying => accessor get="get onplaying"/0 set="set onplaying"/1 e=true c=true
+window.onpointercancel => accessor get="get onpointercancel"/0 set="set onpointercancel"/1 e=true c=true
+window.onpointerdown => accessor get="get onpointerdown"/0 set="set onpointerdown"/1 e=true c=true
+window.onpointerenter => accessor get="get onpointerenter"/0 set="set onpointerenter"/1 e=true c=true
+window.onpointerleave => accessor get="get onpointerleave"/0 set="set onpointerleave"/1 e=true c=true
+window.onpointermove => accessor get="get onpointermove"/0 set="set onpointermove"/1 e=true c=true
+window.onpointerout => accessor get="get onpointerout"/0 set="set onpointerout"/1 e=true c=true
+window.onpointerover => accessor get="get onpointerover"/0 set="set onpointerover"/1 e=true c=true
+window.onpointerrawupdate => accessor get="get onpointerrawupdate"/0 set="set onpointerrawupdate"/1 e=true c=true
+window.onpointerup => accessor get="get onpointerup"/0 set="set onpointerup"/1 e=true c=true
+window.onpopstate => accessor get="get onpopstate"/0 set="set onpopstate"/1 e=true c=true
+window.onprogress => accessor get="get onprogress"/0 set="set onprogress"/1 e=true c=true
+window.onratechange => accessor get="get onratechange"/0 set="set onratechange"/1 e=true c=true
+window.onrejectionhandled => accessor get="get onrejectionhandled"/0 set="set onrejectionhandled"/1 e=true c=true
+window.onreset => accessor get="get onreset"/0 set="set onreset"/1 e=true c=true
+window.onresize => accessor get="get onresize"/0 set="set onresize"/1 e=true c=true
+window.onscroll => accessor get="get onscroll"/0 set="set onscroll"/1 e=true c=true
+window.onscrollend => accessor get="get onscrollend"/0 set="set onscrollend"/1 e=true c=true
+window.onscrollsnapchange => accessor get="get onscrollsnapchange"/0 set="set onscrollsnapchange"/1 e=true c=true
+window.onscrollsnapchanging => accessor get="get onscrollsnapchanging"/0 set="set onscrollsnapchanging"/1 e=true c=true
+window.onsearch => accessor get="get onsearch"/0 set="set onsearch"/1 e=true c=true
+window.onsecuritypolicyviolation => accessor get="get onsecuritypolicyviolation"/0 set="set onsecuritypolicyviolation"/1 e=true c=true
+window.onseeked => accessor get="get onseeked"/0 set="set onseeked"/1 e=true c=true
+window.onseeking => accessor get="get onseeking"/0 set="set onseeking"/1 e=true c=true
+window.onselect => accessor get="get onselect"/0 set="set onselect"/1 e=true c=true
+window.onselectionchange => accessor get="get onselectionchange"/0 set="set onselectionchange"/1 e=true c=true
+window.onselectstart => accessor get="get onselectstart"/0 set="set onselectstart"/1 e=true c=true
+window.onslotchange => accessor get="get onslotchange"/0 set="set onslotchange"/1 e=true c=true
+window.onstalled => accessor get="get onstalled"/0 set="set onstalled"/1 e=true c=true
+window.onstorage => accessor get="get onstorage"/0 set="set onstorage"/1 e=true c=true
+window.onsubmit => accessor get="get onsubmit"/0 set="set onsubmit"/1 e=true c=true
+window.onsuspend => accessor get="get onsuspend"/0 set="set onsuspend"/1 e=true c=true
+window.ontimeupdate => accessor get="get ontimeupdate"/0 set="set ontimeupdate"/1 e=true c=true
+window.ontoggle => accessor get="get ontoggle"/0 set="set ontoggle"/1 e=true c=true
+window.ontransitioncancel => accessor get="get ontransitioncancel"/0 set="set ontransitioncancel"/1 e=true c=true
+window.ontransitionend => accessor get="get ontransitionend"/0 set="set ontransitionend"/1 e=true c=true
+window.ontransitionrun => accessor get="get ontransitionrun"/0 set="set ontransitionrun"/1 e=true c=true
+window.ontransitionstart => accessor get="get ontransitionstart"/0 set="set ontransitionstart"/1 e=true c=true
+window.onunhandledrejection => accessor get="get onunhandledrejection"/0 set="set onunhandledrejection"/1 e=true c=true
+window.onunload => accessor get="get onunload"/0 set="set onunload"/1 e=true c=true
+window.onvolumechange => accessor get="get onvolumechange"/0 set="set onvolumechange"/1 e=true c=true
+window.onwaiting => accessor get="get onwaiting"/0 set="set onwaiting"/1 e=true c=true
+window.onwebkitanimationend => accessor get="get onwebkitanimationend"/0 set="set onwebkitanimationend"/1 e=true c=true
+window.onwebkitanimationiteration => accessor get="get onwebkitanimationiteration"/0 set="set onwebkitanimationiteration"/1 e=true c=true
+window.onwebkitanimationstart => accessor get="get onwebkitanimationstart"/0 set="set onwebkitanimationstart"/1 e=true c=true
+window.onwebkittransitionend => accessor get="get onwebkittransitionend"/0 set="set onwebkittransitionend"/1 e=true c=true
+window.onwheel => accessor get="get onwheel"/0 set="set onwheel"/1 e=true c=true
+window.open => data w=true e=true c=true function "open"/0
+window.opener => accessor get="get opener"/0 set="set opener"/1 e=true c=true
+window.origin => accessor get="get origin"/0 set="set origin"/1 e=true c=true
+window.originAgentCluster => accessor get="get originAgentCluster"/0 set=undefined e=true c=true
+window.outerHeight => accessor get="get outerHeight"/0 set="set outerHeight"/1 e=true c=true
+window.outerWidth => accessor get="get outerWidth"/0 set="set outerWidth"/1 e=true c=true
+window.pageXOffset => accessor get="get pageXOffset"/0 set="set pageXOffset"/1 e=true c=true
+window.pageYOffset => accessor get="get pageYOffset"/0 set="set pageYOffset"/1 e=true c=true
+window.parent => accessor get="get parent"/0 set="set parent"/1 e=true c=true
+window.parseFloat => data w=true e=false c=true function "parseFloat"/1
+window.parseInt => data w=true e=false c=true function "parseInt"/2
+window.performance => accessor get="get performance"/0 set="set performance"/1 e=true c=true
+window.personalbar => accessor get="get personalbar"/0 set="set personalbar"/1 e=true c=true
+window.postMessage => data w=true e=true c=true function "postMessage"/1
+window.print => data w=true e=true c=true function "print"/0
+window.prompt => data w=true e=true c=true function "prompt"/0
+window.queryLocalFonts => data w=true e=true c=true function "queryLocalFonts"/0
+window.queueMicrotask => data w=true e=true c=true function "queueMicrotask"/1
+window.releaseEvents => data w=true e=true c=true function "releaseEvents"/0
+window.reportError => data w=true e=true c=true function "reportError"/1
+window.requestAnimationFrame => data w=true e=true c=true function "requestAnimationFrame"/1
+window.requestIdleCallback => data w=true e=true c=true function "requestIdleCallback"/1
+window.resizeBy => data w=true e=true c=true function "resizeBy"/2
+window.resizeTo => data w=true e=true c=true function "resizeTo"/2
+window.scheduler => accessor get="get scheduler"/0 set="set scheduler"/1 e=true c=true
+window.screen => accessor get="get screen"/0 set="set screen"/1 e=true c=true
+window.screenLeft => accessor get="get screenLeft"/0 set="set screenLeft"/1 e=true c=true
+window.screenTop => accessor get="get screenTop"/0 set="set screenTop"/1 e=true c=true
+window.screenX => accessor get="get screenX"/0 set="set screenX"/1 e=true c=true
+window.screenY => accessor get="get screenY"/0 set="set screenY"/1 e=true c=true
+window.scroll => data w=true e=true c=true function "scroll"/0
+window.scrollBy => data w=true e=true c=true function "scrollBy"/0
+window.scrollTo => data w=true e=true c=true function "scrollTo"/0
+window.scrollX => accessor get="get scrollX"/0 set="set scrollX"/1 e=true c=true
+window.scrollY => accessor get="get scrollY"/0 set="set scrollY"/1 e=true c=true
+window.scrollbars => accessor get="get scrollbars"/0 set="set scrollbars"/1 e=true c=true
+window.self => accessor get="get self"/0 set="set self"/1 e=true c=true
+window.sessionStorage => accessor get="get sessionStorage"/0 set=undefined e=true c=true
+window.setInterval => data w=true e=true c=true function "setInterval"/1
+window.setTimeout => data w=true e=true c=true function "setTimeout"/1
+window.solana => data w=true e=true c=true object
+window.speechSynthesis => accessor get="get speechSynthesis"/0 set=undefined e=true c=true
+window.status => accessor get="get status"/0 set="set status"/1 e=true c=true
+window.statusbar => accessor get="get statusbar"/0 set="set statusbar"/1 e=true c=true
+window.stop => data w=true e=true c=true function "stop"/0
+window.structuredClone => data w=true e=true c=true function "structuredClone"/1
+window.styleMedia => accessor get="get styleMedia"/0 set=undefined e=true c=true
+window.toolbar => accessor get="get toolbar"/0 set="set toolbar"/1 e=true c=true
+window.top => accessor get="get top"/0 set=undefined e=true c=false
+window.trustedTypes => accessor get="get trustedTypes"/0 set=undefined e=true c=true
+window.undefined => data w=false e=false c=false undefined
+window.unescape => data w=true e=false c=true function "unescape"/1
+window.viewport => accessor get="get viewport"/0 set="set viewport"/1 e=true c=true
+window.visualViewport => accessor get="get visualViewport"/0 set="set visualViewport"/1 e=true c=true
+window.webkitCancelAnimationFrame => data w=true e=true c=true function "webkitCancelAnimationFrame"/1
+window.webkitMediaStream => data w=true e=false c=true function "MediaStream"/0
+window.webkitRTCPeerConnection => data w=true e=false c=true function "RTCPeerConnection"/0
+window.webkitRequestAnimationFrame => data w=true e=true c=true function "webkitRequestAnimationFrame"/1
+window.webkitRequestFileSystem => data w=true e=true c=true function "webkitRequestFileSystem"/3
+window.webkitResolveLocalFileSystemURL => data w=true e=true c=true function "webkitResolveLocalFileSystemURL"/2
+window.webkitSpeechGrammar => data w=true e=false c=true function "SpeechGrammar"/0
+window.webkitSpeechGrammarList => data w=true e=false c=true function "SpeechGrammarList"/0
+window.webkitSpeechRecognition => data w=true e=false c=true function "SpeechRecognition"/0
+window.webkitSpeechRecognitionError => data w=true e=false c=true function "SpeechRecognitionErrorEvent"/1
+window.webkitSpeechRecognitionEvent => data w=true e=false c=true function "SpeechRecognitionEvent"/1
+window.webkitURL => data w=true e=false c=true function "URL"/1
+window.window => accessor get="get window"/0 set=undefined e=true c=false
+Window.prototype.PERSISTENT => data w=false e=true c=false number
+Window.prototype.TEMPORARY => data w=false e=true c=false number
+Window.prototype.[Symbol.toStringTag] => data w=false e=false c=true string
+Window.prototype.constructor => data w=true e=false c=true function "Window"/0
+WindowProperties.[Symbol.toStringTag] => data w=false e=false c=true string
+document.location => accessor get="get location"/0 set="set location"/1 e=true c=false
+location.[Symbol.toPrimitive] => data w=false e=false c=false undefined
+location.ancestorOrigins => accessor get="get ancestorOrigins"/0 set=undefined e=true c=false
+location.assign => data w=false e=true c=false function "assign"/1
+location.hash => accessor get="get hash"/0 set="set hash"/1 e=true c=false
+location.host => accessor get="get host"/0 set="set host"/1 e=true c=false
+location.hostname => accessor get="get hostname"/0 set="set hostname"/1 e=true c=false
+location.href => accessor get="get href"/0 set="set href"/1 e=true c=false
+location.origin => accessor get="get origin"/0 set=undefined e=true c=false
+location.pathname => accessor get="get pathname"/0 set="set pathname"/1 e=true c=false
+location.port => accessor get="get port"/0 set="set port"/1 e=true c=false
+location.protocol => accessor get="get protocol"/0 set="set protocol"/1 e=true c=false
+location.reload => data w=false e=true c=false function "reload"/0
+location.replace => data w=false e=true c=false function "replace"/1
+location.search => accessor get="get search"/0 set="set search"/1 e=true c=false
+location.toString => data w=false e=true c=false function "toString"/0
+location.valueOf => data w=false e=false c=false function "valueOf"/0
+Location.prototype.[Symbol.toStringTag] => data w=false e=false c=true string
+Location.prototype.constructor => data w=true e=false c=true function "Location"/0
+Document.prototype.startViewTransition => data w=true e=true c=true function "startViewTransition"/0
+ViewTransition.prototype.[Symbol.toStringTag] => data w=false e=false c=true string
+ViewTransition.prototype.constructor => data w=true e=false c=true function "ViewTransition"/0
+ViewTransition.prototype.finished => accessor get="get finished"/0 set=undefined e=true c=true
+ViewTransition.prototype.ready => accessor get="get ready"/0 set=undefined e=true c=true
+ViewTransition.prototype.skipTransition => data w=true e=true c=true function "skipTransition"/0
+ViewTransition.prototype.transitionRoot => accessor get="get transitionRoot"/0 set=undefined e=true c=true
+ViewTransition.prototype.types => accessor get="get types"/0 set=undefined e=true c=true
+ViewTransition.prototype.updateCallbackDone => accessor get="get updateCallbackDone"/0 set=undefined e=true c=true
+ViewTransition.prototype.waitUntil => data w=true e=true c=true function "waitUntil"/1

@@ -1,0 +1,4 @@
+<!doctype html><title>top</title>
+<!-- REALWEB F37: a frame's own <meta http-equiv=refresh> navigates THAT frame (Chrome 150), and the page stays. -->
+<iframe src="fr.html"></iframe>
+<script>setTimeout(() => { let f; try { f = frames[0].location.pathname + frames[0].location.search + ' ' + frames[0].document.title; } catch (e) { f = 'x'; } document.title = 'top frame=' + f; }, 1500);</script>

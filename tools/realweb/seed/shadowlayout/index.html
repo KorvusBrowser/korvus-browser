@@ -1,0 +1,17 @@
+<!doctype html><html><body style="margin:0"><section id=host></section><div id=inl>a<span id=h2></span>b</div>
+<script>
+// REALWEB L6 (PERF's finding): a shadow tree's content is laid out INTO its host -- the host's box is sized
+// by what its shadow root renders (and a slot places the light children), and follows a later style change.
+var out = {};
+out.host0 = host.offsetHeight;
+var sr = host.attachShadow({ mode: 'open' }); sr.innerHTML = '<div style="height:33px"></div>';
+out.host1 = host.offsetHeight;
+sr.firstChild.style.height = '44px'; out.host2 = host.offsetHeight;
+sr.innerHTML = '<style>p{margin:0;height:10px}</style><p></p><slot></slot><p></p>';
+var light = document.createElement('div'); light.style.height = '7px'; host.appendChild(light);
+out.slotted = host.offsetHeight + ' ' + light.offsetTop;
+var s2 = h2.attachShadow({ mode: 'open' }); s2.innerHTML = '<b style="display:inline-block;width:20px;height:5px"></b>';
+out.inlineHost = h2.offsetWidth;
+out.rect = Math.round(host.getBoundingClientRect().height);
+document.title = JSON.stringify(out);
+</script></body></html>

@@ -1,0 +1,813 @@
+[
+[
+"attr",
+"display: none; width: 100%; height: 52px; border: 0;",
+"display: none; width: 100%; height: 52px; border: 0px;",
+20,
+"display,width,height,border-top-width,border-right-width,border-bottom-width,border-left-width,border-top-style,border-right-style,border-bottom-style,border-left-style,border-top-color,border-right-color,border-bottom-color,border-left-color,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat",
+"border=0px | border-top-width=0px | border-top-style=none | border-style=none | border-width=0px"
+],
+[
+"after setProperty",
+"display: none; width: 100%; height: 52px; border: 0;",
+"display: none; width: 100%; height: 52px; border: 0px; z-index: 3;",
+"display: none; width: 100%; height: 52px; border: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"display: none; width: 100%; height: 52px; border: 0;",
+"display: none; width: 100%; height: 52px; border: 0px;",
+"display: none; width: 100%; height: 52px; border: 0px;",
+20
+],
+[
+"attr",
+"border: 0",
+"border: 0px;",
+17,
+"border-top-width,border-right-width,border-bottom-width,border-left-width,border-top-style,border-right-style,border-bottom-style,border-left-style,border-top-color,border-right-color,border-bottom-color,border-left-color,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat",
+"border=0px | border-top=0px | border-color=currentcolor | border-image=none"
+],
+[
+"after setProperty",
+"border: 0",
+"border: 0px; z-index: 3;",
+"border: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"border: 0",
+"border: 0px;",
+"border: 0px;",
+17
+],
+[
+"attr",
+"border: 1px solid red",
+"border: 1px solid red;",
+17,
+"border-top-width,border-right-width,border-bottom-width,border-left-width,border-top-style,border-right-style,border-bottom-style,border-left-style,border-top-color,border-right-color,border-bottom-color,border-left-color,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat",
+"border=1px solid red | border-left=1px solid red | border-top-color=red | border-image-source=none"
+],
+[
+"after setProperty",
+"border: 1px solid red",
+"border: 1px solid red; z-index: 3;",
+"border: 1px solid red; z-index: 3;"
+],
+[
+"cssText=",
+"border: 1px solid red",
+"border: 1px solid red;",
+"border: 1px solid red;",
+17
+],
+[
+"attr",
+"border: none",
+"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;",
+17,
+"border-top-width,border-right-width,border-bottom-width,border-left-width,border-top-style,border-right-style,border-bottom-style,border-left-style,border-top-color,border-right-color,border-bottom-color,border-left-color,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat",
+"border= | border-top-style=none | border-top-width=medium"
+],
+[
+"after setProperty",
+"border: none",
+"border-width: medium; border-style: none; border-color: currentcolor; border-image: none; z-index: 3;",
+"border-width: medium; border-style: none; border-color: currentcolor; border-image: none; z-index: 3;"
+],
+[
+"cssText=",
+"border: none",
+"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;",
+"border-width: medium; border-style: none; border-color: currentcolor; border-image: none;",
+17
+],
+[
+"attr",
+"border: 2px dashed",
+"border: 2px dashed;",
+17,
+"border-top-width,border-right-width,border-bottom-width,border-left-width,border-top-style,border-right-style,border-bottom-style,border-left-style,border-top-color,border-right-color,border-bottom-color,border-left-color,border-image-source,border-image-slice,border-image-width,border-image-outset,border-image-repeat",
+"border=2px dashed | border-bottom-color=currentcolor"
+],
+[
+"after setProperty",
+"border: 2px dashed",
+"border: 2px dashed; z-index: 3;",
+"border: 2px dashed; z-index: 3;"
+],
+[
+"cssText=",
+"border: 2px dashed",
+"border: 2px dashed;",
+"border: 2px dashed;",
+17
+],
+[
+"attr",
+"border-top: 0",
+"border-top: 0px;",
+3,
+"border-top-width,border-top-style,border-top-color",
+"border-top=0px | border= | border-top-width=0px"
+],
+[
+"after setProperty",
+"border-top: 0",
+"border-top: 0px; z-index: 3;",
+"border-top: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"border-top: 0",
+"border-top: 0px;",
+"border-top: 0px;",
+3
+],
+[
+"attr",
+"border-width: 1px 2px",
+"border-width: 1px 2px;",
+4,
+"border-top-width,border-right-width,border-bottom-width,border-left-width",
+"border-width=1px 2px | border-left-width=2px | border="
+],
+[
+"after setProperty",
+"border-width: 1px 2px",
+"border-width: 1px 2px; z-index: 3;",
+"border-width: 1px 2px; z-index: 3;"
+],
+[
+"cssText=",
+"border-width: 1px 2px",
+"border-width: 1px 2px;",
+"border-width: 1px 2px;",
+4
+],
+[
+"attr",
+"margin: 0",
+"margin: 0px;",
+4,
+"margin-top,margin-right,margin-bottom,margin-left",
+"margin=0px | margin-top=0px"
+],
+[
+"after setProperty",
+"margin: 0",
+"margin: 0px; z-index: 3;",
+"margin: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"margin: 0",
+"margin: 0px;",
+"margin: 0px;",
+4
+],
+[
+"attr",
+"margin: 0 auto",
+"margin: 0px auto;",
+4,
+"margin-top,margin-right,margin-bottom,margin-left",
+"margin=0px auto | margin-left=auto | margin-right=auto"
+],
+[
+"after setProperty",
+"margin: 0 auto",
+"margin: 0px auto; z-index: 3;",
+"margin: 0px auto; z-index: 3;"
+],
+[
+"cssText=",
+"margin: 0 auto",
+"margin: 0px auto;",
+"margin: 0px auto;",
+4
+],
+[
+"attr",
+"padding: 1px 2px 3px 4px",
+"padding: 1px 2px 3px 4px;",
+4,
+"padding-top,padding-right,padding-bottom,padding-left",
+"padding=1px 2px 3px 4px | padding-left=4px"
+],
+[
+"after setProperty",
+"padding: 1px 2px 3px 4px",
+"padding: 1px 2px 3px 4px; z-index: 3;",
+"padding: 1px 2px 3px 4px; z-index: 3;"
+],
+[
+"cssText=",
+"padding: 1px 2px 3px 4px",
+"padding: 1px 2px 3px 4px;",
+"padding: 1px 2px 3px 4px;",
+4
+],
+[
+"attr",
+"margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px",
+"margin: 1px;",
+4,
+"margin-top,margin-right,margin-bottom,margin-left",
+"margin=1px"
+],
+[
+"after setProperty",
+"margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px",
+"margin: 1px; z-index: 3;",
+"margin: 1px; z-index: 3;"
+],
+[
+"cssText=",
+"margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px",
+"margin: 1px;",
+"margin: 1px;",
+4
+],
+[
+"attr",
+"margin-top: 1px; margin-right: 2px",
+"margin-top: 1px; margin-right: 2px;",
+2,
+"margin-top,margin-right",
+"margin= | margin-right=2px"
+],
+[
+"after setProperty",
+"margin-top: 1px; margin-right: 2px",
+"margin-top: 1px; margin-right: 2px; z-index: 3;",
+"margin-top: 1px; margin-right: 2px; z-index: 3;"
+],
+[
+"cssText=",
+"margin-top: 1px; margin-right: 2px",
+"margin-top: 1px; margin-right: 2px;",
+"margin-top: 1px; margin-right: 2px;",
+2
+],
+[
+"attr",
+"outline: 0",
+"outline: 0px;",
+3,
+"outline-color,outline-style,outline-width",
+"outline=0px | outline-width=0px | outline-style=initial"
+],
+[
+"after setProperty",
+"outline: 0",
+"outline: 0px; z-index: 3;",
+"outline: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"outline: 0",
+"outline: 0px;",
+"outline: 0px;",
+3
+],
+[
+"attr",
+"outline: none",
+"outline: none;",
+3,
+"outline-color,outline-style,outline-width",
+"outline=none | outline-style=none"
+],
+[
+"after setProperty",
+"outline: none",
+"outline: none; z-index: 3;",
+"outline: none; z-index: 3;"
+],
+[
+"cssText=",
+"outline: none",
+"outline: none;",
+"outline: none;",
+3
+],
+[
+"attr",
+"background: red",
+"background: red;",
+9,
+"background-image,background-position-x,background-position-y,background-size,background-repeat,background-attachment,background-origin,background-clip,background-color",
+"background=red | background-color=red | background-image=initial"
+],
+[
+"after setProperty",
+"background: red",
+"background: red; z-index: 3;",
+"background: red; z-index: 3;"
+],
+[
+"cssText=",
+"background: red",
+"background: red;",
+"background: red;",
+9
+],
+[
+"attr",
+"background: url(x.png) no-repeat",
+"background: url(\"x.png\") no-repeat;",
+9,
+"background-image,background-position-x,background-position-y,background-size,background-repeat,background-attachment,background-origin,background-clip,background-color",
+"background=url(\"x.png\") no-repeat | background-repeat=no-repeat"
+],
+[
+"after setProperty",
+"background: url(x.png) no-repeat",
+"background: url(\"x.png\") no-repeat; z-index: 3;",
+"background: url(\"x.png\") no-repeat; z-index: 3;"
+],
+[
+"cssText=",
+"background: url(x.png) no-repeat",
+"background: url(\"x.png\") no-repeat;",
+"background: url(\"x.png\") no-repeat;",
+9
+],
+[
+"attr",
+"font: 12px Arial",
+"font: 12px Arial;",
+19,
+"font-style,font-variant-caps,font-variant-ligatures,font-variant-numeric,font-variant-east-asian,font-variant-alternates,font-size-adjust,font-language-override,font-kerning,font-optical-sizing,font-feature-settings,font-variation-settings,font-variant-position,font-variant-emoji,font-weight,font-stretch,font-size,line-height,font-family",
+"font=12px Arial | font-size=12px | font-family=Arial | line-height=normal | font-weight=normal"
+],
+[
+"after setProperty",
+"font: 12px Arial",
+"font: 12px Arial; z-index: 3;",
+"font: 12px Arial; z-index: 3;"
+],
+[
+"cssText=",
+"font: 12px Arial",
+"font: 12px Arial;",
+"font: 12px Arial;",
+19
+],
+[
+"attr",
+"font: bold 12px/1.5 serif",
+"font: bold 12px / 1.5 serif;",
+19,
+"font-style,font-variant-caps,font-variant-ligatures,font-variant-numeric,font-variant-east-asian,font-variant-alternates,font-size-adjust,font-language-override,font-kerning,font-optical-sizing,font-feature-settings,font-variation-settings,font-variant-position,font-variant-emoji,font-weight,font-stretch,font-size,line-height,font-family",
+"font=bold 12px / 1.5 serif | line-height=1.5"
+],
+[
+"after setProperty",
+"font: bold 12px/1.5 serif",
+"font: bold 12px / 1.5 serif; z-index: 3;",
+"font: bold 12px / 1.5 serif; z-index: 3;"
+],
+[
+"cssText=",
+"font: bold 12px/1.5 serif",
+"font: bold 12px / 1.5 serif;",
+"font: bold 12px / 1.5 serif;",
+19
+],
+[
+"attr",
+"border-radius: 5px",
+"border-radius: 5px;",
+4,
+"border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius",
+"border-radius=5px | border-top-left-radius=5px"
+],
+[
+"after setProperty",
+"border-radius: 5px",
+"border-radius: 5px; z-index: 3;",
+"border-radius: 5px; z-index: 3;"
+],
+[
+"cssText=",
+"border-radius: 5px",
+"border-radius: 5px;",
+"border-radius: 5px;",
+4
+],
+[
+"attr",
+"border-radius: 50%",
+"border-radius: 50%;",
+4,
+"border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius",
+"border-radius=50%"
+],
+[
+"after setProperty",
+"border-radius: 50%",
+"border-radius: 50%; z-index: 3;",
+"border-radius: 50%; z-index: 3;"
+],
+[
+"cssText=",
+"border-radius: 50%",
+"border-radius: 50%;",
+"border-radius: 50%;",
+4
+],
+[
+"attr",
+"inset: 0",
+"inset: 0px;",
+4,
+"top,right,bottom,left",
+"inset=0px | top=0px"
+],
+[
+"after setProperty",
+"inset: 0",
+"inset: 0px; z-index: 3;",
+"inset: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"inset: 0",
+"inset: 0px;",
+"inset: 0px;",
+4
+],
+[
+"attr",
+"flex: 1",
+"flex: 1 1 0%;",
+3,
+"flex-grow,flex-shrink,flex-basis",
+"flex=1 1 0% | flex-grow=1 | flex-basis=0%"
+],
+[
+"after setProperty",
+"flex: 1",
+"flex: 1 1 0%; z-index: 3;",
+"flex: 1 1 0%; z-index: 3;"
+],
+[
+"cssText=",
+"flex: 1",
+"flex: 1 1 0%;",
+"flex: 1 1 0%;",
+3
+],
+[
+"attr",
+"overflow: hidden",
+"overflow: hidden;",
+2,
+"overflow-x,overflow-y",
+"overflow=hidden | overflow-x=hidden"
+],
+[
+"after setProperty",
+"overflow: hidden",
+"overflow: hidden; z-index: 3;",
+"overflow: hidden; z-index: 3;"
+],
+[
+"cssText=",
+"overflow: hidden",
+"overflow: hidden;",
+"overflow: hidden;",
+2
+],
+[
+"attr",
+"transition: opacity .3s",
+"transition: opacity 0.3s;",
+5,
+"transition-behavior,transition-duration,transition-timing-function,transition-delay,transition-property",
+"transition=opacity 0.3s | transition-duration=0.3s | transition-property=opacity"
+],
+[
+"after setProperty",
+"transition: opacity .3s",
+"transition: opacity 0.3s; z-index: 3;",
+"transition: opacity 0.3s; z-index: 3;"
+],
+[
+"cssText=",
+"transition: opacity .3s",
+"transition: opacity 0.3s;",
+"transition: opacity 0.3s;",
+5
+],
+[
+"attr",
+"color: red !important; width: 0",
+"color: red !important; width: 0px;",
+2,
+"color,width",
+"color=red | width=0px"
+],
+[
+"after setProperty",
+"color: red !important; width: 0",
+"color: red !important; width: 0px; z-index: 3;",
+"color: red !important; width: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"color: red !important; width: 0",
+"width: 0px; color: red !important;",
+"width: 0px; color: red !important;",
+2
+],
+[
+"attr",
+"COLOR: RED; Width: 0PX",
+"color: red; width: 0px;",
+2,
+"color,width",
+"color=red | width=0px"
+],
+[
+"after setProperty",
+"COLOR: RED; Width: 0PX",
+"color: red; width: 0px; z-index: 3;",
+"color: red; width: 0px; z-index: 3;"
+],
+[
+"cssText=",
+"COLOR: RED; Width: 0PX",
+"color: red; width: 0px;",
+"color: red; width: 0px;",
+2
+],
+[
+"attr",
+"color: red; color: blue",
+"color: blue;",
+1,
+"color",
+"color=blue"
+],
+[
+"after setProperty",
+"color: red; color: blue",
+"color: blue; z-index: 3;",
+"color: blue; z-index: 3;"
+],
+[
+"cssText=",
+"color: red; color: blue",
+"color: blue;",
+"color: blue;",
+1
+],
+[
+"attr",
+"--x: 1px; color: red",
+"--x: 1px; color: red;",
+2,
+"--x,color",
+"--x=1px | color=red"
+],
+[
+"after setProperty",
+"--x: 1px; color: red",
+"--x: 1px; color: red; z-index: 3;",
+"--x: 1px; color: red; z-index: 3;"
+],
+[
+"cssText=",
+"--x: 1px; color: red",
+"--x: 1px; color: red;",
+"--x: 1px; color: red;",
+2
+],
+[
+"attr",
+"color: red; --x:  a  b ",
+"color: red; --x: a  b;",
+2,
+"color,--x",
+"--x=a  b | color=red"
+],
+[
+"after setProperty",
+"color: red; --x:  a  b ",
+"color: red; --x: a  b; z-index: 3;",
+"color: red; --x: a  b; z-index: 3;"
+],
+[
+"cssText=",
+"color: red; --x:  a  b ",
+"color: red; --x: a  b;",
+"color: red; --x: a  b;",
+2
+],
+[
+"attr",
+"opacity: .5; z-index: 0010",
+"opacity: 0.5; z-index: 10;",
+2,
+"opacity,z-index",
+"opacity=0.5 | z-index=10"
+],
+[
+"after setProperty",
+"opacity: .5; z-index: 0010",
+"opacity: 0.5; z-index: 3;",
+"opacity: 0.5; z-index: 3;"
+],
+[
+"cssText=",
+"opacity: .5; z-index: 0010",
+"opacity: 0.5; z-index: 10;",
+"opacity: 0.5; z-index: 10;",
+2
+],
+[
+"attr",
+"width: calc(1px + 2px)",
+"width: calc(3px);",
+1,
+"width",
+"width=calc(3px)"
+],
+[
+"after setProperty",
+"width: calc(1px + 2px)",
+"width: calc(3px); z-index: 3;",
+"width: calc(3px); z-index: 3;"
+],
+[
+"cssText=",
+"width: calc(1px + 2px)",
+"width: calc(3px);",
+"width: calc(3px);",
+1
+],
+[
+"attr",
+"width: 10px; bogus: 1; height: x",
+"width: 10px;",
+1,
+"width",
+"width=10px | height="
+],
+[
+"after setProperty",
+"width: 10px; bogus: 1; height: x",
+"width: 10px; z-index: 3;",
+"width: 10px; z-index: 3;"
+],
+[
+"cssText=",
+"width: 10px; bogus: 1; height: x",
+"width: 10px;",
+"width: 10px;",
+1
+],
+[
+"attr",
+"grid-area: 1 / 2",
+"grid-area: 1 / 2;",
+4,
+"grid-row-start,grid-column-start,grid-row-end,grid-column-end",
+"grid-area=1 / 2 | grid-row-start=1 | grid-column-start=2 | grid-row-end=auto"
+],
+[
+"after setProperty",
+"grid-area: 1 / 2",
+"grid-area: 1 / 2; z-index: 3;",
+"grid-area: 1 / 2; z-index: 3;"
+],
+[
+"cssText=",
+"grid-area: 1 / 2",
+"grid-area: 1 / 2;",
+"grid-area: 1 / 2;",
+4
+],
+[
+"attr",
+"list-style: none",
+"list-style: none;",
+3,
+"list-style-position,list-style-image,list-style-type",
+"list-style=none | list-style-type=none"
+],
+[
+"after setProperty",
+"list-style: none",
+"list-style: none; z-index: 3;",
+"list-style: none; z-index: 3;"
+],
+[
+"cssText=",
+"list-style: none",
+"list-style: none;",
+"list-style: none;",
+3
+],
+[
+"attr",
+"gap: 10px",
+"gap: 10px;",
+2,
+"row-gap,column-gap",
+"gap=10px | row-gap=10px | column-gap=10px"
+],
+[
+"after setProperty",
+"gap: 10px",
+"gap: 10px; z-index: 3;",
+"gap: 10px; z-index: 3;"
+],
+[
+"cssText=",
+"gap: 10px",
+"gap: 10px;",
+"gap: 10px;",
+2
+],
+[
+"attr",
+"place-items: center",
+"place-items: center;",
+2,
+"align-items,justify-items",
+"place-items=center | align-items=center"
+],
+[
+"after setProperty",
+"place-items: center",
+"place-items: center; z-index: 3;",
+"place-items: center; z-index: 3;"
+],
+[
+"cssText=",
+"place-items: center",
+"place-items: center;",
+"place-items: center;",
+2
+],
+[
+"attr",
+"",
+"",
+0,
+"",
+""
+],
+[
+"after setProperty",
+"",
+"z-index: 3;",
+"z-index: 3;"
+],
+[
+"cssText=",
+"",
+"",
+"",
+0
+],
+[
+"set border",
+"border: 0px;",
+"border: 0px;",
+"0px",
+17
+],
+[
+"then border-top-width",
+"border-width: 5px 0px 0px; border-style: none; border-color: currentcolor; border-image: none;",
+"",
+"5px 0px 0px"
+],
+[
+"removeProperty border",
+"",
+0
+],
+[
+"margin then margin-top",
+"margin: 3px 2px 1px;",
+"3px 2px 1px"
+],
+[
+"padding important",
+"margin: 3px 2px 1px; padding: 4px !important;",
+"important",
+"important"
+],
+[
+"border then display",
+"border: 0px; display: block;",
+"border: 0px; display: block;"
+]
+]

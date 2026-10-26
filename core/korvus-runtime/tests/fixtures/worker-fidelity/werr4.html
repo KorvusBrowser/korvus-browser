@@ -1,0 +1,12 @@
+<!doctype html><body><script>
+window.__r=[];
+const desc = (e, u) => JSON.stringify([e.constructor.name, e.message, e.filename === u ? 'URL' : (e.filename && e.filename.replace(location.origin, 'ORIGIN')), e.lineno, e.colno, String(e.error)]);
+const mk = (name, src, opts) => { const u = src.endsWith('.js') || src.endsWith('.mjs') ? src : URL.createObjectURL(new Blob([src],{type:'text/javascript'})); const w = new Worker(u, opts);
+  w.onmessage = e => window.__r.push(name + ' msg: ' + e.data);
+  w.addEventListener('error', e => window.__r.push(name + ' page error: ' + desc(e, u))); return w; };
+mk('MS', `export let = ;`, {type: 'module'});
+mk('MI', `import '${location.origin}/missing-404.mjs'; postMessage('ran')`, {type: 'module'});
+mk('MT', `import '${location.origin}/mthrow.mjs'; postMessage('ran')`, {type: 'module'});
+mk('MD', `self.onerror = (m, f, l, c, e) => postMessage('self.onerror ' + JSON.stringify([m, f.replace(location.origin, 'ORIGIN'), l, c, String(e)])); import('${location.origin}/mthrow.mjs').catch(x => postMessage('dyn caught ' + x));`, {type: 'module'});
+mk('ML', 'mthrow.mjs', {type: 'module'});
+</script>

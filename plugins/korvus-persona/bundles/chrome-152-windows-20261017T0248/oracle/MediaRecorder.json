@@ -1,0 +1,793 @@
+[
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"x\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "new MediaRecorder()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stream",
+    "expr": "(function () { var s = new MediaStream(); return new MediaRecorder(s).stream === s; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stream",
+    "expr": "new MediaRecorder(new MediaStream()).stream instanceof MediaStream",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stream",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"stream\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "mimeType",
+    "expr": "new MediaRecorder(new MediaStream()).mimeType",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "mimeType",
+    "expr": "new MediaRecorder(new MediaStream(), { mimeType: \"video/webm\" }).mimeType",
+    "expected": "video/webm",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "mimeType",
+    "expr": "new MediaRecorder(new MediaStream(), { mimeType: \"video/webm;codecs=vp8\" }).mimeType",
+    "expected": "video/webm;codecs=vp8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "mimeType",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"mimeType\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "state",
+    "expr": "new MediaRecorder(new MediaStream()).state",
+    "expected": "inactive",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "state",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); r.start(); return r.state; })()",
+    "expected": "recording",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "state",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); r.start(); r.pause(); return r.state; })()",
+    "expected": "paused",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "state",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"state\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstart",
+    "expr": "new MediaRecorder(new MediaStream()).onstart",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstart",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.onstart = f; return r.onstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstart",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.onstart = 5; return r.onstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstart",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"onstart\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstop",
+    "expr": "new MediaRecorder(new MediaStream()).onstop",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstop",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.onstop = f; return r.onstop === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstop",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.onstop = 5; return r.onstop; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onstop",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"onstop\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "ondataavailable",
+    "expr": "new MediaRecorder(new MediaStream()).ondataavailable",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "ondataavailable",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.ondataavailable = f; return r.ondataavailable === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "ondataavailable",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.ondataavailable = 5; return r.ondataavailable; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "ondataavailable",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"ondataavailable\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onpause",
+    "expr": "new MediaRecorder(new MediaStream()).onpause",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onpause",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.onpause = f; return r.onpause === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onpause",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.onpause = 5; return r.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onpause",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"onpause\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onresume",
+    "expr": "new MediaRecorder(new MediaStream()).onresume",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onresume",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.onresume = f; return r.onresume === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onresume",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.onresume = 5; return r.onresume; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onresume",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"onresume\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onerror",
+    "expr": "new MediaRecorder(new MediaStream()).onerror",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onerror",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); var f = function () {}; r.onerror = f; return r.onerror === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onerror",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); r.onerror = 5; return r.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"onerror\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "typeof new MediaRecorder(new MediaStream()).videoBitsPerSecond",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream(), { videoBitsPerSecond: 100000 }).videoBitsPerSecond",
+    "expected": 100000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"videoBitsPerSecond\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "typeof new MediaRecorder(new MediaStream()).audioBitsPerSecond",
+    "expected": "number",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream(), { audioBitsPerSecond: 64000 }).audioBitsPerSecond",
+    "expected": 64000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"audioBitsPerSecond\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitrateMode",
+    "expr": "new MediaRecorder(new MediaStream()).audioBitrateMode",
+    "expected": "variable",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitrateMode",
+    "expr": "new MediaRecorder(new MediaStream(), { audioBitrateMode: \"constant\" }).audioBitrateMode",
+    "expected": "constant",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitrateMode",
+    "expr": "Object.getOwnPropertyDescriptor(MediaRecorder.prototype, \"audioBitrateMode\").get.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "pause",
+    "expr": "new MediaRecorder(new MediaStream()).pause()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "pause",
+    "expr": "MediaRecorder.prototype.pause.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "pause",
+    "expr": "MediaRecorder.prototype.pause.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "resume",
+    "expr": "new MediaRecorder(new MediaStream()).resume()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "resume",
+    "expr": "MediaRecorder.prototype.resume.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "resume",
+    "expr": "MediaRecorder.prototype.resume.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stop",
+    "expr": "MediaRecorder.prototype.stop.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stop",
+    "expr": "MediaRecorder.prototype.stop.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "requestData",
+    "expr": "new MediaRecorder(new MediaStream()).requestData()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "requestData",
+    "expr": "MediaRecorder.prototype.requestData.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "requestData",
+    "expr": "MediaRecorder.prototype.requestData.call(Object.create(MediaRecorder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "start",
+    "expr": "new MediaRecorder(new MediaStream()).start()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "start",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); r.start(); try { r.start(); return \"no-throw\"; } catch (e) { return e.name; } })()",
+    "expected": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "start",
+    "expr": "MediaRecorder.prototype.start.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "resume",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); r.start(); r.pause(); r.resume(); return r.state; })()",
+    "expected": "recording",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stop",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); r.start(); r.stop(); return r.state; })()",
+    "expected": "inactive",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=vp8\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"application/x-not-a-media-type\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stop",
+    "expr": "(function () { var r = new MediaRecorder(new MediaStream()); try { r.stop(); return \"no-throw|\" + r.state; } catch (e) { return e.name; } })()",
+    "expected": "no-throw|inactive",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "start",
+    "expr": "(function () { var c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; var r = new MediaRecorder(c.captureStream()); return String(r.start()) + \"|\" + r.state; })()",
+    "expected": "undefined|recording",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=vp9\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=\\\"vp8,opus\\\"\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=avc1\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=avc1.ZZZZZZ\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=VP8\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=vp09.00.10.08\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/webm;codecs=vorbis\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=avc1.42E01E\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=avc1\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=vp9\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=vp9.0\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=Opus\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=opus\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/mp4;codecs=mp4a.40.2\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"audio/webm\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"audio/webm;codecs=opus\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"audio/mpeg\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"audio/ogg\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/x-matroska;codecs=avc1\")",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"video/quicktime\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "isTypeSupported",
+    "expr": "MediaRecorder.isTypeSupported(\"application/x-korvus-nonsense\")",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream()).videoBitsPerSecond",
+    "expected": 2500000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream()).audioBitsPerSecond",
+    "expected": 128000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream(), { bitsPerSecond: 200000 }).videoBitsPerSecond",
+    "expected": 180000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "new MediaRecorder(new MediaStream(), { bitsPerSecond: 200000 }).audioBitsPerSecond",
+    "expected": 20000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "videoBitsPerSecond",
+    "expr": "new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()).videoBitsPerSecond",
+    "expected": 2500000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitsPerSecond",
+    "expr": "new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()).audioBitsPerSecond",
+    "expected": 128000,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "audioBitrateMode",
+    "expr": "new MediaRecorder(new MediaStream(), { audioBitrateMode: \"nonsense\" }).audioBitrateMode",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "new MediaRecorder(new MediaStream(), { mimeType: \"application/x-korvus-nonsense\" })",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "new MediaRecorder(new MediaStream(), { mimeType: \"video/webm;codecs=vp8\" }).mimeType",
+    "expected": "video/webm;codecs=vp8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "new MediaRecorder(5)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "new MediaRecorder(null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "MediaRecorder.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new MediaRecorder(new MediaStream()))",
+    "expected": "[object MediaRecorder]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "mimeType",
+    "expr": "new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()).mimeType",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "state",
+    "expr": "(() => { const r = new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()); r.start(); r.stop(); r.start(); return r.state; })()",
+    "expected": "recording",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "pause",
+    "expr": "(() => { const r = new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()); r.start(); r.pause(); r.pause(); return r.state; })()",
+    "expected": "paused",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "resume",
+    "expr": "(() => { const r = new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()); r.start(); r.resume(); return r.state; })()",
+    "expected": "recording",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "requestData",
+    "expr": "(() => { const r = new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()); r.start(); return String(r.requestData()); })()",
+    "expected": "undefined",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stop",
+    "expr": "(() => { const r = new MediaRecorder((() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })()); r.start(); r.stop(); r.stop(); return r.state; })()",
+    "expected": "inactive",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "start",
+    "expr": "(() => { const r = new MediaRecorder(new MediaStream()); r.start(); return \"no-throw\"; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaRecorder",
+    "member": "stream",
+    "expr": "(() => { const s = (() => { const c = document.createElement(\"canvas\"); c.width = 8; c.height = 8; return c.captureStream(); })(); return new MediaRecorder(s).stream === s; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

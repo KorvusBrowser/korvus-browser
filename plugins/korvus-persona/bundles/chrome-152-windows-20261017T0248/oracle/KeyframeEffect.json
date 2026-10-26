@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "KeyframeEffect",
+    "member": "constructor",
+    "expr": "new KeyframeEffect()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "iterationComposite",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.iterationComposite; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "pseudoElement",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.pseudoElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "pseudoElement",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return (o.pseudoElement = \"x\", o.pseudoElement); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "composite",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.composite; })()",
+    "expected": "replace",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "setKeyframes",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.setKeyframes({}); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "setKeyframes",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.setKeyframes(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "iterationComposite",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.iterationComposite); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "target",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.target); })()",
+    "expected": "[object HTMLDivElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "composite",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.composite); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "KeyframeEffect",
+    "member": "getKeyframes",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.getKeyframes()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

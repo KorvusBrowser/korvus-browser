@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "DOMParser",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMParser(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMParser]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMParser",
+    "member": "parseFromString",
+    "expr": "(() => { const o = new DOMParser(); return o.parseFromString(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

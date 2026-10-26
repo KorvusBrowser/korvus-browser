@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "NavigationActivation",
+    "member": "constructor",
+    "expr": "new NavigationActivation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

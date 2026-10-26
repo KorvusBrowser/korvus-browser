@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "ScriptProcessorNode",
+    "member": "constructor",
+    "expr": "new ScriptProcessorNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScriptProcessorNode",
+    "member": "onaudioprocess",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).createScriptProcessor(256, 1, 1); return o.onaudioprocess; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScriptProcessorNode",
+    "member": "onaudioprocess",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).createScriptProcessor(256, 1, 1); return Object.prototype.toString.call(o.onaudioprocess); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ScriptProcessorNode",
+    "member": "bufferSize",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).createScriptProcessor(256, 1, 1); return o.bufferSize; })()",
+    "expected": 256,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

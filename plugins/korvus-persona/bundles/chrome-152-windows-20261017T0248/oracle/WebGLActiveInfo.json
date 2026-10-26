@@ -1,0 +1,33 @@
+[
+  {
+    "iface": "WebGLActiveInfo",
+    "member": "constructor",
+    "expr": "new WebGLActiveInfo()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebGLActiveInfo",
+    "member": "name",
+    "expr": "(() => { const g=document.createElement(\"canvas\").getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);return g.getActiveAttrib(p,0).name; })()",
+    "expected": "a"
+  },
+  {
+    "iface": "WebGLActiveInfo",
+    "member": "size",
+    "expr": "(() => { const g=document.createElement(\"canvas\").getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);return g.getActiveAttrib(p,0).size; })()",
+    "expected": 1
+  },
+  {
+    "iface": "WebGLActiveInfo",
+    "member": "type",
+    "expr": "(() => { const g=document.createElement(\"canvas\").getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);return g.getActiveAttrib(p,0).type===g.FLOAT_VEC2; })()",
+    "expected": true
+  },
+  {
+    "iface": "WebGLActiveInfo",
+    "member": "name",
+    "expr": "(() => { const g=document.createElement(\"canvas\").getContext(\"webgl\");const mk=(t,x)=>{const h=g.createShader(t);g.shaderSource(h,x);g.compileShader(h);return h;};const vs=mk(g.VERTEX_SHADER,\"attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}\");const fs=mk(g.FRAGMENT_SHADER,\"precision mediump float;uniform float u;void main(){gl_FragColor=vec4(u);}\");const p=g.createProgram();g.attachShader(p,vs);g.attachShader(p,fs);g.linkProgram(p);return Object.getOwnPropertyNames(g.getActiveAttrib(p,0)).length; })()",
+    "expected": 0
+  }
+]

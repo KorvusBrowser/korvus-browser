@@ -1,0 +1,5 @@
+<!doctype html><title>start</title><script>
+const n = +(sessionStorage.getItem('n') || 0); sessionStorage.setItem('n', n + 1);
+document.title = 'visit-' + (n + 1);
+if (n === 0) setTimeout(() => location.reload(), 200);
+</script>

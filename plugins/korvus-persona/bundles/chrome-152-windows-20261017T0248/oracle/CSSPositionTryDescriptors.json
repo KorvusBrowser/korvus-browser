@@ -1,0 +1,1003 @@
+[
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "constructor",
+    "expr": "new CSSPositionTryDescriptors()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin = \"x\", o.margin); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginTop",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginTop; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginTop",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginTop = \"x\", o.marginTop); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginRight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginRight; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginRight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginRight = \"x\", o.marginRight); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginBottom; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginBottom = \"x\", o.marginBottom); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginLeft",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginLeft; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginLeft",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginLeft = \"x\", o.marginLeft); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlock",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginBlock; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlock",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginBlock = \"x\", o.marginBlock); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlockStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginBlockStart; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlockStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginBlockStart = \"x\", o.marginBlockStart); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlockEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginBlockEnd; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginBlockEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginBlockEnd = \"x\", o.marginBlockEnd); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginInline; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginInline = \"x\", o.marginInline); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInlineStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginInlineStart; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInlineStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginInlineStart = \"x\", o.marginInlineStart); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInlineEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.marginInlineEnd; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "marginInlineEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.marginInlineEnd = \"x\", o.marginInlineEnd); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-top; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-top = \"x\", o.margin-top); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-right",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-right; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-right",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-right = \"x\", o.margin-right); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-bottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-bottom; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-bottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-bottom = \"x\", o.margin-bottom); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-left",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-left; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-left",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-left = \"x\", o.margin-left); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-block; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-block = \"x\", o.margin-block); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-block-start; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-block-start = \"x\", o.margin-block-start); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-block-end; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-block-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-block-end = \"x\", o.margin-block-end); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-inline; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-inline = \"x\", o.margin-inline); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-inline-start; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-inline-start = \"x\", o.margin-inline-start); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.margin-inline-end; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "margin-inline-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.margin-inline-end = \"x\", o.margin-inline-end); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset = \"x\", o.inset); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlock",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetBlock; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlock",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetBlock = \"x\", o.insetBlock); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlockStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetBlockStart; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlockStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetBlockStart = \"x\", o.insetBlockStart); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlockEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetBlockEnd; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetBlockEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetBlockEnd = \"x\", o.insetBlockEnd); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetInline; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetInline = \"x\", o.insetInline); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInlineStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetInlineStart; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInlineStart",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetInlineStart = \"x\", o.insetInlineStart); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInlineEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.insetInlineEnd; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "insetInlineEnd",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.insetInlineEnd = \"x\", o.insetInlineEnd); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.top; })()",
+    "expected": "0px",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.top = \"x\", o.top); })()",
+    "expected": "0px",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "left",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.left; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "left",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.left = \"x\", o.left); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "right",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.right; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "right",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.right = \"x\", o.right); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "bottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.bottom; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "bottom",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.bottom = \"x\", o.bottom); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-block; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-block = \"x\", o.inset-block); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-block-start; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-block-start = \"x\", o.inset-block-start); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-block-end; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-block-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-block-end = \"x\", o.inset-block-end); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-inline; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-inline = \"x\", o.inset-inline); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-inline-start; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline-start",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-inline-start = \"x\", o.inset-inline-start); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inset-inline-end; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inset-inline-end",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inset-inline-end = \"x\", o.inset-inline-end); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.width = \"x\", o.width); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minWidth",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.minWidth; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minWidth",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.minWidth = \"x\", o.minWidth); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxWidth",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.maxWidth; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxWidth",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.maxWidth = \"x\", o.maxWidth); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.height; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.height = \"x\", o.height); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minHeight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.minHeight; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minHeight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.minHeight = \"x\", o.minHeight); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxHeight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.maxHeight; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxHeight",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.maxHeight = \"x\", o.maxHeight); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "blockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.blockSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "blockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.blockSize = \"x\", o.blockSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minBlockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.minBlockSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minBlockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.minBlockSize = \"x\", o.minBlockSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxBlockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.maxBlockSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxBlockSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.maxBlockSize = \"x\", o.maxBlockSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inlineSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inlineSize = \"x\", o.inlineSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minInlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.minInlineSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "minInlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.minInlineSize = \"x\", o.minInlineSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxInlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.maxInlineSize; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "maxInlineSize",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.maxInlineSize = \"x\", o.maxInlineSize); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.min-width; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.min-width = \"x\", o.min-width); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.max-width; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-width",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.max-width = \"x\", o.max-width); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.min-height; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.min-height = \"x\", o.min-height); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.max-height; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-height",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.max-height = \"x\", o.max-height); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.block-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.block-size = \"x\", o.block-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.min-block-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.min-block-size = \"x\", o.min-block-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.max-block-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-block-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.max-block-size = \"x\", o.max-block-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.inline-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.inline-size = \"x\", o.inline-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.min-inline-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "min-inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.min-inline-size = \"x\", o.min-inline-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.max-inline-size; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "max-inline-size",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.max-inline-size = \"x\", o.max-inline-size); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "placeSelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.placeSelf; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "placeSelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.placeSelf = \"x\", o.placeSelf); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "alignSelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.alignSelf; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "alignSelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.alignSelf = \"x\", o.alignSelf); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "justifySelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.justifySelf; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "justifySelf",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.justifySelf = \"x\", o.justifySelf); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "place-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.place-self; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "place-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.place-self = \"x\", o.place-self); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "align-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.align-self; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "align-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.align-self = \"x\", o.align-self); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "justify-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.justify-self; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "justify-self",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.justify-self = \"x\", o.justify-self); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "positionAnchor",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.positionAnchor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "positionAnchor",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.positionAnchor = \"x\", o.positionAnchor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "position-anchor",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.position-anchor; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "position-anchor",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.position-anchor = \"x\", o.position-anchor); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "positionArea",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.positionArea; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "positionArea",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.positionArea = \"x\", o.positionArea); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "position-area",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return o.position-area; })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "position-area",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0].style; })(); return (o.position-area = \"x\", o.position-area); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style.cssText = \"top: 9px\", o.style.top); })()",
+    "expected": "9px",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPositionTryDescriptors",
+    "member": "top",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@position-try --p { top: 0px }\"); return s.cssRules[0]; })(); return (o.style.top = \"4px\", o.style.cssText); })()",
+    "expected": "top: 4px;",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

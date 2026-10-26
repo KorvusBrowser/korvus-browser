@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "HTMLMeterElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLMeterElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "constructor",
+    "expr": "new HTMLMeterElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.value; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "min",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.min; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "min",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.min = 1, o.min); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.max; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.max = 1, o.max); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "low",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.low; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "low",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.low = 1, o.low); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "high",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.high; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "high",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.high = 1, o.high); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "optimum",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return o.optimum; })()",
+    "expected": 0.5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "optimum",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.optimum = 1, o.optimum); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "min",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.min = \"1\", o.min); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.max = \"1\", o.max); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "low",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.low = \"1\", o.low); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "high",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.high = \"1\", o.high); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "optimum",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return (o.optimum = \"1\", o.optimum); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLMeterElement",
+    "member": "labels",
+    "expr": "(() => { const o = document.createElement(\"meter\"); return Object.prototype.toString.call(o.labels); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

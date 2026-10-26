@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "HTMLPreElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLPreElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPreElement",
+    "member": "constructor",
+    "expr": "new HTMLPreElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPreElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"listing\"); return o.width; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPreElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"listing\"); return (o.width = 1, o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLPreElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"listing\"); return (o.width = \"1\", o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

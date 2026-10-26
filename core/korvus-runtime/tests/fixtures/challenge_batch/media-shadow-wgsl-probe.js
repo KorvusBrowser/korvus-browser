@@ -1,0 +1,33 @@
+(async () => {
+  const out = [];
+  const show = v => { try { if (v === null) return 'null'; if (v === undefined) return 'undefined'; if (typeof v === 'object' || typeof v === 'function') return Object.prototype.toString.call(v) + ' ' + String(v); return typeof v + ':' + String(v); } catch (e) { return 'show-threw ' + e.name; } };
+  const t = (label, fn) => { try { out.push([label, show(fn())]); } catch (e) { out.push([label, 'threw ' + e.name, e.message]); } };
+  t('wgsl', () => navigator.gpu && [...navigator.gpu.wgslLanguageFeatures].join(','));
+  t('wgsl-size', () => navigator.gpu.wgslLanguageFeatures.size);
+  t('sr-efp', () => { const d = document.createElement('div'); const s = d.attachShadow({ mode: 'open' }); return s.elementsFromPoint(0, 0).map(e => e.tagName).join(','); });
+  t('sr-efp-attached', () => { const d = document.createElement('div'); document.body.appendChild(d); const s = d.attachShadow({ mode: 'open' }); s.innerHTML = '<span style="display:block;width:50px;height:50px">x</span>'; const r = s.elementsFromPoint(5, 5).map(e => e.tagName).join(','); d.remove(); return r; });
+  t('sr-efp-big', () => { const d = document.createElement('div'); document.body.appendChild(d); const s = d.attachShadow({ mode: 'open' }); s.innerHTML = '<span style="display:block;width:50px;height:50px">x</span>'; const r = s.elementsFromPoint(500, 500).map(e => e.tagName).join(','); d.remove(); return r; });
+  t('sr-efp1', () => { const d = document.createElement('div'); const s = d.attachShadow({ mode: 'open' }); return show(s.elementFromPoint(0, 0)); });
+  t('doc-efp', () => document.elementsFromPoint(0, 0).map(e => e.tagName).join(','));
+  t('sr-sel', () => { const d = document.createElement('div'); const s = d.attachShadow({ mode: 'open' }); const sel = s.getSelection(); return show(sel) + '|' + (sel === document.getSelection()) + '|' + (sel === s.getSelection()); });
+  t('tt', () => { const v = document.createElement('video'); const tr = v.addTextTrack('subtitles'); return [tr.mode, show(tr.cues), show(tr.activeCues)].join('|'); });
+  t('tt-cue', () => { const v = document.createElement('video'); const tr = v.addTextTrack('subtitles'); tr.addCue(new VTTCue(0, 1, 'a')); return [show(tr.cues), tr.cues.length, show(tr.activeCues), tr.activeCues && tr.activeCues.length].join('|'); });
+  t('tt-dis', () => { const v = document.createElement('video'); const tr = v.addTextTrack('subtitles'); tr.addCue(new VTTCue(0, 1, 'a')); tr.mode = 'disabled'; return [show(tr.cues), show(tr.activeCues)].join('|'); });
+  t('tt-show', () => { const v = document.createElement('video'); const tr = v.addTextTrack('subtitles'); tr.mode = 'showing'; return [show(tr.cues), show(tr.activeCues), tr.cues.length].join('|'); });
+  t('tt-same', () => { const v = document.createElement('video'); const tr = v.addTextTrack('subtitles'); tr.mode = 'showing'; return (tr.cues === tr.cues) + '|' + (tr.activeCues === tr.activeCues); });
+  t('track-el', () => { const tr = document.createElement('track').track; return [tr.mode, show(tr.cues), show(tr.activeCues)].join('|'); });
+  t('cuehtml', () => { const f = new VTTCue(1, 1, 'x').getCueAsHTML(); return show(f) + '|' + f.childNodes.length + '|' + f.firstChild.nodeName + '|' + f.textContent; });
+  t('cuehtml2', () => { const f = new VTTCue(1, 1, '<b>bold</b> <i>it</i> <c.cls>c</c> <v Bob>hi</v> &amp; <u>u</u> <ruby>r<rt>t</rt></ruby> <00:00:01.000>ts <lang en>l</lang>').getCueAsHTML(); const s = new XMLSerializer(); return [...f.childNodes].map(n => n.nodeType === 1 ? n.outerHTML : JSON.stringify(n.data)).join('|'); });
+  t('cuehtml3', () => { const f = new VTTCue(1, 1, 'a\nb').getCueAsHTML(); return [...f.childNodes].map(n => n.nodeName + ':' + JSON.stringify(n.textContent)).join('|'); });
+  t('cuehtml-same', () => { const c = new VTTCue(1, 1, 'x'); return c.getCueAsHTML() === c.getCueAsHTML(); });
+  t('cuehtml-ns', () => { const f = new VTTCue(1, 1, '<b>x</b>').getCueAsHTML(); return f.firstChild.namespaceURI + '|' + Object.prototype.toString.call(f.firstChild) + '|' + f.firstChild.ownerDocument === document; });
+  t('ms-addsb', () => new MediaSource().addSourceBuffer('video/webm;codecs=vp8'));
+  t('ms-addsb-bad', () => new MediaSource().addSourceBuffer('video/foo'));
+  t('ms-addsb-empty', () => new MediaSource().addSourceBuffer(''));
+  t('ms-its', () => ['video/webm;codecs=vp8', 'video/webm;codecs="vp9"', 'video/mp4;codecs="avc1.42E01E"', 'audio/mp4;codecs="mp4a.40.2"', 'audio/webm;codecs=opus', 'video/mp2t', 'audio/mpeg', 'video/mp4;codecs="av01.0.05M.08"', 'video/mp4;codecs="hev1.1.6.L93.B0"', 'audio/aac', 'audio/flac', 'video/webm'].map(x => MediaSource.isTypeSupported(x)).join(','));
+  t('ms-state', () => new MediaSource().readyState);
+  t('ms-remove', () => new MediaSource().removeSourceBuffer({}));
+  t('ms-eos', () => new MediaSource().endOfStream());
+  t('ms-dur', () => { const m = new MediaSource(); m.duration = 5; return m.duration; });
+  return out;
+})()

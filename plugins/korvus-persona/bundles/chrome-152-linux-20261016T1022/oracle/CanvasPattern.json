@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CanvasPattern",
+    "member": "constructor",
+    "expr": "new CanvasPattern()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CanvasPattern",
+    "member": "setTransform",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createPattern(document.createElement(\"canvas\"), \"repeat\"); return o.setTransform(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CanvasPattern",
+    "member": "setTransform",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createPattern(document.createElement(\"canvas\"), \"repeat\"); return o.setTransform(new DOMMatrix()); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CanvasPattern",
+    "member": "setTransform",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createPattern(document.createElement(\"canvas\"), \"repeat\"); return o.setTransform({ a: 2, b: 0, c: 0, d: 2, e: 0, f: 0 }); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

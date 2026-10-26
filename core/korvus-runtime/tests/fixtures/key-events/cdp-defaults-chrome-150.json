@@ -1,0 +1,17 @@
+{
+ "keyPress": {
+  "id": 7,
+  "error": {
+   "code": -32602,
+   "message": "Unexpected event type 'keyPress'"
+  }
+ },
+ "text4": {
+  "id": 8,
+  "error": {
+   "code": -32602,
+   "message": "Invalid 'text' parameter"
+  }
+ },
+ "rows": "[[\"keydown\",\"a\",\"KeyA\",0,0,0,false,0,false,null,\"\"],[\"keypress\",\"a\",\"KeyA\",97,97,97,false,0,false,null,\"\"],[\"beforeinput\",null,null,null,0,null,null,null,null,\"a\",\"\"],[\"input\",null,null,null,0,null,null,null,null,\"a\",\"a\"],[\"keyup\",\"a\",\"KeyA\",0,0,0,false,0,false,null,\"a\"],[\"keydown\",\"Shift\",\"ShiftLeft\",16,16,0,true,1,false,null,\"a\"],[\"keydown\",\"Backspace\",\"Backspace\",0,0,0,false,0,false,null,\"a\"],[\"keydown\",\"b\",\"KeyB\",0,0,0,false,0,false,null,\"a\"]]"
+}

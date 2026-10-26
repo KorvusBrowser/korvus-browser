@@ -1,0 +1,174 @@
+[
+  {
+    "iface": "AbortSignal",
+    "member": "aborted",
+    "expr": "(() => { const c = new AbortController(); const before = c.signal.aborted; c.abort(); return [before, c.signal.aborted]; })()",
+    "expected": [
+      false,
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "aborted",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(AbortSignal.prototype, 'aborted'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined) + ',' + d.enumerable + ',' + d.configurable + ',' + d.get.toString().includes('[native code]'); })()",
+    "expected": "get aborted,0,true,true,true,true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "reason",
+    "expr": "(() => { const c = new AbortController(); c.abort('x'); return c.signal.reason; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "reason",
+    "expr": "(() => { const c = new AbortController(); c.abort(); return [c.signal.reason instanceof DOMException, c.signal.reason.name]; })()",
+    "expected": [
+      true,
+      "AbortError"
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "onabort",
+    "expr": "(() => { const c = new AbortController(); let n = 0; c.signal.onabort = () => n++; c.abort(); return [n, typeof c.signal.onabort]; })()",
+    "expected": [
+      1,
+      "function"
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "onabort",
+    "expr": "(() => { const s = new AbortController().signal; s.onabort = 5; return [s.onabort, Object.keys(s).length]; })()",
+    "expected": [
+      null,
+      0
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "throwIfAborted",
+    "expr": "(() => { new AbortController().signal.throwIfAborted(); return 'ok'; })()",
+    "expected": "ok",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "throwIfAborted",
+    "expr": "(() => { try { AbortSignal.abort('boom').throwIfAborted(); return 'no-throw'; } catch (e) { return e; } })()",
+    "expected": "boom",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "abort",
+    "expr": "(() => { const s = AbortSignal.abort(); return [s.aborted, s.reason instanceof DOMException, s.reason.name, s instanceof AbortSignal, s instanceof EventTarget]; })()",
+    "expected": [
+      true,
+      true,
+      "AbortError",
+      true,
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "abort",
+    "expr": "(() => { const s = AbortSignal.abort(42); return [s.reason, s.aborted]; })()",
+    "expected": [
+      42,
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "abort",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(AbortSignal, 'abort'); return [d.enumerable, d.configurable, d.writable, AbortSignal.abort.name, AbortSignal.abort.length, AbortSignal.abort.toString().includes('[native code]')]; })()",
+    "expected": [
+      true,
+      true,
+      true,
+      "abort",
+      0,
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "timeout",
+    "expr": "(() => { const s = AbortSignal.timeout(60000); return [s.aborted, s instanceof AbortSignal]; })()",
+    "expected": [
+      false,
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "timeout",
+    "expr": "AbortSignal.timeout()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "timeout",
+    "expr": "AbortSignal.timeout(-1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "any",
+    "expr": "(() => { const src = AbortSignal.abort('q'); const s = AbortSignal.any([new AbortController().signal, src]); return [s.aborted, s.reason, s instanceof AbortSignal]; })()",
+    "expected": [
+      true,
+      "q",
+      true
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "any",
+    "expr": "(() => { const c1 = new AbortController(); const c2 = new AbortController(); const s = AbortSignal.any([c1.signal, c2.signal]); let hits = 0; s.addEventListener('abort', () => hits++); c2.abort('late'); return [s.aborted, s.reason, hits]; })()",
+    "expected": [
+      true,
+      "late",
+      1
+    ],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "any",
+    "expr": "AbortSignal.any(5)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "any",
+    "expr": "AbortSignal.any([null])",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AbortSignal",
+    "member": "constructor",
+    "expr": "new AbortSignal()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

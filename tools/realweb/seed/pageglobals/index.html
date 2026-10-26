@@ -1,0 +1,51 @@
+<!doctype html><title>t</title>
+<div id=box style="width:50px">box text</div><input id=inp pattern="a+">
+<!-- H50: a page that replaces built-ins and window functions (zone.js replaces Promise and queueMicrotask; old
+     libraries replace Array.from; stealth scripts wrap getComputedStyle) cannot change what the engine's own
+     algorithms do -- Chrome uses the realm's intrinsics, never a lookup on the global at call time. -->
+<script>
+const O = { Promise, ArrayFrom: Array.from, Date, TypeError, RangeError, RegExp, queueMicrotask, structuredClone,
+            getComputedStyle: getComputedStyle.bind(window), Error, setTimeout: setTimeout.bind(window) };
+const R = {}, calls = [];
+function trap(name) { return function () { calls.push(name); throw new O.Error('page ' + name); }; }
+function swap() {
+  window.queueMicrotask = trap('queueMicrotask');
+  window.getComputedStyle = trap('getComputedStyle');
+  window.structuredClone = trap('structuredClone');
+  Array.from = trap('Array.from');
+  window.Promise = function FakePromise() { calls.push('Promise'); throw new O.Error('page Promise'); };
+  window.Promise.resolve = trap('Promise.resolve'); window.Promise.all = trap('Promise.all');
+  window.Promise.reject = trap('Promise.reject');
+  window.RegExp = trap('RegExp');
+  window.TypeError = trap('TypeError'); window.RangeError = trap('RangeError');
+  window.Date = trap('Date'); window.Date.now = trap('Date.now');
+}
+function run(name, f) { try { R[name] = f(); } catch (e) { R[name] = 'threw ' + (e && e.name) + ': ' + String(e && e.message).slice(0, 60); } }
+addEventListener('load', () => {
+  swap();
+  const box = document.getElementById('box'), inp = document.getElementById('inp');
+  // MutationObserver delivery (the engine's microtask, not the page's queueMicrotask)
+  new MutationObserver(recs => { R.mo = recs.length; }).observe(box, { attributes: true });
+  run('setAttribute', () => { box.setAttribute('data-x', '1'); return 'ok'; });
+  run('innerText', () => box.innerText);
+  run('blob', () => new Blob(['ab', 'cd']).size);
+  run('patternMismatch', () => { inp.value = 'b'; return inp.validity.patternMismatch; });
+  run('lastModified', () => /^\d\d\/\d\d\/\d{4} \d\d:\d\d:\d\d$/.test(document.lastModified));
+  run('matrix', () => new DOMMatrix([1, 2, 3, 4, 5, 6]).f);
+  run('anySignal', () => AbortSignal.any([new AbortController().signal]).aborted);
+  run('tokenError', () => { try { box.classList.add(''); return 'no error'; } catch (e) { return e.name + ' ' + (e instanceof DOMException); } });
+  run('fetchNative', () => { const p = fetch('index.html'); p.catch(() => {}); return p instanceof O.Promise; });
+  run('transfer', () => { const c = new MessageChannel(); c.port1.postMessage(1, [new MessageChannel().port1]); return 'ok'; });
+  try {
+    const open = indexedDB.open('h50-' + Math.random());
+    open.onupgradeneeded = () => open.result.createObjectStore('s');
+    open.onsuccess = () => {
+      const tx = open.result.transaction('s', 'readwrite');
+      tx.objectStore('s').put({ a: [1, 2] }, 'k');
+      tx.oncomplete = () => { R.idb = 'complete'; open.result.close(); };
+      tx.onerror = () => { R.idb = 'error'; };
+    };
+  } catch (e) { R.idb = 'threw ' + e.name; }
+  O.setTimeout(() => { R.pageCalls = calls.filter((c, i) => calls.indexOf(c) === i).sort().join(',') || 'none'; document.title = JSON.stringify(R); }, 700);
+});
+</script>

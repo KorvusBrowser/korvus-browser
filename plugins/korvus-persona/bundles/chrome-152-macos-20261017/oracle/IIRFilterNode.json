@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "IIRFilterNode",
+    "member": "constructor",
+    "expr": "new IIRFilterNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IIRFilterNode",
+    "member": "getFrequencyResponse",
+    "expr": "(() => { const o = new IIRFilterNode(new OfflineAudioContext(1, 1, 44100), { feedforward: [1], feedback: [1] }); return o.getFrequencyResponse(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

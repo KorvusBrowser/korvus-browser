@@ -1,0 +1,4 @@
+<!doctype html><title>start</title><script>
+const q = location.search; document.title = 'r4' + q;
+if (!q) setTimeout(() => { const f = document.createElement('form'); f.method = 'POST'; f.action = location.pathname + '?step=posted'; document.body.appendChild(f); f.submit(); }, 200);
+</script><body></body>

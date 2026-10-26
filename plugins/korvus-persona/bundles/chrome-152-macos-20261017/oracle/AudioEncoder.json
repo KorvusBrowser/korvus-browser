@@ -1,0 +1,94 @@
+[
+  {
+    "iface": "AudioEncoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioEncoder({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioEncoder(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "state",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.state; })()",
+    "expected": "unconfigured",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "encodeQueueSize",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.encodeQueueSize; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.ondequeue; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "configure",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.configure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "encode",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.encode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "reset",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "close",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "state",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.state); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "ondequeue",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.ondequeue); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "flush",
+    "expr": "(() => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return Object.prototype.toString.call(o.flush()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioEncoder",
+    "member": "flush",
+    "expr": "(async () => { const o = new AudioEncoder({ output: () => {}, error: () => {} }); return await o.flush(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

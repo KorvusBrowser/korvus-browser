@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<body>
+<script src="testing.js"></script>
+<script id="basic" type=module>
+  const state = await testing.async();
+
+  // ports are distinct and defined
+  const channel0 = new MessageChannel();
+
+  // single message delivered to port2
+  const channel1 = new MessageChannel();
+  let received1 = null;
+  channel1.port2.onmessage = function(e) {
+    received1 = e.data;
+  };
+  channel1.port1.postMessage('hello');
+
+  // addEventListener + start() preserves message order
+  let messages = [];
+  const channel2 = new MessageChannel();
+  channel2.port2.addEventListener('message', (e) => {
+    messages.push(e.data);
+  });
+  channel2.port2.start();
+  channel2.port1.postMessage('first');
+  channel2.port1.postMessage('second');
+  channel2.port1.postMessage('third');
+
+  // bidirectional delivery, one message each way
+  const channel3 = new MessageChannel();
+  let port1Count = 0;
+  let port2Count = 0;
+  channel3.port1.onmessage = () => { port1Count++; };
+  channel3.port2.onmessage = () => { port2Count++; };
+  channel3.port1.postMessage('to port2');
+  channel3.port2.postMessage('to port1');
+
+  // structured object message
+  const channel4 = new MessageChannel();
+  let received4 = null;
+  channel4.port2.onmessage = (e) => {
+    received4 = e.data;
+  };
+  channel4.port1.postMessage({ type: 'test', value: 42 });
+
+  // let all queued messages be delivered
+  await new Promise((resolve) => setTimeout(resolve, 50));
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, channel0.port1 !== undefined);
+    testing.expectEqual(true, channel0.port2 !== undefined);
+    testing.expectEqual(true, channel0.port1 !== channel0.port2);
+
+    testing.expectEqual('hello', received1);
+
+    testing.expectEqual(3, messages.length);
+    testing.expectEqual('first', messages[0]);
+    testing.expectEqual('second', messages[1]);
+    testing.expectEqual('third', messages[2]);
+
+    testing.expectEqual(1, port1Count);
+    testing.expectEqual(1, port2Count);
+
+    testing.expectEqual('test', received4.type);
+    testing.expectEqual(42, received4.value);
+  });
+</script>
+
+<script id="structured-clone" type=module>
+  const state = await testing.async();
+
+    const channel = new MessageChannel();
+    const payload = { n: 1 };
+    let received = null;
+
+    await new Promise((resolve) => {
+        channel.port2.onmessage = (e) => { received = e.data; resolve(); };
+        channel.port1.postMessage(payload);
+    });
+
+    state.resolve();
+    await state.done(() => {
+        testing.expectEqual(false, received === payload);
+        testing.expectEqual(1, received.n);
+        // Mutating the sender's object after posting doesn't affect the clone.
+        payload.n = 999;
+        testing.expectEqual(1, received.n);
+    });
+</script>
+
+<script id="structured-clone-sync" type=module>
+    {
+        const channel = new MessageChannel();
+        let threw = false;
+        try {
+            channel.port1.postMessage(function () {});
+        } catch (e) {
+            threw = true;
+            testing.expectEqual('DataCloneError', e.name);
+        }
+        testing.expectEqual(true, threw);
+    }
+</script>
+
+</body>

@@ -1,0 +1,10 @@
+<!doctype html><title>t</title><body style="margin:0"><div style="width:5000px">
+<script>
+const vals = ['10.123456789px', '1.23456789px', '123.456789px', '1234.56789px', '0.000123px', '9.921875px', '0.5px', '100.0000001px', '12345.678px', '33.3333333%'];
+const r = {};
+for (const v of vals) {
+  const d = document.createElement('div'); d.style.width = v; d.style.height = '1px'; document.currentScript.parentNode.appendChild(d);
+  r[v] = [d.style.width, getComputedStyle(d).width, d.getBoundingClientRect().width];
+}
+document.title = JSON.stringify(r);
+</script></div>

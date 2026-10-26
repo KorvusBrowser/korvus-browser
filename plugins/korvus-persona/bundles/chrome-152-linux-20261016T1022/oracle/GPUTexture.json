@@ -1,0 +1,366 @@
+[
+  {
+    "iface": "GPUTexture",
+    "member": "constructor",
+    "expr": "new GPUTexture()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "width",
+    "expr": "GPUTexture.prototype.width",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"width\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "height",
+    "expr": "GPUTexture.prototype.height",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"height\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "depthOrArrayLayers",
+    "expr": "GPUTexture.prototype.depthOrArrayLayers",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "depthOrArrayLayers",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"depthOrArrayLayers\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "mipLevelCount",
+    "expr": "GPUTexture.prototype.mipLevelCount",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "mipLevelCount",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"mipLevelCount\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "sampleCount",
+    "expr": "GPUTexture.prototype.sampleCount",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "sampleCount",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"sampleCount\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "dimension",
+    "expr": "GPUTexture.prototype.dimension",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "dimension",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"dimension\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "format",
+    "expr": "GPUTexture.prototype.format",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "format",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"format\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "usage",
+    "expr": "GPUTexture.prototype.usage",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "usage",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"usage\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "GPUTexture.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "createView",
+    "expr": "GPUTexture.prototype.createView.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "createView",
+    "expr": "GPUTexture.prototype.createView.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "destroy",
+    "expr": "GPUTexture.prototype.destroy.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "destroy",
+    "expr": "GPUTexture.prototype.destroy.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "textureBindingViewDimension",
+    "expr": "GPUTexture.prototype.textureBindingViewDimension",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "textureBindingViewDimension",
+    "expr": "Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"textureBindingViewDimension\").get.call(Object.create(GPUTexture.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"width\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"width\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"height\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"height\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "depthOrArrayLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"depthOrArrayLayers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "depthOrArrayLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"depthOrArrayLayers\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "mipLevelCount",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"mipLevelCount\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "mipLevelCount",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"mipLevelCount\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "sampleCount",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"sampleCount\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "sampleCount",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"sampleCount\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "dimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"dimension\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "dimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"dimension\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "format",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"format\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "format",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"format\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "usage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"usage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "usage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"usage\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"label\").set.call(Object.create(GPUTexture.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "createView",
+    "expr": "(() => { try { const v = GPUTexture.prototype[\"createView\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "createView",
+    "expr": "(() => { try { const v = GPUTexture.prototype[\"createView\"].call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUTexture.prototype[\"destroy\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUTexture.prototype[\"destroy\"].call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "textureBindingViewDimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"textureBindingViewDimension\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUTexture",
+    "member": "textureBindingViewDimension",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUTexture.prototype, \"textureBindingViewDimension\").get.call(Object.create(GPUTexture.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

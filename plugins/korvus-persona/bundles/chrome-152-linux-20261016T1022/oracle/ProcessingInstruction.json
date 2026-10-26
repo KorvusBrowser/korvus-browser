@@ -1,0 +1,114 @@
+[
+  {
+    "iface": "ProcessingInstruction",
+    "member": "constructor",
+    "expr": "(() => { const o = new ProcessingInstruction(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "constructor",
+    "expr": "(() => { const o = new ProcessingInstruction(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "target",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.target; })()",
+    "expected": "t",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "hasAttributes",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.hasAttributes(); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "getAttributeNames",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.getAttributeNames(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "getAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.getAttribute(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "getAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.getAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "setAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.setAttribute(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "setAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.setAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "removeAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.removeAttribute(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "removeAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.removeAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "toggleAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.toggleAttribute(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "toggleAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.toggleAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "hasAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.hasAttribute(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "hasAttribute",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.hasAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProcessingInstruction",
+    "member": "sheet",
+    "expr": "(() => { const o = document.createProcessingInstruction(\"t\", \"d\"); return o.sheet; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

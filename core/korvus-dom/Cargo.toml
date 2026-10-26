@@ -1,0 +1,25 @@
+[package]
+name = "korvus-dom"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# The arena DOM (`Dom`/`Node`/`NodeId`) + CSS selector matcher, extracted out of korvus-webapi so it
+# can be built/tested standalone. Pure Rust: no deno_core, no v8, no other korvus crate.
+[dependencies]
+# A fast hasher for the arena's NodeId-keyed maps: SipHash on u32 node ids was 22.8 % of a
+# stylesheet-heavy page's cascade profile. Already in Cargo.lock through a dependency.
+rustc-hash = "2"
+html5ever = "0.39.0"
+markup5ever_rcdom = "0.39.0"
+# XML parsing (case-preserving, namespaces, CDATA, PI) — distinct from html5ever's HTML path.
+quick-xml = "0.37"
+# The WHATWG URL parser -- `type=url` validity, the same crate `URL` is built on.
+url = "2"
+# CSS selector engine (T2'a). `markup5ever` gives us the `LocalName`/`Namespace` atoms directly
+# (it is already the transitive `markup5ever_rcdom` dep at 0.39, so versions align).
+selectors = "0.26"
+cssparser = "0.34"
+servo_arc = "0.4.3"
+markup5ever = "0.39"
+precomputed-hash = "0.1"

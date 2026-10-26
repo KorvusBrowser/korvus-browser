@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKERUNITS_UNKNOWN",
+    "expr": "SVGMarkerElement.SVG_MARKERUNITS_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKERUNITS_USERSPACEONUSE",
+    "expr": "SVGMarkerElement.SVG_MARKERUNITS_USERSPACEONUSE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKERUNITS_STROKEWIDTH",
+    "expr": "SVGMarkerElement.SVG_MARKERUNITS_STROKEWIDTH",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKER_ORIENT_UNKNOWN",
+    "expr": "SVGMarkerElement.SVG_MARKER_ORIENT_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKER_ORIENT_AUTO",
+    "expr": "SVGMarkerElement.SVG_MARKER_ORIENT_AUTO",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKER_ORIENT_ANGLE",
+    "expr": "SVGMarkerElement.SVG_MARKER_ORIENT_ANGLE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "SVG_MARKER_ORIENT_AUTO_START_REVERSE",
+    "expr": "SVGMarkerElement.SVG_MARKER_ORIENT_AUTO_START_REVERSE",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "constructor",
+    "expr": "new SVGMarkerElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "orient",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return o.orient; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "orient",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return (o.orient = \"x\", o.orient); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "setOrientToAuto",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return o.setOrientToAuto(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "setOrientToAngle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return o.setOrientToAngle(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "refX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.refX); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "refY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.refY); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "markerUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.markerUnits); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "markerWidth",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.markerWidth); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "markerHeight",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.markerHeight); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "orientType",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.orientType); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "orientAngle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.orientAngle); })()",
+    "expected": "[object SVGAnimatedAngle]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "viewBox",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.viewBox); })()",
+    "expected": "[object SVGAnimatedRect]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGMarkerElement",
+    "member": "preserveAspectRatio",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"marker\"); return Object.prototype.toString.call(o.preserveAspectRatio); })()",
+    "expected": "[object SVGAnimatedPreserveAspectRatio]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

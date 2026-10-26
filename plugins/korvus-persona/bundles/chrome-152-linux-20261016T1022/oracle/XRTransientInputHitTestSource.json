@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "XRTransientInputHitTestSource",
+    "member": "constructor",
+    "expr": "new XRTransientInputHitTestSource()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRTransientInputHitTestSource",
+    "member": "cancel",
+    "expr": "XRTransientInputHitTestSource.prototype.cancel.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRTransientInputHitTestSource",
+    "member": "cancel",
+    "expr": "XRTransientInputHitTestSource.prototype.cancel.call(Object.create(XRTransientInputHitTestSource.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRTransientInputHitTestSource",
+    "member": "cancel",
+    "expr": "(() => { try { const v = XRTransientInputHitTestSource.prototype[\"cancel\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRTransientInputHitTestSource",
+    "member": "cancel",
+    "expr": "(() => { try { const v = XRTransientInputHitTestSource.prototype[\"cancel\"].call(Object.create(XRTransientInputHitTestSource.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

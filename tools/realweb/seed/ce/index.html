@@ -1,0 +1,37 @@
+<!doctype html><html><head><title>ce</title></head><body><x-early id="early"></x-early><div id="host"></div>
+<template id="t"><x-a id="a1"></x-a><div><x-a id="a2"></x-a></div></template>
+<script>
+var R = {};
+var built = [];
+class XA extends HTMLElement { constructor() { super(); this.m = new Map(); built.push(this.id || '(no id)'); } set v(x) { this.m.set('v', x); } get v() { return this.m.get('v'); } }
+var early = document.getElementById('early');
+R.earlyBefore = early instanceof XA;
+customElements.define('x-early', class extends XA {});
+R.earlyAfterDefine = (early.m instanceof Map);
+customElements.define('x-a', XA);
+var t = document.getElementById('t');
+built.length = 0;
+var f = document.importNode(t.content, true);
+R.importNode = { built: built.slice(), a1: f.querySelector('#a1').m instanceof Map, a2Proto: f.querySelector('#a2') instanceof XA };
+try { f.querySelector('#a1').v = 1; R.importNodeSet = 'ok'; } catch (e) { R.importNodeSet = String(e); }
+built.length = 0;
+var c = t.content.cloneNode(true);
+R.cloneTemplateContent = { built: built.slice(), isXA: c.querySelector('#a1') instanceof XA };
+built.length = 0;
+var d = document.createElement('div'); d.innerHTML = '<x-a id="h1"></x-a>';
+R.innerHTMLDetached = { built: built.slice(), isXA: d.firstChild instanceof XA };
+built.length = 0;
+document.getElementById('host').innerHTML = '<x-a id="h2"></x-a>';
+R.innerHTMLConnected = { built: built.slice(), isXA: document.getElementById('h2') instanceof XA };
+built.length = 0;
+var e2 = document.createElement('x-a'); R.createElement = { built: built.slice(), isXA: e2 instanceof XA };
+built.length = 0;
+var cl = e2.cloneNode(); R.cloneElement = { built: built.slice(), isXA: cl instanceof XA };
+built.length = 0;
+var frag = document.createRange().createContextualFragment('<x-a id="r1"></x-a>');
+R.contextualFragment = { built: built.slice(), isXA: frag.firstChild instanceof XA };
+built.length = 0;
+document.body.insertAdjacentHTML('beforeend', '<x-a id="iah"></x-a>');
+R.insertAdjacentHTML = { built: built.slice() };
+window.R = JSON.stringify(R);
+</script></body></html>

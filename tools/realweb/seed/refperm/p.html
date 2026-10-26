@@ -1,0 +1,27 @@
+<!doctype html><meta charset=utf-8><title>refperm</title><body><p>Referrer-Policy and Permissions-Policy fixture page.</p>
+<img src="http://127.0.0.1:18501/r/x.png?k=img_default">
+<img referrerpolicy="unsafe-url" src="http://127.0.0.1:18501/r/x.png?k=img_unsafe">
+<script src="http://127.0.0.1:18501/r/s.js?k=script_default"></script>
+<iframe src="http://127.0.0.1:18501/f.html?k=frame_xo" width=300 height=65></iframe>
+<iframe allow="camera; geolocation" src="http://127.0.0.1:18501/f.html?k=frame_xo_allow" width=200 height=50></iframe>
+<iframe src="/f.html?k=frame_same" width=100 height=40></iframe>
+<script>
+window.__r = {frames: {}};
+addEventListener('message', e => { if (e.data && e.data.fk) window.__r.frames[e.data.fk] = e.data; });
+(async () => {
+  const r = window.__r;
+  const P = n => navigator.permissions.query({name: n}).then(s => s.state, e => 'THROW ' + e.name);
+  r.top = {camera: await P('camera'), geolocation: await P('geolocation'), notifications: await P('notifications'), microphone: await P('microphone'),
+    allowed: document.featurePolicy.allowedFeatures().length, allowsCamera: document.featurePolicy.allowsFeature('camera'),
+    allowsGeo: document.featurePolicy.allowsFeature('geolocation'), oac: originAgentCluster};
+  try { const x = new XMLHttpRequest(); x.open('GET', '/p.html', false); x.send(); r.top.syncXhr = 'ok ' + x.status; } catch (e) { r.top.syncXhr = 'THROW ' + e.name + ': ' + e.message; }
+  await fetch('http://127.0.0.1:18501/r/x?k=fetch_default', {mode: 'no-cors'});
+  await fetch('http://127.0.0.1:18501/r/x?k=fetch_unsafe', {mode: 'no-cors', referrerPolicy: 'unsafe-url'});
+  await fetch('/r/x?k=fetch_same');
+  setTimeout(async () => {
+    r.echoB = await (await fetch('http://127.0.0.1:18501/report')).json();
+    r.echoA = await (await fetch('/report')).json();
+    r.done = 1;
+  }, 1500);
+})();
+</script>

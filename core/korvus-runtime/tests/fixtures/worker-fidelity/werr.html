@@ -1,0 +1,8 @@
+<!doctype html><body><script>
+window.__r=[];
+const src = `throw new TypeError('top')`;
+const u = URL.createObjectURL(new Blob([src],{type:'text/javascript'}));
+const w = new Worker(u); w.onerror = e => window.__r.push('page onerror(blob): ' + JSON.stringify([e.message, e.filename === u ? 'BLOBURL' : e.filename, e.lineno, e.colno, String(e.error)]));
+const w2 = new Worker('werr.js'); w2.onmessage = e => window.__r.push(e.data);
+w2.onerror = e => window.__r.push('page onerror(net): ' + JSON.stringify([e.message, e.filename, e.lineno, e.colno, String(e.error)]));
+</script>

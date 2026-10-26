@@ -1,0 +1,17 @@
+<!doctype html><meta charset=utf-8><body><svg><style>#r{fill:green}</style><rect id="r"></rect></svg><script>
+// TEMPLATES P6 B15: SVGStyleElement.prototype.sheet is the interface's own row -- it answers an SVG <style>'s
+// sheet, and refuses a receiver that is not an SVGStyleElement as Chrome does.
+const t = (f) => { try { const v = f(); return v === null ? 'null' : typeof v === 'object' ? Object.prototype.toString.call(v) : String(v); } catch (e) { return e.constructor.name + ': ' + e.message; } };
+const d = Object.getOwnPropertyDescriptor(SVGStyleElement.prototype, 'sheet');
+const el = document.querySelector('svg style');
+window.R = JSON.stringify({
+  sheet: t(() => el.sheet),
+  rules: t(() => el.sheet.cssRules.length + ' ' + el.sheet.cssRules[0].selectorText),
+  owner: t(() => el.sheet.ownerNode === el),
+  fresh: t(() => document.createElementNS('http://www.w3.org/2000/svg', 'style').sheet),
+  obj: t(() => d.get.call({})),
+  html: t(() => d.get.call(document.createElement('style'))),
+  shape: [d.get.name, d.get.length, d.enumerable, d.configurable, typeof d.set].join(),
+  own: d.get === Object.getOwnPropertyDescriptor(HTMLStyleElement.prototype, 'sheet').get,
+});
+</script>

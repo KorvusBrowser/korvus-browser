@@ -1,0 +1,842 @@
+[
+  {
+    "iface": "ElementInternals",
+    "member": "constructor",
+    "expr": "new ElementInternals()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "shadowRoot",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.shadowRoot; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "setFormValue",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.setFormValue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "form",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.form; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "setValidity",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.setValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "willValidate",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.willValidate; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "validity",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.validity; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "validationMessage",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.validationMessage; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "checkValidity",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.checkValidity(); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "reportValidity",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.reportValidity(); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "labels",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.labels; })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "role",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.role; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "role",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.role = \"x\", o.role); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaActiveDescendantElement",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaActiveDescendantElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaAtomic",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaAtomic; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaAtomic",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaAtomic = \"x\", o.ariaAtomic); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaAutoComplete",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaAutoComplete; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaAutoComplete",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaAutoComplete = \"x\", o.ariaAutoComplete); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBrailleLabel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaBrailleLabel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBrailleLabel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaBrailleLabel = \"x\", o.ariaBrailleLabel); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBrailleRoleDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaBrailleRoleDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBrailleRoleDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaBrailleRoleDescription = \"x\", o.ariaBrailleRoleDescription); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBusy",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaBusy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaBusy",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaBusy = \"x\", o.ariaBusy); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaChecked",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaChecked; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaChecked",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaChecked = \"x\", o.ariaChecked); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColCount",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaColCount; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColCount",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaColCount = \"x\", o.ariaColCount); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColIndex",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaColIndex; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColIndex",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaColIndex = \"x\", o.ariaColIndex); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColIndexText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaColIndexText; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColIndexText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaColIndexText = \"x\", o.ariaColIndexText); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColSpan",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaColSpan; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaColSpan",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaColSpan = \"x\", o.ariaColSpan); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaControlsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaControlsElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaCurrent",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaCurrent; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaCurrent",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaCurrent = \"x\", o.ariaCurrent); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDescribedByElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaDescribedByElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaDescription = \"x\", o.ariaDescription); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDetailsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaDetailsElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDisabled",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaDisabled; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDisabled",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaDisabled = \"x\", o.ariaDisabled); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaErrorMessageElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaErrorMessageElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaExpanded",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaExpanded; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaExpanded",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaExpanded = \"x\", o.ariaExpanded); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaFlowToElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaFlowToElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaHasPopup",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaHasPopup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaHasPopup",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaHasPopup = \"x\", o.ariaHasPopup); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaHidden",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaHidden; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaHidden",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaHidden = \"x\", o.ariaHidden); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaInvalid",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaInvalid; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaInvalid",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaInvalid = \"x\", o.ariaInvalid); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaKeyShortcuts",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaKeyShortcuts; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaKeyShortcuts",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaKeyShortcuts = \"x\", o.ariaKeyShortcuts); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLabel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaLabel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLabel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaLabel = \"x\", o.ariaLabel); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLabelledByElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaLabelledByElements; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLevel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaLevel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLevel",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaLevel = \"x\", o.ariaLevel); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLive",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaLive; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLive",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaLive = \"x\", o.ariaLive); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaModal",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaModal; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaModal",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaModal = \"x\", o.ariaModal); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaMultiLine",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaMultiLine; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaMultiLine",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaMultiLine = \"x\", o.ariaMultiLine); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaMultiSelectable",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaMultiSelectable; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaMultiSelectable",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaMultiSelectable = \"x\", o.ariaMultiSelectable); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaOrientation",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaOrientation; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaOrientation",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaOrientation = \"x\", o.ariaOrientation); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaOwnsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaOwnsElements; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPlaceholder",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaPlaceholder; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPlaceholder",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaPlaceholder = \"x\", o.ariaPlaceholder); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPosInSet",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaPosInSet; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPosInSet",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaPosInSet = \"x\", o.ariaPosInSet); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPressed",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaPressed; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaPressed",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaPressed = \"x\", o.ariaPressed); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaReadOnly",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaReadOnly; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaReadOnly",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaReadOnly = \"x\", o.ariaReadOnly); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRelevant",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRelevant; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRelevant",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRelevant = \"x\", o.ariaRelevant); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRequired",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRequired; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRequired",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRequired = \"x\", o.ariaRequired); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRoleDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRoleDescription; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRoleDescription",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRoleDescription = \"x\", o.ariaRoleDescription); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowCount",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRowCount; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowCount",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRowCount = \"x\", o.ariaRowCount); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowIndex",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRowIndex; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowIndex",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRowIndex = \"x\", o.ariaRowIndex); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowIndexText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRowIndexText; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowIndexText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRowIndexText = \"x\", o.ariaRowIndexText); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowSpan",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaRowSpan; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaRowSpan",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaRowSpan = \"x\", o.ariaRowSpan); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSelected",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaSelected; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSelected",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaSelected = \"x\", o.ariaSelected); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSetSize",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaSetSize; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSetSize",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaSetSize = \"x\", o.ariaSetSize); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSort",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaSort; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaSort",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaSort = \"x\", o.ariaSort); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueMax",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaValueMax; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueMax",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaValueMax = \"x\", o.ariaValueMax); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueMin",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaValueMin; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueMin",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaValueMin = \"x\", o.ariaValueMin); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueNow",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaValueNow; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueNow",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaValueNow = \"x\", o.ariaValueNow); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return o.ariaValueText; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaValueText",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return (o.ariaValueText = \"x\", o.ariaValueText); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "shadowRoot",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.shadowRoot); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "form",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.form); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "validity",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.validity); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "labels",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.labels); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "states",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.states); })()",
+    "expected": "[object CustomStateSet]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaActiveDescendantElement",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaActiveDescendantElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaControlsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaControlsElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDescribedByElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaDescribedByElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaDetailsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaDetailsElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaErrorMessageElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaErrorMessageElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaFlowToElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaFlowToElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaLabelledByElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaLabelledByElements); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ElementInternals",
+    "member": "ariaOwnsElements",
+    "expr": "(() => { const o = (() => { const n = \"x-\" + \"probe\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }); return document.createElement(n).i; })(); return Object.prototype.toString.call(o.ariaOwnsElements); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

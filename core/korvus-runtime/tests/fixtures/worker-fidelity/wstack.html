@@ -1,0 +1,7 @@
+<!doctype html><body><script>
+window.__r=[];
+const src = `function f() { return new Error('x').stack }\npostMessage('blob: ' + JSON.stringify(f()));\nimport('./nope.js').catch(x => postMessage('rel import: ' + x.name + ': ' + x.message.replace(/blob:[^ ]+/, 'BLOBURL')));`;
+const u = URL.createObjectURL(new Blob([src],{type:'text/javascript'}));
+const w = new Worker(u); w.onmessage = e => window.__r.push(e.data.replace(u, 'BLOBURL'));
+const w2 = new Worker('wstack.js'); w2.onmessage = e => window.__r.push(e.data);
+</script>

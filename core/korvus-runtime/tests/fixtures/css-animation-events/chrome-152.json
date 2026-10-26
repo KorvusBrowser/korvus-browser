@@ -1,0 +1,42 @@
+[
+ [
+  "one transition",
+  "transitionrun:a:opacity:0:true:true::true:TransitionEvent transitionstart:a:opacity:0:true:true::true:TransitionEvent transitionend:a:opacity:0.06:true:true::true:TransitionEvent"
+ ],
+ [
+  "three transitions starting in one frame: b opacity+color, c opacity",
+  "transitionrun:b:color:0:true:true::true:TransitionEvent transitionstart:b:color:0:true:true::true:TransitionEvent transitionrun:b:opacity:0:true:true::true:TransitionEvent transitionstart:b:opacity:0:true:true::true:TransitionEvent transitionrun:c:opacity:0:true:true::true:TransitionEvent transitionstart:c:opacity:0:true:true::true:TransitionEvent transitionend:b:color:0.06:true:true::true:TransitionEvent transitionend:b:opacity:0.06:true:true::true:TransitionEvent transitionend:c:opacity:0.06:true:true::true:TransitionEvent"
+ ],
+ [
+  "a transition with a 100ms delay",
+  "transitionrun:d:opacity:0:true:true::true:TransitionEvent transitionstart:d:opacity:0:true:true::true:TransitionEvent transitionend:d:opacity:0.06:true:true::true:TransitionEvent"
+ ],
+ [
+  "a transition interrupted by a new target",
+  "transitionrun:f:color:0:true:true::true:TransitionEvent transitionstart:f:color:0:true:true::true:TransitionEvent transitioncancel:f:color:-:true:true::true:TransitionEvent transitionrun:f:color:0:true:true::true:TransitionEvent transitionstart:f:color:0:true:true::true:TransitionEvent transitionend:f:color:0.4:true:true::true:TransitionEvent"
+ ],
+ [
+  "display:none during a transition",
+  "transitionrun:g:opacity:0:true:true::true:TransitionEvent transitionstart:g:opacity:0:true:true::true:TransitionEvent transitioncancel:g:opacity:-:true:true::true:TransitionEvent"
+ ],
+ [
+  "an animation of two iterations",
+  "animationstart:h:kf:0:true:true::true:AnimationEvent animationiteration:h:kf:0.06:true:true::true:AnimationEvent animationend:h:kf:0.12:true:true::true:AnimationEvent"
+ ],
+ [
+  "display:none during an animation",
+  "animationstart:k:kf:0:true:true::true:AnimationEvent animationcancel:k:kf:-:true:true::true:AnimationEvent"
+ ],
+ [
+  "display:none to block with an opacity change, the element itself",
+  ""
+ ],
+ [
+  "display:none to block on the parent, the child changing opacity",
+  ""
+ ],
+ [
+  "transitionrun against rAF in one frame",
+  "raf listener handler"
+ ]
+]

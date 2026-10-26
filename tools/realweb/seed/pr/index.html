@@ -1,0 +1,16 @@
+<!doctype html><html><body><script>
+(function () {
+var R = { hasPR: typeof PresentationRequest, pres: typeof navigator.presentation, defaultRequest: navigator.presentation ? String(navigator.presentation.defaultRequest) : 'n/a', receiver: navigator.presentation ? String(navigator.presentation.receiver) : 'n/a', events: [] };
+var settle = function (k, p) { return Promise.resolve(p).then(function (v) { R[k] = 'resolve ' + Object.prototype.toString.call(v) + (v && 'value' in v ? ' value=' + v.value : ''); }, function (e) { R[k] = 'reject ' + e.name + ': ' + e.message; }); };
+var req;
+try { req = new PresentationRequest(['https://www.gstatic.com/cv/receiver.html?appId=CC1AD845']); } catch (e) { R.ctor = 'throw ' + e.name; }
+var ps = [];
+if (req) {
+  ['connectionavailable'].forEach(function (t) { req.addEventListener(t, function (e) { R.events.push(t + ':' + typeof e.connection); }); });
+  ps.push(settle('getAvailability', req.getAvailability()));
+  ps.push(settle('reconnect', req.reconnect('abc')));
+  ps.push(settle('start', req.start()));
+}
+Promise.all(ps).then(function () { setTimeout(function () { window.R = JSON.stringify(R); }, 300); });
+})();
+</script></body></html>

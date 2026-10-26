@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "PeriodicSyncEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PeriodicSyncEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PeriodicSyncEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PeriodicSyncEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

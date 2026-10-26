@@ -1,0 +1,8 @@
+fdlibm as Chromium 150 builds it (third_party/fdlibm at Chromium 150.0.7871.46: ieee754.cc, ieee754.h,
+overflowing-math.h, LICENSE). Copied unmodified; include/base and include/build hold two-line shims
+for the Chromium headers ieee754.cc includes (only base::bit_cast is used).
+
+Why it is here (challenge 2026-10-08): Blink's DynamicsCompressor computes its makeup gain, attack
+rate and desired gain with fdlibm::powf and fdlibm::asinf, which are this pow and asin rounded to
+float. The platform's libm agrees with them only to the last bit, and a compressed oscillator is the
+classic audio fingerprint.

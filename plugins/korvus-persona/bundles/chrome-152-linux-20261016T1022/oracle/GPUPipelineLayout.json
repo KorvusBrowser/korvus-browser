@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "constructor",
+    "expr": "new GPUPipelineLayout()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "GPUPipelineLayout.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").get.call(Object.create(GPUPipelineLayout.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").get.call(Object.create(GPUPipelineLayout.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPUPipelineLayout",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUPipelineLayout.prototype, \"label\").set.call(Object.create(GPUPipelineLayout.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

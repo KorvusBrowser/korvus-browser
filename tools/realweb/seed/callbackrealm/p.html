@@ -1,0 +1,20 @@
+<!doctype html><html><body>
+<iframe id=f></iframe>
+<script>
+// REALWEB H25: a callback runs in ITS OWN realm, whichever window's setTimeout / setInterval / queueMicrotask
+// scheduled it (WebIDL "invoke a callback function": the callback's realm and its callback context). So a
+// postMessage sent from it carries the callback's window as `source` -- a challenge provider's widget borrows timers from
+// an about:blank child, and its parent drops every message whose source is not iframe.contentWindow.
+var out = {}; window.R = null;
+addEventListener('message', function (e) {
+  if (typeof e.data !== 'string') return;
+  out[e.data] = e.origin + ' ' + (e.source === f.contentWindow ? 'frame' : e.source === window ? 'self' : Object.prototype.toString.call(e.source));
+});
+f.onload = function () {
+  var b = document.createElement('iframe'); document.body.appendChild(b);
+  b.contentWindow.setTimeout(function () { f.contentWindow.postMessage('pageViaChildTimer', '*'); }, 20);
+};
+setTimeout(function () { f.contentWindow.postMessage('report', '*'); }, 500);
+setTimeout(function () { window.R = JSON.stringify(out); }, 800);
+f.src = 'http://127.0.0.1:' + (+location.port + 1) + '/c.html';
+</script></body></html>

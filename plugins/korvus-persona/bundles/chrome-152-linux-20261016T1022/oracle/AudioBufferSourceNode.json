@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "constructor",
+    "expr": "new AudioBufferSourceNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "buffer",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return o.buffer; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "buffer",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.buffer); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "playbackRate",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.playbackRate); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "detune",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.detune); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loop",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return o.loop; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loop",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return (o.loop = true, o.loop); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopStart",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return o.loopStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopStart",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return (o.loopStart = 1, o.loopStart); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopEnd",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return o.loopEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopEnd",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return (o.loopEnd = 1, o.loopEnd); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "start",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return o.start(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopStart",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return (o.loopStart = \"1\", o.loopStart); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioBufferSourceNode",
+    "member": "loopEnd",
+    "expr": "(() => { const o = new AudioBufferSourceNode(new OfflineAudioContext(1, 1, 44100)); return (o.loopEnd = \"1\", o.loopEnd); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

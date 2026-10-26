@@ -1,0 +1,70 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>IDB connection lifecycle</title>
+<script>
+// U11: deleteDatabase / an upgrading open() while OTHER connections are open. IndexedDB fires
+// `versionchange` at each open connection, `blocked` at the request while any stays open, and waits
+// for them to close. korvus deleted the database at once, so an open connection's next transaction
+// read "no object store named" (YouTube embeds on un.org, 2026-09-26).
+window.R = null;
+const log = [];
+const req = (r) => new Promise((ok, bad) => { r.onsuccess = () => ok(r.result); r.onerror = () => bad(r.error); });
+function openWith(name, v, stores) {
+  const r = v === undefined ? indexedDB.open(name) : indexedDB.open(name, v);
+  r.onupgradeneeded = (e) => { log.push(name + ':upg' + e.oldVersion + '>' + e.newVersion); for (const s of stores || []) r.result.createObjectStore(s); };
+  r.onblocked = (e) => log.push(name + ':blocked' + e.oldVersion + '>' + e.newVersion);
+  return req(r);
+}
+const tick = (ms) => new Promise((ok) => setTimeout(ok, ms));
+async function run() {
+  // A: the open connection closes on versionchange -> the delete goes through, no blocked.
+  const a = await openWith('A', 1, ['s']);
+  a.onversionchange = (e) => { log.push('A:vc' + e.oldVersion + '>' + e.newVersion); a.close(); };
+  const da = indexedDB.deleteDatabase('A');
+  da.onblocked = () => log.push('A:delblocked');
+  await new Promise((ok) => { da.onsuccess = (e) => { log.push('A:deleted' + e.oldVersion + '>' + e.newVersion + ':' + e.constructor.name); ok(); }; });
+  const a2 = await openWith('A');
+  log.push('A:reopen v' + a2.version + ' [' + Array.from(a2.objectStoreNames) + ']');
+  a2.close();
+
+  // B: the open connection does NOT close -> blocked, and the connection still works until it closes.
+  const b = await openWith('B', 1, ['s']);
+  b.onversionchange = (e) => log.push('B:vc' + e.oldVersion + '>' + e.newVersion);
+  const db_ = indexedDB.deleteDatabase('B');
+  db_.onblocked = (e) => log.push('B:delblocked' + e.oldVersion + '>' + e.newVersion);
+  let bDone;
+  const bDeleted = new Promise((ok) => { bDone = ok; });
+  db_.onsuccess = () => { log.push('B:deleted'); bDone(); };
+  await tick(50);
+  try {
+    const tx = b.transaction('s', 'readwrite');
+    tx.objectStore('s').put('x', 1);
+    await new Promise((ok, bad) => { tx.oncomplete = ok; tx.onerror = () => bad(tx.error); });
+    log.push('B:put ok');
+  } catch (e) { log.push('B:put ' + e.name); }
+  log.push('B:closing');
+  b.close();
+  await bDeleted;
+
+  // C: an upgrade while a connection that closes on versionchange is open.
+  const c = await openWith('C', 1, ['s']);
+  c.onversionchange = (e) => { log.push('C:vc' + e.oldVersion + '>' + e.newVersion); c.close(); };
+  const c2 = await openWith('C', 2, ['t']);
+  log.push('C:v' + c2.version + ' [' + Array.from(c2.objectStoreNames) + ']');
+  c2.close();
+
+  // D: an upgrade blocked by a connection that stays open, released by close().
+  const d = await openWith('D', 1, ['s']);
+  d.onversionchange = (e) => log.push('D:vc' + e.oldVersion + '>' + e.newVersion);
+  const d2p = openWith('D', 2, ['t']);
+  await tick(50);
+  log.push('D:closing');
+  d.close();
+  const d2 = await d2p;
+  log.push('D:v' + d2.version + ' [' + Array.from(d2.objectStoreNames) + ']');
+  d2.close();
+  for (const n of ['A', 'C', 'D']) await req(indexedDB.deleteDatabase(n));
+  window.R = log;
+}
+run().catch((e) => { log.push('THREW ' + e.name + ': ' + e.message); window.R = log; });
+</script>

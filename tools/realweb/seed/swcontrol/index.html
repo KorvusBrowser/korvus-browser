@@ -1,0 +1,24 @@
+<!doctype html><title>t</title>
+<!-- U21 (tldraw.com): registering a service worker does not make the page that registered it a controlled client.
+     case=hang: the worker answers every fetch with a promise that never settles -- the page is NOT controlled, so its
+     fetch still goes to the network. case=claim: the worker calls clients.claim() on activate -- the page becomes
+     controlled (controllerchange) and its next fetch is the worker's answer. -->
+<script>
+const R = {}, kase = new URLSearchParams(location.search).get('case') || 'hang';
+const t = (ms, v) => new Promise(r => setTimeout(() => r(v), ms));
+const text = u => Promise.race([fetch(u).then(r => r.text()), t(1500, 'timeout')]);
+(async () => {
+  try {
+    const reg = await navigator.serviceWorker.register(kase === 'hang' ? 'sw-hang.js' : 'sw-claim.js');
+    R.registered = true;
+    const changed = new Promise(r => navigator.serviceWorker.addEventListener('controllerchange', () => r(true)));
+    R.afterRegister = await text('data.txt?1');
+    const ready = await Promise.race([navigator.serviceWorker.ready.then(r => !!r.active), t(1500, 'timeout')]);
+    R.readyActive = ready;
+    if (kase === 'claim') R.controllerchange = await Promise.race([changed, t(1500, false)]);
+    R.controlled = !!navigator.serviceWorker.controller;
+    R.afterReady = await text('data.txt?2');
+  } catch (e) { R.error = e.name + ': ' + e.message; }
+  document.title = JSON.stringify(R);
+})();
+</script>

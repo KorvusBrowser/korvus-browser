@@ -1,0 +1,74 @@
+[
+[
+"postMessage",
+"L1,m1,p1,L2,m2"
+],
+[
+"MessageChannel",
+"L1,m1,p1,L2,m2"
+],
+[
+"dispatchEvent from script",
+"L1,L2,after,m1,p1,m2"
+],
+[
+"click() from script",
+"L1,L2,after,m1,p1,m2"
+],
+[
+"dispatchEvent from a timer",
+"L1,L2,after,m1,p1,m2"
+],
+[
+"two timers",
+"t1,m1,t2,m2"
+],
+[
+"window.event in the checkpoint",
+"L1,event:message,L2"
+],
+[
+"a listener throws",
+"L1,error,m1,me,L2,m2"
+],
+[
+"img load",
+"L1,m1,p1,L2,m2"
+],
+[
+"img error",
+"L1,m1,p1,L2,m2"
+],
+[
+"xhr load",
+"L1,m1,p1,L2,m2"
+],
+[
+"worker message",
+"L1,m1,p1,L2,m2"
+],
+[
+"stylesheet load",
+"L1,m1,p1,L2,m2"
+],
+[
+"script load",
+"L1,m1,p1,L2,m2"
+],
+[
+"iframe element load",
+"L1,m1,p1,L2,m2"
+],
+[
+"a frame window's load and DOMContentLoaded",
+"DOMContentLoaded1,m1,DOMContentLoaded2,m2,load1,m1,load2,m2"
+],
+[
+"hashchange",
+"L1,m1,p1,L2,m2"
+],
+[
+"requestAnimationFrame",
+"r1,m1,r2,m2"
+]
+]

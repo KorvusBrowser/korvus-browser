@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "CSSNumericValue",
+    "member": "parse",
+    "expr": "CSSNumericValue.parse(\"x\")",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSNumericValue",
+    "member": "constructor",
+    "expr": "new CSSNumericValue()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSNumericValue",
+    "member": "parse",
+    "expr": "Object.prototype.toString.call(CSSNumericValue.parse(\"x\"))",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "HID",
+    "member": "constructor",
+    "expr": "new HID()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.hid; return o.onconnect; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.hid; return o.ondisconnect; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.hid; return Object.prototype.toString.call(o.onconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.hid; return Object.prototype.toString.call(o.ondisconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "getDevices",
+    "expr": "(() => { const o = navigator.hid; return Object.prototype.toString.call(o.getDevices()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HID",
+    "member": "requestDevice",
+    "expr": "(() => { const o = navigator.hid; return Object.prototype.toString.call(o.requestDevice({})); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "HID",
+    "member": "requestDevice",
+    "expr": "Object.prototype.toString.call(navigator.hid.requestDevice())",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  }
+]

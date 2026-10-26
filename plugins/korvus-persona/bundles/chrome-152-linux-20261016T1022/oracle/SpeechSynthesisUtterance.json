@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object SpeechSynthesisUtterance]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "text",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.text; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "text",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.text = \"x\", o.text); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "lang",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.lang; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "lang",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.lang = \"x\", o.lang); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "voice",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.voice; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "volume",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.volume; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "volume",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.volume = 1, o.volume); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "rate",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.rate; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "rate",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.rate = 1, o.rate); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "pitch",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.pitch; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "pitch",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.pitch = 1, o.pitch); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onstart",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onstart; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onend",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onend; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onerror",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onpause",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onresume",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onresume; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onmark",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onmark; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "onboundary",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return o.onboundary; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "volume",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.volume = \"1\", o.volume); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "rate",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.rate = \"1\", o.rate); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SpeechSynthesisUtterance",
+    "member": "pitch",
+    "expr": "(() => { const o = new SpeechSynthesisUtterance(); return (o.pitch = \"1\", o.pitch); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

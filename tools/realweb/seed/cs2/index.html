@@ -1,0 +1,19 @@
+<!doctype html><meta charset=utf-8><body><svg id=s data-foo="bar"><rect id=r data-x="1"/></svg><script>
+<!-- H13: stub members failing replay pages CALL (stub-call counter over the 174 rows failing both C3 final sweeps, 2026-09-26); each value is stock Chrome 150s. -->
+window.R=null;(async function(){var r={};async function t(n,f){try{var v=await f();r[n]=(v===undefined?'undefined':JSON.stringify(v))}catch(e){r[n]='threw '+e.name+': '+String(e.message).slice(0,80)}}
+await t('svgDataset',function(){var s=document.getElementById('s');return [typeof s.dataset, s.dataset&&s.dataset.foo, String(s.dataset), (s.dataset.y='2', s.getAttribute('data-y'))]});
+await t('wsReadyState',function(){var w=new WebSocket('ws://127.0.0.1:1/');var v=[w.readyState,WebSocket.CONNECTING];w.close();return v});
+await t('isExtended',function(){return screen.isExtended});
+await t('offscreenMeasure',function(){var c=new OffscreenCanvas(100,50).getContext('2d');c.font='16px Arial';var m=c.measureText('hello');return [typeof m, Math.round(m.width*100)/100, Math.round(m.actualBoundingBoxAscent*100)/100]});
+await t('offscreenDraw',function(){var c=new OffscreenCanvas(4,4).getContext('2d');c.fillStyle='red';c.fillRect(0,0,4,4);var d=c.getImageData(0,0,1,1).data;return [d[0],d[1],d[2],d[3]]});
+await t('canvasTM',function(){var c=document.createElement('canvas').getContext('2d');c.font='16px Arial';var m=c.measureText('hello');return [Math.round(m.actualBoundingBoxAscent*100)/100, Math.round(m.actualBoundingBoxDescent*100)/100]});
+await t('editContext',function(){var e=new EditContext();e.updateText(0,0,'abc');e.updateSelection(1,2);return [e.text,e.selectionStart,e.selectionEnd,typeof e.updateControlBounds]});
+await t('remoteWatch',function(){var v=document.createElement('video');return v.remote.watchAvailability(function(){}).then(function(id){return 'resolved '+typeof id},function(e){return 'rejected '+e.name})});
+await t('mediaSession',function(){navigator.mediaSession.setActionHandler('play',function(){});return 'ok'});
+await t('reportingObs',function(){var o=new ReportingObserver(function(){});return o.observe()});
+await t('storageBucket',function(){return navigator.storageBuckets.open('x').then(function(b){return 'resolved '+Object.prototype.toString.call(b)},function(e){return 'rejected '+e.name})});
+await t('managedConfig',function(){return navigator.managed? navigator.managed.getManagedConfiguration(['a']).then(function(v){return 'resolved '+JSON.stringify(v)},function(e){return 'rejected '+e.name}):'no navigator.managed'});
+await t('fsHandle',function(){return navigator.storage.getDirectory().then(function(d){return d.getFileHandle('f',{create:true}).then(function(h){return 'resolved '+h.kind+' '+h.name},function(e){return 'rejected '+e.name})})});
+await t('pressure',function(){return typeof PressureObserver==='undefined'?'absent':new PressureObserver(function(){}).observe('cpu').then(function(){return 'resolved'},function(e){return 'rejected '+e.name})});
+window.R=JSON.stringify(r)})();
+</script>

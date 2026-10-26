@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_TABLE",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_TABLE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_LINEAR",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_LINEAR",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "SVG_FECOMPONENTTRANSFER_TYPE_GAMMA",
+    "expr": "SVGComponentTransferFunctionElement.SVG_FECOMPONENTTRANSFER_TYPE_GAMMA",
+    "expected": 5,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGComponentTransferFunctionElement",
+    "member": "constructor",
+    "expr": "new SVGComponentTransferFunctionElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

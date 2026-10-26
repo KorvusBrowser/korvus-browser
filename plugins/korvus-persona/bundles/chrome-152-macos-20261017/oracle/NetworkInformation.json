@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "NetworkInformation",
+    "member": "constructor",
+    "expr": "new NetworkInformation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

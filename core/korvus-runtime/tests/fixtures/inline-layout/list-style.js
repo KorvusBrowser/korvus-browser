@@ -1,0 +1,1 @@
+(function(){var d=document;d.body.innerHTML='<details><summary id=t>x</summary></details><div id=v style="list-style:disclosure-open inside">y</div>';var c=getComputedStyle(d.getElementById('t')),e=getComputedStyle(d.getElementById('v'));return [[c.display,c.listStyleType,c.listStylePosition],[e.listStyleType,e.listStylePosition]];})()

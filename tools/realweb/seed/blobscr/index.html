@@ -1,0 +1,16 @@
+<!doctype html><html><head><script>
+// REALWEB U17/U18: a blob: script runs however it is inserted -- appended, async, module, crossorigin, preloaded,
+// in a frame, and WRITTEN with document.write (lowes.com) -- and import(blobURL) resolves to the module's exports.
+window.R={};
+function mk(tag,code,type){return URL.createObjectURL(new Blob([code],{type:type||'text/javascript'}))}
+var u1=mk(0,'R.append=1'); var s=document.createElement('script'); s.src=u1; s.onerror=function(){R.appendErr=1}; document.head.appendChild(s);
+var u2=mk(0,'R.written=1'); document.write('<script src="'+u2+'"><\/script>');
+var u3=mk(0,'R.async=1'); var s3=document.createElement('script'); s3.async=true; s3.src=u3; document.head.appendChild(s3);
+var u4=mk(0,'R.module=1'); var s4=document.createElement('script'); s4.type='module'; s4.src=u4; document.head.appendChild(s4);
+var u5=mk(0,'export default 5'); import(u5).then(function(m){R.dynImport=m.default}, function(e){R.dynImportErr=String(e).slice(0,80)});
+var u6=mk(0,'R.crossorigin=1'); var s6=document.createElement('script'); s6.crossOrigin='anonymous'; s6.src=u6; s6.onerror=function(){R.crossoriginErr=1}; document.head.appendChild(s6);
+var u7=mk(0,'R.preloaded=1'); var l7=document.createElement('link'); l7.rel='preload'; l7.as='script'; l7.href=u7; document.head.appendChild(l7); var s7=document.createElement('script'); s7.src=u7; document.head.appendChild(s7);
+</script></head><body><iframe id=f></iframe><script>
+var d=f.contentDocument; var u8=URL.createObjectURL(new Blob(['parent.R.frame=1'],{type:'text/javascript'})); var s8=d.createElement('script'); s8.src=u8; d.head.appendChild(s8);
+setTimeout(function(){document.title=JSON.stringify(R)},800);
+</script></body></html>

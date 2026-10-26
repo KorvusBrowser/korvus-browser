@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "DocumentPictureInPicture",
+    "member": "constructor",
+    "expr": "new DocumentPictureInPicture()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

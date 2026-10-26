@@ -1,0 +1,16 @@
+<!doctype html><title>t</title><body style="margin:0">
+<div style="width:1000px;height:200px;position:relative">
+<div id=block style="width:50%">x</div><div style="display:flex"><div id=item>y</div></div><div id=none style="display:none;width:20px"></div>
+<div id=pos style="position:relative;top:10%;width:300px">p</div><div id=abs style="position:absolute;left:5%;top:auto;width:auto">q</div>
+</div>
+<script>
+addEventListener('load', () => {
+  const r = {};
+  for (const id of ['block', 'item', 'none', 'pos', 'abs']) {
+    const e = document.getElementById(id), m = e.computedStyleMap(), cs = getComputedStyle(e);
+    r[id] = {};
+    for (const p of ['width', 'min-width', 'top', 'left', 'margin-left', 'display', 'flex-basis', 'position']) r[id][p] = [String(m.get(p)), cs.getPropertyValue(p)];
+  }
+  document.title = JSON.stringify(r);
+});
+</script>

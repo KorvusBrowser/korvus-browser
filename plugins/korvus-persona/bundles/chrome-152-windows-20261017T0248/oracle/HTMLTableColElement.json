@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "HTMLTableColElement",
+    "member": "constructor",
+    "expr": "new HTMLTableColElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"col\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"col\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"col\"); return o.ch; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"col\"); return (o.ch = \"x\", o.ch); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"col\"); return o.chOff; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"col\"); return (o.chOff = \"x\", o.chOff); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"col\"); return o.vAlign; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"col\"); return (o.vAlign = \"x\", o.vAlign); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"col\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableColElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"col\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

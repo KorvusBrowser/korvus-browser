@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "BeforeUnloadEvent",
+    "member": "constructor",
+    "expr": "new BeforeUnloadEvent()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

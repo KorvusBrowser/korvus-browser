@@ -1,0 +1,15 @@
+<!doctype html><title>r</title><body><script>
+const r = {};
+Object.defineProperty(HTMLElement.prototype, 'probeStack', {get() { return new Error('x').stack.split('\n')[1].trim(); }, configurable: true});
+r.stackName = document.body.probeStack;
+const s = document.createElement('script'); s.setAttribute('type', 'text/plain'); s.setAttribute('src', 'a.js');
+let calls = 0; const orig = Element.prototype.getAttribute; Element.prototype.getAttribute = function (n) { calls++; return orig.call(this, n); };
+void s.type; void s.src; void s.async; void document.body.className; void document.body.id;
+r.getAttributeCallsFromReflection = calls;
+Element.prototype.getAttribute = orig;
+let sets = 0; const os = Element.prototype.setAttribute; Element.prototype.setAttribute = function (n, v) { sets++; return os.call(this, n, v); };
+s.type = 'module'; s.async = true; document.body.id = 'x';
+r.setAttributeCallsFromReflection = sets; Element.prototype.setAttribute = os;
+r.ctorName = document.body.constructor.name + '/' + Object.getPrototypeOf(document.body).constructor.name;
+document.title = JSON.stringify(r);
+</script></body>

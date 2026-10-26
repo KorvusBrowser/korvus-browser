@@ -1,0 +1,18 @@
+<!doctype html><html><head>
+<template id=parsed><style>p { color: rgb(1, 2, 3) } .box { width: 77px }</style><p>in template</p></template>
+</head><body><p id=p>x</p><div class=box id=box></div><script>
+var p = document.getElementById('p'), box = document.getElementById('box'), r = {};
+// Whether the template's `.box { width: 77px }` reached the document (the box's own width is the viewport's).
+function c() { return getComputedStyle(p).color + ' ' + (box.getBoundingClientRect().width === 77 ? 'box77' : 'boxAuto'); }
+var tpl = document.getElementById('parsed');
+r.parsed = String(tpl.content.querySelector('style').sheet) + ' ' + c();
+var t = document.createElement('template'); t.innerHTML = '<style>p { color: rgb(4, 5, 6) }</style>';
+r.dynamic = String(t.content.firstChild.sheet) + ' ' + c();
+var clone = document.importNode(tpl.content, true);
+r.importedFragment = String(clone.firstChild.sheet) + ' ' + c();
+var host = document.createElement('div'); document.body.appendChild(host);
+var sr = host.attachShadow({ mode: 'open' }); sr.appendChild(tpl.content.cloneNode(true));
+var inner = sr.querySelector('p');
+r.inShadow = Object.prototype.toString.call(sr.querySelector('style').sheet) + ' ' + getComputedStyle(inner).color + ' | outside ' + c();
+document.title = JSON.stringify(r);
+</script></body></html>

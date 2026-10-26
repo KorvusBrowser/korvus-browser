@@ -1,0 +1,66 @@
+[
+[
+"frame pushState /path",
+"SecurityError: Failed to execute 'pushState' on 'History': A history state object with URL 'http://HOST/test-push-path' cannot be created in a document with origin 'http://HOST' and URL 'about:blank'.",
+"about:blank",
+"http://HOST/",
+"null",
+"null"
+],
+[
+"frame pushState #frag",
+"SecurityError: Failed to execute 'pushState' on 'History': A history state object with URL 'http://HOST/#frag' cannot be created in a document with origin 'http://HOST' and URL 'about:blank'.",
+"about:blank",
+"http://HOST/",
+"null",
+"null"
+],
+[
+"frame pushState about:blank?x",
+"SecurityError: Failed to execute 'pushState' on 'History': A history state object with URL 'about:blank?x' cannot be created in a document with origin 'http://HOST' and URL 'about:blank'.",
+"about:blank",
+"http://HOST/",
+"null",
+"null"
+],
+[
+"frame replaceState state",
+"ok undefined",
+"about:blank",
+"http://HOST/",
+"{\"a\":1}",
+"null"
+],
+[
+"frame state is a clone",
+"ok false",
+"about:blank",
+"http://HOST/",
+"{\"b\":2}",
+"null"
+],
+[
+"frame pushState uncloneable",
+"DataCloneError: Failed to execute 'pushState' on 'History': () => 1 could not be cloned.",
+"about:blank",
+"http://HOST/",
+"{\"b\":2}",
+"null"
+],
+[
+"frame pushState empty url",
+"ok undefined",
+"about:blank",
+"http://HOST/",
+"{\"c\":3}",
+"null"
+],
+[
+"page state untouched",
+"ok null",
+"about:blank",
+"http://HOST/",
+"{\"c\":3}",
+"null"
+]
+]

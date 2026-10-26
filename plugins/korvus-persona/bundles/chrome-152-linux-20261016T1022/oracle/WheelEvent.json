@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "WheelEvent",
+    "member": "DOM_DELTA_PIXEL",
+    "expr": "WheelEvent.DOM_DELTA_PIXEL",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "DOM_DELTA_LINE",
+    "expr": "WheelEvent.DOM_DELTA_LINE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "DOM_DELTA_PAGE",
+    "expr": "WheelEvent.DOM_DELTA_PAGE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object WheelEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new WheelEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "deltaX",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return o.deltaX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "deltaY",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return o.deltaY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "deltaZ",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return o.deltaZ; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "deltaMode",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return o.deltaMode; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WheelEvent",
+    "member": "momentum",
+    "expr": "(() => { const o = new WheelEvent(\"x\"); return o.momentum; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

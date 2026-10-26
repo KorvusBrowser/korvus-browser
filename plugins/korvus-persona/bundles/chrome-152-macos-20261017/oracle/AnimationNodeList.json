@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "AnimationNodeList",
+    "member": "constructor",
+    "expr": "new AnimationNodeList()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

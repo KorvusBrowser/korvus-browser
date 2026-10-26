@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "LockManager",
+    "member": "constructor",
+    "expr": "new LockManager()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

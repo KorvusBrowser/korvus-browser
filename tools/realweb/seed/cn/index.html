@@ -1,0 +1,40 @@
+<!doctype html><html><body><div id="h"></div><script>
+var R = {};
+function frag(html) { var t = document.createElement('template'); t.innerHTML = html; return t.content; }
+function kids(n) { return Array.prototype.map.call(n.childNodes, function (k) { return k.nodeName; }).join(','); }
+// A: created fragment, before() on its child
+var f1 = document.createDocumentFragment(); f1.append(document.createComment('a'), document.createTextNode('t'));
+f1.firstChild.before(document.createElement('b')); f1.lastChild.after(document.createElement('i'));
+R.created = kids(f1); R.createdParent = f1.firstChild.parentNode === f1;
+// B: template-content clone
+var c = frag('<!----><p>x</p>').cloneNode(true);
+R.cloneParent = c.firstChild.parentNode === c; R.cloneParentType = c.firstChild.parentNode && c.firstChild.parentNode.nodeType;
+c.firstChild.before(document.createElement('span')); R.cloneBefore = kids(c);
+c.lastChild.after(document.createElement('em')); R.cloneAfter = kids(c);
+// C: insert a fragment before a child of a fragment
+var outer = frag('<!---->t').cloneNode(true); var inner = frag('<h1>1</h1><h2>2</h2>').cloneNode(true);
+outer.lastChild.before(inner); R.fragIntoFrag = kids(outer) + ' | inner left ' + inner.childNodes.length;
+// D: replaceWith and remove on fragment children
+var d = frag('<a></a><b></b>').cloneNode(true); d.firstChild.replaceWith(document.createElement('u')); R.replaceWith = kids(d);
+d.lastChild.remove(); R.remove = kids(d);
+// E: insertBefore on the fragment itself
+var e = frag('<!---->').cloneNode(true); e.insertBefore(document.createElement('s'), e.firstChild); R.insertBefore = kids(e);
+// F: the template content itself (not cloned)
+var tc = frag('<!---->'); tc.firstChild.before(document.createElement('q')); R.contentBefore = kids(tc);
+
+
+
+function kids(n) { return Array.prototype.map.call(n.childNodes, function (k) { return k.nodeName; }).join(','); }
+var sr = document.getElementById('h').attachShadow({ mode: 'open' });
+sr.innerHTML = '<a></a><b></b><i></i>';
+sr.firstChild.remove(); R.shadowRemove = kids(sr);
+sr.firstChild.before(document.createElement('u')); R.shadowBefore = kids(sr);
+sr.lastChild.after(document.createElement('s')); R.shadowAfter = kids(sr);
+sr.firstChild.replaceWith(document.createElement('em')); R.shadowReplaceWith = kids(sr);
+document.documentElement.before(document.createComment('c1')); R.docBefore = kids(document);
+document.documentElement.after(document.createComment('c2')); R.docAfter = kids(document);
+try { document.documentElement.before(document.createElement('x')); R.docBeforeEl = 'no throw ' + kids(document); } catch (e) { R.docBeforeEl = e.name; }
+document.lastChild.remove(); R.docRemove = kids(document);
+
+window.R = JSON.stringify(R);
+</script></body></html>

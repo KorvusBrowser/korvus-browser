@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "MessagePort",
+    "member": "constructor",
+    "expr": "new MessagePort()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "postMessage",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.postMessage(1, []); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "postMessage",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.postMessage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "postMessage",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.postMessage(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "start",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.start(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "close",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "onclose",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.onclose; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "onmessage",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MessagePort",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = new MessageChannel().port1; return o.onmessageerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

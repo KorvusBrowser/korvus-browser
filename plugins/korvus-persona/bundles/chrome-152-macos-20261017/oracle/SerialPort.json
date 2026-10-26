@@ -1,0 +1,366 @@
+[
+  {
+    "iface": "SerialPort",
+    "member": "constructor",
+    "expr": "new SerialPort()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "SerialPort.prototype.onconnect",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").get.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "SerialPort.prototype.ondisconnect",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").get.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "readable",
+    "expr": "SerialPort.prototype.readable",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "readable",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"readable\").get.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "writable",
+    "expr": "SerialPort.prototype.writable",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "writable",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"writable\").get.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.close.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.close.call(Object.create(SerialPort.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.forget.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.forget.call(Object.create(SerialPort.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getInfo",
+    "expr": "SerialPort.prototype.getInfo.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getInfo",
+    "expr": "SerialPort.prototype.getInfo.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getSignals",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.getSignals.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getSignals",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.getSignals.call(Object.create(SerialPort.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.open.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.open.call(Object.create(SerialPort.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "setSignals",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.setSignals.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "setSignals",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.setSignals.call(Object.create(SerialPort.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "connected",
+    "expr": "SerialPort.prototype.connected",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "connected",
+    "expr": "Object.getOwnPropertyDescriptor(SerialPort.prototype, \"connected\").get.call(Object.create(SerialPort.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(SerialPort.prototype.open.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").get.call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "onconnect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(SerialPort.prototype, \"onconnect\").set.call(Object.create(SerialPort.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").get.call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "ondisconnect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(SerialPort.prototype, \"ondisconnect\").set.call(Object.create(SerialPort.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "readable",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"readable\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "readable",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"readable\").get.call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "writable",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"writable\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "writable",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"writable\").get.call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "close",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"close\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "close",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"close\"].call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "forget",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"forget\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "forget",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"forget\"].call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getInfo",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"getInfo\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getInfo",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"getInfo\"].call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getSignals",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"getSignals\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "getSignals",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"getSignals\"].call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "open",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"open\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "open",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"open\"].call(Object.create(SerialPort.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "setSignals",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"setSignals\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "setSignals",
+    "expr": "(() => { try { const v = SerialPort.prototype[\"setSignals\"].call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "connected",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"connected\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SerialPort",
+    "member": "connected",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(SerialPort.prototype, \"connected\").get.call(Object.create(SerialPort.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

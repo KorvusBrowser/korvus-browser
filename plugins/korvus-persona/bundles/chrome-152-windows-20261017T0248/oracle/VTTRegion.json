@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "VTTRegion",
+    "member": "constructor",
+    "expr": "(() => { const o = new VTTRegion(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

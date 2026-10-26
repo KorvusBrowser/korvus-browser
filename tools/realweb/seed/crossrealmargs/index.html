@@ -1,0 +1,16 @@
+<!doctype html><meta charset=utf-8><body><div id=d></div><script>
+// TEMPLATES P7 B27: WebIDL's interface-type conversion asks whether a value IS a platform object implementing
+// the interface -- of any realm. Two conversions asked `instanceof` this realm's constructor, so a frame's
+// EditContext and a frame's File were refused by the page (pre-migration, frames shared the page's realm).
+const out = {};
+const t = (k, fn) => { try { const v = fn(); out[k] = v === undefined ? 'undefined' : String(v); } catch (e) { out[k] = 'ERR ' + e.name + ': ' + e.message; } };
+const f = document.createElement('iframe');
+document.body.appendChild(f);
+const fw = f.contentWindow;
+t('editContextCross', () => { const el = document.getElementById('d'); el.editContext = new fw.EditContext(); return el.editContext instanceof fw.EditContext; });
+t('editContextPlain', () => { document.getElementById('d').editContext = {}; return 'no throw'; });
+t('dtAddFileCross', () => { const dt = new DataTransfer(); const it = dt.items.add(new fw.File(['x'], 'a.txt', { type: 'text/plain' })); return it && it.kind + ':' + dt.files.length + ':' + (dt.files[0] instanceof fw.File); });
+t('dtAddFileSame', () => { const dt = new DataTransfer(); const it = dt.items.add(new File(['x'], 'a.txt', { type: 'text/plain' })); return it && it.kind + ':' + dt.files.length; });
+t('dtAddPlainObject', () => { const dt = new DataTransfer(); const it = dt.items.add({ name: 'x' }); return it && it.kind + ':' + dt.files.length; });
+window.R = JSON.stringify(out);
+</script>

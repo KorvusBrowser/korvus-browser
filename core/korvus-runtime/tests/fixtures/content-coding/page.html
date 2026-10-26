@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><title>content-coding</title></head><body>
+<script>
+(async function () {
+  var cases = await (await fetch('/cases.json')).json();
+  var out = {};
+  function sum(u) { var s = 0; for (var i = 0; i < u.length; i++) s = (s + u[i] * (i + 1)) % 1000000007; return s; }
+  function head(u) { var s = ''; for (var i = 0; i < Math.min(u.length, 12); i++) s += String.fromCharCode(u[i]); return s; }
+  for (var k of Object.keys(cases)) {
+    var r;
+    try {
+      r = await fetch('/c/' + k, { method: cases[k][0], cache: 'no-store' });
+    } catch (e) { out[k] = { stage: 'fetch', err: e.name }; continue; }
+    try {
+      var u = new Uint8Array(await r.arrayBuffer());
+      out[k] = { status: r.status, ok: r.ok, len: u.length, sum: sum(u), head: head(u), ce: r.headers.get('content-encoding') };
+    } catch (e) { out[k] = { stage: 'body', status: r.status, err: e.name }; }
+  }
+  function xhr(k) {
+    return new Promise(function (res) {
+      var x = new XMLHttpRequest();
+      x.open(cases[k][0], '/c/' + k);
+      x.onload = function () { res({ status: x.status, len: x.responseText.length }); };
+      x.onerror = function () { res({ status: x.status, err: 'error' }); };
+      x.send();
+    });
+  }
+  for (var k of ['head-gz', 'gz-trunc', 'garbage-gz']) out['xhr:' + k] = await xhr(k);
+  window.__out = out;
+  try { await fetch('/report', { method: 'POST', body: JSON.stringify(out) }); } catch (e) {}
+})();
+</script></body></html>

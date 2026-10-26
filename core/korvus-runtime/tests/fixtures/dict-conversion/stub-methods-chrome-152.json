@@ -1,0 +1,287 @@
+[
+ [
+  "new MediaMetadata",
+  "album,artist,artwork,chapterInfo,title",
+  "ok"
+ ],
+ [
+  "new StaticRange",
+  "endContainer",
+  "TypeError: Failed to construct 'StaticRange': Failed to read the 'endContainer' property from 'StaticRangeInit': Required member is undefined."
+ ],
+ [
+  "TaskSignal.any",
+  "priority",
+  "ok"
+ ],
+ [
+  "navigation.updateCurrentEntry",
+  "state",
+  "TypeError: Failed to execute 'updateCurrentEntry' on 'Navigation': Failed to read the 'state' property from 'NavigationUpdateCurrentEntryOptions': Required member is undefined."
+ ],
+ [
+  "navigation.navigate",
+  "info,history,state",
+  "ok"
+ ],
+ [
+  "navigation.traverseTo",
+  "info",
+  "ok"
+ ],
+ [
+  "requestMediaKeySystemAccess",
+  "audioCapabilities,distinctiveIdentifier,initDataTypes,label,persistentState,sessionTypes,videoCapabilities",
+  "ok"
+ ],
+ [
+  "getUserMedia",
+  "audio,video",
+  "rejected TypeError: Failed to execute 'getUserMedia' on 'MediaDevices': At least one of audio and video must be requested"
+ ],
+ [
+  "getDisplayMedia",
+  "audio,audioSelection,controller,monitorTypeSurfaces,preferCurrentTab,selfBrowserSurface,surfaceSwitching,systemAudio,video,windowAudio",
+  "ok"
+ ],
+ [
+  "requestMIDIAccess",
+  "sysex",
+  "ok"
+ ],
+ [
+  "geolocation.getCurrentPosition",
+  "enableHighAccuracy,maximumAge,timeout",
+  "ok"
+ ],
+ [
+  "geolocation.watchPosition",
+  "enableHighAccuracy,maximumAge,timeout",
+  "ok"
+ ],
+ [
+  "credentials.create",
+  "federated,mediation,password,publicKey,signal",
+  "rejected NotSupportedError: Only exactly one of 'password', 'federated', and 'publicKey' credential types are currently supported."
+ ],
+ [
+  "credentials.preventSilentAccess",
+  "",
+  "ok"
+ ],
+ [
+  "new PaymentRequest methods",
+  "data,supportedMethods",
+  "TypeError: Failed to construct 'PaymentRequest': Failed to read the 'supportedMethods' property from 'PaymentMethodData': Required member is undefined."
+ ],
+ [
+  "new PaymentRequest details",
+  "displayItems,modifiers,shippingOptions,id,total",
+  "TypeError: Failed to construct 'PaymentRequest': required member details is undefined."
+ ],
+ [
+  "new PaymentRequest options",
+  "requestPayerEmail,requestPayerName,requestPayerPhone,requestShipping,shippingType",
+  "ok"
+ ],
+ [
+  "requestFullscreen",
+  "navigationUI,screen",
+  "rejected TypeError: Element is not connected"
+ ],
+ [
+  "requestPointerLock",
+  "unadjustedMovement",
+  "ok"
+ ],
+ [
+  "new ClipboardItem",
+  "",
+  "ok"
+ ],
+ [
+  "showOpenFilePicker",
+  "excludeAcceptAllOption,id,startIn,types,multiple",
+  "rejected SecurityError: Failed to execute 'showOpenFilePicker' on 'Window': Must be handling a user gesture to show a file picker."
+ ],
+ [
+  "showSaveFilePicker",
+  "excludeAcceptAllOption,id,startIn,types,suggestedName",
+  "rejected SecurityError: Failed to execute 'showSaveFilePicker' on 'Window': Must be handling a user gesture to show a file picker."
+ ],
+ [
+  "showDirectoryPicker",
+  "id,mode,startIn",
+  "rejected SecurityError: Failed to execute 'showDirectoryPicker' on 'Window': Must be handling a user gesture to show a file picker."
+ ],
+ [
+  "queryLocalFonts",
+  "postscriptNames",
+  "ok"
+ ],
+ [
+  "navigator.share",
+  "",
+  "TypeError: navigator.share is not a function"
+ ],
+ [
+  "navigator.hid.requestDevice",
+  "exclusionFilters,filters",
+  "rejected TypeError: Failed to execute 'requestDevice' on 'HID': Failed to read the 'filters' property from 'HIDDeviceRequestOptions': Required member is undefined."
+ ],
+ [
+  "navigator.usb.requestDevice",
+  "exclusionFilters,filters",
+  "rejected TypeError: Failed to execute 'requestDevice' on 'USB': Failed to read the 'filters' property from 'USBDeviceRequestOptions': Required member is undefined."
+ ],
+ [
+  "navigator.serial.requestPort",
+  "allowedBluetoothServiceClassIds,filters",
+  "rejected SecurityError: Failed to execute 'requestPort' on 'Serial': Must be handling a user gesture to show a permission request."
+ ],
+ [
+  "navigator.bluetooth.requestDevice",
+  "",
+  "TypeError: Cannot read properties of undefined (reading 'requestDevice')"
+ ],
+ [
+  "new ReportingObserver",
+  "buffered,types",
+  "ok"
+ ],
+ [
+  "setHTMLUnsafe",
+  "runScripts,sanitizer",
+  "ok"
+ ],
+ [
+  "Document.parseHTMLUnsafe",
+  "sanitizer",
+  "ok"
+ ],
+ [
+  "new WebSocketStream",
+  "protocols,signal",
+  "ok"
+ ],
+ [
+  "new WebTransport",
+  "protocols,serverCertificateHashes",
+  "ok"
+ ],
+ [
+  "new MediaStreamTrackProcessor",
+  "maxBufferSize,track",
+  "TypeError: Failed to construct 'MediaStreamTrackProcessor': Failed to read the 'track' property from 'MediaStreamTrackProcessorInit': Required member is undefined."
+ ],
+ [
+  "new AudioData",
+  "data",
+  "TypeError: Failed to construct 'AudioData': Failed to read the 'data' property from 'AudioDataInit': Required member is undefined."
+ ],
+ [
+  "new EncodedAudioChunk",
+  "data",
+  "TypeError: Failed to construct 'EncodedAudioChunk': Failed to read the 'data' property from 'EncodedAudioChunkInit': Required member is undefined."
+ ],
+ [
+  "new ImageDecoder",
+  "colorSpaceConversion,data",
+  "TypeError: Failed to construct 'ImageDecoder': Failed to read the 'data' property from 'ImageDecoderInit': Required member is undefined."
+ ],
+ [
+  "new AudioDecoder",
+  "error",
+  "TypeError: Failed to construct 'AudioDecoder': Failed to read the 'error' property from 'AudioDecoderInit': Required member is undefined."
+ ],
+ [
+  "new VideoColorSpace",
+  "fullRange,matrix,primaries,transfer",
+  "ok"
+ ],
+ [
+  "new GPUPipelineError",
+  "reason",
+  "TypeError: Failed to construct 'GPUPipelineError': Failed to read the 'reason' property from 'GPUPipelineErrorInit': Required member is undefined."
+ ],
+ [
+  "CSS.registerProperty",
+  "inherits",
+  "TypeError: Failed to execute 'registerProperty' on 'CSS': Failed to read the 'inherits' property from 'PropertyDefinition': Required member is undefined."
+ ],
+ [
+  "document.requestStorageAccess",
+  "BroadcastChannel,SharedWorker,all,caches,cookies,createObjectURL,estimate,getDirectory,indexedDB,localStorage,locks,revokeObjectURL,sessionStorage",
+  "rejected SecurityError: You must request access for at least one storage/communication medium."
+ ],
+ [
+  "navigator.getBattery",
+  "",
+  "ok"
+ ],
+ [
+  "Element.requestFullscreen navigationUI",
+  "navigationUI,screen",
+  "ok"
+ ],
+ [
+  "HTMLMediaElement.setSinkId",
+  "",
+  "ok"
+ ],
+ [
+  "window.getScreenDetails",
+  "",
+  "ok"
+ ],
+ [
+  "new IdleDetector",
+  "",
+  "ok"
+ ],
+ [
+  "IdleDetector.start",
+  "signal,threshold",
+  "ok"
+ ],
+ [
+  "navigator.wakeLock.request",
+  "",
+  "ok"
+ ],
+ [
+  "new PresentationRequest",
+  "",
+  "ok"
+ ],
+ [
+  "navigator.storage.getDirectory",
+  "",
+  "ok"
+ ],
+ [
+  "new BroadcastChannel",
+  "",
+  "ok"
+ ],
+ [
+  "caches.open",
+  "",
+  "ok"
+ ],
+ [
+  "indexedDB.databases",
+  "",
+  "ok"
+ ],
+ [
+  "new CompressionStream",
+  "",
+  "ok"
+ ],
+ [
+  "navigator.getGamepads",
+  "",
+  "ok"
+ ]
+]

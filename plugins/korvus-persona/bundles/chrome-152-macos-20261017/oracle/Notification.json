@@ -1,0 +1,256 @@
+[
+  {
+    "iface": "Notification",
+    "member": "maxActions",
+    "expr": "Notification.maxActions",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "constructor",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Notification]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "constructor",
+    "expr": "(() => { const o = new Notification(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "permission",
+    "expr": "Notification.permission",
+    "expected": "default",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onclick",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.onclick; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onshow",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.onshow; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onerror",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onclose",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "title",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.title; })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "dir",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.dir; })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "lang",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.lang; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "body",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.body; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "navigate",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.navigate; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "tag",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.tag; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "image",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.image; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "icon",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.icon; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "badge",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.badge; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "vibrate",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.vibrate; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "renotify",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.renotify; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "silent",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.silent; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "requireInteraction",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.requireInteraction; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "data",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.data; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "actions",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.actions; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "close",
+    "expr": "(() => { const o = new Notification(\"x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "permission",
+    "expr": "Object.prototype.toString.call(Notification.permission)",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "requestPermission",
+    "expr": "Object.prototype.toString.call(Notification.requestPermission())",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Notification",
+    "member": "onclick",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.onclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onshow",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.onshow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onerror",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "onclose",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "dir",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.dir); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "vibrate",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.vibrate); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "timestamp",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.timestamp); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "actions",
+    "expr": "(() => { const o = new Notification(\"x\"); return Object.prototype.toString.call(o.actions); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Notification",
+    "member": "requestPermission",
+    "expr": "(async () => { return await Notification.requestPermission(); })()",
+    "await": true,
+    "expected": "denied",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Notification",
+    "member": "requestPermission",
+    "expr": "(async () => { return Object.prototype.toString.call(await Notification.requestPermission()); })()",
+    "await": true,
+    "expected": "[object String]",
+    "source": "brave-151-linux-headless"
+  }
+]

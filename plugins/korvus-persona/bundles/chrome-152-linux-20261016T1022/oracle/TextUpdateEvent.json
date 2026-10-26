@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "TextUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextUpdateEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextUpdateEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "updateRangeStart",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return o.updateRangeStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "updateRangeEnd",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return o.updateRangeEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "text",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return o.text; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "selectionStart",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return o.selectionStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextUpdateEvent",
+    "member": "selectionEnd",
+    "expr": "(() => { const o = new TextUpdateEvent(\"x\"); return o.selectionEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

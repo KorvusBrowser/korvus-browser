@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "BiquadFilterNode",
+    "member": "constructor",
+    "expr": "new BiquadFilterNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "type",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return o.type; })()",
+    "expected": "lowpass",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "type",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "frequency",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.frequency); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "detune",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.detune); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "Q",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.Q); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "gain",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.gain); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BiquadFilterNode",
+    "member": "getFrequencyResponse",
+    "expr": "(() => { const o = new BiquadFilterNode(new OfflineAudioContext(1, 1, 44100)); return o.getFrequencyResponse(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

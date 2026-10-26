@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "PopStateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PopStateEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PopStateEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PopStateEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PopStateEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PopStateEvent",
+    "member": "state",
+    "expr": "(() => { const o = new PopStateEvent(\"x\"); return o.state; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PopStateEvent",
+    "member": "hasUAVisualTransition",
+    "expr": "(() => { const o = new PopStateEvent(\"x\"); return o.hasUAVisualTransition; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

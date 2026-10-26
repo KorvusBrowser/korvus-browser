@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "PaymentRequest",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentRequest([], {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentRequest(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "shippingAddress",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.shippingAddress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "shippingOption",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.shippingOption; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "shippingType",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.shippingType; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onshippingaddresschange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.onshippingaddresschange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onshippingoptionchange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.onshippingoptionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onpaymentmethodchange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return o.onpaymentmethodchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "securePaymentConfirmationAvailability",
+    "expr": "Object.prototype.toString.call(PaymentRequest.securePaymentConfirmationAvailability())",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "getSecurePaymentConfirmationCapabilities",
+    "expr": "Object.prototype.toString.call(PaymentRequest.getSecurePaymentConfirmationCapabilities())",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "show",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.show()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "abort",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.abort()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "canMakePayment",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.canMakePayment()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "shippingAddress",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.shippingAddress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "shippingType",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.shippingType); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onshippingaddresschange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.onshippingaddresschange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onshippingoptionchange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.onshippingoptionchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PaymentRequest",
+    "member": "onpaymentmethodchange",
+    "expr": "(() => { const o = new PaymentRequest([{ supportedMethods: \"basic-card\" }], { total: { label: \"total\", amount: { currency: \"USD\", value: \"1.00\" } } }); return Object.prototype.toString.call(o.onpaymentmethodchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

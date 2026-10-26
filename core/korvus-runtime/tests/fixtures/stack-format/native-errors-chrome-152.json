@@ -1,0 +1,865 @@
+[
+[
+"appendChild(5)",
+"[object Error]",
+"TypeError",
+"Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.",
+"TypeError: parameter 1 is not of type 'Node'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.",
+true,
+true
+],
+[
+"new Event()",
+"[object Error]",
+"TypeError",
+"Failed to construct 'Event': 1 argument required, but only 0 present.",
+"TypeError: 1 argument required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'Event': 1 argument required, but only 0 present.",
+true,
+true
+],
+[
+"Event(\"x\")",
+"[object Error]",
+"TypeError",
+"Failed to construct 'Event': Please use the 'new' operator, this DOM object constructor cannot be called as a function.",
+"TypeError: Please use the 'new' operator, this DOM object constructor cannot be called as a function.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'Event': Please use the 'new' operator, this DOM object constructor cannot be called as a function.",
+true,
+true
+],
+[
+"new URL(\"nope\")",
+"[object Error]",
+"TypeError",
+"Failed to construct 'URL': Invalid URL",
+"TypeError: Invalid URL",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'URL': Invalid URL",
+true,
+true
+],
+[
+"new Blob(5)",
+"[object Error]",
+"TypeError",
+"Failed to construct 'Blob': The provided value cannot be converted to a sequence.",
+"TypeError: The provided value cannot be converted to a sequence.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'Blob': The provided value cannot be converted to a sequence.",
+true,
+true
+],
+[
+"querySelector()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'querySelector' on 'Document': 1 argument required, but only 0 present.",
+"TypeError: 1 argument required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'querySelector' on 'Document': 1 argument required, but only 0 present.",
+true,
+true
+],
+[
+"setAttribute()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'setAttribute' on 'Element': 2 arguments required, but only 0 present.",
+"TypeError: 2 arguments required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'setAttribute' on 'Element': 2 arguments required, but only 0 present.",
+true,
+true
+],
+[
+"roundRect radius -1",
+"[object Error]",
+"RangeError",
+"Failed to execute 'roundRect' on 'CanvasRenderingContext2D': Radius value -1 is negative.",
+"RangeError: Radius value -1 is negative.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"RangeError: Failed to execute 'roundRect' on 'CanvasRenderingContext2D': Radius value -1 is negative.",
+false,
+false
+],
+[
+"arc radius -1",
+"[object DOMException]",
+"IndexSizeError",
+"Failed to execute 'arc' on 'CanvasRenderingContext2D': The radius provided (-1) is negative.",
+"IndexSizeError: Failed to execute 'arc' on 'CanvasRenderingContext2D': The radius provided (-1) is negative.",
+"",
+"stack",
+null,
+[
+"accessor",
+false,
+true,
+false
+],
+"IndexSizeError: Failed to execute 'arc' on 'CanvasRenderingContext2D': The radius provided (-1) is negative.",
+false,
+false
+],
+[
+"createElement(\"1\")",
+"[object DOMException]",
+"InvalidCharacterError",
+"Failed to execute 'createElement' on 'Document': The tag name provided ('1') is not a valid name.",
+"InvalidCharacterError: Failed to execute 'createElement' on 'Document': The tag name provided ('1') is not a valid name.",
+"",
+"stack",
+null,
+[
+"accessor",
+false,
+true,
+false
+],
+"InvalidCharacterError: Failed to execute 'createElement' on 'Document': The tag name provided ('1') is not a valid name.",
+false,
+false
+],
+[
+"structuredClone(fn)",
+"[object DOMException]",
+"DataCloneError",
+"Failed to execute 'structuredClone' on 'Window': function () {} could not be cloned.",
+"DataCloneError: Failed to execute 'structuredClone' on 'Window': function () {} could not be cloned.",
+"",
+"stack",
+null,
+[
+"accessor",
+false,
+true,
+false
+],
+"DataCloneError: Failed to execute 'structuredClone' on 'Window': function () {} could not be cloned.",
+false,
+false
+],
+[
+"illegal invocation",
+"[object Error]",
+"TypeError",
+"Illegal invocation",
+"TypeError: Illegal invocation",
+"",
+"stack,message",
+[
+"data",
+false,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Illegal invocation",
+true,
+true
+],
+[
+"addEventListener()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'addEventListener' on 'EventTarget': 2 arguments required, but only 0 present.",
+"TypeError: 2 arguments required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'addEventListener' on 'EventTarget': 2 arguments required, but only 0 present.",
+true,
+true
+],
+[
+"localStorage.setItem()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'setItem' on 'Storage': 2 arguments required, but only 0 present.",
+"TypeError: 2 arguments required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'setItem' on 'Storage': 2 arguments required, but only 0 present.",
+true,
+true
+],
+[
+"new Uint8Array(-1)",
+"[object Error]",
+"RangeError",
+"Invalid typed array length: -1",
+"RangeError: Invalid typed array length: -1",
+"",
+"stack,message",
+[
+"data",
+false,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"RangeError: Invalid typed array length: -1",
+false,
+false
+],
+[
+"JSON.parse(\"{\")",
+"[object Error]",
+"SyntaxError",
+"Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+"SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+"",
+"stack,message",
+[
+"data",
+false,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+false,
+false
+],
+[
+"getComputedStyle(5)",
+"[object Error]",
+"TypeError",
+"Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+"TypeError: parameter 1 is not of type 'Element'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+true,
+true
+],
+[
+"new MutationObserver(5)",
+"[object Error]",
+"TypeError",
+"Failed to construct 'MutationObserver': parameter 1 is not of type 'Function'.",
+"TypeError: parameter 1 is not of type 'Function'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'MutationObserver': parameter 1 is not of type 'Function'.",
+true,
+true
+],
+[
+"postMessage()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'postMessage' on 'Window': 1 argument required, but only 0 present.",
+"TypeError: 1 argument required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'postMessage' on 'Window': 1 argument required, but only 0 present.",
+true,
+true
+],
+[
+"new Request(\"http://[\")",
+"[object Error]",
+"TypeError",
+"Failed to construct 'Request': Failed to parse URL from http://[",
+"TypeError: Failed to parse URL from http://[",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to construct 'Request': Failed to parse URL from http://[",
+true,
+true
+],
+[
+"new Response(null, {status: 1})",
+"[object Error]",
+"RangeError",
+"Failed to construct 'Response': The status provided (1) is outside the range [200, 599].",
+"RangeError: The status provided (1) is outside the range [200, 599].",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"RangeError: Failed to construct 'Response': The status provided (1) is outside the range [200, 599].",
+false,
+false
+],
+[
+"TextEncoder encodeInto()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'encodeInto' on 'TextEncoder': 2 arguments required, but only 0 present.",
+"TypeError: 2 arguments required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'encodeInto' on 'TextEncoder': 2 arguments required, but only 0 present.",
+true,
+true
+],
+[
+"crypto.getRandomValues(Float32Array)",
+"[object DOMException]",
+"TypeMismatchError",
+"Failed to execute 'getRandomValues' on 'Crypto': The provided ArrayBufferView is of type 'Float32', which is not an integer array type.",
+"TypeMismatchError: Failed to execute 'getRandomValues' on 'Crypto': The provided ArrayBufferView is of type 'Float32', which is not an integer array type.",
+"",
+"stack",
+null,
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeMismatchError: Failed to execute 'getRandomValues' on 'Crypto': The provided ArrayBufferView is of type 'Float32', which is not an integer array type.",
+false,
+false
+],
+[
+"fetch(\"http://[\")",
+"[object Error]",
+"TypeError",
+"Failed to execute 'fetch' on 'Window': Failed to parse URL from http://[",
+"TypeError: Failed to parse URL from http://[",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from http://[",
+true,
+true
+],
+[
+"subtle.digest(\"nope\")",
+"[object DOMException]",
+"NotSupportedError",
+"Failed to execute 'digest' on 'SubtleCrypto': Algorithm: Unrecognized name",
+"NotSupportedError: Failed to execute 'digest' on 'SubtleCrypto': Algorithm: Unrecognized name",
+"",
+"stack",
+null,
+[
+"accessor",
+false,
+true,
+false
+],
+"NotSupportedError: Failed to execute 'digest' on 'SubtleCrypto': Algorithm: Unrecognized name",
+false,
+false
+],
+[
+"Response(\"\").json()",
+"[object Error]",
+"SyntaxError",
+"Failed to execute 'json' on 'Response': Unexpected end of JSON input",
+"SyntaxError: Unexpected end of JSON input",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"SyntaxError: Failed to execute 'json' on 'Response': Unexpected end of JSON input",
+false,
+false
+],
+[
+"Response(\"{\").json()",
+"[object Error]",
+"SyntaxError",
+"Failed to execute 'json' on 'Response': Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+"SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"SyntaxError: Failed to execute 'json' on 'Response': Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+false,
+false
+],
+[
+"permissions.query({name: \"nope\"})",
+"[object Error]",
+"TypeError",
+"Failed to execute 'query' on 'Permissions': Failed to read the 'name' property from 'PermissionDescriptor': The provided value 'nope' is not a valid enum value of type PermissionName.",
+"TypeError: The provided value 'nope' is not a valid enum value of type PermissionName.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'query' on 'Permissions': Failed to read the 'name' property from 'PermissionDescriptor': The provided value 'nope' is not a valid enum value of type PermissionName.",
+true,
+true
+],
+[
+"permissions.query()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'query' on 'Permissions': 1 argument required, but only 0 present.",
+"TypeError: 1 argument required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'query' on 'Permissions': 1 argument required, but only 0 present.",
+true,
+true
+],
+[
+"Clipboard readText illegal invocation",
+"[object Error]",
+"TypeError",
+"Failed to execute 'readText' on 'Clipboard': Illegal invocation",
+"TypeError: Illegal invocation",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'readText' on 'Clipboard': Illegal invocation",
+true,
+true
+],
+[
+"locked ReadableStream cancel",
+"[object Error]",
+"TypeError",
+"Failed to execute 'cancel' on 'ReadableStream': Cannot cancel a locked stream",
+"TypeError: Cannot cancel a locked stream",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'cancel' on 'ReadableStream': Cannot cancel a locked stream",
+true,
+true
+],
+[
+"locked WritableStream abort",
+"[object Error]",
+"TypeError",
+"Failed to execute 'abort' on 'WritableStream': Cannot abort a locked stream",
+"TypeError: Cannot abort a locked stream",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'abort' on 'WritableStream': Cannot abort a locked stream",
+true,
+true
+],
+[
+"locks.request(\"a\", 5)",
+"[object Error]",
+"TypeError",
+"Failed to execute 'request' on 'LockManager': parameter 2 is not of type 'Function'.",
+"TypeError: parameter 2 is not of type 'Function'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'request' on 'LockManager': parameter 2 is not of type 'Function'.",
+true,
+true
+],
+[
+"pipeTo(5)",
+"[object Error]",
+"TypeError",
+"Failed to execute 'pipeTo' on 'ReadableStream': parameter 1 is not of type 'WritableStream'.",
+"TypeError: parameter 1 is not of type 'WritableStream'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'pipeTo' on 'ReadableStream': parameter 1 is not of type 'WritableStream'.",
+true,
+true
+],
+[
+"body already used",
+"[object Error]",
+"TypeError",
+"Failed to execute 'text' on 'Response': body stream already read",
+"TypeError: body stream already read",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'text' on 'Response': body stream already read",
+true,
+true
+],
+[
+"fetch()",
+"[object Error]",
+"TypeError",
+"Failed to execute 'fetch' on 'Window': 1 argument required, but only 0 present.",
+"TypeError: 1 argument required, but only 0 present.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'fetch' on 'Window': 1 argument required, but only 0 present.",
+true,
+true
+],
+[
+"scheduler.postTask(5)",
+"[object Error]",
+"TypeError",
+"Failed to execute 'postTask' on 'Scheduler': parameter 1 is not of type 'Function'.",
+"TypeError: parameter 1 is not of type 'Function'.",
+"message",
+"stack,message",
+[
+"data",
+true,
+true,
+true
+],
+[
+"accessor",
+false,
+true,
+false
+],
+"TypeError: Failed to execute 'postTask' on 'Scheduler': parameter 1 is not of type 'Function'.",
+true,
+true
+]
+]

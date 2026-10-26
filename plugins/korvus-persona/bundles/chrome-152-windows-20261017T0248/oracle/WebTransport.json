@@ -1,0 +1,219 @@
+[
+  {
+    "iface": "WebTransport",
+    "member": "supportsReliableOnly",
+    "expr": "WebTransport.supportsReliableOnly",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebTransport(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebTransport(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "getStats",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.getStats(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "exportKeyingMaterial",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.exportKeyingMaterial(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "reliability",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.reliability; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "congestionControl",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.congestionControl; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingUnidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.anticipatedConcurrentIncomingUnidirectionalStreams; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingUnidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return (o.anticipatedConcurrentIncomingUnidirectionalStreams = 1, o.anticipatedConcurrentIncomingUnidirectionalStreams); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingBidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.anticipatedConcurrentIncomingBidirectionalStreams; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingBidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return (o.anticipatedConcurrentIncomingBidirectionalStreams = 1, o.anticipatedConcurrentIncomingBidirectionalStreams); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "responseHeaders",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.responseHeaders; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "protocol",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.protocol; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "draining",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.draining; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "close",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "createSendGroup",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return o.createSendGroup(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingUnidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return (o.anticipatedConcurrentIncomingUnidirectionalStreams = \"1\", o.anticipatedConcurrentIncomingUnidirectionalStreams); })()",
+    "expected": "1",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "anticipatedConcurrentIncomingBidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return (o.anticipatedConcurrentIncomingBidirectionalStreams = \"1\", o.anticipatedConcurrentIncomingBidirectionalStreams); })()",
+    "expected": "1",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "getStats",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.getStats()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "ready",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.ready); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "reliability",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.reliability); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "congestionControl",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.congestionControl); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "responseHeaders",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.responseHeaders); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "closed",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.closed); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "draining",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.draining); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "datagrams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.datagrams); })()",
+    "expected": "[object WebTransportDatagramDuplexStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "createBidirectionalStream",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.createBidirectionalStream()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "incomingBidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.incomingBidirectionalStreams); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "createUnidirectionalStream",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.createUnidirectionalStream()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "incomingUnidirectionalStreams",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.incomingUnidirectionalStreams); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "WebTransport",
+    "member": "createSendGroup",
+    "expr": "(() => { const o = new WebTransport(\"https://web-platform.test:8443/x\"); return Object.prototype.toString.call(o.createSendGroup()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

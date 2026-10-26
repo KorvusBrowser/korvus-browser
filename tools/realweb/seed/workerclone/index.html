@@ -1,0 +1,16 @@
+<!doctype html><html><body><script>
+// REALWEB H30b: every [Serializable] platform object Korvus clones, posted to a dedicated worker and echoed back.
+// The worker side rebuilds them inside V8's ValueDeserializer, where any JS aborts the process.
+var r = {};
+var w = new Worker(URL.createObjectURL(new Blob(['onmessage = function (e) { var d = e.data; postMessage([d.map(function (x) { return Object.prototype.toString.call(x); }), d[6].width + "x" + d[6].height + " " + d[6].colorSpace + " " + Array.from(d[6].data).join(","), d[4].size + " " + d[4].type, d[5].name + " " + d[5].size + " " + d[5].type + " " + d[5].lastModified, d[0].x + "," + d[1].width + "," + d[2].p3.y + "," + d[3].m41 + "," + d[7].name + ":" + d[7].message, d]); };'], { type: 'text/javascript' })));
+w.onmessage = function (e) {
+  r.inWorker = e.data.slice(0, 5);
+  var b = e.data[5];
+  r.back = b.map(function (x) { return Object.prototype.toString.call(x); }).join(' ');
+  r.backValues = [b[0].y, b[1].height, b[2].p4.x, b[3].m42, b[6].width, b[7].code].join(',');
+  Promise.all([b[4].text(), b[5].text()]).then(function (t) { r.texts = t.join('|'); document.title = JSON.stringify(r); });
+};
+w.onerror = function (e) { document.title = JSON.stringify({ error: String(e.message) }); };
+w.postMessage([new DOMPoint(1, 2), new DOMRect(0, 0, 3, 4), new DOMQuad(new DOMPoint(1, 1), new DOMPoint(2, 2), new DOMPoint(3, 5), new DOMPoint(4, 4)), new DOMMatrix([1, 0, 0, 1, 7, 8]),
+  new Blob(['abc'], { type: 'text/x' }), new File(['hello'], 'f.txt', { type: 'text/plain', lastModified: 42 }), new ImageData(new Uint8ClampedArray([1, 2, 3, 4, 5, 6, 7, 8]), 2), new DOMException('m', 'SyntaxError')]);
+</script></body></html>

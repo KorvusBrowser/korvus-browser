@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "FileReader",
+    "member": "EMPTY",
+    "expr": "FileReader.EMPTY",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "LOADING",
+    "expr": "FileReader.LOADING",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "DONE",
+    "expr": "FileReader.DONE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "constructor",
+    "expr": "(() => { const o = new FileReader(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object FileReader]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "readAsArrayBuffer",
+    "expr": "(() => { const o = new FileReader(); return o.readAsArrayBuffer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "readAsBinaryString",
+    "expr": "(() => { const o = new FileReader(); return o.readAsBinaryString(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "readAsText",
+    "expr": "(() => { const o = new FileReader(); return o.readAsText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "readAsDataURL",
+    "expr": "(() => { const o = new FileReader(); return o.readAsDataURL(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "abort",
+    "expr": "(() => { const o = new FileReader(); return o.abort(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "readyState",
+    "expr": "(() => { const o = new FileReader(); return o.readyState; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "result",
+    "expr": "(() => { const o = new FileReader(); return o.result; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "error",
+    "expr": "(() => { const o = new FileReader(); return o.error; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onloadstart",
+    "expr": "(() => { const o = new FileReader(); return o.onloadstart; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onprogress",
+    "expr": "(() => { const o = new FileReader(); return o.onprogress; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onload",
+    "expr": "(() => { const o = new FileReader(); return o.onload; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onabort",
+    "expr": "(() => { const o = new FileReader(); return o.onabort; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onerror",
+    "expr": "(() => { const o = new FileReader(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "FileReader",
+    "member": "onloadend",
+    "expr": "(() => { const o = new FileReader(); return o.onloadend; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

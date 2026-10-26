@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "FontFacePalettes",
+    "member": "constructor",
+    "expr": "new FontFacePalettes()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

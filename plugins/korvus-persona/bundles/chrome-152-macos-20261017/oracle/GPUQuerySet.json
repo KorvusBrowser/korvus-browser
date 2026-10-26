@@ -1,0 +1,142 @@
+[
+  {
+    "iface": "GPUQuerySet",
+    "member": "constructor",
+    "expr": "new GPUQuerySet()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "type",
+    "expr": "GPUQuerySet.prototype.type",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "type",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"type\").get.call(Object.create(GPUQuerySet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "count",
+    "expr": "GPUQuerySet.prototype.count",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "count",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"count\").get.call(Object.create(GPUQuerySet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "GPUQuerySet.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").get.call(Object.create(GPUQuerySet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "destroy",
+    "expr": "GPUQuerySet.prototype.destroy.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "destroy",
+    "expr": "GPUQuerySet.prototype.destroy.call(Object.create(GPUQuerySet.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "type",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"type\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "type",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"type\").get.call(Object.create(GPUQuerySet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "count",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"count\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "count",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"count\").get.call(Object.create(GPUQuerySet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").get.call(Object.create(GPUQuerySet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUQuerySet.prototype, \"label\").set.call(Object.create(GPUQuerySet.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUQuerySet.prototype[\"destroy\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUQuerySet",
+    "member": "destroy",
+    "expr": "(() => { try { const v = GPUQuerySet.prototype[\"destroy\"].call(Object.create(GPUQuerySet.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

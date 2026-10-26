@@ -1,0 +1,38 @@
+[
+ [
+  "xhr",
+  ""
+ ],
+ [
+  "postMessage",
+  ""
+ ],
+ [
+  "checkbox click",
+  ""
+ ],
+ [
+  "MessageChannel",
+  ""
+ ],
+ [
+  "popstate",
+  ""
+ ],
+ [
+  "hashchange",
+  ""
+ ],
+ [
+  "focus blur",
+  ""
+ ],
+ [
+  "FileReader",
+  ""
+ ],
+ [
+  "iframe load",
+  ""
+ ]
+]

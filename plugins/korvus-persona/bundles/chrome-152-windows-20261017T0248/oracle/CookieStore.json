@@ -1,0 +1,191 @@
+[
+  {
+    "iface": "CookieStore",
+    "member": "constructor",
+    "expr": "new CookieStore()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "onchange",
+    "expr": "(() => { const o = cookieStore; return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.get(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.get()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.getAll(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.getAll()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "set",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.set(\"x\", \"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "set",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.set({})); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "delete",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.delete(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "delete",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.delete({})); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "onchange",
+    "expr": "(() => { const o = cookieStore; return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(async () => { const o = cookieStore; return await o.get(\"x\"); })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(async () => { const o = cookieStore; return Object.prototype.toString.call(await o.get(\"x\")); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(async () => { const o = cookieStore; return await o.get(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "get",
+    "expr": "(async () => { const o = cookieStore; return Object.prototype.toString.call(await o.get()); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(async () => { const o = cookieStore; return await o.getAll(\"x\"); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(async () => { const o = cookieStore; return Object.prototype.toString.call(await o.getAll(\"x\")); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(async () => { const o = cookieStore; return await o.getAll(); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "getAll",
+    "expr": "(async () => { const o = cookieStore; return Object.prototype.toString.call(await o.getAll()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "set",
+    "expr": "(async () => { const o = cookieStore; return await o.set(\"x\", \"x\"); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "set",
+    "expr": "(async () => { const o = cookieStore; return await o.set(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "set",
+    "expr": "(async () => { const o = cookieStore; return await o.set({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "delete",
+    "expr": "(async () => { const o = cookieStore; return await o.delete(\"x\"); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "delete",
+    "expr": "(async () => { const o = cookieStore; return await o.delete(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CookieStore",
+    "member": "delete",
+    "expr": "(async () => { const o = cookieStore; return await o.delete({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

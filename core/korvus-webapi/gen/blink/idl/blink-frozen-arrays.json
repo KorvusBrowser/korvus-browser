@@ -1,0 +1,741 @@
+{
+"AutofillEvent.autofillValues": {
+"cache": "same",
+"getter": "core/html/forms/autofill_event.h:51: const HeapVector<Member<AutofillFieldData>>& autofillValues()",
+"idl": "core/html/forms/autofill_event.idl:9",
+"same_object": true,
+"type": "FrozenArray<AutofillFieldData>"
+},
+"BeforeInstallPromptEvent.platforms": {
+"cache": "fresh",
+"getter": "modules/app_banner/before_install_prompt_event.h:65: Vector<String> platforms()",
+"idl": "modules/app_banner/before_install_prompt_event.idl:10",
+"type": "FrozenArray<DOMString>"
+},
+"BluetoothAdvertisingEvent.uuids": {
+"cache": "fresh",
+"getter": "modules/bluetooth/bluetooth_advertising_event.h:40: const Vector<String>& uuids()",
+"idl": "modules/bluetooth/bluetooth_advertising_event.idl:14",
+"type": "FrozenArray<UUID>"
+},
+"BluetoothLEScan.filters": {
+"cache": "fresh",
+"getter": "modules/bluetooth/bluetooth_le_scan.h:25: const HeapVector<Member<BluetoothLEScanFilterInit>>& filters()",
+"idl": "modules/bluetooth/bluetooth_le_scan.idl:12",
+"type": "FrozenArray<BluetoothLEScanFilterInit>"
+},
+"CSSContainerRule.conditions": {
+"cache": "same",
+"getter": "core/css/css_container_rule.h:30: const FrozenArray<CSSContainerCondition>& conditions()",
+"idl": "core/css/css_container_rule.idl:10",
+"type": "FrozenArray<CSSContainerCondition>"
+},
+"CSSLayerStatementRule.nameList": {
+"cache": "fresh",
+"getter": "core/css/css_layer_statement_rule.h:22: Vector<String> nameList()",
+"idl": "core/css/css_layer_statement_rule.idl:9",
+"type": "FrozenArray<CSSOMString>"
+},
+"CSSViewTransitionRule.types": {
+"cache": "same",
+"getter": "core/css/css_view_transition_rule.h:29: Vector<String> types()",
+"idl": "core/css/css_view_transition_rule.idl:9",
+"same_object": true,
+"type": "FrozenArray<CSSOMString>"
+},
+"CanvasPaintEvent.changedElements": {
+"cache": "fresh",
+"getter": "core/html/canvas/canvas_paint_event.h:28: const HeapVector<Member<Element>>& changedElements()",
+"idl": "core/html/canvas/canvas_paint_event.idl:6",
+"type": "FrozenArray<Element>"
+},
+"ChapterInformation.artwork": {
+"cache": "fresh",
+"getter": "modules/mediasession/chapter_information.h:50: const HeapVector<Member<MediaImage>>& artwork()",
+"idl": "modules/mediasession/chapter_information.idl:13",
+"same_object": true,
+"type": "FrozenArray<MediaImage>"
+},
+"ClipboardChangeEvent.types": {
+"cache": "fresh",
+"getter": "modules/clipboard/clipboard_change_event.h:38: Vector<String> types()",
+"idl": "modules/clipboard/clipboard_change_event.idl:10",
+"type": "FrozenArray<DOMString>"
+},
+"ClipboardItem.types": {
+"cache": "fresh",
+"getter": "modules/clipboard/clipboard_item.h:76: Vector<String> types()",
+"idl": "modules/clipboard/clipboard_item.idl:13",
+"type": "FrozenArray<DOMString>"
+},
+"ConnectionAllowlistViolationReportBody.allowlist": {
+"cache": "fresh",
+"getter": "core/frame/connection_allowlist_violation_report_body.h:42: const Vector<String>& allowlist()",
+"idl": "core/frame/connection_allowlist_violation_report_body.idl:12",
+"type": "FrozenArray<DOMString>"
+},
+"CookieChangeEvent.changed": {
+"cache": "same",
+"getter": "modules/cookie_store/cookie_change_event.h:58: const HeapVector<Member<CookieListItem>>& changed()",
+"idl": "modules/cookie_store/cookie_change_event.idl:16",
+"same_object": true,
+"type": "FrozenArray<CookieListItem>"
+},
+"CookieChangeEvent.deleted": {
+"cache": "same",
+"getter": "modules/cookie_store/cookie_change_event.h:60: const HeapVector<Member<CookieListItem>>& deleted()",
+"idl": "modules/cookie_store/cookie_change_event.idl:19",
+"same_object": true,
+"type": "FrozenArray<CookieListItem>"
+},
+"DataTransfer.types": {
+"cache": "cached",
+"getter": "core/clipboard/data_transfer.h:99: Vector<String> types()",
+"idl": "core/clipboard/data_transfer.idl:43",
+"pred": "hasDataStoreItemListChanged",
+"type": "FrozenArray<DOMString>"
+},
+"Element.ariaActionsElements": {
+"cache": "same",
+"getter": "core/dom/element.h:433: FrozenArray<Element>* ariaActionsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:10",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaControlsElements": {
+"cache": "same",
+"getter": "core/dom/element.h:436: FrozenArray<Element>* ariaControlsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:12",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaDescribedByElements": {
+"cache": "same",
+"getter": "core/dom/element.h:438: FrozenArray<Element>* ariaDescribedByElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:13",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaDetailsElements": {
+"cache": "same",
+"getter": "core/dom/element.h:441: FrozenArray<Element>* ariaDetailsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:14",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaErrorMessageElements": {
+"cache": "same",
+"getter": "core/dom/element.h:443: FrozenArray<Element>* ariaErrorMessageElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:15",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaFlowToElements": {
+"cache": "same",
+"getter": "core/dom/element.h:446: FrozenArray<Element>* ariaFlowToElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:16",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaLabelledByElements": {
+"cache": "same",
+"getter": "core/dom/element.h:448: FrozenArray<Element>* ariaLabelledByElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:17",
+"type": "FrozenArray<Element>?"
+},
+"Element.ariaOwnsElements": {
+"cache": "same",
+"getter": "core/dom/element.h:451: FrozenArray<Element>* ariaOwnsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:18",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaActionsElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:97: const FrozenArray<Element>* ariaActionsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:10",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaControlsElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:100: const FrozenArray<Element>* ariaControlsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:12",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaDescribedByElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:102: const FrozenArray<Element>* ariaDescribedByElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:13",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaDetailsElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:105: const FrozenArray<Element>* ariaDetailsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:14",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaErrorMessageElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:107: const FrozenArray<Element>* ariaErrorMessageElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:15",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaFlowToElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:110: const FrozenArray<Element>* ariaFlowToElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:16",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaLabelledByElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:112: const FrozenArray<Element>* ariaLabelledByElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:17",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.ariaOwnsElements": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:115: const FrozenArray<Element>* ariaOwnsElements()",
+"idl": "core/dom/aria_relationship_attributes.idl:18",
+"type": "FrozenArray<Element>?"
+},
+"ElementInternals.behaviors": {
+"cache": "same",
+"getter": "core/html/custom/element_internals.h:88: const FrozenArray<ElementBehavior>& behaviors()",
+"idl": "core/html/custom/element_internals.idl:42",
+"type": "FrozenArray<ElementBehavior>"
+},
+"ExtendableCookieChangeEvent.changed": {
+"cache": "same",
+"getter": "modules/cookie_store/extendable_cookie_change_event.h:53: const HeapVector<Member<CookieListItem>>& changed()",
+"idl": "modules/cookie_store/extendable_cookie_change_event.idl:14",
+"same_object": true,
+"type": "FrozenArray<CookieListItem>"
+},
+"ExtendableCookieChangeEvent.deleted": {
+"cache": "same",
+"getter": "modules/cookie_store/extendable_cookie_change_event.h:55: const HeapVector<Member<CookieListItem>>& deleted()",
+"idl": "modules/cookie_store/extendable_cookie_change_event.idl:17",
+"same_object": true,
+"type": "FrozenArray<CookieListItem>"
+},
+"ExtendableMessageEvent.ports": {
+"cache": "fresh",
+"getter": "modules/service_worker/extendable_message_event.h:82: MessagePortArray ports()",
+"idl": "modules/service_worker/extendable_message_event.idl:15",
+"type": "FrozenArray<MessagePort>"
+},
+"FontFaceSetLoadEvent.fontfaces": {
+"cache": "fresh",
+"getter": "core/css/font_face_set_load_event.h:60: FontFaceArray fontfaces()",
+"idl": "core/css/font_face_set_load_event.idl:38",
+"same_object": true,
+"type": "FrozenArray<FontFace>"
+},
+"FragmentDirective.items": {
+"cache": "fresh",
+"getter": "core/fragment_directive/fragment_directive.h:58: const HeapVector<Member<Directive>>& items()",
+"idl": "core/fragment_directive/fragment_directive.idl:10",
+"same_object": true,
+"type": "FrozenArray<Directive>"
+},
+"GPUAdapterInfo.memoryHeaps": {
+"cache": "fresh",
+"getter": "modules/webgpu/gpu_adapter_info.h:54: const HeapVector<Member<GPUMemoryHeapInfo>>& memoryHeaps()",
+"idl": "modules/webgpu/gpu_adapter_info.idl:21",
+"type": "FrozenArray<GPUMemoryHeapInfo>"
+},
+"GPUAdapterInfo.subgroupMatrixConfigs": {
+"cache": "fresh",
+"getter": "modules/webgpu/gpu_adapter_info.h:55: const HeapVector<Member<GPUSubgroupMatrixConfig>>& subgroupMatrixConfigs()",
+"idl": "modules/webgpu/gpu_adapter_info.idl:25",
+"type": "FrozenArray<GPUSubgroupMatrixConfig>"
+},
+"GPUCompilationInfo.messages": {
+"cache": "fresh",
+"getter": "modules/webgpu/gpu_compilation_info.h:25: const HeapVector<Member<GPUCompilationMessage>>& messages()",
+"idl": "modules/webgpu/gpu_compilation_info.idl:11",
+"type": "FrozenArray<GPUCompilationMessage>"
+},
+"Gamepad.axes": {
+"cache": "cached",
+"getter": "modules/gamepad/gamepad.h:83: const DoubleVector& axes()",
+"idl": "modules/gamepad/gamepad.idl:44",
+"pred": "isAxisDataDirty",
+"type": "FrozenArray<double>"
+},
+"Gamepad.buttons": {
+"cache": "cached",
+"getter": "modules/gamepad/gamepad.h:87: const GamepadButtonVector& buttons()",
+"idl": "modules/gamepad/gamepad.idl:45",
+"pred": "isButtonDataDirty",
+"type": "FrozenArray<GamepadButton>"
+},
+"Gamepad.touchEvents": {
+"cache": "cached",
+"getter": "modules/gamepad/gamepad.h:98: const GamepadTouchVector* touchEvents()",
+"idl": "modules/gamepad/gamepad.idl:53",
+"pred": "IsTouchDataDirty",
+"type": "FrozenArray<GamepadTouch>?"
+},
+"GamepadHapticActuator.effects": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_haptic_actuator.h:39: const Vector<V8GamepadHapticEffectType>& effects()",
+"idl": "modules/gamepad/gamepad_haptic_actuator.idl:27",
+"same_object": true,
+"type": "FrozenArray<GamepadHapticEffectType>"
+},
+"GamepadRawInputChangeEvent.axesChanged": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_raw_input_change_event.h:60: const Vector<int>& axesChanged()",
+"idl": "modules/gamepad/gamepad_raw_input_change_event.idl:10",
+"type": "FrozenArray<long>"
+},
+"GamepadRawInputChangeEvent.buttonsPressed": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_raw_input_change_event.h:64: const Vector<int>& buttonsPressed()",
+"idl": "modules/gamepad/gamepad_raw_input_change_event.idl:12",
+"type": "FrozenArray<long>"
+},
+"GamepadRawInputChangeEvent.buttonsReleased": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_raw_input_change_event.h:65: const Vector<int>& buttonsReleased()",
+"idl": "modules/gamepad/gamepad_raw_input_change_event.idl:13",
+"type": "FrozenArray<long>"
+},
+"GamepadRawInputChangeEvent.buttonsValueChanged": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_raw_input_change_event.h:61: const Vector<int>& buttonsValueChanged()",
+"idl": "modules/gamepad/gamepad_raw_input_change_event.idl:11",
+"type": "FrozenArray<long>"
+},
+"GamepadRawInputChangeEvent.touchesChanged": {
+"cache": "fresh",
+"getter": "modules/gamepad/gamepad_raw_input_change_event.h:66: const Vector<int>& touchesChanged()",
+"idl": "modules/gamepad/gamepad_raw_input_change_event.idl:14",
+"type": "FrozenArray<long>"
+},
+"HIDDevice.collections": {
+"cache": "fresh",
+"getter": "modules/hid/hid_device.h:75: const HeapVector<Member<HIDCollectionInfo>>& collections()",
+"idl": "modules/hid/hid_device.idl:32",
+"type": "FrozenArray<HIDCollectionInfo>"
+},
+"HTMLInputElement.webkitEntries": {
+"cache": "fresh",
+"getter": "modules/filesystem/html_input_element_file_system.h:44: public: static EntryHeapVector webkitEntries(ScriptState*, HTMLInputElement&)",
+"idl": "modules/filesystem/html_input_element_file_system.idl:37",
+"type": "FrozenArray<Entry>"
+},
+"IntersectionObserver.thresholds": {
+"cache": "fresh",
+"getter": "core/intersection_observer/intersection_observer.h:158: const Vector<float>& thresholds()",
+"idl": "core/intersection_observer/intersection_observer.idl:18",
+"type": "FrozenArray<double>"
+},
+"LanguageDetector.expectedInputLanguages": {
+"cache": "fresh",
+"getter": "modules/ai/on_device_translation/language_detector.h:58: const std::optional<Vector<String>>& expectedInputLanguages()",
+"idl": "modules/ai/on_device_translation/language_detector.idl:73",
+"type": "FrozenArray<DOMString>?"
+},
+"LanguageModelToolSuccess.result": {
+"cache": "fresh",
+"getter": "modules/ai/language_model_tool_success.h:35: const HeapVector<Member<LanguageModelToolResultContent>>& result()",
+"idl": "modules/ai/language_model_create_options.idl:98",
+"type": "FrozenArray<LanguageModelToolResultContent>"
+},
+"LaunchParams.files": {
+"cache": "fresh",
+"getter": "modules/launch/launch_params.h:29: const HeapVector<Member<FileSystemHandle>>& files()",
+"idl": "modules/launch/launch_params.idl:13",
+"type": "FrozenArray<FileSystemHandle>"
+},
+"LayoutShift.sources": {
+"cache": "same",
+"getter": "core/timing/layout_shift.h:56: const AttributionList& sources()",
+"idl": "core/timing/layout_shift.idl:11",
+"same_object": true,
+"type": "FrozenArray<LayoutShiftAttribution>"
+},
+"MLGraph.devices": {
+"cache": "fresh",
+"getter": "modules/ml/webnn/ml_graph.h:59: Vector<V8MLDeviceType> devices()",
+"idl": "modules/ml/webnn/ml_graph.idl:11",
+"type": "FrozenArray<MLDeviceType>"
+},
+"MLOperand.shape": {
+"cache": "fresh",
+"getter": "modules/ml/webnn/ml_operand.h:82: Vector<uint32_t> shape()",
+"idl": "modules/ml/webnn/ml_operand.idl:12",
+"type": "FrozenArray<unsigned long>"
+},
+"MLTensor.shape": {
+"cache": "fresh",
+"getter": "modules/ml/webnn/ml_tensor.h:69: Vector<uint32_t> shape()",
+"idl": "modules/ml/webnn/ml_tensor.idl:12",
+"type": "FrozenArray<unsigned long>"
+},
+"MediaMetadata.artwork": {
+"cache": "fresh",
+"getter": "modules/mediasession/media_metadata.h:45: v8::LocalVector<v8::Value> artwork(ScriptState*)",
+"idl": "modules/mediasession/media_metadata.idl:15",
+"type": "FrozenArray<MediaImage>"
+},
+"MediaMetadata.chapterInfo": {
+"cache": "fresh",
+"getter": "modules/mediasession/media_metadata.h:46: v8::LocalVector<v8::Value> chapterInfo(ScriptState*)",
+"idl": "modules/mediasession/media_metadata.idl:16",
+"same_object": true,
+"type": "FrozenArray<ChapterInformation>"
+},
+"MessageEvent.ports": {
+"cache": "cached",
+"getter": "core/events/message_event.h:215: MessagePortArray ports()",
+"idl": "core/events/message_event.idl:42",
+"pred": "isPortsDirty",
+"type": "FrozenArray<MessagePort>"
+},
+"MulticastController.joinedGroups": {
+"cache": "fresh",
+"getter": "modules/direct_sockets/multicast_controller.h:67: HeapVector<Member<V8UnionMulticastMembershipOrString>> joinedGroups()",
+"idl": "modules/direct_sockets/multicast_controller.idl:35",
+"type": "FrozenArray<(DOMString or MulticastMembership)>"
+},
+"NDEFMessage.records": {
+"cache": "fresh",
+"getter": "modules/nfc/ndef_message.h:45: const HeapVector<Member<NDEFRecord>>& records()",
+"idl": "modules/nfc/ndef_message.idl:13",
+"type": "FrozenArray<NDEFRecord>"
+},
+"Navigator.languages": {
+"cache": "cached",
+"getter": "core/frame/navigator_language.h:19: const Vector<String>& languages()",
+"idl": "core/frame/navigator_language.idl:9",
+"pred": "IsLanguagesDirty",
+"type": "FrozenArray<DOMString>"
+},
+"NavigatorUAData.brands": {
+"cache": "fresh",
+"getter": "core/frame/navigator_ua_data.h:44: const HeapVector<Member<NavigatorUABrandVersion>>& brands()",
+"idl": "core/frame/navigator_ua_data.idl:8",
+"type": "FrozenArray<NavigatorUABrandVersion>"
+},
+"NotRestoredReasons.children": {
+"cache": "fresh",
+"getter": "core/timing/not_restored_reasons.h:41: const std::optional<HeapVector<Member<NotRestoredReasons>>> children()",
+"idl": "core/timing/not_restored_reasons.idl:23",
+"type": "FrozenArray<NotRestoredReasons>?"
+},
+"NotRestoredReasons.reasons": {
+"cache": "fresh",
+"getter": "core/timing/not_restored_reasons.h:38: const std::optional<HeapVector<Member<NotRestoredReasonDetails>>> reasons()",
+"idl": "core/timing/not_restored_reasons.idl:22",
+"type": "FrozenArray<NotRestoredReasonDetails>?"
+},
+"Notification.actions": {
+"cache": "same",
+"getter": "modules/notifications/notification.h:119: v8::LocalVector<v8::Value> actions(ScriptState* script_state)",
+"idl": "modules/notifications/notification.idl:75",
+"same_object": true,
+"type": "FrozenArray<NotificationAction>"
+},
+"Notification.vibrate": {
+"cache": "same",
+"getter": "modules/notifications/notification.h:113: VibrationController::VibrationPattern vibrate()",
+"idl": "modules/notifications/notification.idl:69",
+"same_object": true,
+"type": "FrozenArray<unsigned long>"
+},
+"OrientationSensor.quaternion": {
+"cache": "cached",
+"getter": "modules/sensor/orientation_sensor.h:17: public: std::optional<Vector<double>> quaternion()",
+"idl": "modules/sensor/orientation_sensor.idl:14",
+"pred": "isReadingDirty",
+"type": "FrozenArray<double>?"
+},
+"PaymentAddress.addressLine": {
+"cache": "fresh",
+"getter": "modules/payments/payment_address.h:31: const Vector<String>& addressLine()",
+"idl": "modules/payments/payment_address.idl:22",
+"type": "FrozenArray<DOMString>"
+},
+"PaymentRequestEvent.methodData": {
+"cache": "fresh",
+"getter": "modules/payments/payment_request_event.h:61: const HeapVector<Member<PaymentMethodData>>& methodData()",
+"idl": "modules/payments/payment_request_event.idl:15",
+"type": "FrozenArray<PaymentMethodData>"
+},
+"PaymentRequestEvent.modifiers": {
+"cache": "fresh",
+"getter": "modules/payments/payment_request_event.h:63: const HeapVector<Member<PaymentDetailsModifier>>& modifiers()",
+"idl": "modules/payments/payment_request_event.idl:17",
+"type": "FrozenArray<PaymentDetailsModifier>"
+},
+"PaymentRequestEvent.shippingOptions": {
+"cache": "fresh",
+"getter": "modules/payments/payment_request_event.h:66: std::optional<HeapVector<Member<PaymentShippingOption>>> shippingOptions()",
+"idl": "modules/payments/payment_request_event.idl:20",
+"type": "FrozenArray<PaymentShippingOption>?"
+},
+"PerformanceLongAnimationFrameTiming.scripts": {
+"cache": "same",
+"getter": "core/timing/performance_long_animation_frame_timing.h:63: const PerformanceScriptVector& scripts()",
+"idl": "core/timing/performance_long_animation_frame_timing.idl:15",
+"same_object": true,
+"type": "FrozenArray<PerformanceScriptTiming>"
+},
+"PerformanceLongAnimationFrameTiming.userTimingEntries": {
+"cache": "same",
+"getter": "core/timing/performance_long_animation_frame_timing.h:65: const PerformanceEntryVector& userTimingEntries()",
+"idl": "core/timing/performance_long_animation_frame_timing.idl:16",
+"same_object": true,
+"type": "FrozenArray<PerformanceEntry>"
+},
+"PerformanceLongTaskTiming.attribution": {
+"cache": "same",
+"getter": "core/timing/performance_long_task_timing.h:40: TaskAttributionVector attribution()",
+"idl": "core/timing/performance_long_task_timing.idl:8",
+"same_object": true,
+"type": "FrozenArray<TaskAttributionTiming>"
+},
+"PerformanceObserver.supportedEntryTypes": {
+"cache": "same",
+"getter": "core/timing/performance_observer.h:41: static Vector<AtomicString> supportedEntryTypes(ScriptState*)",
+"idl": "core/timing/performance_observer.idl:17",
+"same_object": true,
+"static": true,
+"type": "FrozenArray<DOMString>"
+},
+"PerformanceResourceTiming.serverTiming": {
+"cache": "fresh",
+"getter": "core/timing/performance_resource_timing.h:98: const HeapVector<Member<PerformanceServerTiming>>& serverTiming()",
+"idl": "core/timing/performance_resource_timing.idl:66",
+"type": "FrozenArray<PerformanceServerTiming>"
+},
+"PreferenceObject.validValues": {
+"cache": "same",
+"getter": "core/preferences/preference_object.h:42: const FrozenArray<IDLString>& validValues()",
+"idl": "core/preferences/preference_object.idl:14",
+"type": "FrozenArray<DOMString>"
+},
+"PresentationConnectionList.connections": {
+"cache": "fresh",
+"getter": "modules/presentation/presentation_connection_list.h:35: const HeapVector<Member<PresentationConnection>>& connections()",
+"idl": "modules/presentation/presentation_connection_list.idl:12",
+"type": "FrozenArray<PresentationConnection>"
+},
+"PressureObserver.knownSources": {
+"cache": "same",
+"getter": "modules/compute_pressure/pressure_observer.h:60: static Vector<V8PressureSource> knownSources()",
+"idl": "modules/compute_pressure/pressure_observer.idl:33",
+"same_object": true,
+"static": true,
+"type": "FrozenArray<PressureSource>"
+},
+"Proofreader.expectedInputLanguages": {
+"cache": "fresh",
+"getter": "modules/ai/proofreader.h:78: std::optional<Vector<String>> expectedInputLanguages()",
+"idl": "modules/ai/proofreader.idl:92",
+"type": "FrozenArray<DOMString>?"
+},
+"PushManager.supportedContentEncodings": {
+"cache": "same",
+"getter": "modules/push_messaging/push_manager.h:30: static Vector<String> supportedContentEncodings()",
+"idl": "modules/push_messaging/push_manager.idl:11",
+"same_object": true,
+"static": true,
+"type": "FrozenArray<DOMString>"
+},
+"RTCTrackEvent.streams": {
+"cache": "same",
+"getter": "modules/peerconnection/rtc_track_event.h:37: const HeapVector<Member<MediaStream>>& streams()",
+"idl": "modules/peerconnection/rtc_track_event.idl:12",
+"same_object": true,
+"type": "FrozenArray<MediaStream>"
+},
+"ResizeObserverEntry.borderBoxSize": {
+"cache": "same",
+"getter": "core/resize_observer/resize_observer_entry.h:34: const FrozenArray<ResizeObserverSize>& borderBoxSize()",
+"idl": "core/resize_observer/resize_observer_entry.idl:12",
+"type": "FrozenArray<ResizeObserverSize>"
+},
+"ResizeObserverEntry.contentBoxSize": {
+"cache": "same",
+"getter": "core/resize_observer/resize_observer_entry.h:31: const FrozenArray<ResizeObserverSize>& contentBoxSize()",
+"idl": "core/resize_observer/resize_observer_entry.idl:11",
+"type": "FrozenArray<ResizeObserverSize>"
+},
+"ResizeObserverEntry.devicePixelContentBoxSize": {
+"cache": "same",
+"getter": "core/resize_observer/resize_observer_entry.h:37: const FrozenArray<ResizeObserverSize>& devicePixelContentBoxSize()",
+"idl": "core/resize_observer/resize_observer_entry.idl:13",
+"type": "FrozenArray<ResizeObserverSize>"
+},
+"Rewriter.expectedContextLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/rewriter.idl:102",
+"type": "FrozenArray<DOMString>?"
+},
+"Rewriter.expectedInputLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/rewriter.idl:100",
+"type": "FrozenArray<DOMString>?"
+},
+"ScreenDetails.screens": {
+"cache": "fresh",
+"getter": "modules/screen_details/screen_details.h:31: const HeapVector<Member<ScreenDetailed>>& screens()",
+"idl": "modules/screen_details/screen_details.idl:12",
+"type": "FrozenArray<ScreenDetailed>"
+},
+"SpeculationData.navigations": {
+"cache": "fresh",
+"getter": "core/timing/speculation_data.h:35: const HeapVector<Member<SpeculationNavigationData>>& navigations()",
+"idl": "core/timing/speculation_data.idl:14",
+"type": "FrozenArray<SpeculationNavigationData>"
+},
+"SpeculationData.preconnects": {
+"cache": "fresh",
+"getter": "core/timing/speculation_data.h:32: const HeapVector<Member<PreconnectData>>& preconnects()",
+"idl": "core/timing/speculation_data.idl:13",
+"type": "FrozenArray<PreconnectData>"
+},
+"SpeculationData.preloads": {
+"cache": "fresh",
+"getter": "core/timing/speculation_data.h:30: const HeapVector<Member<PreloadData>>& preloads()",
+"idl": "core/timing/speculation_data.idl:12",
+"type": "FrozenArray<PreloadData>"
+},
+"SpeculationNavigationData.tags": {
+"cache": "fresh",
+"getter": "core/timing/speculation_navigation_data.h:34: const std::optional<Vector<String>>& tags()",
+"idl": "core/timing/speculation_navigation_data.idl:20",
+"type": "FrozenArray<DOMString>?"
+},
+"Summarizer.expectedContextLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/summarizer.idl:104",
+"type": "FrozenArray<DOMString>?"
+},
+"Summarizer.expectedInputLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/summarizer.idl:102",
+"type": "FrozenArray<DOMString>?"
+},
+"USBAlternateInterface.endpoints": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_alternate_interface.h:38: HeapVector<Member<USBEndpoint>> endpoints()",
+"idl": "modules/webusb/usb_alternate_interface.idl:19",
+"type": "FrozenArray<USBEndpoint>"
+},
+"USBConfiguration.interfaces": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_configuration.h:37: HeapVector<Member<USBInterface>> interfaces()",
+"idl": "modules/webusb/usb_configuration.idl:16",
+"type": "FrozenArray<USBInterface>"
+},
+"USBDevice.configurations": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_device.h:71: HeapVector<Member<USBConfiguration>> configurations()",
+"idl": "modules/webusb/usb_device.idl:36",
+"type": "FrozenArray<USBConfiguration>"
+},
+"USBInterface.alternates": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_interface.h:38: HeapVector<Member<USBAlternateInterface>> alternates()",
+"idl": "modules/webusb/usb_interface.idl:16",
+"type": "FrozenArray<USBAlternateInterface>"
+},
+"USBIsochronousInTransferResult.packets": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_isochronous_in_transfer_result.h:50: const HeapVector<Member<USBIsochronousInTransferPacket>>& packets()",
+"idl": "modules/webusb/usb_isochronous_in_transfer_result.idl:15",
+"type": "FrozenArray<USBIsochronousInTransferPacket>"
+},
+"USBIsochronousOutTransferResult.packets": {
+"cache": "fresh",
+"getter": "modules/webusb/usb_isochronous_out_transfer_result.h:30: const HeapVector<Member<USBIsochronousOutTransferPacket>>& packets()",
+"idl": "modules/webusb/usb_isochronous_out_transfer_result.idl:14",
+"type": "FrozenArray<USBIsochronousOutTransferPacket>"
+},
+"Viewport.segments": {
+"cache": "fresh",
+"getter": "core/frame/dom_viewport.h:29: std::optional<HeapVector<Member<DOMRect>>> segments()",
+"idl": "core/frame/viewport.idl:34",
+"type": "FrozenArray<DOMRect>?"
+},
+"WorkerNavigator.languages": {
+"cache": "cached",
+"getter": "core/frame/navigator_language.h:19: const Vector<String>& languages()",
+"idl": "core/frame/navigator_language.idl:9",
+"pred": "IsLanguagesDirty",
+"type": "FrozenArray<DOMString>"
+},
+"Writer.expectedContextLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/writer.idl:101",
+"type": "FrozenArray<DOMString>?"
+},
+"Writer.expectedInputLanguages": {
+"cache": "fresh",
+"getter": null,
+"idl": "modules/ai/writer.idl:99",
+"type": "FrozenArray<DOMString>?"
+},
+"XRBoundedReferenceSpace.boundsGeometry": {
+"cache": "same",
+"getter": "modules/xr/xr_bounded_reference_space.h:29: const FrozenArray<DOMPointReadOnly>& boundsGeometry()",
+"idl": "modules/xr/xr_bounded_reference_space.idl:12",
+"type": "FrozenArray<DOMPointReadOnly>"
+},
+"XRInputSource.profiles": {
+"cache": "same",
+"getter": "modules/xr/xr_input_source.h:72: const FrozenArray<IDLString>& profiles()",
+"idl": "modules/xr/xr_input_source.idl:28",
+"same_object": true,
+"type": "FrozenArray<DOMString>"
+},
+"XRInputSourcesChangeEvent.added": {
+"cache": "same",
+"getter": "modules/xr/xr_input_sources_change_event.h:46: const FrozenArray<XRInputSource>& added()",
+"idl": "modules/xr/xr_input_sources_change_event.idl:12",
+"same_object": true,
+"type": "FrozenArray<XRInputSource>"
+},
+"XRInputSourcesChangeEvent.removed": {
+"cache": "same",
+"getter": "modules/xr/xr_input_sources_change_event.h:47: const FrozenArray<XRInputSource>& removed()",
+"idl": "modules/xr/xr_input_sources_change_event.idl:13",
+"same_object": true,
+"type": "FrozenArray<XRInputSource>"
+},
+"XRPlane.polygon": {
+"cache": "same",
+"getter": "modules/xr/xr_plane.h:47: const FrozenArray<DOMPointReadOnly>& polygon()",
+"idl": "modules/xr/xr_plane.idl:20",
+"type": "FrozenArray<DOMPointReadOnly>"
+},
+"XRRenderState.layers": {
+"cache": "same",
+"getter": "modules/xr/xr_render_state.h:39: const FrozenArray<XRLayer>& layers()",
+"idl": "modules/xr/xr_render_state.idl:15",
+"type": "FrozenArray<XRLayer>"
+},
+"XRSession.enabledFeatures": {
+"cache": "same",
+"getter": "modules/xr/xr_session.h:173: const FrozenArray<IDLString>& enabledFeatures()",
+"idl": "modules/xr/xr_session.idl:55",
+"type": "FrozenArray<DOMString>"
+},
+"XRTransientInputHitTestResult.results": {
+"cache": "same",
+"getter": "modules/xr/xr_transient_input_hit_test_result.h:29: const FrozenArray<XRHitTestResult>& results()",
+"idl": "modules/xr/xr_transient_input_hit_test_result.idl:8",
+"same_object": true,
+"type": "FrozenArray<XRHitTestResult>"
+},
+"XRViewerPose.views": {
+"cache": "same",
+"getter": "modules/xr/xr_viewer_pose.h:30: const FrozenArray<XRView>& views()",
+"idl": "modules/xr/xr_viewer_pose.idl:11",
+"same_object": true,
+"type": "FrozenArray<XRView>"
+}
+}

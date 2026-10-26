@@ -1,0 +1,16 @@
+[package]
+name = "korvus-persona"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "persona"
+
+[dependencies]
+spec = { workspace = true }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# The bundle manifest. TOML because the manifest is written and READ by people -- it carries the
+# reason each known incoherence is still open, and a JSON file with paragraphs in it is unreadable.
+toml = "0.8"

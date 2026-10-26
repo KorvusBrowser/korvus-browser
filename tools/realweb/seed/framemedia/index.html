@@ -1,0 +1,22 @@
+<!doctype html><html><body style="margin:0"><iframe id=f src="c.html" style="width:300px;height:100px;border:0"></iframe><script>
+// REALWEB F27b: what a frame document's style is resolved against right after the page resizes the frame -- its
+// viewport as of the page's last layout, or the new size.
+var f = document.getElementById('f');
+f.onload = function () {
+  var w = f.contentWindow, d = f.contentDocument, p = d.getElementById('p');
+  var r = {};
+  r.initial = [w.innerWidth, w.getComputedStyle(p).color, w.matchMedia('(min-width: 400px)').matches].join(' ');
+  f.style.width = '500px';
+  r.afterResizeStyleOnly = [w.getComputedStyle(p).color, w.matchMedia('(min-width: 400px)').matches].join(' ');
+  r.afterResizeInnerWidth = String(w.innerWidth);
+  r.afterResizeText = JSON.stringify(d.body.innerText);
+  r.afterResizeWidth = String(p.offsetWidth);
+  r.afterUsedValue = [w.getComputedStyle(p).color, w.innerWidth].join(' ');
+  f.style.width = '250px';
+  void document.body.offsetWidth;
+  r.afterPageLayout = [w.getComputedStyle(p).color, w.innerWidth, w.matchMedia('(min-width: 400px)').matches].join(' ');
+  f.style.display = 'none';
+  r.hiddenStyle = [w.getComputedStyle(p).color, JSON.stringify(d.body.innerText)].join(' ');
+  document.title = JSON.stringify(r);
+};
+</script></body></html>

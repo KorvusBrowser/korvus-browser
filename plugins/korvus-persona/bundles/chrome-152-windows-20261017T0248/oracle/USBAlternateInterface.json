@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "USBAlternateInterface",
+    "member": "constructor",
+    "expr": "new USBAlternateInterface()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "alternateSetting",
+    "expr": "USBAlternateInterface.prototype.alternateSetting",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "alternateSetting",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"alternateSetting\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceClass",
+    "expr": "USBAlternateInterface.prototype.interfaceClass",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceClass",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceClass\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceSubclass",
+    "expr": "USBAlternateInterface.prototype.interfaceSubclass",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceSubclass",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceSubclass\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceProtocol",
+    "expr": "USBAlternateInterface.prototype.interfaceProtocol",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceProtocol",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceProtocol\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceName",
+    "expr": "USBAlternateInterface.prototype.interfaceName",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceName",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceName\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "endpoints",
+    "expr": "USBAlternateInterface.prototype.endpoints",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "endpoints",
+    "expr": "Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"endpoints\").get.call(Object.create(USBAlternateInterface.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "alternateSetting",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"alternateSetting\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "alternateSetting",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"alternateSetting\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceClass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceClass\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceClass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceClass\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceSubclass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceSubclass\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceSubclass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceSubclass\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceProtocol",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceProtocol\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceProtocol",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceProtocol\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceName\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "interfaceName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"interfaceName\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "endpoints",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"endpoints\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBAlternateInterface",
+    "member": "endpoints",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBAlternateInterface.prototype, \"endpoints\").get.call(Object.create(USBAlternateInterface.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "StorageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object StorageEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new StorageEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "key",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.key; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "oldValue",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.oldValue; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "newValue",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.newValue; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "url",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.url; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "storageArea",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.storageArea; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "initStorageEvent",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.initStorageEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StorageEvent",
+    "member": "initStorageEvent",
+    "expr": "(() => { const o = new StorageEvent(\"x\"); return o.initStorageEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "iface": "NavigatorUAData",
+    "member": "constructor",
+    "expr": "new NavigatorUAData()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "mobile",
+    "expr": "(() => { const o = navigator.userAgentData; return o.mobile; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "brands",
+    "expr": "(() => { const o = navigator.userAgentData; return Object.prototype.toString.call(o.brands); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "getHighEntropyValues",
+    "expr": "(() => { const o = navigator.userAgentData; return Object.prototype.toString.call(o.getHighEntropyValues([])); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "toJSON",
+    "expr": "(() => { const o = navigator.userAgentData; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "getHighEntropyValues",
+    "expr": "(async () => { const o = navigator.userAgentData; return Object.prototype.toString.call(await o.getHighEntropyValues([])); })()",
+    "expected": "[object Object]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorUAData",
+    "member": "getHighEntropyValues",
+    "expr": "(async () => { const o = navigator.userAgentData; return await o.getHighEntropyValues(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

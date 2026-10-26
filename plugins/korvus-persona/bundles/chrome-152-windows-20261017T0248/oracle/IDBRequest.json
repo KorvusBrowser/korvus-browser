@@ -1,0 +1,135 @@
+[
+  {
+    "iface": "IDBRequest",
+    "member": "constructor",
+    "expr": "new IDBRequest()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "result",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"result\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "result",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"result\").get.name",
+    "expected": "get result",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "error",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"error\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "error",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"error\").get.name",
+    "expected": "get error",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "source",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"source\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "source",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"source\").get.name",
+    "expected": "get source",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "transaction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"transaction\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "transaction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"transaction\").get.name",
+    "expected": "get transaction",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "readyState",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"readyState\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "readyState",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"readyState\").get.name",
+    "expected": "get readyState",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onsuccess",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onsuccess\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onsuccess",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onsuccess\").get.name",
+    "expected": "get onsuccess",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onsuccess",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onsuccess\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onsuccess",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onsuccess\").set.call(Object.create(IDBRequest.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onerror\").get.call(Object.create(IDBRequest.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onerror\").get.name",
+    "expected": "get onerror",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onerror\").set.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBRequest",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(IDBRequest.prototype, \"onerror\").set.call(Object.create(IDBRequest.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

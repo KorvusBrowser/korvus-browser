@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "Attr",
+    "member": "constructor",
+    "expr": "new Attr()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "namespaceURI",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.namespaceURI; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "prefix",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.prefix; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "localName",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.localName; })()",
+    "expected": "a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.name; })()",
+    "expected": "a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "value",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.value; })()",
+    "expected": "b",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "value",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "specified",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return o.specified; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Attr",
+    "member": "ownerElement",
+    "expr": "(() => { const o = (() => { const e = document.createElement(\"div\"); e.setAttribute(\"a\", \"b\"); return e.getAttributeNode(\"a\"); })(); return Object.prototype.toString.call(o.ownerElement); })()",
+    "expected": "[object HTMLDivElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

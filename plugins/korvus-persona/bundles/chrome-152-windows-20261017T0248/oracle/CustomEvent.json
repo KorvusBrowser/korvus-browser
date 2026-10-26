@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "CustomEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CustomEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CustomEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CustomEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CustomEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CustomEvent",
+    "member": "detail",
+    "expr": "(() => { const o = new CustomEvent(\"x\"); return o.detail; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CustomEvent",
+    "member": "initCustomEvent",
+    "expr": "(() => { const o = new CustomEvent(\"x\"); return o.initCustomEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CustomEvent",
+    "member": "initCustomEvent",
+    "expr": "(() => { const o = new CustomEvent(\"x\"); return o.initCustomEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

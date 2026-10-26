@@ -1,0 +1,6 @@
+<!doctype html><html><body><script>
+var f = document.fonts, R = { FontFaceSet: typeof FontFaceSet, fonts: typeof f };
+if (f) { R.tag = Object.prototype.toString.call(f); R.ctor = f.constructor && f.constructor.name; R.status = f.status; R.ready = Object.prototype.toString.call(f.ready);
+  R.load = Object.prototype.toString.call(f.load('normal 1px "No Such Font"')); R.check = f.check('12px serif'); R.size = f.size; R.protoOwn = Object.getOwnPropertyNames(Object.getPrototypeOf(f)).sort().join(','); }
+window.R = JSON.stringify(R);
+</script></body></html>

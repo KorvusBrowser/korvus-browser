@@ -1,0 +1,5 @@
+[
+ "blob: \"Error: x\\n    at f (BLOBURL:1:23)\\n    at blob:ORIGIN/UUID:2:39\"",
+ "net: \"Error: x\\n    at f (ORIGIN/wstack.js:1:23)\\n    at ORIGIN/wstack.js:2:38\"",
+ "rel import: TypeError: Failed to resolve module specifier './nope.js'"
+]

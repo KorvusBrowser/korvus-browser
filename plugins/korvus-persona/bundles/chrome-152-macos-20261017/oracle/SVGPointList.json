@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "SVGPointList",
+    "member": "constructor",
+    "expr": "new SVGPointList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "length",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "numberOfItems",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.numberOfItems; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "clear",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "initialize",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.initialize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "getItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.getItem(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "getItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.getItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "insertItemBefore",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.insertItemBefore(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "replaceItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.replaceItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "removeItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.removeItem(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "removeItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.removeItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGPointList",
+    "member": "appendItem",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\").points; return o.appendItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

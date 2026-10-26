@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "FormDataEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new FormDataEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FormDataEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new FormDataEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "FormDataEvent",
+    "member": "formData",
+    "expr": "(() => { const o = new FormDataEvent(\"x\", { formData: new FormData() }); return Object.prototype.toString.call(o.formData); })()",
+    "expected": "[object FormData]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

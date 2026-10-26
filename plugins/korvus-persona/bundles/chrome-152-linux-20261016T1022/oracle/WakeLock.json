@@ -1,0 +1,24 @@
+[
+  {
+    "iface": "WakeLock",
+    "member": "constructor",
+    "expr": "new WakeLock()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WakeLock",
+    "member": "request",
+    "expr": "(() => { const o = navigator.wakeLock; return Object.prototype.toString.call(o.request()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WakeLock",
+    "member": "request",
+    "expr": "(async () => { const o = navigator.wakeLock; return Object.prototype.toString.call(await o.request()); })()",
+    "expected": "[object WakeLockSentinel]",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

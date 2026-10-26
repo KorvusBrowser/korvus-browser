@@ -1,0 +1,23 @@
+<!doctype html><html><body><div id=pageonly></div>
+<iframe id=f src="c.html"></iframe><iframe id=g src="plain.html"></iframe>
+<script>
+// REALWEB C6 (H20 follow-up): a frame's Window has the FRAME document's named objects -- its ids and its
+// named forms/images, from its own scripts and through contentWindow -- and neither document's names
+// reach the other's Window. A script-less frame has them too.
+window.R = null;
+var t = function (v) { return v === undefined ? 'undefined' : Object.prototype.toString.call(v) + (v && v.length !== undefined && !(v instanceof Window) ? ':' + v.length : ''); };
+var n = 0;
+function done() {
+  if (++n < 2) return;
+  var w = f.contentWindow, d = f.contentDocument;
+  var x = d.createElement('div'); x.id = 'later'; d.body.appendChild(x);
+  var fm = d.createElement('form'); fm.name = 'laterform'; d.body.appendChild(fm);
+  window.R = JSON.stringify({
+    inFrame: w.SAW,
+    viaWindow: { ff: t(w.ff), fdiv: t(w.fdiv), ftwin: t(w.ftwin), fimg: t(w.fimg), later: t(w.later), laterform: t(w.laterform), pageonly: t(w.pageonly), inFdiv: 'fdiv' in w },
+    plain: { gdiv: t(g.contentWindow.gdiv), gform: t(g.contentWindow.gform) },
+    page: { fdiv: t(window.fdiv), ff: t(window.ff), later: t(window.later), gdiv: t(window.gdiv), pageonly: t(window.pageonly) }
+  });
+}
+f.onload = done; g.onload = done;
+</script></body></html>

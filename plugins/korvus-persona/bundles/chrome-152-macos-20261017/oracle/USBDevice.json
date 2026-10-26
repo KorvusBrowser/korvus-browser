@@ -1,0 +1,982 @@
+[
+  {
+    "iface": "USBDevice",
+    "member": "constructor",
+    "expr": "new USBDevice()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMajor",
+    "expr": "USBDevice.prototype.usbVersionMajor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMajor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMajor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMinor",
+    "expr": "USBDevice.prototype.usbVersionMinor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMinor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMinor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionSubminor",
+    "expr": "USBDevice.prototype.usbVersionSubminor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionSubminor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionSubminor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceClass",
+    "expr": "USBDevice.prototype.deviceClass",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceClass",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceClass\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceSubclass",
+    "expr": "USBDevice.prototype.deviceSubclass",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceSubclass",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceSubclass\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceProtocol",
+    "expr": "USBDevice.prototype.deviceProtocol",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceProtocol",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceProtocol\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "vendorId",
+    "expr": "USBDevice.prototype.vendorId",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "vendorId",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"vendorId\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productId",
+    "expr": "USBDevice.prototype.productId",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productId",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productId\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMajor",
+    "expr": "USBDevice.prototype.deviceVersionMajor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMajor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMajor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMinor",
+    "expr": "USBDevice.prototype.deviceVersionMinor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMinor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMinor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionSubminor",
+    "expr": "USBDevice.prototype.deviceVersionSubminor",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionSubminor",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionSubminor\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "manufacturerName",
+    "expr": "USBDevice.prototype.manufacturerName",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "manufacturerName",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"manufacturerName\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productName",
+    "expr": "USBDevice.prototype.productName",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productName",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productName\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "serialNumber",
+    "expr": "USBDevice.prototype.serialNumber",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "serialNumber",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"serialNumber\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configuration",
+    "expr": "USBDevice.prototype.configuration",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configuration",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configuration\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configurations",
+    "expr": "USBDevice.prototype.configurations",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configurations",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configurations\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "opened",
+    "expr": "USBDevice.prototype.opened",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "opened",
+    "expr": "Object.getOwnPropertyDescriptor(USBDevice.prototype, \"opened\").get.call(Object.create(USBDevice.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "claimInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.claimInterface.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "claimInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.claimInterface.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "clearHalt",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.clearHalt.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "clearHalt",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.clearHalt.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.close.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "close",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.close.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferIn.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferIn.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferOut.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferOut.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.forget.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "forget",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.forget.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferIn.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferIn.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferOut.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferOut.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.open.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "open",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.open.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "releaseInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.releaseInterface.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "releaseInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.releaseInterface.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "reset",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.reset.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "reset",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.reset.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectAlternateInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectAlternateInterface.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectAlternateInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectAlternateInterface.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectConfiguration",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectConfiguration.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectConfiguration",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectConfiguration.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferIn.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferIn.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferOut.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferOut.call(Object.create(USBDevice.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "claimInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.claimInterface.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "clearHalt",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.clearHalt.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferIn.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.controlTransferOut.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferIn.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.isochronousTransferOut.call({}, 1, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "releaseInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.releaseInterface.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectAlternateInterface",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectAlternateInterface.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectConfiguration",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.selectConfiguration.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferIn",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferIn.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferOut",
+    "expr": "Object.prototype.toString.call(USBDevice.prototype.transferOut.call({}, 1, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMajor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMajor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMajor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMajor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMinor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMinor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionMinor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionMinor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionSubminor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionSubminor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "usbVersionSubminor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"usbVersionSubminor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceClass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceClass\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceClass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceClass\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceSubclass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceSubclass\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceSubclass",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceSubclass\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceProtocol",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceProtocol\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceProtocol",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceProtocol\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "vendorId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"vendorId\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "vendorId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"vendorId\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productId\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productId",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productId\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMajor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMajor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMajor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMajor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMinor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMinor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionMinor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionMinor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionSubminor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionSubminor\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "deviceVersionSubminor",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"deviceVersionSubminor\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "manufacturerName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"manufacturerName\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "manufacturerName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"manufacturerName\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productName\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "productName",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"productName\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "serialNumber",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"serialNumber\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "serialNumber",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"serialNumber\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configuration",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configuration\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configuration",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configuration\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configurations",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configurations\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "configurations",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"configurations\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "opened",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"opened\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "opened",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(USBDevice.prototype, \"opened\").get.call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "claimInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"claimInterface\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "claimInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"claimInterface\"].call(Object.create(USBDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "clearHalt",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"clearHalt\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "clearHalt",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"clearHalt\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "close",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"close\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "close",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"close\"].call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"controlTransferIn\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"controlTransferIn\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"controlTransferOut\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "controlTransferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"controlTransferOut\"].call(Object.create(USBDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "forget",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"forget\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "forget",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"forget\"].call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"isochronousTransferIn\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"isochronousTransferIn\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"isochronousTransferOut\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "isochronousTransferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"isochronousTransferOut\"].call(Object.create(USBDevice.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "open",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"open\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "open",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"open\"].call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "releaseInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"releaseInterface\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "releaseInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"releaseInterface\"].call(Object.create(USBDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "reset",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"reset\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "reset",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"reset\"].call(Object.create(USBDevice.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectAlternateInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"selectAlternateInterface\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectAlternateInterface",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"selectAlternateInterface\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectConfiguration",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"selectConfiguration\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "selectConfiguration",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"selectConfiguration\"].call(Object.create(USBDevice.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"transferIn\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferIn",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"transferIn\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"transferOut\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USBDevice",
+    "member": "transferOut",
+    "expr": "(() => { try { const v = USBDevice.prototype[\"transferOut\"].call(Object.create(USBDevice.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

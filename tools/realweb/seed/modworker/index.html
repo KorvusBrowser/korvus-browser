@@ -1,0 +1,11 @@
+<!doctype html><html><body><script>
+// REALWEB H21: a worker constructed with {type: 'module'} is a MODULE worker (imports, from a URL or a blob:).
+window.R=[];
+try { var w=new Worker('w.mjs',{type:'module'}); w.onmessage=function(e){R.push(e.data)}; w.onerror=function(e){R.push('worker error: '+e.message)}; } catch(e){ R.push('ctor threw '+e); }
+var s=document.createElement('script'); s.type='module'; s.textContent="import {v} from './dep.mjs'; window.R.push('inserted inline module v='+v)"; document.body.appendChild(s);
+var s2=document.createElement('script'); s2.type='module'; s2.src='data:text/javascript,window.R.push("data module")'; document.body.appendChild(s2);
+var bl=URL.createObjectURL(new Blob(["import {v} from '"+location.origin+"/dep.mjs'; postMessage('blob module worker v='+v)"],{type:'text/javascript'}));
+try { var w2=new Worker(bl,{type:'module'}); w2.onmessage=function(e){R.push(e.data)}; w2.onerror=function(e){R.push('blob worker error: '+e.message)}; } catch(e){ R.push('blob ctor threw '+e); }
+addEventListener('error', function(e){ R.push('window error: '+e.message) });
+setTimeout(function(){ document.title=JSON.stringify(R.sort()) }, 1500);
+</script></body></html>

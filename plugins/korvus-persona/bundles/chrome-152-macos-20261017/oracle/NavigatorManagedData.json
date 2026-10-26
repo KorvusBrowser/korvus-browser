@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "NavigatorManagedData",
+    "member": "constructor",
+    "expr": "new NavigatorManagedData()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getAnnotatedAssetId",
+    "expr": "(() => { const o = navigator.managed; return o.getAnnotatedAssetId(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getAnnotatedAssetId",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getAnnotatedAssetId()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getAnnotatedLocation",
+    "expr": "(() => { const o = navigator.managed; return o.getAnnotatedLocation(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getAnnotatedLocation",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getAnnotatedLocation()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getDirectoryId",
+    "expr": "(() => { const o = navigator.managed; return o.getDirectoryId(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getDirectoryId",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getDirectoryId()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getHostname",
+    "expr": "(() => { const o = navigator.managed; return o.getHostname(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getHostname",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getHostname()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getSerialNumber",
+    "expr": "(() => { const o = navigator.managed; return o.getSerialNumber(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getSerialNumber",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getSerialNumber()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "getManagedConfiguration",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.getManagedConfiguration([])); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "onmanagedconfigurationchange",
+    "expr": "(() => { const o = navigator.managed; return o.onmanagedconfigurationchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NavigatorManagedData",
+    "member": "onmanagedconfigurationchange",
+    "expr": "(() => { const o = navigator.managed; return Object.prototype.toString.call(o.onmanagedconfigurationchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,1 @@
+(function () { var k = new URL(document.currentScript.src).searchParams.get('k'); Promise.resolve().then(function () { var c = document.currentScript; R[k + '_mt'] = c ? c.tagName : String(c); }); })();

@@ -1,0 +1,13 @@
+[
+ "C1 msg: self.onerror [\"Uncaught Error: ctop\",\"blob:\",1,118,\"Error: ctop\"]",
+ "C1 page error: [\"ErrorEvent\",\"Uncaught Error: ctop\",\"URL\",1,118,\"null\",true,true]",
+ "C2 msg: alive",
+ "C3 page error: [\"ErrorEvent\",\"Uncaught str\",\"URL\",1,1,\"null\",true,true]",
+ "C4 onerror prop called",
+ "C4 page error: [\"ErrorEvent\",\"Uncaught SyntaxError: t4\",\"URL\",1,20,\"null\",true,true]",
+ "C5 page error: [\"ErrorEvent\",\"Uncaught SyntaxError: Unexpected token ';'\",\"URL\",1,9,\"null\",true,true]",
+ "L1 page error: [\"Event\",null,null,null,null,\"undefined\",true,true]",
+ "M1 msg: alive",
+ "M1 msg: self.onerror [\"Uncaught RangeError: modtop\",\"blob:\",1,256,\"RangeError: modtop\"]",
+ "M1 page error: [\"ErrorEvent\",\"Uncaught RangeError: modtop\",\"URL\",1,256,\"null\",true,true]"
+]

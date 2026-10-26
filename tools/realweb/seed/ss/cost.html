@@ -1,0 +1,26 @@
+<!doctype html><title>pending</title><body><div id="hosts"></div><div id="light"></div><script>
+const R = {};
+const time = (k, f) => { const t = performance.now(); try { f(); R[k] = Math.round(performance.now() - t); } catch (e) { R[k] = 'THROW ' + e.message; } };
+// The shape of a web-component page (www.salesforce.com, REALWEB P3): one <style> per shadow root, the
+// same rules in every one, and a light DOM that script reads styles and boxes back from.
+const rules = [':host{display:block}', ':host([variant="primary"]){color:rgb(1,2,3)}', '[part~="button"]{border-top:1px solid}',
+  '[part~="button"]:hover{color:red}', '::slotted([slot="start"]){margin:0}'];
+for (let i = 0; i < 35; i++) rules.push('[type-style="t' + i + '"]{padding-left:' + i + 'px}');
+const SHEET = rules.join('\n');
+const hostsEl = document.getElementById('hosts'), hosts = [];
+time('attach_100', () => {
+  for (let i = 0; i < 100; i++) {
+    const h = document.createElement('x-card'); h.setAttribute('variant', 'primary'); hostsEl.appendChild(h);
+    h.attachShadow({mode: 'open'}).innerHTML = '<style>' + SHEET + '</style><div part="button" type-style="t3"><span>t</span></div>';
+    hosts.push(h);
+  }
+});
+const light = document.getElementById('light');
+for (let i = 0; i < 300; i++) { const d = document.createElement('div'); d.setAttribute('type-style', 't' + (i % 35)); d.textContent = 'x'; light.appendChild(d); }
+const probe = light.lastChild;
+time('sheet_read_then_layout_20', () => { let n = 0; for (let i = 0; i < 20; i++) { n += hosts[i].shadowRoot.firstChild.sheet.cssRules.length; n += probe.offsetWidth; } });
+time('mutate_then_gcs_300', () => { let s = 0; for (let i = 0; i < 300; i++) { probe.setAttribute('data-i', i); s += getComputedStyle(probe).paddingLeft.length; } });
+time('mutate_then_layout_20', () => { let s = 0; for (let i = 0; i < 20; i++) { probe.setAttribute('data-j', i); s += probe.offsetHeight; } });
+time('shadow_gcs_100', () => { let s = 0; for (let i = 0; i < 100; i++) s += getComputedStyle(hosts[i].shadowRoot.lastChild).borderTopWidth.length; });
+document.title = JSON.stringify(R);
+</script>

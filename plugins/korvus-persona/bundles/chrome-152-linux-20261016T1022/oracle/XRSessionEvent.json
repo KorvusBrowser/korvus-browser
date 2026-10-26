@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "XRSessionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRSessionEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSessionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRSessionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSessionEvent",
+    "member": "session",
+    "expr": "XRSessionEvent.prototype.session",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSessionEvent",
+    "member": "session",
+    "expr": "Object.getOwnPropertyDescriptor(XRSessionEvent.prototype, \"session\").get.call(Object.create(XRSessionEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSessionEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSessionEvent.prototype, \"session\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSessionEvent",
+    "member": "session",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSessionEvent.prototype, \"session\").get.call(Object.create(XRSessionEvent.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

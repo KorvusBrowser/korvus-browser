@@ -1,0 +1,3 @@
+Set-Cookie: laxc=1; SameSite=Lax; Path=/
+Set-Cookie: nonec=1; SameSite=None; Secure; Path=/
+Cache-Control: no-store

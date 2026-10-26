@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGViewElement",
+    "member": "constructor",
+    "expr": "new SVGViewElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGViewElement",
+    "member": "viewBox",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"view\"); return Object.prototype.toString.call(o.viewBox); })()",
+    "expected": "[object SVGAnimatedRect]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGViewElement",
+    "member": "preserveAspectRatio",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"view\"); return Object.prototype.toString.call(o.preserveAspectRatio); })()",
+    "expected": "[object SVGAnimatedPreserveAspectRatio]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

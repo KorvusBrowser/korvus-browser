@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "ResizeObserverSize",
+    "member": "constructor",
+    "expr": "new ResizeObserverSize()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

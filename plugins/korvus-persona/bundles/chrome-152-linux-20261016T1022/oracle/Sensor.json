@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "Sensor",
+    "member": "constructor",
+    "expr": "new Sensor()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "activated",
+    "expr": "(() => { const o = new Accelerometer(); return o.activated; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "hasReading",
+    "expr": "(() => { const o = new Accelerometer(); return o.hasReading; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "timestamp",
+    "expr": "(() => { const o = new Accelerometer(); return o.timestamp; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "timestamp",
+    "expr": "(() => { const o = new Accelerometer(); return Object.prototype.toString.call(o.timestamp); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "start",
+    "expr": "(() => { const o = new Accelerometer(); return o.start(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "stop",
+    "expr": "(() => { const o = new Accelerometer(); return o.stop(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onreading",
+    "expr": "(() => { const o = new Accelerometer(); return o.onreading; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onreading",
+    "expr": "(() => { const o = new Accelerometer(); return Object.prototype.toString.call(o.onreading); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onactivate",
+    "expr": "(() => { const o = new Accelerometer(); return o.onactivate; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onactivate",
+    "expr": "(() => { const o = new Accelerometer(); return Object.prototype.toString.call(o.onactivate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onerror",
+    "expr": "(() => { const o = new Accelerometer(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Sensor",
+    "member": "onerror",
+    "expr": "(() => { const o = new Accelerometer(); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

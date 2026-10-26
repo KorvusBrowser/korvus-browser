@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "XRLightEstimate",
+    "member": "constructor",
+    "expr": "new XRLightEstimate()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "sphericalHarmonicsCoefficients",
+    "expr": "XRLightEstimate.prototype.sphericalHarmonicsCoefficients",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "sphericalHarmonicsCoefficients",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"sphericalHarmonicsCoefficients\").get.call(Object.create(XRLightEstimate.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightDirection",
+    "expr": "XRLightEstimate.prototype.primaryLightDirection",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightDirection",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightDirection\").get.call(Object.create(XRLightEstimate.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightIntensity",
+    "expr": "XRLightEstimate.prototype.primaryLightIntensity",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightIntensity",
+    "expr": "Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightIntensity\").get.call(Object.create(XRLightEstimate.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "sphericalHarmonicsCoefficients",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"sphericalHarmonicsCoefficients\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "sphericalHarmonicsCoefficients",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"sphericalHarmonicsCoefficients\").get.call(Object.create(XRLightEstimate.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightDirection",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightDirection\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightDirection",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightDirection\").get.call(Object.create(XRLightEstimate.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightIntensity",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightIntensity\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRLightEstimate",
+    "member": "primaryLightIntensity",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRLightEstimate.prototype, \"primaryLightIntensity\").get.call(Object.create(XRLightEstimate.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

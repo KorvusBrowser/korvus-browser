@@ -1,0 +1,331 @@
+[
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLIFrameElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "constructor",
+    "expr": "new HTMLIFrameElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "credentialless",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.credentialless; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "credentialless",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.credentialless = true, o.credentialless); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "connectionAllowlist",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.connectionAllowlist; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "connectionAllowlist",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.connectionAllowlist = \"x\", o.connectionAllowlist); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "csp",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.csp; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "csp",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.csp = \"x\", o.csp); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "srcdoc",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.srcdoc; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "allow",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.allow; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "allow",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.allow = \"x\", o.allow); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "allowFullscreen",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.allowFullscreen; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "allowFullscreen",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.allowFullscreen = true, o.allowFullscreen); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.height; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.height = \"x\", o.height); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.referrerPolicy; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.referrerPolicy = \"x\", o.referrerPolicy); })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "loading",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.loading; })()",
+    "expected": "auto",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "loading",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.loading = \"x\", o.loading); })()",
+    "expected": "auto",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "contentDocument",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.contentDocument; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "contentWindow",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.contentWindow; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "getSVGDocument",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.getSVGDocument(); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "scrolling",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.scrolling; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "scrolling",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.scrolling = \"x\", o.scrolling); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "frameBorder",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.frameBorder; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "frameBorder",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.frameBorder = \"x\", o.frameBorder); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "longDesc",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.longDesc; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "marginHeight",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.marginHeight; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "marginHeight",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.marginHeight = \"x\", o.marginHeight); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "marginWidth",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.marginWidth; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "marginWidth",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.marginWidth = \"x\", o.marginWidth); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "permissionsPolicy",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.permissionsPolicy; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "privateToken",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return o.privateToken; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "privateToken",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return (o.privateToken = \"x\", o.privateToken); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "srcdoc",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.srcdoc); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "sandbox",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.sandbox); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "contentDocument",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.contentDocument); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "contentWindow",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.contentWindow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "getSVGDocument",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.getSVGDocument()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLIFrameElement",
+    "member": "permissionsPolicy",
+    "expr": "(() => { const o = document.createElement(\"iframe\"); return Object.prototype.toString.call(o.permissionsPolicy); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

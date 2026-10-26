@@ -1,0 +1,149 @@
+[
+  {
+    "iface": "XPathResult",
+    "member": "ANY_TYPE",
+    "expr": "XPathResult.ANY_TYPE",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "NUMBER_TYPE",
+    "expr": "XPathResult.NUMBER_TYPE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "STRING_TYPE",
+    "expr": "XPathResult.STRING_TYPE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "BOOLEAN_TYPE",
+    "expr": "XPathResult.BOOLEAN_TYPE",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "UNORDERED_NODE_ITERATOR_TYPE",
+    "expr": "XPathResult.UNORDERED_NODE_ITERATOR_TYPE",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "ORDERED_NODE_ITERATOR_TYPE",
+    "expr": "XPathResult.ORDERED_NODE_ITERATOR_TYPE",
+    "expected": 5,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "UNORDERED_NODE_SNAPSHOT_TYPE",
+    "expr": "XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE",
+    "expected": 6,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "ORDERED_NODE_SNAPSHOT_TYPE",
+    "expr": "XPathResult.ORDERED_NODE_SNAPSHOT_TYPE",
+    "expected": 7,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "ANY_UNORDERED_NODE_TYPE",
+    "expr": "XPathResult.ANY_UNORDERED_NODE_TYPE",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "FIRST_ORDERED_NODE_TYPE",
+    "expr": "XPathResult.FIRST_ORDERED_NODE_TYPE",
+    "expected": 9,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "constructor",
+    "expr": "new XPathResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "resultType",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.resultType; })()",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "numberValue",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.numberValue; })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "stringValue",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.stringValue; })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "booleanValue",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.booleanValue; })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "singleNodeValue",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.singleNodeValue; })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "invalidIteratorState",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.invalidIteratorState; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "snapshotLength",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.snapshotLength; })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "iterateNext",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.iterateNext(); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "snapshotItem",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.snapshotItem(1); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XPathResult",
+    "member": "snapshotItem",
+    "expr": "(() => { const o = document.evaluate(\"//a\", document, null, 0, null); return o.snapshotItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

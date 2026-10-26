@@ -1,0 +1,7 @@
+(async () => {
+  const hook = `(() => { window.__tc = []; for (const P of [HTMLScriptElement.prototype, Node.prototype]) { const d = Object.getOwnPropertyDescriptor(P, 'textContent'); if (!d || !d.get) continue; Object.defineProperty(P, 'textContent', { ...d, get() { if (this instanceof HTMLScriptElement) window.__tc.push(this.id || '?'); return d.get.call(this); } }); } for (const P of [HTMLScriptElement.prototype]) { const d = Object.getOwnPropertyDescriptor(P, 'text'); Object.defineProperty(P, 'text', { ...d, get() { window.__tc.push('text:' + (this.id || '?')); return d.get.call(this); } }); } })();`;
+  const body = '<script>' + hook + '<\/script><script id=s2>window.__ran2 = 1<\/script><script id=s3 type=module>window.__ran3 = 1<\/script><div id=h></div><script id=s4>const sr = document.getElementById("h").attachShadow({mode:"open"}); const sc = document.createElement("script"); sc.id = "s5"; sc.textContent = "window.__ran5 = 1"; sr.appendChild(sc); const d = document.createElement("script"); d.id = "s6"; d.appendChild(document.createTextNode("window.__ran6 = 1")); document.body.appendChild(d);<\/script>';
+  const f = document.createElement('iframe'); f.srcdoc = body; document.body.appendChild(f);
+  await new Promise((r) => f.onload = r); await new Promise((r) => setTimeout(r, 300));
+  const w = f.contentWindow; return [w.__tc.slice().sort(), !!w.__ran2, !!w.__ran3, !!w.__ran5, !!w.__ran6];
+})()

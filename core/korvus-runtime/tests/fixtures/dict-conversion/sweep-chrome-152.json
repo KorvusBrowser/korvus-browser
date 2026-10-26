@@ -1,0 +1,1097 @@
+[
+ [
+  "new AnimationEvent",
+  "bubbles,cancelable,composed,animation,animationName,elapsedTime,pseudoElement",
+  "ok"
+ ],
+ [
+  "new AnimationPlaybackEvent",
+  "bubbles,cancelable,composed,currentTime,timelineTime",
+  "ok"
+ ],
+ [
+  "new AudioProcessingEvent",
+  "bubbles,cancelable,composed,inputBuffer",
+  "TypeError: Failed to construct 'AudioProcessingEvent': Failed to read the 'inputBuffer' property from 'AudioProcessingEventInit': Required member is undefined."
+ ],
+ [
+  "new BeforeInstallPromptEvent",
+  "bubbles,cancelable,composed,platforms",
+  "ok"
+ ],
+ [
+  "new BeforeUnloadEvent",
+  "",
+  "TypeError: Failed to construct 'BeforeUnloadEvent': Illegal constructor"
+ ],
+ [
+  "new BlobEvent",
+  "bubbles,cancelable,composed,data",
+  "TypeError: Failed to construct 'BlobEvent': Failed to read the 'data' property from 'BlobEventInit': Required member is undefined."
+ ],
+ [
+  "new CharacterBoundsUpdateEvent",
+  "bubbles,cancelable,composed,rangeEnd,rangeStart",
+  "ok"
+ ],
+ [
+  "new ClipboardChangeEvent",
+  "",
+  "TypeError: Failed to construct 'ClipboardChangeEvent': The provided value is not of type 'ClipboardChangeEventInit'."
+ ],
+ [
+  "new ClipboardEvent",
+  "bubbles,cancelable,composed,clipboardData",
+  "ok"
+ ],
+ [
+  "new CloseEvent",
+  "bubbles,cancelable,composed,code,reason,wasClean",
+  "ok"
+ ],
+ [
+  "new CommandEvent",
+  "bubbles,cancelable,composed,command,source",
+  "ok"
+ ],
+ [
+  "new CompositionEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,data",
+  "ok"
+ ],
+ [
+  "new ContentVisibilityAutoStateChangeEvent",
+  "bubbles,cancelable,composed,skipped",
+  "ok"
+ ],
+ [
+  "new CookieChangeEvent",
+  "bubbles,cancelable,composed,changed,deleted",
+  "ok"
+ ],
+ [
+  "new CustomEvent",
+  "bubbles,cancelable,composed,detail",
+  "ok"
+ ],
+ [
+  "new DeviceMotionEvent",
+  "bubbles,cancelable,composed,acceleration,accelerationIncludingGravity,interval,rotationRate",
+  "ok"
+ ],
+ [
+  "new DeviceOrientationEvent",
+  "bubbles,cancelable,composed,absolute,alpha,beta,gamma",
+  "ok"
+ ],
+ [
+  "new DocumentPictureInPictureEvent",
+  "bubbles,cancelable,composed,window",
+  "TypeError: Failed to construct 'DocumentPictureInPictureEvent': Failed to read the 'window' property from 'DocumentPictureInPictureEventInit': Required member is undefined."
+ ],
+ [
+  "new DragEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,button,buttons,clientX,clientY,movementX,movementY,region,relatedTarget,screenX,screenY,dataTransfer",
+  "ok"
+ ],
+ [
+  "new ErrorEvent",
+  "bubbles,cancelable,composed,colno,error,filename,lineno,message",
+  "ok"
+ ],
+ [
+  "new Event",
+  "bubbles,cancelable,composed",
+  "ok"
+ ],
+ [
+  "new FocusEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,relatedTarget",
+  "ok"
+ ],
+ [
+  "new FontFaceSetLoadEvent",
+  "bubbles,cancelable,composed,fontfaces",
+  "ok"
+ ],
+ [
+  "new FormDataEvent",
+  "bubbles,cancelable,composed,formData",
+  "TypeError: Failed to construct 'FormDataEvent': Failed to read the 'formData' property from 'FormDataEventInit': Required member is undefined."
+ ],
+ [
+  "new GPUUncapturedErrorEvent",
+  "bubbles,cancelable,composed,error",
+  "TypeError: Failed to construct 'GPUUncapturedErrorEvent': Failed to read the 'error' property from 'GPUUncapturedErrorEventInit': Required member is undefined."
+ ],
+ [
+  "new GamepadEvent",
+  "bubbles,cancelable,composed,gamepad",
+  "ok"
+ ],
+ [
+  "new HIDConnectionEvent",
+  "bubbles,cancelable,composed,device",
+  "TypeError: Failed to construct 'HIDConnectionEvent': Failed to read the 'device' property from 'HIDConnectionEventInit': Required member is undefined."
+ ],
+ [
+  "new HIDInputReportEvent",
+  "",
+  "TypeError: Failed to construct 'HIDInputReportEvent': Illegal constructor"
+ ],
+ [
+  "new HashChangeEvent",
+  "bubbles,cancelable,composed,newURL,oldURL",
+  "ok"
+ ],
+ [
+  "new IDBVersionChangeEvent",
+  "bubbles,cancelable,composed,dataLoss,newVersion,oldVersion",
+  "ok"
+ ],
+ [
+  "new InputEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,data,dataTransfer,inputType,isComposing,targetRanges",
+  "ok"
+ ],
+ [
+  "new InterestEvent",
+  "bubbles,cancelable,composed,source",
+  "ok"
+ ],
+ [
+  "new KeyboardEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,charCode,code,isComposing,key,keyCode,location,repeat",
+  "ok"
+ ],
+ [
+  "new MIDIConnectionEvent",
+  "bubbles,cancelable,composed,port",
+  "ok"
+ ],
+ [
+  "new MIDIMessageEvent",
+  "bubbles,cancelable,composed,data",
+  "ok"
+ ],
+ [
+  "new MediaEncryptedEvent",
+  "bubbles,cancelable,composed,initData,initDataType",
+  "ok"
+ ],
+ [
+  "new MediaKeyMessageEvent",
+  "bubbles,cancelable,composed,message",
+  "TypeError: Failed to construct 'MediaKeyMessageEvent': Failed to read the 'message' property from 'MediaKeyMessageEventInit': Required member is undefined."
+ ],
+ [
+  "new MediaQueryListEvent",
+  "bubbles,cancelable,composed,matches,media",
+  "ok"
+ ],
+ [
+  "new MediaStreamEvent",
+  "bubbles,cancelable,composed,stream",
+  "ok"
+ ],
+ [
+  "new MediaStreamTrackEvent",
+  "bubbles,cancelable,composed,track",
+  "TypeError: Failed to construct 'MediaStreamTrackEvent': Failed to read the 'track' property from 'MediaStreamTrackEventInit': Required member is undefined."
+ ],
+ [
+  "new MessageEvent",
+  "bubbles,cancelable,composed,data,lastEventId,origin,ports,source,userActivation",
+  "ok"
+ ],
+ [
+  "new MouseEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,button,buttons,clientX,clientY,movementX,movementY,region,relatedTarget,screenX,screenY",
+  "ok"
+ ],
+ [
+  "new NavigateEvent",
+  "bubbles,cancelable,composed,canIntercept,destination",
+  "TypeError: Failed to construct 'NavigateEvent': Failed to read the 'destination' property from 'NavigateEventInit': Required member is undefined."
+ ],
+ [
+  "new NavigationCurrentEntryChangeEvent",
+  "bubbles,cancelable,composed,from",
+  "TypeError: Failed to construct 'NavigationCurrentEntryChangeEvent': Failed to read the 'from' property from 'NavigationCurrentEntryChangeEventInit': Required member is undefined."
+ ],
+ [
+  "new OfflineAudioCompletionEvent",
+  "bubbles,cancelable,composed,renderedBuffer",
+  "TypeError: Failed to construct 'OfflineAudioCompletionEvent': Failed to read the 'renderedBuffer' property from 'OfflineAudioCompletionEventInit': Required member is undefined."
+ ],
+ [
+  "new PageRevealEvent",
+  "bubbles,cancelable,composed,viewTransition",
+  "ok"
+ ],
+ [
+  "new PageSwapEvent",
+  "bubbles,cancelable,composed,activation,viewTransition",
+  "ok"
+ ],
+ [
+  "new PageTransitionEvent",
+  "bubbles,cancelable,composed,persisted",
+  "ok"
+ ],
+ [
+  "new PaymentMethodChangeEvent",
+  "bubbles,cancelable,composed,methodDetails,methodName",
+  "ok"
+ ],
+ [
+  "new PaymentRequestUpdateEvent",
+  "bubbles,cancelable,composed",
+  "ok"
+ ],
+ [
+  "new PictureInPictureEvent",
+  "bubbles,cancelable,composed,pictureInPictureWindow",
+  "TypeError: Failed to construct 'PictureInPictureEvent': Failed to read the 'pictureInPictureWindow' property from 'PictureInPictureEventInit': Required member is undefined."
+ ],
+ [
+  "new PointerEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,button,buttons,clientX,clientY,movementX,movementY,region,relatedTarget,screenX,screenY,altitudeAngle,azimuthAngle,coalescedEvents,height,isPrimary,persistentDeviceId,pointerId,pointerType,predictedEvents,pressure,tangentialPressure,tiltX,tiltY,twist,width",
+  "ok"
+ ],
+ [
+  "new PopStateEvent",
+  "bubbles,cancelable,composed,hasUAVisualTransition,state",
+  "ok"
+ ],
+ [
+  "new PresentationConnectionAvailableEvent",
+  "bubbles,cancelable,composed,connection",
+  "TypeError: Failed to construct 'PresentationConnectionAvailableEvent': Failed to read the 'connection' property from 'PresentationConnectionAvailableEventInit': Required member is undefined."
+ ],
+ [
+  "new PresentationConnectionCloseEvent",
+  "bubbles,cancelable,composed,message,reason",
+  "TypeError: Failed to construct 'PresentationConnectionCloseEvent': Failed to read the 'reason' property from 'PresentationConnectionCloseEventInit': Required member is undefined."
+ ],
+ [
+  "new ProgressEvent",
+  "bubbles,cancelable,composed,lengthComputable,loaded,total",
+  "ok"
+ ],
+ [
+  "new PromiseRejectionEvent",
+  "bubbles,cancelable,composed,promise",
+  "TypeError: Failed to construct 'PromiseRejectionEvent': Failed to read the 'promise' property from 'PromiseRejectionEventInit': Required member is undefined."
+ ],
+ [
+  "new RTCDTMFToneChangeEvent",
+  "bubbles,cancelable,composed,tone",
+  "ok"
+ ],
+ [
+  "new RTCDataChannelEvent",
+  "bubbles,cancelable,composed,channel",
+  "TypeError: Failed to construct 'RTCDataChannelEvent': Failed to read the 'channel' property from 'RTCDataChannelEventInit': Required member is undefined."
+ ],
+ [
+  "new RTCErrorEvent",
+  "bubbles,cancelable,composed,error",
+  "TypeError: Failed to construct 'RTCErrorEvent': Failed to read the 'error' property from 'RTCErrorEventInit': Required member is undefined."
+ ],
+ [
+  "new RTCPeerConnectionIceErrorEvent",
+  "bubbles,cancelable,composed,address,errorCode",
+  "TypeError: Failed to construct 'RTCPeerConnectionIceErrorEvent': Failed to read the 'errorCode' property from 'RTCPeerConnectionIceErrorEventInit': Required member is undefined."
+ ],
+ [
+  "new RTCPeerConnectionIceEvent",
+  "bubbles,cancelable,composed,candidate",
+  "ok"
+ ],
+ [
+  "new RTCTrackEvent",
+  "bubbles,cancelable,composed,receiver",
+  "TypeError: Failed to construct 'RTCTrackEvent': Failed to read the 'receiver' property from 'RTCTrackEventInit': Required member is undefined."
+ ],
+ [
+  "new SecurityPolicyViolationEvent",
+  "bubbles,cancelable,composed,blockedURI,columnNumber,disposition,documentURI,effectiveDirective,lineNumber,originalPolicy,referrer,sample,sourceFile,statusCode,violatedDirective",
+  "ok"
+ ],
+ [
+  "new SensorErrorEvent",
+  "bubbles,cancelable,composed,error",
+  "TypeError: Failed to construct 'SensorErrorEvent': Failed to read the 'error' property from 'SensorErrorEventInit': Required member is undefined."
+ ],
+ [
+  "new SnapEvent",
+  "",
+  "TypeError: Failed to construct 'SnapEvent': Illegal constructor"
+ ],
+ [
+  "new SpeechRecognitionErrorEvent",
+  "bubbles,cancelable,composed,error,message",
+  "ok"
+ ],
+ [
+  "new SpeechRecognitionEvent",
+  "bubbles,cancelable,composed,resultIndex,results",
+  "ok"
+ ],
+ [
+  "new SpeechSynthesisErrorEvent",
+  "bubbles,cancelable,composed,charIndex,charLength,elapsedTime,name,utterance",
+  "TypeError: Failed to construct 'SpeechSynthesisErrorEvent': Failed to read the 'utterance' property from 'SpeechSynthesisEventInit': Required member is undefined."
+ ],
+ [
+  "new SpeechSynthesisEvent",
+  "bubbles,cancelable,composed,charIndex,charLength,elapsedTime,name,utterance",
+  "TypeError: Failed to construct 'SpeechSynthesisEvent': Failed to read the 'utterance' property from 'SpeechSynthesisEventInit': Required member is undefined."
+ ],
+ [
+  "new StorageEvent",
+  "bubbles,cancelable,composed,key,newValue,oldValue,storageArea,url",
+  "ok"
+ ],
+ [
+  "new SubmitEvent",
+  "bubbles,cancelable,composed,submitter",
+  "ok"
+ ],
+ [
+  "new TaskPriorityChangeEvent",
+  "bubbles,cancelable,composed,previousPriority",
+  "TypeError: Failed to construct 'TaskPriorityChangeEvent': Failed to read the 'previousPriority' property from 'TaskPriorityChangeEventInit': Required member is undefined."
+ ],
+ [
+  "new TextEvent",
+  "",
+  "TypeError: Failed to construct 'TextEvent': Illegal constructor"
+ ],
+ [
+  "new TextFormatUpdateEvent",
+  "bubbles,cancelable,composed,textFormats",
+  "ok"
+ ],
+ [
+  "new TextUpdateEvent",
+  "bubbles,cancelable,composed,selectionEnd,selectionStart,text,updateRangeEnd,updateRangeStart",
+  "ok"
+ ],
+ [
+  "new ToggleEvent",
+  "bubbles,cancelable,composed,newState,oldState,source",
+  "ok"
+ ],
+ [
+  "new TouchEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,changedTouches,targetTouches,touches",
+  "ok"
+ ],
+ [
+  "new TrackEvent",
+  "bubbles,cancelable,composed,track",
+  "ok"
+ ],
+ [
+  "new TransitionEvent",
+  "bubbles,cancelable,composed,animation,elapsedTime,propertyName,pseudoElement",
+  "ok"
+ ],
+ [
+  "new UIEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view",
+  "ok"
+ ],
+ [
+  "new USBConnectionEvent",
+  "bubbles,cancelable,composed,device",
+  "TypeError: Failed to construct 'USBConnectionEvent': Failed to read the 'device' property from 'USBConnectionEventInit': Required member is undefined."
+ ],
+ [
+  "new VirtualKeyboardGeometryChangeEvent",
+  "",
+  "ok"
+ ],
+ [
+  "new WebGLContextEvent",
+  "bubbles,cancelable,composed,statusMessage",
+  "ok"
+ ],
+ [
+  "new WheelEvent",
+  "bubbles,cancelable,composed,detail,sourceCapabilities,view,altKey,ctrlKey,metaKey,modifierAltGraph,modifierCapsLock,modifierFn,modifierNumLock,modifierScrollLock,modifierSymbol,shiftKey,button,buttons,clientX,clientY,movementX,movementY,region,relatedTarget,screenX,screenY,deltaMode,deltaX,deltaY,deltaZ,momentum,wheelDeltaX,wheelDeltaY",
+  "ok"
+ ],
+ [
+  "new WindowControlsOverlayGeometryChangeEvent",
+  "bubbles,cancelable,composed,titlebarAreaRect",
+  "TypeError: Failed to construct 'WindowControlsOverlayGeometryChangeEvent': Failed to read the 'titlebarAreaRect' property from 'WindowControlsOverlayGeometryChangeEventInit': Required member is undefined."
+ ],
+ [
+  "new XRInputSourceEvent",
+  "bubbles,cancelable,composed,frame",
+  "TypeError: Failed to construct 'XRInputSourceEvent': Failed to read the 'frame' property from 'XRInputSourceEventInit': Required member is undefined."
+ ],
+ [
+  "new XRInputSourcesChangeEvent",
+  "bubbles,cancelable,composed,added",
+  "TypeError: Failed to construct 'XRInputSourcesChangeEvent': Failed to read the 'added' property from 'XRInputSourcesChangeEventInit': Required member is undefined."
+ ],
+ [
+  "new XRLayerEvent",
+  "bubbles,cancelable,composed,layer",
+  "TypeError: Failed to construct 'XRLayerEvent': Failed to read the 'layer' property from 'XRLayerEventInit': Required member is undefined."
+ ],
+ [
+  "new XRReferenceSpaceEvent",
+  "bubbles,cancelable,composed,referenceSpace",
+  "TypeError: Failed to construct 'XRReferenceSpaceEvent': Failed to read the 'referenceSpace' property from 'XRReferenceSpaceEventInit': Required member is undefined."
+ ],
+ [
+  "new XRSessionEvent",
+  "bubbles,cancelable,composed,session",
+  "TypeError: Failed to construct 'XRSessionEvent': Failed to read the 'session' property from 'XRSessionEventInit': Required member is undefined."
+ ],
+ [
+  "new XRVisibilityMaskChangeEvent",
+  "bubbles,cancelable,composed,eye",
+  "TypeError: Failed to construct 'XRVisibilityMaskChangeEvent': Failed to read the 'eye' property from 'XRVisibilityMaskChangeEventInit': Required member is undefined."
+ ],
+ [
+  "new webkitSpeechRecognitionEvent",
+  "bubbles,cancelable,composed,resultIndex,results",
+  "ok"
+ ],
+ [
+  "new Blob",
+  "endings,type",
+  "ok"
+ ],
+ [
+  "new File",
+  "endings,type,lastModified",
+  "ok"
+ ],
+ [
+  "new TextDecoder",
+  "fatal,ignoreBOM",
+  "ok"
+ ],
+ [
+  "TextDecoder.decode",
+  "stream",
+  "ok"
+ ],
+ [
+  "new TextDecoderStream",
+  "fatal,ignoreBOM",
+  "ok"
+ ],
+ [
+  "new Request",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "ok"
+ ],
+ [
+  "new Response",
+  "headers,status,statusText",
+  "ok"
+ ],
+ [
+  "Response.json",
+  "headers,status,statusText",
+  "ok"
+ ],
+ [
+  "fetch",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "ok"
+ ],
+ [
+  "new Headers",
+  "@Symbol.iterator,ownKeys",
+  "ok"
+ ],
+ [
+  "new Worker",
+  "credentials,name,type",
+  "ok"
+ ],
+ [
+  "new SharedWorker",
+  "credentials,name,type,extendedLifetime,sameSiteCookies",
+  "ok"
+ ],
+ [
+  "new Notification",
+  "actions,badge,body,data,dir,icon,image,lang,renotify,requireInteraction,silent,tag,timestamp,vibrate",
+  "ok"
+ ],
+ [
+  "new IntersectionObserver",
+  "delay,root,rootMargin,scrollMargin,threshold,trackVisibility",
+  "ok"
+ ],
+ [
+  "ResizeObserver.observe",
+  "box",
+  "ok"
+ ],
+ [
+  "MutationObserver.observe",
+  "attributeFilter,attributeOldValue,attributes,characterData,characterDataOldValue,childList,subtree",
+  "TypeError: Failed to execute 'observe' on 'MutationObserver': The options object must set at least one of 'attributes', 'characterData', or 'childList' to true."
+ ],
+ [
+  "PerformanceObserver.observe",
+  "buffered,durationThreshold,entryTypes,type",
+  "TypeError: Failed to execute 'observe' on 'PerformanceObserver': An observe() call must include either entryTypes or type arguments."
+ ],
+ [
+  "performance.mark",
+  "detail,startTime",
+  "ok"
+ ],
+ [
+  "performance.measure",
+  "detail,duration,end,start",
+  "ok"
+ ],
+ [
+  "new PerformanceMark",
+  "detail,startTime",
+  "ok"
+ ],
+ [
+  "addEventListener",
+  "capture,once,passive,signal",
+  "ok"
+ ],
+ [
+  "removeEventListener",
+  "capture",
+  "ok"
+ ],
+ [
+  "getContext 2d",
+  "alpha,antialias,colorSpace,colorType,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,willReadFrequently,xrCompatible",
+  "ok"
+ ],
+ [
+  "getContext webgl",
+  "alpha,antialias,colorSpace,colorType,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,willReadFrequently,xrCompatible",
+  "ok"
+ ],
+ [
+  "getContext webgl2",
+  "alpha,antialias,colorSpace,colorType,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,willReadFrequently,xrCompatible",
+  "ok"
+ ],
+ [
+  "getContext bitmaprenderer",
+  "alpha,antialias,colorSpace,colorType,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,willReadFrequently,xrCompatible",
+  "ok"
+ ],
+ [
+  "OffscreenCanvas.getContext 2d",
+  "alpha,antialias,colorSpace,colorType,depth,desynchronized,failIfMajorPerformanceCaveat,powerPreference,premultipliedAlpha,preserveDrawingBuffer,stencil,willReadFrequently,xrCompatible",
+  "ok"
+ ],
+ [
+  "OffscreenCanvas.convertToBlob",
+  "quality,type",
+  "rejected InvalidStateError: Failed to execute 'convertToBlob' on 'OffscreenCanvas': \"OffscreenCanvas\" has no rendering context."
+ ],
+ [
+  "createImageBitmap",
+  "colorSpaceConversion,imageOrientation,premultiplyAlpha,resizeHeight,resizeQuality,resizeWidth",
+  "ok"
+ ],
+ [
+  "new ImageData",
+  "colorSpace,pixelFormat",
+  "ok"
+ ],
+ [
+  "DOMMatrix.fromMatrix",
+  "a,b,c,d,e,f,m11,m12,m21,m22,m41,m42,is2D,m13,m14,m23,m24,m31,m32,m33,m34,m43,m44",
+  "ok"
+ ],
+ [
+  "DOMMatrixReadOnly.fromMatrix",
+  "a,b,c,d,e,f,m11,m12,m21,m22,m41,m42,is2D,m13,m14,m23,m24,m31,m32,m33,m34,m43,m44",
+  "ok"
+ ],
+ [
+  "DOMPoint.fromPoint",
+  "w,x,y,z",
+  "ok"
+ ],
+ [
+  "DOMRect.fromRect",
+  "height,width,x,y",
+  "ok"
+ ],
+ [
+  "DOMQuad.fromRect",
+  "height,width,x,y",
+  "ok"
+ ],
+ [
+  "DOMQuad.fromQuad",
+  "p1,p2,p3,p4",
+  "ok"
+ ],
+ [
+  "DOMMatrix.transformPoint",
+  "w,x,y,z",
+  "ok"
+ ],
+ [
+  "structuredClone",
+  "transfer",
+  "ok"
+ ],
+ [
+  "postMessage",
+  "transfer,includeUserActivation,delegate,targetOrigin",
+  "ok"
+ ],
+ [
+  "MessagePort.postMessage",
+  "@Symbol.iterator,transfer,includeUserActivation",
+  "ok"
+ ],
+ [
+  "attachShadow",
+  "clonable,customElementRegistry,delegatesFocus,mode",
+  "TypeError: Failed to execute 'attachShadow' on 'Element': Failed to read the 'mode' property from 'ShadowRootInit': Required member is undefined."
+ ],
+ [
+  "scrollIntoView",
+  "behavior,block,container,inline",
+  "ok"
+ ],
+ [
+  "Element.scroll",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "Element.scrollTo",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "Element.scrollBy",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "window.scroll",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "window.scrollTo",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "window.scrollBy",
+  "behavior,left,top",
+  "ok"
+ ],
+ [
+  "focus",
+  "focusVisible,preventScroll",
+  "ok"
+ ],
+ [
+  "getRootNode",
+  "composed",
+  "ok"
+ ],
+ [
+  "createElement",
+  "customElementRegistry,is",
+  "ok"
+ ],
+ [
+  "createElementNS",
+  "customElementRegistry,is",
+  "ok"
+ ],
+ [
+  "customElements.define",
+  "extends",
+  "ok"
+ ],
+ [
+  "checkVisibility",
+  "checkOpacity,checkVisibilityCSS,contentVisibilityAuto,opacityProperty,visibilityProperty",
+  "ok"
+ ],
+ [
+  "getHTML",
+  "serializableShadowRoots,shadowRoots",
+  "ok"
+ ],
+ [
+  "animate",
+  "delay,direction,duration,easing,endDelay,fill,iterationStart,iterations,composite,pseudoElement,id,rangeEnd,rangeStart,timeline",
+  "ok"
+ ],
+ [
+  "getAnimations",
+  "subtree",
+  "ok"
+ ],
+ [
+  "new KeyframeEffect",
+  "delay,direction,duration,easing,endDelay,fill,iterationStart,iterations,composite,pseudoElement",
+  "ok"
+ ],
+ [
+  "new DocumentTimeline",
+  "originTime",
+  "ok"
+ ],
+ [
+  "new ScrollTimeline",
+  "axis,source",
+  "ok"
+ ],
+ [
+  "new ViewTimeline",
+  "axis,inset,subject",
+  "ok"
+ ],
+ [
+  "new FontFace",
+  "ascentOverride,descentOverride,display,featureSettings,lineGapOverride,sizeAdjust,stretch,style,unicodeRange,variant,variationSettings,weight",
+  "ok"
+ ],
+ [
+  "CSS.registerProperty",
+  "inherits",
+  "TypeError: Failed to execute 'registerProperty' on 'CSS': Failed to read the 'inherits' property from 'PropertyDefinition': Required member is undefined."
+ ],
+ [
+  "new CountQueuingStrategy",
+  "highWaterMark",
+  "TypeError: Failed to construct 'CountQueuingStrategy': Failed to read the 'highWaterMark' property from 'QueuingStrategyInit': Required member is undefined."
+ ],
+ [
+  "new AudioContext",
+  "latencyHint,sampleRate,sinkId",
+  "ok"
+ ],
+ [
+  "new OfflineAudioContext",
+  "length",
+  "TypeError: Failed to construct 'OfflineAudioContext': Failed to read the 'length' property from 'OfflineAudioContextOptions': Required member is undefined."
+ ],
+ [
+  "new GainNode",
+  "channelCount,channelCountMode,channelInterpretation,gain",
+  "ok"
+ ],
+ [
+  "new OscillatorNode",
+  "channelCount,channelCountMode,channelInterpretation,detune,frequency,periodicWave,type",
+  "ok"
+ ],
+ [
+  "new AnalyserNode",
+  "channelCount,channelCountMode,channelInterpretation,fftSize,maxDecibels,minDecibels,smoothingTimeConstant",
+  "ok"
+ ],
+ [
+  "new BiquadFilterNode",
+  "channelCount,channelCountMode,channelInterpretation,Q,detune,frequency,gain,type",
+  "ok"
+ ],
+ [
+  "new DynamicsCompressorNode",
+  "channelCount,channelCountMode,channelInterpretation,attack,knee,ratio,release,threshold",
+  "ok"
+ ],
+ [
+  "new AudioBuffer",
+  "length",
+  "TypeError: Failed to construct 'AudioBuffer': Failed to read the 'length' property from 'AudioBufferOptions': Required member is undefined."
+ ],
+ [
+  "new AudioBufferSourceNode",
+  "buffer,detune,loop,loopEnd,loopStart,playbackRate",
+  "ok"
+ ],
+ [
+  "new ConstantSourceNode",
+  "offset",
+  "ok"
+ ],
+ [
+  "new PannerNode",
+  "channelCount,channelCountMode,channelInterpretation,coneInnerAngle,coneOuterAngle,coneOuterGain,distanceModel,maxDistance,orientationX,orientationY,orientationZ,panningModel,positionX,positionY,positionZ,refDistance,rolloffFactor",
+  "ok"
+ ],
+ [
+  "new DelayNode",
+  "channelCount,channelCountMode,channelInterpretation,delayTime,maxDelayTime",
+  "ok"
+ ],
+ [
+  "new WaveShaperNode",
+  "channelCount,channelCountMode,channelInterpretation,curve,oversample",
+  "ok"
+ ],
+ [
+  "new StereoPannerNode",
+  "channelCount,channelCountMode,channelInterpretation,pan",
+  "ok"
+ ],
+ [
+  "new ConvolverNode",
+  "channelCount,channelCountMode,channelInterpretation,buffer,disableNormalization",
+  "ok"
+ ],
+ [
+  "new ChannelMergerNode",
+  "channelCount,channelCountMode,channelInterpretation,numberOfInputs",
+  "ok"
+ ],
+ [
+  "createPeriodicWave",
+  "disableNormalization",
+  "ok"
+ ],
+ [
+  "new RTCPeerConnection",
+  "alwaysNegotiateDataChannels,bundlePolicy,certificates,encodedInsertableStreams,iceCandidatePoolSize,iceServers,iceTransportPolicy,iceTransports,rtcpMuxPolicy",
+  "ok"
+ ],
+ [
+  "RTCPeerConnection.createOffer",
+  "voiceActivityDetection,iceRestart,offerToReceiveAudio,offerToReceiveVideo",
+  "ok"
+ ],
+ [
+  "RTCPeerConnection.createDataChannel",
+  "id,maxPacketLifeTime,maxRetransmits,negotiated,ordered,protocol",
+  "ok"
+ ],
+ [
+  "RTCPeerConnection.addTransceiver",
+  "direction,sendEncodings,streams",
+  "ok"
+ ],
+ [
+  "new RTCSessionDescription",
+  "sdp,type",
+  "ok"
+ ],
+ [
+  "new RTCIceCandidate",
+  "candidate,sdpMLineIndex,sdpMid,usernameFragment",
+  "TypeError: Failed to construct 'RTCIceCandidate': sdpMid and sdpMLineIndex are both null."
+ ],
+ [
+  "crypto.subtle.digest",
+  "has:name",
+  "rejected TypeError: Failed to execute 'digest' on 'SubtleCrypto': Algorithm: name: Missing or not a string"
+ ],
+ [
+  "crypto.subtle.generateKey",
+  "has:name",
+  "rejected TypeError: Failed to execute 'generateKey' on 'SubtleCrypto': Algorithm: name: Missing or not a string"
+ ],
+ [
+  "crypto.subtle.importKey",
+  "has:name",
+  "rejected TypeError: Failed to execute 'importKey' on 'SubtleCrypto': Algorithm: name: Missing or not a string"
+ ],
+ [
+  "navigator.permissions.query",
+  "name",
+  "rejected TypeError: Failed to execute 'query' on 'Permissions': Failed to read the 'name' property from 'PermissionDescriptor': Required member is undefined."
+ ],
+ [
+  "navigator.locks.request",
+  "ifAvailable,mode,signal,steal",
+  "ok"
+ ],
+ [
+  "navigator.locks.query",
+  "",
+  "ok"
+ ],
+ [
+  "navigator.credentials.get",
+  "digital,federated,identity,mediation,otp,password,publicKey,signal,uiMode",
+  "rejected NotSupportedError: No credential type was specified in the request."
+ ],
+ [
+  "navigator.serviceWorker.register",
+  "scope,type,updateViaCache",
+  "ok"
+ ],
+ [
+  "navigator.canShare",
+  "",
+  "TypeError: navigator.canShare is not a function"
+ ],
+ [
+  "scheduler.postTask",
+  "delay,priority,signal",
+  "ok"
+ ],
+ [
+  "scheduler.yield",
+  "",
+  "ok"
+ ],
+ [
+  "new TaskController",
+  "priority",
+  "ok"
+ ],
+ [
+  "requestIdleCallback",
+  "timeout",
+  "ok"
+ ],
+ [
+  "cookieStore.get",
+  "name,url",
+  "rejected TypeError: Failed to execute 'get' on 'CookieStore': CookieStoreGetOptions must not be empty"
+ ],
+ [
+  "cookieStore.getAll",
+  "name,url",
+  "ok"
+ ],
+ [
+  "cookieStore.set",
+  "domain,expires,maxAge,name",
+  "rejected TypeError: Failed to execute 'set' on 'CookieStore': Failed to read the 'name' property from 'CookieInit': Required member is undefined."
+ ],
+ [
+  "cookieStore.delete",
+  "domain,name",
+  "rejected TypeError: Failed to execute 'delete' on 'CookieStore': Failed to read the 'name' property from 'CookieStoreDeleteOptions': Required member is undefined."
+ ],
+ [
+  "caches.match",
+  "ignoreMethod,ignoreSearch,ignoreVary,cacheName",
+  "ok"
+ ],
+ [
+  "document.startViewTransition",
+  "types,update",
+  "ok"
+ ],
+ [
+  "new EventSource",
+  "withCredentials",
+  "ok"
+ ],
+ [
+  "new EncodedVideoChunk",
+  "data",
+  "TypeError: Failed to construct 'EncodedVideoChunk': Failed to read the 'data' property from 'EncodedVideoChunkInit': Required member is undefined."
+ ],
+ [
+  "new VideoEncoder",
+  "error",
+  "TypeError: Failed to construct 'VideoEncoder': Failed to read the 'error' property from 'VideoEncoderInit': Required member is undefined."
+ ],
+ [
+  "new VideoDecoder",
+  "error",
+  "TypeError: Failed to construct 'VideoDecoder': Failed to read the 'error' property from 'VideoDecoderInit': Required member is undefined."
+ ],
+ [
+  "new AudioEncoder",
+  "error",
+  "TypeError: Failed to construct 'AudioEncoder': Failed to read the 'error' property from 'AudioEncoderInit': Required member is undefined."
+ ],
+ [
+  "new MediaRecorder",
+  "audioBitrateMode,audioBitsPerSecond,bitsPerSecond,mimeType,videoBitsPerSecond,videoKeyFrameIntervalCount,videoKeyFrameIntervalDuration",
+  "ok"
+ ],
+ [
+  "new Path2D addPath",
+  "a,b,c,d,e,f,m11,m12,m21,m22,m41,m42",
+  "ok"
+ ],
+ [
+  "ctx2d.getImageData",
+  "colorSpace,pixelFormat",
+  "ok"
+ ],
+ [
+  "ctx2d.createImageData",
+  "colorSpace,pixelFormat",
+  "ok"
+ ],
+ [
+  "new URLPattern",
+  "baseURL,hash,hostname,password,pathname,port,protocol,search,username",
+  "ok"
+ ],
+ [
+  "document.caretPositionFromPoint",
+  "shadowRoots",
+  "ok"
+ ],
+ [
+  "CSSStyleSheet ctor",
+  "alternate,disabled,media",
+  "ok"
+ ],
+ [
+  "new URLSearchParams",
+  "@Symbol.iterator,ownKeys",
+  "ok"
+ ],
+ [
+  "showPopover",
+  "source",
+  "ok"
+ ],
+ [
+  "togglePopover",
+  "source,force",
+  "ok"
+ ],
+ [
+  "Element.animate keyframes",
+  "@Symbol.iterator,composite,easing,offset,ownKeys",
+  "ok"
+ ],
+ [
+  "TrustedTypes.createPolicy",
+  "createHTML,createParserOptions,createScript,createScriptURL",
+  "ok"
+ ],
+ [
+  "IDBDatabase.createObjectStore",
+  "autoIncrement,keyPath",
+  "ok"
+ ],
+ [
+  "IDBObjectStore.createIndex",
+  "multiEntry,unique",
+  "ok"
+ ],
+ [
+  "IDBDatabase.transaction",
+  "durability",
+  "ok"
+ ]
+]

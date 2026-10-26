@@ -1,0 +1,152 @@
+[
+ [
+  "type mark",
+  [
+   [
+    "this is observer",
+    true,
+    "arguments",
+    3,
+    "obs is observer",
+    true,
+    "opts",
+    "{\"droppedEntriesCount\":0}",
+    "opts proto",
+    true,
+    "list class",
+    "[object PerformanceObserverEntryList]",
+    "entries",
+    2
+   ]
+  ]
+ ],
+ [
+  "buffered",
+  [
+   [
+    "buffered",
+    3,
+    "{\"droppedEntriesCount\":0}"
+   ]
+  ]
+ ],
+ [
+  "entryTypes",
+  [
+   [
+    "this is observer",
+    true,
+    "arguments",
+    3,
+    "obs is observer",
+    true,
+    "opts",
+    "{}",
+    "opts proto",
+    true,
+    "list class",
+    "[object PerformanceObserverEntryList]",
+    "entries",
+    1
+   ],
+   [
+    "buffered",
+    3,
+    "{}"
+   ],
+   [
+    "entryTypes",
+    3,
+    "{\"droppedEntriesCount\":0}"
+   ]
+  ]
+ ],
+ [
+  "{\"type\":\"mark\"}",
+  "buffered,durationThreshold,entryTypes,type",
+  "ok"
+ ],
+ [
+  "{\"type\":\"mark\",\"buffered\":true}",
+  "buffered,durationThreshold,entryTypes,type",
+  "ok"
+ ],
+ [
+  "{\"entryTypes\":[\"mark\",\"measure\"]}",
+  "buffered,durationThreshold,entryTypes,type",
+  "InvalidModificationError: Failed to execute 'observe' on 'PerformanceObserver': This PerformanceObserver has performed observe({type:...}, therefore it cannot perform observe({entryTypes:...})"
+ ],
+ [
+  "{\"type\":\"mark\",\"durationThreshold\":16}",
+  "buffered,durationThreshold,entryTypes,type",
+  "ok"
+ ],
+ [
+  "errors",
+  [
+   [
+    "{}",
+    "TypeError: Failed to execute 'observe' on 'PerformanceObserver': An observe() call must include either entryTypes or type arguments."
+   ],
+   [
+    "{\"type\":\"mark\",\"entryTypes\":[\"mark\"]}",
+    "TypeError: Failed to execute 'observe' on 'PerformanceObserver': An observe() call must not include both entryTypes and type arguments."
+   ],
+   [
+    "{\"entryTypes\":\"mark\"}",
+    "TypeError: Failed to execute 'observe' on 'PerformanceObserver': Failed to read the 'entryTypes' property from 'PerformanceObserverInit': The provided value cannot be converted to a sequence."
+   ],
+   [
+    "{\"entryTypes\":5}",
+    "TypeError: Failed to execute 'observe' on 'PerformanceObserver': Failed to read the 'entryTypes' property from 'PerformanceObserverInit': The provided value cannot be converted to a sequence."
+   ],
+   [
+    "{\"type\":\"nosuch\"}",
+    "ok"
+   ],
+   [
+    "{\"entryTypes\":[]}",
+    "InvalidModificationError: Failed to execute 'observe' on 'PerformanceObserver': This PerformanceObserver has performed observe({type:...}, therefore it cannot perform observe({entryTypes:...})"
+   ]
+  ]
+ ],
+ [
+  "no arg",
+  "TypeError: Failed to execute 'observe' on 'PerformanceObserver': An observe() call must include either entryTypes or type arguments."
+ ],
+ [
+  "entryTypes then type",
+  "ok",
+  "InvalidModificationError: Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})"
+ ],
+ [
+  "fresh empty entryTypes",
+  "ok"
+ ],
+ [
+  "then type after empty",
+  "InvalidModificationError: Failed to execute 'observe' on 'PerformanceObserver': This observer has performed observe({entryTypes:...}, therefore it cannot perform observe({type:...})"
+ ],
+ [
+  "entryTypes unsupported only",
+  "ok"
+ ],
+ [
+  "entryTypes iterable Set",
+  "ok"
+ ],
+ [
+  "options across observe calls",
+  [
+   "{\"droppedEntriesCount\":0}",
+   "{\"droppedEntriesCount\":0}",
+   "{}",
+   "{\"droppedEntriesCount\":0}"
+  ]
+ ],
+ [
+  "takeRecords",
+  1,
+  true
+ ]
+]

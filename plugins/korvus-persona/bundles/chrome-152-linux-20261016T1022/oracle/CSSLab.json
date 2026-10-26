@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSLab",
+    "member": "constructor",
+    "expr": "new CSSLab()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "iface": "CustomStateSet",
+    "member": "constructor",
+    "expr": "new CustomStateSet()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "size",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "add",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); return o.size; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "add",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); o.add(\"busy\"); return o.size; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "add",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.add(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "has",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); return o.has(\"busy\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "has",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.has(\"busy\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "delete",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); return o.delete(\"busy\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "delete",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.delete(\"busy\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "clear",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); o.clear(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "clear",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "forEach",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); let n = 0; o.forEach(function () { n++; }); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "forEach",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return o.forEach(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "keys",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return Object.prototype.toString.call(o.keys()); })()",
+    "expected": "[object CustomStateSet Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "keys",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); return [...o.keys()][0]; })()",
+    "expected": "busy",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "values",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return Object.prototype.toString.call(o.values()); })()",
+    "expected": "[object CustomStateSet Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "values",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); return [...o.values()][0]; })()",
+    "expected": "busy",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "entries",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); return Object.prototype.toString.call(o.entries()); })()",
+    "expected": "[object CustomStateSet Iterator]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CustomStateSet",
+    "member": "entries",
+    "expr": "(() => { const o = (() => { const n = \"x-korvus-cs\"; if (!customElements.get(n)) customElements.define(n, class extends HTMLElement {}); return document.createElement(n).attachInternals().states; })(); o.add(\"busy\"); const e = [...o.entries()][0]; return e[0] === \"busy\" && e[1] === \"busy\"; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

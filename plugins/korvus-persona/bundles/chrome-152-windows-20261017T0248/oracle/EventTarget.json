@@ -1,0 +1,61 @@
+[
+  {
+    "iface": "EventTarget",
+    "member": "constructor",
+    "expr": "(() => { const o = new EventTarget(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object EventTarget]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "addEventListener",
+    "expr": "(() => { const o = new EventTarget(); return o.addEventListener(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "removeEventListener",
+    "expr": "(() => { const o = new EventTarget(); return o.removeEventListener(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "dispatchEvent",
+    "expr": "(() => { const o = new EventTarget(); return o.dispatchEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "when",
+    "expr": "(() => { const o = new EventTarget(); return o.when(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "when",
+    "expr": "(() => { const o = new EventTarget(); return o.when('x') instanceof Observable; })()",
+    "expected": true
+  },
+  {
+    "iface": "EventTarget",
+    "member": "when",
+    "expr": "(() => { const o = new EventTarget(); return Object.prototype.toString.call(o.when('x')); })()",
+    "expected": "[object Observable]"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "when",
+    "expr": "(() => { const o = new EventTarget(); return typeof o.when('x').subscribe(function () {}); })()",
+    "expected": "undefined"
+  },
+  {
+    "iface": "EventTarget",
+    "member": "when",
+    "expr": "(() => { const o = new EventTarget(); const got = []; o.when('x').subscribe((ev) => got.push(ev.type)); o.dispatchEvent(new Event('x')); o.dispatchEvent(new Event('x')); return got.join(','); })()",
+    "expected": "x,x"
+  }
+]

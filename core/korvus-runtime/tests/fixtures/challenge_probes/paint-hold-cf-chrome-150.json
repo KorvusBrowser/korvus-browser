@@ -1,0 +1,22 @@
+[
+ [
+  "at the script",
+  "navigation,visibility-state"
+ ],
+ [
+  "400 ms later, nothing added",
+  "navigation,visibility-state"
+ ],
+ [
+  "first long animation frame",
+  "none"
+ ],
+ [
+  "a bordered empty box",
+  "navigation,visibility-state,long-animation-frame,paint:first-paint"
+ ],
+ [
+  "then text",
+  "navigation,visibility-state,long-animation-frame,paint:first-paint,paint:first-contentful-paint"
+ ]
+]

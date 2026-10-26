@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "InputEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object InputEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new InputEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "dataTransfer",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return o.dataTransfer; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "getTargetRanges",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return o.getTargetRanges(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "data",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return o.data; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "isComposing",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return o.isComposing; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "InputEvent",
+    "member": "inputType",
+    "expr": "(() => { const o = new InputEvent(\"x\"); return o.inputType; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

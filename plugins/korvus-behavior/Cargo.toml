@@ -1,0 +1,14 @@
+[package]
+name = "korvus-behavior"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "behavior"
+
+# Trusted human-like input. Pure Rust (no v8): produces MotionSamples that `engine`
+# dispatches as genuinely-trusted native events. Primary source = analytic neuromotor (self-contained).
+[dependencies]
+spec = { workspace = true }
+rand = "0.8"

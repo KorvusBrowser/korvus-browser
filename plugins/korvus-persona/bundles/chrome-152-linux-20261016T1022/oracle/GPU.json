@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "GPU",
+    "member": "constructor",
+    "expr": "new GPU()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPU",
+    "member": "getPreferredCanvasFormat",
+    "expr": "(() => { const o = navigator.gpu; return o.getPreferredCanvasFormat(); })()",
+    "expected": "rgba8unorm",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPU",
+    "member": "requestAdapter",
+    "expr": "(() => { const o = navigator.gpu; return Object.prototype.toString.call(o.requestAdapter()); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "GPU",
+    "member": "getPreferredCanvasFormat",
+    "expr": "(() => { const o = navigator.gpu; return Object.prototype.toString.call(o.getPreferredCanvasFormat()); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPU",
+    "member": "wgslLanguageFeatures",
+    "expr": "(() => { const o = navigator.gpu; return Object.prototype.toString.call(o.wgslLanguageFeatures); })()",
+    "expected": "[object WGSLLanguageFeatures]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPU",
+    "member": "requestAdapter",
+    "expr": "Object.prototype.toString.call(navigator.gpu.requestAdapter())",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "GPU",
+    "member": "requestAdapter",
+    "expr": "Object.prototype.toString.call(navigator.gpu.requestAdapter({powerPreference:\"bogus\"}))",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "GPU",
+    "member": "wgslLanguageFeatures",
+    "expr": "navigator.gpu.wgslLanguageFeatures === navigator.gpu.wgslLanguageFeatures",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

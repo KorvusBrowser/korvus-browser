@@ -1,0 +1,122 @@
+[
+[
+"org.w3.clearkey audio cenc",
+"org.w3.clearkey",
+"{\"audioCapabilities\":[{\"contentType\":\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[\"cenc\"],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[]}"
+],
+[
+"org.w3.clearkey video",
+"org.w3.clearkey",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}]}"
+],
+[
+"org.w3.clearkey empty config",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"org.w3.clearkey all init types",
+"org.w3.clearkey",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[\"cenc\",\"keyids\",\"webm\"],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"},{\"contentType\":\"video/webm; codecs=\\\"vp9\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}]}"
+],
+[
+"org.w3.clearkey persistent",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"org.w3.clearkey distinctive",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"org.w3.clearkey robustness",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"org.w3.clearkey unknown codec",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"org.w3.clearkey second config",
+"org.w3.clearkey",
+"{\"audioCapabilities\":[{\"contentType\":\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[],\"label\":\"b\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[]}"
+],
+[
+"com.widevine.alpha audio cenc",
+"com.widevine.alpha",
+"{\"audioCapabilities\":[{\"contentType\":\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[\"cenc\"],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[]}"
+],
+[
+"com.widevine.alpha video",
+"com.widevine.alpha",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}]}"
+],
+[
+"com.widevine.alpha empty config",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"com.widevine.alpha all init types",
+"com.widevine.alpha",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[\"cenc\",\"webm\"],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"},{\"contentType\":\"video/webm; codecs=\\\"vp9\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}]}"
+],
+[
+"com.widevine.alpha persistent",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"com.widevine.alpha distinctive",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"com.widevine.alpha robustness",
+"com.widevine.alpha",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"SW_SECURE_DECODE\"}]}"
+],
+[
+"com.widevine.alpha unknown codec",
+"NotSupportedError: Unsupported keySystem or supportedConfigurations."
+],
+[
+"com.widevine.alpha second config",
+"com.widevine.alpha",
+"{\"audioCapabilities\":[{\"contentType\":\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[],\"label\":\"b\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[]}"
+],
+[
+"no configs",
+"TypeError: Failed to execute 'requestMediaKeySystemAccess' on 'Navigator': The supportedConfigurations parameter is empty."
+],
+[
+"empty key system",
+"TypeError: Failed to execute 'requestMediaKeySystemAccess' on 'Navigator': The keySystem parameter is empty."
+],
+[
+"clearkey for a session",
+"org.w3.clearkey",
+"{\"audioCapabilities\":[],\"distinctiveIdentifier\":\"not-allowed\",\"initDataTypes\":[\"keyids\"],\"label\":\"\",\"persistentState\":\"not-allowed\",\"sessionTypes\":[\"temporary\"],\"videoCapabilities\":[{\"contentType\":\"video/mp4; codecs=\\\"avc1.42E01E\\\"\",\"encryptionScheme\":null,\"robustness\":\"\"}]}"
+],
+[
+"MediaKeys",
+"[object MediaKeys]",
+"function",
+"false"
+],
+[
+"persistent session",
+"NotSupportedError: Failed to execute 'createSession' on 'MediaKeys': Unsupported session type."
+],
+[
+"session",
+"\"\"",
+"NaN",
+0
+],
+[
+"generateRequest keyids",
+"license-request",
+"{\"kids\":[\"AAAAAAAAAAAAAAAAAAAAAA\"],\"type\":\"temporary\"}",
+16
+],
+[
+"generateRequest bad cenc",
+"TypeError: Failed to execute 'generateRequest' on 'MediaKeySession': Initialization data for CENC is incorrect."
+]
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "constructor",
+    "expr": "new DynamicsCompressorNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "threshold",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.threshold); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "knee",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.knee); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "ratio",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.ratio); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "reduction",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return o.reduction; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "attack",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.attack); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "DynamicsCompressorNode",
+    "member": "release",
+    "expr": "(() => { const o = new DynamicsCompressorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.release); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

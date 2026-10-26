@@ -1,0 +1,142 @@
+[
+  {
+    "iface": "EditContext",
+    "member": "constructor",
+    "expr": "(() => { const o = new EditContext(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object EditContext]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateText",
+    "expr": "(() => { const o = new EditContext(); return o.updateText(1, 1, \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateText",
+    "expr": "(() => { const o = new EditContext(); return o.updateText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateSelection",
+    "expr": "(() => { const o = new EditContext(); return o.updateSelection(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateSelection",
+    "expr": "(() => { const o = new EditContext(); return o.updateSelection(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateControlBounds",
+    "expr": "(() => { const o = new EditContext(); return o.updateControlBounds(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateSelectionBounds",
+    "expr": "(() => { const o = new EditContext(); return o.updateSelectionBounds(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateCharacterBounds",
+    "expr": "(() => { const o = new EditContext(); return o.updateCharacterBounds(1, []); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "updateCharacterBounds",
+    "expr": "(() => { const o = new EditContext(); return o.updateCharacterBounds(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "attachedElements",
+    "expr": "(() => { const o = new EditContext(); return o.attachedElements(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "text",
+    "expr": "(() => { const o = new EditContext(); return o.text; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "selectionStart",
+    "expr": "(() => { const o = new EditContext(); return o.selectionStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "selectionEnd",
+    "expr": "(() => { const o = new EditContext(); return o.selectionEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "characterBoundsRangeStart",
+    "expr": "(() => { const o = new EditContext(); return o.characterBoundsRangeStart; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "characterBounds",
+    "expr": "(() => { const o = new EditContext(); return o.characterBounds(); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "ontextupdate",
+    "expr": "(() => { const o = new EditContext(); return o.ontextupdate; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "ontextformatupdate",
+    "expr": "(() => { const o = new EditContext(); return o.ontextformatupdate; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "oncharacterboundsupdate",
+    "expr": "(() => { const o = new EditContext(); return o.oncharacterboundsupdate; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "oncompositionstart",
+    "expr": "(() => { const o = new EditContext(); return o.oncompositionstart; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EditContext",
+    "member": "oncompositionend",
+    "expr": "(() => { const o = new EditContext(); return o.oncompositionend; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

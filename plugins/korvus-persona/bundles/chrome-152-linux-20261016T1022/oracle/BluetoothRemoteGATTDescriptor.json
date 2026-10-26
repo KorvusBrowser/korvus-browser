@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "BluetoothRemoteGATTDescriptor",
+    "member": "constructor",
+    "expr": "new BluetoothRemoteGATTDescriptor()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

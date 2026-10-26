@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SVGAnimatedAngle",
+    "member": "constructor",
+    "expr": "new SVGAnimatedAngle()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLOptGroupElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "constructor",
+    "expr": "new HTMLOptGroupElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"optgroup\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"optgroup\"); return (o.disabled = true, o.disabled); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "label",
+    "expr": "(() => { const o = document.createElement(\"optgroup\"); return o.label; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLOptGroupElement",
+    "member": "label",
+    "expr": "(() => { const o = document.createElement(\"optgroup\"); return (o.label = \"x\", o.label); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

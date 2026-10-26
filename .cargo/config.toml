@@ -1,0 +1,66 @@
+# THE DEV PROFILE, AGAIN -- because a worktree that has not merged master still builds.
+#
+# WHY THIS FILE EXISTS. `Cargo.toml`'s `[profile.dev]` only applies to a checkout that CONTAINS it.
+# Delegated units work in `.claude/worktrees/<name>/`, each a checkout of an older commit, and on
+# 2026-09-11 two of them sat 3-4 commits behind: they were still linking 443 MB test binaries (one
+# still had the pre-consolidation 317 of them) while the rest of the box ran the fixed 218 MB build.
+# Four linkers across two worktrees wrote 310 MB/s, the root NVMe hit 93 % util at 6 ms await, dirty
+# pages pinned the 1 GB cap, and kswapd blocked in `rq_qos_wait` -- PSI io FULL 53 %, load 14.5, the
+# desktop visibly stalled. The fix that day was to merge master into both, but the NEXT stale worktree
+# would have done it again.
+#
+# Cargo reads config by walking UP from the invocation directory, so a worktree nested under this repo
+# picks this file up no matter which commit it has checked out. Verified 2026-09-11 with a throwaway
+# crate outside the workspace: its own code got `-C debuginfo=2 -C split-debuginfo=unpacked`, its
+# dependency got none. That is the whole point -- the setting stops travelling with the commit.
+#
+# THESE VALUES MUST MATCH `Cargo.toml`. Config profiles OVERRIDE manifest profiles, so if the two ever
+# disagree this file wins SILENTLY and the manifest becomes a lie. `scripts/check-invariants.sh`
+# compares them and fails the gate; do not edit one without the other.
+[profile.dev]
+debug = 2
+split-debuginfo = "unpacked"
+
+[profile.dev.package."*"]
+debug = 0
+
+[profile.test]
+debug = 2
+split-debuginfo = "unpacked"
+
+[profile.test.package."*"]
+debug = 0
+
+# Skia is built from source now (scripts/skia-source.sh), and a dependency's build script is handed its OWN
+# opt-level: without this, every dev and test build would rasterize through Skia compiled at -O0.
+[profile.dev.package.skia-bindings]
+opt-level = 3
+
+[profile.test.package.skia-bindings]
+opt-level = 3
+
+# The shipping build (`cargo build --profile dist`), mirrored from `Cargo.toml` as every profile here is.
+[profile.dist]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
+
+# CHROME'S SKIA (the owner's ruling 2026-10-10). skia-bindings builds Skia from the source
+# scripts/skia-source.sh prepares (the skia_revision Chrome ships; not tracked -- run the script once per machine and
+# once per new worktree) instead of downloading rust-skia's prebuilt libraries, with the defines Chrome's
+# src/skia/BUILD.gn and src/skia/config/SkUserConfig.h add that change pixels. They are C++-only flags of Skia's own
+# translation units: none of them touches a header under include/, so the bindings, compiled without them, see the
+# same types. Measured: the canvas probes' challenge hashes are byte-identical to stock Chrome 150's
+# with these and differ without them (see the script's header).
+# skia_use_partition_alloc=false (Skia at Chrome 152 and later): Skia then wraps its member pointers in Chrome's
+# `raw_ptr` from base/allocator/partition_allocator, which this build does not fetch; off, they are plain pointers
+# (src/partition_alloc/noop). A memory-safety wrapper only: no pixel, no API, no header under include/ changes.
+[env]
+SKIA_SOURCE_DIR = { value = "third_party/skia-chrome", relative = true }
+# The vendored libvpx (VP8) scripts/vpx-source.sh builds, for the WebRTC send path. INERT by default: the
+# only build.rs that reads these (vendor/libvpx-sys) is compiled solely under korvus-runtime's
+# `webrtc-media` feature, which is off by default -- so the normal build never reads them and the link's
+# absence does not matter. relative=true resolves against the workspace root (reaching nested worktrees).
+VPX_LIB_DIR = { value = "third_party/libvpx-chrome/lib", relative = true }
+VPX_INCLUDE_DIR = { value = "third_party/libvpx-chrome/include", relative = true }
+SKIA_GN_ARGS = 'skia_use_piex=false skia_use_partition_alloc=false extra_cflags_cc=["-DSK_ENABLE_LEGACY_SHADERCONTEXT","-DSK_SUPPORT_LEGACY_CONIC_CHOP","-DSK_USE_PADDED_BLUR_UPSCALE","-DSK_AVOID_SLOW_RASTER_PIPELINE_BLURS","-DSK_SUPPORT_LEGACY_RRECT_TRANSFORM","-DSK_LEGACY_INITWITHPREV_LAYER_SIZING","-DSK_SUPPORT_LEGACY_ANISOTROPIC_MIPMAP_SCALE","-DSK_GAMMA_EXPONENT=1.2","-DSK_GAMMA_CONTRAST=0.2"]'

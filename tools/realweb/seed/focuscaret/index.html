@@ -1,0 +1,18 @@
+<!doctype html><html><body><div id=ce contenteditable>hello <b>world</b></div><textarea id=ta>abc</textarea><input id=in value=xyz><div id=plain tabindex=0>p</div>
+<script>
+// REALWEB H27: focus() puts the caret in place -- getSelection() gets one collapsed range: at the start of a
+// contenteditable's first text, before a text control in its parent -- and collapseToStart on no selection
+// throws with Chrome's words (sqlime.org: collapseToEnd after focusing its editor threw).
+var s = getSelection(), out = {};
+var snap = function (k) { out[k] = s.rangeCount + ' ' + s.type + ' ' + (s.anchorNode ? (s.anchorNode.nodeName + ':' + s.anchorOffset) : 'null') + ' ' + (document.activeElement && document.activeElement.id); };
+snap('initial');
+ce.focus(); snap('ceFocus');
+try { s.collapseToEnd(); snap('ceCollapseToEnd'); } catch (e) { out.ceCollapseToEnd = e.name + ': ' + e.message; }
+ta.focus(); snap('taFocus');
+inp = document.getElementById('in'); inp.focus(); snap('inFocus');
+plain.focus(); snap('plainFocus');
+s.removeAllRanges(); snap('removed');
+try { s.collapseToStart(); } catch (e) { out.emptyCollapse = e.name + ': ' + e.message; }
+ce.focus(); snap('ceFocusAgain');
+document.title = JSON.stringify(out);
+</script></body></html>

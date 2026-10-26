@@ -1,0 +1,60 @@
+<!doctype html><html><body><script>
+(function () {
+var out = {}, step = function (k, f) { try { out[k] = f(); } catch (e) { out[k] = 'THREW ' + (e && e.name); } };
+step('windowIsObject', function () { return window instanceof Object; });
+step('documentIsObject', function () { return document instanceof Object; });
+step('domExceptionIsError', function () { try { document.querySelector('!!'); return 'no throw'; } catch (e) { return [e instanceof DOMException, e instanceof Error, Object.getPrototypeOf(Object.getPrototypeOf(e)) === Error.prototype].join(','); } });
+step('typeErrorIsError', function () { try { document.createElement(); return 'no throw'; } catch (e) { return [e instanceof TypeError, e.constructor === TypeError].join(','); } });
+step('fetchPromise', function () { var p = fetch('f.html'); return [p instanceof Promise, Object.getPrototypeOf(p) === Promise.prototype].join(','); });
+step('arrayFromApi', function () { var a = document.getElementsByTagName('script'); var arr = Array.from(a); return [arr instanceof Array, Array.isArray(arr)].join(','); });
+step('jsonParse', function () { return JSON.parse('{"a":[1]}') instanceof Object; });
+step('nodeListIter', function () { var it = document.querySelectorAll('script')[Symbol.iterator](); return Object.getPrototypeOf(Object.getPrototypeOf(it)) === Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]())); });
+step('getComputedObj', function () { return getComputedStyle(document.body) instanceof Object; });
+step('cppgcProtosOwn', function () { return ['DOMRect', 'DOMPoint', 'DOMMatrix', 'Headers', 'TextEncoder'].map(function (n) { return window[n].prototype !== parent[n].prototype && new window[n]() instanceof window[n]; }).join(','); });
+step('createdNodesOwn', function () {
+  var SVG = 'http://www.w3.org/2000/svg', own = function (o, i) { return o instanceof window[i] && !(o instanceof parent[i]); };
+  var xd = document.implementation.createDocument(null, 'r'), hd = document.implementation.createHTMLDocument('');
+  var pd = new DOMParser().parseFromString('<p>x</p>', 'text/html'), t = document.createElement('template');
+  t.innerHTML = '<b>x</b>';
+  return [own(document.createElementNS(SVG, 'svg'), 'SVGSVGElement'), own(document.createProcessingInstruction('x', 'y'), 'ProcessingInstruction'),
+    own(xd.documentElement, 'Element'), own(xd.createCDATASection('c'), 'CDATASection'), own(hd.body, 'HTMLBodyElement'),
+    own(pd.body.firstChild, 'HTMLParagraphElement'), own(new Document().createElementNS(SVG, 'rect'), 'SVGRectElement'),
+    own(t.content.firstChild, 'HTMLElement')].join(',');
+});
+step('createdNodesOwner', function () {
+  var SVG = 'http://www.w3.org/2000/svg', xd = document.implementation.createDocument(null, 'r');
+  return [document.createElementNS(SVG, 'svg').ownerDocument === document, document.createProcessingInstruction('x', 'y').ownerDocument === document,
+    xd.createElementNS(SVG, 'svg').ownerDocument === xd, xd.createProcessingInstruction('x', 'y').ownerDocument === xd].join(',');
+});
+step('realmOwnObjects', function () {
+  return [document.timeline instanceof DocumentTimeline && document.timeline !== parent.document.timeline,
+    navigator.serviceWorker instanceof ServiceWorkerContainer && navigator.serviceWorker !== parent.navigator.serviceWorker,
+    crashReport instanceof CrashReportContext && crashReport !== parent.crashReport].join(',');
+});
+step('crashReportOwnState', function () { try { crashReport.set('a', 'b'); return 'no throw'; } catch (e) { return e.name; } });
+step('realmOwnProtos', function () {
+  var IP = function (w) { return Object.getPrototypeOf(Object.getPrototypeOf(w.eval('[][Symbol.iterator]()'))); };
+  var up2 = function (o) { return Object.getPrototypeOf(Object.getPrototypeOf(o)); };
+  var pgl = parent.document.createElement('canvas').getContext('webgl'), gl = document.createElement('canvas').getContext('webgl');
+  var pext = pgl && pgl.getExtension('WEBGL_lose_context'), ext = gl && gl.getExtension('WEBGL_lose_context');
+  var fi = document.body.computedStyleMap().keys(), pi = parent.document.body.computedStyleMap().keys();
+  return [document.featurePolicy instanceof FeaturePolicy && document.featurePolicy !== parent.document.featurePolicy,
+    pext && ext ? Object.getPrototypeOf(Object.getPrototypeOf(ext)) === Object.prototype && Object.getPrototypeOf(ext) !== Object.getPrototypeOf(pext) : 'no webgl',
+    up2(fi) === IP(window), up2(pi) === IP(parent)].join(',');
+});
+step('frameOwnFunctions', function () {
+  var get = function (k) { return (Object.getOwnPropertyDescriptor(window, k) || {}).get; };
+  var fns = [setTimeout, setInterval, queueMicrotask, postMessage, focus, blur, get('parent'), get('length'), get('frameElement'),
+    get('closed'), get('name'), get('onload'), get('onmessage'), console.log];
+  return fns.map(function (f) { return !!f && Object.getPrototypeOf(f) === Function.prototype; }).join(',');
+});
+step('frameDocumentOwn', function () {
+  var d = Object.getOwnPropertyDescriptor(document, 'location');
+  return [!!d && Object.getPrototypeOf(d.get) === Function.prototype, !!d && Object.getPrototypeOf(d.set) === Function.prototype].join(',');
+});
+addEventListener('message', function (e) {
+  if (e.data && e.data.k === 'probe') { out.msgDataIsObject = e.data instanceof Object; out.msgArrIsArray = e.data.arr instanceof Array; parent.postMessage({ k: 'done', out: out }, '*'); }
+});
+parent.postMessage({ k: 'ready' }, '*');
+})();
+</script></body></html>

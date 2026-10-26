@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "SVGTextContentElement",
+    "member": "LENGTHADJUST_UNKNOWN",
+    "expr": "SVGTextContentElement.LENGTHADJUST_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextContentElement",
+    "member": "LENGTHADJUST_SPACING",
+    "expr": "SVGTextContentElement.LENGTHADJUST_SPACING",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextContentElement",
+    "member": "LENGTHADJUST_SPACINGANDGLYPHS",
+    "expr": "SVGTextContentElement.LENGTHADJUST_SPACINGANDGLYPHS",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGTextContentElement",
+    "member": "constructor",
+    "expr": "new SVGTextContentElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

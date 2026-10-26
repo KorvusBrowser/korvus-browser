@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PressureRecord",
+    "member": "constructor",
+    "expr": "new PressureRecord()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

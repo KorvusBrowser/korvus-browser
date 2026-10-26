@@ -1,0 +1,714 @@
+[
+[
+"Worker: an invalid URL",
+"ctor threw SyntaxError | Failed to construct 'Worker': 'http://[' is not a valid URL."
+],
+[
+"Worker: cross-origin",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'http://localhost:PORT/js?b=postMessage(%22x%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: https, same host",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'https://127.0.0.1:PORT/js?b=postMessage(%22x%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: about:blank",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'about:blank' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: javascript:",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'javascript:postMessage(1)' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: ftp:",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'ftp://127.0.0.1/w.js' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: ws:",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'ws://127.0.0.1:PORT/w.js' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"Worker: data: text/javascript",
+"message data-js null data:text/javascript,postMessage(\"data-js\" + \" \" + self.origin + \" \" + location.href)"
+],
+[
+"Worker: data: no type",
+"message data-plain null data:,postMessage(\"data-plain\" + \" \" + self.origin + \" \" + location.href)"
+],
+[
+"Worker: data: image/png",
+"message data-img null data:image/png,postMessage(\"data-img\" + \" \" + self.origin + \" \" + location.href)"
+],
+[
+"Worker: the page's blob",
+"message blob http://127.0.0.1:PORT BLOB"
+],
+[
+"Worker: a revoked blob",
+"error Event "
+],
+[
+"Worker: an unknown blob",
+"error Event "
+],
+[
+"Worker: a relative URL",
+"message relative http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22relative%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)"
+],
+[
+"Worker: http text/plain",
+"message plain http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22plain%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)&ct=text%2Fplain"
+],
+[
+"Worker: http no Content-Type",
+"message none http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22none%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)&ct=none"
+],
+[
+"Worker: http text/html",
+"message html http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22html%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)&ct=text%2Fhtml"
+],
+[
+"Worker: http image/png",
+"error Event "
+],
+[
+"Worker: http text/csv",
+"error Event "
+],
+[
+"Worker: http text/plain nosniff",
+"error Event "
+],
+[
+"Worker: http 404",
+"error Event "
+],
+[
+"Worker: a same-origin redirect",
+"message redirected http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22redirected%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)"
+],
+[
+"Worker: a cross-origin redirect",
+"error Event "
+],
+[
+"module Worker: data:",
+"message m-data null data:text/javascript,postMessage(\"m-data\" + \" \" + self.origin + \" \" + location.href)"
+],
+[
+"module Worker: the page's blob",
+"message m-blob http://127.0.0.1:PORT BLOB"
+],
+[
+"module Worker: a blob with no type",
+"error Event "
+],
+[
+"module Worker: http text/javascript",
+"message m-js http://127.0.0.1:PORT http://127.0.0.1:PORT/js?b=postMessage(%22m-js%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)"
+],
+[
+"module Worker: http text/plain",
+"error Event "
+],
+[
+"module Worker: cross-origin",
+"ctor threw SecurityError | Failed to construct 'Worker': Script at 'http://localhost:PORT/js?b=postMessage(%22m-cross%22%20%2B%20%22%20%22%20%2B%20self.origin%20%2B%20%22%20%22%20%2B%20location.href)&acao=1' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"module Worker: importScripts",
+"message threw TypeError | TypeError | Failed to execute 'importScripts' on 'WorkerGlobalScope': Module scripts don't support importScripts()."
+],
+[
+"SharedWorker: an invalid URL",
+"ctor threw SyntaxError | Failed to construct 'SharedWorker': 'http://[' is not a valid URL."
+],
+[
+"SharedWorker: cross-origin",
+"ctor threw SecurityError | Failed to construct 'SharedWorker': Script at 'http://localhost:PORT/js?b=onconnect%20%3D%20function%20(e)%20%7B%20e.ports%5B0%5D.postMessage(%22x%22%20%2B%20%22%20%22%20%2B%20self.origin)%3B%20%7D' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"SharedWorker: about:blank",
+"ctor threw SecurityError | Failed to construct 'SharedWorker': Script at 'about:blank' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"SharedWorker: data:",
+"message s-data null"
+],
+[
+"SharedWorker: http text/plain",
+"message s-plain http://127.0.0.1:PORT"
+],
+[
+"blob Worker: no arguments",
+"ok unset"
+],
+[
+"blob Worker: the page's blob",
+"ok page-blob"
+],
+[
+"blob Worker: its own blob (text/plain)",
+"ok own-blob"
+],
+[
+"blob Worker: a revoked blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"blob Worker: an unknown blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"blob Worker: data: text/javascript",
+"ok data-js"
+],
+[
+"blob Worker: data: no type",
+"ok data-plain"
+],
+[
+"blob Worker: data: application/json",
+"ok data-json"
+],
+[
+"blob Worker: data: image/png",
+"ok data-img"
+],
+[
+"blob Worker: data: base64",
+"ok data-b64"
+],
+[
+"blob Worker: about:blank",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load."
+],
+[
+"blob Worker: javascript:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'javascript:self.L=\"js-url\"' failed to load."
+],
+[
+"blob Worker: ftp:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ftp://127.0.0.1/x.js' failed to load."
+],
+[
+"blob Worker: file:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'file:///etc/hostname' failed to load."
+],
+[
+"blob Worker: ws:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ws://127.0.0.1:PORT/x.js' failed to load."
+],
+[
+"blob Worker: an invalid URL",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid."
+],
+[
+"blob Worker: a relative URL",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL '/js?b=self.L%3D%22relative%22' is invalid."
+],
+[
+"blob Worker: http text/javascript",
+"ok js"
+],
+[
+"blob Worker: http application/javascript",
+"ok appjs"
+],
+[
+"blob Worker: http text/plain",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain%22&ct=text%2Fplain' failed to load."
+],
+[
+"blob Worker: http no Content-Type",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22none%22&ct=none' failed to load."
+],
+[
+"blob Worker: http text/html",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22html%22&ct=text%2Fhtml' failed to load."
+],
+[
+"blob Worker: http application/json",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22json%22&ct=application%2Fjson' failed to load."
+],
+[
+"blob Worker: http image/png",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22png%22&ct=image%2Fpng' failed to load."
+],
+[
+"blob Worker: http text/javascript nosniff",
+"ok js-nosniff"
+],
+[
+"blob Worker: http text/plain nosniff",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain-nosniff%22&ct=text%2Fplain&xcto=1' failed to load."
+],
+[
+"blob Worker: http 404",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22404%22&st=404' failed to load."
+],
+[
+"blob Worker: http 500",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22500%22&st=500' failed to load."
+],
+[
+"blob Worker: http 204",
+"ok unset"
+],
+[
+"blob Worker: a same-origin redirect",
+"ok redirected"
+],
+[
+"blob Worker: cross-origin",
+"ok cross"
+],
+[
+"blob Worker: a syntax error",
+"threw SyntaxError | SyntaxError | Failed to execute 'importScripts' on 'WorkerGlobalScope': Unexpected token ';'"
+],
+[
+"blob Worker: a throw",
+"threw RangeError | RangeError | boom"
+],
+[
+"blob Worker: a cross-origin throw",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=throw%20new%20RangeError(%22boom-x%22)' failed to load."
+],
+[
+"blob Worker: a cross-origin syntax error",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=self.L%20%3D%20%3B' failed to load."
+],
+[
+"blob Worker: order: 404 in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=&st=404' failed to load. / A=1 B=0"
+],
+[
+"blob Worker: order: an invalid URL last",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid. / A=0 B=0"
+],
+[
+"blob Worker: order: about:blank in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load. / A=1 B=0"
+],
+[
+"blob Worker: an object with toString",
+"ok tostring"
+],
+[
+"blob Worker: an imported function's stack frame",
+"    at self.F (http://127.0.0.1:PORT/js?b=...:1:PORT)"
+],
+[
+"blob Worker: a redirected import's stack frame",
+"    at self.G (http://127.0.0.1:PORT/redir?...:1:PORT)"
+],
+[
+"blob Worker: an import with a fragment: its stack frame",
+"    at self.H (http://127.0.0.1:PORT/js?...:1:PORT)"
+],
+[
+"blob Worker: nested: http text/javascript",
+"message n-js"
+],
+[
+"blob Worker: nested: http text/plain",
+"error Event "
+],
+[
+"blob Worker: nested: http no Content-Type",
+"error Event "
+],
+[
+"blob Worker: nested: data:",
+"message n-data null"
+],
+[
+"blob Worker: nested: cross-origin",
+"ctor threw SecurityError | DOMException 18 | Failed to construct 'Worker': Script at 'http://localhost:PORT/js?b=postMessage(%22n-cross%22)' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"blob Worker: nested: about:blank",
+"ctor threw SecurityError | DOMException 18 | Failed to construct 'Worker': Script at 'about:blank' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"blob Worker: nested: invalid",
+"ctor threw SyntaxError | DOMException 12 | Failed to construct 'Worker': 'http://[' is not a valid URL."
+],
+[
+"blob Worker: nested: the page's blob",
+"message n-blob http://127.0.0.1:PORT"
+],
+[
+"URL Worker: no arguments",
+"ok unset"
+],
+[
+"URL Worker: the page's blob",
+"ok page-blob"
+],
+[
+"URL Worker: its own blob (text/plain)",
+"ok own-blob"
+],
+[
+"URL Worker: a revoked blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"URL Worker: an unknown blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"URL Worker: data: text/javascript",
+"ok data-js"
+],
+[
+"URL Worker: data: no type",
+"ok data-plain"
+],
+[
+"URL Worker: data: application/json",
+"ok data-json"
+],
+[
+"URL Worker: data: image/png",
+"ok data-img"
+],
+[
+"URL Worker: data: base64",
+"ok data-b64"
+],
+[
+"URL Worker: about:blank",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load."
+],
+[
+"URL Worker: javascript:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'javascript:self.L=\"js-url\"' failed to load."
+],
+[
+"URL Worker: ftp:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ftp://127.0.0.1/x.js' failed to load."
+],
+[
+"URL Worker: file:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'file:///etc/hostname' failed to load."
+],
+[
+"URL Worker: ws:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ws://127.0.0.1:PORT/x.js' failed to load."
+],
+[
+"URL Worker: an invalid URL",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid."
+],
+[
+"URL Worker: a relative URL",
+"ok relative"
+],
+[
+"URL Worker: http text/javascript",
+"ok js"
+],
+[
+"URL Worker: http application/javascript",
+"ok appjs"
+],
+[
+"URL Worker: http text/plain",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain%22&ct=text%2Fplain' failed to load."
+],
+[
+"URL Worker: http no Content-Type",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22none%22&ct=none' failed to load."
+],
+[
+"URL Worker: http text/html",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22html%22&ct=text%2Fhtml' failed to load."
+],
+[
+"URL Worker: http application/json",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22json%22&ct=application%2Fjson' failed to load."
+],
+[
+"URL Worker: http image/png",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22png%22&ct=image%2Fpng' failed to load."
+],
+[
+"URL Worker: http text/javascript nosniff",
+"ok js-nosniff"
+],
+[
+"URL Worker: http text/plain nosniff",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain-nosniff%22&ct=text%2Fplain&xcto=1' failed to load."
+],
+[
+"URL Worker: http 404",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22404%22&st=404' failed to load."
+],
+[
+"URL Worker: http 500",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22500%22&st=500' failed to load."
+],
+[
+"URL Worker: http 204",
+"ok unset"
+],
+[
+"URL Worker: a same-origin redirect",
+"ok redirected"
+],
+[
+"URL Worker: cross-origin",
+"ok cross"
+],
+[
+"URL Worker: a syntax error",
+"threw SyntaxError | SyntaxError | Failed to execute 'importScripts' on 'WorkerGlobalScope': Unexpected token ';'"
+],
+[
+"URL Worker: a throw",
+"threw RangeError | RangeError | boom"
+],
+[
+"URL Worker: a cross-origin throw",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=throw%20new%20RangeError(%22boom-x%22)' failed to load."
+],
+[
+"URL Worker: a cross-origin syntax error",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=self.L%20%3D%20%3B' failed to load."
+],
+[
+"URL Worker: order: 404 in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=&st=404' failed to load. / A=1 B=0"
+],
+[
+"URL Worker: order: an invalid URL last",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid. / A=0 B=0"
+],
+[
+"URL Worker: order: about:blank in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load. / A=1 B=0"
+],
+[
+"URL Worker: an object with toString",
+"ok tostring"
+],
+[
+"URL Worker: an imported function's stack frame",
+"    at self.F (http://127.0.0.1:PORT/js?b=...:1:PORT)"
+],
+[
+"URL Worker: a redirected import's stack frame",
+"    at self.G (http://127.0.0.1:PORT/redir?...:1:PORT)"
+],
+[
+"URL Worker: an import with a fragment: its stack frame",
+"    at self.H (http://127.0.0.1:PORT/js?...:1:PORT)"
+],
+[
+"URL Worker: nested: http text/javascript",
+"message n-js"
+],
+[
+"URL Worker: nested: http text/plain",
+"error Event "
+],
+[
+"URL Worker: nested: http no Content-Type",
+"error Event "
+],
+[
+"URL Worker: nested: data:",
+"message n-data null"
+],
+[
+"URL Worker: nested: cross-origin",
+"ctor threw SecurityError | DOMException 18 | Failed to construct 'Worker': Script at 'http://localhost:PORT/js?b=postMessage(%22n-cross%22)' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"URL Worker: nested: about:blank",
+"ctor threw SecurityError | DOMException 18 | Failed to construct 'Worker': Script at 'about:blank' cannot be accessed from origin 'http://127.0.0.1:PORT'."
+],
+[
+"URL Worker: nested: invalid",
+"ctor threw SyntaxError | DOMException 12 | Failed to construct 'Worker': 'http://[' is not a valid URL."
+],
+[
+"URL Worker: nested: the page's blob",
+"message n-blob http://127.0.0.1:PORT"
+],
+[
+"blob SharedWorker: no arguments",
+"ok unset"
+],
+[
+"blob SharedWorker: the page's blob",
+"ok page-blob"
+],
+[
+"blob SharedWorker: its own blob (text/plain)",
+"ok own-blob"
+],
+[
+"blob SharedWorker: a revoked blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"blob SharedWorker: an unknown blob",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'BLOB' failed to load."
+],
+[
+"blob SharedWorker: data: text/javascript",
+"ok data-js"
+],
+[
+"blob SharedWorker: data: no type",
+"ok data-plain"
+],
+[
+"blob SharedWorker: data: application/json",
+"ok data-json"
+],
+[
+"blob SharedWorker: data: image/png",
+"ok data-img"
+],
+[
+"blob SharedWorker: data: base64",
+"ok data-b64"
+],
+[
+"blob SharedWorker: about:blank",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load."
+],
+[
+"blob SharedWorker: javascript:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'javascript:self.L=\"js-url\"' failed to load."
+],
+[
+"blob SharedWorker: ftp:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ftp://127.0.0.1/x.js' failed to load."
+],
+[
+"blob SharedWorker: file:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'file:///etc/hostname' failed to load."
+],
+[
+"blob SharedWorker: ws:",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'ws://127.0.0.1:PORT/x.js' failed to load."
+],
+[
+"blob SharedWorker: an invalid URL",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid."
+],
+[
+"blob SharedWorker: a relative URL",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL '/js?b=self.L%3D%22relative%22' is invalid."
+],
+[
+"blob SharedWorker: http text/javascript",
+"ok js"
+],
+[
+"blob SharedWorker: http application/javascript",
+"ok appjs"
+],
+[
+"blob SharedWorker: http text/plain",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain%22&ct=text%2Fplain' failed to load."
+],
+[
+"blob SharedWorker: http no Content-Type",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22none%22&ct=none' failed to load."
+],
+[
+"blob SharedWorker: http text/html",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22html%22&ct=text%2Fhtml' failed to load."
+],
+[
+"blob SharedWorker: http application/json",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22json%22&ct=application%2Fjson' failed to load."
+],
+[
+"blob SharedWorker: http image/png",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22png%22&ct=image%2Fpng' failed to load."
+],
+[
+"blob SharedWorker: http text/javascript nosniff",
+"ok js-nosniff"
+],
+[
+"blob SharedWorker: http text/plain nosniff",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22plain-nosniff%22&ct=text%2Fplain&xcto=1' failed to load."
+],
+[
+"blob SharedWorker: http 404",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22404%22&st=404' failed to load."
+],
+[
+"blob SharedWorker: http 500",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=self.L%3D%22500%22&st=500' failed to load."
+],
+[
+"blob SharedWorker: http 204",
+"ok unset"
+],
+[
+"blob SharedWorker: a same-origin redirect",
+"ok redirected"
+],
+[
+"blob SharedWorker: cross-origin",
+"ok cross"
+],
+[
+"blob SharedWorker: a syntax error",
+"threw SyntaxError | SyntaxError | Failed to execute 'importScripts' on 'WorkerGlobalScope': Unexpected token ';'"
+],
+[
+"blob SharedWorker: a throw",
+"threw RangeError | RangeError | boom"
+],
+[
+"blob SharedWorker: a cross-origin throw",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=throw%20new%20RangeError(%22boom-x%22)' failed to load."
+],
+[
+"blob SharedWorker: a cross-origin syntax error",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://localhost:PORT/js?b=self.L%20%3D%20%3B' failed to load."
+],
+[
+"blob SharedWorker: order: 404 in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://127.0.0.1:PORT/js?b=&st=404' failed to load. / A=1 B=0"
+],
+[
+"blob SharedWorker: order: an invalid URL last",
+"threw SyntaxError | DOMException 12 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The URL 'http://[' is invalid. / A=0 B=0"
+],
+[
+"blob SharedWorker: order: about:blank in the middle",
+"threw NetworkError | DOMException 19 | Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'about:blank' failed to load. / A=1 B=0"
+],
+[
+"blob SharedWorker: an object with toString",
+"ok tostring"
+],
+[
+"blob SharedWorker: an imported function's stack frame",
+"    at self.F (http://127.0.0.1:PORT/js?b=...:1:PORT)"
+],
+[
+"blob SharedWorker: a redirected import's stack frame",
+"    at self.G (http://127.0.0.1:PORT/redir?...:1:PORT)"
+],
+[
+"blob SharedWorker: an import with a fragment: its stack frame",
+"    at self.H (http://127.0.0.1:PORT/js?...:1:PORT)"
+],
+[
+"blob SharedWorker: nested",
+"no Worker here"
+]
+]

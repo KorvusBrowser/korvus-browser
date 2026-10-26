@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Baseline",
+    "member": "constructor",
+    "expr": "new Baseline()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

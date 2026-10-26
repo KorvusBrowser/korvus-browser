@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSSkew",
+    "member": "constructor",
+    "expr": "new CSSSkew()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

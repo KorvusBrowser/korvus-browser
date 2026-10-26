@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "PerformanceEntry",
+    "member": "constructor",
+    "expr": "new PerformanceEntry()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "id",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.id; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "entryType",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.entryType; })()",
+    "expected": "navigation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "startTime",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return o.startTime; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "startTime",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.startTime); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "duration",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.duration); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "toJSON",
+    "expr": "(() => { const o = performance.getEntriesByType(\"navigation\")[0]; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "name",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].name",
+    "expected": "string",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "name",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].name === location.href",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "name",
+    "expr": "performance.mark(\"pe-nm\").name",
+    "expected": "pe-nm",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "navigationId",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].navigationId",
+    "expected": "number",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "navigationId",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].navigationId.length > 0",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceEntry",
+    "member": "navigationId",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceEntry.prototype, \"navigationId\").get.call(Object.create(PerformanceEntry.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

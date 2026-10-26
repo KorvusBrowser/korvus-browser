@@ -1,0 +1,15 @@
+<!doctype html><title>pending</title><script type=module>
+// REALWEB H37: import() failures in Chrome's words -- "Failed to fetch dynamically imported module: <the ROOT
+// import()'s url>" for a 404 or a non-JavaScript MIME type anywhere in its graph, as a TypeError; a bad bare
+// specifier in a nested static import keeps the static wording.
+const out = {};
+const tryImport = async (k, spec) => { try { const m = await import(spec); out[k] = 'ok:' + Object.keys(m).join(','); } catch (e) { out[k] = e.constructor.name + ': ' + e.message.replace(location.origin, 'ORIGIN').replace(location.origin, 'ORIGIN'); } };
+await tryImport('root404', './missing.js');
+await tryImport('nested404', './nested404.js');
+await tryImport('deep404', './deep.js');
+await tryImport('mime', './text.txt');
+await tryImport('rootBare', 'bare-pkg');
+await tryImport('nestedBare', './nestedbare.js');
+await tryImport('ok', './ok.js');
+document.title = JSON.stringify(out);
+</script>

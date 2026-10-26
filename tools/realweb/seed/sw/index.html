@@ -1,0 +1,22 @@
+<!doctype html><html><head><style>
+.wrap { width: 300px; overflow: hidden; }
+.flex { display: flex; flex-wrap: nowrap; }
+.flex > div { flex: 0 0 auto; width: 100px; height: 20px; }
+.flexshrink > div { width: 100px; height: 20px; }
+.nowrap { white-space: nowrap; } .nowrap > span { display: inline-block; width: 100px; }
+.abs { position: relative; height: 20px; } .abs > div { position: absolute; left: 500px; width: 100px; height: 10px; }
+.vis { width: 300px; } .vis > div { width: 700px; height: 10px; }
+</style></head><body>
+<div class="wrap" id="w1"><div class="flex" id="t1"><div></div><div></div><div></div><div></div><div></div></div></div>
+<div class="wrap" id="w2"><div class="flex flexshrink" id="t2"><div></div><div></div><div></div><div></div><div></div></div></div>
+<div class="wrap nowrap" id="t3"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span></div>
+<div class="wrap abs" id="t4"><div></div></div>
+<div class="vis" id="t5"><div></div></div>
+<script>
+var q = function (id) { var e = document.getElementById(id); return [e.clientWidth, e.scrollWidth, e.offsetWidth].join('/'); };
+var R = { t1: q('t1'), w1: q('w1'), t2: q('t2'), t3: q('t3'), t4: q('t4'), t5: q('t5') };
+var t = document.getElementById('t1'), kids = Array.prototype.slice.call(t.children), n = 0;
+for (var i = 0; t.scrollWidth < 2 * document.getElementById('w1').clientWidth && i++ < 64;) kids.forEach(function (k) { t.appendChild(k.cloneNode(true)); n++; });
+R.fillLoop = { iterations: i, clones: n, scrollWidth: t.scrollWidth };
+window.R = JSON.stringify(R);
+</script></body></html>

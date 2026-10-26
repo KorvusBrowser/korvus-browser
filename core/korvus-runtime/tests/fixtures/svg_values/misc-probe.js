@@ -1,0 +1,38 @@
+(() => {
+  const out = [];
+  const show = v => (v === null ? 'null' : v === undefined ? 'undefined' : typeof v === 'object' ? Object.prototype.toString.call(v) : (typeof v === 'number' && isNaN(v)) ? 'NaN' : v);
+  const t = (label, f) => { try { out.push([label, show(f())]); } catch (e) { out.push([label, 'threw ' + e.name, e.message]); } };
+  t('img-crossorigin', () => document.createElement('img').crossOrigin);
+  t('img-crossorigin-set', () => { const i = document.createElement('img'); i.crossOrigin = 'x'; return i.crossOrigin; });
+  t('img-crossorigin-empty', () => { const i = document.createElement('img'); i.crossOrigin = ''; return i.crossOrigin; });
+  t('img-crossorigin-attr', () => { const i = document.createElement('img'); i.crossOrigin = 'use-credentials'; return i.getAttribute('crossorigin'); });
+  t('img-crossorigin-null', () => { const i = document.createElement('img'); i.crossOrigin = 'x'; i.crossOrigin = null; return [i.crossOrigin, i.hasAttribute('crossorigin')].join(); });
+  t('font-color', () => document.createElement('font').color);
+  t('font-color-set', () => { const f = document.createElement('font'); f.color = 'red'; return [f.color, f.getAttribute('color')].join(); });
+  t('font-face-size', () => { const f = document.createElement('font'); return [f.face, f.size].join('|'); });
+  t('resp-json', () => Response.json(1));
+  t('resp-json-body', () => { const r = Response.json({ a: 1 }, { status: 201, headers: { x: 'y' } }); return [r.status, r.statusText, r.headers.get('content-type'), r.headers.get('x'), r.type, r.ok].join('|'); });
+  t('resp-json-bad', () => Response.json(Symbol()));
+  t('resp-json-undef', () => Response.json(undefined));
+  t('resp-json-status', () => Response.json(1, { status: 204 }));
+  t('resp-redirect', () => Response.redirect('x'));
+  t('resp-redirect-fields', () => { const r = Response.redirect('/a', 301); return [r.status, r.headers.get('location').replace(location.origin, 'ORIGIN'), r.type, r.redirected, r.url, r.ok].join('|'); });
+  t('resp-redirect-default', () => Response.redirect('/a').status);
+  t('resp-redirect-bad-status', () => Response.redirect('/a', 200));
+  t('resp-redirect-bad-url', () => Response.redirect('http://[x'));
+  t('resp-error', () => { const r = Response.error(); return [r.type, r.status, r.ok].join('|'); });
+  t('settimeout-none', () => setTimeout());
+  t('setinterval-none', () => setInterval());
+  t('settimeout-str', () => typeof setTimeout('1'));
+  t('settimeout-num', () => { const id = setTimeout(5); clearTimeout(id); return typeof id; });
+  t('cleartimeout-none', () => clearTimeout());
+  t('status', () => window.status);
+  t('status-set', () => { window.status = 5; const r = window.status; window.status = ''; return r; });
+  t('postmessage-none', () => window.postMessage());
+  t('postmessage-one', () => window.postMessage(1));
+  t('postmessage-bad-origin', () => window.postMessage(1, 'x'));
+  t('nav-starttime', () => performance.getEntriesByType('navigation')[0].startTime);
+  t('nav-order', () => { const n = performance.getEntriesByType('navigation')[0]; return [n.fetchStart >= n.startTime, n.domainLookupStart >= n.fetchStart, n.connectStart >= n.domainLookupEnd, n.requestStart >= n.connectEnd, n.responseStart >= n.requestStart].join(); });
+  t('timing-fetch', () => performance.timing.fetchStart - performance.timing.navigationStart >= 0);
+  return out;
+})()

@@ -1,0 +1,8 @@
+<!doctype html><html><head><title>md</title></head><body><script>
+window.R = null;
+(async function () {
+  var keys = Object.keys(navigator.mediaDevices.getSupportedConstraints());
+  var devices = await navigator.mediaDevices.enumerateDevices();
+  window.R = JSON.stringify({ n: keys.length, keys: keys.join(','), devices: devices.map(function (d) { return d.kind; }).join(',') });
+})();
+</script></body></html>

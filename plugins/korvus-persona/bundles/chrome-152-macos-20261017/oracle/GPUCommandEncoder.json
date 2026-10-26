@@ -1,0 +1,457 @@
+[
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "constructor",
+    "expr": "new GPUCommandEncoder()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "GPUCommandEncoder.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").get.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginComputePass",
+    "expr": "GPUCommandEncoder.prototype.beginComputePass.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginComputePass",
+    "expr": "GPUCommandEncoder.prototype.beginComputePass.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginRenderPass",
+    "expr": "GPUCommandEncoder.prototype.beginRenderPass.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginRenderPass",
+    "expr": "GPUCommandEncoder.prototype.beginRenderPass.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToTexture.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToBuffer.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToTexture.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToTexture.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "finish",
+    "expr": "GPUCommandEncoder.prototype.finish.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "finish",
+    "expr": "GPUCommandEncoder.prototype.finish.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUCommandEncoder.prototype.insertDebugMarker.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUCommandEncoder.prototype.insertDebugMarker.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUCommandEncoder.prototype.pushDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUCommandEncoder.prototype.pushDebugGroup.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "clearBuffer",
+    "expr": "GPUCommandEncoder.prototype.clearBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "clearBuffer",
+    "expr": "GPUCommandEncoder.prototype.clearBuffer.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToBuffer.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPUCommandEncoder.prototype.popDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPUCommandEncoder.prototype.popDebugGroup.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "resolveQuerySet",
+    "expr": "GPUCommandEncoder.prototype.resolveQuerySet.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "resolveQuerySet",
+    "expr": "GPUCommandEncoder.prototype.resolveQuerySet.call(Object.create(GPUCommandEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginRenderPass",
+    "expr": "GPUCommandEncoder.prototype.beginRenderPass.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToTexture.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToBuffer.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToTexture",
+    "expr": "GPUCommandEncoder.prototype.copyTextureToTexture.call({}, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPUCommandEncoder.prototype.insertDebugMarker.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPUCommandEncoder.prototype.pushDebugGroup.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "clearBuffer",
+    "expr": "GPUCommandEncoder.prototype.clearBuffer.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToBuffer",
+    "expr": "GPUCommandEncoder.prototype.copyBufferToBuffer.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "resolveQuerySet",
+    "expr": "GPUCommandEncoder.prototype.resolveQuerySet.call({}, 1, 1, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").get.call(Object.create(GPUCommandEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUCommandEncoder.prototype, \"label\").set.call(Object.create(GPUCommandEncoder.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginComputePass",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"beginComputePass\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginComputePass",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"beginComputePass\"].call(Object.create(GPUCommandEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginRenderPass",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"beginRenderPass\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "beginRenderPass",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"beginRenderPass\"].call(Object.create(GPUCommandEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToTexture",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyBufferToTexture\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToTexture",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyBufferToTexture\"].call(Object.create(GPUCommandEncoder.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyTextureToBuffer\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyTextureToBuffer\"].call(Object.create(GPUCommandEncoder.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToTexture",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyTextureToTexture\"].call({}, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyTextureToTexture",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyTextureToTexture\"].call(Object.create(GPUCommandEncoder.prototype), 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "finish",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"finish\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "finish",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"finish\"].call(Object.create(GPUCommandEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"insertDebugMarker\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"insertDebugMarker\"].call(Object.create(GPUCommandEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"pushDebugGroup\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"pushDebugGroup\"].call(Object.create(GPUCommandEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "clearBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"clearBuffer\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "clearBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"clearBuffer\"].call(Object.create(GPUCommandEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyBufferToBuffer\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "copyBufferToBuffer",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"copyBufferToBuffer\"].call(Object.create(GPUCommandEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"popDebugGroup\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"popDebugGroup\"].call(Object.create(GPUCommandEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "resolveQuerySet",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"resolveQuerySet\"].call({}, 1, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "GPUCommandEncoder",
+    "member": "resolveQuerySet",
+    "expr": "(() => { try { const v = GPUCommandEncoder.prototype[\"resolveQuerySet\"].call(Object.create(GPUCommandEncoder.prototype), 1, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

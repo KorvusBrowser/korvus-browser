@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "AudioScheduledSourceNode",
+    "member": "constructor",
+    "expr": "new AudioScheduledSourceNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioScheduledSourceNode",
+    "member": "onended",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioScheduledSourceNode",
+    "member": "onended",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioScheduledSourceNode",
+    "member": "start",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return o.start(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioScheduledSourceNode",
+    "member": "stop",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return o.stop(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "iface": "Performance",
+    "member": "constructor",
+    "expr": "new Performance()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "interactionCount",
+    "expr": "(() => { const o = performance; return o.interactionCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measureUserAgentSpecificMemory",
+    "expr": "(() => { const o = performance; return o.measureUserAgentSpecificMemory(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByType",
+    "expr": "(() => { const o = performance; return o.getEntriesByType(\"x\"); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByType",
+    "expr": "(() => { const o = performance; return o.getEntriesByType(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByName",
+    "expr": "(() => { const o = performance; return o.getEntriesByName(\"x\"); })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByName",
+    "expr": "(() => { const o = performance; return o.getEntriesByName(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "clearResourceTimings",
+    "expr": "(() => { const o = performance; return o.clearResourceTimings(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "setResourceTimingBufferSize",
+    "expr": "(() => { const o = performance; return o.setResourceTimingBufferSize(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "setResourceTimingBufferSize",
+    "expr": "(() => { const o = performance; return o.setResourceTimingBufferSize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "onresourcetimingbufferfull",
+    "expr": "(() => { const o = performance; return o.onresourcetimingbufferfull; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "mark",
+    "expr": "(() => { const o = performance; return o.mark(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "clearMarks",
+    "expr": "(() => { const o = performance; return o.clearMarks(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measure",
+    "expr": "(() => { const o = performance; return o.measure(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "clearMeasures",
+    "expr": "(() => { const o = performance; return o.clearMeasures(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "eventCounts",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.eventCounts); })()",
+    "expected": "[object EventCounts]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "now",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.now()); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "timeOrigin",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.timeOrigin); })()",
+    "expected": "[object Number]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "toJSON",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "timing",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.timing); })()",
+    "expected": "[object PerformanceTiming]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "navigation",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.navigation); })()",
+    "expected": "[object PerformanceNavigation]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measureUserAgentSpecificMemory",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.measureUserAgentSpecificMemory()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntries",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.getEntries()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByType",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.getEntriesByType(\"x\")); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "getEntriesByName",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.getEntriesByName(\"x\")); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "onresourcetimingbufferfull",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.onresourcetimingbufferfull); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "mark",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.mark(\"x\")); })()",
+    "expected": "[object PerformanceMark]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measure",
+    "expr": "(() => { const o = performance; return Object.prototype.toString.call(o.measure(\"x\")); })()",
+    "expected": "[object PerformanceMeasure]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "memory",
+    "expr": "typeof performance.memory",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "memory",
+    "expr": "typeof performance.memory.jsHeapSizeLimit",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "memory",
+    "expr": "performance.memory.usedJSHeapSize <= performance.memory.totalJSHeapSize",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measureUserAgentSpecificMemory",
+    "expr": "(async () => { const o = performance; return await o.measureUserAgentSpecificMemory(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Performance",
+    "member": "measureUserAgentSpecificMemory",
+    "expr": "(async () => { const o = performance; return Object.prototype.toString.call(await o.measureUserAgentSpecificMemory()); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

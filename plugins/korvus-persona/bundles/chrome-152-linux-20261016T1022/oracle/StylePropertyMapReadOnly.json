@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "constructor",
+    "expr": "new StylePropertyMapReadOnly()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "get",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.get(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "get",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.get(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "getAll",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.getAll(\"x\"); })()",
+    "expected": [],
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "getAll",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.getAll(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "has",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.has(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "has",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.has(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "size",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return o.size; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "get",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return Object.prototype.toString.call(o.get(\"x\")); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "StylePropertyMapReadOnly",
+    "member": "getAll",
+    "expr": "(() => { const o = document.createElement(\"div\").computedStyleMap(); return Object.prototype.toString.call(o.getAll(\"x\")); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

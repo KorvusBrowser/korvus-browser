@@ -1,0 +1,7 @@
+[
+ "MD msg: dyn caught EvalError: imported throws",
+ "MI page error: [\"Event\",null,null,null,null,\"undefined\"]",
+ "ML page error: [\"ErrorEvent\",\"Uncaught EvalError: imported throws\",\"ORIGIN/mthrow.mjs\",1,7,\"null\"]",
+ "MS page error: [\"Event\",null,null,null,null,\"undefined\"]",
+ "MT page error: [\"ErrorEvent\",\"Uncaught EvalError: imported throws\",\"ORIGIN/mthrow.mjs\",1,7,\"null\"]"
+]

@@ -1,0 +1,8 @@
+<!doctype html><title>p</title><body><div id="host"></div><div id="host2"></div><script>
+window.__r = {};
+const mk = (tag, into, mode) => { const f = document.createElement('iframe'); f.src = 'http://127.0.0.1:18152/c.html?' + tag; f.onload = () => { window.__r[tag + '_onload'] = true; };
+  if (mode) { const sr = document.getElementById(into).attachShadow({mode}); sr.appendChild(f); } else document.body.appendChild(f); return f; };
+const a = mk('light', null, null); const b = mk('closedShadow', 'host', 'closed'); const c = mk('openShadow', 'host2', 'open');
+addEventListener('message', e => { if (e.data && e.data.frame) window.__r[e.data.frame + '_msg'] = true; });
+setTimeout(() => { window.__r.cwLight = !!a.contentWindow; window.__r.cwClosed = !!b.contentWindow; window.__r.framesLen = window.frames.length; }, 1500);
+</script></body>

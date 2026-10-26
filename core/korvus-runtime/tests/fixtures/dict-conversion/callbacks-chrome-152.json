@@ -1,0 +1,78 @@
+[
+[
+"geo cb 5",
+"TypeError: Failed to execute 'getCurrentPosition' on 'Geolocation': parameter 1 is not of type 'Function'."
+],
+[
+"geo err 5",
+"TypeError: Failed to execute 'getCurrentPosition' on 'Geolocation': parameter 2 is not of type 'Function'."
+],
+[
+"new ResizeObserver 5",
+"TypeError: Failed to construct 'ResizeObserver': parameter 1 is not of type 'Function'."
+],
+[
+"rAF 5",
+"TypeError: Failed to execute 'requestAnimationFrame' on 'Window': parameter 1 is not of type 'Function'."
+],
+[
+"locks.request 5",
+"rejected TypeError: Failed to execute 'request' on 'LockManager': parameter 2 is not of type 'Function'."
+],
+[
+"toBlob 5",
+"TypeError: Failed to execute 'toBlob' on 'HTMLCanvasElement': parameter 1 is not of type 'Function'."
+],
+[
+"treeWalker 5",
+"TypeError: Failed to execute 'createTreeWalker' on 'Document': parameter 3 is not of type 'Object'."
+],
+[
+"treeWalker obj",
+"ok"
+],
+[
+"rIC 5",
+"TypeError: Failed to execute 'requestIdleCallback' on 'Window': parameter 1 is not of type 'Function'."
+],
+[
+"queueMicrotask 5",
+"TypeError: Failed to execute 'queueMicrotask' on 'Window': parameter 1 is not of type 'Function'."
+],
+[
+"MutationObserver 5",
+"TypeError: Failed to construct 'MutationObserver': parameter 1 is not of type 'Function'."
+],
+[
+"PerformanceObserver 5",
+"TypeError: Failed to construct 'PerformanceObserver': parameter 1 is not of type 'Function'."
+],
+[
+"decodeAudioData 5",
+"rejected TypeError: Failed to execute 'decodeAudioData' on 'BaseAudioContext': parameter 2 is not of type 'Function'."
+],
+[
+"webkitGetAsEntry? setTimeout str",
+"ok"
+],
+[
+"getCurrentPosition symbol options",
+"TypeError: Failed to execute 'getCurrentPosition' on 'Geolocation': The provided value is not of type 'PositionOptions'."
+],
+[
+"IdleDetector.start 5",
+"rejected TypeError: Failed to execute 'start' on 'IdleDetector': The provided value is not of type 'IdleOptions'."
+],
+[
+"serial 5",
+"rejected TypeError: Failed to execute 'requestPort' on 'Serial': The provided value is not of type 'SerialPortRequestOptions'."
+],
+[
+"hid sym",
+"rejected TypeError: Failed to execute 'requestDevice' on 'HID': Failed to read the 'filters' property from 'HIDDeviceRequestOptions': The provided value cannot be converted to a sequence."
+],
+[
+"AbortSignal.timeout -1",
+"TypeError: Failed to execute 'timeout' on 'AbortSignal': Value is outside the 'unsigned long long' value range."
+]
+]

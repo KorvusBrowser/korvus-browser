@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>korvus surface snapshot</title>
+</head>
+<body>
+  <!-- A small, representative document so the `document` singleton and DOM-element instances resolve
+       to real values (title/URL/readyState/characterSet on document; a real element tree for element
+       members). The surface-dump instances block constructs a detached `div` via document.createElement,
+       which needs a live `document`; these elements make the document non-empty and realistic. -->
+  <header id="top" class="masthead" data-role="banner">
+    <h1 id="title">Korvus surface snapshot</h1>
+    <nav><a id="home" href="https://a.b/c?x=1#h" rel="noopener">home</a></nav>
+  </header>
+
+  <main id="main" class="content wide" data-role="main">
+    <div id="box" class="box" data-kind="panel">
+      <p id="para">representative paragraph text</p>
+      <span id="tag" class="pill">span</span>
+    </div>
+
+    <form id="form" action="/submit" method="post" name="demo">
+      <label for="q">query</label>
+      <input id="q" type="text" name="q" value="hello" placeholder="type here" maxlength="120">
+      <input id="agree" type="checkbox" name="agree" checked>
+      <select id="pick" name="pick">
+        <option value="1">one</option>
+        <option value="2" selected>two</option>
+      </select>
+      <textarea id="notes" name="notes" rows="3" cols="40">notes</textarea>
+      <button id="go" type="submit">go</button>
+    </form>
+
+    <ul id="list">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+    </ul>
+
+    <table id="grid">
+      <thead><tr><th>a</th><th>b</th></tr></thead>
+      <tbody><tr><td>1</td><td>2</td></tr></tbody>
+    </table>
+
+    <img id="pic" alt="placeholder" width="16" height="16">
+  </main>
+
+  <footer id="foot"><small>fixture</small></footer>
+</body>
+</html>

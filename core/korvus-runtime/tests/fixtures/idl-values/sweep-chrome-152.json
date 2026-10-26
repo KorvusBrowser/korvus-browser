@@ -1,0 +1,693 @@
+[
+ [
+  "DOMRect.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "1 2 3 4 2 4 6 1"
+ ],
+ [
+  "DOMRectReadOnly.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "1 2 3 4 2 4 6 1"
+ ],
+ [
+  "DOMRect.toJSON non-finite",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "NaN -0 Infinity -Infinity -Infinity NaN -0 NaN"
+ ],
+ [
+  "DOMRect.toJSON NaN width",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "1 2 NaN 4 2 NaN 6 NaN"
+ ],
+ [
+  "DOMRect.toJSON negative",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "10 20 -3 -4 16 10 20 7"
+ ],
+ [
+  "DOMRect.toJSON signed zeros",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "-0 -0 0 0 -0 -0 -0 -0"
+ ],
+ [
+  "DOMRect edges NaN height",
+  "Array.prototype",
+  "array",
+  "0,1,2,3",
+  "wec",
+  "unfrozen",
+  "NaN NaN 1 3"
+ ],
+ [
+  "DOMRect.toJSON foreign receiver",
+  "ERR",
+  "TypeError",
+  "Illegal invocation"
+ ],
+ [
+  "DOMQuad.toJSON foreign receiver",
+  "ERR",
+  "TypeError",
+  "Illegal invocation"
+ ],
+ [
+  "DOMQuad.getBounds NaN",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "NaN 0 NaN 2 0 NaN 2 NaN"
+ ],
+ [
+  "DOMQuad.getBounds signed zeros",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "-0 -0 0 0 -0 -0 -0 -0"
+ ],
+ [
+  "DOMRect.fromRect.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "5 0 0 7 0 5 7 5"
+ ],
+ [
+  "DOMPoint.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,z,w",
+  "wec",
+  "1 2 3 4"
+ ],
+ [
+  "DOMPointReadOnly.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,z,w",
+  "wec",
+  "1 2 0 1"
+ ],
+ [
+  "DOMPoint.toJSON non-finite",
+  "Object.prototype",
+  "object",
+  "x,y,z,w",
+  "wec",
+  "NaN -0 Infinity 1"
+ ],
+ [
+  "DOMMatrix.toJSON",
+  "Object.prototype",
+  "object",
+  "a,b,c,d,e,f,m11,m12,m13,m14,m21,m22,m23,m24,m31,m32,m33,m34,m41,m42,m43,m44,is2D,isIdentity",
+  "wec",
+  "1 2 3 4 5 6 1 2 0 0 3 4 0 0 0 0 1 0 5 6 0 1 boolean:true boolean:false"
+ ],
+ [
+  "DOMMatrixReadOnly.toJSON",
+  "Object.prototype",
+  "object",
+  "a,b,c,d,e,f,m11,m12,m13,m14,m21,m22,m23,m24,m31,m32,m33,m34,m41,m42,m43,m44,is2D,isIdentity",
+  "wec",
+  "1 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 boolean:true boolean:true"
+ ],
+ [
+  "DOMMatrix3d.toJSON",
+  "Object.prototype",
+  "object",
+  "a,b,c,d,e,f,m11,m12,m13,m14,m21,m22,m23,m24,m31,m32,m33,m34,m41,m42,m43,m44,is2D,isIdentity",
+  "wec",
+  "1 0 0 1 7 8 1 0 0 0 0 1 0 0 0 0 1 0 7 8 9 1 boolean:false boolean:false"
+ ],
+ [
+  "DOMQuad.toJSON",
+  "Object.prototype",
+  "object",
+  "p1,p2,p3,p4",
+  "wec",
+  "[other [object DOMPoint]] [other [object DOMPoint]] [other [object DOMPoint]] [other [object DOMPoint]]"
+ ],
+ [
+  "DOMQuad.toJSON.p1",
+  "other [object DOMPoint]",
+  "object",
+  "",
+  "-",
+  ""
+ ],
+ [
+  "DOMQuad.getBounds.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "0 0 4 2 0 4 2 0"
+ ],
+ [
+  "Element.getBoundingClientRect.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "number number number number number number number number"
+ ],
+ [
+  "Element.getClientRects[0].toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "number number number number number number number number"
+ ],
+ [
+  "Range.getBoundingClientRect.toJSON",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "number number number number number number number number"
+ ],
+ [
+  "DOMRect.toJSON hasOwnProperty walk",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "\"12342461\""
+ ],
+ [
+  "JSON.stringify(DOMRect)",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "\"{\\\"x\\\":1,\\\"y\\\":2,\\\"width\\\":3,\\\"height\\\":4,\\\"top\\\":2,\\\"right\\\":4,\\\"bottom\\\":6,\\\"left\\\":1}\""
+ ],
+ [
+  "DOMRect.toJSON is a new object",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "boolean:true boolean:true"
+ ],
+ [
+  "toJSON defines, never sets",
+  "Array.prototype",
+  "array",
+  "0,1,2,3,4,5,6",
+  "wec",
+  "unfrozen",
+  "\"\" \"x,y,width,height,top,right,bottom,left\" \"p1,p2,p3,p4\" 24 \"read,written\" 1 1"
+ ],
+ [
+  "DOMQuad.toJSON reads its own points",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"object\" \"1\""
+ ],
+ [
+  "TextEncoder.encodeInto",
+  "Object.prototype",
+  "object",
+  "read,written",
+  "wec",
+  "3 4"
+ ],
+ [
+  "TextEncoder.encodeInto empty",
+  "Object.prototype",
+  "object",
+  "read,written",
+  "wec",
+  "0 0"
+ ],
+ [
+  "Headers.getSetCookie",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"a=1\" \"b=2\""
+ ],
+ [
+  "Headers.getSetCookie empty",
+  "Array.prototype",
+  "array",
+  "",
+  "-",
+  "unfrozen",
+  ""
+ ],
+ [
+  "FormData.getAll",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"1\" \"2\""
+ ],
+ [
+  "FormData.getAll none",
+  "Array.prototype",
+  "array",
+  "",
+  "-",
+  "unfrozen",
+  ""
+ ],
+ [
+  "URLSearchParams.getAll",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"1\" \"2\""
+ ],
+ [
+  "2d.getContextAttributes",
+  "Object.prototype",
+  "object",
+  "alpha,colorSpace,colorType,desynchronized,toneMapping,willReadFrequently",
+  "wec",
+  "boolean:true \"srgb\" \"unorm8\" boolean:false [Object.prototype] boolean:false"
+ ],
+ [
+  "OffscreenCanvas2d.getContextAttributes",
+  "Object.prototype",
+  "object",
+  "alpha,colorSpace,colorType,desynchronized,toneMapping,willReadFrequently",
+  "wec",
+  "boolean:true \"srgb\" \"unorm8\" boolean:false [Object.prototype] boolean:false"
+ ],
+ [
+  "2d.measureText",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "\"TextMetrics\""
+ ],
+ [
+  "userAgentData.toJSON",
+  "Object.prototype",
+  "object",
+  "brands,mobile,platform",
+  "wec",
+  "object boolean string"
+ ],
+ [
+  "userAgentData.toJSON.brands[0]",
+  "Object.prototype",
+  "object",
+  "brand,version",
+  "wec",
+  "string string"
+ ],
+ [
+  "userAgentData.brands[0]",
+  "Object.prototype",
+  "object",
+  "brand,version",
+  "wec",
+  "string string"
+ ],
+ [
+  "getHighEntropyValues",
+  "Object.prototype",
+  "object",
+  "architecture,bitness,brands,mobile,model,platform,platformVersion,uaFullVersion,wow64",
+  "wec",
+  "string string object boolean string string string string boolean"
+ ],
+ [
+  "getHighEntropyValues.fullVersionList[0]",
+  "Object.prototype",
+  "object",
+  "brand,version",
+  "wec",
+  "string string"
+ ],
+ [
+  "storage.estimate",
+  "Object.prototype",
+  "object",
+  "quota,usage,usageDetails",
+  "wec",
+  "number number object"
+ ],
+ [
+  "locks.query",
+  "Object.prototype",
+  "object",
+  "held,pending",
+  "wec",
+  "[Array.prototype len 0] [Array.prototype len 0]"
+ ],
+ [
+  "mediaDevices.getSupportedConstraints",
+  "Object.prototype",
+  "object",
+  "aspectRatio,autoGainControl,brightness,channelCount,colorTemperature,contrast,deviceId,displaySurface,echoCancellation,exposureCompensation,exposureMode,exposureTime,facingMode,focusDistance,focusMode,frameRate,groupId,height,iso,latency,noiseSuppression,pan,pointsOfInterest,resizeMode,restrictOwnAudio,sampleRate,sampleSize,saturation,sharpness,suppressLocalAudioPlayback,tilt,torch,voiceIsolation,whiteBalanceMode,width,zoom",
+  "wec",
+  "boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true boolean:true"
+ ],
+ [
+  "mediaCapabilities.decodingInfo",
+  "Object.prototype",
+  "object",
+  "powerEfficient,smooth,supported,keySystemAccess",
+  "wec",
+  "boolean boolean boolean null"
+ ],
+ [
+  "AudioContext.getOutputTimestamp",
+  "Object.prototype",
+  "object",
+  "contextTime,performanceTime",
+  "wec",
+  "number number"
+ ],
+ [
+  "crypto.subtle.exportKey(jwk)",
+  "Object.prototype",
+  "object",
+  "alg,ext,k,key_ops,kty",
+  "wec",
+  "\"HS256\" boolean:true \"AAAAAAAAAAAAAAAAAAAAAA\" [Array.prototype len 1] \"oct\""
+ ],
+ [
+  "crypto.subtle.generateKey(ECDSA)",
+  "Object.prototype",
+  "object",
+  "privateKey,publicKey",
+  "wec",
+  "object object"
+ ],
+ [
+  "CryptoKey.algorithm",
+  "Object.prototype",
+  "object",
+  "name,hash,length",
+  "wec",
+  "string object number"
+ ],
+ [
+  "CryptoKey.algorithm.hash",
+  "Object.prototype",
+  "object",
+  "name",
+  "wec",
+  "\"SHA-256\""
+ ],
+ [
+  "CryptoKey.usages",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"sign\" \"verify\""
+ ],
+ [
+  "Headers.entries.next",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:false [Array.prototype len 2]"
+ ],
+ [
+  "Headers.entries.next.value",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"a\" \"1\""
+ ],
+ [
+  "Headers.entries done",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:true undefined"
+ ],
+ [
+  "FormData.entries.next",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:false [Array.prototype len 2]"
+ ],
+ [
+  "URLSearchParams.entries.next",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:false [Array.prototype len 2]"
+ ],
+ [
+  "NodeList.entries.next",
+  "Object.prototype",
+  "object",
+  "value,done",
+  "wec",
+  "object boolean"
+ ],
+ [
+  "DOMTokenList.values.next",
+  "Object.prototype",
+  "object",
+  "value,done",
+  "wec",
+  "\"q\" boolean:false"
+ ],
+ [
+  "ReadableStream.read",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:false 1"
+ ],
+ [
+  "ReadableStream.read done",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:true undefined"
+ ],
+ [
+  "ReadableStream async iterator next",
+  "Object.prototype",
+  "object",
+  "done,value",
+  "wec",
+  "boolean:false \"z\""
+ ],
+ [
+  "PerformanceMark.toJSON",
+  "Object.prototype",
+  "object",
+  "name,entryType,startTime,duration,navigationId",
+  "wec",
+  "string string number number number"
+ ],
+ [
+  "PerformanceMeasure.toJSON",
+  "Object.prototype",
+  "object",
+  "name,entryType,startTime,duration,navigationId",
+  "wec",
+  "string string number number number"
+ ],
+ [
+  "PerformanceNavigationTiming.toJSON",
+  "Object.prototype",
+  "object",
+  "name,entryType,startTime,duration,navigationId,initiatorType,deliveryType,nextHopProtocol,renderBlockingStatus,contentType,contentEncoding,workerStart,workerRouterEvaluationStart,workerCacheLookupStart,workerMatchedSourceType,workerFinalSourceType,redirectStart,redirectEnd,fetchStart,domainLookupStart,domainLookupEnd,connectStart,secureConnectionStart,connectEnd,requestStart,responseStart,firstInterimResponseStart,finalResponseHeadersStart,responseEnd,transferSize,encodedBodySize,decodedBodySize,responseStatus,serverTiming,unloadEventStart,unloadEventEnd,domInteractive,domContentLoadedEventStart,domContentLoadedEventEnd,domComplete,loadEventStart,loadEventEnd,type,redirectCount,activationStart,criticalCHRestart,notRestoredReasons,confidence",
+  "wec",
+  "string string number number number string string string string string string number number number string string number number number number number number number number number number number number number number number number number object number number number number number number number number string number number number null object"
+ ],
+ [
+  "performance.timing.toJSON",
+  "Object.prototype",
+  "object",
+  "connectStart,secureConnectionStart,unloadEventEnd,domainLookupStart,domainLookupEnd,responseStart,connectEnd,responseEnd,requestStart,domLoading,redirectStart,loadEventEnd,domComplete,navigationStart,loadEventStart,domContentLoadedEventEnd,unloadEventStart,redirectEnd,domInteractive,fetchStart,domContentLoadedEventStart",
+  "wec",
+  "number number number number number number number number number number number number number number number number number number number number number"
+ ],
+ [
+  "performance.navigation.toJSON",
+  "Object.prototype",
+  "object",
+  "type,redirectCount",
+  "wec",
+  "0 0"
+ ],
+ [
+  "performance.toJSON",
+  "Object.prototype",
+  "object",
+  "timeOrigin,timing,navigation",
+  "wec",
+  "number object object"
+ ],
+ [
+  "performance.getEntries",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "object"
+ ],
+ [
+  "PerformanceObserver.supportedEntryTypes",
+  "Array.prototype",
+  "array",
+  "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14",
+  "-e-",
+  "frozen",
+  "\"element\" \"event\" \"first-input\" \"interaction-contentful-paint\" \"largest-contentful-paint\" \"layout-shift\" \"long-animation-frame\" \"longtask\" \"mark\" \"measure\" \"navigation\" \"paint\" \"resource\" \"soft-navigation\" \"visibility-state\""
+ ],
+ [
+  "Element.getAttributeNames",
+  "Array.prototype",
+  "array",
+  "0,1",
+  "wec",
+  "unfrozen",
+  "\"b\" \"a\""
+ ],
+ [
+  "MutationObserver.takeRecords",
+  "Array.prototype",
+  "array",
+  "",
+  "-",
+  "unfrozen",
+  ""
+ ],
+ [
+  "navigator.languages",
+  "Array.prototype",
+  "array",
+  "0,1,2,3",
+  "-e-",
+  "frozen",
+  "string string string string"
+ ],
+ [
+  "document.getAnimations",
+  "Array.prototype",
+  "array",
+  "",
+  "-",
+  "unfrozen",
+  ""
+ ],
+ [
+  "frame DOMRect.toJSON on a main rect",
+  "frame Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "1 2 3 4 2 4 6 1"
+ ],
+ [
+  "main DOMRect.toJSON on a frame rect",
+  "Object.prototype",
+  "object",
+  "x,y,width,height,top,right,bottom,left",
+  "wec",
+  "1 2 3 4 2 4 6 1"
+ ],
+ [
+  "frame DOMPoint.toJSON",
+  "frame Object.prototype",
+  "object",
+  "x,y,z,w",
+  "wec",
+  "1 0 0 1"
+ ],
+ [
+  "frame DOMMatrix.toJSON keys",
+  "frame Object.prototype",
+  "object",
+  "a,b,c,d,e,f,m11,m12,m13,m14,m21,m22,m23,m24,m31,m32,m33,m34,m41,m42,m43,m44,is2D,isIdentity",
+  "wec",
+  "number number number number number number number number number number number number number number number number number number number number number number boolean boolean"
+ ],
+ [
+  "frame TextEncoder.encodeInto on a main encoder",
+  "Object.prototype",
+  "object",
+  "read,written",
+  "wec",
+  "1 1"
+ ],
+ [
+  "frame Headers.getSetCookie on main headers",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "\"a\""
+ ],
+ [
+  "frame FormData.getAll on a main form data",
+  "Array.prototype",
+  "array",
+  "0",
+  "wec",
+  "unfrozen",
+  "\"v\""
+ ],
+ [
+  "worker DOMRect.toJSON / encodeInto",
+  "Array.prototype",
+  "array",
+  "0,1,2,3,4,5",
+  "wec",
+  "unfrozen",
+  "\"Object.prototype\" \"Object.prototype\" \"Object.prototype\" \"Object.prototype\" \"Array.prototype\" \"x,y,width,height,top,right,bottom,left\""
+ ]
+]

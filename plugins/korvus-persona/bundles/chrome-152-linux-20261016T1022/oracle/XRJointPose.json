@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "XRJointPose",
+    "member": "constructor",
+    "expr": "new XRJointPose()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRJointPose",
+    "member": "radius",
+    "expr": "XRJointPose.prototype.radius",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRJointPose",
+    "member": "radius",
+    "expr": "Object.getOwnPropertyDescriptor(XRJointPose.prototype, \"radius\").get.call(Object.create(XRJointPose.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRJointPose",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRJointPose.prototype, \"radius\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRJointPose",
+    "member": "radius",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRJointPose.prototype, \"radius\").get.call(Object.create(XRJointPose.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

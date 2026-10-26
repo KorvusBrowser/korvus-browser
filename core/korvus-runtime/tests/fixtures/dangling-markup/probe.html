@@ -1,0 +1,42 @@
+<!doctype html><html><body><img id="parsed" src="/g.gif?p=
+<" onload="window.__parsed = 'load'" onerror="window.__parsed = 'error'"><script>
+// LEAN R19 (e1, 2026-10-14): Chromium's "potentially dangling markup" refusal. Served by dangling_markup_live.rs with
+// /g.gif (a 1x1 GIF) and /g.html; measure on Chrome by serving the same three paths and reading `window.RESULT`.
+(async () => {
+  const R = [];
+  const out = (k, v) => R.push(k + ' -> ' + v);
+  const f = async (k, input) => { try { const r = await fetch(input); out(k, 'ok ' + r.status); } catch (e) { out(k, e.name + ': ' + e.message); } };
+  await f('fetch nl+lt', '/g.gif?a=\n<');
+  await f('fetch cr+lt', '/g.gif?a=\r<');
+  await f('fetch tab+lt', '/g.gif?<\t=b');
+  await f('fetch nl', '/g.gif?a=\n');
+  await f('fetch lt', '/g.gif?a=<');
+  await f('fetch nl+%3C', '/g.gif?a=\n%3C');
+  await f('fetch data nl+lt', 'data:text/plain,a\n<');
+  await f('fetch Request', new Request('/g.gif?a=\n<'));
+  await f('fetch Request.clone()', new Request('/g.gif?a=\n<').clone());
+  await f('fetch Request(Request)', new Request(new Request('/g.gif?a=\n<')));
+  await f('fetch Request.url', new Request('/g.gif?a=\n<').url);
+  const img = (k, src) => new Promise((res) => {
+    const i = document.createElement('img');
+    i.onload = () => res(out(k, 'load ' + i.naturalHeight));
+    i.onerror = () => res(out(k, 'error ' + i.naturalHeight));
+    i.src = src;
+    document.body.appendChild(i);
+  });
+  await img('img nl+lt', '/g.gif?i=\n<');
+  await img('img nl', '/g.gif?i=\n');
+  await img('img lt', '/g.gif?i=<');
+  const fr = document.createElement('iframe');
+  fr.src = '/g.html?f=\n<';
+  document.body.appendChild(fr);
+  const ok = document.createElement('iframe');
+  ok.src = '/g.html?f=%3C';
+  document.body.appendChild(ok);
+  await new Promise((r) => setTimeout(r, 800));
+  out('iframe nl+lt', fr.contentWindow.location.href);
+  out('iframe %3C', ok.contentWindow.location.pathname + ok.contentWindow.location.search);
+  out('img parsed nl+lt', window.__parsed + ' ' + document.getElementById('parsed').naturalHeight);
+  window.RESULT = R.join('\n');
+})();
+</script></body></html>

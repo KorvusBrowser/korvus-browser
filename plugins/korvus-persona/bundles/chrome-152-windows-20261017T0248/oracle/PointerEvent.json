@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "PointerEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PointerEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PointerEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "pointerId",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.pointerId; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "width",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.width; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "height",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.height; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "pressure",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.pressure; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "tangentialPressure",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.tangentialPressure; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "tiltX",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.tiltX; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "tiltY",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.tiltY; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "twist",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.twist; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "altitudeAngle",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.altitudeAngle; })()",
+    "expected": 1.5707963267948966,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "azimuthAngle",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.azimuthAngle; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "pointerType",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.pointerType; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "isPrimary",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.isPrimary; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "persistentDeviceId",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.persistentDeviceId; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "getCoalescedEvents",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.getCoalescedEvents(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PointerEvent",
+    "member": "getPredictedEvents",
+    "expr": "(() => { const o = new PointerEvent(\"x\"); return o.getPredictedEvents(); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

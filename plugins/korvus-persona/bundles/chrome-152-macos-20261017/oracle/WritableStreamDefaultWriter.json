@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "WritableStreamDefaultWriter",
+    "member": "constructor",
+    "expr": "new WritableStreamDefaultWriter()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "iface": "HTMLFormElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLFormElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "constructor",
+    "expr": "new HTMLFormElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "acceptCharset",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.acceptCharset; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "acceptCharset",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.acceptCharset = \"x\", o.acceptCharset); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "autocomplete",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.autocomplete; })()",
+    "expected": "on",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "autocomplete",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.autocomplete = \"x\", o.autocomplete); })()",
+    "expected": "on",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "enctype",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.enctype; })()",
+    "expected": "application/x-www-form-urlencoded",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "enctype",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.enctype = \"x\", o.enctype); })()",
+    "expected": "application/x-www-form-urlencoded",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "encoding",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.encoding; })()",
+    "expected": "application/x-www-form-urlencoded",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "encoding",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.encoding = \"x\", o.encoding); })()",
+    "expected": "application/x-www-form-urlencoded",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "method",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.method; })()",
+    "expected": "get",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "method",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.method = \"x\", o.method); })()",
+    "expected": "get",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "noValidate",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.noValidate; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "noValidate",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.noValidate = true, o.noValidate); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "target",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.target; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "target",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.target = \"x\", o.target); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "rel",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.rel; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "rel",
+    "expr": "(() => { const o = document.createElement(\"form\"); return (o.rel = \"x\", o.rel); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "length",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "submit",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.submit(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "requestSubmit",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.requestSubmit(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "reset",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"form\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "relList",
+    "expr": "(() => { const o = document.createElement(\"form\"); return Object.prototype.toString.call(o.relList); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLFormElement",
+    "member": "elements",
+    "expr": "(() => { const o = document.createElement(\"form\"); return Object.prototype.toString.call(o.elements); })()",
+    "expected": "[object HTMLFormControlsCollection]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

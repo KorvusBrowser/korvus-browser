@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Attribution",
+    "member": "constructor",
+    "expr": "new Attribution()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "SVGStopElement",
+    "member": "constructor",
+    "expr": "new SVGStopElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStopElement",
+    "member": "offset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"stop\"); return Object.prototype.toString.call(o.offset); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

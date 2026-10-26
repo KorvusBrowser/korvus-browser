@@ -1,0 +1,24 @@
+<!doctype html><html><body>
+<a id=frag href="#sec">f</a><a id=js href="javascript:window.JSRAN=(window.JSRAN||0)+1">j</a><a id=dl href="dl.txt" download>d</a>
+<a id=blank href="blank.html" target="_blank">b</a><a id=nohref>n</a>
+<input type=checkbox id=cb><input type=radio name=r id=r1><input type=radio name=r id=r2 checked>
+<label for=cb2 id=lab>L</label><input type=checkbox id=cb2>
+<div id=sec>s</div>
+<script>
+// REALWEB H39: a click's ACTIVATION BEHAVIOUR -- a fragment link navigates in the document, a javascript: link runs,
+// a download link stays, a checkbox/radio toggles before its listeners then fires input + change (a cancelled click
+// restores it), a label clicks its control. Korvus ran none of them.
+var L = [];
+addEventListener('hashchange', function () { L.push('hashchange'); });
+['input', 'change', 'click'].forEach(function (t) { cb.addEventListener(t, function (e) { L.push('cb-' + t + ':' + cb.checked); }); r1.addEventListener(t, function () { L.push('r1-' + t + ':' + r1.checked + '/' + r2.checked); }); });
+cb2.addEventListener('change', function () { L.push('cb2-change:' + cb2.checked); });
+var cancel = document.createElement('input'); cancel.type = 'checkbox'; document.body.appendChild(cancel);
+cancel.addEventListener('click', function (e) { e.preventDefault(); L.push('cancel-click-in:' + cancel.checked); });
+frag.click(); L.push('hash:' + location.hash);
+js.click();
+dl.click(); L.push('afterdl:' + location.pathname);
+var wn = 0; var origOpen = window.open;
+blank.click(); nohref.click();
+cb.click(); cb.click(); r1.click(); lab.click(); cancel.click(); L.push('cancel-after:' + cancel.checked);
+setTimeout(function () { L.push('js:' + window.JSRAN); document.title = JSON.stringify(L); }, 400);
+</script></body></html>

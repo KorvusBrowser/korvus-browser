@@ -1,0 +1,17 @@
+<!doctype html><html><body><script>
+var seen = {};
+addEventListener('message', function (e) {
+  if (e.data === 'report') { parent.postMessage('frameSaw:' + JSON.stringify(seen), '*'); return; }
+  seen[e.data] = e.origin + ' ' + (e.source === parent ? 'parent' : Object.prototype.toString.call(e.source));
+});
+parent.postMessage('direct', '*');
+var b = document.createElement('iframe'); document.body.appendChild(b);
+var cw = b.contentWindow;
+cw.setTimeout(function () { parent.postMessage('viaChildTimeout', '*'); }, 10);
+var iv = cw.setInterval.call(cw, function () { cw.clearInterval(iv); parent.postMessage('viaChildInterval', '*'); }, 30);
+cw.queueMicrotask(function () { parent.postMessage('viaChildMicrotask', '*'); });
+cw.requestAnimationFrame(function () { parent.postMessage('viaChildRaf', '*'); });
+new cw.Promise(function (r) { r(); }).then(function () { parent.postMessage('viaChildPromise', '*'); });
+cw.addEventListener('message', function () { parent.postMessage('viaChildListener', '*'); }); cw.postMessage('x', '*');
+cw.setTimeout('parent.parent.postMessage("childStringTimer","*")', 15);
+</script></body></html>

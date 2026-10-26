@@ -1,0 +1,46 @@
+[
+[
+"geolocation permission",
+"prompt"
+],
+[
+"getCurrentPosition timeout 0",
+"PositionError: 3 Timeout expired | <50"
+],
+[
+"getCurrentPosition timeout 100",
+"PositionError: 3 Timeout expired | <400"
+],
+[
+"getCurrentPosition maximumAge Infinity timeout 0",
+"PositionError: 3 Timeout expired | <50"
+],
+[
+"watchPosition ids",
+"1,2"
+],
+[
+"getUserMedia audio",
+"NotFoundError: Requested device not found | <50"
+],
+[
+"getUserMedia video",
+"NotFoundError: Requested device not found | <50"
+],
+[
+"getUserMedia nothing",
+"TypeError: Failed to execute 'getUserMedia' on 'MediaDevices': At least one of audio and video must be requested | <50"
+],
+[
+"getUserMedia no argument",
+"TypeError: Failed to execute 'getUserMedia' on 'MediaDevices': At least one of audio and video must be requested | <50"
+],
+[
+"getDisplayMedia",
+"none | none"
+],
+[
+"form submit",
+"submit ; formdata a+b+go ; formdata a+b+go ; navigate|push|true|true|false|/?formprobe|a=1&b=two&go=x|BUTTON||"
+]
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "TransformStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new TransformStream(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TransformStream]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TransformStream",
+    "member": "readable",
+    "expr": "(() => { const o = new TransformStream(); return Object.prototype.toString.call(o.readable); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TransformStream",
+    "member": "writable",
+    "expr": "(() => { const o = new TransformStream(); return Object.prototype.toString.call(o.writable); })()",
+    "expected": "[object WritableStream]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

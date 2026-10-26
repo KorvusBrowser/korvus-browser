@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><title>h2-priority</title></head><body>
+<script>
+// ABPROG F12: what a page's requests carry over HTTP/2 -- each HEADERS frame's priority -- and what a response's
+// statusText is over h2 and over HTTP/1.1. The server answers every request but `/` and `/report` ~150 ms late.
+// Quiet first, so no earlier stream is open when the synchronous XHR and the fetch burst are made.
+setTimeout(async function () {
+  var out = {};
+  var x = new XMLHttpRequest(); x.open('GET', '/sx', false); x.send(); out.sync = [x.status, x.statusText];
+  var r = await Promise.all([fetch('/fe'), fetch('/fl', {priority: 'low'}), fetch('/fh', {priority: 'high'})]);
+  out.h2 = r.map(function (q) { return [q.status, q.statusText]; });
+  var h1 = [];
+  for (var p of ['/r-canon', '/r-awesome', '/r-none', '/r-404']) {
+    var q = await fetch('{{H1}}' + p); h1.push([q.status, q.statusText]);
+  }
+  out.h1 = h1;
+  window.__out = out;
+  await fetch('/report', {method: 'POST', body: JSON.stringify(out)});
+}, 400);
+</script></body></html>

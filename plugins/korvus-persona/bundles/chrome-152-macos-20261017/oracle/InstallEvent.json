@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "InstallEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new InstallEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "InstallEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new InstallEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

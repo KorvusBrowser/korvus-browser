@@ -1,0 +1,2101 @@
+{
+ "why": "THE MEASUREMENT: `trustedTypes.getTypeMapping()`, read whole off Chrome 150.0.7871.46, Brave 151.1.93.138, Edge 151.0.4129.93 and Opera 135.0.5973.133 on 2026-09-19/20 (PARITY FP5.5), headed under Xvfb over CDP with --remote-debugging-port=<a free port> (never =0, which sets navigator.webdriver; it read false in every run), at TWO origins -- http://127.0.0.1:<p>/ and http://web-platform.test:<p>/ -- which agreed byte for byte, so this is not origin-dependent. It is the one table `getTypeMapping`, `getAttributeType` and `getPropertyType` all three read, because a second copy of a measurement is a second definition. WHY IT IS NOT DERIVED FROM THE ENGINE'S OWN ROWS: the `any_element.attributes` list is Blink's whole event-handler-name set, not this window's -- the union of every `on*` member the active capture records is 125 names and the union over korvus's whole registry is 279, against the 321 the browsers list, and `getAttributeType('div','onbogus')` answers null, so it is a LIST and not the rule `starts with on`. WHY IT IS NOT A BUNDLE FIELD: it is a platform fact of the Chromium build, not of the device, and the capture rig does not record it at all. WHAT PUTS AN ENTRY IN: re-run the reading above on a newer build. WHAT TAKES ONE OUT: the same reading no longer listing it. Each attribute name maps to the browsers that list it; the engine publishes the names ALL FOUR list, and `browsers` is what names the rest.",
+ "measured": "2026-09-20",
+ "versions": {
+  "brave-151": "Brave Browser 151.1.93.138 unknown",
+  "chrome-150": "Google Chrome 150.0.7871.46",
+  "edge-151": "Microsoft Edge 151.0.4129.93",
+  "opera-135": "135.0.5973.133"
+ },
+ "origins": {
+  "secure": "http://127.0.0.1:<port>/page.html",
+  "insecure": "http://web-platform.test:<port>/page.html"
+ },
+ "namespaces": {
+  "why": "getAttributeType(tag, attr, elementNs, attrNs) and getPropertyType(tag, prop, elementNs) resolve against the element's NAMESPACE. RE-MEASURED 2026-09-22 (TT1) against Brave 151.1.93.138 and Chrome 150.0.7871.46 headless --dump-dom, which answered IDENTICALLY on all 32 probes, and read against Blink's own FindEntryInAttributeTypeVector (third_party/blink/renderer/core/trustedtypes/trusted_type_policy_factory.cc:180). The 2026-09-20 reading below it generalised THREE rules from cases it had not probed and all three were wrong; what the browsers actually do is: (1) elementNs absent OR '' is the XHTML namespace, so the `html` element rows apply; the SVG namespace reads `svg`; no other namespace has element rows. (2) attrNs absent OR '' is the NULL namespace and matches every row that carries no attribute namespace -- it does NOT answer null, which is what the earlier reading said; only a non-empty attrNs that is not a row's own answers null. (3) ONE row carries an attribute namespace: SVG `script`'s `href` in the XLink namespace (Blink's xlink_names::kHrefAttr entry), so getAttributeType('script','href',svgNs,xlinkNs) is TrustedScriptURL. (4) The `*` ATTRIBUTE row applies in the XHTML, SVG **and MathML** namespaces and nowhere else (Blink `matches_star_atom`), which is why MathML -- a namespace with no element rows at all -- still answers TrustedScript for an event handler. (5) The `*` PROPERTY rows apply in EVERY namespace without exception, including XUL and a made-up one: getPropertyType('foo','innerHTML', xulNs) is TrustedHTML (Blink exempts the property vector from `matches_star_atom` outright). Both namespace strings are compared CASE-SENSITIVELY. The tag and the ATTRIBUTE name are ASCII-lowercased before the lookup ('SCRIPT'/'SRC'/'onClick' all match); the PROPERTY name is not ('INNERHTML' and 'codebase' answer null where 'innerHTML' and 'codeBase' answer a type). The attribute name is a LOCAL name: 'xlink:href' answers null where 'href' answers a type. getTypeMapping() itself answers this whole map for no argument and for '', and null for any namespace string including the XHTML one.",
+  "html": "http://www.w3.org/1999/xhtml",
+  "mathml": "http://www.w3.org/1998/Math/MathML",
+  "svg": "http://www.w3.org/2000/svg",
+  "xlink": "http://www.w3.org/1999/xlink"
+ },
+ "get_type_mapping": {
+  "why": "What `getTypeMapping()` itself returns, verbatim -- a FRESH plain object each call (measured: `getTypeMapping() !== getTypeMapping()`), whose prototype is Object.prototype. The `script` entry merges the two namespaces' attributes, which is the browser's own shape: `href` is there although getAttributeType('script','href') answers null in HTML and TrustedScriptURL in SVG.",
+  "elements": {
+   "embed": {
+    "attributes": {
+     "src": "TrustedScriptURL"
+    },
+    "properties": {
+     "src": "TrustedScriptURL"
+    }
+   },
+   "iframe": {
+    "attributes": {
+     "srcdoc": "TrustedHTML"
+    },
+    "properties": {
+     "srcdoc": "TrustedHTML"
+    }
+   },
+   "object": {
+    "attributes": {
+     "codebase": "TrustedScriptURL",
+     "data": "TrustedScriptURL"
+    },
+    "properties": {
+     "codeBase": "TrustedScriptURL",
+     "data": "TrustedScriptURL"
+    }
+   },
+   "script": {
+    "attributes": {
+     "src": "TrustedScriptURL",
+     "href": "TrustedScriptURL"
+    },
+    "properties": {
+     "innerText": "TrustedScript",
+     "src": "TrustedScriptURL",
+     "text": "TrustedScript",
+     "textContent": "TrustedScript",
+     "href": "TrustedScriptURL"
+    }
+   }
+  },
+  "any_element_properties": {
+   "innerHTML": "TrustedHTML",
+   "outerHTML": "TrustedHTML"
+  }
+ },
+ "resolve": {
+  "why": "What getAttributeType / getPropertyType answer, per NAMESPACE -- measured one (tag, name, namespace) at a time, because the merged map above cannot express it.",
+  "html": {
+   "attributes": {
+    "embed": {
+     "src": "TrustedScriptURL"
+    },
+    "iframe": {
+     "srcdoc": "TrustedHTML"
+    },
+    "object": {
+     "codebase": "TrustedScriptURL",
+     "data": "TrustedScriptURL"
+    },
+    "script": {
+     "src": "TrustedScriptURL"
+    }
+   },
+   "properties": {
+    "embed": {
+     "src": "TrustedScriptURL"
+    },
+    "iframe": {
+     "srcdoc": "TrustedHTML"
+    },
+    "object": {
+     "codeBase": "TrustedScriptURL",
+     "data": "TrustedScriptURL"
+    },
+    "script": {
+     "innerText": "TrustedScript",
+     "src": "TrustedScriptURL",
+     "text": "TrustedScript",
+     "textContent": "TrustedScript"
+    }
+   }
+  },
+  "svg": {
+   "attributes": {
+    "script": {
+     "href": "TrustedScriptURL"
+    }
+   },
+   "attributes_ns": {
+    "why": "Rows whose ATTRIBUTE carries a namespace, keyed by that namespace URI -- everything in `attributes` above is in the null one. Blink's table has exactly one such row in either namespace, `{svg_names::kScriptTag, xlink_names::kHrefAttr}` (trusted_type_policy_factory.cc:68), and Brave 151 / Chrome 150 both answer TrustedScriptURL for getAttributeType('script','href',svgNs,xlinkNs) and null for any other attrNs. Keyed by URI rather than by a name like `xlink` so the URI stays in the measurement and not in the code.",
+    "http://www.w3.org/1999/xlink": {
+     "script": {
+      "href": "TrustedScriptURL"
+     }
+    }
+   },
+   "properties": {
+    "script": {
+     "href": "TrustedScriptURL"
+    }
+   }
+  },
+  "any_element": {
+   "why": "The `*` rows -- and the ATTRIBUTE one and the PROPERTY ones do NOT have the same reach, which is the defect TT1 closed. The `*` ATTRIBUTE row applies only when the ELEMENT namespace is one of `attribute_element_namespaces` below: XHTML, SVG and MathML. MathML is the whole reason that list exists -- it has no element rows of its own, so a lookup that stops when no element table matches never reaches this row and getAttributeType('mrow','onmousedown',mathmlNs) answers null instead of TrustedScript. The `*` PROPERTY rows have NO such list: they apply in every namespace whatever, measured getPropertyType('foo','innerHTML', xulNs) == 'TrustedHTML' (Blink exempts the property vector from `matches_star_atom` outright, trusted_type_policy_factory.cc:194). The `*` attribute row carries no attribute namespace, so only a null or empty attrNs reaches it. The event-handler attribute names are `event_handler_attributes` below; they are NOT properties (getPropertyType('div','onclick') answers null).",
+   "attribute_element_namespaces": [
+    "http://www.w3.org/1999/xhtml",
+    "http://www.w3.org/2000/svg",
+    "http://www.w3.org/1998/Math/MathML"
+   ],
+   "properties": {
+    "innerHTML": "TrustedHTML",
+    "outerHTML": "TrustedHTML"
+   },
+   "attribute_type": "TrustedScript"
+  }
+ },
+ "event_handler_attributes": {
+  "onabort": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onabortpayment": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onactivate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onactive": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaddsourcebuffer": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaddstream": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaddtrack": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onadvertisementreceived": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onafterprint": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onanimationcancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onanimationend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onanimationiteration": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onanimationstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onappinstalled": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaudioend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaudioprocess": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onaudiostart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onautofill": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onauxclick": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbackgroundfetchabort": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbackgroundfetchclick": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbackgroundfetchfail": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbackgroundfetchsuccess": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforecopy": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforecut": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforefilter": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforeinput": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforeinstallprompt": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforematch": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforepaste": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforeprint": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforetoggle": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforeunload": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbeforexrselect": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbegin": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onblocked": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onblur": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onboundary": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onbufferedamountlow": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncanmakepayment": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncanplay": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncanplaythrough": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncapturedmousechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncapturehandlechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncharacterboundsupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncharacteristicvaluechanged": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onchargingchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onchargingtimechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onclick": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onclipboardchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onclose": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onclosing": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncommand": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncomplete": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncompositionend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncompositionstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onconfigurationchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onconnect": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onconnecting": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onconnectionavailable": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onconnectionstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontentdelete": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontentvisibilityautostatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontextlost": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontextmenu": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontextoverflow": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontextrestored": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncontrollerchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncookiechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncopy": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncuechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncurrententrychange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncurrentscreenchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oncut": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondataavailable": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondatachannel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondblclick": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondequeue": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondevicechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondevicemotion": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondeviceorientation": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondeviceorientationabsolute": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondischargingtimechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondisconnect": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondispose": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondownloadprogress": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondrag": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondragend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondragenter": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondragleave": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondragover": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondragstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondrop": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ondurationchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onemptied": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onencrypted": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onended": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onenter": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onenterpictureinpicture": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onexit": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfetch": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfinish": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfocus": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onformdata": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onframeratechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfreeze": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfullscreenchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onfullscreenerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongamepadconnected": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongamepaddisconnected": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongamepadrawinputchanged": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongatheringstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongattserverdisconnected": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongeometrychange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ongotpointercapture": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onhashchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onhdrheadroomchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onicecandidate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onicecandidateerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oniceconnectionstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onicegatheringstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninactive": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninput": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninputreport": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninputsourceschange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninstall": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninterfacerequest": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "oninvalid": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onjobstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onkeydown": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onkeypress": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onkeystatuseschange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onkeyup": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onlanguagechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onleavepictureinpicture": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onlevelchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onload": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadeddata": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadedmetadata": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloading": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadingdone": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadingerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onloadstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onlocation": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onlostpointercapture": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmanagedconfigurationchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmark": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmessage": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmessageerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmidimessage": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmousedown": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmouseenter": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmouseleave": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmousemove": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmouseout": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmouseover": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmouseup": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmousewheel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmove": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onmute": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnavigate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnavigateerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnavigatesuccess": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnegotiationneeded": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnomatch": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnotificationclick": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onnotificationclose": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onoffline": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ononline": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onopen": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onorientationchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onoverscrollcancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onoverscrollchanging": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onoverscrollend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onoverscrollstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpagehide": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpagereveal": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpageshow": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpageswap": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpaint": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpaste": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpause": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpayerdetailchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpaymentmethodchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpaymentrequest": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onperiodicsync": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onplay": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onplaying": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointercancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerdown": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerenter": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerleave": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerlockchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerlockerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointermove": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerout": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerover": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerrawupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpointerup": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpopstate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onprerenderingchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onprioritychange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onprocessorerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onprogress": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpromptaction": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpromptdismiss": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpush": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onpushsubscriptionchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onquotaoverflow": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onratechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onreading": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onreadingerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onreadystatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onredraw": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onreflectionchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onrejectionhandled": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onrelease": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onremove": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onremovesourcebuffer": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onremovestream": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onremovetrack": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onrepeat": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onreset": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onresize": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onresourcetimingbufferfull": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onresult": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onresume": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onrtctransform": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onscreenschange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onscroll": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onscrollend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onscrollsnapchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onscrollsnapchanging": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsearch": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsecuritypolicyviolation": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onseeked": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onseeking": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onselect": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onselectedcandidatepairchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onselectend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onselectionchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onselectstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onshippingaddresschange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onshippingoptionchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onshow": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsignalingstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsinkchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onslotchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsoundend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsoundstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsourceclose": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsourceended": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsourceopen": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onspeechend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onspeechstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsqueeze": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsqueezeend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsqueezestart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstalled": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstatechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstop": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstorage": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onstream": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsubmit": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsuccess": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsuspend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onsync": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onterminate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontextformatupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontextupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontimeout": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontimeupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontimezonechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontoggle": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontonechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontoolchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontouchcancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontouchend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontouchmove": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontouchstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontrack": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontransitioncancel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontransitionend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontransitionrun": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontransitionstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "ontypechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onuncapturederror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onunhandledrejection": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onunload": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onunmute": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onupdate": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onupdateend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onupdatefound": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onupdatestart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onupgradeneeded": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onvalidationstatuschange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onversionchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onvisibilitychange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onvisibilitymaskchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onvoiceschanged": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onvolumechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwaiting": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwaitingforkey": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkitanimationend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkitanimationiteration": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkitanimationstart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkitfullscreenchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkitfullscreenerror": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwebkittransitionend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwheel": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwidgetclick": [
+   "edge-151"
+  ],
+  "onwidgetinstall": [
+   "edge-151"
+  ],
+  "onwidgetresume": [
+   "edge-151"
+  ],
+  "onwidgetuninstall": [
+   "edge-151"
+  ],
+  "onwritablechange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwrite": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwriteend": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onwritestart": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ],
+  "onzoomlevelchange": [
+   "brave-151",
+   "chrome-150",
+   "edge-151",
+   "opera-135"
+  ]
+ },
+ "counts": {
+  "brave-151": 321,
+  "chrome-150": 321,
+  "edge-151": 325,
+  "opera-135": 321
+ },
+ "common": 321,
+ "not_in_all_four": {
+  "onwidgetclick": [
+   "edge-151"
+  ],
+  "onwidgetinstall": [
+   "edge-151"
+  ],
+  "onwidgetresume": [
+   "edge-151"
+  ],
+  "onwidgetuninstall": [
+   "edge-151"
+  ]
+ }
+}

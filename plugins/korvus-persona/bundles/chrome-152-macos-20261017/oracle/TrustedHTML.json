@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "TrustedHTML",
+    "member": "constructor",
+    "expr": "new TrustedHTML()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

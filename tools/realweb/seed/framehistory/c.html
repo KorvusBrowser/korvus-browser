@@ -1,0 +1,9 @@
+<!doctype html><html><body><script>
+var r = {};
+history.replaceState({ f: 1 }, '', '?replaced=1');
+r.afterReplace = location.pathname + location.search;
+history.pushState({ f: 2 }, '', '#pushed');
+r.afterPush = location.pathname + location.search + location.hash; r.state = JSON.stringify(history.state);
+try { history.replaceState(null, '', 'http://example.com/y'); r.cross = 'no throw'; } catch (e) { r.cross = e.name; }
+parent.postMessage({ frame: r }, '*');
+</script></body></html>

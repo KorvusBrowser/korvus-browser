@@ -1,0 +1,8 @@
+<!doctype html><title>main</title>
+<iframe src="http://localhost:18430/frame.html?k=frame"></iframe>
+<script>
+setTimeout(() => fetch('http://localhost:18430/report').then(r => r.json()).then(s => {
+  const c = k => (s[k] && s[k].more && s[k].more.cookie) || '-';
+  document.title = ['frame', 'sub', 'img'].map(k => k + '=' + c(k)).join(' | ');
+}), 1500);
+</script>

@@ -1,0 +1,415 @@
+[
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "constructor",
+    "expr": "new HTMLTextAreaElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "autocomplete",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.autocomplete; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "autocomplete",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.autocomplete = \"x\", o.autocomplete); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "cols",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.cols; })()",
+    "expected": 20,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "cols",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.cols = 1, o.cols); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "dirName",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.dirName; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "dirName",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.dirName = \"x\", o.dirName); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.disabled = true, o.disabled); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "maxLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.maxLength; })()",
+    "expected": -1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "maxLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.maxLength = 1, o.maxLength); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "minLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.minLength; })()",
+    "expected": -1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "minLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.minLength = 1, o.minLength); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "placeholder",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.placeholder; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "placeholder",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.placeholder = \"x\", o.placeholder); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "readOnly",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.readOnly; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "readOnly",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.readOnly = true, o.readOnly); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "required",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.required; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "required",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.required = true, o.required); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "rows",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.rows; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "rows",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.rows = 1, o.rows); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "wrap",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.wrap; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "wrap",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.wrap = \"x\", o.wrap); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.type; })()",
+    "expected": "textarea",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "defaultValue",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.defaultValue; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "defaultValue",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.defaultValue = \"x\", o.defaultValue); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "textLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.textLength; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "willValidate",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.willValidate; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "validationMessage",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.validationMessage; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setCustomValidity(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setCustomValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "select",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.select(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionStart",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.selectionStart; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionStart",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.selectionStart = 1, o.selectionStart); })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionEnd",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.selectionEnd; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionEnd",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.selectionEnd = 1, o.selectionEnd); })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionDirection",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.selectionDirection; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionDirection",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.selectionDirection = \"x\", o.selectionDirection); })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setRangeText",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setRangeText(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setRangeText",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setRangeText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setRangeText",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setRangeText(\"x\", 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setSelectionRange",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setSelectionRange(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "setSelectionRange",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return o.setSelectionRange(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "cols",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.cols = \"1\", o.cols); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "maxLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.maxLength = \"1\", o.maxLength); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "minLength",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.minLength = \"1\", o.minLength); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "rows",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.rows = \"1\", o.rows); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionStart",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.selectionStart = \"1\", o.selectionStart); })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "selectionEnd",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return (o.selectionEnd = \"1\", o.selectionEnd); })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return Object.prototype.toString.call(o.form); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "validity",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return Object.prototype.toString.call(o.validity); })()",
+    "expected": "[object ValidityState]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTextAreaElement",
+    "member": "labels",
+    "expr": "(() => { const o = document.createElement(\"textarea\"); return Object.prototype.toString.call(o.labels); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

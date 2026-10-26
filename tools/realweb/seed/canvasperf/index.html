@@ -1,0 +1,19 @@
+<!doctype html><html><head><title>pending</title></head><body><script>
+// REALWEB V13: canvas fingerprint probes are TIMED by the scripts that run them (a fingerprinting script's worker reports
+// how long its 300x300 drawing took); each key is milliseconds, compared as korvus <= 3 * chrome + 20.
+function t(fn) { var a = performance.now(); fn(); return Math.round(performance.now() - a); }
+var c = document.createElement('canvas'); c.width = 300; c.height = 300; var x = c.getContext('2d');
+x.fillStyle = '#3A1'; x.fillRect(0, 0, 300, 300);
+var R = {};
+var sum = 0;
+R.getImageData_300x300_x3 = t(function () { for (var i = 0; i < 3; i++) sum += x.getImageData(0, 0, 300, 300).data[i * 7]; });
+var id = x.getImageData(0, 0, 300, 300);
+R.putImageData_300x300_x3 = t(function () { for (var i = 0; i < 3; i++) x.putImageData(id, 0, 0); });
+R.createImageData_300x300_x3 = t(function () { for (var i = 0; i < 3; i++) sum += x.createImageData(300, 300).data.length; });
+R.fillText_unknown_family_200 = t(function () { for (var i = 0; i < 200; i++) { x.font = (10 + i % 20) + 'px aafakefontaa'; x.fillText('Cwm fjord ' + i, i % 250, i % 290); } });
+R.measureText_unknown_family_1000 = t(function () { x.font = '17px aafakefontaa'; for (var i = 0; i < 1000; i++) sum += x.measureText('Cwm fjordbank ' + i).width; });
+R.shadowBlur_arcs_30 = t(function () { for (var i = 0; i < 30; i++) { x.shadowBlur = 1 + i % 50; x.shadowColor = '#FF6633'; x.beginPath(); x.arc(150, 150, 20 + i * 3, 0, 6.28); x.stroke(); } x.shadowBlur = 0; });
+R.toDataURL_300x300_x3 = t(function () { for (var i = 0; i < 3; i++) sum += c.toDataURL().length; });
+R.ok = sum > 0;
+document.title = JSON.stringify(R);
+</script></body></html>

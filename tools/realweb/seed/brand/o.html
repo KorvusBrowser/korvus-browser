@@ -1,0 +1,11 @@
+<!doctype html><title>o</title><body><div id="host"></div><script>
+const r = {}; const OD = Object.getOwnPropertyDescriptor(Node.prototype, 'ownerDocument').get;
+const d = (n) => { try { const v = OD.call(n); return v === null ? 'null' : v === document ? 'document' : Object.prototype.toString.call(v); } catch (e) { return 'THROW ' + e.message; } };
+const frag = document.createDocumentFragment(); const inFrag = document.createElement('span'); frag.appendChild(inFrag);
+const sr = document.getElementById('host').attachShadow({mode: 'open'}); const inSr = document.createElement('b'); sr.appendChild(inSr);
+const tpl = document.createElement('template'); tpl.innerHTML = '<i>t</i>';
+const hd = document.implementation.createHTMLDocument('x'); const hdEl = hd.createElement('p');
+Object.assign(r, {fragment: d(frag), inFragment: d(inFrag), shadowRoot: d(sr), inShadow: d(inSr), templateContent: d(tpl.content), inTemplate: d(tpl.content.firstChild),
+  htmlDocEl: d(hdEl), text: d(document.createTextNode('x')), comment: d(document.createComment('c')), attr: d(document.createAttribute('a')), detachedEl: d(document.createElement('div')), document: d(document), doctype: d(document.doctype)});
+document.title = JSON.stringify(r);
+</script></body>

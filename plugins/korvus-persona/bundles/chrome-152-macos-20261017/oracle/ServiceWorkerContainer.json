@@ -1,0 +1,154 @@
+[
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "constructor",
+    "expr": "new ServiceWorkerContainer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "controller",
+    "expr": "(() => { const o = navigator.serviceWorker; return o.controller; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "startMessages",
+    "expr": "(() => { const o = navigator.serviceWorker; return o.startMessages(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "oncontrollerchange",
+    "expr": "(() => { const o = navigator.serviceWorker; return o.oncontrollerchange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "onmessage",
+    "expr": "(() => { const o = navigator.serviceWorker; return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = navigator.serviceWorker; return o.onmessageerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "controller",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.controller); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "ready",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.ready); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistration",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.getRegistration()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistrations",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.getRegistrations()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "oncontrollerchange",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.oncontrollerchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "onmessage",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = navigator.serviceWorker; return Object.prototype.toString.call(o.onmessageerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "register",
+    "expr": "ServiceWorkerContainer.prototype.register.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "register",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(ServiceWorkerContainer.prototype.register.call(Object.create(ServiceWorkerContainer.prototype), \"/x.js\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "register",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(navigator.serviceWorker.register()); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "register",
+    "expr": "(async () => { const o = navigator.serviceWorker; return await o.register(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistration",
+    "expr": "(async () => { const o = navigator.serviceWorker; return await o.getRegistration(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistration",
+    "expr": "(async () => { const o = navigator.serviceWorker; return Object.prototype.toString.call(await o.getRegistration()); })()",
+    "expected": "[object Undefined]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistrations",
+    "expr": "(async () => { const o = navigator.serviceWorker; return await o.getRegistrations(); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "ServiceWorkerContainer",
+    "member": "getRegistrations",
+    "expr": "(async () => { const o = navigator.serviceWorker; return Object.prototype.toString.call(await o.getRegistrations()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

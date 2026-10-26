@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "MediaStreamAudioDestinationNode",
+    "member": "constructor",
+    "expr": "new MediaStreamAudioDestinationNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaStreamAudioDestinationNode",
+    "member": "stream",
+    "expr": "(() => { const o = new MediaStreamAudioDestinationNode(new AudioContext()); return Object.prototype.toString.call(o.stream); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

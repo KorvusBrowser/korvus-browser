@@ -1,0 +1,23 @@
+<!doctype html><html><body><script>
+// REALWEB H30: a MessagePort transferred to or from a WORKER arrives as that port: in e.ports and at its place in
+// e.data, working in both directions (Comlink across a worker boundary -- wix.com thunderbolt: e.addEventListener
+// is not a function).
+var out = {}; var t = function (v) { return Object.prototype.toString.call(v) + (v && typeof v.addEventListener === 'function' ? ' +ael' : ''); };
+var code = [
+ 'onmessage = function (e) {',
+ '  if (e.data && e.data.kind === "toWorker") {',
+ '    var p = e.data.port; var r = { inData: Object.prototype.toString.call(p) + (p && p.addEventListener ? " +ael" : ""), ports: e.ports.length };',
+ '    if (p && p.postMessage) { p.postMessage("pong-from-worker"); }',
+ '    var mc = new MessageChannel(); mc.port1.onmessage = function (x) { postMessage({ kind: "echo", v: x.data }); };',
+ '    postMessage({ kind: "fromWorker", r: r, port: mc.port2 }, [mc.port2]);',
+ '  }',
+ '};'].join('\n');
+var w = new Worker(URL.createObjectURL(new Blob([code], { type: 'text/javascript' })));
+w.onmessage = function (e) {
+  if (e.data.kind === 'fromWorker') { out.workerSaw = e.data.r; out.mainGotPort = t(e.data.port); out.mainPorts = e.ports.length; try { e.data.port.postMessage('hi'); } catch (x) { out.sendErr = x.name; } }
+  if (e.data.kind === 'echo') { out.echo = e.data.v; document.title = JSON.stringify(out); }
+};
+var mc = new MessageChannel(); mc.port1.onmessage = function (e) { out.portReply = e.data; };
+w.postMessage({ kind: 'toWorker', port: mc.port2 }, [mc.port2]);
+setTimeout(function () { if (!document.title) document.title = JSON.stringify(out); }, 1500);
+</script></body></html>

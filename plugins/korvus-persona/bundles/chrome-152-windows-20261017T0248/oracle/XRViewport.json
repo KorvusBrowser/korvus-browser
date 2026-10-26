@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "XRViewport",
+    "member": "constructor",
+    "expr": "new XRViewport()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "x",
+    "expr": "XRViewport.prototype.x",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "x",
+    "expr": "Object.getOwnPropertyDescriptor(XRViewport.prototype, \"x\").get.call(Object.create(XRViewport.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "y",
+    "expr": "XRViewport.prototype.y",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "y",
+    "expr": "Object.getOwnPropertyDescriptor(XRViewport.prototype, \"y\").get.call(Object.create(XRViewport.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "width",
+    "expr": "XRViewport.prototype.width",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(XRViewport.prototype, \"width\").get.call(Object.create(XRViewport.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "height",
+    "expr": "XRViewport.prototype.height",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(XRViewport.prototype, \"height\").get.call(Object.create(XRViewport.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "x",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"x\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "x",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"x\").get.call(Object.create(XRViewport.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "y",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"y\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "y",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"y\").get.call(Object.create(XRViewport.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"width\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"width\").get.call(Object.create(XRViewport.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"height\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRViewport",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRViewport.prototype, \"height\").get.call(Object.create(XRViewport.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "iface": "Response",
+    "member": "constructor",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Response]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "type",
+    "expr": "(() => { const o = new Response(); return o.type; })()",
+    "expected": "default",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "url",
+    "expr": "(() => { const o = new Response(); return o.url; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "redirected",
+    "expr": "(() => { const o = new Response(); return o.redirected; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "status",
+    "expr": "(() => { const o = new Response(); return o.status; })()",
+    "expected": 200,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "ok",
+    "expr": "(() => { const o = new Response(); return o.ok; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "statusText",
+    "expr": "(() => { const o = new Response(); return o.statusText; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "body",
+    "expr": "(() => { const o = new Response(); return o.body; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "bodyUsed",
+    "expr": "(() => { const o = new Response(); return o.bodyUsed; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "error",
+    "expr": "Object.prototype.toString.call(Response.error())",
+    "expected": "[object Response]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "redirect",
+    "expr": "Object.prototype.toString.call(Response.redirect(\"x\"))",
+    "expected": "[object Response]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "json",
+    "expr": "Object.prototype.toString.call(Response.json(1))",
+    "expected": "[object Response]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "type",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "headers",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.headers); })()",
+    "expected": "[object Headers]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "clone",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.clone()); })()",
+    "expected": "[object Response]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "body",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.body); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "arrayBuffer",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.arrayBuffer()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "blob",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.blob()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "bytes",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.bytes()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "formData",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.formData()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "json",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.json()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "text",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.text()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Response",
+    "member": "textStream",
+    "expr": "(() => { const o = new Response(); return Object.prototype.toString.call(o.textStream()); })()",
+    "expected": "[object ReadableStream]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

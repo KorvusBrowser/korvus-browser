@@ -1,0 +1,954 @@
+[
+  {
+    "iface": "HTMLMediaElement",
+    "member": "NETWORK_EMPTY",
+    "expr": "HTMLMediaElement.NETWORK_EMPTY",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "NETWORK_IDLE",
+    "expr": "HTMLMediaElement.NETWORK_IDLE",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "NETWORK_LOADING",
+    "expr": "HTMLMediaElement.NETWORK_LOADING",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "NETWORK_NO_SOURCE",
+    "expr": "HTMLMediaElement.NETWORK_NO_SOURCE",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "HAVE_NOTHING",
+    "expr": "HTMLMediaElement.HAVE_NOTHING",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "HAVE_METADATA",
+    "expr": "HTMLMediaElement.HAVE_METADATA",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "HAVE_CURRENT_DATA",
+    "expr": "HTMLMediaElement.HAVE_CURRENT_DATA",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "HAVE_FUTURE_DATA",
+    "expr": "HTMLMediaElement.HAVE_FUTURE_DATA",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "HAVE_ENOUGH_DATA",
+    "expr": "HTMLMediaElement.HAVE_ENOUGH_DATA",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "constructor",
+    "expr": "new HTMLMediaElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.onencrypted; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); const f = function () {}; o.onencrypted = f; return o.onencrypted === f; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.onencrypted = 42; return o.onencrypted; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); let n = 0; o.onencrypted = function (e) { n = e.type === \"encrypted\" ? 1 : 2; }; o.dispatchEvent(new Event(\"encrypted\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onwaitingforkey",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.onwaitingforkey; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onwaitingforkey",
+    "expr": "(() => { const o = document.createElement(\"video\"); const f = function () {}; o.onwaitingforkey = f; return o.onwaitingforkey === f; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onwaitingforkey",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.onwaitingforkey = 42; return o.onwaitingforkey; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onwaitingforkey",
+    "expr": "(() => { const o = document.createElement(\"video\"); let n = 0; o.onwaitingforkey = function (e) { n = e.type === \"waitingforkey\" ? 1 : 2; }; o.dispatchEvent(new Event(\"waitingforkey\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "error",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.error; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.src = \"http://example.com/a.mp4\"; return o.src; })()",
+    "expected": "http://example.com/a.mp4",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.src = \"x\"; return o.getAttribute(\"src\"); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "srcObject",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.srcObject; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "srcObject",
+    "expr": "(() => { const o = document.createElement(\"video\"); try { o.srcObject = 1; return \"no-throw\"; } catch (x) { return x.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "currentSrc",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.currentSrc; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.crossOrigin; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.crossOrigin = \"anonymous\"; return o.crossOrigin; })()",
+    "expected": "anonymous",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.crossOrigin = \"bogus\"; return o.crossOrigin; })()",
+    "expected": "anonymous",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "networkState",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.networkState; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.preload; })()",
+    "expected": "metadata",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.preload = \"none\"; return o.preload; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.preload = \"bogus\"; return o.preload; })()",
+    "expected": "metadata",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "buffered",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.buffered); })()",
+    "expected": "[object TimeRanges]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "buffered",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.buffered.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "load",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.load(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "load",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.load(); return o.networkState; })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"application/x-korvus-nonsense\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "readyState",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.readyState; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "seeking",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.seeking; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "currentTime",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.currentTime; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "currentTime",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.currentTime = 5; return o.currentTime; })()",
+    "expected": 5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "currentTime",
+    "expr": "(() => { const o = document.createElement(\"video\"); try { o.currentTime = \"x\"; return o.currentTime; } catch (x) { return x.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "duration",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Number.isNaN(o.duration); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "paused",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.paused; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "defaultPlaybackRate",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.defaultPlaybackRate; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "defaultPlaybackRate",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.defaultPlaybackRate = \"2\"; return o.defaultPlaybackRate; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "playbackRate",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.playbackRate; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "playbackRate",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.playbackRate = 0.5; return o.playbackRate; })()",
+    "expected": 0.5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preservesPitch",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.preservesPitch; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preservesPitch",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.preservesPitch = false; return o.preservesPitch; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "played",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.played); })()",
+    "expected": "[object TimeRanges]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "played",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.played.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "seekable",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.seekable); })()",
+    "expected": "[object TimeRanges]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "seekable",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.seekable.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "ended",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.ended; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "autoplay",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.autoplay; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "autoplay",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.autoplay = true; return o.getAttribute(\"autoplay\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "loop",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.loop; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "loop",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.loop = true; return o.hasAttribute(\"loop\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "play",
+    "expr": "(() => { const o = document.createElement(\"video\"); const p = o.play(); p.catch(function () {}); return Object.prototype.toString.call(p); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "pause",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.pause(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "pause",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.pause(); return o.paused; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controls",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.controls; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controls",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.controls = true; return o.hasAttribute(\"controls\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "volume",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.volume; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "volume",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.volume = 0.5; return o.volume; })()",
+    "expected": 0.5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "volume",
+    "expr": "(() => { const o = document.createElement(\"video\"); try { o.volume = 2; return \"no-throw\"; } catch (x) { return x.name; } })()",
+    "expected": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "volume",
+    "expr": "(() => { const o = document.createElement(\"video\"); try { o.volume = \"x\"; return o.volume; } catch (x) { return x.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "muted",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.muted; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "muted",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.muted = true; return o.muted; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "muted",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.muted = true; return o.hasAttribute(\"muted\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "defaultMuted",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.defaultMuted; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "defaultMuted",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.defaultMuted = true; return o.getAttribute(\"muted\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "loading",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.loading; })()",
+    "expected": "eager",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "textTracks",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.textTracks); })()",
+    "expected": "[object TextTrackList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "textTracks",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.textTracks.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "addTextTrack",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.addTextTrack(\"subtitles\")); })()",
+    "expected": "[object TextTrack]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "addTextTrack",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.addTextTrack(\"subtitles\"); return o.textTracks.length; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "addTextTrack",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.addTextTrack(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "captureStream",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.captureStream()); })()",
+    "expected": "[object MediaStream]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "remote",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.remote); })()",
+    "expected": "[object RemotePlayback]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "disableRemotePlayback",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.disableRemotePlayback; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "disableRemotePlayback",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.disableRemotePlayback = true; return o.getAttribute(\"disableremoteplayback\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controlsList",
+    "expr": "(() => { const o = document.createElement(\"video\"); return Object.prototype.toString.call(o.controlsList); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controlsList",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.controlsList.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controlsList",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.setAttribute(\"controlslist\", \"nodownload noplaybackrate\"); return o.controlsList.length; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "controlsList",
+    "expr": "(() => { const o = document.createElement(\"video\"); o.setAttribute(\"controlslist\", \"nodownload\"); return o.controlsList.contains(\"nodownload\"); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "webkitAudioDecodedByteCount",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.webkitAudioDecodedByteCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "webkitVideoDecodedByteCount",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.webkitVideoDecodedByteCount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "sinkId",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.sinkId; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "setSinkId",
+    "expr": "(() => { const o = document.createElement(\"video\"); const p = o.setSinkId(\"\"); p.catch(function () {}); return Object.prototype.toString.call(p); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "mediaKeys",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.mediaKeys; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "setMediaKeys",
+    "expr": "(() => { const o = document.createElement(\"video\"); const p = o.setMediaKeys(null); p.catch(function () {}); return Object.prototype.toString.call(p); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"audio/mpeg\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"audio/wav\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/ogg\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp2t\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/quicktime\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.42E01E\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.4D401E\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.640028\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1\\\"\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.42E0\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.ZZZZZZ\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"avc1.42E01E, mp4a.40.2\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"mp4a.40\\\"\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"mp4a.40.34\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/mp4; codecs=\\\"hev1.1.6.L93.B0\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp8\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp8.0\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp9\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp09.00.10.08\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp09.00.10\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp8, opus\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"vp8, mp4a.40.2\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"VP8\\\"\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"Opus\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=vp8\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/webm; codecs=\\\"\\\"\"); })()",
+    "expected": "maybe",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"VIDEO/WEBM; codecs=\\\"vp8\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"audio/webm; codecs=\\\"opus\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"audio/mp4; codecs=\\\"mp4a.40.2\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "canPlayType",
+    "expr": "(() => { const o = document.createElement(\"video\"); return o.canPlayType(\"video/x-matroska; codecs=\\\"avc1.42E01E\\\"\"); })()",
+    "expected": "probably",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "load",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.load(), o.networkState); })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.preload = \"none\", o.preload); })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.preload = \"bogus\", o.preload); })()",
+    "expected": "metadata",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.setAttribute(\"preload\", \"BOGUS\"), o.preload); })()",
+    "expected": "metadata",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "preload",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.setAttribute(\"preload\", \"AUTO\"), o.preload); })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "loading",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.loading = \"lazy\", o.loading); })()",
+    "expected": "lazy",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "loading",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.loading = \"bogus\", o.loading); })()",
+    "expected": "eager",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.onencrypted = {}, typeof o.onencrypted); })()",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLMediaElement",
+    "member": "onencrypted",
+    "expr": "(() => { const o = document.createElement(\"video\"); return (o.onencrypted = \"x\", o.onencrypted); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "XMLHttpRequestEventTarget",
+    "member": "constructor",
+    "expr": "new XMLHttpRequestEventTarget()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

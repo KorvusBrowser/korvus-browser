@@ -1,0 +1,83 @@
+# PARITY CDP1 — WHAT A SECOND CDP CLIENT ON ONE PAGE TARGET SEES.
+#
+# RECORDED from google-chrome 150.0.7871.46 on 2026-09-21, headless=new, launched by us with
+# `--remote-debugging-port=0 --user-data-dir=<fresh> --no-first-run --no-default-browser-check
+# --disable-gpu about:blank` — NOT by Playwright's `launch()`, which adds `--enable-automation`
+# (PARITY M1). Two runs, byte-identical.
+#
+# THE EXPERIMENT. One page target. Client A attaches, navigates to the fixture below, sets one
+# global, reads the table, and DETACHES. Client B then attaches to the same target, never
+# navigates, and reads the same table. `<BASE>` stands for the loopback origin the fixture was
+# served from (`http://127.0.0.1:<ephemeral>`), so the recording does not pin a port.
+#
+#   <BASE>/fixture.html:
+#     <!doctype html><html lang="en"><head><meta charset="utf-8">
+#     <title>CDP1 loopback fixture</title></head><body>
+#     <h1 id="h">CDP1</h1><p class="p">one page, two clients</p>
+#     <div id="d"><span>a</span><span>b</span></div>
+#     <script>window.__fixture_ran = true;</script></body></html>
+#
+# HOW TO READ IT. A line with no prefix is ASSERTED against this engine, line for line. A line
+# prefixed `!` is RECORDED AND NOT ASSERTED, and carries the reason on the line; the test counts
+# those and fails if the count moves, so nobody can quietly make this file softer. A line that
+# differs is a finding about the engine, never a reason to edit this file.
+#
+# Re-record: tools are in this test's header.
+
+# ── client A: the first client, after navigating to the fixture ──────────────────────────────────
+A document.documentElement.tagName = "HTML"
+A proto-of-document ctor name = "HTMLDocument"
+A String(document) = "[object HTMLDocument]"
+A document.readyState = "complete"
+A document.title = "CDP1 loopback fixture"
+A document.querySelectorAll('*').length = 11
+A location.href = "<BASE>/fixture.html"
+A window === self = true
+A globalThis === window = true
+A document === window.document = true
+A marker the FIRST client set = "set-by-the-first-client"
+A contexts announced = 2
+A last context origin = "<BASE>"
+A last context isDefault = true
+
+# ── client B: a SECOND client, attached to the same target after A detached; it never navigates ──
+#
+# Every row below equals A's. That is the whole finding: in Chrome a target IS a page and a client
+# is a view onto it, so what the second client reads is what the first one left. korvus answered
+# `{"readyState":"complete"}` / prototype `Object` / no `documentElement` / `about:blank` here, on
+# `example.com` as well as on this fixture, because it built the second client a whole new realm.
+B document.documentElement.tagName = "HTML"
+B proto-of-document ctor name = "HTMLDocument"
+B String(document) = "[object HTMLDocument]"
+B document.readyState = "complete"
+B document.title = "CDP1 loopback fixture"
+B document.querySelectorAll('*').length = 11
+B location.href = "<BASE>/fixture.html"
+B window === self = true
+B globalThis === window = true
+B document === window.document = true
+B marker the FIRST client set = "set-by-the-first-client"
+
+# B is announced ONE context — the live one — not the target's history: `Runtime.enable` replays
+# the contexts that exist, and the initial `about:blank` context was destroyed by the navigation.
+B contexts announced = 1
+B last context origin = "<BASE>"
+B last context isDefault = true
+
+# THE IDENTITY ROWS, which are what "the same realm" means on this wire. Chrome hands B the same
+# execution context object A had: the same id and the same `uniqueId`. They are asserted as the
+# EQUALITY rather than as the number, because the number is the next line down and is not ours.
+B last context id == A last context id = true
+B context uniqueId == A's = true
+B frameTree url = "<BASE>/fixture.html"
+
+# ── recorded, NOT asserted ───────────────────────────────────────────────────────────────────────
+#
+# The absolute execution-context NUMBER for a post-navigation document. Chrome allocates
+# sequentially (1 = the initial about:blank, 2 = the first navigation's document); this server
+# reserves 2 for `Page.createIsolatedWorld`'s utility world and numbers the post-navigation
+# document 3 (`src/ids.rs::ConnIds::default_context`). It is a difference on the wire and it is
+# NOT this lane's: nothing here changes it, and the rows above assert the property that CDP1 is
+# about — that both clients are given the SAME context — without depending on which number it is.
+! A last context id = 2      # korvus: 3, by the utility-world reservation in src/ids.rs
+! B last context id = 2      # korvus: 3, and equal to A's, which is the row that is asserted

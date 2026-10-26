@@ -1,0 +1,32 @@
+(() => {
+  const r = [];
+  const at = (e) => Array.from(e.attributes).map((a) => a.name + '=' + a.value).join(' ');
+  const pi = document.getElementById('pi'), pe = document.getElementById('pe');
+  r.push(['parser-inline', pi.nonce, at(pi)]);
+  r.push(['parser-external', pe.nonce, at(pe), String(window.__pe)]);
+  const s = document.createElement('script');
+  s.nonce = 'abc';
+  r.push(['idl-set', s.nonce, at(s), s.hasAttribute('nonce')]);
+  s.setAttribute('nonce', 'def');
+  r.push(['then-setAttribute', s.nonce, at(s)]);
+  s.removeAttribute('nonce');
+  r.push(['then-remove', s.nonce, at(s)]);
+  const s2 = document.createElement('script');
+  s2.setAttribute('nonce', 'n0nce');
+  r.push(['attr-before-insert', s2.nonce, at(s2)]);
+  document.head.appendChild(s2);
+  r.push(['attr-after-insert', s2.nonce, at(s2)]);
+  const c = s2.cloneNode();
+  r.push(['clone', c.nonce, at(c)]);
+  const s3 = document.createElement('script');
+  s3.nonce = 'n0nce'; s3.src = '/s.js';
+  document.head.appendChild(s3);
+  r.push(['idl-then-insert', s3.nonce, at(s3)]);
+  const d = document.createElement('div'); d.nonce = 'x';
+  r.push(['div', d.nonce, at(d)]);
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.nonce = 'y';
+  r.push(['svg', svg.nonce, at(svg)]);
+  const st = document.createElement('style'); st.setAttribute('nonce', 'n0nce'); document.head.appendChild(st);
+  r.push(['style-after-insert', st.nonce, at(st)]);
+  return r;
+})()

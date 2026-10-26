@@ -1,0 +1,36 @@
+<!doctype html><title>t</title>
+<!-- L17: `grid-auto-flow: column` (and `column dense`) places a grid's auto items in columns -- fontshare.com's
+     `.FMZE66ev { display: inline-grid; grid-auto-flow: column }` filter bar (Tailwind's `grid-flow-col`).
+     L18: a REPLACED grid item with an intrinsic size (an <svg width height>, an <img>) is not stretched by
+     `normal` alignment -- it keeps its size, as fontshare's 183x30 logo does in its grid header. The flow items
+     are 10px boxes, so no font metric decides a position. -->
+<style>
+*, ::before, ::after { box-sizing: border-box; }
+.ig { display: inline-grid; grid-auto-flow: column; gap: 20px; }
+.g { display: grid; grid-auto-flow: column; gap: 20px; justify-content: start; }
+.gd { display: grid; grid-auto-flow: column dense; }
+.gr { display: grid; grid-auto-flow: row; }
+.gc { display: grid; grid-template-rows: 20px 20px; grid-auto-flow: column; }
+.box { width: 456px; display: grid; }
+.ig > div, .g > div, .gd > div, .gr > div, .gc > div { width: 10px; height: 10px; }
+svg { display: block; }
+.st { width: 456px; display: grid; justify-items: stretch; align-items: stretch; height: 100px; }
+</style>
+<div class=ig id=ig><div>a</div><div>b</div></div>
+<div class=g id=g><div>a</div><div>b</div></div>
+<div class=gd id=gd><div>a</div><div>b</div></div>
+<div class=gr id=gr><div>a</div><div>b</div></div>
+<div class=gc id=gc><div>a</div><div>b</div><div>c</div></div>
+<div class=box><svg id=svg width=183 height=30 viewBox="0 0 183 30"></svg></div>
+<div class=box><img id=img src=i.png></div>
+<div class=box><svg id=svgnosize viewBox="0 0 183 30"></svg></div>
+<div class=st><img id=imgstretch src=i.png></div>
+<div class=box style="height:100px"><div id=divitem>text</div></div>
+<script>
+addEventListener('load', () => {
+  const R = {};
+  for (const id of ['ig', 'g', 'gd', 'gr', 'gc']) { const el = document.getElementById(id); const o = el.getBoundingClientRect(); R[id] = [...el.children].map(e => (Math.round(e.getBoundingClientRect().left - o.left)) + ',' + Math.round(e.getBoundingClientRect().top - o.top)).join(' '); }
+  for (const id of ['svg', 'img', 'svgnosize', 'imgstretch', 'divitem']) { const r = document.getElementById(id).getBoundingClientRect(); R[id] = Math.round(r.width) + 'x' + Math.round(r.height); }
+  document.title = JSON.stringify(R);
+});
+</script>

@@ -1,0 +1,17 @@
+<!doctype html><html><body><iframe id=f src="c.html" style="width:400px;height:300px"></iframe>
+<script>
+// REALWEB F27 follow-up: a frame document's layout answers AFTER a mutation -- innerText, getComputedStyle and
+// geometry read the changed document, not a layout cached before the change (PERF A6 caches layouts).
+window.R = null;
+f.onload = function () {
+  var d = f.contentDocument, w = f.contentWindow, a = d.getElementById('a'), b = d.getElementById('b');
+  var before = { text: d.body.innerText, aDisplay: w.getComputedStyle(a).display, bWidth: w.getComputedStyle(b).width, bRect: Math.round(b.getBoundingClientRect().width) };
+  a.style.display = 'none';
+  b.className = 'box wide';
+  var p = d.createElement('p'); p.textContent = 'added'; d.body.appendChild(p);
+  var after = { text: d.body.innerText, aDisplay: w.getComputedStyle(a).display, bWidth: w.getComputedStyle(b).width, bRect: Math.round(b.getBoundingClientRect().width), pTop: Math.round(p.getBoundingClientRect().top) > 0 };
+  d.head.insertAdjacentHTML('beforeend', '<style>#b { width: 50px }</style>');
+  var sheet = { bWidth: w.getComputedStyle(b).width, bRect: Math.round(b.getBoundingClientRect().width) };
+  window.R = JSON.stringify({ before: before, after: after, sheet: sheet });
+};
+</script></body></html>

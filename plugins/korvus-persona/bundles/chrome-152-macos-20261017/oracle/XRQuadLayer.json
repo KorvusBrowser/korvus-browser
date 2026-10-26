@@ -1,0 +1,254 @@
+[
+  {
+    "iface": "XRQuadLayer",
+    "member": "constructor",
+    "expr": "new XRQuadLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "XRQuadLayer.prototype.space",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").get.call(Object.create(XRQuadLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "XRQuadLayer.prototype.transform",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").get.call(Object.create(XRQuadLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "XRQuadLayer.prototype.width",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").get.call(Object.create(XRQuadLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "XRQuadLayer.prototype.height",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").get.call(Object.create(XRQuadLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "XRQuadLayer.prototype.onredraw",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").get.call(Object.create(XRQuadLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").get.call(Object.create(XRQuadLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"space\").set.call(Object.create(XRQuadLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").get.call(Object.create(XRQuadLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "transform",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"transform\").set.call(Object.create(XRQuadLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").get.call(Object.create(XRQuadLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "width",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"width\").set.call(Object.create(XRQuadLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").get.call(Object.create(XRQuadLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "height",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"height\").set.call(Object.create(XRQuadLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").get.call(Object.create(XRQuadLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRQuadLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRQuadLayer.prototype, \"onredraw\").set.call(Object.create(XRQuadLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,233 @@
+[
+  {
+    "iface": "RTCDataChannel",
+    "member": "constructor",
+    "expr": "new RTCDataChannel()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "priority",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.priority; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "label",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.label; })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "ordered",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.ordered; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "maxPacketLifeTime",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.maxPacketLifeTime; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "maxRetransmits",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.maxRetransmits; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "protocol",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.protocol; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "negotiated",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.negotiated; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "id",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.id; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "readyState",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.readyState; })()",
+    "expected": "connecting",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "bufferedAmount",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.bufferedAmount; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "bufferedAmountLowThreshold",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.bufferedAmountLowThreshold; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "bufferedAmountLowThreshold",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return (o.bufferedAmountLowThreshold = 1, o.bufferedAmountLowThreshold); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onopen",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onopen; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onbufferedamountlow",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onbufferedamountlow; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onerror",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onclosing",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onclosing; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onclose",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "close",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onmessage",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "binaryType",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.binaryType; })()",
+    "expected": "arraybuffer",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "send",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.send(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "send",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return o.send(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "bufferedAmountLowThreshold",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return (o.bufferedAmountLowThreshold = \"1\", o.bufferedAmountLowThreshold); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "priority",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.priority); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "readyState",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.readyState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onopen",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onopen); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onbufferedamountlow",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onbufferedamountlow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onerror",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onclosing",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onclosing); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onclose",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "onmessage",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "RTCDataChannel",
+    "member": "binaryType",
+    "expr": "(() => { const o = new RTCPeerConnection().createDataChannel(\"x\"); return Object.prototype.toString.call(o.binaryType); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

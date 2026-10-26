@@ -1,0 +1,5 @@
+<!doctype html><html><body><form name=ff></form><div id=fdiv></div><form name=ftwin></form><form name=ftwin></form><img name=fimg>
+<script>
+var t = function (v) { return v === undefined ? 'undefined' : Object.prototype.toString.call(v) + (v && v.length !== undefined && !(v instanceof Window) ? ':' + v.length : ''); };
+window.SAW = { ff: t(window.ff), fdiv: t(window.fdiv), bare: typeof fdiv, ftwin: t(window.ftwin), fimg: t(window.fimg), pageonly: t(window.pageonly), inFf: 'ff' in window };
+</script></body></html>

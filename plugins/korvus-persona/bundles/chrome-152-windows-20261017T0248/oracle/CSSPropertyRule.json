@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "CSSPropertyRule",
+    "member": "constructor",
+    "expr": "new CSSPropertyRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPropertyRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@property --p { syntax: '*'; inherits: false; }\"); return s.cssRules[0]; })(); return o.name; })()",
+    "expected": "--p",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPropertyRule",
+    "member": "syntax",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@property --p { syntax: '*'; inherits: false; }\"); return s.cssRules[0]; })(); return o.syntax; })()",
+    "expected": "*",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPropertyRule",
+    "member": "inherits",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@property --p { syntax: '*'; inherits: false; }\"); return s.cssRules[0]; })(); return o.inherits; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSPropertyRule",
+    "member": "initialValue",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@property --p { syntax: '*'; inherits: false; }\"); return s.cssRules[0]; })(); return o.initialValue; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

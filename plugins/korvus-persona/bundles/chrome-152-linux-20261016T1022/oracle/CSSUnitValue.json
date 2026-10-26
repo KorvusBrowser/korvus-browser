@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "CSSUnitValue",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSUnitValue(1, \"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CSSUnitValue]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSUnitValue(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSUnitValue(\"1\", \"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CSSUnitValue]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "value",
+    "expr": "(() => { const o = new CSSUnitValue(1, \"x\"); return o.value; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "value",
+    "expr": "(() => { const o = new CSSUnitValue(1, \"x\"); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "unit",
+    "expr": "(() => { const o = new CSSUnitValue(1, \"x\"); return o.unit; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CSSUnitValue",
+    "member": "value",
+    "expr": "(() => { const o = new CSSUnitValue(1, \"x\"); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

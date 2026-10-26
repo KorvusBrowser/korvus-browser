@@ -1,0 +1,28 @@
+[
+ [
+  "fingerprint 44100",
+  "suspended>running>closed",
+  "statechange running|closed",
+  "listener:closed:44100,oncomplete,promise",
+  "tasks ran while rendering true",
+  "settled in the call's microtask false",
+  44100,
+  44100,
+  124.04347776696522
+ ],
+ [
+  "fingerprint 441000",
+  "suspended>running>closed",
+  "statechange running|closed",
+  "listener:closed:441000,oncomplete,promise",
+  "tasks ran while rendering true",
+  "settled in the call's microtask false",
+  441000,
+  44100,
+  124.04347776696522
+ ],
+ [
+  "startRendering twice",
+  "InvalidStateError: Failed to execute 'startRendering' on 'OfflineAudioContext': cannot call startRendering on an OfflineAudioContext in a stopped state."
+ ]
+]

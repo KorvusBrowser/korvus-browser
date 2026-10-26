@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "USB",
+    "member": "constructor",
+    "expr": "new USB()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.usb; return o.onconnect; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.usb; return o.ondisconnect; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "onconnect",
+    "expr": "(() => { const o = navigator.usb; return Object.prototype.toString.call(o.onconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "ondisconnect",
+    "expr": "(() => { const o = navigator.usb; return Object.prototype.toString.call(o.ondisconnect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "getDevices",
+    "expr": "(() => { const o = navigator.usb; return Object.prototype.toString.call(o.getDevices()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "USB",
+    "member": "requestDevice",
+    "expr": "(() => { const o = navigator.usb; return Object.prototype.toString.call(o.requestDevice({})); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "USB",
+    "member": "requestDevice",
+    "expr": "Object.prototype.toString.call(navigator.usb.requestDevice())",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  }
+]

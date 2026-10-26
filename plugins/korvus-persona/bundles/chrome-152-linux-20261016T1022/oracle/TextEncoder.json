@@ -1,0 +1,212 @@
+[
+  {
+    "iface": "TextEncoder",
+    "member": "encoding",
+    "expr": "new TextEncoder().encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encoding",
+    "expr": "new TextEncoder('shift_jis').encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encoding",
+    "expr": "(() => { const d = Object.getOwnPropertyDescriptor(TextEncoder.prototype, 'encoding'); return d.get.name + ',' + d.get.length + ',' + (d.set === undefined); })()",
+    "expected": "get encoding,0,true",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "Array.from(new TextEncoder().encode('hi!')).join()",
+    "expected": "104,105,33",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode().length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode(undefined).length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode('').length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode('\\u00E9').byteLength",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode('\\uD83D\\uDE00').byteLength",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "Array.from(new TextEncoder().encode('\\uD800')).join()",
+    "expected": "239,191,189",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "Array.from(new TextEncoder().encode('\\uDC00\\uD800')).join()",
+    "expected": "239,191,189,239,191,189",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode('a') instanceof Uint8Array",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode(null).length",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "Array.from(new TextEncoder().encode(123)).join()",
+    "expected": "49,50,51",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextEncoder().encode(Symbol('x'))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encode",
+    "expr": "new TextDecoder().decode(new TextEncoder().encode('a\\u20AC\\uD83D\\uDE00'))",
+    "expected": "a€😀",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const d = new Uint8Array(4); const r = new TextEncoder().encodeInto('abcd', d); return r.read + ',' + r.written + ',' + Array.from(d).join(); })()",
+    "expected": "4,4,97,98,99,100",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const d = new Uint8Array(2); const r = new TextEncoder().encodeInto('abcd', d); return r.read + ',' + r.written + ',' + Array.from(d).join(); })()",
+    "expected": "2,2,97,98",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const d = new Uint8Array(3); const r = new TextEncoder().encodeInto('\\u00E9\\u00E9', d); return r.read + ',' + r.written; })()",
+    "expected": "1,2",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const d = new Uint8Array(3); const r = new TextEncoder().encodeInto('\\uD83D\\uDE00', d); return r.read + ',' + r.written; })()",
+    "expected": "0,0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const r = new TextEncoder().encodeInto('', new Uint8Array(0)); return r.read + ',' + r.written; })()",
+    "expected": "0,0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const r = new TextEncoder().encodeInto('a', new Uint8Array(0)); return r.read + ',' + r.written; })()",
+    "expected": "0,0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const r = new TextEncoder().encodeInto('a', new Uint8Array(1)); return Object.keys(r).join() + ',' + JSON.stringify(r); })()",
+    "expected": "read,written,{\"read\":1,\"written\":1}",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "new TextEncoder().encodeInto('a')",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "new TextEncoder().encodeInto('a', {})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const d = new Uint8Array(8); const r = new TextEncoder().encodeInto(null, d); return r.read + ',' + r.written + ',' + Array.from(d.slice(0, 4)).join(); })()",
+    "expected": "4,4,110,117,108,108",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const b = new ArrayBuffer(8); const v = new Uint8Array(b, 4, 2); const r = new TextEncoder().encodeInto('abcd', v); return r.read + ',' + r.written + ',' + Array.from(new Uint8Array(b)).join(); })()",
+    "expected": "2,2,0,0,0,0,97,98,0,0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextEncoder(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextEncoder]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encodeInto",
+    "expr": "(() => { const o = new TextEncoder(); return o.encodeInto(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TextEncoder",
+    "member": "encoding",
+    "expr": "(() => { const o = new TextEncoder(); return o.encoding; })()",
+    "expected": "utf-8",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

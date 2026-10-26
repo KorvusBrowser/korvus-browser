@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "SpeechGrammarList",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechGrammarList(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object SpeechGrammarList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "length",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "item",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.item(1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "item",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "addFromURI",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.addFromURI(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "addFromURI",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.addFromURI(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "addFromString",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.addFromString(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "addFromString",
+    "expr": "(() => { const o = new SpeechGrammarList(); return o.addFromString(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammarList",
+    "member": "item",
+    "expr": "(() => { const o = new SpeechGrammarList(); return Object.prototype.toString.call(o.item(1)); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

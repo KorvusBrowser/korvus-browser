@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "AudioProcessingEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioProcessingEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioProcessingEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioProcessingEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioProcessingEvent",
+    "member": "playbackTime",
+    "expr": "(() => { const o = new AudioProcessingEvent(\"x\", { playbackTime: 0, inputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }), outputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }) }); return o.playbackTime; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioProcessingEvent",
+    "member": "inputBuffer",
+    "expr": "(() => { const o = new AudioProcessingEvent(\"x\", { playbackTime: 0, inputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }), outputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }) }); return Object.prototype.toString.call(o.inputBuffer); })()",
+    "expected": "[object AudioBuffer]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "AudioProcessingEvent",
+    "member": "outputBuffer",
+    "expr": "(() => { const o = new AudioProcessingEvent(\"x\", { playbackTime: 0, inputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }), outputBuffer: new AudioBuffer({ length: 1, sampleRate: 44100 }) }); return Object.prototype.toString.call(o.outputBuffer); })()",
+    "expected": "[object AudioBuffer]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

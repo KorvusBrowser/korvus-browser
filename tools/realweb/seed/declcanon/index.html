@@ -1,0 +1,20 @@
+<!doctype html><html><body><div id=d></div><script>
+// REALWEB S32: a declared value reads back in its property's canonical form: colors as rgb()/rgba(), calc()
+// simplified, a shadow's color first and its lengths with units, polygon() points with units, a bare 0 length
+// with its unit, four equal sides collapsed, url() quoted, background/transition in Chrome's shorthand form (Chrome 150).
+var cases = [
+ ['filter', 'drop-shadow(0 0 1px rgba(0,0,0,.5))'], ['box-shadow', '0 0 1px rgba(0,0,0,.5)'], ['box-shadow', '1px 1px red,2px 2px blue'],
+ ['color', 'rgb(0,0,0)'], ['color', 'RGBA(255, 0, 0, .5)'], ['color', '#FFF'], ['width', 'calc( 10px + 2px )'], ['width', 'calc(100% - (2*10px))'],
+ ['clip-path', 'polygon(0 0,100% 0,100% 100%)'],
+ ['color','#FFF'],['color','#ff000080'],['color','#f008'],['color','red'],['color','RED'],['color','transparent'],['color','currentColor'],['color','rgb(0 0 0 / 50%)'],['color','rgba(0,0,0,1)'],['color','rgb(255,0,0,.25)'],['color','hsl(0,100%,50%)'],['color','hsla(120, 100%, 25%, 0.5)'],['color','rgb(100%, 0%, 0%)'],['color','rgb(300,-5,0)'],
+ ['border','1px solid #FFF'],['border-color','#000 red'],['background','#abc url(x.png) no-repeat'],['background-color','#ABC'],
+ ['box-shadow','inset 0 0 1px #000'],['box-shadow','0 0 1px 2px rgba(0,0,0,.5) inset'],['box-shadow','none'],['text-shadow','1px 1px 2px black'],['text-shadow','red 0 0'],['box-shadow','1px 2px'],
+ ['filter','drop-shadow(1px 1px red) blur(2px)'],['filter','blur(0)'],
+ ['width','calc(20px + 100%)'],['width','calc(1px + 2em)'],['width','calc(10px * 2)'],['width','calc(100px / 4)'],['width','calc(50% - 10px + 5px)'],['width','calc(2 * (10px + 5px))'],['width','calc(1em + 1px + 1%)'],['width','calc(0px)'],['width','calc(10px - 10px)'],
+ ['margin','0'],['margin','0 auto'],['padding','0 0 0 0'],['top','0'],['line-height','0'],['flex','1 1 0'],['transform','translate(0,0)'],['transform','rotate(0)'],
+ ['clip-path','polygon(0 0,100% 0,100% 100%)'],['clip-path','inset(0 0 0 0)'],['clip-path','circle(50% at 0 0)'],
+ ['opacity','.5'],['z-index','010'],['transition','opacity .3s ease 0s'],['background-position','0 0'],['border-radius','0'],['outline','0']];
+var out = {};
+cases.forEach(function (c) { d.removeAttribute('style'); d.style.setProperty(c[0], c[1]); out[c[0] + ': ' + c[1]] = d.style.getPropertyValue(c[0]); });
+document.title = JSON.stringify(out);
+</script></body></html>

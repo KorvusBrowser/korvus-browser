@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSConditionRule",
+    "member": "constructor",
+    "expr": "new CSSConditionRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,1863 @@
+[
+  {
+    "iface": "XRSession",
+    "member": "constructor",
+    "expr": "new XRSession()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "XRSession.prototype.environmentBlendMode",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"environmentBlendMode\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "XRSession.prototype.interactionMode",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"interactionMode\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "XRSession.prototype.visibilityState",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"visibilityState\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "renderState",
+    "expr": "XRSession.prototype.renderState",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "renderState",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"renderState\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "inputSources",
+    "expr": "XRSession.prototype.inputSources",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "inputSources",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"inputSources\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "XRSession.prototype.domOverlayState",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"domOverlayState\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "XRSession.prototype.preferredReflectionFormat",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"preferredReflectionFormat\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "XRSession.prototype.onend",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "XRSession.prototype.onselect",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "XRSession.prototype.oninputsourceschange",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "XRSession.prototype.onselectstart",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "XRSession.prototype.onselectend",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "XRSession.prototype.onvisibilitychange",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "XRSession.prototype.onsqueeze",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "XRSession.prototype.onsqueezestart",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "XRSession.prototype.onsqueezeend",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "XRSession.prototype.depthUsage",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthUsage\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "XRSession.prototype.depthDataFormat",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthDataFormat\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "XRSession.prototype.depthType",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthType\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthActive",
+    "expr": "XRSession.prototype.depthActive",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthActive",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthActive\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "XRSession.prototype.cancelAnimationFrame.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "XRSession.prototype.cancelAnimationFrame.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.end.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.end.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "pauseDepthSensing",
+    "expr": "XRSession.prototype.pauseDepthSensing.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "pauseDepthSensing",
+    "expr": "XRSession.prototype.pauseDepthSensing.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "XRSession.prototype.requestAnimationFrame.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "XRSession.prototype.requestAnimationFrame.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSource.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSource.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSourceForTransientInput.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSourceForTransientInput.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestLightProbe.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestLightProbe.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestReferenceSpace.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestReferenceSpace.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "resumeDepthSensing",
+    "expr": "XRSession.prototype.resumeDepthSensing.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "resumeDepthSensing",
+    "expr": "XRSession.prototype.resumeDepthSensing.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateRenderState",
+    "expr": "XRSession.prototype.updateRenderState.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateRenderState",
+    "expr": "XRSession.prototype.updateRenderState.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "XRSession.prototype.enabledFeatures",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"enabledFeatures\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "maxRenderLayers",
+    "expr": "XRSession.prototype.maxRenderLayers",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "maxRenderLayers",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"maxRenderLayers\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "XRSession.prototype.onvisibilitymaskchange",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").get.call(Object.create(XRSession.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.initiateRoomCapture.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.initiateRoomCapture.call(Object.create(XRSession.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "XRSession.prototype.cancelAnimationFrame.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "XRSession.prototype.requestAnimationFrame.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSource.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestHitTestSourceForTransientInput.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "Object.prototype.toString.call(XRSession.prototype.requestReferenceSpace.call({}, 1))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"environmentBlendMode\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"environmentBlendMode\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"interactionMode\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"interactionMode\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"visibilityState\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"visibilityState\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "renderState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"renderState\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "renderState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"renderState\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "inputSources",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"inputSources\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "inputSources",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"inputSources\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"domOverlayState\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"domOverlayState\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"preferredReflectionFormat\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"preferredReflectionFormat\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onend\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselect\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"oninputsourceschange\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectstart\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onselectend\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitychange\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueeze\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezestart\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onsqueezeend\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthUsage\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthUsage\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthDataFormat\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthDataFormat\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthType\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthType\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthActive",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthActive\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthActive",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"depthActive\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "(() => { try { const v = XRSession.prototype[\"cancelAnimationFrame\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "(() => { try { const v = XRSession.prototype[\"cancelAnimationFrame\"].call(Object.create(XRSession.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "(() => { try { const v = XRSession.prototype[\"end\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "(() => { try { const v = XRSession.prototype[\"end\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "pauseDepthSensing",
+    "expr": "(() => { try { const v = XRSession.prototype[\"pauseDepthSensing\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "pauseDepthSensing",
+    "expr": "(() => { try { const v = XRSession.prototype[\"pauseDepthSensing\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestAnimationFrame\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestAnimationFrame\"].call(Object.create(XRSession.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestHitTestSource\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestHitTestSource\"].call(Object.create(XRSession.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestHitTestSourceForTransientInput\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestHitTestSourceForTransientInput\"].call(Object.create(XRSession.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestLightProbe\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestLightProbe\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestReferenceSpace\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "(() => { try { const v = XRSession.prototype[\"requestReferenceSpace\"].call(Object.create(XRSession.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "resumeDepthSensing",
+    "expr": "(() => { try { const v = XRSession.prototype[\"resumeDepthSensing\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "resumeDepthSensing",
+    "expr": "(() => { try { const v = XRSession.prototype[\"resumeDepthSensing\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateRenderState",
+    "expr": "(() => { try { const v = XRSession.prototype[\"updateRenderState\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateRenderState",
+    "expr": "(() => { try { const v = XRSession.prototype[\"updateRenderState\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"enabledFeatures\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"enabledFeatures\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "maxRenderLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"maxRenderLayers\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "maxRenderLayers",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"maxRenderLayers\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").get.call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitymaskchange",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRSession.prototype, \"onvisibilitymaskchange\").set.call(Object.create(XRSession.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "(() => { try { const v = XRSession.prototype[\"initiateRoomCapture\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "(() => { try { const v = XRSession.prototype[\"initiateRoomCapture\"].call(Object.create(XRSession.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "persistentAnchors",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.persistentAnchors; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "persistentAnchors",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.persistentAnchors); })()",
+    "expected": "[object Undefined]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "restorePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.restorePersistentAnchor(\"x\")); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "restorePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.restorePersistentAnchor(\"x\"); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "restorePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(await o.restorePersistentAnchor(\"x\")); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "restorePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.restorePersistentAnchor(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "deletePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.deletePersistentAnchor(\"x\")); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "deletePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.deletePersistentAnchor(\"x\"); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "deletePersistentAnchor",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.deletePersistentAnchor(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.environmentBlendMode; })()",
+    "expected": "opaque",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "environmentBlendMode",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.environmentBlendMode); })()",
+    "expected": "[object String]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.interactionMode; })()",
+    "expected": "screen-space",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "interactionMode",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.interactionMode); })()",
+    "expected": "[object String]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.depthUsage; })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthUsage",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.depthUsage); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.depthDataFormat; })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthDataFormat",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.depthDataFormat); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.depthType; })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthType",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.depthType); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "depthActive",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.depthActive; })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "pauseDepthSensing",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.pauseDepthSensing(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "resumeDepthSensing",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.resumeDepthSensing(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.domOverlayState; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "domOverlayState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.domOverlayState); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.requestHitTestSource({})); })()",
+    "expected": "[object Promise]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestHitTestSource({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(await o.requestHitTestSource({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSource",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestHitTestSource(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.requestHitTestSourceForTransientInput({})); })()",
+    "expected": "[object Promise]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestHitTestSourceForTransientInput({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(await o.requestHitTestSourceForTransientInput({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestHitTestSourceForTransientInput",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestHitTestSourceForTransientInput(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.requestLightProbe()); })()",
+    "expected": "[object Promise]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestLightProbe(); })()",
+    "throws": "NotSupportedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestLightProbe",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(await o.requestLightProbe()); })()",
+    "throws": "NotSupportedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.preferredReflectionFormat; })()",
+    "expected": "rgba16f",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "preferredReflectionFormat",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.preferredReflectionFormat); })()",
+    "expected": "[object String]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.initiateRoomCapture()); })()",
+    "expected": "[object Promise]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "initiateRoomCapture",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.initiateRoomCapture(); })()",
+    "throws": "NotSupportedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.visibilityState; })()",
+    "expected": "hidden",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "visibilityState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.visibilityState); })()",
+    "expected": "[object String]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "frameRate",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.frameRate; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "supportedFrameRates",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.supportedFrameRates; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "supportedFrameRates",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.supportedFrameRates); })()",
+    "expected": "[object Undefined]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "renderState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.renderState); })()",
+    "expected": "[object XRRenderState]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "inputSources",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.inputSources); })()",
+    "expected": "[object XRInputSourceArray]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "trackedSources",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.trackedSources; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "trackedSources",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.trackedSources); })()",
+    "expected": "[object Undefined]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.enabledFeatures; })()",
+    "expected": [
+      "viewer"
+    ],
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "enabledFeatures",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.enabledFeatures); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "isSystemKeyboardSupported",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.isSystemKeyboardSupported; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateRenderState",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.updateRenderState(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateTargetFrameRate",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.updateTargetFrameRate(1)); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateTargetFrameRate",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.updateTargetFrameRate(1); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "updateTargetFrameRate",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.updateTargetFrameRate(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestReferenceSpace",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.requestReferenceSpace(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "requestAnimationFrame",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.requestAnimationFrame(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.cancelAnimationFrame(1); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "cancelAnimationFrame",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.cancelAnimationFrame(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.end()); })()",
+    "expected": "[object Promise]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "end",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return await o.end(); })()",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onend; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onend); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.oninputsourceschange; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "oninputsourceschange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.oninputsourceschange); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onselect; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselect",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onselect); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onselectstart; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectstart",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onselectstart); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onselectend; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onselectend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onselectend); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onsqueeze; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueeze",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onsqueeze); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onsqueezestart; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezestart",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onsqueezestart); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onsqueezeend; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onsqueezeend",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onsqueezeend); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onvisibilitychange; })()",
+    "expected": null,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onvisibilitychange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onvisibilitychange); })()",
+    "expected": "[object Null]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onframeratechange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.onframeratechange; })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "onframeratechange",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return Object.prototype.toString.call(o.onframeratechange); })()",
+    "expected": "[object Undefined]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRSession",
+    "member": "maxRenderLayers",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\")); return o.maxRenderLayers; })()",
+    "expected": 1,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

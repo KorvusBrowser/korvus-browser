@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "SVG_EDGEMODE_UNKNOWN",
+    "expr": "SVGFEConvolveMatrixElement.SVG_EDGEMODE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "SVG_EDGEMODE_DUPLICATE",
+    "expr": "SVGFEConvolveMatrixElement.SVG_EDGEMODE_DUPLICATE",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "SVG_EDGEMODE_WRAP",
+    "expr": "SVGFEConvolveMatrixElement.SVG_EDGEMODE_WRAP",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "SVG_EDGEMODE_NONE",
+    "expr": "SVGFEConvolveMatrixElement.SVG_EDGEMODE_NONE",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "constructor",
+    "expr": "new SVGFEConvolveMatrixElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "in1",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.in1); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "orderX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.orderX); })()",
+    "expected": "[object SVGAnimatedInteger]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "orderY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.orderY); })()",
+    "expected": "[object SVGAnimatedInteger]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "kernelMatrix",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.kernelMatrix); })()",
+    "expected": "[object SVGAnimatedNumberList]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "divisor",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.divisor); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "bias",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.bias); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "targetX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.targetX); })()",
+    "expected": "[object SVGAnimatedInteger]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "targetY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.targetY); })()",
+    "expected": "[object SVGAnimatedInteger]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "edgeMode",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.edgeMode); })()",
+    "expected": "[object SVGAnimatedEnumeration]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "kernelUnitLengthX",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.kernelUnitLengthX); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "kernelUnitLengthY",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.kernelUnitLengthY); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "preserveAlpha",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.preserveAlpha); })()",
+    "expected": "[object SVGAnimatedBoolean]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "x",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.x); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "y",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.y); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.width); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.height); })()",
+    "expected": "[object SVGAnimatedLength]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEConvolveMatrixElement",
+    "member": "result",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feConvolveMatrix\"); return Object.prototype.toString.call(o.result); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

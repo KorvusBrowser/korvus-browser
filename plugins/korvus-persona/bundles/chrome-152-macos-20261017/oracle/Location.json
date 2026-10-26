@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "Location",
+    "member": "constructor",
+    "expr": "new Location()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "protocol",
+    "expr": "(() => { const o = location; return o.protocol; })()",
+    "expected": "http:",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "protocol",
+    "expr": "(() => { const o = location; return (o.protocol = \"x\", o.protocol); })()",
+    "expected": "http:",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "hostname",
+    "expr": "(() => { const o = location; return o.hostname; })()",
+    "expected": "localhost",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "hostname",
+    "expr": "(() => { const o = location; return (o.hostname = \"x\", o.hostname); })()",
+    "expected": "localhost",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "pathname",
+    "expr": "(() => { const o = location; return o.pathname; })()",
+    "expected": "/",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "pathname",
+    "expr": "(() => { const o = location; return (o.pathname = \"x\", o.pathname); })()",
+    "expected": "/",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "hash",
+    "expr": "(() => { const o = location; return (o.hash = \"x\", o.hash); })()",
+    "expected": "#x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "hash",
+    "expr": "(() => { const o = location; return o.hash; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Location",
+    "member": "ancestorOrigins",
+    "expr": "(() => { const o = location; return Object.prototype.toString.call(o.ancestorOrigins); })()",
+    "expected": "[object DOMStringList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

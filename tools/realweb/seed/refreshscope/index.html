@@ -1,0 +1,6 @@
+<!doctype html><title>stay</title>
+<!-- REALWEB U20: a declarative refresh belongs to the document whose <meta> it is. Chrome 150 follows none of
+     these three from the page: one in a template's content, one in a DOMParser document, one in a frame's. -->
+<template><meta http-equiv="refresh" content="0; url=away.html?by=template"></template>
+<iframe src="fr.html"></iframe>
+<script>new DOMParser().parseFromString('<meta http-equiv="refresh" content="0; url=away.html?by=domparser">', 'text/html');</script>

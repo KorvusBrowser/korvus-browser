@@ -1,0 +1,1571 @@
+{
+  "nav": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "appVersion": "5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "product": "Gecko",
+    "productSub": "20030107",
+    "vendor": "Google Inc.",
+    "vendorSub": "",
+    "platform": "Linux x86_64",
+    "language": "ko-KR",
+    "hardwareConcurrency": 12,
+    "deviceMemory": 32,
+    "maxTouchPoints": 0,
+    "pdfViewerEnabled": true,
+    "doNotTrack": null,
+    "cookieEnabled": true,
+    "onLine": true,
+    "webdriver": false,
+    "cpuPerformance": 4,
+    "languages": [
+      "ko-KR",
+      "ko",
+      "en-US",
+      "en"
+    ],
+    "acceptLanguage": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "plugins": [
+      {
+        "name": "PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chrome PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chromium PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Microsoft Edge PDF Viewer",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "WebKit built-in PDF",
+        "description": "Portable Document Format",
+        "filename": "internal-pdf-viewer",
+        "length": 2,
+        "mimes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          },
+          {
+            "type": "text/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      }
+    ],
+    "mimeTypes": [
+      {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "PDF Viewer"
+      },
+      {
+        "type": "text/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format",
+        "enabledPlugin": "PDF Viewer"
+      }
+    ],
+    "userAgentData": {
+      "brands": [
+        {
+          "brand": "Chromium",
+          "version": "152"
+        },
+        {
+          "brand": "Not?A_Brand",
+          "version": "24"
+        },
+        {
+          "brand": "Google Chrome",
+          "version": "152"
+        }
+      ],
+      "mobile": false,
+      "platform": "Linux",
+      "highEntropy": {
+        "architecture": "x86",
+        "bitness": "64",
+        "brands": [
+          {
+            "brand": "Chromium",
+            "version": "152"
+          },
+          {
+            "brand": "Not?A_Brand",
+            "version": "24"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "152"
+          }
+        ],
+        "formFactors": [
+          "Desktop"
+        ],
+        "fullVersionList": [
+          {
+            "brand": "Chromium",
+            "version": "152.0.7977.82"
+          },
+          {
+            "brand": "Not?A_Brand",
+            "version": "24.0.0.0"
+          },
+          {
+            "brand": "Google Chrome",
+            "version": "152.0.7977.82"
+          }
+        ],
+        "mobile": false,
+        "model": "",
+        "platform": "Linux",
+        "platformVersion": "",
+        "uaFullVersion": "152.0.7977.82",
+        "wow64": false
+      }
+    },
+    "connection": {
+      "effectiveType": "4g",
+      "rtt": 100,
+      "downlink": 1.4,
+      "saveData": false
+    },
+    "storageEstimate": {
+      "quota": 10737418240,
+      "usage": 0,
+      "usageDetails": {}
+    },
+    "battery": {
+      "has": true,
+      "keys": [
+        "charging",
+        "chargingTime",
+        "dischargingTime",
+        "level",
+        "onchargingchange",
+        "onchargingtimechange",
+        "ondischargingtimechange",
+        "onlevelchange",
+        "constructor"
+      ]
+    },
+    "permissions": {
+      "geolocation": "prompt",
+      "notifications": "prompt",
+      "camera": "prompt",
+      "microphone": "prompt",
+      "midi": "prompt",
+      "background-sync": "granted",
+      "persistent-storage": "prompt",
+      "clipboard-read": "prompt",
+      "clipboard-write": "granted",
+      "accelerometer": "granted",
+      "gyroscope": "granted",
+      "magnetometer": "granted",
+      "screen-wake-lock": "granted",
+      "payment-handler": "granted",
+      "storage-access": "granted",
+      "idle-detection": "prompt",
+      "background-fetch": "granted",
+      "periodic-background-sync": "denied",
+      "keyboard-lock": "granted",
+      "pointer-lock": "granted",
+      "display-capture": "prompt",
+      "local-fonts": "prompt",
+      "window-management": "prompt",
+      "captured-surface-control": "prompt",
+      "local-network-access": "prompt",
+      "local-network": "prompt",
+      "loopback-network": "prompt"
+    },
+    "mediaDevices": {
+      "count": 1,
+      "kinds": [
+        "audiooutput"
+      ],
+      "labelled": 0,
+      "supported": {
+        "aspectRatio": true,
+        "autoGainControl": true,
+        "brightness": true,
+        "channelCount": true,
+        "colorTemperature": true,
+        "contrast": true,
+        "deviceId": true,
+        "displaySurface": true,
+        "echoCancellation": true,
+        "exposureCompensation": true,
+        "exposureMode": true,
+        "exposureTime": true,
+        "facingMode": true,
+        "focusDistance": true,
+        "focusMode": true,
+        "frameRate": true,
+        "groupId": true,
+        "height": true,
+        "iso": true,
+        "latency": true,
+        "noiseSuppression": true,
+        "pan": true,
+        "pointsOfInterest": true,
+        "resizeMode": true,
+        "restrictOwnAudio": true,
+        "sampleRate": true,
+        "sampleSize": true,
+        "saturation": true,
+        "sharpness": true,
+        "suppressLocalAudioPlayback": true,
+        "tilt": true,
+        "torch": true,
+        "voiceIsolation": true,
+        "whiteBalanceMode": true,
+        "width": true,
+        "zoom": true
+      }
+    },
+    "acceptNavigation": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "_acceptNavigationNote": "Google Chrome 152.0.7977.82's navigation Accept, MEASURED 2026-10-16 on a loopback echo (page and cross-site iframe alike, a fresh profile, headed on this desktop). A browser-identifying value belongs in the bundle.",
+    "thirdPartyCookies": "allowed",
+    "_thirdPartyCookiesNote": "Google Chrome 152.0.7977.82 allows third-party cookies: MEASURED 2026-10-16 with a localhost page and a 127.0.0.1 frame -- the frame's credentialed fetch carried `Sec-Fetch-Storage-Access: active`.",
+    "keyboardLayoutMap": [
+      [
+        "KeyK",
+        "k"
+      ],
+      [
+        "KeyG",
+        "g"
+      ],
+      [
+        "Digit2",
+        "2"
+      ],
+      [
+        "Digit0",
+        "0"
+      ],
+      [
+        "KeyV",
+        "v"
+      ],
+      [
+        "KeyA",
+        "a"
+      ],
+      [
+        "Backquote",
+        "`"
+      ],
+      [
+        "KeyL",
+        "l"
+      ],
+      [
+        "IntlBackslash",
+        "<"
+      ],
+      [
+        "Quote",
+        "'"
+      ],
+      [
+        "KeyW",
+        "w"
+      ],
+      [
+        "Digit8",
+        "8"
+      ],
+      [
+        "KeyM",
+        "m"
+      ],
+      [
+        "KeyH",
+        "h"
+      ],
+      [
+        "Period",
+        "."
+      ],
+      [
+        "Digit7",
+        "7"
+      ],
+      [
+        "Digit1",
+        "1"
+      ],
+      [
+        "KeyP",
+        "p"
+      ],
+      [
+        "KeyD",
+        "d"
+      ],
+      [
+        "KeyF",
+        "f"
+      ],
+      [
+        "KeyO",
+        "o"
+      ],
+      [
+        "KeyQ",
+        "q"
+      ],
+      [
+        "KeyC",
+        "c"
+      ],
+      [
+        "KeyN",
+        "n"
+      ],
+      [
+        "BracketLeft",
+        "["
+      ],
+      [
+        "KeyZ",
+        "z"
+      ],
+      [
+        "KeyY",
+        "y"
+      ],
+      [
+        "Digit3",
+        "3"
+      ],
+      [
+        "Digit6",
+        "6"
+      ],
+      [
+        "Digit5",
+        "5"
+      ],
+      [
+        "KeyX",
+        "x"
+      ],
+      [
+        "Slash",
+        "/"
+      ],
+      [
+        "Backslash",
+        "\\"
+      ],
+      [
+        "Comma",
+        ","
+      ],
+      [
+        "Minus",
+        "-"
+      ],
+      [
+        "Digit4",
+        "4"
+      ],
+      [
+        "KeyB",
+        "b"
+      ],
+      [
+        "KeyT",
+        "t"
+      ],
+      [
+        "Digit9",
+        "9"
+      ],
+      [
+        "KeyS",
+        "s"
+      ],
+      [
+        "KeyI",
+        "i"
+      ],
+      [
+        "KeyU",
+        "u"
+      ],
+      [
+        "Equal",
+        "="
+      ],
+      [
+        "KeyJ",
+        "j"
+      ],
+      [
+        "Semicolon",
+        ";"
+      ],
+      [
+        "KeyR",
+        "r"
+      ],
+      [
+        "BracketRight",
+        "]"
+      ],
+      [
+        "KeyE",
+        "e"
+      ]
+    ],
+    "_keyboardLayoutMapNote": "navigator.keyboard.getLayoutMap()'s [code, key] entries in the order the map iterates them, MEASURED 2026-10-16 on this desktop (US layout) in Google Chrome 152.0.7977.82 over a loopback page; null = navigator.keyboard is null.",
+    "aiAvailability": {
+      "LanguageDetector": "unavailable",
+      "LanguageModel": "unavailable",
+      "Summarizer": "unavailable",
+      "Translator": "unavailable"
+    },
+    "_aiAvailabilityNote": "The built-in AI APIs' availability() with no options (Translator with {sourceLanguage:'en', targetLanguage:'fr'}), MEASURED 2026-10-16 on this desktop in Google Chrome 152.0.7977.82 over a loopback page (a cross-origin frame); null = the API is not exposed."
+  },
+  "screen": {
+    "width": 1920,
+    "height": 1080,
+    "availWidth": 1920,
+    "availHeight": 1080,
+    "availLeft": 0,
+    "availTop": 0,
+    "colorDepth": 24,
+    "pixelDepth": 24,
+    "isExtended": false,
+    "orientation": {
+      "type": "landscape-primary",
+      "angle": 0
+    },
+    "refreshRate": 60,
+    "_refreshRateNote": "The display refresh rate, MEASURED 2026-10-16 on this desktop: Google Chrome 152.0.7977.82 runs requestAnimationFrame every 16.7 ms (p10..p90 16.6-16.7) -- 60 Hz. The display, not the browser.",
+    "_availNote": "MEASURED 2026-10-16 in this desktop's Wayland session (the capture): Google Chrome 152.0.7977.82 on Wayland cannot see the panel's work area and reports availHeight = height (1080), availTop 0."
+  },
+  "win": {
+    "innerWidth": 1920,
+    "innerHeight": 965,
+    "outerWidth": 1920,
+    "outerHeight": 1052,
+    "screenX": 0,
+    "screenY": 0,
+    "screenLeft": 0,
+    "screenTop": 0,
+    "devicePixelRatio": 1,
+    "scrollX": 0,
+    "scrollY": 0,
+    "originAgentCluster": true,
+    "crossOriginIsolated": false,
+    "visualViewport": {
+      "width": 1920,
+      "height": 965,
+      "scale": 1,
+      "offsetLeft": 0,
+      "offsetTop": 0
+    },
+    "documentElement": {
+      "clientWidth": 1920,
+      "clientHeight": 965
+    }
+  },
+  "memory": {
+    "jsHeapSizeLimit": 4395630592,
+    "totalJSHeapSize": 33411403,
+    "usedJSHeapSize": 18418839,
+    "emptyDocument": {
+      "totalJSHeapSize": 1048748,
+      "usedJSHeapSize": 494536
+    }
+  },
+  "chrome": {
+    "keys": [
+      "loadTimes",
+      "csi",
+      "app"
+    ],
+    "hasRuntime": false,
+    "loadTimes": "function",
+    "csi": "function",
+    "app": [
+      "isInstalled",
+      "getDetails",
+      "getIsInstalled",
+      "installState",
+      "runningState",
+      "InstallState",
+      "RunningState"
+    ]
+  },
+  "intl": {
+    "timeZone": "Asia/Seoul",
+    "locale": "ko",
+    "timeZoneName": "",
+    "offsetMinutes": -540
+  },
+  "fonts": {
+    "present": [
+      "Arial",
+      "Helvetica",
+      "Times",
+      "Times New Roman",
+      "Courier",
+      "Courier New",
+      "Noto Sans",
+      "Noto Serif",
+      "Noto Color Emoji",
+      "Noto Sans CJK KR",
+      "Noto Sans CJK JP",
+      "DejaVu Sans",
+      "DejaVu Serif",
+      "DejaVu Sans Mono",
+      "Liberation Sans",
+      "Liberation Serif",
+      "Liberation Mono",
+      "Ubuntu",
+      "MS Gothic",
+      "MS PGothic",
+      "SimSun"
+    ],
+    "count": 21,
+    "generic": {
+      "monospace": 1260.00048828125,
+      "sans-serif": 1799.4967041015625,
+      "serif": 1970.856689453125
+    },
+    "widths": {
+      "Arial": 1767.76171875,
+      "Arial Black": 1799.4967041015625,
+      "Arial Narrow": 1799.4967041015625,
+      "Arial Rounded MT Bold": 1799.4967041015625,
+      "Helvetica": 1767.76171875,
+      "Helvetica Neue": 1799.4967041015625,
+      "Times": 1695.62109375,
+      "Times New Roman": 1695.62109375,
+      "Courier": 1512.24609375,
+      "Courier New": 1512.24609375,
+      "Georgia": 1799.4967041015625,
+      "Palatino": 1799.4967041015625,
+      "Palatino Linotype": 1799.4967041015625,
+      "Garamond": 1799.4967041015625,
+      "Bookman": 1799.4967041015625,
+      "Comic Sans MS": 1799.4967041015625,
+      "Trebuchet MS": 1799.4967041015625,
+      "Impact": 1799.4967041015625,
+      "Verdana": 1799.4967041015625,
+      "Tahoma": 1799.4967041015625,
+      "Geneva": 1799.4967041015625,
+      "Lucida Console": 1799.4967041015625,
+      "Lucida Grande": 1799.4967041015625,
+      "Lucida Sans Unicode": 1799.4967041015625,
+      "Monaco": 1799.4967041015625,
+      "Menlo": 1799.4967041015625,
+      "Consolas": 1799.4967041015625,
+      "Segoe UI": 1799.4967041015625,
+      "Segoe UI Emoji": 1799.4967041015625,
+      "Calibri": 1799.4967041015625,
+      "Cambria": 1799.4967041015625,
+      "Candara": 1799.4967041015625,
+      "Constantia": 1799.4967041015625,
+      "Corbel": 1799.4967041015625,
+      "Franklin Gothic Medium": 1799.4967041015625,
+      "Gill Sans": 1799.4967041015625,
+      "Optima": 1799.4967041015625,
+      "Futura": 1799.4967041015625,
+      "Baskerville": 1799.4967041015625,
+      "American Typewriter": 1799.4967041015625,
+      "Andale Mono": 1799.4967041015625,
+      "Apple Chancery": 1799.4967041015625,
+      "Apple Color Emoji": 1799.4967041015625,
+      "AppleGothic": 1799.4967041015625,
+      "Avenir": 1799.4967041015625,
+      "Avenir Next": 1799.4967041015625,
+      "Big Caslon": 1799.4967041015625,
+      "Brush Script MT": 1799.4967041015625,
+      "Chalkboard": 1799.4967041015625,
+      "Cochin": 1799.4967041015625,
+      "Copperplate": 1799.4967041015625,
+      "Didot": 1799.4967041015625,
+      "Herculanum": 1799.4967041015625,
+      "Hoefler Text": 1799.4967041015625,
+      "Marker Felt": 1799.4967041015625,
+      "Noteworthy": 1799.4967041015625,
+      "Papyrus": 1799.4967041015625,
+      "Phosphate": 1799.4967041015625,
+      "Rockwell": 1799.4967041015625,
+      "Savoye LET": 1799.4967041015625,
+      "SignPainter": 1799.4967041015625,
+      "Skia": 1799.4967041015625,
+      "Snell Roundhand": 1799.4967041015625,
+      "Zapfino": 1799.4967041015625,
+      "PT Sans": 1799.4967041015625,
+      "PT Serif": 1799.4967041015625,
+      "Roboto": 1799.4967041015625,
+      "Noto Sans": 1847.80859375,
+      "Noto Serif": 1941.8408203125,
+      "Noto Color Emoji": 2439.576416015625,
+      "Noto Sans CJK KR": 1799.4967041015625,
+      "Noto Sans CJK JP": 1799.4967041015625,
+      "DejaVu Sans": 1977.15234375,
+      "DejaVu Serif": 1995.71484375,
+      "DejaVu Sans Mono": 1517.16796875,
+      "Liberation Sans": 1767.76171875,
+      "Liberation Serif": 1695.62109375,
+      "Liberation Mono": 1512.24609375,
+      "Ubuntu": 1789.9927978515625,
+      "Cantarell": 1799.4967041015625,
+      "FreeSans": 1799.4967041015625,
+      "Malgun Gothic": 1799.4967041015625,
+      "AppleSDGothicNeo": 1799.4967041015625,
+      "Apple SD Gothic Neo": 1799.4967041015625,
+      "Nanum Gothic": 1799.4967041015625,
+      "NanumGothic": 1799.4967041015625,
+      "Batang": 1799.4967041015625,
+      "Dotum": 1799.4967041015625,
+      "Gulim": 1799.4967041015625,
+      "MS Gothic": 1260.00048828125,
+      "MS PGothic": 1799.4967041015625,
+      "Meiryo": 1799.4967041015625,
+      "Yu Gothic": 1799.4967041015625,
+      "SimSun": 1970.856689453125,
+      "SimHei": 1799.4967041015625,
+      "Microsoft YaHei": 1799.4967041015625,
+      "PingFang SC": 1799.4967041015625,
+      "Hiragino Sans": 1799.4967041015625,
+      "Hiragino Kaku Gothic ProN": 1799.4967041015625,
+      "Songti SC": 1799.4967041015625,
+      "STHeiti": 1799.4967041015625,
+      "Heiti SC": 1799.4967041015625
+    },
+    "check": {
+      "Arial": true,
+      "Arial Black": true,
+      "Arial Narrow": true,
+      "Arial Rounded MT Bold": true,
+      "Helvetica": true,
+      "Helvetica Neue": true,
+      "Times": true,
+      "Times New Roman": true,
+      "Courier": true,
+      "Courier New": true,
+      "Georgia": true,
+      "Palatino": true,
+      "Palatino Linotype": true,
+      "Garamond": true,
+      "Bookman": true,
+      "Comic Sans MS": true,
+      "Trebuchet MS": true,
+      "Impact": true,
+      "Verdana": true,
+      "Tahoma": true,
+      "Geneva": true,
+      "Lucida Console": true,
+      "Lucida Grande": true,
+      "Lucida Sans Unicode": true,
+      "Monaco": true,
+      "Menlo": true,
+      "Consolas": true,
+      "Segoe UI": true,
+      "Segoe UI Emoji": true,
+      "Calibri": true,
+      "Cambria": true,
+      "Candara": true,
+      "Constantia": true,
+      "Corbel": true,
+      "Franklin Gothic Medium": true,
+      "Gill Sans": true,
+      "Optima": true,
+      "Futura": true,
+      "Baskerville": true,
+      "American Typewriter": true,
+      "Andale Mono": true,
+      "Apple Chancery": true,
+      "Apple Color Emoji": true,
+      "AppleGothic": true,
+      "Avenir": true,
+      "Avenir Next": true,
+      "Big Caslon": true,
+      "Brush Script MT": true,
+      "Chalkboard": true,
+      "Cochin": true,
+      "Copperplate": true,
+      "Didot": true,
+      "Herculanum": true,
+      "Hoefler Text": true,
+      "Marker Felt": true,
+      "Noteworthy": true,
+      "Papyrus": true,
+      "Phosphate": true,
+      "Rockwell": true,
+      "Savoye LET": true,
+      "SignPainter": true,
+      "Skia": true,
+      "Snell Roundhand": true,
+      "Zapfino": true,
+      "PT Sans": true,
+      "PT Serif": true,
+      "Roboto": true,
+      "Noto Sans": true,
+      "Noto Serif": true,
+      "Noto Color Emoji": true,
+      "Noto Sans CJK KR": true,
+      "Noto Sans CJK JP": true,
+      "DejaVu Sans": true,
+      "DejaVu Serif": true,
+      "DejaVu Sans Mono": true,
+      "Liberation Sans": true,
+      "Liberation Serif": true,
+      "Liberation Mono": true,
+      "Ubuntu": true,
+      "Cantarell": true,
+      "FreeSans": true,
+      "Malgun Gothic": true,
+      "AppleSDGothicNeo": true,
+      "Apple SD Gothic Neo": true,
+      "Nanum Gothic": true,
+      "NanumGothic": true,
+      "Batang": true,
+      "Dotum": true,
+      "Gulim": true,
+      "MS Gothic": true,
+      "MS PGothic": true,
+      "Meiryo": true,
+      "Yu Gothic": true,
+      "SimSun": true,
+      "SimHei": true,
+      "Microsoft YaHei": true,
+      "PingFang SC": true,
+      "Hiragino Sans": true,
+      "Hiragino Kaku Gothic ProN": true,
+      "Songti SC": true,
+      "STHeiti": true,
+      "Heiti SC": true
+    },
+    "status": "loaded"
+  },
+  "speech": {
+    "voices": [
+      {
+        "name": "Google Deutsch",
+        "lang": "de-DE",
+        "localService": false,
+        "default": true,
+        "voiceURI": "Google Deutsch"
+      },
+      {
+        "name": "Google US English",
+        "lang": "en-US",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google US English"
+      },
+      {
+        "name": "Google UK English Female",
+        "lang": "en-GB",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google UK English Female"
+      },
+      {
+        "name": "Google UK English Male",
+        "lang": "en-GB",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google UK English Male"
+      },
+      {
+        "name": "Google español",
+        "lang": "es-ES",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google español"
+      },
+      {
+        "name": "Google español de Estados Unidos",
+        "lang": "es-US",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google español de Estados Unidos"
+      },
+      {
+        "name": "Google français",
+        "lang": "fr-FR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google français"
+      },
+      {
+        "name": "Google हिन्दी",
+        "lang": "hi-IN",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google हिन्दी"
+      },
+      {
+        "name": "Google Bahasa Indonesia",
+        "lang": "id-ID",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google Bahasa Indonesia"
+      },
+      {
+        "name": "Google italiano",
+        "lang": "it-IT",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google italiano"
+      },
+      {
+        "name": "Google 日本語",
+        "lang": "ja-JP",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 日本語"
+      },
+      {
+        "name": "Google 한국의",
+        "lang": "ko-KR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 한국의"
+      },
+      {
+        "name": "Google Nederlands",
+        "lang": "nl-NL",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google Nederlands"
+      },
+      {
+        "name": "Google polski",
+        "lang": "pl-PL",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google polski"
+      },
+      {
+        "name": "Google português do Brasil",
+        "lang": "pt-BR",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google português do Brasil"
+      },
+      {
+        "name": "Google русский",
+        "lang": "ru-RU",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google русский"
+      },
+      {
+        "name": "Google 普通话（中国大陆）",
+        "lang": "zh-CN",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 普通话（中国大陆）"
+      },
+      {
+        "name": "Google 粤語（香港）",
+        "lang": "zh-HK",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 粤語（香港）"
+      },
+      {
+        "name": "Google 國語（臺灣）",
+        "lang": "zh-TW",
+        "localService": false,
+        "default": false,
+        "voiceURI": "Google 國語（臺灣）"
+      }
+    ],
+    "_voicesNote": "speechSynthesis.getVoices() after the one voiceschanged, headed, as the capture reads it (Google Chrome 152.0.7977.82, 2026-10-16). Stock Chrome lists its built-in Google network voices."
+  },
+  "deviceOracle": {
+    "webgl": {
+      "unmaskedVendor": "Google Inc. (NVIDIA Corporation)",
+      "unmaskedRenderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4060/PCIe/SSE2, OpenGL ES 3.2)",
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "versionV1": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+      "shadingV1": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+      "versionV2": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "shadingV2": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+      "paramsByNum": {
+        "32777": 32774,
+        "34877": 32774,
+        "32968": 0,
+        "32969": 1,
+        "32970": 0,
+        "32971": 1,
+        "32773": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "2884": false,
+        "3042": false,
+        "3024": true,
+        "2960": false,
+        "2929": false,
+        "3089": false,
+        "32823": false,
+        "32926": false,
+        "32928": false,
+        "2849": 1,
+        "33901": [
+          1,
+          2047
+        ],
+        "33902": [
+          1,
+          10
+        ],
+        "2885": 1029,
+        "2886": 2305,
+        "2928": [
+          0,
+          1
+        ],
+        "2930": true,
+        "2931": 1,
+        "2932": 513,
+        "2961": 0,
+        "2962": 519,
+        "2964": 7680,
+        "2965": 7680,
+        "2966": 7680,
+        "2967": 0,
+        "2963": 4294967295,
+        "2968": 4294967295,
+        "34816": 519,
+        "34817": 7680,
+        "34818": 7680,
+        "34819": 7680,
+        "36003": 0,
+        "36004": 4294967295,
+        "36005": 4294967295,
+        "2978": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3088": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3106": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "3107": "true,true,true,true",
+        "3317": 4,
+        "3333": 4,
+        "3379": 32768,
+        "3386": [
+          32768,
+          32768
+        ],
+        "3408": 4,
+        "3410": 8,
+        "3411": 8,
+        "3412": 8,
+        "3413": 8,
+        "3414": 24,
+        "3415": 0,
+        "10752": 0,
+        "32824": 0,
+        "32936": 1,
+        "32937": 4,
+        "32938": 1,
+        "32939": false,
+        "34467": [],
+        "33170": 4352,
+        "34921": 16,
+        "36347": 1024,
+        "36348": 31,
+        "35661": 64,
+        "35660": 32,
+        "34930": 32,
+        "36349": 1024,
+        "35724": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+        "7936": "WebKit",
+        "7937": "WebKit WebGL",
+        "7938": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+        "34076": 32768,
+        "34016": 33984,
+        "35738": 5121,
+        "35739": 6408,
+        "34024": 32768,
+        "37440": false,
+        "37441": false,
+        "37443": 37444,
+        "2880": 6914,
+        "10754": false,
+        "34047": 16,
+        "34383": false,
+        "35068": 1,
+        "35723": 4352,
+        "36379": 0,
+        "36392": 0,
+        "36795": false,
+        "37445": "Google Inc. (NVIDIA Corporation)",
+        "37446": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4060/PCIe/SSE2, OpenGL ES 3.2)",
+        "37724": 36001,
+        "37725": 37726
+      },
+      "paramsByNumV2": {
+        "32777": 32774,
+        "34877": 32774,
+        "32968": 0,
+        "32969": 1,
+        "32970": 0,
+        "32971": 1,
+        "32773": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "2884": false,
+        "3042": false,
+        "3024": true,
+        "2960": false,
+        "2929": false,
+        "3089": false,
+        "32823": false,
+        "32926": false,
+        "32928": false,
+        "2849": 1,
+        "33901": [
+          1,
+          2047
+        ],
+        "33902": [
+          1,
+          10
+        ],
+        "2885": 1029,
+        "2886": 2305,
+        "2928": [
+          0,
+          1
+        ],
+        "2930": true,
+        "2931": 1,
+        "2932": 513,
+        "2961": 0,
+        "2962": 519,
+        "2964": 7680,
+        "2965": 7680,
+        "2966": 7680,
+        "2967": 0,
+        "2963": 4294967295,
+        "2968": 4294967295,
+        "34816": 519,
+        "34817": 7680,
+        "34818": 7680,
+        "34819": 7680,
+        "36003": 0,
+        "36004": 4294967295,
+        "36005": 4294967295,
+        "2978": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3088": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "3106": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "3107": "true,true,true,true",
+        "3317": 4,
+        "3333": 4,
+        "3379": 32768,
+        "3386": [
+          32768,
+          32768
+        ],
+        "3408": 4,
+        "3410": 8,
+        "3411": 8,
+        "3412": 8,
+        "3413": 8,
+        "3414": 24,
+        "3415": 0,
+        "10752": 0,
+        "32824": 0,
+        "32936": 1,
+        "32937": 4,
+        "32938": 1,
+        "32939": false,
+        "34467": [],
+        "33170": 4352,
+        "34921": 16,
+        "36347": 1024,
+        "36348": 31,
+        "35661": 64,
+        "35660": 32,
+        "34930": 32,
+        "36349": 1024,
+        "7936": "WebKit",
+        "7937": "WebKit WebGL",
+        "34076": 32768,
+        "34016": 33984,
+        "35738": 5121,
+        "35739": 6408,
+        "34024": 32768,
+        "37440": false,
+        "37441": false,
+        "37443": 37444,
+        "3074": 1029,
+        "3314": 0,
+        "3315": 0,
+        "3316": 0,
+        "3330": 0,
+        "3331": 0,
+        "3332": 0,
+        "32877": 0,
+        "32878": 0,
+        "32883": 16384,
+        "33000": 1048576,
+        "33001": 1048576,
+        "34045": 15,
+        "34852": 8,
+        "34853": 1029,
+        "34854": 1029,
+        "34855": 1029,
+        "34856": 1029,
+        "34857": 1029,
+        "34858": 1029,
+        "34859": 1029,
+        "34860": 1029,
+        "35657": 4096,
+        "35658": 4096,
+        "35723": 4352,
+        "35071": 2048,
+        "35076": -8,
+        "35077": 7,
+        "35659": 124,
+        "35968": 4,
+        "35977": false,
+        "35978": 128,
+        "35979": 4,
+        "36063": 8,
+        "36183": 8,
+        "35371": 14,
+        "35373": 14,
+        "35374": 42,
+        "35375": 72,
+        "35376": 65536,
+        "35377": 233472,
+        "35379": 233472,
+        "35380": 256,
+        "37154": 128,
+        "37157": 128,
+        "37137": 0,
+        "36387": false,
+        "36388": false,
+        "36203": 4294967294,
+        "37447": 0,
+        "2880": 6914,
+        "3378": 8,
+        "10754": false,
+        "12288": false,
+        "12289": false,
+        "12290": false,
+        "12291": false,
+        "12292": false,
+        "12293": false,
+        "12294": false,
+        "12295": false,
+        "33529": 8,
+        "33530": 8,
+        "34047": 16,
+        "34383": false,
+        "35068": 1,
+        "36379": 0,
+        "36392": 0,
+        "36443": -0.5,
+        "36444": 0.5,
+        "36445": 4,
+        "36795": false,
+        "37445": "Google Inc. (NVIDIA Corporation)",
+        "37446": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4060/PCIe/SSE2, OpenGL ES 3.2)",
+        "37724": 36001,
+        "37725": 37726
+      },
+      "extensions": [
+        "ANGLE_instanced_arrays",
+        "EXT_blend_minmax",
+        "EXT_clip_control",
+        "EXT_color_buffer_half_float",
+        "EXT_depth_clamp",
+        "EXT_disjoint_timer_query",
+        "EXT_float_blend",
+        "EXT_frag_depth",
+        "EXT_polygon_offset_clamp",
+        "EXT_shader_texture_lod",
+        "EXT_texture_compression_bptc",
+        "EXT_texture_compression_rgtc",
+        "EXT_texture_filter_anisotropic",
+        "EXT_texture_mirror_clamp_to_edge",
+        "EXT_sRGB",
+        "KHR_parallel_shader_compile",
+        "OES_element_index_uint",
+        "OES_fbo_render_mipmap",
+        "OES_standard_derivatives",
+        "OES_texture_float",
+        "OES_texture_float_linear",
+        "OES_texture_half_float",
+        "OES_texture_half_float_linear",
+        "OES_vertex_array_object",
+        "WEBGL_blend_func_extended",
+        "WEBGL_color_buffer_float",
+        "WEBGL_compressed_texture_astc",
+        "WEBGL_compressed_texture_etc",
+        "WEBGL_compressed_texture_etc1",
+        "WEBGL_compressed_texture_s3tc",
+        "WEBGL_compressed_texture_s3tc_srgb",
+        "WEBGL_debug_renderer_info",
+        "WEBGL_debug_shaders",
+        "WEBGL_depth_texture",
+        "WEBGL_lose_context",
+        "WEBGL_multi_draw",
+        "WEBGL_polygon_mode"
+      ],
+      "extensionsV2": [
+        "EXT_clip_control",
+        "EXT_color_buffer_float",
+        "EXT_color_buffer_half_float",
+        "EXT_conservative_depth",
+        "EXT_depth_clamp",
+        "EXT_disjoint_timer_query_webgl2",
+        "EXT_float_blend",
+        "EXT_polygon_offset_clamp",
+        "EXT_render_snorm",
+        "EXT_texture_compression_bptc",
+        "EXT_texture_compression_rgtc",
+        "EXT_texture_filter_anisotropic",
+        "EXT_texture_mirror_clamp_to_edge",
+        "EXT_texture_norm16",
+        "KHR_parallel_shader_compile",
+        "NV_shader_noperspective_interpolation",
+        "OES_draw_buffers_indexed",
+        "OES_sample_variables",
+        "OES_shader_multisample_interpolation",
+        "OES_texture_float_linear",
+        "WEBGL_blend_func_extended",
+        "WEBGL_clip_cull_distance",
+        "WEBGL_compressed_texture_astc",
+        "WEBGL_compressed_texture_etc",
+        "WEBGL_compressed_texture_etc1",
+        "WEBGL_compressed_texture_s3tc",
+        "WEBGL_compressed_texture_s3tc_srgb",
+        "WEBGL_debug_renderer_info",
+        "WEBGL_debug_shaders",
+        "WEBGL_lose_context",
+        "WEBGL_multi_draw",
+        "WEBGL_polygon_mode",
+        "WEBGL_stencil_texturing"
+      ],
+      "contextAttributes": {
+        "alpha": true,
+        "antialias": true,
+        "depth": true,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "default",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "precision": {
+        "VERTEX_SHADER.LOW_FLOAT": [
+          15,
+          15,
+          10
+        ],
+        "VERTEX_SHADER.MEDIUM_FLOAT": [
+          15,
+          15,
+          10
+        ],
+        "VERTEX_SHADER.HIGH_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "VERTEX_SHADER.LOW_INT": [
+          31,
+          30,
+          0
+        ],
+        "VERTEX_SHADER.MEDIUM_INT": [
+          31,
+          30,
+          0
+        ],
+        "VERTEX_SHADER.HIGH_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.LOW_FLOAT": [
+          15,
+          15,
+          10
+        ],
+        "FRAGMENT_SHADER.MEDIUM_FLOAT": [
+          15,
+          15,
+          10
+        ],
+        "FRAGMENT_SHADER.HIGH_FLOAT": [
+          127,
+          127,
+          23
+        ],
+        "FRAGMENT_SHADER.LOW_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.MEDIUM_INT": [
+          31,
+          30,
+          0
+        ],
+        "FRAGMENT_SHADER.HIGH_INT": [
+          31,
+          30,
+          0
+        ]
+      },
+      "internalformatSamples": {
+        "32849": [
+          8,
+          4,
+          2
+        ],
+        "32854": [
+          8,
+          4,
+          2
+        ],
+        "32855": [
+          8,
+          4,
+          2
+        ],
+        "32856": [
+          8,
+          4,
+          2
+        ],
+        "32857": [
+          8,
+          4,
+          2
+        ],
+        "32859": [
+          8,
+          4,
+          2
+        ],
+        "33189": [
+          8,
+          4,
+          2
+        ],
+        "33190": [
+          8,
+          4,
+          2
+        ],
+        "33321": [
+          8,
+          4,
+          2
+        ],
+        "33322": [
+          8,
+          4,
+          2
+        ],
+        "33323": [
+          8,
+          4,
+          2
+        ],
+        "33324": [
+          8,
+          4,
+          2
+        ],
+        "33325": [
+          8,
+          4,
+          2
+        ],
+        "33326": [
+          8,
+          4,
+          2
+        ],
+        "33327": [
+          8,
+          4,
+          2
+        ],
+        "33328": [
+          8,
+          4,
+          2
+        ],
+        "34836": [
+          8,
+          4,
+          2
+        ],
+        "34842": [
+          8,
+          4,
+          2
+        ],
+        "35056": [
+          8,
+          4,
+          2
+        ],
+        "35898": [
+          8,
+          4,
+          2
+        ],
+        "35907": [
+          8,
+          4,
+          2
+        ],
+        "36012": [
+          8,
+          4,
+          2
+        ],
+        "36013": [
+          8,
+          4,
+          2
+        ],
+        "36168": [
+          16,
+          8,
+          4,
+          2
+        ],
+        "36194": [
+          8,
+          4,
+          2
+        ]
+      }
+    },
+    "canvas": {
+      "dataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAQAElEQVR4AeydB4BcVdmG35nsJiEEAgGBUAyBgCgIGpqg9CKgglGKioIIhKZGsVBsi43YEBSUBEXKjwUUKVJ+UWlSpBf5KUKQIL1ICIS03fnfZ2bu7szu9Lmzc3f3zH7ffKef77z33nfPPbdMWgn/ZJTZyLqP9VjradaLrTdbH7W+YF1s7ckrYdLIowxlqUNd2tiocLius25ed7T9Rl6vtY30cYfRjG2kxCONymF/5TKfzOuOhf1kw5nMRspk9rEeaz3NerH1Zuuj1hesi609eSVMGnmUoSx1qEsbRePIth++AgIjAIFEEZYP9k7rttaZ1vOs93obPGi9xPoj62et063bWNe3rmodbU3llTBp5FGGstShLm086DafzWvGdR7P67W2XXmFbCJd12moTa8QjzQqh/2kS/wKXSpde5OZZ9aEzEsf2CTz7OR9My/rHMU6Djd/r/U860zrttYO1fjJzHDpEag1whOKJRiBthNWRhlIag/bWcbpeutN1lOtn7Buam1aMnpFy3Splup7WqITV1+qr66+RKerR7fI/SqOj0lKV7uh4607WN9tPX6+Jl7+T63+xO+1sg5xArQ6xZbwObbXWRsXsAEjsLrJzdxgGppl3cPa6XiQgMCwQ6BthGWi2Mx6ghG9xnqV9TgrsyKbeCSj101Sc/SG3mN7orp1vgnqMttLTFZnarEO1SLtoWW6zR0y4bKpU5gCnuw6u1n3tH7Peou1rPzbOZAVpLWTwxBYl21z5OUGBHZgCJbXmLROsG5GRqTBBgSGOgKDTlgZZXaxnm7grrB+18qExCZeyeg1LfK0ZplO1SjJmlZaKf/lLOG0U1N6ymR2sPV8l6qdtP7q0p+2vs96opWpoU39AoGd5GqF5EWak5oQMAXbK0xap1t3aaKtUDUgkBgE0kWezJh9l2bM/mlR2uFzNnTaC9ZTitLrjJikdrOe5WoXW4+xrmVtmSzR5yT90yQ1yiQVEVXa8ZQVi5JOfJQJ67ueef1F1T4X6DWtpku0q87SGZKeslaWO5z9a+vZ1j9Yn7WWEYgK8mLWhTITK1O0xmQwBuuLTVpnWZkI1lg1FAsIJA+BYsLq799RP1tPqcwNTj5fc4441rZuMUlNs7LO8ltXPsy6orWlskxXm3xuMlGlrbJCTJElXKzkpNWhRfqMTxkXqNTnLidO15M6SJfrBdU6hAdc659W1uQPtOVawJW2C61VBPLitBHi6qpStno2DoP9b01apzKW6lVCiSGNwDB1Pl12XEefsY66R0FWvx5AVjNmb+0Z143WBdanredbJ2Tb6upKO5xZ5SPnHjdhy1+99L4Vrr52tH4x87d6bGI2P//1Fd2u9fSbbGyaLtbXdEc2HH2trvM1Ww9mo9fqab1XV2qiztWG+p0O1w2aq1ezeaW+lrpcSmlFtDRLL+ojmqf56lGUdpkW6Cg9o/u0uDeNvGW6RYWfVxw5xXqw9RKX7dE+DsEiNlUFsmJtfE2XHGN9h3W8NTcuB6oLxHWSi9ElxEXc0QaFbTCTsTAmxtZgO6FaQKAtCKT79ZpRJpUx4UzSso4bnXfhALI65Ow3Of1a673qSU91+b0cfrvtubZSV1dP6in1TLi58/gbb9974i8WbL/iXnqz/qDHs9nR14V6TAeZfqJ4JXuIrtM2Wl2P6ABdo/cpbYqBtFT286xLpKyypnSnFuq/6tYS9Sj6/EuLNE+L9W+nUjIluWzaJe5W9GGdaoYjX7BCPdJUh8ZZa5FuF5pvnWQtlDUceclap0BUJ7kOa11dtsRtGhHGwpgYG2NspI1QJyDQDgTS/TrluOUIu8HpE7W0kwtgDhZI51LuN1rklM/rF4c/p7Nm3OPwV3zquM/mH/rDpIwyM1N/T6WPmbfxSm/XRE3SOH3MB/oVmqeIMO7VS3pUr+owVb//MePGnzHhjFenVtVYTdZ4zdZ2+qve75xy8kY+g+FI39OaOlKraKI68unSgVpZhznlA5qgXCllbY/maamk06ws/lxk25i8nq82Nm8jQ7yGU8KoeH8LURUSV//8OuKMjTEyVsZcR9VQNCDQFgT6E5ZMPPsqk7pM0tPqXHq5PvOTMQ4XyvqOPOSZV98+3rHsPr0qHffXd/zEeaemPLGYrBUczMl0rSs6grTkz4WaK2ZMa2t5xyoLZPJDvUvf0l3aUZfrB7pX19q1HkFlKvOhllximZb6zwtx+pAmqEO5dCpNMgFO14pOWeQSS2SiJVlzldaxDn3O+rC1cenrq7iNSn4Xl6wYi4hriktdZ21QGCNjPdb151qDBASSjAA80t+/sz1r+oJGde/ljA20ZPR5thXlN5fuvrW89LPO/PH7RgULyaHTJPAhTdEfTAfkX6jH9HFtQLCsRgRCgc9oE72og3SSttALWqQP6c/6mP5GVhnNEeELzn1UZ2qBjtMb2k6vazUt1PLW8Q6vp0Wa7rwz9KB+rB7/3ejyx2uyuOfCwSYlOnVkMlrYFPHxhQnNhSGundzEIVbCNo0IYz7WFW+wBgkIJBWBUoS1MOvsz4/2ZKNnT2VS+3hN65vZtNzXYzYbqaurw1Ymlr27X9K39IS0gVYkqaRCUJdrnv6h5130NX1UTNRyRZcTtxX05CL+XqxuvaTFDknd7uEhvaJOpbWDJun72loXaGddpLnZPJX4pLSO7JfS6tbn9X7tp0/raN2oc7SpLtN0Xap9NFuTdKh+q/01XbP0EV2htL6qN/QnbaF4PqPcDE8JPWNbKNwIwTpWYVoM4XPcBsTVZdugXOp6x1uZXtsECQgkDoF0RY/OPOo2ZVIHuczXdPic/W2ldA+L62P11Jqn3DH+hSNvHPXMqd9bdM9G+2s9raKx2SKlvnbRWhqjtE7QbWIRfmXHonIba2XdqGcUnSxRpkOpbPZDekVv1YWCoOQPBHaNntK6WkGj8mXU7zNaX3Fb3ZqoTn1JkIb0lObqEs12S7N0vr6tq3SeXtTTbiWtPbW2vi7pNo3y93bWRuV5V7zDGslbHbjPCklBwLc7jK08u3ShxuTfrnaSFeIi7GC94omyTnAl7hyzGQEShjiUEKhMWIzkrBkXKpP6tte2ztORP99KZx71vElrx0kPLLfHdqnLfvbR7r9N2VJv0lnantJldZTJZX+tr2tNEgdqalG5b4sWltNW+qPert9rRY12iQnK+G9jrawLtLPbf0gTda46HLpC83SedlS5T1pTNUofVY+6tYPG6XRN0k5aQ7/UgVk9Xwfru3q//1bQe7Wmvu2GHtSz/v6ddZS1nPyPM+ZYeZooY0sYhZQc1Qv+uscaCYS1qSPcB3+B7ZPWD1jHWFsorGlBWuc01sf/uRoEfr5tkIBAkhAoJqw5R0zzYvpnBjh41oyvOX2syeo28jJnHjn16Zs/nl644FOp/wgS2EGQDHnoMh2ufbSu+n9O17uV0Qztp/WKslbTcrpEu+t2Tdf92ldd2lwPaD8dqbeJz8c0VX/WXnpZB4v6j+gAvVtrkFVWx+gEpU1J3VqqKerUlzTGNe7QON2u8dbN9KAmamX9wC3MFadtv3JomrWSfNyZM0oopORkbewv7s+06RXa/Jhjn7J+yLqqdRCEGRazra7G+uK8n+phptUYfqFWaxAoJqwa+sgos7eLfcW6vjXBMlpj9H116nvq0WQt1au2r9rf/1pf1mV6RbP0mh7XNpI4VWPm4+Bwkoi0uJJIuM6xQVrfcZ2wpmUQgiQCgboIy2TFed/x9jw39ZFDCZaUUhqtD2qcrrDeog59U9Kh+ruO0Sk6Uw+JO85/6bTiGZ8ThpdAVjt5SFibeoTTw1mucIM1SECg3Qika3XAZMVRfazLMyWxGVqS1pomrwP0jL6gM/QZ/UPv9QCWs44QgawgLda36hwyC/GnuM5ca5CAQDsRqImwTFaddvLz1n2sQ1a40/XH9p7L9zYjTyCtQzzsO611CpiBHRjWWTUUDwjEhkBNhOXejrby+ieboSs/s+vcIGkzcgXSesTDr5+0BHZg6NpBAgJtQaAqYXl2tYs9O8o6pIWHfH8+pEcQo/MLMtKd1knW2fXp52ZnHk7NzuyamqPUUNMYEQxNtQmBioRlslrJfh1hfYt1yMor9ny29WFrkAIEuG+hqyBeW5B94QhlMuwbtdUIpQICMSFQkbDcx6es+1mHtJxt7y+yJld4FQ1vmHjNLqILbUmzabU0RlrsE+wbrfYutN8mBJLabVnCyijDHY8s0SbV95r8usuluCXUJmGyxP48YeUeMB7k5jd3rnD8T9YrrdxNf6std0NBYg62SnjYqqvuxg/xLIt9pO6KoUJAoFEEyhKWG+QZwk1sh7Twqol/JmoEENUD9uhi64XWP1i5BgdBXe8wdzxBYJc7/Hsrc8M/2kK9zMIcjFtYiIe06rvlgX2DfSRub0J7AYGyCJQkrIwyu7kGv3lnM3QFCjg/Ue6/YG+YQUFENzr8uPVVa8aa6qeOCoKa58A/rBAb+rzDLRBIi/l0faT1Cc+y2Fda4FBoMiAwEIGShOVi+1snWoe0MH95uQ0jKN0lp3/8DgeMAOmUIqlSpEUaZXmkiFNEbiyAxEr30lRqRFrY2hpiH2Ffqa10KBUQaBKBAYTl2dUuy7Rk/zP0AaHPiMdXSvfymG7Wz7SPy+2tR8SBqMR8uI0BwkqGQzxcfald4VRwmS0C9JBRZAlXU94Z9pwr/8iKtWlYaIsT5g+6BZ6jzLMUhjvinVqj7L/CovvfP+NOHTPjdp1yxB26aMYdOsv2hMNu1eY1thGKBQRqQoCjpX/B6U4o/yY+ZyLzdJf+rO8rox7toKO0oXZUkj6s+nCy1X6fWDCHzCF+4I5ICc8IYwu1MI0wSj420sVO4BnIRuePECgPLrA+VuJqJKTV5S5qkWX/XXHik18+OZXRHqmUNshk9JLDzLy2HdWhrx11p95VSzOhTECgFgQ4gnrLZZTZzBH+5dqUl2c967pS3zFVdWsbHaxNtGf5wm3Iudd9XmJNhvAEHqdyEdlg8SyyUZg4WhgnjPZPZ7NBOqzSlSAcqpRVFvU/61xOK2fYdlhLSK2L8M+erOcy3VOfWG7D57qX6bA5W+rIlx/XR5XSr5RRuiej44++TWuU6GF4JIVRDCoC7PmFHe7lyFrWsvKi5upydalbS/ROTdc07aukfbgpgHd8JsOvm+wGMyKbXkk5lLEusfJ0HmHSCtVZ4vSRMpASeaRhUdJ4lwLERXqt+jcX5J7PU205FbQpJf92IovwWAdLymJfNFj0oBZ1rjP26rc9MPcX71L2PPWi/bVk9ua62ITFRHdUd0q7l6wfEgMCdSLQS1gZZTpdl1cY2JSWV/SULtXXTFULtZF20baqfO/gfD2jG3Smfq8vao720/9ohq7WLD0sftZQRZ9X9JRYMztPh2qZFusvOkVn6+M6X4frVp0n8v6gLxfVKYz8R/dly/xc++lqcZDzwBwHZLk1YWY+5fJ9IOo7bv4wK2fIvLjviw6zaP66lqoAMQAAEABJREFUba0y3wUfsgJzyjZSB8XNoYsceM3an9CcpGX+ogz9cbWwx3Hq2yiytM84SatVeUPQGS482VpFICtIq1yx+fxrcObyW/mrY3dfMWQfcjgn6ZRuJmQ63k2ZXqdJChoQaAgBjqSoIs8M7hBF+tvX9KIu0YlapFe1vrbVzpqpSp+7dbF+raN0v67QaC2nt2o3raYN9KweFGT0e31RS8QBqeynQ2OytltLdZPO1iO6XuO0slbTVG0kXJOe00N6Qxyk2aJFX4+KUx3pZW3l0OiivPoi17s4Y+NWAn75ZlfHp1qftPKa4xNtIRqbqsLDQKXIiIqv+6vbCrmiDhbJUsdIpwxtYJ1UJPiBX5QryqgQ2dl5deDD8luXq5QSz66yyWPBR+w7uQ2VTZR+voUeUUYZr22t5EX5NfLJwQQEGkYgXVCz7Ko5JPFHnaDXTQfr6J16r45Tyn8FdYuCr+lF3arz1aNu7arPa299S9tphnbXl7S/TtWKWkPP6WHdoz8q+qQ1KhtcqkV6QndoX/1IH9FP9V4dp5W0llbVesr471/KEZMKPqTPFetE0lPigCzIrDvIffEZ1/qO9SfWY6xd1t9Yt7EyM7vSthZ5Il8oZYva9ApxSIkEwtj+Ckmh5KPk97cLnIjatErOdcPMtmyKpDv/z2PUylFy8T6U8gZLiSmkMj2aGBUKNiDQKAJpKmaU6bDd3jpAmAVdqq/oVT2rTo3VXg6nlFalzx36rXq0TGtqE71FxQQyTitrmj6crX6vLhPtZyNKZc1SvaF1taVWU/a/tqLPBto+G3xM2bOMbDj6elJ3u9Z8jdHKukfNPC3CTOUl5T4b5Uzvd9ohyOuntpxK2lQVbhTNjStXtDC8opOIj7Yda+0vpKH0i+3oXyAfZ6bWN1PNJ8ZrIKuTSjQ5kLC2Vya7tNBbOJPRq0RSaW8cAkEDAk0gwNFAdRYhmD4QLtJr9VO9pCc0WuO0VIt0nVj/UMXPk7o3m7+eSl/RXl/vzuYv0UI9IxaOs9Her/W0bW84CrxFOymldLY8Mz4VfP6l3KxrmbbTLS5VkFVnEPKIzlyYXT3Tr/4Ex9e1dlprEU7ZypVbzhmrW1ex0q9NkbBpmLlQZrxzIDebIiGNta5oplaUGW+EX+Dh9DBqtecNh5iJ2nRAvrYS+9CW2VD0lZ9h+bSQQUSpwQYEGkKAo4KKxTsZKXldqP9qa31CB+gnGq3l9bCu1V3i0ZJ8gRJmsV7Lpi4vDsZssOhrrFZQWqOyacvE+kw22Pu1ktbsDUeB5TVRa2kTZdSjR/X3KDkbn6tbsvGXtVvWNvf1BVdnRsPRyWV/ZlWcDvYnLxerKv2JiIVzlNM8lHD+oC/ZFnko5SAm6qBRYfLAMR0ltNYWLsCnIVz6dpc9zPJsc1K0L6UyAkyletTi89Zc5+F7eCMQ7ell70jeSZ/WFtpfK2p17aHjjEZKt+o8RSThhAHSLU6tpOW04oC8KGFsPq9HhQdgLjfKy8X6vqdqu2zkMfWdFj6hO93bQq2iyXpIzH7U5IdTwZPdxubWCdZ5Vn7sCvLixat3OF6rUL+w7FJHmDHhJz/3Nd7xDiuEBHEzI4sUgoIQIAZmWpNdbj0r6TZZyfib+pRxsNXCqSEzraifDvxypLuIiwDOiTnJpMQg1ZNSdK6dywjfAYEGEIgIixtGS1ZfSWv3pq+jd2obHaSM//6iU/SiHu/NKwwsJ+7zkd5QdvlCpT6L8nnjxYFbqsTAtA20vUapU0/rn1qs3H/1R3VjtuCG2lG5E1HV+Ck88PtXYf2sy4n8cOovbT9h3cjKFbmTbJl92VQVSAZSQaPCHL9vd4S1vb1t32/lbhJmh1xk46okYdK4LY77eCkHWb/ZZSE3m6zQ7goO9SdGJ7VKGD7ERfuj8v0WE1bvvnT0AxrvGVZ2sb2zWyzoUStoQKBhBNIZZTgSN621hWnaV1P0Li3VIv1JXVooHspV0We8ciT0uko/OrJYr6lHuZnVBA08/StqrCAyWuM0WVso49oQFfZx/cMlUkppZ0W/v+wECzMPG5fme6DWevys5qr7W39ghVxs1Hd1k1h5BdpUPhtyYcy8/4r6f3U6s7UXbZe3Qm4b2qIb2IIhpMp9VpTlTQ38QiDtOFvYUQ4wY8uedTk8CAJZnZTvZ2z+194W4WM+TdrUC+8MXD2LtJU3TMoL78+fsbXCDKsXomEfaNkA026ZV97a1C6760taRZMFIV2uLvWIA0u9n3WVW8aYp7t60woDOZKRVtUUU1BuNlaYXym8oXbIZj+hOzVPd2uJFmodbeZw9h95Ni/39aaccQkJoshHe02pt2Rx+ne5SxQdgI5HkrtYINN1lFLZQjrruEg0Kxrj8GjrfOuDVtbieGkfa2ScazGbQ3/hPGZ3rBX+r8N3Wp+0Qn7UzzhMm5wK1r35XLdJYYIJca30vlxDrzHLxZ9c1N+RU9s7bP4SgyAYNCDQFAIQ1vr1ttCh0Xq/uvy9vF7UXF2jH6nws6k+oLFa0SRyp6IreFH+q3pOt4k1IYnZWpReq52irTVa4/Qf3au5yq1lbagdxXs5VfThVGmMUziQOMIc7BXIYuDd9tyaKs1xKTR3yulIgXBTKdHsBIJAFQXe7DHrcpAMhDPO4U4rQhpX23jr/PNOYBLCjIsnXLALnBb9M6AOdWnTySJ9DQemWlstjJvbOZgZui/I6iTbzrWkce+QlvqCxHOnOiEnHT3z3zLjDh3mmdXm1sXdS3RVLid8BwSaQ4C9n3ORulsZr1W1l05USmk9qr/rH7pA0adDY7SLZvp7vK7RD8Wp442ao6s1SxfpWC3Q81pTG2uqtouq1GzT6tD62lZL9YYe0l/VqbGinegWTRV9WCci4Wf+4nYM3u7e5fAJ1sOt/WULJzA75A71gxw+zjrbOstKeV5jzCli4eUyZ1WUtzp3Q2uPFYICci5GjHYcGeWvSVZuAeG+S3x+j+OsV9lkpdPfEDDWQXX7i7Y+ZBulOVhVnnaJL/VT2nKSfuyvwjzKOikrvBbnzw7dZs1L9D9gDWMJaS24VnpsP2neTE1+aNcjUtI+JqslHm3X2e8RzJuvGExAoHEEvD+Jc5aGWlhLm+pd4sCW7tTvBHFFDa2rrfRRnaGNtaep5VU9oKv1lO7TOK3knAM1XScr5T818NlQHNhSj7o1RVurQ6PFCZMGfI50yietzET+ZssM4Vnbr1tzbXh64HAkKQe+ZuVqIG8AZpbD2QyrY+OczjOFp9lCHjY1yUSX4tlfLCSD0g+nwlxlW9v5EBrtk9ft+GgrVwRZIxrv8AQrxAbpLXOY4x+yqnd2tch1H+qn9OkkcQd/YR5lSS+jzLLOcV7afq/5TWm1z0rL+WLCsme0YOxk1q1utMcnnrmlSp17u2KQgED9CKRdhaPZpk8ggGN0udBJYobQl9c/NE0fzpY7WpdpqpgZ9JVYXhO1g47SfjpFR+piHapfCxLbUh9xIQ5am7yM00rZduiT/lXhs7Y26y27m76YLQkNZQNFX2nHPmxldsWiNetTZzo+zerDScQhMUd7Bb/2dIxzHtaTePc6p7AQ1QFOh0Bsahba4xRyH9dY3YpAEmiHIxDDY7asn/3H9ikr9MsV2JccZp2KNiArbhfBby4CcAXR2XUJJMiYa1HKRo1D4NQ5OUrIWSDKhuzfirtJa/ofwXoX6vn1fv/snC31/Z9vKaaq2RLhKyAQBwIc0ZzjxNFWW9tgBaitDlTsHGLa3CWmW/kH4APcs0MJ0oKIuAeLW0C44sqVVRblF7oseZQhf6njzMYge25zoA0ntVOYZUWnhsV+DIt9qnhIIZYEBCAszjeS4EtTPnCIN9VAyytDWpu6F2Z8zLaYwUBGLLpDRpzqQVCsKRGHpFj4ZwY2yfX2sHJ6yyw2AWRlb7LSO8vKxqKvYbFPRYNppQ1t14cAhMUKcH21Elia+UkC3ernEkSzptN2sR5o5X1bzJYgsrUcZ1OgnDqyfsXa16FOR7kHbF2H2WQ2SRFmWGixPwyiOCXEAgIxIMDeX89lphi6jL8J5ibMSeJvOWqRmVChRumNWtahIChOE1kv4076o9zY56yft37aypVI7nLf1mGIaqxtQmUgYQ35fSqhSI94tyCsEQ+C9KAxuMx6itVXu8Rp2zYOc/VuFVtfCRNQoYRJI48ylKUOdWmDtlylZhnjkpxBcZMp1z9QloC4gkhfzMpcJMnCbVpJ9i/4NmwQ4Ahs7eSkhVBFTbM6VPu/dNaIbnJVrvodbMvpGLcwsK70Bce5QZIrg7c6/C8ri+CsIzmYFcKkkUcZylKHurRBW7RJ2/RBX/SZrTw8v5hhoX2jG/L7VN9QQihJCEBYQ2P5pwpqlRdNWMDmps/j3QqL1iinX+c5fr+VxW6bWIS2aJO26YO+UPrGB3yJpaNkNVJMWMNin0oWwMEbEICwkn+BDU+rKCdVA4vc7STuHeIKG2tF33OcWZHNoAp90jc+4As+4dugOtHazs4tan5Y7FNFIwqRRCAAYSX7FqYaYWLVp6/oXxxk4ZorcCc6XPzv3wltFHzBJ3zDR3xtoztxdV18T1b8+1RcfoZ2hjQCEFbpm8SH2LBYqpb+bK955m8/W+5u585xBxMp+IaP+IrP+J5IRxtxaljsU40MPNRpLQIQFs+BtLaXlrd+p9YR60Xc28SrWXj7gYbIB1/xGd8ZA6+SGSKu93ez7ybSYbBP9R9ciCcBAQir9IsOkuBdVR+4WsftBIdosrgix8PKVSsltAC+Mwbuv2JMjC2hrpZzi9PCXN4Q3qdyAwjf7USgfN8QFk/eli+R2BzevsDbGLid4H7V/VKvxI6LK4yMibExxsQ6OtCxPsIaovvUwCGFlGQhAGENsSfquaeJmQgH9EW9aL6lNzRcAoyNMTJWxjxExsU1BYW3NAyRrTXk3EynlOIlSLwmYAg4/6h9nGllrYcbNx3MCy9w4XbNfHSYGMbIWBkzY0/+sCZdrueUyu5TyXc2eDjkEGCGhdO8aAmbYL3RvvHuK66sOVhCen+upUTe0E5izIwdDKqNpL35Wwyri53txTL0PhCBiLBqf7JlYBuDkHKp+/iyFWtTRniUuEzWMEhm7NUxaPdA3/2kEr4vtRuh0H8zCESENbGZRlpbl7d9fsVdcLe4TQXZskLe8MgCA7AAk2SOaLv5SvC+lEzMgle1I8DvEvLuktprDGrJ893bV638CIJNFYGweH9ClWLJy67r1exgASZgk6yhgP1WdimjTPTCfMeCtBCBEdc0M6yE7lzMIr7pDfK4tTbhXGT72oomq9SudqeufxtgAjZg5LoJEbDnzRkJcSe4MQwRgLASOCzWa75tv+q/MpZQ9vVYKghvpeFtNBWKDMwCGzACq4G57UgpwH6HdvQf+hz+CEBYCdu5uBL2fSNf74vwXMXCy4cTNiB7VUFwFqcLjvYKpftlgRFYgVm/rEGORsPId1vXfDFfJ5iAQFUEIKyqhexEKEwAAA/TSURBVAavALOGH7q7m62NCaeF762tajJK4SxON3yIgxWYgV37hhQNI+9Bw6PJ1w8mIFASAQgrITsXd3NzVzevGS7pa82J/GIfb0yvuUK7CuIkztI/W6GhWRaVwQzswJD44GrhMAa359DbSEMAwkrImE+3H6hNk8INpPx8Q5PNtL46TuJs1BPnVVG4bgt2aN0Vm67QfxhNNxgaCAiUQQDC4n97mezBSuYldtzNHV9//GRp5dcmx9dXQy3hHE4WVm54hhU1AoZgGcVbb0sNw70mYJ+yFwUSgsMDAQirzSPh9d9z7APPzdnEJKxj7x9TWy1pBudwMtbGwRAswTTWhss21pJhlO0tZIx0BBJAWLy8jjcTxL8pOJgSeds1TuFc/yHHMi8BSzDt33j88XLDiL+n0GJAIIcAhBXLYZJrrt5v3q75y3or1Vx+N5f8hDVxglM41zLHwBRsW9ZBtuEKw2jjPpV1LXwNUwQgrKpDa10BHi/5v9Y175YPsvJLgTbJEJzBqVLexHaYgynYluoknrRKw4inh9BKQGAgAhBW33siB+a3MIXF4Qta2H6u6Wk2vHTYJhmCMzhVyptYtwTYgnGpjppPqzSM5lsPLQQESiMAYZXOaXnq79wD7zG3abF8yu3z2zQ27RWcwJlyXsRKWGALxuU6azy92jDccqwjcXtBAgJZBNpEWPznb83BlB1Vv6+VHD/C2tbXKNM5TuCMfSkpsR/mYAzWJXsrnVgltZZhVGkiZAcEGkYAwor9MKnuzSUussA6eMIdBEcNXncDe6JznBiY08IUMAbr+LqocRht2KfiG2NoKbkIQFiD7N197q89bxg42j1/2jroQqd0Xq3j66sVaCQfrMG8kbrFdWodRnGtEAsIxIdAGwjrCnvPrx7bDLLwjPHn3Sdvc7EZHKEzOqXzaj2eU61AI/lgDeaN1O2rU88wXCvMsAxC8mXoeQhhDeLOtdgIXW1tn6znro+18nZMm9YKndAZnVbrqSVkFXUK5mAfxeuz9QyjvpZD6YBAfQgMMmHxw6A31OdhC0rzZszj3e7brC0TGqcTOqulk5acDkYdgznYR/Habb3DyLfc0tHk+whmBCIAYQ3izjWIXVXZmHs7n59zaMkvRtMojdOJ+6lJcj9AWlPRxgrVj30jw2jMt1ArIFAbAhDWIJ0S8q6m9r8ZsxCWjznyDSsHpk2dUqY4jdEojZcpMiCZ08GWbwWwZxsM6L1kQiPDKGio5fRb0FcIjiAEIKxBGu5t7oe3Y9okSHgejp9z4NSnabdohMZotJ7GTqqncKNlwZ5tUL1+o8OIWk4p1XL6jfoKdmQhkE7ldq5B2MFqO1jaAT+ToZPdMYvLNo0JlWmExuppYVBmV5FD1bdBo8OIegg2INBKBKIZ1iAQVuvfHtAMUCw3zXIDXL63qU+oRGUaqa+mxEN59dZpuHzlbdDMMApcgoILosMiGAaREAQiwmrxmkOPh3uPNdnCBb1T7CI3SNrUJhSmEpVrq9FXaqe+4OCE2AZsi4G9NTOMga2FlIBAaxCICKv+S0h1+fOwS99vTb5wyxT8c6pd5bk5m9JCJoUoTKXSpcqndjmrxf8m3EM/YRuwLfqSmx1GX0u9oRbvS739hMAIRCAirBafEhYfJEnHmZvSZ9pJ3pDOmwkcLBYSyaQQhYtzq8cgqkFZaC/lSt+2aHYYpVp3GqOzCRIQiB+BLGHlF95btaPZ67nWoSc8q8wb0n9k13lhnfgiQiKZTq9bQHnQTwULvZwbyzAKWywM5/elwqQQDgjEhkCWsPKttXCW9US+i6FneBvMsROlcz2bmnmuNJFHbUhsZCgsR7eRrDwMzdQT8jDUzDAqDJ0RVsgOWQGB5hAoJCz24+ZaK1ubB3DLZiY3g9+wOszu/Vaa5vWqU6dJDookspxTu7BmNahXBPtcw1d8xvdT9R95GH2Z8YbC+lW8eIbW+iFQSFgtnGE926/bhEf5KeNj7OPF1rOsBT8YQZAksihCUZcoL6DKrKoNa1b4ho/4is/4LrV0W1xXHoiQExBoHoFewsqvPbDC0nyrA1p4YUBKIhN2sFfftfI2ltNtK6xTkUURilKFqq5RLMyqpjipRai65ZKCL/iEb/iIr30FW7YtrsvvQ31dhVBAIGYEegkr326LDq35+eYTaNa2T8dZr7JeYz3Bupm1RqEoVahKEzS1DUSVcgODOKvaxt3RNz7gCz7hm5P7Scu2RQuXFPoNIURHLAL9CatFO93g/RJx3VuS5TVefY7eVHft3gqdPvXbw0Q1yzOqG0xUNOVlL/FY4aa9peIL0CZt0wd9sXjEzfZ7uItOa3lp2bZo0T+78iMJOW1GoA3dFxFWKvdcYcw7XsbDWmZNsJhsxPUt1ppMOGJxnDgKGuTLHyxKGnkmKFEn5Tzqmajk/A5J21p9YVHn2d5rfdDK29W5K+KzDk+3MivirQirOjzaSjMoYdLIowxlqUNd2qAt2qRt+qCvyiTlxnulJdsinA724hsCrUSgiLDyHbVolpVvPenGhCPICNJCISTICCbBoqSRB0FBXqr+2chFeFaP2wlOc5iFcN6f8KjDrCrxPlAemkEJk0YeZShLHerSBm25WpJkZO8zSdoSw9yXUoRV4yFYKzIc6cw5ai0fyrUWgZZsi5j3mdYiEFofuggMIKxUS04LuRNo6ILUEs/b1mjs2+Kc/D7TthGFjkcOAgMIKz90TnbywTjMhDgaCW3EgkDs2yKcDsayXUIjtSBQjrBYyYlxmv+mWnwJZQYFgVi3xb89u4pxPxkUAEInQxiBkoTlnRDCivE/5xpDGKLh5nqs2yLmmfhwwzoaT7BxIVCSsPKNx/ifk7sz860G02YE4tsW/sfG9dQ2jyd0P5IQKEtY3hmZZXHxPgY8JsfQRmgiHgRi2xbchRaPS6GVgECNCJQlrHz9mGZZjbySM+9BMDEjENu2iHHJIOYhhuaGLQIVCSs/y4ph2s+LeBvFMNSLF4FYtkW4lSHejRJaqxGBioSVbyOGhVUOkrfnmwumfQiwDdgWzXngf2QxLRU050eoPfIQqEpY3jljWMuim3eMPHQTN2K2AduiKccCWTUFX6jcDAK17r2sZaFN9LV5E3VD1XgQaHob8JBzDEsEZUcTMgICFRGoibDys6wmTw23quhIyBwMBJreBk3uA4MxxtDHcEagJsICAJMWM6wm/rtysPAiFFoLOvgIgD3boOGeWWhnH2i4gVAxINAsAjUTVr6jJv7DjnIT21mDtAcBsGcbNNx7E9u+4T5DxWGMQCNDq4uwPMtqcgGet4034mao0zwCTWHfld/2zbsRWggINIFAXYRFP95xOS1s8NRgZzexvTXI4CIA5mDfUK8stIfZVUPQhUpxI1A3YeUd4NI2s618tFYzxgV567hNkEFEAMzBvu4ueRsD71etu2KoEBBoBQINEZZnWZAVpNWAT+9znfgewHVjI1JqHzRYg3ntNQpKNriNC1oIwYBAjAg0RFj0b9LitLCBB2D5vRfeTE4rQVuPAFiDed09sW7FNq67YqgQEGgVAg0TVt4hHoBtYKf+oKuvYA3SWgTAGKzr7iWsW9UNWagwGAg0RVieZUWnhtg6/N3VZQ+wBmktAmAM1nX1wrYMp4J1QdbiwqH5XgSaIixayZNWAwuzHEz8+h6tBI0fAbAF47pbPiS/TeuuGCoEBFqNQNOEhYP5HZxf7CNao/Kf/8Aay4Zi9SMAtmBcV82dvC0bOMWvq49QOCDQMAKxEBa9e0dv4FTiE676NmuQeBEAU7Ctq9VAVnXBFQq3A4HYCAvnTVrcVFrHlUPeHnAoVVunI7JlMAXbmgfPaWCYWdUMVyjYLgRiJSwGYdLirug6SOswV9vPGiQeBMASTGtujdsX+EdTc4VQMCDQLgRiJywGUh9p8UvEM1xtA2uQ5hAAQ7AE05pagqz4B1NT4VAoINBuBFpCWAyqPtJicfgYqgVtCgEwBMuaGuE0cJiRVU3jDoWGMAItIywwyZNWjff0fNpVUJsgDSAAdmhNVVlgD6eBNUEVCiUJgZYSFgM1aXFg1HDLA+9qmukqe1uD1IcAmIEdGFatCVmFBfaqMIUCSUSg5YTFoE1a3PIAaWFJKqNTnf5FK2/HtAlSAwJgBWZgV7E42AeyqghRyEw6AgWE1VpX86TFHfFV/rvzZswv25m3WoNURgCMwArMKpYMZFURnpA5VBAYNMICkDxpsaZV5bYH3jDwVVepOmtwmZEqYANGYFURA64ETsljX7FgyAwIJB2BQSUswODAsXJ1qsop4sdc/OtWitkEKUAATMAGjAqSi4PRrAqsi3NCLCAwRBEYdMKKcDJpZQ8oxyvMtni85NsusrE1SA4BsAATsMmllPjm9TDMqsqdfpeoEpICAslHoG2EBTSQlpUZQAXSYhbxHRd/l3WkCxiABZiUxYJTQNYKyxYIGQGBoYpAWwkrAi1PWpznlCEu1mm+7+JYmxEpjL0iBsymmFXxD2BEIhQGPfwRSARhAbNJix884GCDuDhdJLlAuRL2Q8e5m9tmRAljZuxgMGDgYMXtCijhAQVCwshGYDiNPjGEFYEKcTnMKU2J2RZXxk5z9qlWnpuzGdbCGBkrY2bsRYOFnDj9Y1bF7KooM0QCAsMRgcQRFiBDWtZottWPuLibm7u6z3RR3kxgMyyFsTFGxsqYiwYZERUYFWWESEBgOCOQSMKKADdpFZ4m9iMufhh0tov+yPp263ARxsKYICvG2DuuaEaVMi6BqHphCYGRhECiCSvaED5AC4mLG085eJ29svVY66+szER4j7mDMcrgNYXvjIGxMKaJUdeMNcyoIjSCHdEIDAnCirZQnrh4mJo1Logrv3bD2zVZ67nARXl53Uq2Q0XwFZ/xnTEwlqzvEBWvgGGNKsyospCEr5GOwJAirGhjRcRlC3FxVTFPXru7yFnWi6xcWeNXjx1MpOAbPuIrPuO7IClmU5z2QVSQs8InIBAQyCEwJAkr53ru26TF6eI5thF5ea1rV8+8TneBy63fte5oTYrgCz5dZofwcdcsSTkCQaFhNmUw2iKh08QjMOQJqxBhkxbkdZJtnrze4ZnXCedo1JU3SFe56HFW7ha3GVShT/q2D6mrnpBOMKm+s3Amhc8Q16B6FToLCAw1BIYVYRWCb9KCvJh5HZLqHreDtIdPHWcdovQN52qVK+/WhFkvSwe5Clfl4oSBtmjTbdMHfaWv/6Y0a6eU9kylMsuta98gqDCTMvpBAgL1IMDRVU/5IVvWJJEjsJ7Rn0y9tNe01PzjV5HONYndN0Vb/+ZEHfCl07TVzNu10cef0mY7v6AtN3lVa09Zqjev1CON7Rv35DGZbBp5lKEsdfY55H/1npN/o31POVi6z+R0Xoo+sn31jPmG+/dpal8zIRQQCAjUj8D/AwAA//+5X9GZAAAABklEQVQDAC0Z9nd7SibWAAAAAElFTkSuQmCC"
+    },
+    "audio": {
+      "sampleRate": 48000,
+      "renderedHash": "d089798d",
+      "classicSum": 124.04347776696522
+    }
+  }
+}

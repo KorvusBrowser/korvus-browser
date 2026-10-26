@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "SpeechRecognitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechRecognitionEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "expected": "[object SpeechRecognitionEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognitionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechRecognitionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognitionEvent",
+    "member": "resultIndex",
+    "expr": "(() => { const o = new SpeechRecognitionEvent(\"x\", {}); return o.resultIndex; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SpeechRecognitionEvent",
+    "member": "results",
+    "expr": "(() => { const o = new SpeechRecognitionEvent(\"x\", {}); return o.results; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

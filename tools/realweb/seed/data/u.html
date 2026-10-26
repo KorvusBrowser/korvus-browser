@@ -1,0 +1,18 @@
+<!doctype html><title>u</title><body><script>
+const r = {};
+const img = (k, src) => new Promise(res => { const i = new Image(); i.onload = () => { r[k] = 'load ' + i.naturalWidth + 'x' + i.naturalHeight; res(); }; i.onerror = () => { r[k] = 'error'; res(); }; i.src = src; });
+(async () => {
+  await img('dataGif', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+  await img('dataSvg', 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%222%22 height=%223%22/%3E');
+  const c = document.createElement('canvas'); c.width = 5; c.height = 4; await img('canvasDataURL', c.toDataURL());
+  try { r.fetchData = await (await fetch('data:text/plain,hello')).text(); } catch (e) { r.fetchData = 'THROW ' + e.message; }
+  const b = URL.createObjectURL(new Blob(['blobtext'], {type: 'text/plain'})); r.blobUrlShape = b.replace(/[0-9a-f-]{36}$/, '<uuid>');
+  try { r.fetchBlob = await (await fetch(b)).text(); } catch (e) { r.fetchBlob = 'THROW ' + e.message; }
+  await img('blobImg', URL.createObjectURL(new Blob([Uint8Array.from(atob('R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='), c => c.charCodeAt(0))], {type: 'image/gif'})));
+  await new Promise(res => { const s = document.createElement('script'); s.src = 'data:text/javascript,window.__dataScript=1'; s.onload = () => { r.dataScript = 'load ran=' + !!window.__dataScript; res(); }; s.onerror = () => { r.dataScript = 'error'; res(); }; document.body.appendChild(s); });
+  const big = 'data:text/javascript,' + encodeURIComponent('window.__big=1;/*' + 'x'.repeat(70000) + '*/');
+  await new Promise(res => { const s = document.createElement('script'); s.src = big; s.onload = () => { r.bigDataScript = 'load ran=' + !!window.__big; res(); }; s.onerror = () => { r.bigDataScript = 'error'; res(); }; document.body.appendChild(s); });
+  try { const x = new XMLHttpRequest(); x.open('GET', 'data:text/plain,xhr', false); x.send(); r.xhrData = x.responseText; } catch (e) { r.xhrData = 'THROW ' + e.message; }
+  document.title = JSON.stringify(r);
+})();
+</script></body>

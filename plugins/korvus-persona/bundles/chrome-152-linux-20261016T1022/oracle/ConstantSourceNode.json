@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "ConstantSourceNode",
+    "member": "constructor",
+    "expr": "new ConstantSourceNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ConstantSourceNode",
+    "member": "offset",
+    "expr": "(() => { const o = new ConstantSourceNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.offset); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,24 @@
+<!doctype html><title>pending</title><script>
+// REALWEB V15/V16: toDataURL is a string pages hash, so the PNG ENCODER and the gradient's dither are part
+// of the fingerprint. Two canvases with no text (fonts are a persona value): deterministic noise through
+// putImageData, and a linear gradient with a translucent stop. Each reports its data URL's length and
+// FNV-1a 32 over the whole string.
+const fnv = s => { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16); };
+const mk = (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const noise = mk(300, 300), nx = noise.getContext('2d'), id = nx.createImageData(300, 300);
+for (let k = 0, s = 12345; k < id.data.length; k++) { s = (s * 1103515245 + 12345) & 0x7fffffff; id.data[k] = k % 4 === 3 ? 255 : (s >> 16) & 255; }
+nx.putImageData(id, 0, 0);
+const grad = mk(517, 389), gx = grad.getContext('2d'), g = gx.createLinearGradient(0, 0, 517, 389);
+g.addColorStop(0, '#f60'); g.addColorStop(1, 'rgba(0,100,200,0.5)');
+gx.fillStyle = g; gx.fillRect(0, 0, 517, 389);
+// The first chunks after the signature, "TYPE/length", then the zlib header of the first IDAT.
+const head = u => {
+  const b = atob(u.slice(22)), u32 = i => ((b.charCodeAt(i) << 24) | (b.charCodeAt(i + 1) << 16) | (b.charCodeAt(i + 2) << 8) | b.charCodeAt(i + 3)) >>> 0;
+  const out = []; let zlib = '';
+  for (let i = 8, n = 0; i < b.length && n < 3; n++) { const len = u32(i), type = b.slice(i + 4, i + 8); out.push(type + '/' + len); if (type === 'IDAT' && !zlib) zlib = [0, 1].map(k => b.charCodeAt(i + 8 + k).toString(16).padStart(2, '0')).join(''); i += 12 + len; }
+  return out.join(',') + ' z' + zlib;
+};
+const out = {};
+for (const [name, c] of [['noise', noise], ['gradient', grad]]) { const u = c.toDataURL(); out[name] = u.length + ':' + fnv(u); out[name + 'Chunks'] = head(u); }
+document.title = JSON.stringify(out);
+</script>

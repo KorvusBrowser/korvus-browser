@@ -1,0 +1,4 @@
+<!doctype html><script>
+function f() { return new Error('i').stack.split('\n').slice(0,3).join(' | '); }
+parent.postMessage({kind: 'sameOriginIframe', stk: f() + ' || cs=' + (document.currentScript ? 'ok' : 'null')}, '*');
+</script>

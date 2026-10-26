@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "RestrictionTarget",
+    "member": "constructor",
+    "expr": "new RestrictionTarget()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

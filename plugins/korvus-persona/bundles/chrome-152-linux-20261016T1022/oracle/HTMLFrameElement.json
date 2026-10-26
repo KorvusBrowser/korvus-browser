@@ -1,0 +1,128 @@
+[
+  {
+    "iface": "HTMLFrameElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLFrameElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "constructor",
+    "expr": "new HTMLFrameElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "scrolling",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.scrolling; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "scrolling",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.scrolling = \"x\", o.scrolling); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "frameBorder",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.frameBorder; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "frameBorder",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.frameBorder = \"x\", o.frameBorder); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "longDesc",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.longDesc; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "noResize",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.noResize; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "noResize",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.noResize = true, o.noResize); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "contentDocument",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.contentDocument; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "contentWindow",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.contentWindow; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "marginHeight",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.marginHeight; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "marginHeight",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.marginHeight = \"x\", o.marginHeight); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "marginWidth",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return o.marginWidth; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLFrameElement",
+    "member": "marginWidth",
+    "expr": "(() => { const o = document.createElement(\"frame\"); return (o.marginWidth = \"x\", o.marginWidth); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

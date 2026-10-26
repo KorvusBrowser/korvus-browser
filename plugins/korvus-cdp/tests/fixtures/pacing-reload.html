@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset=utf-8><title>reload</title></head><body><img src=/slow.png><script>
+// FIXER C11 (tests/pacing.rs): the page asks for a reload 300 ms after DOMContentLoaded, while /slow.png (held 3 s by
+// the server) still delays its load event. /asked is a SYNCHRONOUS request made just before the ask, so the server's
+// clock holds the moment the page asked; the reload's own request for / is the moment the browser followed it.
+if (!sessionStorage.getItem('asked')) {
+  addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      sessionStorage.setItem('asked', '1');
+      var x = new XMLHttpRequest(); x.open('GET', '/asked', false); x.send();
+      location.reload();
+    }, 300);
+  });
+}
+</script></body></html>

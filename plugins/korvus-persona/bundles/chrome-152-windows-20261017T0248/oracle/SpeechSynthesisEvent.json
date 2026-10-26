@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "charIndex",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\") }); return o.charIndex; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "charLength",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\") }); return o.charLength; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "elapsedTime",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\") }); return o.elapsedTime; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "name",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\") }); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechSynthesisEvent",
+    "member": "utterance",
+    "expr": "(() => { const o = new SpeechSynthesisEvent(\"x\", { utterance: new SpeechSynthesisUtterance(\"a\") }); return Object.prototype.toString.call(o.utterance); })()",
+    "expected": "[object SpeechSynthesisUtterance]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

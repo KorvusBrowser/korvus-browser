@@ -1,0 +1,772 @@
+[
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "constructor",
+    "expr": "new GPURenderPassEncoder()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "GPURenderPassEncoder.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").get.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "executeBundles",
+    "expr": "GPURenderPassEncoder.prototype.executeBundles.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "executeBundles",
+    "expr": "GPURenderPassEncoder.prototype.executeBundles.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderPassEncoder.prototype.insertDebugMarker.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderPassEncoder.prototype.insertDebugMarker.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderPassEncoder.prototype.pushDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderPassEncoder.prototype.pushDebugGroup.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBlendConstant",
+    "expr": "GPURenderPassEncoder.prototype.setBlendConstant.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBlendConstant",
+    "expr": "GPURenderPassEncoder.prototype.setBlendConstant.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setIndexBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setIndexBuffer.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "beginOcclusionQuery",
+    "expr": "GPURenderPassEncoder.prototype.beginOcclusionQuery.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "beginOcclusionQuery",
+    "expr": "GPURenderPassEncoder.prototype.beginOcclusionQuery.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "draw",
+    "expr": "GPURenderPassEncoder.prototype.draw.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "draw",
+    "expr": "GPURenderPassEncoder.prototype.draw.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexed.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexed.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexedIndirect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexedIndirect.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndirect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndirect.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "end",
+    "expr": "GPURenderPassEncoder.prototype.end.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "end",
+    "expr": "GPURenderPassEncoder.prototype.end.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "endOcclusionQuery",
+    "expr": "GPURenderPassEncoder.prototype.endOcclusionQuery.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "endOcclusionQuery",
+    "expr": "GPURenderPassEncoder.prototype.endOcclusionQuery.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPURenderPassEncoder.prototype.popDebugGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "popDebugGroup",
+    "expr": "GPURenderPassEncoder.prototype.popDebugGroup.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderPassEncoder.prototype.setBindGroup.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderPassEncoder.prototype.setBindGroup.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderPassEncoder.prototype.setPipeline.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderPassEncoder.prototype.setPipeline.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setScissorRect",
+    "expr": "GPURenderPassEncoder.prototype.setScissorRect.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setScissorRect",
+    "expr": "GPURenderPassEncoder.prototype.setScissorRect.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setStencilReference",
+    "expr": "GPURenderPassEncoder.prototype.setStencilReference.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setStencilReference",
+    "expr": "GPURenderPassEncoder.prototype.setStencilReference.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setVertexBuffer.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setVertexBuffer.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setViewport",
+    "expr": "GPURenderPassEncoder.prototype.setViewport.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setViewport",
+    "expr": "GPURenderPassEncoder.prototype.setViewport.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPURenderPassEncoder.prototype.writeTimestamp.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPURenderPassEncoder.prototype.writeTimestamp.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderPassEncoder.prototype.setImmediates.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderPassEncoder.prototype.setImmediates.call(Object.create(GPURenderPassEncoder.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "executeBundles",
+    "expr": "GPURenderPassEncoder.prototype.executeBundles.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "GPURenderPassEncoder.prototype.insertDebugMarker.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "GPURenderPassEncoder.prototype.pushDebugGroup.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBlendConstant",
+    "expr": "GPURenderPassEncoder.prototype.setBlendConstant.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setIndexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setIndexBuffer.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "beginOcclusionQuery",
+    "expr": "GPURenderPassEncoder.prototype.beginOcclusionQuery.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "draw",
+    "expr": "GPURenderPassEncoder.prototype.draw.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexed",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexed.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndexedIndirect.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndirect",
+    "expr": "GPURenderPassEncoder.prototype.drawIndirect.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBindGroup",
+    "expr": "GPURenderPassEncoder.prototype.setBindGroup.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setPipeline",
+    "expr": "GPURenderPassEncoder.prototype.setPipeline.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setScissorRect",
+    "expr": "GPURenderPassEncoder.prototype.setScissorRect.call({}, 1, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setStencilReference",
+    "expr": "GPURenderPassEncoder.prototype.setStencilReference.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setVertexBuffer",
+    "expr": "GPURenderPassEncoder.prototype.setVertexBuffer.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setViewport",
+    "expr": "GPURenderPassEncoder.prototype.setViewport.call({}, 1, 1, 1, 1, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "writeTimestamp",
+    "expr": "GPURenderPassEncoder.prototype.writeTimestamp.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setImmediates",
+    "expr": "GPURenderPassEncoder.prototype.setImmediates.call({}, 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").get.call(Object.create(GPURenderPassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderPassEncoder.prototype, \"label\").set.call(Object.create(GPURenderPassEncoder.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "executeBundles",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"executeBundles\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "executeBundles",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"executeBundles\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"insertDebugMarker\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "insertDebugMarker",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"insertDebugMarker\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"pushDebugGroup\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "pushDebugGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"pushDebugGroup\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBlendConstant",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setBlendConstant\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBlendConstant",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setBlendConstant\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setIndexBuffer",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setIndexBuffer\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setIndexBuffer",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setIndexBuffer\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "beginOcclusionQuery",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"beginOcclusionQuery\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "beginOcclusionQuery",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"beginOcclusionQuery\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "draw",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"draw\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "draw",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"draw\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexed",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndexed\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexed",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndexed\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndexedIndirect\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndexedIndirect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndexedIndirect\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndirect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndirect\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "drawIndirect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"drawIndirect\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "end",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"end\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "end",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"end\"].call(Object.create(GPURenderPassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "endOcclusionQuery",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"endOcclusionQuery\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "endOcclusionQuery",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"endOcclusionQuery\"].call(Object.create(GPURenderPassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"popDebugGroup\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "popDebugGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"popDebugGroup\"].call(Object.create(GPURenderPassEncoder.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setBindGroup\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setBindGroup",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setBindGroup\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setPipeline\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setPipeline",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setPipeline\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setScissorRect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setScissorRect\"].call({}, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setScissorRect",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setScissorRect\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setStencilReference",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setStencilReference\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setStencilReference",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setStencilReference\"].call(Object.create(GPURenderPassEncoder.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setVertexBuffer",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setVertexBuffer\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setVertexBuffer",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setVertexBuffer\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setViewport",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setViewport\"].call({}, 1, 1, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setViewport",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setViewport\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1, 1, 1, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "writeTimestamp",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"writeTimestamp\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "writeTimestamp",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"writeTimestamp\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setImmediates\"].call({}, 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPassEncoder",
+    "member": "setImmediates",
+    "expr": "(() => { try { const v = GPURenderPassEncoder.prototype[\"setImmediates\"].call(Object.create(GPURenderPassEncoder.prototype), 1, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

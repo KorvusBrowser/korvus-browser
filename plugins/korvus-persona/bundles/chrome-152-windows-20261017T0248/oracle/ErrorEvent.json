@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "ErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ErrorEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ErrorEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "message",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return o.message; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "filename",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return o.filename; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "lineno",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return o.lineno; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "colno",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return o.colno; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ErrorEvent",
+    "member": "error",
+    "expr": "(() => { const o = new ErrorEvent(\"x\"); return o.error; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

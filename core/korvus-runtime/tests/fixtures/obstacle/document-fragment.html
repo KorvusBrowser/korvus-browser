@@ -1,0 +1,23 @@
+<!doctype html><html><body><div id="host"><span id="a">A</span></div><template id="t"><b>x</b>y</template><pre id="out"></pre>
+<script>
+// DocumentFragment is nodeType 11, and the variadic insert ops MOVE its children in (leaving it
+// empty) rather than planting the fragment node. korvus faked fragments as elements (#fragment, nt 1)
+// and template.content as a #document (nt 9); svelte 5 clones a template's content and inserts it,
+// which the nt-9 content turned into a HierarchyRequestError.
+const P = [];
+const df = document.createDocumentFragment();
+P.push("createDF.nt=" + df.nodeType);
+const tc = document.getElementById("t").content;
+P.push("template.content.nt=" + tc.nodeType);
+const clone = tc.cloneNode(true);
+P.push("clone.nt=" + clone.nodeType + ",kids=" + clone.childNodes.length);
+const host = document.getElementById("host");
+host.appendChild(clone);
+P.push("appended=" + host.innerHTML);
+const f2 = document.createDocumentFragment();
+f2.append(document.createElement("i"), document.createTextNode("z"));
+document.getElementById("a").before(f2);
+P.push("before.kids=" + host.childNodes.length + ",fragEmptied=" + (f2.childNodes.length === 0));
+globalThis.__obstacle = P.join("|");
+document.getElementById("out").textContent = globalThis.__obstacle;
+</script></body></html>

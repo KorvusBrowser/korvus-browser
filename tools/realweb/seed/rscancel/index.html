@@ -1,0 +1,18 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B17: cancelling a ReadableStream runs its underlying source's cancel(reason) -- from
+// rs.cancel() and reader.cancel() -- and the cancel promise settles as the source's does.
+(async () => {
+const out = {};
+const t = async (k, f) => { try { const v = await f(); out[k] = v === undefined ? 'undefined' : JSON.stringify(v); } catch (e) { out[k] = 'ERR ' + (e && e.message); } };
+await t('rs', async () => { const log = []; let src; src = { cancel(r) { log.push('cancel:' + r, this === src); } }; const rs = new ReadableStream(src); const v = await rs.cancel('a'); return [log, v]; });
+await t('reader', async () => { const log = []; const rs = new ReadableStream({ cancel(r) { log.push('cancel:' + r); return 42; } }); const v = await rs.getReader().cancel('b'); return [log, v]; });
+await t('throws', () => new ReadableStream({ cancel() { throw new Error('nope'); } }).cancel('c'));
+await t('async', async () => { const log = []; const rs = new ReadableStream({ cancel() { return new Promise((res) => setTimeout(() => { log.push('source done'); res('x'); }, 10)); } }); await rs.cancel(); log.push('cancel settled'); return log; });
+await t('rejects', () => new ReadableStream({ cancel() { return Promise.reject(new Error('later')); } }).cancel());
+await t('closedFirst', async () => { let n = 0; const rs = new ReadableStream({ start(c) { c.close(); }, cancel() { n++; } }); await rs.cancel('d'); return n; });
+await t('twice', async () => { let n = 0; const rs = new ReadableStream({ cancel() { n++; } }); await rs.cancel(); await rs.cancel(); return n; });
+await t('noArg', async () => { let got = 'unset'; await new ReadableStream({ cancel(r) { got = String(r) + '/' + arguments.length; } }).cancel(); return got; });
+await t('controller', async () => { let started, got; await new ReadableStream({ start(c) { started = c; }, cancel(r, c) { got = c; } }).cancel(); return [got === started, Object.prototype.toString.call(got)]; });
+window.R = JSON.stringify(out);
+})();
+</script>

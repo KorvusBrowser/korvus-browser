@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "TouchEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TouchEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new TouchEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "altKey",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.altKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "metaKey",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.metaKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "ctrlKey",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.ctrlKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "shiftKey",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.shiftKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.getModifierState(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return o.getModifierState(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "touches",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return Object.prototype.toString.call(o.touches); })()",
+    "expected": "[object TouchList]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "targetTouches",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return Object.prototype.toString.call(o.targetTouches); })()",
+    "expected": "[object TouchList]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "TouchEvent",
+    "member": "changedTouches",
+    "expr": "(() => { const o = new TouchEvent(\"x\"); return Object.prototype.toString.call(o.changedTouches); })()",
+    "expected": "[object TouchList]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "iface": "IDBCursor",
+    "member": "constructor",
+    "expr": "new IDBCursor()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "source",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"source\").get.call(Object.create(IDBCursor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "source",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"source\").get.name",
+    "expected": "get source",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "direction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"direction\").get.call(Object.create(IDBCursor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "direction",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"direction\").get.name",
+    "expected": "get direction",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "key",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"key\").get.call(Object.create(IDBCursor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "key",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"key\").get.name",
+    "expected": "get key",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "primaryKey",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"primaryKey\").get.call(Object.create(IDBCursor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "primaryKey",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"primaryKey\").get.name",
+    "expected": "get primaryKey",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "request",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"request\").get.call(Object.create(IDBCursor.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "request",
+    "expr": "Object.getOwnPropertyDescriptor(IDBCursor.prototype, \"request\").get.name",
+    "expected": "get request",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "advance",
+    "expr": "IDBCursor.prototype.advance.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "advance",
+    "expr": "IDBCursor.prototype.advance.name",
+    "expected": "advance",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continue",
+    "expr": "IDBCursor.prototype.continue.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continue",
+    "expr": "IDBCursor.prototype.continue.name",
+    "expected": "continue",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continuePrimaryKey",
+    "expr": "IDBCursor.prototype.continuePrimaryKey.length",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continuePrimaryKey",
+    "expr": "IDBCursor.prototype.continuePrimaryKey.name",
+    "expected": "continuePrimaryKey",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "delete",
+    "expr": "IDBCursor.prototype.delete.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "delete",
+    "expr": "IDBCursor.prototype.delete.name",
+    "expected": "delete",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "update",
+    "expr": "IDBCursor.prototype.update.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "update",
+    "expr": "IDBCursor.prototype.update.name",
+    "expected": "update",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "advance",
+    "expr": "IDBCursor.prototype.advance.call(Object.create(IDBCursor.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continue",
+    "expr": "IDBCursor.prototype.continue.call(Object.create(IDBCursor.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "continuePrimaryKey",
+    "expr": "IDBCursor.prototype.continuePrimaryKey.call(Object.create(IDBCursor.prototype), 1, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "update",
+    "expr": "IDBCursor.prototype.update.call(Object.create(IDBCursor.prototype), 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "IDBCursor",
+    "member": "delete",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(IDBCursor.prototype.delete.call(Object.create(IDBCursor.prototype), 1)); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

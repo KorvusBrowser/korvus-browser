@@ -1,0 +1,380 @@
+[
+  {
+    "iface": "SourceBuffer",
+    "member": "constructor",
+    "expr": "new SourceBuffer()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"mode\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"mode\").get.name",
+    "expected": "get mode",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"mode\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "mode",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"mode\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "updating",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"updating\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "updating",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"updating\").get.name",
+    "expected": "get updating",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "buffered",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"buffered\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "buffered",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"buffered\").get.name",
+    "expected": "get buffered",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "timestampOffset",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"timestampOffset\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "timestampOffset",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"timestampOffset\").get.name",
+    "expected": "get timestampOffset",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "timestampOffset",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"timestampOffset\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "timestampOffset",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"timestampOffset\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowStart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowStart\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowStart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowStart\").get.name",
+    "expected": "get appendWindowStart",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowStart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowStart\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowStart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowStart\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowEnd",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowEnd\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowEnd",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowEnd\").get.name",
+    "expected": "get appendWindowEnd",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowEnd",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowEnd\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendWindowEnd",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"appendWindowEnd\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdatestart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdatestart\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdatestart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdatestart\").get.name",
+    "expected": "get onupdatestart",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdatestart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdatestart\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdatestart",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdatestart\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdate",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdate\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdate",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdate\").get.name",
+    "expected": "get onupdate",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdate",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdate\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdate",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdate\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdateend",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdateend\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdateend",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdateend\").get.name",
+    "expected": "get onupdateend",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdateend",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdateend\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onupdateend",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onupdateend\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onerror\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onerror\").get.name",
+    "expected": "get onerror",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onerror\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onerror",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onerror\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onabort\").get.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onabort\").get.name",
+    "expected": "get onabort",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onabort\").set.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "onabort",
+    "expr": "Object.getOwnPropertyDescriptor(SourceBuffer.prototype, \"onabort\").set.call(Object.create(SourceBuffer.prototype), null)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "abort",
+    "expr": "SourceBuffer.prototype.abort.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "abort",
+    "expr": "SourceBuffer.prototype.abort.name",
+    "expected": "abort",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendBuffer",
+    "expr": "SourceBuffer.prototype.appendBuffer.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendBuffer",
+    "expr": "SourceBuffer.prototype.appendBuffer.name",
+    "expected": "appendBuffer",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "changeType",
+    "expr": "SourceBuffer.prototype.changeType.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "changeType",
+    "expr": "SourceBuffer.prototype.changeType.name",
+    "expected": "changeType",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "remove",
+    "expr": "SourceBuffer.prototype.remove.length",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "remove",
+    "expr": "SourceBuffer.prototype.remove.name",
+    "expected": "remove",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "appendBuffer",
+    "expr": "SourceBuffer.prototype.appendBuffer.call(Object.create(SourceBuffer.prototype), new ArrayBuffer(4))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "remove",
+    "expr": "SourceBuffer.prototype.remove.call(Object.create(SourceBuffer.prototype), 0, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "changeType",
+    "expr": "SourceBuffer.prototype.changeType.call(Object.create(SourceBuffer.prototype), \"video/webm\")",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "abort",
+    "expr": "SourceBuffer.prototype.abort.call(Object.create(SourceBuffer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SourceBuffer",
+    "member": "mode",
+    "expr": "new MediaSource().addSourceBuffer(\"video/webm;codecs=vp8\")",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

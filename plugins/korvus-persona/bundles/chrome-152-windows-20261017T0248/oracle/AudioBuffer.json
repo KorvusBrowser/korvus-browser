@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "AudioBuffer",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioBuffer({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "constructor",
+    "expr": "(() => { const o = new AudioBuffer(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "sampleRate",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.sampleRate; })()",
+    "expected": 44100,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "length",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.length; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "duration",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.duration; })()",
+    "expected": 2.2675736961451248e-05,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "numberOfChannels",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.numberOfChannels; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "getChannelData",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.getChannelData(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "getChannelData",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.getChannelData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "copyFromChannel",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.copyFromChannel(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "AudioBuffer",
+    "member": "copyToChannel",
+    "expr": "(() => { const o = new AudioBuffer({ length: 1, sampleRate: 44100 }); return o.copyToChannel(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,31 @@
+<!doctype html><title>pending</title><script>
+// REALWEB H45/H46/H47: fetch() follows its AbortSignal -- before, during the headers wait, and mid-body -- and
+// resolves at the response's HEADERS, the body arriving after. `/__slow/head?ms=1000`: headers after 1 s;
+// `/__slow/body?ms=100&n=10`: headers at once, the body over ~1 s. Times are rounded to 100 ms.
+const t0 = performance.now(), at = () => Math.round((performance.now() - t0) / 100) * 100, out = {};
+const run = (name, mk) => mk().then(v => { out[name] = 'ok:' + v + '@' + at(); }, e => { out[name] = (e && e.name) + '@' + at(); });
+const SH = '/__slow/head?ms=1000', SB = '/__slow/body?ms=100&n=10';
+const jobs = [
+  run('abortHead', () => { const c = new AbortController(); setTimeout(() => c.abort(), 200); return fetch(SH + '&a', {signal: c.signal}).then(r => r.status); }),
+  run('abortBody', () => { const c = new AbortController(); setTimeout(() => c.abort(), 200); return fetch(SB + '&b', {signal: c.signal}).then(r => r.text()).then(t => t.length); }),
+  run('timeoutHead', () => fetch(SH + '&c', {signal: AbortSignal.timeout(200)}).then(r => r.status)),
+  run('timeoutBody', () => fetch(SB + '&d', {signal: AbortSignal.timeout(200)}).then(r => r.text()).then(t => t.length)),
+  run('anyTimeout', () => fetch(SH + '&e', {signal: AbortSignal.any([new AbortController().signal, AbortSignal.timeout(200)])}).then(r => r.status)),
+  run('headFirst', () => fetch(SB + '&f').then(r => { out.headAt = at(); return r.text(); }).then(t => t.length)),
+  run('preAborted', () => fetch(SH + '&g', {signal: AbortSignal.abort()}).then(r => r.status)),
+  run('requestSignal', () => fetch(new Request(SH + '&h', {signal: AbortSignal.timeout(200)})).then(r => r.status)),
+];
+(async () => {
+  const c = new AbortController(); const res = await fetch(SB + '&i', {signal: c.signal}); c.abort();
+  try { await res.text(); out.bodyAbort = 'text ok'; } catch (e) { out.bodyAbort = e.name + ': ' + e.message; }
+  const c2 = new AbortController(); c2.abort('why');
+  try { await fetch(SH + '&j', {signal: c2.signal}); } catch (e) { out.customReason = String(e); }
+  const ord = [], c3 = new AbortController(); c3.signal.addEventListener('abort', () => ord.push('event'));
+  const p = fetch(SH + '&k', {signal: c3.signal}).catch(e => ord.push('reject:' + e.name)); c3.abort(); ord.push('after'); await p; out.order = ord.join(',');
+  // H47: the body STREAMS -- a reader's first read is the first chunk the server flushed.
+  const c4 = new AbortController(); const res4 = await fetch(SB + '&m', {signal: c4.signal}); const rd = res4.body.getReader();
+  const first = await rd.read(); c4.abort();
+  try { await rd.read(); out.reader = 'read ok'; } catch (e) { out.reader = first.value.length + ':' + e.name; }
+  const cache = await caches.open('fa'); await cache.put('/k', await fetch(SB + '&l')); out.cachePut = (await (await cache.match('/k')).text()).length;
+})().then(() => Promise.all(jobs)).then(() => { document.title = JSON.stringify(out); });
+</script>

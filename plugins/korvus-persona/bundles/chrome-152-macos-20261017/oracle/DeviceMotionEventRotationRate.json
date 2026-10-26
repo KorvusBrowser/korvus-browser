@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "DeviceMotionEventRotationRate",
+    "member": "constructor",
+    "expr": "new DeviceMotionEventRotationRate()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DeviceMotionEventRotationRate",
+    "member": "alpha",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { rotationRate: { alpha: 1, beta: 2, gamma: 3 } }).rotationRate; return o.alpha; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DeviceMotionEventRotationRate",
+    "member": "beta",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { rotationRate: { alpha: 1, beta: 2, gamma: 3 } }).rotationRate; return o.beta; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DeviceMotionEventRotationRate",
+    "member": "gamma",
+    "expr": "(() => { const o = new DeviceMotionEvent(\"x\", { rotationRate: { alpha: 1, beta: 2, gamma: 3 } }).rotationRate; return o.gamma; })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  }
+]

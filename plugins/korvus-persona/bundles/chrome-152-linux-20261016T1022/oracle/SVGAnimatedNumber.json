@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "SVGAnimatedNumber",
+    "member": "constructor",
+    "expr": "new SVGAnimatedNumber()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedNumber",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feGaussianBlur\").stdDeviationX; return o.baseVal; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedNumber",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feGaussianBlur\").stdDeviationX; return (o.baseVal = 1, o.baseVal); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedNumber",
+    "member": "animVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feGaussianBlur\").stdDeviationX; return o.animVal; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGAnimatedNumber",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feGaussianBlur\").stdDeviationX; return (o.baseVal = \"1\", o.baseVal); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

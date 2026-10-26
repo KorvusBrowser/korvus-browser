@@ -1,0 +1,20 @@
+<!doctype html><meta charset=utf-8><body>
+<script>
+// TEMPLATES P7 B25: a document's own [LegacyUnforgeable] `location` accessors are its REALM's one pair --
+// the same getter and setter on every document of the realm, a frame's documents their own realm's.
+</script><iframe srcdoc="<p>f</p>"></iframe><script>
+onload = () => {
+  const d = (o) => Object.getOwnPropertyDescriptor(o, 'location');
+  const a = d(document), b = d(document.implementation.createHTMLDocument('x')), c = d(new DOMParser().parseFromString('<p>', 'text/html'));
+  const fr = document.querySelector('iframe').contentDocument, e = d(fr);
+  const out = {
+    shape: [typeof a.get, a.get.name, a.get.length, typeof a.set, a.set.name, a.set.length, a.enumerable, a.configurable].join(),
+    sameGetAcrossDocs: String(a.get === b.get && b.get === c.get),
+    sameSetAcrossDocs: String(a.set === b.set),
+    frameDiffers: String(a.get !== e.get),
+    frameOwnRealm: String(e.get instanceof document.querySelector('iframe').contentWindow.Function),
+    createdNull: String(document.implementation.createHTMLDocument('x').location),
+  };
+  window.R = JSON.stringify(out);
+};
+</script>

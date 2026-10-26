@@ -1,0 +1,681 @@
+[
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "constructor",
+    "expr": "new PerformanceResourceTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].workerStart >= 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"workerStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].workerStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].redirectStart >= 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"redirectStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].redirectStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectEnd",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].redirectEnd >= performance.getEntriesByType(\"navigation\")[0].redirectStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"redirectEnd\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "redirectEnd",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].redirectEnd",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "fetchStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].fetchStart > 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "fetchStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].fetchStart >= performance.getEntriesByType(\"navigation\")[0].startTime",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "fetchStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"fetchStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "fetchStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].fetchStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].domainLookupStart >= performance.getEntriesByType(\"navigation\")[0].fetchStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"domainLookupStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].domainLookupStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupEnd",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].domainLookupEnd >= performance.getEntriesByType(\"navigation\")[0].domainLookupStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"domainLookupEnd\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "domainLookupEnd",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].domainLookupEnd",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].connectStart >= performance.getEntriesByType(\"navigation\")[0].domainLookupEnd",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"connectStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].connectStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectEnd",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].connectEnd >= performance.getEntriesByType(\"navigation\")[0].connectStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"connectEnd\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "connectEnd",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].connectEnd",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "secureConnectionStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].secureConnectionStart",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "secureConnectionStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"secureConnectionStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "secureConnectionStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].secureConnectionStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "requestStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].requestStart >= performance.getEntriesByType(\"navigation\")[0].connectEnd",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "requestStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"requestStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "requestStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].requestStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].responseStart >= performance.getEntriesByType(\"navigation\")[0].requestStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"responseStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].responseStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseEnd",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].responseEnd >= performance.getEntriesByType(\"navigation\")[0].responseStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseEnd",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].responseEnd <= performance.now()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseEnd",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"responseEnd\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseEnd",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].responseEnd",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "finalResponseHeadersStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].finalResponseHeadersStart >= performance.getEntriesByType(\"navigation\")[0].requestStart",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "finalResponseHeadersStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"finalResponseHeadersStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "finalResponseHeadersStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].finalResponseHeadersStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "firstInterimResponseStart",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].firstInterimResponseStart >= 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "firstInterimResponseStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"firstInterimResponseStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "firstInterimResponseStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].firstInterimResponseStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerRouterEvaluationStart",
+    "expr": "String(performance.getEntriesByType(\"navigation\")[0].workerRouterEvaluationStart)",
+    "expected": "0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerRouterEvaluationStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"workerRouterEvaluationStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerRouterEvaluationStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].workerRouterEvaluationStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerCacheLookupStart",
+    "expr": "String(performance.getEntriesByType(\"navigation\")[0].workerCacheLookupStart)",
+    "expected": "0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerCacheLookupStart",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"workerCacheLookupStart\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerCacheLookupStart",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].workerCacheLookupStart",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "initiatorType",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].initiatorType",
+    "expected": "navigation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "initiatorType",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"initiatorType\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "initiatorType",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].initiatorType",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "nextHopProtocol",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].nextHopProtocol.length > 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "nextHopProtocol",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"nextHopProtocol\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "nextHopProtocol",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].nextHopProtocol",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "deliveryType",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].deliveryType",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "deliveryType",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"deliveryType\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "transferSize",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].transferSize > 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "transferSize",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].transferSize >= performance.getEntriesByType(\"navigation\")[0].encodedBodySize",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "transferSize",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"transferSize\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "transferSize",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].transferSize",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "encodedBodySize",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].encodedBodySize > 0",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "encodedBodySize",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"encodedBodySize\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "encodedBodySize",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].encodedBodySize",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "decodedBodySize",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].decodedBodySize >= performance.getEntriesByType(\"navigation\")[0].encodedBodySize",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "decodedBodySize",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"decodedBodySize\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "decodedBodySize",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].decodedBodySize",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "serverTiming",
+    "expr": "Array.isArray(performance.getEntriesByType(\"navigation\")[0].serverTiming)",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "serverTiming",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].serverTiming.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "serverTiming",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"serverTiming\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "serverTiming",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].serverTiming",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "renderBlockingStatus",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].renderBlockingStatus",
+    "expected": "non-blocking",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "renderBlockingStatus",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"renderBlockingStatus\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "renderBlockingStatus",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].renderBlockingStatus",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStatus",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].responseStatus",
+    "expected": 200,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStatus",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"responseStatus\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "responseStatus",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].responseStatus",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentType",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].contentType",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentType",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].contentType",
+    "expected": "text/html",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentType",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"contentType\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentEncoding",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].contentEncoding",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentEncoding",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"contentEncoding\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "contentEncoding",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].contentEncoding",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerMatchedSourceType",
+    "expr": "String(performance.getEntriesByType(\"navigation\")[0].workerMatchedSourceType)",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerMatchedSourceType",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"workerMatchedSourceType\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerMatchedSourceType",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].workerMatchedSourceType",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerFinalSourceType",
+    "expr": "String(performance.getEntriesByType(\"navigation\")[0].workerFinalSourceType)",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerFinalSourceType",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceResourceTiming.prototype, \"workerFinalSourceType\").get.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "workerFinalSourceType",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].workerFinalSourceType",
+    "expected": "string",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "typeof performance.getEntriesByType(\"navigation\")[0].toJSON()",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].toJSON().entryType",
+    "expected": "navigation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "Object.keys(performance.getEntriesByType(\"navigation\")[0].toJSON()).includes(\"transferSize\")",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "performance.getEntriesByType(\"navigation\")[0].toJSON().transferSize === performance.getEntriesByType(\"navigation\")[0].transferSize",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "PerformanceResourceTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PerformanceResourceTiming",
+    "member": "toJSON",
+    "expr": "PerformanceResourceTiming.prototype.toJSON.call(Object.create(PerformanceResourceTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

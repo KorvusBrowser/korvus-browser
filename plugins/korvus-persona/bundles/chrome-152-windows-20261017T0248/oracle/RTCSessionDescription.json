@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "RTCSessionDescription",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCSessionDescription({}); return Object.prototype.toString.call(o); })()",
+    "expected": "[object RTCSessionDescription]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCSessionDescription",
+    "member": "constructor",
+    "expr": "(() => { const o = new RTCSessionDescription(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object RTCSessionDescription]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCSessionDescription",
+    "member": "type",
+    "expr": "(() => { const o = new RTCSessionDescription({}); return o.type; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCSessionDescription",
+    "member": "sdp",
+    "expr": "(() => { const o = new RTCSessionDescription({}); return o.sdp; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCSessionDescription",
+    "member": "type",
+    "expr": "(() => { const o = new RTCSessionDescription({}); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCSessionDescription",
+    "member": "toJSON",
+    "expr": "(() => { const o = new RTCSessionDescription({}); return Object.prototype.toString.call(o.toJSON()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

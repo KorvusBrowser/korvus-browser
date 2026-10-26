@@ -1,0 +1,13 @@
+<!doctype html><title>oc</title><script>
+const r = {};
+const t = (k, f) => { try { r[k] = f(); } catch (e) { r[k] = 'THROW ' + e.name + ': ' + e.message; } };
+t('ctor', () => typeof OffscreenCanvas);
+t('ctx2d', () => { const c = new OffscreenCanvas(50, 20); const x = c.getContext('2d'); return Object.prototype.toString.call(x); });
+t('fillText+getImageData', () => { const c = new OffscreenCanvas(50, 20); const x = c.getContext('2d'); x.fillText('Hi', 2, 10); const d = x.getImageData(0, 0, 50, 20); return d && d.data ? d.data.length : String(d); });
+t('measureText', () => { const x = new OffscreenCanvas(10, 10).getContext('2d'); const m = x.measureText('hello'); return m && m.width; });
+t('convertToBlob', () => typeof new OffscreenCanvas(10, 10).convertToBlob);
+t('webgl', () => { const g = new OffscreenCanvas(10, 10).getContext('webgl'); return g ? g.getParameter(g.VERSION) : 'null'; });
+t('transferToImageBitmap', () => { const c = new OffscreenCanvas(10, 10); c.getContext('2d'); return Object.prototype.toString.call(c.transferToImageBitmap()); });
+t('htmlCanvas.transferControlToOffscreen', () => Object.prototype.toString.call(document.createElement('canvas').transferControlToOffscreen()));
+document.title = JSON.stringify(r);
+</script>

@@ -1,0 +1,89 @@
+{
+  "chrome": "Chrome/152.0.7977.82",
+  "features": {
+    "AppearanceBase": {
+      "votes_on": 1,
+      "votes_off": 30,
+      "evidence": [
+        "not AppearanceBase: textarea { background-color: Field } -> ua 'rgb(255, 255, 255)' vs 'rgb(255, 255, 255)'",
+        "not AppearanceBase: textarea { padding: 2px } -> ua '2px' vs '2px'",
+        "not AppearanceBase: input { padding: 1px 0 } -> ua '1px 2px' vs '1px 0px'",
+        "not AppearanceBase: input { -webkit-rtl-ordering: logical } -> ua 'logical' vs 'logical'",
+        "not AppearanceBase: input { background-color: Field } -> ua 'rgb(255, 255, 255)' vs 'rgb(255, 255, 255)'",
+        "not AppearanceBase: input, input[type=\"email\" i], input[type=\"number\" i], input[type=\"password\" i], input[type=\"search\" i], input[type=\"tel\" i], input[type=\"text\" i], input[type=\"url\" i] { padding-block: 1px } -> ua '1px' vs '1px'",
+        "not AppearanceBase: input, input[type=\"email\" i], input[type=\"number\" i], input[type=\"password\" i], input[type=\"search\" i], input[type=\"tel\" i], input[type=\"text\" i], input[type=\"url\" i] { padding-inline: 2px } -> ua '2px' vs '2px'",
+        "not AppearanceBase: input[type=\"radio\" i], input[type=\"checkbox\" i] { padding: initial } -> ua '0px' vs '0px'",
+        "not AppearanceBase: input[type=\"radio\" i], input[type=\"checkbox\" i] { background-color: initial } -> ua 'rgba(0, 0, 0, 0)' vs 'rgba(0, 0, 0, 0)'",
+        "not AppearanceBase: input[type=\"radio\" i], input[type=\"checkbox\" i] { border: initial } -> ua '0px none rgb(0, 0, 0)' vs '0px none rgb(0, 0, 0)'",
+        "not AppearanceBase: input[type=\"radio\" i], input[type=\"checkbox\" i] { cursor: default } -> ua 'default' vs 'default'",
+        "not AppearanceBase: input[type=\"checkbox\" i] { margin: 3px 3px 3px 4px } -> ua '3px 3px 3px 4px' vs '3px 3px 3px 4px'",
+        "not AppearanceBase: input[type=\"radio\" i] { margin: 3px 3px 0 5px } -> ua '3px 3px 0px 5px' vs '3px 3px 0px 5px'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { text-align: center } -> ua 'center' vs 'center'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { cursor: default } -> ua 'default' vs 'default'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { padding-block: 1px } -> ua '1px' vs '1px'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { padding-inline: 6px } -> ua '6px' vs '6px'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { border: 2px outset ButtonBorder } -> ua '2px outset rgb(0, 0, 0)' vs '2px outset rgb(0, 0, 0)'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { background-color: ButtonFace } -> ua 'rgb(239, 239, 239)' vs 'rgb(239, 239, 239)'",
+        "not AppearanceBase: input[type=\"button\" i], input[type=\"submit\" i], input[type=\"reset\" i], input[type=\"file\" i]::-webkit-file-upload-button, button { color: ButtonText } -> ua 'rgb(0, 0, 0)' vs 'rgb(0, 0, 0)'",
+        "not AppearanceBase: input[type=\"color\" i] { inline-size: 50px } -> ua '50px' vs '50px'",
+        "not AppearanceBase: input[type=\"color\" i] { block-size: 27px } -> ua '27px' vs '27px'",
+        "not AppearanceBase: input[type=\"color\" i] { border: 1px solid ButtonBorder } -> ua '1px solid rgb(0, 0, 0)' vs '1px solid rgb(0, 0, 0)'",
+        "not AppearanceBase: input[type=\"color\" i] { padding: 1px 2px } -> ua '1px 2px' vs '1px 2px'",
+        "not AppearanceBase: input[type=\"color\" i] { cursor: default } -> ua 'default' vs 'default'",
+        "not AppearanceBase: input[type=\"color\" i] { background-color: ButtonFace } -> ua 'rgb(239, 239, 239)' vs 'rgb(239, 239, 239)'",
+        "not AppearanceBase: input[type=\"color\" i] { color: ButtonText } -> ua 'rgb(0, 0, 0)' vs 'rgb(0, 0, 0)'",
+        "not AppearanceBase: progress { display: inline-block } -> ua 'inline-block' vs 'inline-block'",
+        "not AppearanceBase: progress { block-size: 1em } -> ua '16px' vs '16px'",
+        "not AppearanceBase: progress { inline-size: 10em } -> ua '160px' vs '160px'",
+        "not AppearanceBase: progress { vertical-align: -0.2em } -> ua '-3.2px' vs '-3.2px'"
+      ],
+      "on": false
+    },
+    "MenuElements": {
+      "votes_on": 5,
+      "votes_off": 17,
+      "evidence": [
+        "MenuElements: menubar { display: inline-flex } -> ua 'inline' vs 'inline-flex'",
+        "MenuElements: menubar { flex-direction: row } -> ua 'row' vs 'row'",
+        "MenuElements: menubar { gap: 0.5em } -> ua 'normal' vs '8px'",
+        "MenuElements: menubar { width: max-content } -> ua 'auto' vs 'max-content'",
+        "MenuElements: menubar { background-color: transparent } -> ua 'rgba(0, 0, 0, 0)' vs 'rgba(0, 0, 0, 0)'",
+        "MenuElements: menubar { border: 1px solid currentColor } -> ua '0px none rgb(0, 0, 0)' vs '1px solid rgb(0, 0, 0)'",
+        "MenuElements: menubar { border-radius: 0.25em } -> ua '0px' vs '4px'",
+        "MenuElements: menubar { padding: 0.25em } -> ua '0px' vs '4px'",
+        "MenuElements: menulist { display: block } -> ua 'inline' vs 'block'",
+        "MenuElements: menulist { position: fixed } -> ua 'static' vs 'fixed'",
+        "MenuElements: menulist { margin: 0 } -> ua '0px' vs '0px'",
+        "MenuElements: menulist { inset: auto } -> ua 'auto' vs 'auto'",
+        "MenuElements: menulist { width: max-content } -> ua 'auto' vs 'max-content'",
+        "MenuElements: menulist { max-block-size: stretch } -> ua 'none' vs 'stretch'",
+        "MenuElements: menulist { overflow: auto } -> ua 'visible' vs 'auto'",
+        "MenuElements: menulist { color: CanvasText } -> ua 'rgb(0, 0, 0)' vs 'rgb(0, 0, 0)'",
+        "MenuElements: menulist { background-color: Canvas } -> ua 'rgba(0, 0, 0, 0)' vs 'rgb(255, 255, 255)'",
+        "MenuElements: menulist { border: 1px solid currentColor } -> ua '0px none rgb(0, 0, 0)' vs '1px solid rgb(0, 0, 0)'",
+        "MenuElements: menulist { padding: 0.25em } -> ua '0px' vs '4px'",
+        "MenuElements: submenu { display: contents } -> ua 'inline' vs 'contents'",
+        "MenuElements: menuitem { display: inline-flex } -> ua 'inline' vs 'inline-flex'",
+        "MenuElements: menuitem { interest-delay-start: calc(infinity * 1s) } -> ua 'normal' vs '1.79769e+308s'"
+      ],
+      "on": false
+    },
+    "TableDefaultBorderColorCurrentColor": {
+      "votes_on": 1,
+      "votes_off": 0,
+      "evidence": [
+        "not TableDefaultBorderColorCurrentColor: table { border-color: gray } -> ua 'rgb(0, 0, 0)' vs 'rgb(128, 128, 128)'"
+      ],
+      "on": true
+    }
+  },
+  "small_control": {
+    "computed": {
+      "font-style": "normal",
+      "font-weight": "400",
+      "font-size": "13.3333px",
+      "font-family": "Arial"
+    },
+    "font": "normal 400 13.3333px Arial"
+  }
+}

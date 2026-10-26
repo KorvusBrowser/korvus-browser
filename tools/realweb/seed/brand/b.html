@@ -1,0 +1,14 @@
+<!doctype html><title>b</title><body><iframe id="f" src="about:blank"></iframe><iframe id="g" srcdoc="<p>x"></iframe><script>
+const r = {}; const DV = Object.getOwnPropertyDescriptor(Document.prototype, 'defaultView').get; const OD = Object.getOwnPropertyDescriptor(Node.prototype, 'ownerDocument').get;
+const t = (k, f) => { try { const v = f(); r[k] = v === null ? 'null' : (v === window ? 'window' : Object.prototype.toString.call(v)); } catch (e) { r[k] = 'THROW ' + e.message; } };
+t('mainDoc', () => DV.call(document));
+t('nodeInMain', () => DV.call(OD.call(document.body)));
+t('aboutBlankIframeDoc', () => DV.call(document.getElementById('f').contentDocument));
+t('iframeNodeViaOD', () => DV.call(OD.call(document.getElementById('f').contentDocument.body || document.getElementById('f').contentDocument.documentElement)));
+t('templateContentDoc', () => DV.call(OD.call(document.createElement('template').content)));
+t('createHTMLDocument', () => DV.call(document.implementation.createHTMLDocument('')));
+t('domParserDoc', () => DV.call(new DOMParser().parseFromString('<p>', 'text/html')));
+t('xmlDoc', () => DV.call(new DOMParser().parseFromString('<a/>', 'application/xml')));
+t('crossRealmMethod', () => { const w = document.getElementById('f').contentWindow; const DV2 = Object.getOwnPropertyDescriptor(w.Document.prototype, 'defaultView').get; return DV2.call(document); });
+setTimeout(() => { t('srcdocIframeDoc', () => DV.call(document.getElementById('g').contentDocument)); document.title = JSON.stringify(r); }, 300);
+</script></body>

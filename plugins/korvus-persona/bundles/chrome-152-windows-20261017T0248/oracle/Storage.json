@@ -1,0 +1,79 @@
+[
+  {
+    "iface": "Storage",
+    "member": "constructor",
+    "expr": "new Storage()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "length",
+    "expr": "(() => { const o = localStorage; return o.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "key",
+    "expr": "(() => { const o = localStorage; return o.key(1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "key",
+    "expr": "(() => { const o = localStorage; return o.key(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "getItem",
+    "expr": "(() => { const o = localStorage; return o.getItem(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "getItem",
+    "expr": "(() => { const o = localStorage; return o.getItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "setItem",
+    "expr": "(() => { const o = localStorage; return o.setItem(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "setItem",
+    "expr": "(() => { const o = localStorage; return o.setItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "removeItem",
+    "expr": "(() => { const o = localStorage; return o.removeItem(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "removeItem",
+    "expr": "(() => { const o = localStorage; return o.removeItem(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Storage",
+    "member": "clear",
+    "expr": "(() => { const o = localStorage; return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

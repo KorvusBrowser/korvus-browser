@@ -1,0 +1,17 @@
+[package]
+name = "korvus-webapi-macros"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "macros"
+proc-macro = true
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
+# op2's own snake_case -> camelCase (deno_ops 0.286 uses stringcase 0.4), so an own class names its members
+# exactly as the op2 class it replaces did.
+stringcase = "0.4"

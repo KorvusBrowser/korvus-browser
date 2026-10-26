@@ -1,0 +1,163 @@
+[
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "constructor",
+    "expr": "new CSSCounterStyleRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.name; })()",
+    "expected": "c",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "system",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.system; })()",
+    "expected": "cyclic",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "system",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.system = \"x\", o.system); })()",
+    "expected": "cyclic",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "symbols",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.symbols; })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "symbols",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.symbols = \"x\", o.symbols); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "additiveSymbols",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.additiveSymbols; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "additiveSymbols",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.additiveSymbols = \"x\", o.additiveSymbols); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "negative",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.negative; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "negative",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.negative = \"x\", o.negative); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "prefix",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.prefix; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "prefix",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.prefix = \"x\", o.prefix); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "suffix",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.suffix; })()",
+    "expected": "\".\"",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "suffix",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.suffix = \"x\", o.suffix); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "range",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.range; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "range",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.range = \"x\", o.range); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "pad",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.pad; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "pad",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.pad = \"x\", o.pad); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "speakAs",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.speakAs; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "speakAs",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.speakAs = \"x\", o.speakAs); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "fallback",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return o.fallback; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSCounterStyleRule",
+    "member": "fallback",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@counter-style c { system: cyclic; symbols: x; suffix: '.' }\"); return s.cssRules[0]; })(); return (o.fallback = \"x\", o.fallback); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

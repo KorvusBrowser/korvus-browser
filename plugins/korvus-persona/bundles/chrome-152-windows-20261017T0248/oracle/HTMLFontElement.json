@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "HTMLFontElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLFontElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "constructor",
+    "expr": "new HTMLFontElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "color",
+    "expr": "(() => { const o = document.createElement(\"font\"); return o.color; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "color",
+    "expr": "(() => { const o = document.createElement(\"font\"); return (o.color = \"x\", o.color); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "face",
+    "expr": "(() => { const o = document.createElement(\"font\"); return o.face; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "face",
+    "expr": "(() => { const o = document.createElement(\"font\"); return (o.face = \"x\", o.face); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "size",
+    "expr": "(() => { const o = document.createElement(\"font\"); return o.size; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLFontElement",
+    "member": "size",
+    "expr": "(() => { const o = document.createElement(\"font\"); return (o.size = \"x\", o.size); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

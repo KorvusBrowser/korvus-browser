@@ -1,0 +1,408 @@
+[
+  {
+    "iface": "Node",
+    "member": "ELEMENT_NODE",
+    "expr": "Node.ELEMENT_NODE",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "ATTRIBUTE_NODE",
+    "expr": "Node.ATTRIBUTE_NODE",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "TEXT_NODE",
+    "expr": "Node.TEXT_NODE",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "CDATA_SECTION_NODE",
+    "expr": "Node.CDATA_SECTION_NODE",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "ENTITY_REFERENCE_NODE",
+    "expr": "Node.ENTITY_REFERENCE_NODE",
+    "expected": 5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "ENTITY_NODE",
+    "expr": "Node.ENTITY_NODE",
+    "expected": 6,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "PROCESSING_INSTRUCTION_NODE",
+    "expr": "Node.PROCESSING_INSTRUCTION_NODE",
+    "expected": 7,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "COMMENT_NODE",
+    "expr": "Node.COMMENT_NODE",
+    "expected": 8,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_NODE",
+    "expr": "Node.DOCUMENT_NODE",
+    "expected": 9,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_TYPE_NODE",
+    "expr": "Node.DOCUMENT_TYPE_NODE",
+    "expected": 10,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_FRAGMENT_NODE",
+    "expr": "Node.DOCUMENT_FRAGMENT_NODE",
+    "expected": 11,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "NOTATION_NODE",
+    "expr": "Node.NOTATION_NODE",
+    "expected": 12,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_DISCONNECTED",
+    "expr": "Node.DOCUMENT_POSITION_DISCONNECTED",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_PRECEDING",
+    "expr": "Node.DOCUMENT_POSITION_PRECEDING",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_FOLLOWING",
+    "expr": "Node.DOCUMENT_POSITION_FOLLOWING",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_CONTAINS",
+    "expr": "Node.DOCUMENT_POSITION_CONTAINS",
+    "expected": 8,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_CONTAINED_BY",
+    "expr": "Node.DOCUMENT_POSITION_CONTAINED_BY",
+    "expected": 16,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC",
+    "expr": "Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC",
+    "expected": 32,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "constructor",
+    "expr": "new Node()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nodeType",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.nodeType; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nodeName",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.nodeName; })()",
+    "expected": "DIV",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "isConnected",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.isConnected; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "parentNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.parentNode; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "parentElement",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.parentElement; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "hasChildNodes",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.hasChildNodes(); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "firstChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.firstChild; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lastChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.lastChild; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "previousSibling",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.previousSibling; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nextSibling",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.nextSibling; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nodeValue",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.nodeValue; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nodeValue",
+    "expr": "(() => { const o = document.createElement(\"div\"); return (o.nodeValue = \"x\", o.nodeValue); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "textContent",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.textContent; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "textContent",
+    "expr": "(() => { const o = document.createElement(\"div\"); return (o.textContent = \"x\", o.textContent); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "normalize",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.normalize(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "isEqualNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.isEqualNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "isSameNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.isSameNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "compareDocumentPosition",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.compareDocumentPosition(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "contains",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.contains(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lookupPrefix",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.lookupPrefix(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lookupPrefix",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.lookupPrefix(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lookupNamespaceURI",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.lookupNamespaceURI(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lookupNamespaceURI",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.lookupNamespaceURI(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "isDefaultNamespace",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.isDefaultNamespace(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "isDefaultNamespace",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.isDefaultNamespace(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "insertBefore",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.insertBefore(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "appendChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.appendChild(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "replaceChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.replaceChild(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "removeChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return o.removeChild(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "ownerDocument",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.ownerDocument); })()",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "getRootNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.getRootNode()); })()",
+    "expected": "[object HTMLDivElement]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "parentNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.parentNode); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "parentElement",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.parentElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "childNodes",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.childNodes); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "firstChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.firstChild); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "lastChild",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.lastChild); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "previousSibling",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.previousSibling); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "nextSibling",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.nextSibling); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Node",
+    "member": "cloneNode",
+    "expr": "(() => { const o = document.createElement(\"div\"); return Object.prototype.toString.call(o.cloneNode()); })()",
+    "expected": "[object HTMLDivElement]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,4 @@
+<!doctype html><meta charset=utf-8><body><script>
+navigator.serviceWorker.addEventListener('message', (e) => { window.R = e.data; });
+navigator.serviceWorker.register('sw.js').then(async (reg) => { await navigator.serviceWorker.ready; (reg.active || reg.installing).postMessage('go'); }).catch((e) => { window.R = 'register failed: ' + e; });
+</script>

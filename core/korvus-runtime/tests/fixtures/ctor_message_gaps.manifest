@@ -1,0 +1,61 @@
+# Every interface object whose `new X()` / `X()` pair this engine does not yet answer Chrome 152's
+# way, one `<realm> <interface>` per line, sorted. Written by `tests/ctor_messages_live.rs`, which
+# compares a live window realm and a live dedicated Worker against
+# `fixtures/chrome-152-ctor-messages.json` -- a recording of Chrome 152.0.7977.82, headed on the
+# Wayland desktop, over a loopback page, 2026-10-16. Goal invariant I5: a sorted manifest, never a count.
+#
+# A LINE MAY ONLY LEAVE BY BEING FIXED. The gate fails if an unpinned name differs (a regression) AND
+# if a pinned name now agrees (progress that must be recorded), so this file cannot drift in either
+# direction. `KORVUS_UPDATE_CTOR_GAPS=1` rewrites it, keeping this header.
+#
+# THE BARE-CALL CLASS IS CLOSED (SSOT W7.3, 34 rows: 21 window + 13 worker). Every remaining row
+# below differs in its `new X()` answer only -- the bare `X()` half of all 27 is Chrome's, except the
+# five the two seams named at the end of this header still own. W7.1's note here said the class was
+# "19 window + 13 worker hand bodies, one missing line each" and pointed at
+# `install::live::rows::build_newable`; re-measured on a live release build it was 26 window + 15
+# worker and NOT one mechanism but three, only one of which build_newable could have reached:
+#
+#   * a hand `cb_*_ctor` body with no `new.target` check (`Highlight`, `Path2D`, `CSSStyleSheet`,
+#     `AudioContext`, `OfflineAudioContext`, `AudioBuffer`, and the shared body behind
+#     `AudioProcessingEvent`/`OfflineAudioCompletionEvent`). Not "returns undefined": `Highlight()`
+#     re-prototyped the WINDOW onto `Highlight.prototype` and `Path2D()` stamped a path id on it.
+#   * the hand-table `Model::Value` PLACEHOLDER in `installer::create_interface_in`, which was a no-op
+#     body and so returned `undefined` on a call (`ClipboardItem`, `CustomElementRegistry`,
+#     `DOMParser`, `XMLSerializer`, `ReadableStreamDefaultReader`, `WritableStreamDefaultWriter`), and
+#     the same shape hand-written in `install::live::bootstrap::mint_event_target` for the worker's
+#     `EventTarget`.
+#   * a `deno_core` cppgc CLASS TEMPLATE standing in for the interface object. `deno_ops` generates a
+#     `#[constructor]` that ends in `cppgc::wrap_object(scope, args.this(), …)` and never reads
+#     `new.target`, so `DOMRect()`, `DOMPoint()`, `DOMQuad()`, `DOMMatrix()`, `WebKitCSSMatrix()`,
+#     `Headers()`, `FormData()`, `TextEncoder()` and `TextDecoder()` WRAPPED THE GLOBAL OBJECT as the
+#     instance and handed it back -- `[object Window]` in the page, `[object DedicatedWorkerGlobalScope]`
+#     in a worker. `install::live::rows::guard_native_class_ctors` gives each of them a Rust interface
+#     object over the same class prototype; op2 has no `new.target` hook to fix it at the class.
+#
+#   * a hand body throws a DIFFERENT wrong message on `new` (`AudioBuffer`, `KeyframeEffect`,
+#     `IntersectionObserver`, `PerformanceObserver`, `ResizeObserver`, `OfflineAudioContext`,
+#     `VTTCue`, `ClipboardItem`, `ReadableStreamDefaultReader`, `WritableStreamDefaultWriter`):
+#     Chrome's is the WebIDL argument count and this engine's is its own validation, or it mints where
+#     Chrome throws. The bare-call half of every one of them is Chrome's since W7.3.
+#   * an interface the registry row does NOT own because another layer replaced it: `AbstractRange`,
+#     `StaticRange` and `EventTarget` are JS classes ("Class constructor X cannot be invoked without
+#     'new'"), and `Screen()` returns the Window. That is the `host.js` seam (W4.j), not the ctor
+#     builders' -- the window `EventTarget` is `host.js`'s class; the WORKER's was this unit's and is
+#     fixed.
+#   * `CSSMathSum`/`Min`/`Max`/`Product`: Chrome runs a real body that throws "Arguments can't be
+#     empty"; this engine has no body, so its shell constructor mints. Honest for a shell.
+#   * `SpeechGrammar`, `TimelineTrigger`, `WebSocketError`: Chrome constructs them with no arguments and
+#     this engine answers the illegal pair. `_declares_ctor` cannot promote them from the capture
+#     (`length: 0`, `newable: true`) without promoting `Array` and `Object` with them, because webref
+#     declares a constructor for none of them. (`SpeechGrammarList` left this list with REALWEB H35: webref DOES declare
+#     its `constructor()`, which the generator's IDL scan missed while it read speech-api.idl's prose
+#     "This interface has been deprecated" as `interface has`.)
+#   * `WebKitMutationObserver`: Chrome's messages name `MutationObserver`, because the two globals are
+#     ONE function object there and two interface objects here. An aliasing defect, not a message one.
+#
+# EMPTY SINCE 2026-10-11 (challenge batch 81): the last nine rows left by the argument count coming first --
+# AudioBuffer, IntersectionObserver, PerformanceObserver (both realms), ResizeObserver, VTTCue (its required count
+# in the constructor's data), OfflineAudioContext and KeyframeEffect (overload resolution by count: two arguments
+# "Overload resolution failed.", one the copy constructor) -- and WebKitMutationObserver published as MutationObserver
+# itself. Any line below is a regression.
+

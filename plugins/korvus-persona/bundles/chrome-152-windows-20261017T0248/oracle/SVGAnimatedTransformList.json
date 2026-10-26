@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGAnimatedTransformList",
+    "member": "constructor",
+    "expr": "new SVGAnimatedTransformList()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGAnimatedTransformList",
+    "member": "baseVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"g\").transform; return Object.prototype.toString.call(o.baseVal); })()",
+    "expected": "[object SVGTransformList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGAnimatedTransformList",
+    "member": "animVal",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"g\").transform; return Object.prototype.toString.call(o.animVal); })()",
+    "expected": "[object SVGTransformList]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

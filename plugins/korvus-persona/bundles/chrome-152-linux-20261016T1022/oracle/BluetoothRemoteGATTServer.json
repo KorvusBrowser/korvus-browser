@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "BluetoothRemoteGATTServer",
+    "member": "constructor",
+    "expr": "new BluetoothRemoteGATTServer()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

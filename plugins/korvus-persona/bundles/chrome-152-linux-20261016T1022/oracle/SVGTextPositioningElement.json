@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "SVGTextPositioningElement",
+    "member": "constructor",
+    "expr": "new SVGTextPositioningElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

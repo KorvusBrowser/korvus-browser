@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CreateMonitor",
+    "member": "constructor",
+    "expr": "new CreateMonitor()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGPolylineElement",
+    "member": "constructor",
+    "expr": "new SVGPolylineElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPolylineElement",
+    "member": "points",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polyline\"); return Object.prototype.toString.call(o.points); })()",
+    "expected": "[object SVGPointList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPolylineElement",
+    "member": "animatedPoints",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polyline\"); return Object.prototype.toString.call(o.animatedPoints); })()",
+    "expected": "[object SVGPointList]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

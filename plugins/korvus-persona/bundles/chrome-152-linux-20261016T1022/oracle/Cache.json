@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "Cache",
+    "member": "constructor",
+    "expr": "new Cache()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "add",
+    "expr": "Cache.prototype.add.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "add",
+    "expr": "Cache.prototype.add.name",
+    "expected": "add",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "addAll",
+    "expr": "Cache.prototype.addAll.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "addAll",
+    "expr": "Cache.prototype.addAll.name",
+    "expected": "addAll",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "delete",
+    "expr": "Cache.prototype.delete.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "delete",
+    "expr": "Cache.prototype.delete.name",
+    "expected": "delete",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "keys",
+    "expr": "Cache.prototype.keys.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "keys",
+    "expr": "Cache.prototype.keys.name",
+    "expected": "keys",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "match",
+    "expr": "Cache.prototype.match.length",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "match",
+    "expr": "Cache.prototype.match.name",
+    "expected": "match",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "matchAll",
+    "expr": "Cache.prototype.matchAll.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "matchAll",
+    "expr": "Cache.prototype.matchAll.name",
+    "expected": "matchAll",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "put",
+    "expr": "Cache.prototype.put.length",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "put",
+    "expr": "Cache.prototype.put.name",
+    "expected": "put",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "add",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.add.call(Object.create(Cache.prototype), \"/x\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "addAll",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.addAll.call(Object.create(Cache.prototype), [])); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "delete",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.delete.call(Object.create(Cache.prototype), \"/x\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "keys",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.keys.call(Object.create(Cache.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "match",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.match.call(Object.create(Cache.prototype), \"/x\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "matchAll",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.matchAll.call(Object.create(Cache.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Cache",
+    "member": "put",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(Cache.prototype.put.call(Object.create(Cache.prototype), \"/x\", new Response(\"\"))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "CSSLayerBlockRule",
+    "member": "constructor",
+    "expr": "new CSSLayerBlockRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSLayerBlockRule",
+    "member": "name",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@layer a { b { color: red } }\"); return s.cssRules[0]; })(); return o.name; })()",
+    "expected": "a",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

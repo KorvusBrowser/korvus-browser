@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "CSSKeyframeRule",
+    "member": "constructor",
+    "expr": "new CSSKeyframeRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSKeyframeRule",
+    "member": "keyText",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0].cssRules[0]; })(); return o.keyText; })()",
+    "expected": "0%",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSKeyframeRule",
+    "member": "keyText",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0].cssRules[0]; })(); return (o.keyText = \"x\", o.keyText); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSKeyframeRule",
+    "member": "style",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@keyframes k { from { color: red } }\"); return s.cssRules[0].cssRules[0]; })(); return Object.prototype.toString.call(o.style); })()",
+    "expected": "[object CSSStyleDeclaration]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

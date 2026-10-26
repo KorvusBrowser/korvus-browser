@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "SVGPathElement",
+    "member": "constructor",
+    "expr": "new SVGPathElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getTotalLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getTotalLength(); })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPointAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getPointAtLength(1); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPointAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getPointAtLength(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPathSegmentAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getPathSegmentAtLength(1); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPathSegmentAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getPathSegmentAtLength(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPathData",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.getPathData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "setPathData",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.setPathData([]); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "setPathData",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return o.setPathData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "pathLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return Object.prototype.toString.call(o.pathLength); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPointAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return Object.prototype.toString.call(o.getPointAtLength(1)); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPathSegmentAtLength",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return Object.prototype.toString.call(o.getPathSegmentAtLength(1)); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGPathElement",
+    "member": "getPathData",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"path\"); return Object.prototype.toString.call(o.getPathData()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

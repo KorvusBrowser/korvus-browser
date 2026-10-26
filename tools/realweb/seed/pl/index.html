@@ -1,0 +1,13 @@
+<!doctype html><html><head>
+<link rel="preload" as="image" href="/r/i?k=pre-narrow" media="(max-width: 576px)">
+<link rel="preload" as="image" href="/r/i?k=pre-wide" media="(min-width: 1000px)">
+<link rel="preload" as="image" href="/r/i?k=pre-nomedia">
+<style>.bgc { background-image: url(/r/i?k=css-rule); } .hid { display: none; } .hidbg { background-image: url(/r/i?k=css-hidden); }</style>
+</head><body>
+<div id="hero" style="width:10px;height:10px;background-image:url(/r/i?k=inline-first)"></div>
+<div class="bgc" style="width:10px;height:10px"></div>
+<div class="hid"><div class="hidbg" style="width:10px;height:10px"></div><div style="width:10px;height:10px;background-image:url(/r/i?k=inline-hidden)"></div></div>
+<img src="/r/i?k=img-plain">
+<script>document.getElementById('hero').style.backgroundImage = 'url(/r/i?k=inline-second)';</script>
+<script>addEventListener('load', function () { setTimeout(function () { fetch('/report').then(function (r) { return r.json(); }).then(function (rep) { window.R = Object.keys(rep).filter(function (k) { return k !== 'page' && k !== 'report'; }).sort().join(','); }); }, 800); });</script>
+</body></html>

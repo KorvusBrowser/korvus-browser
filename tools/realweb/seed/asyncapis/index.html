@@ -1,0 +1,41 @@
+<!doctype html><title>pending</title><body><script>
+// REALWEB H42 H43 V17 V18 V19 V20 V21: the async browser APIs a sensor races against its timers, each the way
+// Brave 151 (the persona) settles it -- or leaves it pending behind a prompt no one answers.
+const out = {}, t0 = performance.now(), now = () => Math.round(performance.now() - t0);
+const msg = p => p.then(v => 'ok:' + String(v), e => (e && e.name) + ': ' + (e && e.message));
+const later = (name, p, ms = 1200) => Promise.race([msg(p), new Promise(r => setTimeout(() => r('PENDING'), ms))]).then(v => { out[name] = v; });
+const jobs = [];
+jobs.push(later('fetch.ftp', fetch('ftp:')));
+jobs.push(later('fetch.ftp2', fetch('ftp://example.com/x')));
+jobs.push(later('fetch.chrome', fetch('chrome://version')));
+jobs.push(later('fetch.blobbad', fetch('blob:https://example.com/nope')));
+try { out.reqHttp = new Request('http:').url === location.href.split('#')[0]; } catch (e) { out.reqHttp = e.name + ': ' + e.message; }
+jobs.push(new Promise(r => { const i = new Image(); i.onerror = e => { out.imgBad = 'error ' + i.complete + ' ' + i.naturalWidth; r(); }; i.onload = () => { out.imgBad = 'load ' + i.complete + ' ' + i.naturalWidth; r(); }; i.src = 'data:image/png;base64,AAAA'; }));
+jobs.push(new Promise(r => { const i = new Image(); i.onerror = () => { out.imgText = 'error'; r(); }; i.onload = () => { out.imgText = 'load'; r(); }; i.src = 'data:text/plain,hello'; }));
+const ac = new AudioContext(); out.acState0 = ac.state;
+jobs.push(later('ac.resume', ac.resume()).then(() => { out.acState1 = ac.state; }));
+out.acOnstate = typeof ac.onstatechange;
+jobs.push(later('clip.readText', navigator.clipboard.readText()));
+jobs.push(later('clip.read', navigator.clipboard.read()));
+jobs.push(later('midi', navigator.requestMIDIAccess()));
+jobs.push(later('midi.sysex', navigator.requestMIDIAccess({sysex: true})));
+out.notifPerm = Notification.permission;
+jobs.push(later('notif.request', Notification.requestPermission()));
+for (const n of ['ambient-light-sensor', 'fullscreen', 'nfc', 'speaker-selection', 'system-wake-lock', 'top-level-storage-access', 'web-app-installation', 'bogus-name', 'background-fetch', 'keyboard-lock', 'periodic-background-sync', 'pointer-lock'])
+  jobs.push(later('perm.' + n, navigator.permissions.query({name: n}).then(s => s.state + '/' + s.name)));
+jobs.push(later('perm.push', navigator.permissions.query({name: 'push'})));
+jobs.push(later('perm.push.uvo', navigator.permissions.query({name: 'push', userVisibleOnly: true}).then(s => s.state)));
+jobs.push(later('perm.midi.sysex', navigator.permissions.query({name: 'midi', sysex: true}).then(s => s.state)));
+jobs.push(later('perm.camera.ptz', navigator.permissions.query({name: 'camera', panTiltZoom: true}).then(s => s.state)));
+jobs.push(later('perm.empty', navigator.permissions.query({})));
+for (const m of ['immersive-vr', 'immersive-ar', 'inline', 'bogus'])
+  jobs.push(later('xr.' + m, navigator.xr.isSessionSupported(m)));
+jobs.push(new Promise(r => { const log = [], at = {}; const pc = new RTCPeerConnection({iceServers: []}); pc.createDataChannel('d');
+  pc.onicegatheringstatechange = () => { log.push('gs:' + pc.iceGatheringState); at[pc.iceGatheringState] = performance.now(); };
+  pc.onicecandidate = e => { log.push(e.candidate ? 'cand:' + e.candidate.candidate.split(' ')[2] + '/' + e.candidate.candidate.split(' ')[7] : 'cand:null'); if (e.candidate) at.cand = performance.now(); };
+  pc.createOffer().then(o => pc.setLocalDescription(o)).then(() => log.push('sld'));
+  // The order, and the pace: the host candidate right after `gathering`, `complete` about a tenth of
+  // a second after the candidate (Brave 151: 1-7 ms, then 113-127 ms).
+  setTimeout(() => { out.ice = log.join(' ') + ' paced=' + (at.cand - at.gathering < 40 && at.complete - at.cand >= 80 && at.complete - at.cand < 400); r(); }, 1500); }));
+Promise.all(jobs).then(() => { out.acState2 = ac.state; document.title = JSON.stringify(out); });
+</script></body>

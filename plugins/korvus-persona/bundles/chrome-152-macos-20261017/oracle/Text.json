@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "Text",
+    "member": "constructor",
+    "expr": "(() => { const o = new Text(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Text]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "splitText",
+    "expr": "(() => { const o = new Text(); return o.splitText(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "splitText",
+    "expr": "(() => { const o = new Text(); return o.splitText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "wholeText",
+    "expr": "(() => { const o = new Text(); return o.wholeText; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "getBoxQuads",
+    "expr": "(() => { const o = new Text(); return o.getBoxQuads(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "convertQuadFromNode",
+    "expr": "(() => { const o = new Text(); return o.convertQuadFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "convertRectFromNode",
+    "expr": "(() => { const o = new Text(); return o.convertRectFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "convertPointFromNode",
+    "expr": "(() => { const o = new Text(); return o.convertPointFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Text",
+    "member": "assignedSlot",
+    "expr": "(() => { const o = new Text(); return o.assignedSlot; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

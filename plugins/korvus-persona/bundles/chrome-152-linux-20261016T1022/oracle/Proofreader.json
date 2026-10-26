@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "Proofreader",
+    "member": "create",
+    "expr": "Proofreader.create()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Proofreader",
+    "member": "availability",
+    "expr": "Proofreader.availability()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Proofreader",
+    "member": "constructor",
+    "expr": "new Proofreader()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

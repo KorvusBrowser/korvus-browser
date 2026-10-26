@@ -1,0 +1,34 @@
+<!doctype html><html><body><form id="f"><select id="s" name="s"><option value="a" id="oa">A</option><optgroup label="g"><option value="b" name="nb">B</option></optgroup><option value="c">C</option></select></form><script>
+(function () {
+var s = document.getElementById('s'), out = {};
+var names = function () { return Array.prototype.map.call(s.options, function (o) { return o.value; }).join(','); };
+var step = function (k, f) { try { var v = f(); out[k] = v === undefined ? names() : v; } catch (e) { out[k] = 'THREW ' + e.name; } };
+step('addEnd', function () { s.add(new Option('D', 'd')); });
+step('addIdx0', function () { s.add(new Option('E', 'e'), 0); });
+step('addBeforeEl', function () { s.add(new Option('F', 'f'), s.options[2]); });
+step('addDiv', function () { s.add(document.createElement('div')); });
+step('remove0', function () { s.remove(0); });
+step('removeOob', function () { s.remove(99); });
+step('item1', function () { return s.item(1) && s.item(1).value; });
+step('itemOob', function () { return String(s.item(99)); });
+step('namedId', function () { return s.namedItem('oa') && s.namedItem('oa').value; });
+step('namedName', function () { return s.namedItem('nb') && s.namedItem('nb').value; });
+step('namedNone', function () { return String(s.namedItem('zz')); });
+step('idx', function () { return s[1] && s[1].value; });
+step('lenSet', function () { s.length = 2; });
+step('idxSet', function () { s[3] = new Option('H', 'h'); });
+step('optsAdd', function () { s.options.add(new Option('I', 'i')); });
+step('optsRemove', function () { s.options.remove(0); });
+step('selIdx', function () { return s.selectedIndex; });
+step('value', function () { s.selectedIndex = 1; return s.value; });
+step('removeNoArg', function () { s.remove(); });
+step('optsIdxAppend', function () { s.options[s.options.length] = new Option('J', 'j'); });
+step('optsIdxNull', function () { s.options[0] = null; });
+step('optsIdxDiv', function () { s.options[0] = document.createElement('div'); });
+step('sameObject', function () { return s.options === s.options; });
+step('idxDesc', function () { var d = Object.getOwnPropertyDescriptor(s, 0); return d ? [d.writable, d.enumerable, d.configurable].join() : 'none'; });
+step('optsIdxDesc', function () { var d = Object.getOwnPropertyDescriptor(s.options, 0); return d ? [d.writable, d.enumerable, d.configurable].join() : 'none'; });
+step('keys', function () { return Object.keys(s).join(); });
+window.R = JSON.stringify(out);
+})();
+</script></body></html>

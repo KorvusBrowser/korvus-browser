@@ -1,0 +1,101 @@
+[
+ [
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none"
+ ],
+ [
+  "red",
+  "red",
+  "red",
+  "rgb(255, 0, 0)",
+  "rgb(255, 0, 0)",
+  "rgb(255, 0, 0)",
+  "rgb(255, 0, 0)"
+ ],
+ [
+  "url(#a)",
+  "url(\"#a\")",
+  "url(\"#a\")",
+  "url(\"#a\")",
+  "url(\"#a\")",
+  "url(\"#a\")",
+  "url(\"#a\")"
+ ],
+ [
+  "url(#a) none",
+  "url(\"#a\") none",
+  "url(\"#a\") none",
+  "url(\"#a\") none",
+  "url(\"#a\") none",
+  "url(\"#a\") none",
+  "url(\"#a\") none"
+ ],
+ [
+  "url(#a) red",
+  "url(\"#a\") red",
+  "url(\"#a\") red",
+  "url(\"#a\") rgb(255, 0, 0)",
+  "url(\"#a\") rgb(255, 0, 0)",
+  "url(\"#a\") rgb(255, 0, 0)",
+  "url(\"#a\") rgb(255, 0, 0)"
+ ],
+ [
+  "context-fill",
+  "context-fill",
+  "context-fill",
+  "context-fill",
+  "context-fill",
+  "context-fill",
+  "context-fill"
+ ],
+ [
+  "context-stroke",
+  "context-stroke",
+  "context-stroke",
+  "context-stroke",
+  "context-stroke",
+  "context-stroke",
+  "context-stroke"
+ ],
+ [
+  "currentcolor",
+  "currentcolor",
+  "currentcolor",
+  "rgb(0, 0, 255)",
+  "rgb(0, 0, 255)",
+  "rgb(0, 128, 0)",
+  "rgb(0, 128, 0)"
+ ],
+ [
+  "#abc",
+  "rgb(170, 187, 204)",
+  "rgb(170, 187, 204)",
+  "rgb(170, 187, 204)",
+  "rgb(170, 187, 204)",
+  "rgb(170, 187, 204)",
+  "rgb(170, 187, 204)"
+ ],
+ [
+  "transparent",
+  "transparent",
+  "transparent",
+  "rgba(0, 0, 0, 0)",
+  "rgba(0, 0, 0, 0)",
+  "rgba(0, 0, 0, 0)",
+  "rgba(0, 0, 0, 0)"
+ ],
+ [
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)",
+  "rgba(1, 2, 3, 0.5)"
+ ]
+]

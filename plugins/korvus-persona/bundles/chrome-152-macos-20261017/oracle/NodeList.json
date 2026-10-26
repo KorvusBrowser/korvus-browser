@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "NodeList",
+    "member": "constructor",
+    "expr": "new NodeList()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NodeList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.querySelectorAll(\"*\"); })(); return o.item(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NodeList",
+    "member": "length",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.querySelectorAll(\"*\"); })(); return o.length; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "NodeList",
+    "member": "item",
+    "expr": "(() => { const o = (() => { const d = document.createElement(\"div\"); d.innerHTML = \"<i></i><b></b>\"; return d.querySelectorAll(\"*\"); })(); return Object.prototype.toString.call(o.item(1)); })()",
+    "expected": "[object HTMLElement]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

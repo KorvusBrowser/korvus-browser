@@ -1,0 +1,14 @@
+<!doctype html><title>t</title><style>body{margin:0;font:16px/20px monospace} .b{display:-webkit-box;width:100px}</style><body>
+<!-- L11b: the items of a HORIZONTAL legacy -webkit-box are shrink-to-fit against the box: a 232px run of text, bare or in a span/div, with or without -webkit-box-flex, is 100 wide on three lines in a 100px box, and two such spans are 100 wide each (no shrink between them). korvus kept them at max-content on one line. -->
+<div id=t class=b>aaaa bbbb cccc dddd eeee ffff</div>
+<div class=b><span id=s>aaaa bbbb cccc dddd eeee ffff</span></div>
+<div class=b><div id=d>aaaa bbbb cccc dddd eeee ffff</div></div>
+<div class=b><span id=f style="-webkit-box-flex:1">aaaa bbbb cccc dddd eeee ffff</span></div>
+<div class=b><span id=two1>aaaa bbbb cccc</span><span id=two2>dddd eeee ffff</span></div>
+<div class=b style="-webkit-box-orient:vertical"><span id=v>aaaa bbbb cccc dddd eeee ffff</span></div>
+<script>
+const r = {}; const g = id => document.getElementById(id);
+r.t = [g('t').offsetWidth, g('t').offsetHeight];
+for (const id of ['s', 'd', 'f', 'two1', 'two2', 'v']) { const b = g(id).getBoundingClientRect(); r[id] = [Math.round(b.width), Math.round(b.height)]; }
+document.title = JSON.stringify(r);
+</script>

@@ -1,0 +1,24 @@
+<!doctype html><meta charset=utf-8><title>img complete</title>
+<body>
+<script>
+// HTMLImageElement.complete across a request's lifecycle (ACCESS differential sweep). Chrome 150:
+// complete is true before a src is set, FALSE while the request is in flight, and true again once it
+// settles with load or error; naturalWidth is the decoded size on load and 0 on a broken image.
+(function () {
+  var GIF = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+  var BAD = "data:image/png;base64,AAAA";
+  var r = {};
+  var good = new Image();
+  r.completeBeforeSrc = good.complete;
+  good.src = GIF;
+  r.completeAfterSrc = good.complete;
+  good.onerror = function () { r.loadComplete = "UNEXPECTED_ERROR"; window.__img = JSON.stringify(r); };
+  good.onload = function () {
+    r.loadComplete = good.complete; r.loadNW = good.naturalWidth; r.loadNH = good.naturalHeight;
+    var bad = new Image();
+    bad.onload = function () { r.errorComplete = "UNEXPECTED_LOAD"; window.__img = JSON.stringify(r); };
+    bad.onerror = function () { r.errorComplete = bad.complete; r.errorNW = bad.naturalWidth; window.__img = JSON.stringify(r); };
+    bad.src = BAD;
+  };
+})();
+</script>

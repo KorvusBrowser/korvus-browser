@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "GPUShaderModule",
+    "member": "constructor",
+    "expr": "new GPUShaderModule()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "GPUShaderModule.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").get.call(Object.create(GPUShaderModule.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "getCompilationInfo",
+    "expr": "Object.prototype.toString.call(GPUShaderModule.prototype.getCompilationInfo.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "getCompilationInfo",
+    "expr": "Object.prototype.toString.call(GPUShaderModule.prototype.getCompilationInfo.call(Object.create(GPUShaderModule.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").get.call(Object.create(GPUShaderModule.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPUShaderModule.prototype, \"label\").set.call(Object.create(GPUShaderModule.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "getCompilationInfo",
+    "expr": "(() => { try { const v = GPUShaderModule.prototype[\"getCompilationInfo\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "GPUShaderModule",
+    "member": "getCompilationInfo",
+    "expr": "(() => { try { const v = GPUShaderModule.prototype[\"getCompilationInfo\"].call(Object.create(GPUShaderModule.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

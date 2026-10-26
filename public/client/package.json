@@ -1,0 +1,27 @@
+{
+  "name": "@korvus/client",
+  "version": "0.1.0",
+  "description": "A browser front end over the DevTools protocol, as web components: tabs, the address bar, popups as windows, dialogs, Korean and other IME input. For korvus, and any Chrome.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "build/korvus-client.js",
+  "module": "build/korvus-client.js",
+  "exports": {
+    ".": "./build/korvus-client.js"
+  },
+  "files": [
+    "build",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

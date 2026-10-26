@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "GeolocationPositionError",
+    "member": "PERMISSION_DENIED",
+    "expr": "GeolocationPositionError.PERMISSION_DENIED",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GeolocationPositionError",
+    "member": "POSITION_UNAVAILABLE",
+    "expr": "GeolocationPositionError.POSITION_UNAVAILABLE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GeolocationPositionError",
+    "member": "TIMEOUT",
+    "expr": "GeolocationPositionError.TIMEOUT",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GeolocationPositionError",
+    "member": "constructor",
+    "expr": "new GeolocationPositionError()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

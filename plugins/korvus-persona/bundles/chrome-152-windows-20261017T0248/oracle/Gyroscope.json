@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "Gyroscope",
+    "member": "constructor",
+    "expr": "(() => { const o = new Gyroscope(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Gyroscope]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Gyroscope",
+    "member": "x",
+    "expr": "(() => { const o = new Gyroscope(); return o.x; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Gyroscope",
+    "member": "y",
+    "expr": "(() => { const o = new Gyroscope(); return o.y; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Gyroscope",
+    "member": "z",
+    "expr": "(() => { const o = new Gyroscope(); return o.z; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

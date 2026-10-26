@@ -1,0 +1,93 @@
+[
+  {
+    "iface": "GPURenderPipeline",
+    "member": "constructor",
+    "expr": "new GPURenderPipeline()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "GPURenderPipeline.prototype.label",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").get.call(Object.create(GPURenderPipeline.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPURenderPipeline.prototype.getBindGroupLayout.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPURenderPipeline.prototype.getBindGroupLayout.call(Object.create(GPURenderPipeline.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "getBindGroupLayout",
+    "expr": "GPURenderPipeline.prototype.getBindGroupLayout.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").get.call(Object.create(GPURenderPipeline.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "label",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(GPURenderPipeline.prototype, \"label\").set.call(Object.create(GPURenderPipeline.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "getBindGroupLayout",
+    "expr": "(() => { try { const v = GPURenderPipeline.prototype[\"getBindGroupLayout\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "GPURenderPipeline",
+    "member": "getBindGroupLayout",
+    "expr": "(() => { try { const v = GPURenderPipeline.prototype[\"getBindGroupLayout\"].call(Object.create(GPURenderPipeline.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

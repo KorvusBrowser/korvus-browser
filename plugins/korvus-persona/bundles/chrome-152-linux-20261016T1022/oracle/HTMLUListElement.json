@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "HTMLUListElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLUListElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLUListElement",
+    "member": "constructor",
+    "expr": "new HTMLUListElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLUListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"ul\"); return o.compact; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLUListElement",
+    "member": "compact",
+    "expr": "(() => { const o = document.createElement(\"ul\"); return (o.compact = true, o.compact); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLUListElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"ul\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLUListElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"ul\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

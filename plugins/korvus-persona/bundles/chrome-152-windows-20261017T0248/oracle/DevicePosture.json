@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "DevicePosture",
+    "member": "constructor",
+    "expr": "new DevicePosture()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DevicePosture",
+    "member": "type",
+    "expr": "(() => { const o = navigator.devicePosture; return o.type; })()",
+    "expected": "continuous",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DevicePosture",
+    "member": "type",
+    "expr": "(() => { const o = navigator.devicePosture; return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DevicePosture",
+    "member": "onchange",
+    "expr": "(() => { const o = navigator.devicePosture; return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DevicePosture",
+    "member": "onchange",
+    "expr": "(() => { const o = navigator.devicePosture; return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

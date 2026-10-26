@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<script src="testing.js"></script>
+<script id=interface>
+  testing.expectEqual('object', typeof cookieStore);
+  testing.expectEqual(cookieStore, window.cookieStore);
+  testing.expectEqual(true, cookieStore instanceof CookieStore);
+  testing.expectEqual(true, cookieStore instanceof EventTarget);
+  testing.expectEqual('function', typeof cookieStore.get);
+  testing.expectEqual('function', typeof cookieStore.getAll);
+  testing.expectEqual('function', typeof cookieStore.set);
+  testing.expectEqual('function', typeof cookieStore.delete);
+</script>
+
+<script id=set-and-get type=module>
+  const state = await testing.async();
+  await cookieStore.set('user', 'lp');
+  const item = await cookieStore.get('user');
+  await cookieStore.delete('user');
+  const afterDelete = await cookieStore.get('user');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual('user', item.name);
+    testing.expectEqual('lp', item.value);
+    // We follow Chrome and expose the full attribute set, not just name/value.
+    testing.expectEqual('/', item.path);
+    testing.expectEqual('strict', item.sameSite);
+    testing.expectEqual(null, item.expires);
+    testing.expectEqual(null, afterDelete);
+  });
+</script>
+
+<script id=set-options type=module>
+  const state = await testing.async();
+  await cookieStore.set({ name: 'prefs', value: 'dark', sameSite: 'lax' });
+  const item = await cookieStore.get({ name: 'prefs' });
+  await cookieStore.delete('prefs');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual('prefs', item.name);
+    testing.expectEqual('dark', item.value);
+    testing.expectEqual('lax', item.sameSite);
+  });
+</script>
+
+<script id=get-missing type=module>
+  const state = await testing.async();
+  const item = await cookieStore.get('does-not-exist');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(null, item);
+  });
+</script>
+
+<script id=get-all type=module>
+  const state = await testing.async();
+  await cookieStore.set('a', '1');
+  await cookieStore.set('b', '2');
+  const all = await cookieStore.getAll();
+  const names = all.map(c => c.name);
+
+  const justA = await cookieStore.getAll('a');
+
+  await cookieStore.delete('a');
+  await cookieStore.delete('b');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, all.length >= 2);
+    testing.expectEqual(true, names.includes('a'));
+    testing.expectEqual(true, names.includes('b'));
+
+    testing.expectEqual(1, justA.length);
+    testing.expectEqual('a', justA[0].name);
+    testing.expectEqual('1', justA[0].value);
+  });
+</script>
+
+<script id=change-event-binds-listeners-at-mutation type=module>
+  const state = await testing.async();
+  // A change enqueued while nobody is subscribed must not be delivered to a
+  // listener that registers afterwards but before the task drains.
+  await cookieStore.set('pre-listener', 'v');
+
+  const events = [];
+  const handler = (e) => events.push(...e.changed.map(c => c.name));
+  cookieStore.addEventListener('change', handler);
+
+  await cookieStore.set('post-listener', 'v');
+  await new Promise(r => setTimeout(r, 0));
+
+  cookieStore.removeEventListener('change', handler);
+  await cookieStore.delete('pre-listener');
+  await cookieStore.delete('post-listener');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(false, events.includes('pre-listener'));
+    testing.expectEqual(true, events.includes('post-listener'));
+  });
+</script>
+
+<script id=set-max-age type=module>
+  const state = await testing.async();
+  const events = [];
+  const handler = (e) => events.push(e);
+  cookieStore.addEventListener('change', handler);
+
+  // A positive maxAge stores the cookie.
+  await cookieStore.set({ name: 'ma-pos', value: 'v', maxAge: 60 });
+  const posItem = await cookieStore.get('ma-pos');
+
+  // maxAge <= 0 expires immediately: nothing is stored and no change event
+  // fires for it.
+  await cookieStore.set({ name: 'ma-zero', value: 'v', maxAge: 0 });
+  await cookieStore.set({ name: 'ma-neg', value: 'v', maxAge: -60 });
+  await new Promise(r => setTimeout(r, 0));
+  const zeroItem = await cookieStore.get('ma-zero');
+  const negItem = await cookieStore.get('ma-neg');
+
+  // maxAge and expires are mutually exclusive.
+  let bothRejected = false;
+  try {
+    await cookieStore.set({ name: 'ma-both', value: 'v', maxAge: 60, expires: Date.now() + 60000 });
+  } catch (err) {
+    bothRejected = true;
+  }
+
+  cookieStore.removeEventListener('change', handler);
+  await cookieStore.delete('ma-pos');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual('v', posItem.value);
+    testing.expectEqual(null, zeroItem);
+    testing.expectEqual(null, negItem);
+    testing.expectEqual(true, bothRejected);
+
+    // Only the stored (positive) cookie should have produced an event.
+    const names = events.flatMap(e => e.changed.map(c => c.name));
+    testing.expectEqual(1, names.length);
+    testing.expectEqual('ma-pos', names[0]);
+  });
+</script>
+
+<script id=delete-options type=module>
+  const state = await testing.async();
+  await cookieStore.set('tmp', 'x');
+  await cookieStore.delete({ name: 'tmp' });
+  const item = await cookieStore.get('tmp');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(null, item);
+  });
+</script>
+
+<script id=onchange-handler>
+  testing.expectEqual(null, cookieStore.onchange);
+  cookieStore.onchange = function() {};
+  testing.expectEqual('function', typeof cookieStore.onchange);
+  cookieStore.onchange = null;
+  testing.expectEqual(null, cookieStore.onchange);
+</script>
+
+<script id=cookie-change-event>
+  const ev = new CookieChangeEvent('change');
+  testing.expectEqual('change', ev.type);
+  testing.expectEqual(0, ev.changed.length);
+  testing.expectEqual(0, ev.deleted.length);
+
+  // The changed/deleted lists must be copied off the transient call arena;
+  // reading them after construction must stay valid.
+  const ev2 = new CookieChangeEvent('change', {
+    changed: [{ name: 'c1', value: 'v1' }, { name: 'c2', value: 'v2' }],
+    deleted: [{ name: 'd1', value: 'w1' }],
+  });
+  testing.expectEqual(2, ev2.changed.length);
+  testing.expectEqual('c1', ev2.changed[0].name);
+  testing.expectEqual('v2', ev2.changed[1].value);
+  testing.expectEqual(1, ev2.deleted.length);
+  testing.expectEqual('d1', ev2.deleted[0].name);
+</script>
+
+<script id=change-event-from-cookieStore-set type=module>
+  const state = await testing.async();
+  const events = [];
+  const handler = (e) => events.push(e);
+  cookieStore.addEventListener('change', handler);
+
+  await cookieStore.set('ev-from-set', 'v1');
+  // Spec says change events are queued tasks — yield to the loop.
+  await new Promise(r => setTimeout(r, 0));
+
+  const lenAfterSet = events.length;
+
+  await cookieStore.delete('ev-from-set');
+  await new Promise(r => setTimeout(r, 0));
+
+  const lenAfterDelete = events.length;
+
+  cookieStore.removeEventListener('change', handler);
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(1, lenAfterSet);
+    testing.expectEqual(1, events[0].changed.length);
+    testing.expectEqual('ev-from-set', events[0].changed[0].name);
+    testing.expectEqual('v1', events[0].changed[0].value);
+    testing.expectEqual(0, events[0].deleted.length);
+
+    testing.expectEqual(2, lenAfterDelete);
+    testing.expectEqual(0, events[1].changed.length);
+    testing.expectEqual(1, events[1].deleted.length);
+    testing.expectEqual('ev-from-set', events[1].deleted[0].name);
+  });
+</script>
+
+<script id=set-rejects-invalid-input type=module>
+  const state = await testing.async();
+  // Capture the rejection's error name (or null if it unexpectedly resolved).
+  const captureReject = async (init, valueArg) => {
+    try {
+      if (valueArg !== undefined) {
+        await cookieStore.set(init, valueArg);
+      } else {
+        await cookieStore.set(init);
+      }
+      return null;
+    } catch (err) {
+      return err.name;
+    }
+  };
+
+  // Empty name only rejects when the value is empty too or carries an '='.
+  // A nameless cookie with an ordinary value is valid (cf. `Set-Cookie: =v`).
+  const rejects = [
+    await captureReject('', ''),
+    await captureReject('', 'a=b'),
+    // Forbidden chars in name.
+    await captureReject('a=b', 'v'),
+    await captureReject('a;b', 'v'),
+    await captureReject('a\nb', 'v'),
+    // Forbidden chars in value.
+    await captureReject('k', 'v;injected=1'),
+    await captureReject('k', 'v\rinjected'),
+    // Forbidden chars in path / domain.
+    await captureReject({ name: 'k', value: 'v', path: '/;evil' }),
+    await captureReject({ name: 'k', value: 'v', domain: 'bad\n.example' }),
+  ];
+
+  // A nameless cookie with an ordinary value is accepted, and delete('')
+  // targets it without rejecting on the empty name.
+  await cookieStore.set('', 'nameless');
+  const namelessValue = (await cookieStore.get('')).value;
+  await cookieStore.delete('');
+  const afterNamelessDelete = await cookieStore.get('');
+
+  // A clean call still works after the rejections.
+  await cookieStore.set('after-validation', 'ok');
+  const item = await cookieStore.get('after-validation');
+  await cookieStore.delete('after-validation');
+
+  state.resolve();
+  await state.done(() => {
+    for (const name of rejects) {
+      testing.expectEqual('TypeError', name);
+    }
+    testing.expectEqual('nameless', namelessValue);
+    testing.expectEqual(null, afterNamelessDelete);
+    testing.expectEqual('ok', item.value);
+  });
+</script>
+
+<script id=change-event-delete-omits-value type=module>
+  const state = await testing.async();
+  const events = [];
+  const handler = (e) => events.push(e);
+  cookieStore.addEventListener('change', handler);
+
+  await cookieStore.set('ev-delete-val', 'original');
+  await new Promise(r => setTimeout(r, 0));
+
+  // Sanity: the change event must report the value that was stored.
+  const setValue = events[0].changed[0].value;
+
+  await cookieStore.delete('ev-delete-val');
+  await new Promise(r => setTimeout(r, 0));
+
+  const deletedLength = events[1].deleted.length;
+  const deletedName = events[1].deleted[0].name;
+  const deletedValue = events[1].deleted[0].value;
+
+  cookieStore.removeEventListener('change', handler);
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual('original', setValue);
+    // Per spec, deletion change events identify the removed cookie by name
+    // but carry no value (it is reported as undefined).
+    testing.expectEqual(1, deletedLength);
+    testing.expectEqual('ev-delete-val', deletedName);
+    testing.expectEqual(undefined, deletedValue);
+  });
+</script>
+
+<script id=change-event-from-document-cookie type=module>
+  const state = await testing.async();
+  const events = [];
+  const handler = (e) => events.push(e);
+  cookieStore.addEventListener('change', handler);
+
+  document.cookie = 'ev-from-doc=v1; path=/';
+  await new Promise(r => setTimeout(r, 0));
+
+  const lenAfterSet = events.length;
+
+  document.cookie = 'ev-from-doc=DELETED; path=/; max-age=0';
+  await new Promise(r => setTimeout(r, 0));
+
+  const lenAfterDelete = events.length;
+
+  cookieStore.removeEventListener('change', handler);
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(1, lenAfterSet);
+    testing.expectEqual('ev-from-doc', events[0].changed[0].name);
+    testing.expectEqual('v1', events[0].changed[0].value);
+
+    testing.expectEqual(2, lenAfterDelete);
+    testing.expectEqual('ev-from-doc', events[1].deleted[0].name);
+  });
+</script>
+
+<script id=change-event-onchange-attribute type=module>
+  const state = await testing.async();
+  let captured = null;
+  cookieStore.onchange = (e) => { captured = e; };
+
+  await cookieStore.set('ev-onchange', 'v1');
+  await new Promise(r => setTimeout(r, 0));
+
+  const wasCaptured = captured !== null;
+  const capturedName = captured ? captured.changed[0].name : null;
+
+  cookieStore.onchange = null;
+  await cookieStore.delete('ev-onchange');
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, wasCaptured);
+    testing.expectEqual('ev-onchange', capturedName);
+  });
+</script>

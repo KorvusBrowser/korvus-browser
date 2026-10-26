@@ -1,0 +1,32 @@
+[
+  {
+    "iface": "EyeDropper",
+    "member": "constructor",
+    "expr": "(() => { const o = new EyeDropper(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(() => { const o = new EyeDropper(); return Object.prototype.toString.call(o.open()); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(async () => { const o = new EyeDropper(); return await o.open(); })()",
+    "throws": "ReferenceError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(async () => { const o = new EyeDropper(); return Object.prototype.toString.call(await o.open()); })()",
+    "throws": "ReferenceError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

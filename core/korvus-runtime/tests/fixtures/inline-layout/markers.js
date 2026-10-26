@@ -1,0 +1,4 @@
+(function(){var d=document,b=d.body,R=[];b.style.font='14px system-ui';
+['<ul style="list-style-position:inside"><li id=t>item <b id=u>x</b></li></ul>','<details><summary id=t>dddd <b id=u>ssss</b></summary></details>','<details open><summary id=t>open <b id=u>y</b></summary>x</details>','<div style="display:list-item;list-style:square inside" id=t>sq <b id=u>z</b></div>','<div style="display:list-item;list-style:circle inside;font-size:30px" id=t>c <b id=u>z</b></div>','<summary id=t>bare <b id=u>w</b></summary>','<details><summary id=t style="font-size:20px">big <b id=u>v</b></summary></details>','<ul><li id=t>out <b id=u>v</b></li></ul>'].forEach(function(h,i){
+ b.innerHTML=h;var t=d.getElementById('t'),r=t.getBoundingClientRect(),u=d.getElementById('u').getBoundingClientRect();R.push([h.slice(0,45),[r.x,r.width,r.height],[u.x,u.y,u.height]]);});
+return R;})()

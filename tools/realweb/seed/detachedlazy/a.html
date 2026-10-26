@@ -1,0 +1,7 @@
+<!doctype html><meta charset=utf-8><body><script>
+// Unqualified reads, so they resolve on THIS document's global even after the frame has navigated. The
+// parent calls `readFormData` before navigating and `readNames` only after: Headers and DOMRect are
+// first read on this global once it is no longer the frame's.
+function readFormData() { return FormData; }
+function readNames() { return { Headers: Headers, DOMRect: DOMRect, FormData: FormData }; }
+</script>

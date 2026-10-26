@@ -1,0 +1,22 @@
+<!doctype html><title>pending</title><body><div id=p><div id=a></div><div id=b></div></div><script>
+// REALWEB H39b H40 H41: what dispatch reads and writes.
+const out = {}, $ = id => document.getElementById(id);
+// H40: dispatch reads the event's own type, never a page getter on the instance.
+{ const log = []; const ev = new Event('x1', {bubbles: true}); let calls = 0;
+  Object.defineProperty(ev, 'type', {get() { calls++; ev.stopPropagation(); return 'x1'; }});
+  $('a').addEventListener('x1', () => log.push('a')); $('p').addEventListener('x1', () => log.push('p'));
+  $('a').dispatchEvent(ev); out.typeGetter = log.join('') + ':' + calls; }
+// H39b: a re-dispatched event's target is the new target.
+{ const ev = new Event('x2'); const seen = [];
+  $('a').addEventListener('x2', e => seen.push(e.target.id)); $('b').addEventListener('x2', e => seen.push(e.target.id));
+  $('a').dispatchEvent(ev); $('b').dispatchEvent(ev); out.redispatch = seen.join(',') + ':' + ev.target.id; }
+// H41: only an event handler content attribute is a handler.
+{ window.ran = []; $('a').setAttribute('ont7', 'ran.push("t7")'); $('a').setAttribute('onclick', 'ran.push("click")');
+  $('a').setAttribute('onfoo', 'ran.push("foo")'); $('a').setAttribute('onbeforecopy', 'ran.push("beforecopy")');
+  $('a').setAttribute('onanimationend', 'ran.push("animationend")'); $('a').setAttribute('onmessage', 'ran.push("message")');
+  for (const t of ['t7', 'click', 'foo', 'beforecopy', 'animationend', 'message']) $('a').dispatchEvent(new Event(t));
+  document.body.setAttribute('onmessage', 'ran.push("body-message")'); document.body.setAttribute('ont8', 'ran.push("body-t8")');
+  document.body.dispatchEvent(new Event('t8'));
+  out.attrHandlers = ran.join(',') + ' | ' + ('ont7' in $('a')) + ' ' + typeof $('a').onclick + ' ' + typeof document.body.onmessage; }
+document.title = JSON.stringify(out);
+</script></body>

@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "HTMLProgressElement",
+    "member": "constructor",
+    "expr": "new HTMLProgressElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return o.value; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return o.max; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return (o.max = 1, o.max); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "position",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return o.position; })()",
+    "expected": -1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "max",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return (o.max = \"1\", o.max); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLProgressElement",
+    "member": "labels",
+    "expr": "(() => { const o = document.createElement(\"progress\"); return Object.prototype.toString.call(o.labels); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

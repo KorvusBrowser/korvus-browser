@@ -1,0 +1,21 @@
+<!doctype html><html><body>
+<!-- Pre-parsed instance: it exists in the tree BEFORE its definition, so define() must upgrade it,
+     and upgrading runs the class constructor on the live node -- the path Lit depends on and the one
+     that used to only swap the prototype. `field` proves the constructor's class fields initialized;
+     a bare prototype swap leaves it undefined (this was the MDN/caniuse `renderBefore` crash). -->
+<my-widget id="pre"></my-widget>
+<script>
+let connected = 0;
+class MyWidget extends HTMLElement {
+  field = 'init';
+  connectedCallback() { connected++; this.textContent = 'ready'; }
+}
+customElements.define('my-widget', MyWidget);
+const pre = document.getElementById('pre');
+// createElement path (already worked): constructor runs here too.
+const w = document.createElement('my-widget');
+document.body.appendChild(w);
+globalThis.__obstacle = 'ce:' + connected + ':' + w.textContent + ':' + (w instanceof MyWidget) +
+  ':upgrade=' + (pre instanceof MyWidget) + ',' + pre.field + ',' + pre.textContent;
+</script>
+</body></html>

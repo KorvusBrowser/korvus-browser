@@ -1,0 +1,52 @@
+<!doctype html><html><body>
+<svg id="sv" width="200" height="100" data-x="1"><path id="p" d="M0 0 L100 0 L100 100" fill="none" stroke="black"/><rect id="r" x="10" y="20" width="30" height="40"/><text id="t" x="5" y="50" font-size="16">Hi</text><circle id="c" cx="50" cy="50" r="10"/></svg>
+<svg id="sv2" width="200" height="100" viewBox="0 0 100 50" style="position:absolute;left:30px;top:40px"><g transform="translate(10,5) scale(2)"><rect id="r2" transform="rotate(90)" width="5" height="5"/></g><text id="t2" x="0" y="20" style="font:16px Arial">Hello</text></svg>
+<form id="f"><input id="i" value="orig"><input type="checkbox" id="cb" checked></form>
+<progress id="pr" value="3" max="10"></progress>
+<script>
+(async function () {
+var R = {}, step = function (k, f) { try { var v = f(); R[k] = (v && typeof v.then === 'function') ? v : v; } catch (e) { R[k] = 'THROW ' + e.name + ': ' + e.message; } };
+var s = document.createElement('script'); s.innerText = 'window.__ranInner = 7;'; document.body.appendChild(s);
+step('scriptInnerTextRan', function () { return window.__ranInner; });
+step('scriptInnerTextGet', function () { return s.innerText; });
+step('svgDataset', function () { var sv = document.getElementById('sv'); sv.dataset.y = '2'; return sv.dataset.x + '/' + sv.getAttribute('data-y') + '/' + Object.prototype.toString.call(sv.dataset); });
+step('getBBoxRect', function () { var b = document.getElementById('r').getBBox(); return [b.x, b.y, b.width, b.height, Object.prototype.toString.call(b)].join(','); });
+step('getBBoxPath', function () { var b = document.getElementById('p').getBBox(); return [b.x, b.y, b.width, b.height].join(','); });
+step('getTotalLength', function () { return document.getElementById('p').getTotalLength(); });
+step('getPointAtLength', function () { var q = document.getElementById('p').getPointAtLength(150); return [q.x, q.y, Object.prototype.toString.call(q)].join(','); });
+step('circleLength', function () { return Math.round(document.getElementById('c').getTotalLength() * 1000) / 1000; });
+step('formReset', function () { document.getElementById('i').value = 'changed'; document.getElementById('cb').checked = false; document.getElementById('f').reset(); return document.getElementById('i').value + '/' + document.getElementById('cb').checked; });
+step('progressMax', function () { var p = document.getElementById('pr'); var a = p.max; p.max = 20; return a + '/' + p.max + '/' + p.getAttribute('max') + '/' + p.position; });
+step('initStorageEvent', function () { var e = document.createEvent('StorageEvent'); e.initStorageEvent('storage', false, false, 'k', 'o', 'n', 'http://u/', null); return [e.type, e.key, e.oldValue, e.newValue, e.url].join(','); });
+step('pauseAnimations', function () { var sv = document.getElementById('sv'); sv.pauseAnimations(); return sv.animationsPaused(); });
+step('screenIsExtended', function () { return screen.isExtended; });
+step('mediaSession', function () { navigator.mediaSession.setActionHandler('play', function () {}); return 'ok'; });
+
+step('ownerSVGElement', function () { return document.getElementById('r').ownerSVGElement === document.getElementById('sv'); });
+step('getSubStringLength', function () { return Math.round(document.getElementById('t').getSubStringLength(0, 2) * 1000) / 1000 > 0; });
+step('getCTM', function () { var m = document.getElementById('r').getCTM(); return m ? [m.a, m.b, m.c, m.d, m.e, m.f, Object.prototype.toString.call(m)].join(',') : String(m); });
+step('ctmOps', function () {
+  var sv = document.getElementById('sv2'), r = document.getElementById('r2');
+  var fmt = function (m) { return [m.a, m.b, m.c, m.d, m.e, m.f].map(function (v) { return Math.round(v * 1000) / 1000; }).join(','); };
+  var m = r.getCTM(), s = r.getScreenCTM(), i = s.inverse();
+  var p = sv.createSVGPoint(); p.x = 100; p.y = 60; var q = p.matrixTransform(i);
+  var mm = sv.createSVGMatrix(); var t = mm.translate(3, 4).scale(2).multiply(mm.rotate(90));
+  return [fmt(m), fmt(s), fmt(i), Math.round(q.x * 1000) / 1000, Math.round(q.y * 1000) / 1000, fmt(t), fmt(mm), Object.prototype.toString.call(mm), Object.prototype.toString.call(q)].join(' | ');
+});
+step('subStringArial', function () { return Math.round(document.getElementById('t2').getSubStringLength(1, 3) * 1000) / 1000; });
+step('mediaRemote', function () { var v = document.createElement('video'); var r = v.remote; return Object.prototype.toString.call(r) + '/' + (r && r.state); });
+step('vttAlign', function () { var c = new VTTCue(0, 1, 'x'); var a = c.align; c.align = 'start'; return a + '/' + c.align; });
+step('textMetricsBox', function () { var cx = document.createElement('canvas').getContext('2d'); cx.font = '16px Arial'; var m = cx.measureText('Hxg'); return [typeof m.actualBoundingBoxAscent, typeof m.fontBoundingBoxAscent, typeof m.emHeightAscent, typeof m.alphabeticBaseline].join(','); });
+step('offscreen2d', function () { var o = new OffscreenCanvas(10, 10).getContext('2d'); o.fillStyle = 'red'; o.fillRect(0, 0, 5, 5); var d = o.getImageData(0, 0, 1, 1).data; var w = o.measureText('abc').width; return [d[0], d[3], typeof w].join(','); });
+step('wsReadyState', function () { var w = new WebSocket('ws://127.0.0.1:9/'); var r = w.readyState; w.close(); return r + '/' + WebSocket.CONNECTING; });
+var settle = async function (k, p) { try { var v = await p; R[k] = 'resolve ' + (v === undefined ? 'undefined' : (typeof v === 'object' && v ? Object.prototype.toString.call(v) : String(v))); } catch (e) { R[k] = 'reject ' + e.name; } };
+await settle('locksRequest', navigator.locks.request('L', function (lock) { R.lockName = lock && lock.name; R.lockMode = lock && lock.mode; return 42; }));
+await settle('locksQuery', navigator.locks.query());
+await settle('uvpaa', PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable());
+await settle('clientCaps', PublicKeyCredential.getClientCapabilities ? PublicKeyCredential.getClientCapabilities() : Promise.resolve('n/a'));
+await settle('opfs', navigator.storage.getDirectory());
+await settle('credGet', navigator.credentials.get({ mediation: 'silent', password: true }));
+step('reportingObserver', function () { var ro = new ReportingObserver(function () {}); ro.observe(); ro.disconnect(); return 'ok'; });
+window.R = JSON.stringify(R);
+})();
+</script></body></html>

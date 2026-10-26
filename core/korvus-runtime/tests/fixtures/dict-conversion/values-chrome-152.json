@@ -1,0 +1,824 @@
+[
+ [
+  "dvals/view-window",
+  "ok",
+  true
+ ],
+ [
+  "dvals/view-frame",
+  "ok",
+  true
+ ],
+ [
+  "dvals/view-null",
+  "ok",
+  null
+ ],
+ [
+  "dvals/view-object",
+  "TypeError",
+  "Failed to construct 'UIEvent': Failed to read the 'view' property from 'UIEventInit': Failed to convert value to 'Window'."
+ ],
+ [
+  "dvals/view-document",
+  "TypeError",
+  "Failed to construct 'UIEvent': Failed to read the 'view' property from 'UIEventInit': Failed to convert value to 'Window'."
+ ],
+ [
+  "dvals/related-body",
+  "ok",
+  true
+ ],
+ [
+  "dvals/related-window",
+  "ok",
+  true
+ ],
+ [
+  "dvals/related-object",
+  "TypeError",
+  "Failed to construct 'MouseEvent': Failed to read the 'relatedTarget' property from 'MouseEventInit': Failed to convert value to 'EventTarget'."
+ ],
+ [
+  "dvals/msg-source-window",
+  "ok",
+  true
+ ],
+ [
+  "dvals/msg-source-port",
+  "ok",
+  true
+ ],
+ [
+  "dvals/msg-source-frame",
+  "ok",
+  true
+ ],
+ [
+  "dvals/msg-source-object",
+  "TypeError",
+  "Failed to construct 'MessageEvent': Failed to read the 'source' property from 'MessageEventInit': Failed to convert value to 'EventTarget'."
+ ],
+ [
+  "dvals/msg-ports",
+  "ok",
+  "2,true,true"
+ ],
+ [
+  "dvals/msg-ports-bad",
+  "TypeError",
+  "Failed to construct 'MessageEvent': Failed to read the 'ports' property from 'MessageEventInit': Failed to convert value to 'MessagePort'."
+ ],
+ [
+  "dvals/msg-defaults",
+  "ok",
+  "[null,\"\",\"\",null,0]"
+ ],
+ [
+  "dvals/msg-data-undefined",
+  "ok",
+  null
+ ],
+ [
+  "dvals/error-defaults",
+  "ok",
+  "undefined|||0|0"
+ ],
+ [
+  "dvals/error-null",
+  "ok",
+  "null"
+ ],
+ [
+  "dvals/error-lineno",
+  "ok",
+  "4294967295:2"
+ ],
+ [
+  "dvals/popstate-defaults",
+  "ok",
+  "null:false"
+ ],
+ [
+  "dvals/custom-detail",
+  "ok",
+  "null:5"
+ ],
+ [
+  "dvals/progress",
+  "ok",
+  "5,10,true"
+ ],
+ [
+  "dvals/progress-neg",
+  "ok",
+  -1
+ ],
+ [
+  "dvals/rejection",
+  "ok",
+  1
+ ],
+ [
+  "dvals/rejection-no-promise",
+  "TypeError",
+  "Failed to construct 'PromiseRejectionEvent': Failed to read the 'promise' property from 'PromiseRejectionEventInit': Required member is undefined."
+ ],
+ [
+  "dvals/blob-type",
+  "ok",
+  "text/plain"
+ ],
+ [
+  "dvals/blob-endings",
+  "ok",
+  3
+ ],
+ [
+  "dvals/blob-endings-bad",
+  "TypeError",
+  "Failed to construct 'Blob': Failed to read the 'endings' property from 'BlobPropertyBag': The provided value 'x' is not a valid enum value of type EndingType."
+ ],
+ [
+  "dvals/file-lm",
+  "ok",
+  5
+ ],
+ [
+  "dvals/file-lm-now",
+  "ok",
+  true
+ ],
+ [
+  "dvals/file-type",
+  "ok",
+  "a/b"
+ ],
+ [
+  "dvals/imagedata",
+  "ok",
+  "display-p3"
+ ],
+ [
+  "dvals/imagedata-bad",
+  "TypeError",
+  "Failed to construct 'ImageData': Failed to read the 'colorSpace' property from 'ImageDataSettings': The provided value 'x' is not a valid enum value of type PredefinedColorSpace."
+ ],
+ [
+  "dvals/throw-getter",
+  "RangeError",
+  "b"
+ ],
+ [
+  "dvals/tds-fatal",
+  "ok",
+  true
+ ],
+ [
+  "dvals/anim",
+  "ok",
+  "x,1.5,::before"
+ ],
+ [
+  "dvals/wheel",
+  "ok",
+  "3,1,4"
+ ],
+ [
+  "dvals/pointer",
+  "ok",
+  "pen,true,7,0"
+ ],
+ [
+  "dvals/pointer-coalesced",
+  "ok",
+  0
+ ],
+ [
+  "dvals/keyboard",
+  "ok",
+  "Enter,Enter,13,true,true,true"
+ ],
+ [
+  "dvals/mouse",
+  "ok",
+  "0,65535,1,2,3,2,true"
+ ],
+ [
+  "dvals/mouse-nan",
+  "TypeError",
+  "Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite."
+ ],
+ [
+  "dvals/touch",
+  "ok",
+  "1,true,1"
+ ],
+ [
+  "dvals/touch-bad",
+  "TypeError",
+  "Failed to construct 'TouchEvent': Failed to read the 'touches' property from 'TouchEventInit': Failed to convert value to 'Touch'."
+ ],
+ [
+  "dvals/input",
+  "ok",
+  "x,insertText,true,true,0"
+ ],
+ [
+  "dvals/input-data-null",
+  "ok",
+  "null:null"
+ ],
+ [
+  "dvals/focus-related-null",
+  "ok",
+  "null"
+ ],
+ [
+  "dvals/hashchange",
+  "ok",
+  "ab"
+ ],
+ [
+  "dvals/transition",
+  "ok",
+  "x2"
+ ],
+ [
+  "dvals/ice",
+  "ok",
+  "null"
+ ],
+ [
+  "dvals/ice-bad",
+  "TypeError",
+  "Failed to construct 'RTCPeerConnectionIceEvent': Failed to read the 'candidate' property from 'RTCPeerConnectionIceEventInit': Failed to convert value to 'RTCIceCandidate'."
+ ],
+ [
+  "dvals/uievent-detail",
+  "ok",
+  1
+ ],
+ [
+  "dvals/cookiechange",
+  "ok",
+  0
+ ],
+ [
+  "dvals/composition",
+  "ok",
+  "x"
+ ],
+ [
+  "dvals/submit",
+  "ok",
+  "null"
+ ],
+ [
+  "dvals/submit-bad",
+  "ok",
+  {
+   "isTrusted": false
+  }
+ ],
+ [
+  "ael/cb-number",
+  "TypeError",
+  "Failed to execute 'addEventListener' on 'EventTarget': parameter 2 is not of type 'Object'."
+ ],
+ [
+  "ael/cb-string",
+  "TypeError",
+  "Failed to execute 'addEventListener' on 'EventTarget': parameter 2 is not of type 'Object'."
+ ],
+ [
+  "ael/cb-symbol-type",
+  "TypeError",
+  "Failed to execute 'addEventListener' on 'EventTarget': Cannot convert a Symbol value to a string"
+ ],
+ [
+  "ael/rm-cb-number",
+  "TypeError",
+  "Failed to execute 'removeEventListener' on 'EventTarget': parameter 2 is not of type 'Object'."
+ ],
+ [
+  "ael/opts-number-capture",
+  "ok",
+  "cap,tgt"
+ ],
+ [
+  "ael/opts-string-capture",
+  "ok",
+  "cap,tgt"
+ ],
+ [
+  "ael/passive-default-window-touchstart",
+  "ok",
+  false
+ ],
+ [
+  "ael/passive-default-document-wheel",
+  "ok",
+  false
+ ],
+ [
+  "ael/passive-default-body-touchmove",
+  "ok",
+  false
+ ],
+ [
+  "ael/passive-default-html-mousewheel",
+  "ok",
+  false
+ ],
+ [
+  "ael/passive-default-div-touchstart",
+  "ok",
+  true
+ ],
+ [
+  "ael/passive-default-window-click",
+  "ok",
+  true
+ ],
+ [
+  "ael/passive-false-window-touchstart",
+  "ok",
+  true
+ ],
+ [
+  "ael/passive-true-div-click",
+  "ok",
+  false
+ ],
+ [
+  "ael/signal-removes",
+  "ok",
+  1
+ ],
+ [
+  "ael/signal-aborted-adds-nothing",
+  "ok",
+  0
+ ],
+ [
+  "ael/signal-dup",
+  "ok",
+  1
+ ],
+ [
+  "ael/signal-before-abort-event",
+  "ok",
+  "abort"
+ ],
+ [
+  "ael/signal-not-signal",
+  "TypeError",
+  "Failed to execute 'addEventListener' on 'EventTarget': Failed to read the 'signal' property from 'AddEventListenerOptions': Failed to convert value to 'AbortSignal'."
+ ],
+ [
+  "ael/signal-null",
+  "TypeError",
+  "Failed to execute 'addEventListener' on 'EventTarget': Failed to read the 'signal' property from 'AddEventListenerOptions': Failed to convert value to 'AbortSignal'."
+ ],
+ [
+  "ael/signal-cap-remove",
+  "ok",
+  1
+ ],
+ [
+  "ael/null-cb-signal-read",
+  "ok",
+  "signal"
+ ],
+ [
+  "ael/once-passive",
+  "ok",
+  1
+ ],
+ [
+  "serde/point-str",
+  "ok",
+  3
+ ],
+ [
+  "serde/point-obj",
+  "ok",
+  4
+ ],
+ [
+  "serde/point-null",
+  "ok",
+  0
+ ],
+ [
+  "serde/point-nan",
+  "ok",
+  "NaN"
+ ],
+ [
+  "serde/point-5",
+  "TypeError",
+  "Failed to execute 'fromPoint' on 'DOMPoint': The provided value is not of type 'DOMPointInit'."
+ ],
+ [
+  "serde/rect-str",
+  "ok",
+  7
+ ],
+ [
+  "serde/rect-bool",
+  "ok",
+  1
+ ],
+ [
+  "serde/matrix-str",
+  "ok",
+  2
+ ],
+ [
+  "serde/matrix-is2d-str",
+  "TypeError",
+  "Failed to execute 'fromMatrix' on 'DOMMatrix': The is2D member is set to true but the input matrix is a 3d matrix."
+ ],
+ [
+  "serde/matrix-nan",
+  "ok",
+  "NaN"
+ ],
+ [
+  "serde/quad-str",
+  "ok",
+  1
+ ],
+ [
+  "serde/textdecoder-5",
+  "TypeError",
+  "Failed to construct 'TextDecoder': The provided value is not of type 'TextDecoderOptions'."
+ ],
+ [
+  "serde/textdecoder-fatal-str",
+  "ok",
+  true
+ ],
+ [
+  "serde/point-ctor-str",
+  "ok",
+  2
+ ],
+ [
+  "serde/transformpoint-str",
+  "ok",
+  5
+ ],
+ [
+  "serde/imagedata-ctor-str",
+  "ok",
+  "srgb"
+ ],
+ [
+  "forder/fetch-ftp",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from ftp:"
+ ],
+ [
+  "forder/fetch-bad-url",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from http://["
+ ],
+ [
+  "forder/fetch-creds",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Request cannot be constructed from a URL that includes credentials: http://u:p@127.0.0.1/"
+ ],
+ [
+  "forder/request-ftp",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "throw TypeError: Failed to construct 'Request': Failed to parse URL from ftp:"
+ ],
+ [
+  "forder/request-bad-url",
+  "adAuctionHeaders,body,cache,credentials,duplex,headers,integrity,keepalive,method,mode,priority,privateToken,redirect,referrer,referrerPolicy,sharedStorageWritable,signal,targetAddressSpace",
+  "throw TypeError: Failed to construct 'Request': Failed to parse URL from http://["
+ ],
+ [
+  "forder/cache-read",
+  null,
+  null
+ ],
+ [
+  "forder/fetch-mode-bad",
+  "",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Failed to read the 'mode' property from 'RequestInit': The provided value 'bogus' is not a valid enum value of type RequestMode."
+ ],
+ [
+  "forder/fetch-signal-bad",
+  "",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Failed to read the 'signal' property from 'RequestInit': Failed to convert value to 'AbortSignal'."
+ ],
+ [
+  "forder/fetch-signal-null",
+  "",
+  "resolved"
+ ],
+ [
+  "forder/fetch-get-body",
+  "",
+  "rejected TypeError: Failed to execute 'fetch' on 'Window': Request with GET/HEAD method cannot have body."
+ ],
+ [
+  "forder/request-get-body",
+  "",
+  "throw TypeError: Failed to construct 'Request': Request with GET/HEAD method cannot have body."
+ ],
+ [
+  "forder/fetch-window-1",
+  "",
+  "resolved"
+ ],
+ [
+  "forder/request-window-null",
+  "",
+  "ok"
+ ],
+ [
+  "forder/request-priority-bad",
+  "",
+  "throw TypeError: Failed to construct 'Request': Failed to read the 'priority' property from 'RequestInit': The provided value 'x' is not a valid enum value of type FetchPriority."
+ ],
+ [
+  "forder/request-duplex-bad",
+  "",
+  "throw TypeError: Failed to construct 'Request': Failed to read the 'duplex' property from 'RequestInit': The provided value 'x' is not a valid enum value of type RequestDuplex."
+ ],
+ [
+  "forder/request-attr-empty",
+  "",
+  "ok"
+ ],
+ [
+  "dnotobj/IDBVersionChangeEvent-5",
+  "TypeError",
+  "Failed to construct 'IDBVersionChangeEvent': The provided value is not of type 'IDBVersionChangeEventInit'."
+ ],
+ [
+  "dnotobj/SecurityPolicyViolationEvent-5",
+  "TypeError",
+  "Failed to construct 'SecurityPolicyViolationEvent': The provided value is not of type 'SecurityPolicyViolationEventInit'."
+ ],
+ [
+  "dnotobj/MouseEvent-5",
+  "TypeError",
+  "Failed to construct 'MouseEvent': The provided value is not of type 'MouseEventInit'."
+ ],
+ [
+  "dnotobj/Event-5",
+  "TypeError",
+  "Failed to construct 'Event': The provided value is not of type 'EventInit'."
+ ],
+ [
+  "dnotobj/CustomEvent-5",
+  "TypeError",
+  "Failed to construct 'CustomEvent': The provided value is not of type 'CustomEventInit'."
+ ],
+ [
+  "dnotobj/BlobEvent-5",
+  "TypeError",
+  "Failed to construct 'BlobEvent': The provided value is not of type 'BlobEventInit'."
+ ],
+ [
+  "dnotobj/AudioProcessingEvent-5",
+  "TypeError",
+  "Failed to construct 'AudioProcessingEvent': The provided value is not of type 'AudioProcessingEventInit'."
+ ],
+ [
+  "dnotobj/OfflineAudioCompletionEvent-5",
+  "TypeError",
+  "Failed to construct 'OfflineAudioCompletionEvent': The provided value is not of type 'OfflineAudioCompletionEventInit'."
+ ],
+ [
+  "dnotobj/GPUUncapturedErrorEvent-5",
+  "TypeError",
+  "Failed to construct 'GPUUncapturedErrorEvent': The provided value is not of type 'GPUUncapturedErrorEventInit'."
+ ],
+ [
+  "dnotobj/Blob-5",
+  "TypeError",
+  "Failed to construct 'Blob': The provided value is not of type 'BlobPropertyBag'."
+ ],
+ [
+  "dnotobj/File-5",
+  "TypeError",
+  "Failed to construct 'File': The provided value is not of type 'FilePropertyBag'."
+ ],
+ [
+  "dnotobj/Worker-5",
+  "TypeError",
+  "Failed to construct 'Worker': The provided value is not of type 'WorkerOptions'."
+ ],
+ [
+  "dnotobj/Notification-5",
+  "TypeError",
+  "Failed to construct 'Notification': The provided value is not of type 'NotificationOptions'."
+ ],
+ [
+  "dnotobj/Request-5",
+  "TypeError",
+  "Failed to construct 'Request': The provided value is not of type 'RequestInit'."
+ ],
+ [
+  "dnotobj/Response-5",
+  "TypeError",
+  "Failed to construct 'Response': The provided value is not of type 'ResponseInit'."
+ ],
+ [
+  "dnotobj/TextDecoder-5",
+  "TypeError",
+  "Failed to construct 'TextDecoder': The provided value is not of type 'TextDecoderOptions'."
+ ],
+ [
+  "dnotobj/IntersectionObserver-5",
+  "TypeError",
+  "Failed to construct 'IntersectionObserver': The provided value is not of type 'IntersectionObserverInit'."
+ ],
+ [
+  "dnotobj/AudioContext-5",
+  "TypeError",
+  "Failed to construct 'AudioContext': The provided value is not of type 'AudioContextOptions'."
+ ],
+ [
+  "dnotobj/RTCPeerConnection-5",
+  "TypeError",
+  "Failed to construct 'RTCPeerConnection': The provided value is not of type 'RTCConfiguration'."
+ ],
+ [
+  "dnotobj/FontFace-5",
+  "TypeError",
+  "Failed to construct 'FontFace': The provided value is not of type 'FontFaceDescriptors'."
+ ],
+ [
+  "dnotobj/KeyframeEffect-5",
+  "ok",
+  "ok"
+ ],
+ [
+  "dnotobj/ImageData-5",
+  "TypeError",
+  "Failed to construct 'ImageData': The provided value is not of type 'ImageDataSettings'."
+ ],
+ [
+  "dnotobj/PerformanceMark-5",
+  "TypeError",
+  "Failed to construct 'PerformanceMark': The provided value is not of type 'PerformanceMarkOptions'."
+ ],
+ [
+  "dnotobj/ReadableStream-5",
+  "ok",
+  "ok"
+ ],
+ [
+  "dnotobj/CSSStyleSheet-5",
+  "TypeError",
+  "Failed to construct 'CSSStyleSheet': The provided value is not of type 'CSSStyleSheetInit'."
+ ],
+ [
+  "dnotobj/DOMMatrix-5",
+  "SyntaxError",
+  "Failed to construct 'DOMMatrix': Failed to parse '5'."
+ ],
+ [
+  "dnotobj/spve-bubbles",
+  "ok",
+  true
+ ],
+ [
+  "dnotobj/idb-bubbles",
+  "ok",
+  "false:3"
+ ],
+ [
+  "dnotobj/idb-newversion-null",
+  "ok",
+  "null"
+ ],
+ [
+  "dnotobj/idb-dataloss-msg",
+  "ok",
+  ""
+ ],
+ [
+  "dnotobj/spve-disposition",
+  "TypeError",
+  "Failed to construct 'SecurityPolicyViolationEvent': Failed to read the 'disposition' property from 'SecurityPolicyViolationEventInit': The provided value 'bogus' is not a valid enum value of type SecurityPolicyViolationEventDisposition."
+ ],
+ [
+  "dnotobj/spve-status",
+  "ok",
+  "4464:-1"
+ ],
+ [
+  "scroll1/el-scrollTo-5",
+  "rejected TypeError",
+  "Failed to execute 'scrollTo' on 'Element': The provided value is not of type 'ScrollToOptions'."
+ ],
+ [
+  "scroll1/el-scrollTo-str",
+  "rejected TypeError",
+  "Failed to execute 'scrollTo' on 'Element': The provided value is not of type 'ScrollToOptions'."
+ ],
+ [
+  "scroll1/el-scrollTo-null",
+  "resolved",
+  ""
+ ],
+ [
+  "scroll1/el-scrollBy-true",
+  "rejected TypeError",
+  "Failed to execute 'scrollBy' on 'Element': The provided value is not of type 'ScrollToOptions'."
+ ],
+ [
+  "scroll1/win-scrollTo-5",
+  "rejected TypeError",
+  "Failed to execute 'scrollTo' on 'Window': The provided value is not of type 'ScrollToOptions'."
+ ],
+ [
+  "scroll1/win-scroll-sym",
+  "rejected TypeError",
+  "Failed to execute 'scroll' on 'Window': The provided value is not of type 'ScrollToOptions'."
+ ],
+ [
+  "scroll1/el-scrollTo-3args",
+  "resolved",
+  ""
+ ],
+ [
+  "scroll1/scrollIntoView-5",
+  "resolved",
+  ""
+ ],
+ [
+  "scroll1/scrollIntoView-sym",
+  "resolved",
+  ""
+ ],
+ [
+  "scroll1/scrollIntoView-bad-block",
+  "rejected TypeError",
+  "Failed to execute 'scrollIntoView' on 'Element': Failed to read the 'block' property from 'ScrollIntoViewOptions': The provided value 'x' is not a valid enum value of type ScrollLogicalPosition."
+ ],
+ [
+  "scroll1/scroll-bad-behavior",
+  "rejected TypeError",
+  "Failed to execute 'scrollTo' on 'Element': Failed to read the 'behavior' property from 'ScrollOptions': The provided value 'x' is not a valid enum value of type ScrollBehavior."
+ ],
+ [
+  "scroll1/focus-5",
+  "TypeError",
+  "Failed to execute 'focus' on 'HTMLElement': The provided value is not of type 'FocusOptions'."
+ ],
+ [
+  "scroll1/createElement-5",
+  "ok",
+  "DIV"
+ ],
+ [
+  "scroll1/createElement-sym",
+  "TypeError",
+  "Failed to execute 'createElement' on 'Document': Cannot convert a Symbol value to a string"
+ ],
+ [
+  "scroll1/define-5",
+  "TypeError",
+  "Failed to execute 'define' on 'CustomElementRegistry': The provided value is not of type 'ElementDefinitionOptions'."
+ ],
+ [
+  "scroll1/checkVisibility-5",
+  "TypeError",
+  "Failed to execute 'checkVisibility' on 'Element': The provided value is not of type 'CheckVisibilityOptions'."
+ ],
+ [
+  "scroll1/caret-5",
+  "TypeError",
+  "Failed to execute 'caretPositionFromPoint' on 'Document': The provided value is not of type 'CaretPositionFromPointOptions'."
+ ],
+ [
+  "scroll1/attachShadow-5",
+  "TypeError",
+  "Failed to execute 'attachShadow' on 'Element': The provided value is not of type 'ShadowRootInit'."
+ ],
+ [
+  "scroll1/attachShadow-null",
+  "TypeError",
+  "Failed to execute 'attachShadow' on 'Element': The provided value is not of type 'ShadowRootInit'."
+ ],
+ [
+  "scroll1/togglePopover-5",
+  "ok",
+  "true"
+ ],
+ [
+  "scroll1/showPopover-5",
+  "TypeError",
+  "Failed to execute 'showPopover' on 'HTMLElement': The provided value is not of type 'ShowPopoverOptions'."
+ ]
+]

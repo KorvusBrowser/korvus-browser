@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HTMLTimeElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTimeElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTimeElement",
+    "member": "constructor",
+    "expr": "new HTMLTimeElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTimeElement",
+    "member": "dateTime",
+    "expr": "(() => { const o = document.createElement(\"time\"); return o.dateTime; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTimeElement",
+    "member": "dateTime",
+    "expr": "(() => { const o = document.createElement(\"time\"); return (o.dateTime = \"x\", o.dateTime); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

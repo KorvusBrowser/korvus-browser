@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "SyncEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SyncEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SyncEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new SyncEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

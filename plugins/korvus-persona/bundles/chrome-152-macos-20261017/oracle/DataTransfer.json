@@ -1,0 +1,107 @@
+[
+  {
+    "iface": "DataTransfer",
+    "member": "constructor",
+    "expr": "(() => { const o = new DataTransfer(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DataTransfer]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "dropEffect",
+    "expr": "(() => { const o = new DataTransfer(); return o.dropEffect; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "dropEffect",
+    "expr": "(() => { const o = new DataTransfer(); return (o.dropEffect = \"x\", o.dropEffect); })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "effectAllowed",
+    "expr": "(() => { const o = new DataTransfer(); return o.effectAllowed; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "effectAllowed",
+    "expr": "(() => { const o = new DataTransfer(); return (o.effectAllowed = \"x\", o.effectAllowed); })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "setDragImage",
+    "expr": "(() => { const o = new DataTransfer(); return o.setDragImage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "types",
+    "expr": "(() => { const o = new DataTransfer(); return o.types; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "getData",
+    "expr": "(() => { const o = new DataTransfer(); return o.getData(\"x\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "getData",
+    "expr": "(() => { const o = new DataTransfer(); return o.getData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "setData",
+    "expr": "(() => { const o = new DataTransfer(); return o.setData(\"x\", \"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "setData",
+    "expr": "(() => { const o = new DataTransfer(); return o.setData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "clearData",
+    "expr": "(() => { const o = new DataTransfer(); return o.clearData(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "items",
+    "expr": "(() => { const o = new DataTransfer(); return Object.prototype.toString.call(o.items); })()",
+    "expected": "[object DataTransferItemList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "types",
+    "expr": "(() => { const o = new DataTransfer(); return Object.prototype.toString.call(o.types); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DataTransfer",
+    "member": "files",
+    "expr": "(() => { const o = new DataTransfer(); return Object.prototype.toString.call(o.files); })()",
+    "expected": "[object FileList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,4 @@
+Set-Cookie: noneNoSecure=1; SameSite=None; Path=/
+Set-Cookie: laxOne=1; SameSite=Lax; Path=/
+Set-Cookie: plain=1; Path=/
+Cache-Control: no-store

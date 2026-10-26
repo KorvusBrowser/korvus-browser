@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset=utf-8><title>pacing</title></head>
+<body style="margin:0"><div id=box style="width:800px;height:600px;background:#eee"></div>
+<script>
+// FIXER C11 (tests/pacing.rs): a main thread kept busy in SHORT tasks -- a setTimeout(0) chain whose every task
+// spins 4 ms -- whose own cadence is measured (`__start()`, then `__out`) while a raw CDP client moves, presses
+// and releases the mouse over it. The same file is what Chrome 150 was driven on (fixtures/pacing.chrome-150.json).
+var now = performance.now.bind(performance);
+var BUSY = 4;
+var ev = [];
+['mousemove', 'mousedown', 'mouseup'].forEach(function (t) { document.addEventListener(t, function () { ev.push(t); }); });
+(function spin() { var t = now(); while (now() - t < BUSY) {} setTimeout(spin, 0); })();
+function q(a) { a = a.slice().sort(function (x, y) { return x - y; }); return [Math.round(a[0] * 10) / 10, Math.round(a[a.length >> 1] * 10) / 10, Math.round(a[a.length - 1] * 10) / 10]; }
+window.__out = null;
+window.__start = function () {
+  var out = {}, left = 2;
+  function done() { if (--left === 0) window.__out = out; }
+  var d = [], t = now();
+  (function go() { setTimeout(function () { var x = now(); d.push(x - t); t = x; if (d.length < 30) go(); else { out.t10 = q(d); done(); } }, 10); })();
+  var r = [], rt = null;
+  (function go() { requestAnimationFrame(function (x) { if (rt !== null) r.push(x - rt); rt = x; if (r.length < 30) go(); else { out.raf = q(r); done(); } }); })();
+  return 1;
+};
+</script></body></html>

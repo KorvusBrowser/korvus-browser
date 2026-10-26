@@ -1,0 +1,1885 @@
+[
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "constructor",
+    "expr": "new OffscreenCanvasRenderingContext2D()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lang",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lang; })()",
+    "expected": "inherit",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lang",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lang = \"en-GB\"; return o.lang; })()",
+    "expected": "en-GB",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "font",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.font; })()",
+    "expected": "10px sans-serif",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "font",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.font = \"20px serif\"; return o.font; })()",
+    "expected": "20px serif",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "font",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.font = \"not a font\"; return o.font; })()",
+    "expected": "10px sans-serif",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textAlign",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.textAlign; })()",
+    "expected": "start",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textAlign",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.textAlign = \"center\"; return o.textAlign; })()",
+    "expected": "center",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textAlign",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.textAlign = \"bogus\"; return o.textAlign; })()",
+    "expected": "start",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textBaseline",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.textBaseline; })()",
+    "expected": "alphabetic",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textBaseline",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.textBaseline = \"top\"; return o.textBaseline; })()",
+    "expected": "top",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textBaseline",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.textBaseline = \"bogus\"; return o.textBaseline; })()",
+    "expected": "alphabetic",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "direction",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.direction; })()",
+    "expected": "ltr",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "direction",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.direction = \"rtl\"; return o.direction; })()",
+    "expected": "rtl",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontKerning",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fontKerning; })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontKerning",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fontKerning = \"none\"; return o.fontKerning; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontStretch",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fontStretch; })()",
+    "expected": "normal",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontStretch",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fontStretch = \"condensed\"; return o.fontStretch; })()",
+    "expected": "condensed",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontVariantCaps",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fontVariantCaps; })()",
+    "expected": "normal",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fontVariantCaps",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fontVariantCaps = \"small-caps\"; return o.fontVariantCaps; })()",
+    "expected": "small-caps",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "letterSpacing",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.letterSpacing; })()",
+    "expected": "0px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "letterSpacing",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.letterSpacing = \"3px\"; return o.letterSpacing; })()",
+    "expected": "3px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "letterSpacing",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.letterSpacing = \"3\"; return o.letterSpacing; })()",
+    "expected": "0px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textRendering",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.textRendering; })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "textRendering",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.textRendering = \"optimizeSpeed\"; return o.textRendering; })()",
+    "expected": "optimizeSpeed",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "wordSpacing",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.wordSpacing; })()",
+    "expected": "0px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "wordSpacing",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.wordSpacing = \"5px\"; return o.wordSpacing; })()",
+    "expected": "5px",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalCompositeOperation",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.globalCompositeOperation; })()",
+    "expected": "source-over",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalCompositeOperation",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.globalCompositeOperation = \"multiply\"; return o.globalCompositeOperation; })()",
+    "expected": "multiply",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalCompositeOperation",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.globalCompositeOperation = \"bogus\"; return o.globalCompositeOperation; })()",
+    "expected": "source-over",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "filter",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.filter; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "filter",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.filter = \"blur(2px)\"; return o.filter; })()",
+    "expected": "blur(2px)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "filter",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.filter = \"bogus(2)\"; return o.filter; })()",
+    "expected": "none",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "imageSmoothingQuality",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.imageSmoothingQuality; })()",
+    "expected": "low",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "imageSmoothingQuality",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.imageSmoothingQuality = \"high\"; return o.imageSmoothingQuality; })()",
+    "expected": "high",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "imageSmoothingEnabled",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.imageSmoothingEnabled; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "imageSmoothingEnabled",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.imageSmoothingEnabled = false; return o.imageSmoothingEnabled; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.strokeStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.strokeStyle = \"red\"; return o.strokeStyle; })()",
+    "expected": "#ff0000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.strokeStyle = \"not-a-color\"; return o.strokeStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"red\"; return o.fillStyle; })()",
+    "expected": "#ff0000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"#0f0\"; return o.fillStyle; })()",
+    "expected": "#00ff00",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"not-a-color\"; return o.fillStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = o.createLinearGradient(0, 0, 1, 1); return Object.prototype.toString.call(o.fillStyle); })()",
+    "expected": "[object CanvasGradient]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowColor",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.shadowColor; })()",
+    "expected": "rgba(0, 0, 0, 0)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowColor",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowColor = \"#ff0000\"; return o.shadowColor; })()",
+    "expected": "#ff0000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineCap",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineCap; })()",
+    "expected": "butt",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineCap",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineCap = \"round\"; return o.lineCap; })()",
+    "expected": "round",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineCap",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineCap = \"bogus\"; return o.lineCap; })()",
+    "expected": "butt",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineJoin",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineJoin; })()",
+    "expected": "miter",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineJoin",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineJoin = \"bevel\"; return o.lineJoin; })()",
+    "expected": "bevel",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalAlpha",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.globalAlpha; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalAlpha",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.globalAlpha = 0.5; return o.globalAlpha; })()",
+    "expected": 0.5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalAlpha",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.globalAlpha = 2; return o.globalAlpha; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalAlpha",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.globalAlpha = -1; return o.globalAlpha; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowOffsetX",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.shadowOffsetX; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowOffsetX",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowOffsetX = 5; return o.shadowOffsetX; })()",
+    "expected": 5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowOffsetX",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowOffsetX = NaN; return o.shadowOffsetX; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowOffsetY",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.shadowOffsetY; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowOffsetY",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowOffsetY = -5; return o.shadowOffsetY; })()",
+    "expected": -5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowBlur",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.shadowBlur; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowBlur",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowBlur = 4; return o.shadowBlur; })()",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowBlur",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowBlur = -4; return o.shadowBlur; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineWidth",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineWidth; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineWidth",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineWidth = 3; return o.lineWidth; })()",
+    "expected": 3,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineWidth",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineWidth = 0; return o.lineWidth; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineWidth",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineWidth = \"4\"; return o.lineWidth; })()",
+    "expected": 4,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "miterLimit",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.miterLimit; })()",
+    "expected": 10,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "miterLimit",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.miterLimit = 5; return o.miterLimit; })()",
+    "expected": 5,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "miterLimit",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.miterLimit = 0; return o.miterLimit; })()",
+    "expected": 10,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineDashOffset",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineDashOffset; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineDashOffset",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineDashOffset = 2; return o.lineDashOffset; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "moveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.moveTo(1, 2); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "moveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.moveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineTo(1, 2); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lineTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.lineTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "rect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.rect(0, 0, 4, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "rect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.rect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "bezierCurveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.bezierCurveTo(1, 2, 3, 4, 5, 6); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "bezierCurveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.bezierCurveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "quadraticCurveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.quadraticCurveTo(1, 2, 3, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "quadraticCurveTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.quadraticCurveTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillRect(0, 0, 4, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillRect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.strokeRect(0, 0, 4, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.strokeRect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clearRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.clearRect(0, 0, 4, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clearRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.clearRect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "translate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.translate(1, 2); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "translate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.translate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "scale",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.scale(2, 2); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "scale",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.scale(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "rotate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.rotate(1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "rotate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.rotate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "transform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.transform(1, 0, 0, 1, 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "transform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.transform(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "save",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.save(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "restore",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.restore(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "restore",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.restore(); o.restore(); return o.fillStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "save",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"red\"; o.save(); o.fillStyle = \"blue\"; o.restore(); return o.fillStyle; })()",
+    "expected": "#ff0000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "reset",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.reset(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "reset",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"red\"; o.reset(); return o.fillStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "beginPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.beginPath(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.closePath(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "resetTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.resetTransform(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.setTransform(1, 0, 0, 1, 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.setTransform(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.getTransform()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getTransform().a; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setTransform(2, 0, 0, 3, 4, 5); const m = o.getTransform(); return [m.a, m.b, m.c, m.d, m.e, m.f].join(\",\"); })()",
+    "expected": "2,0,0,3,4,5",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "translate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.translate(5, 7); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "5,7",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "scale",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.scale(2, 3); const m = o.getTransform(); return m.a + \",\" + m.d; })()",
+    "expected": "2,3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "resetTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.translate(5, 7); o.resetTransform(); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "0,0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arc",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.arc(0, 0, 5, 0, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arc",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.arc(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arc",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.arc(0, 0, -1, 0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.moveTo(0, 0); return o.arcTo(1, 1, 2, 2, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.arcTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "arcTo",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.moveTo(0, 0); return o.arcTo(1, 1, 2, 2, -1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.ellipse(0, 0, 4, 3, 0, 0, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.ellipse(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "ellipse",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.ellipse(0, 0, -4, 3, 0, 0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.roundRect(0, 0, 10, 10); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.roundRect(0, 0, 10, 10, 3); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.roundRect(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "roundRect",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.roundRect(0, 0, 10, 10, -1); })()",
+    "throws": "RangeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fill",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fill(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fill",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fill(\"evenodd\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fill",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fill(\"bogus\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.stroke(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clip",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.clip(); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clip",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.clip(\"evenodd\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clip",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.clip(\"bogus\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillText(\"a\", 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.fillText(\"a\", 0, 0, 10); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.strokeText(\"a\", 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.strokeText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "measureText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.measureText(\"x\")); })()",
+    "expected": "[object TextMetrics]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "measureText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.measureText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "measureText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.measureText(\"\").width; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.setLineDash([1, 2]); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.setLineDash(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getLineDash().length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setLineDash([1, 2]); return o.getLineDash().join(\",\"); })()",
+    "expected": "1,2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setLineDash([3]); return o.getLineDash().join(\",\"); })()",
+    "expected": "3,3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setLineDash([1, -2]); return o.getLineDash().join(\",\"); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.rect(0, 0, 10, 10); return o.isPointInPath(5, 5); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.rect(0, 0, 10, 10); return o.isPointInPath(50, 50); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.isPointInPath(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInStroke",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineWidth = 6; o.moveTo(0, 0); o.lineTo(20, 0); return o.isPointInStroke(10, 0); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInStroke",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.lineWidth = 6; o.moveTo(0, 0); o.lineTo(20, 0); return o.isPointInStroke(10, 40); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInStroke",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.isPointInStroke(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createLinearGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.createLinearGradient(0, 0, 1, 1)); })()",
+    "expected": "[object CanvasGradient]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createLinearGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createLinearGradient(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createLinearGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createLinearGradient(0, 0, NaN, 1); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createRadialGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.createRadialGradient(0, 0, 0, 0, 0, 1)); })()",
+    "expected": "[object CanvasGradient]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createRadialGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createRadialGradient(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createRadialGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createRadialGradient(0, 0, -1, 0, 0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createConicGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.createConicGradient(0, 0, 0)); })()",
+    "expected": "[object CanvasGradient]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createConicGradient",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createConicGradient(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.createPattern(document.createElement(\"canvas\"), \"repeat\")); })()",
+    "expected": "[object CanvasPattern]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createPattern(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createPattern(document.createElement(\"canvas\"), \"bogus\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.createImageData(2, 3)); })()",
+    "expected": "[object ImageData]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createImageData(2, 3).width; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createImageData(2, 3).data.length; })()",
+    "expected": 24,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createImageData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createImageData(0, 1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.getImageData(0, 0, 2, 2)); })()",
+    "expected": "[object ImageData]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getImageData(0, 0, 2, 2).width; })()",
+    "expected": 2,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getImageData(0, 0, 2, 2).data.length; })()",
+    "expected": 16,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getImageData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getImageData(0, 0, 0, 0); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.putImageData(o.createImageData(1, 1), 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.putImageData(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.putImageData({}, 0, 0); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.putImageData(o.createImageData(2, 2), 0, 0, 0, 0, 1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.drawImage(document.createElement(\"canvas\"), 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.drawImage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.drawImage(document.createElement(\"canvas\"), 0, 0, 10, 10); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getContextAttributes().alpha; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.keys(o.getContextAttributes()).sort().join(\",\"); })()",
+    "expected": "alpha,colorSpace,colorType,desynchronized,toneMapping,willReadFrequently",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isContextLost",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.isContextLost(); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getContextAttributes().colorSpace; })()",
+    "expected": "srgb",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getContextAttributes().colorType; })()",
+    "expected": "unorm8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return typeof o.getContextAttributes().toneMapping; })()",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.keys(o.getContextAttributes().toneMapping).sort().join(\",\") + \"=\" + JSON.stringify(o.getContextAttributes().toneMapping.mode); })()",
+    "expected": "mode=\"standard\"",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getContextAttributes().willReadFrequently; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.getContextAttributes().desynchronized; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "direction",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.direction = \"inherit\"; return o.direction; })()",
+    "expected": "ltr",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "font",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.font = \"bold 18px Arial\"; return o.font; })()",
+    "expected": "bold 18px Arial",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "font",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.font = \"\"; return o.font; })()",
+    "expected": "10px sans-serif",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowColor",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowColor = \"not-a-color\"; return o.shadowColor; })()",
+    "expected": "rgba(0, 0, 0, 0)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clip",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); const p = new Path2D(); p.rect(0, 0, 4, 4); return o.clip(p); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fill",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); const p = new Path2D(); p.rect(0, 0, 4, 4); return o.fill(p); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); const p = new Path2D(); p.rect(0, 0, 4, 4); return o.stroke(p); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); const p = new Path2D(); p.rect(0, 0, 10, 10); return o.isPointInPath(p, 5, 5); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.rect(0, 0, 10, 10); return o.isPointInPath(5, 5, \"bogus\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setTransform({ a: 2, b: 0, c: 0, d: 4, e: 6, f: 8 }); const m = o.getTransform(); return [m.a, m.d, m.e, m.f].join(\",\"); })()",
+    "expected": "2,4,6,8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setTransform(2, 0, 0, 3, 4, 5); const m = o.getTransform(); return [m.m11, m.m22, m.m41, m.m42, m.is2D, m.isIdentity].join(\",\"); })()",
+    "expected": "2,3,4,5,true,false",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "save",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.save(); o.translate(3, 4); o.restore(); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "0,0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "reset",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.translate(3, 4); o.reset(); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "0,0",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "transform",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.translate(2, 3); o.transform(1, 0, 0, 1, 4, 5); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "6,8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "rotate",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.rotate(Math.PI / 2); const m = o.getTransform(); return Math.round(m.a) + \",\" + Math.round(m.b); })()",
+    "expected": "0,1",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "measureText",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.measureText(\"WWWWW\").width > o.measureText(\"iiiii\").width; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.createPattern(document.createElement(\"img\"), \"repeat\"); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.drawImage(document.createElement(\"img\"), 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"#123456\"; o.fillRect(0, 0, 4, 4); const d = o.createImageData(2, 2); o.putImageData(d, 0, 0); return typeof o.getImageData(0, 0, 1, 1).data[0]; })()",
+    "expected": "number",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isContextLost",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return typeof o.isContextLost(); })()",
+    "expected": "boolean",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getLineDash",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.setLineDash([1, 2]); o.save(); o.setLineDash([4, 5]); o.restore(); return o.getLineDash().join(\",\"); })()",
+    "expected": "1,2",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); const src = o.createImageData(3, 4); return o.createImageData(src).width + \"x\" + o.createImageData(src).height; })()",
+    "expected": "3x4",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"rebeccapurple\"; return o.fillStyle; })()",
+    "expected": "#663399",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"#f008\"; return o.fillStyle; })()",
+    "expected": "rgba(255, 0, 0, 0.533)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"hsl(120 100% 50%)\"; return o.fillStyle; })()",
+    "expected": "#00ff00",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"rgb(0 0 0 / 50%)\"; return o.fillStyle; })()",
+    "expected": "rgba(0, 0, 0, 0.5)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"rgba(0, 0, 0, 0.5)\"; return o.fillStyle; })()",
+    "expected": "rgba(0, 0, 0, 0.5)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"black\"; o.fillStyle = \"notacolor\"; return o.fillStyle; })()",
+    "expected": "#000000",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.fillStyle = \"rgba(1, 2, 3, 0)\"; return o.fillStyle; })()",
+    "expected": "rgba(1, 2, 3, 0)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "shadowColor",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.shadowColor = \"rgba(1, 2, 3, 0.25)\"; return o.shadowColor; })()",
+    "expected": "rgba(1, 2, 3, 0.25)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "strokeStyle",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); o.strokeStyle = \"hsl(240 100% 50% / 0.75)\"; return o.strokeStyle; })()",
+    "expected": "rgba(0, 0, 255, 0.75)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "canvas",
+    "expr": "(() => { const c = new OffscreenCanvas(300, 150); const o = c.getContext(\"2d\"); return o.canvas === c; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "canvas",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.canvas instanceof OffscreenCanvas; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "canvas",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return Object.prototype.toString.call(o.canvas); })()",
+    "expected": "[object OffscreenCanvas]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "canvas",
+    "expr": "(() => { const o = new OffscreenCanvas(7, 11).getContext(\"2d\"); return o.canvas.width + \"x\" + o.canvas.height; })()",
+    "expected": "7x11",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "canvas",
+    "expr": "(() => { const o = new OffscreenCanvas(300, 150).getContext(\"2d\"); return o.canvas.tagName; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(4, 4).getContext(\"2d\", { alpha: false }); return o.getContextAttributes().alpha; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(4, 4).getContext(\"2d\", { willReadFrequently: true }); return o.getContextAttributes().willReadFrequently; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getContextAttributes",
+    "expr": "(() => { const o = new OffscreenCanvas(4, 4).getContext(\"2d\"); return typeof o.getContextAttributes();})()",
+    "expected": "object",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isContextLost",
+    "expr": "(() => { const o = new OffscreenCanvas(4, 4).getContext(\"2d\"); return o.isContextLost.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.drawImage(new OffscreenCanvas(4, 4), 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); const s = new OffscreenCanvas(4, 4); s.getContext(\"2d\"); return o.drawImage(s.transferToImageBitmap(), 0, 0); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.drawImage(new OffscreenCanvas(4, 4), 0, 0, 4, 4, 0, 0, 4, 4); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "drawImage",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.drawImage({}, 0, 0); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return Object.prototype.toString.call(o.createPattern(new OffscreenCanvas(4, 4), \"repeat\")); })()",
+    "expected": "[object CanvasPattern]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createPattern",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.createPattern(new OffscreenCanvas(0, 0), \"repeat\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "globalAlpha",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); o.globalAlpha = 0.5; o.fillStyle = \"#000000\"; o.fillRect(0, 0, 4, 4); return o.getImageData(0, 0, 1, 1).data[3]; })()",
+    "expected": 128,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.getImageData(0, 0, 2, 2, { colorSpace: \"display-p3\" }).colorSpace; })()",
+    "expected": "display-p3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "createImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return o.createImageData(2, 2, { colorSpace: \"display-p3\" }).colorSpace; })()",
+    "expected": "display-p3",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "filter",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); o.filter = \"blur(2px)\"; o.save(); o.filter = \"none\"; o.restore(); return o.filter; })()",
+    "expected": "blur(2px)",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "measureText",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); return Object.keys(Object.getPrototypeOf(o.measureText(\"x\"))).length; })()",
+    "expected": 10,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "lang",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); o.lang = \"bogus value\"; return o.lang; })()",
+    "expected": "bogus value",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "isPointInPath",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); o.rect(0, 0, 10, 10); o.translate(20, 20); return o.isPointInPath(5, 5); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "setTransform",
+    "expr": "(() => { const o = new OffscreenCanvas(8, 8).getContext(\"2d\"); o.setTransform(new DOMMatrix([2, 0, 0, 3, 4, 5])); const m = o.getTransform(); return [m.a, m.d, m.e, m.f].join(\",\"); })()",
+    "expected": "2,3,4,5",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "beginPath",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.rect(0, 0, 10, 10); o.beginPath(); return o.isPointInPath(5, 5); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "beginPath",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.lineWidth = 6; o.moveTo(0, 0); o.lineTo(16, 0); o.beginPath(); return o.isPointInStroke(8, 0); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "beginPath",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.rect(0, 0, 8, 8); o.beginPath(); o.fill(); const d = o.getImageData(2, 2, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "beginPath",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.translate(4, 4); o.beginPath(); const m = o.getTransform(); return m.e + \",\" + m.f; })()",
+    "expected": "4,4",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new OffscreenCanvas(32, 32).getContext(\"2d\"); o.lineWidth = 4; o.moveTo(0, 0); o.lineTo(20, 0); o.lineTo(20, 20); o.closePath(); return o.isPointInStroke(10, 10); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new OffscreenCanvas(32, 32).getContext(\"2d\"); o.lineWidth = 4; o.moveTo(0, 0); o.lineTo(20, 0); o.lineTo(20, 20); return o.isPointInStroke(10, 10); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new OffscreenCanvas(32, 32).getContext(\"2d\"); o.closePath(); o.lineTo(10, 10); return o.isPointInStroke(5, 5); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "closePath",
+    "expr": "(() => { const o = new OffscreenCanvas(32, 32).getContext(\"2d\"); return o.closePath.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.strokeStyle = \"#00ff00\"; o.lineWidth = 8; o.moveTo(0, 8); o.lineTo(16, 8); o.stroke(); const d = o.getImageData(8, 8, 1, 1).data; return [d[0] < 20, d[1] > 235, d[2] < 20, d[3] > 235].join(\",\"); })()",
+    "expected": "true,true,true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.lineWidth = 6; o.moveTo(0, 8); o.lineTo(16, 8); o.stroke(); return o.isPointInStroke(8, 8); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); return o.stroke(\"evenodd\"); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); return o.stroke(null); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); return o.stroke.length; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "stroke",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.strokeStyle = \"#00ff00\"; o.lineWidth = 2; o.moveTo(0, 8); o.lineTo(16, 8); o.stroke(); const d = o.getImageData(8, 0, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillRect",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 4, 4); const d = o.getImageData(1, 1, 1, 1).data; return [d[0] < 20, d[1] > 235, d[2] < 20, d[3] > 235].join(\",\"); })()",
+    "expected": "true,true,true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fillRect",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 4, 4); const d = o.getImageData(8, 8, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clearRect",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 8, 8); o.clearRect(0, 0, 8, 8); const d = o.getImageData(2, 2, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "getImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#ff0000\"; o.fillRect(0, 0, 16, 16); const d = o.getImageData(0, 0, 1, 1).data; return [d[0] > 235, d[1] < 20, d[2] < 20, d[3] > 235].join(\",\"); })()",
+    "expected": "true,true,true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "putImageData",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); const d = o.createImageData(1, 1); d.data[1] = 255; d.data[3] = 255; o.putImageData(d, 0, 0); const r = o.getImageData(0, 0, 1, 1).data; return [r[1] > 235, r[3] > 235].join(\",\"); })()",
+    "expected": "true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "reset",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 16, 16); o.reset(); const d = o.getImageData(0, 0, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "fill",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.fillStyle = \"#00ff00\"; o.rect(0, 0, 4, 4); o.fill(); const d = o.getImageData(1, 1, 1, 1).data; return [d[1] > 235, d[3] > 235].join(\",\"); })()",
+    "expected": "true,true",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "clip",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.rect(0, 0, 4, 4); o.clip(); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 16, 16); const d = o.getImageData(8, 8, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "save",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.rect(0, 0, 4, 4); o.clip(); o.save(); o.restore(); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 16, 16); const d = o.getImageData(8, 8, 1, 1).data; return d[3] < 20; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OffscreenCanvasRenderingContext2D",
+    "member": "restore",
+    "expr": "(() => { const o = new OffscreenCanvas(16, 16).getContext(\"2d\"); o.save(); o.rect(0, 0, 4, 4); o.clip(); o.restore(); o.fillStyle = \"#00ff00\"; o.fillRect(0, 0, 16, 16); const d = o.getImageData(8, 8, 1, 1).data; return d[3] > 235; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,8 @@
+<!doctype html><html><body><script>
+// REALWEB F29: a module a FRAME's script imports (dynamic import()) is evaluated in the FRAME's realm: its
+// globals are the frame's -- document, location, window, the frame's own vars. SvelteKit's start checks
+// `document.URL !== location.href` and reloads; with the page's document and a frame's location it navigated
+// the TOP (bloomberg.com, 2026-09-30).
+window.R = null; var PAGEVAR = 'page';
+addEventListener('message', function (e) { if (e.data && e.data.probe) window.R = JSON.stringify(e.data.probe); });
+</script><iframe src="c.html?x=1"></iframe></body></html>

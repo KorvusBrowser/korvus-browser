@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "FontFaceSetLoadEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new FontFaceSetLoadEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object FontFaceSetLoadEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FontFaceSetLoadEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new FontFaceSetLoadEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "FontFaceSetLoadEvent",
+    "member": "fontfaces",
+    "expr": "(() => { const o = new FontFaceSetLoadEvent(\"x\"); return o.fontfaces; })()",
+    "expected": [],
+    "source": "chrome-152-macos-20261017"
+  }
+]

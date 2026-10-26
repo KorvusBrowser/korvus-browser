@@ -1,0 +1,4225 @@
+[
+  {
+    "iface": "Document",
+    "member": "constructor",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object Document]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "rootElement",
+    "expr": "(() => { const o = new Document(); return o.rootElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "namedFlows",
+    "expr": "(() => { const o = new Document(); return o.namedFlows; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "startViewTransition",
+    "expr": "(() => { const o = new Document(); return o.startViewTransition(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "activeViewTransition",
+    "expr": "(() => { const o = new Document(); return o.activeViewTransition; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementFromPoint",
+    "expr": "(() => { const o = new Document(); return o.elementFromPoint(1, 1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementFromPoint",
+    "expr": "(() => { const o = new Document(); return o.elementFromPoint(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementsFromPoint",
+    "expr": "(() => { const o = new Document(); return o.elementsFromPoint(1, 1); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementsFromPoint",
+    "expr": "(() => { const o = new Document(); return o.elementsFromPoint(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "caretPositionFromPoint",
+    "expr": "(() => { const o = new Document(); return o.caretPositionFromPoint(1, 1); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "caretPositionFromPoint",
+    "expr": "(() => { const o = new Document(); return o.caretPositionFromPoint(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "scrollingElement",
+    "expr": "(() => { const o = new Document(); return o.scrollingElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "URL",
+    "expr": "(() => { const o = new Document(); return o.URL; })()",
+    "expected": "about:blank",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "documentURI",
+    "expr": "(() => { const o = new Document(); return o.documentURI; })()",
+    "expected": "about:blank",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "compatMode",
+    "expr": "(() => { const o = new Document(); return o.compatMode; })()",
+    "expected": "CSS1Compat",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "characterSet",
+    "expr": "(() => { const o = new Document(); return o.characterSet; })()",
+    "expected": "UTF-8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "charset",
+    "expr": "(() => { const o = new Document(); return o.charset; })()",
+    "expected": "UTF-8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "inputEncoding",
+    "expr": "(() => { const o = new Document(); return o.inputEncoding; })()",
+    "expected": "UTF-8",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "contentType",
+    "expr": "(() => { const o = new Document(); return o.contentType; })()",
+    "expected": "application/xml",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "doctype",
+    "expr": "(() => { const o = new Document(); return o.doctype; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "documentElement",
+    "expr": "(() => { const o = new Document(); return o.documentElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByTagName",
+    "expr": "(() => { const o = new Document(); return o.getElementsByTagName(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByTagNameNS",
+    "expr": "(() => { const o = new Document(); return o.getElementsByTagNameNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByClassName",
+    "expr": "(() => { const o = new Document(); return o.getElementsByClassName(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createElement",
+    "expr": "(() => { const o = new Document(); return o.createElement(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createElementNS",
+    "expr": "(() => { const o = new Document(); return o.createElementNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createTextNode",
+    "expr": "(() => { const o = new Document(); return o.createTextNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createCDATASection",
+    "expr": "(() => { const o = new Document(); return o.createCDATASection(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createComment",
+    "expr": "(() => { const o = new Document(); return o.createComment(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createProcessingInstruction",
+    "expr": "(() => { const o = new Document(); return o.createProcessingInstruction(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "importNode",
+    "expr": "(() => { const o = new Document(); return o.importNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "adoptNode",
+    "expr": "(() => { const o = new Document(); return o.adoptNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createAttribute",
+    "expr": "(() => { const o = new Document(); return o.createAttribute(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createAttributeNS",
+    "expr": "(() => { const o = new Document(); return o.createAttributeNS(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createEvent",
+    "expr": "(() => { const o = new Document(); return o.createEvent(\"x\"); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createEvent",
+    "expr": "(() => { const o = new Document(); return o.createEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createNodeIterator",
+    "expr": "(() => { const o = new Document(); return o.createNodeIterator(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createTreeWalker",
+    "expr": "(() => { const o = new Document(); return o.createTreeWalker(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "measureElement",
+    "expr": "(() => { const o = new Document(); return o.measureElement(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "measureText",
+    "expr": "(() => { const o = new Document(); return o.measureText(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fullscreenEnabled",
+    "expr": "(() => { const o = new Document(); return o.fullscreenEnabled; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fullscreen",
+    "expr": "(() => { const o = new Document(); return o.fullscreen; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfullscreenchange",
+    "expr": "(() => { const o = new Document(); return o.onfullscreenchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfullscreenerror",
+    "expr": "(() => { const o = new Document(); return o.onfullscreenerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "location",
+    "expr": "(() => { const o = new Document(); return o.location; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "domain",
+    "expr": "(() => { const o = new Document(); return o.domain; })()",
+    "expected": "localhost",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "domain",
+    "expr": "(() => { const o = new Document(); return (o.domain = \"x\", o.domain); })()",
+    "throws": "SecurityError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "referrer",
+    "expr": "(() => { const o = new Document(); return o.referrer; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "cookie",
+    "expr": "(() => { const o = new Document(); return o.cookie; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "cookie",
+    "expr": "(() => { const o = new Document(); return (o.cookie = \"x\", o.cookie); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "readyState",
+    "expr": "(() => { const o = new Document(); return o.readyState; })()",
+    "expected": "complete",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "title",
+    "expr": "(() => { const o = new Document(); return o.title; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "title",
+    "expr": "(() => { const o = new Document(); return (o.title = \"x\", o.title); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "dir",
+    "expr": "(() => { const o = new Document(); return o.dir; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "dir",
+    "expr": "(() => { const o = new Document(); return (o.dir = \"x\", o.dir); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "body",
+    "expr": "(() => { const o = new Document(); return o.body; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "head",
+    "expr": "(() => { const o = new Document(); return o.head; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByName",
+    "expr": "(() => { const o = new Document(); return o.getElementsByName(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "currentScript",
+    "expr": "(() => { const o = new Document(); return o.currentScript; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "open",
+    "expr": "(() => { const o = new Document(); return o.open(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "open",
+    "expr": "(() => { const o = new Document(); return o.open(\"x\", \"x\", \"x\"); })()",
+    "throws": "InvalidAccessError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "close",
+    "expr": "(() => { const o = new Document(); return o.close(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "write",
+    "expr": "(() => { const o = new Document(); return o.write(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "writeln",
+    "expr": "(() => { const o = new Document(); return o.writeln(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "defaultView",
+    "expr": "(() => { const o = new Document(); return o.defaultView; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasFocus",
+    "expr": "(() => { const o = new Document(); return o.hasFocus(); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "designMode",
+    "expr": "(() => { const o = new Document(); return o.designMode; })()",
+    "expected": "off",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "designMode",
+    "expr": "(() => { const o = new Document(); return (o.designMode = \"x\", o.designMode); })()",
+    "expected": "off",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "execCommand",
+    "expr": "(() => { const o = new Document(); return o.execCommand(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "execCommand",
+    "expr": "(() => { const o = new Document(); return o.execCommand(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandEnabled",
+    "expr": "(() => { const o = new Document(); return o.queryCommandEnabled(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandEnabled",
+    "expr": "(() => { const o = new Document(); return o.queryCommandEnabled(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandIndeterm",
+    "expr": "(() => { const o = new Document(); return o.queryCommandIndeterm(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandIndeterm",
+    "expr": "(() => { const o = new Document(); return o.queryCommandIndeterm(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandState",
+    "expr": "(() => { const o = new Document(); return o.queryCommandState(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandState",
+    "expr": "(() => { const o = new Document(); return o.queryCommandState(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandSupported",
+    "expr": "(() => { const o = new Document(); return o.queryCommandSupported(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandSupported",
+    "expr": "(() => { const o = new Document(); return o.queryCommandSupported(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandValue",
+    "expr": "(() => { const o = new Document(); return o.queryCommandValue(\"x\"); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "queryCommandValue",
+    "expr": "(() => { const o = new Document(); return o.queryCommandValue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hidden",
+    "expr": "(() => { const o = new Document(); return o.hidden; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "visibilityState",
+    "expr": "(() => { const o = new Document(); return o.visibilityState; })()",
+    "expected": "hidden",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onreadystatechange",
+    "expr": "(() => { const o = new Document(); return o.onreadystatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onvisibilitychange",
+    "expr": "(() => { const o = new Document(); return o.onvisibilitychange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fgColor",
+    "expr": "(() => { const o = new Document(); return o.fgColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fgColor",
+    "expr": "(() => { const o = new Document(); return (o.fgColor = \"x\", o.fgColor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "linkColor",
+    "expr": "(() => { const o = new Document(); return o.linkColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "linkColor",
+    "expr": "(() => { const o = new Document(); return (o.linkColor = \"x\", o.linkColor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "vlinkColor",
+    "expr": "(() => { const o = new Document(); return o.vlinkColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "vlinkColor",
+    "expr": "(() => { const o = new Document(); return (o.vlinkColor = \"x\", o.vlinkColor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "alinkColor",
+    "expr": "(() => { const o = new Document(); return o.alinkColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "alinkColor",
+    "expr": "(() => { const o = new Document(); return (o.alinkColor = \"x\", o.alinkColor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "bgColor",
+    "expr": "(() => { const o = new Document(); return o.bgColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "bgColor",
+    "expr": "(() => { const o = new Document(); return (o.bgColor = \"x\", o.bgColor); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "clear",
+    "expr": "(() => { const o = new Document(); return o.clear(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "captureEvents",
+    "expr": "(() => { const o = new Document(); return o.captureEvents(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "releaseEvents",
+    "expr": "(() => { const o = new Document(); return o.releaseEvents(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfreeze",
+    "expr": "(() => { const o = new Document(); return o.onfreeze; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onresume",
+    "expr": "(() => { const o = new Document(); return o.onresume; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "wasDiscarded",
+    "expr": "(() => { const o = new Document(); return o.wasDiscarded; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "permissionsPolicy",
+    "expr": "(() => { const o = new Document(); return o.permissionsPolicy; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "pictureInPictureEnabled",
+    "expr": "(() => { const o = new Document(); return o.pictureInPictureEnabled; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerlockchange",
+    "expr": "(() => { const o = new Document(); return o.onpointerlockchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerlockerror",
+    "expr": "(() => { const o = new Document(); return o.onpointerlockerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "exitPointerLock",
+    "expr": "(() => { const o = new Document(); return o.exitPointerLock(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "prerendering",
+    "expr": "(() => { const o = new Document(); return o.prerendering; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onprerenderingchange",
+    "expr": "(() => { const o = new Document(); return o.onprerenderingchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getSelection",
+    "expr": "(() => { const o = new Document(); return o.getSelection(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasPrivateToken",
+    "expr": "(() => { const o = new Document(); return o.hasPrivateToken(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Document",
+    "member": "hasPrivateToken",
+    "expr": "(() => { const o = new Document(); return o.hasPrivateToken(); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Document",
+    "member": "hasRedemptionRecord",
+    "expr": "(() => { const o = new Document(); return o.hasRedemptionRecord(\"x\"); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Document",
+    "member": "hasRedemptionRecord",
+    "expr": "(() => { const o = new Document(); return o.hasRedemptionRecord(); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Document",
+    "member": "modelContext",
+    "expr": "(() => { const o = new Document(); return o.modelContext; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getBoxQuads",
+    "expr": "(() => { const o = new Document(); return o.getBoxQuads(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "convertQuadFromNode",
+    "expr": "(() => { const o = new Document(); return o.convertQuadFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "convertRectFromNode",
+    "expr": "(() => { const o = new Document(); return o.convertRectFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "convertPointFromNode",
+    "expr": "(() => { const o = new Document(); return o.convertPointFromNode(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementById",
+    "expr": "(() => { const o = new Document(); return o.getElementById(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementById",
+    "expr": "(() => { const o = new Document(); return o.getElementById(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "customElementRegistry",
+    "expr": "(() => { const o = new Document(); return o.customElementRegistry; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "firstElementChild",
+    "expr": "(() => { const o = new Document(); return o.firstElementChild; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "lastElementChild",
+    "expr": "(() => { const o = new Document(); return o.lastElementChild; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "childElementCount",
+    "expr": "(() => { const o = new Document(); return o.childElementCount; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "prepend",
+    "expr": "(() => { const o = new Document(); return o.prepend(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "append",
+    "expr": "(() => { const o = new Document(); return o.append(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "replaceChildren",
+    "expr": "(() => { const o = new Document(); return o.replaceChildren(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "moveBefore",
+    "expr": "(() => { const o = new Document(); return o.moveBefore(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "querySelector",
+    "expr": "(() => { const o = new Document(); return o.querySelector(\"x\"); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "querySelector",
+    "expr": "(() => { const o = new Document(); return o.querySelector(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "querySelectorAll",
+    "expr": "(() => { const o = new Document(); return o.querySelectorAll(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createExpression",
+    "expr": "(() => { const o = new Document(); return o.createExpression(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createNSResolver",
+    "expr": "(() => { const o = new Document(); return o.createNSResolver(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "evaluate",
+    "expr": "(() => { const o = new Document(); return o.evaluate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onabort",
+    "expr": "(() => { const o = new Document(); return o.onabort; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onauxclick",
+    "expr": "(() => { const o = new Document(); return o.onauxclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = new Document(); return o.onbeforeinput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = new Document(); return o.onbeforematch; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = new Document(); return o.onbeforetoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onblur",
+    "expr": "(() => { const o = new Document(); return o.onblur; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncancel",
+    "expr": "(() => { const o = new Document(); return o.oncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncanplay",
+    "expr": "(() => { const o = new Document(); return o.oncanplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = new Document(); return o.oncanplaythrough; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onchange",
+    "expr": "(() => { const o = new Document(); return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onclick",
+    "expr": "(() => { const o = new Document(); return o.onclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onclose",
+    "expr": "(() => { const o = new Document(); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncommand",
+    "expr": "(() => { const o = new Document(); return o.oncommand; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = new Document(); return o.oncontextlost; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = new Document(); return o.oncontextmenu; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = new Document(); return o.oncontextrestored; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncopy",
+    "expr": "(() => { const o = new Document(); return o.oncopy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncuechange",
+    "expr": "(() => { const o = new Document(); return o.oncuechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncut",
+    "expr": "(() => { const o = new Document(); return o.oncut; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondblclick",
+    "expr": "(() => { const o = new Document(); return o.ondblclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondrag",
+    "expr": "(() => { const o = new Document(); return o.ondrag; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragend",
+    "expr": "(() => { const o = new Document(); return o.ondragend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragenter",
+    "expr": "(() => { const o = new Document(); return o.ondragenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragleave",
+    "expr": "(() => { const o = new Document(); return o.ondragleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragover",
+    "expr": "(() => { const o = new Document(); return o.ondragover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragstart",
+    "expr": "(() => { const o = new Document(); return o.ondragstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondrop",
+    "expr": "(() => { const o = new Document(); return o.ondrop; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = new Document(); return o.ondurationchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onemptied",
+    "expr": "(() => { const o = new Document(); return o.onemptied; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onended",
+    "expr": "(() => { const o = new Document(); return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onerror",
+    "expr": "(() => { const o = new Document(); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfocus",
+    "expr": "(() => { const o = new Document(); return o.onfocus; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onformdata",
+    "expr": "(() => { const o = new Document(); return o.onformdata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oninput",
+    "expr": "(() => { const o = new Document(); return o.oninput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oninvalid",
+    "expr": "(() => { const o = new Document(); return o.oninvalid; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeydown",
+    "expr": "(() => { const o = new Document(); return o.onkeydown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeypress",
+    "expr": "(() => { const o = new Document(); return o.onkeypress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeyup",
+    "expr": "(() => { const o = new Document(); return o.onkeyup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onload",
+    "expr": "(() => { const o = new Document(); return o.onload; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = new Document(); return o.onloadeddata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = new Document(); return o.onloadedmetadata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadstart",
+    "expr": "(() => { const o = new Document(); return o.onloadstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousedown",
+    "expr": "(() => { const o = new Document(); return o.onmousedown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = new Document(); return o.onmouseenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = new Document(); return o.onmouseleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousemove",
+    "expr": "(() => { const o = new Document(); return o.onmousemove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseout",
+    "expr": "(() => { const o = new Document(); return o.onmouseout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseover",
+    "expr": "(() => { const o = new Document(); return o.onmouseover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseup",
+    "expr": "(() => { const o = new Document(); return o.onmouseup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpaste",
+    "expr": "(() => { const o = new Document(); return o.onpaste; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpause",
+    "expr": "(() => { const o = new Document(); return o.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onplay",
+    "expr": "(() => { const o = new Document(); return o.onplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onplaying",
+    "expr": "(() => { const o = new Document(); return o.onplaying; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onprogress",
+    "expr": "(() => { const o = new Document(); return o.onprogress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onratechange",
+    "expr": "(() => { const o = new Document(); return o.onratechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onreset",
+    "expr": "(() => { const o = new Document(); return o.onreset; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onresize",
+    "expr": "(() => { const o = new Document(); return o.onresize; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscroll",
+    "expr": "(() => { const o = new Document(); return o.onscroll; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollend",
+    "expr": "(() => { const o = new Document(); return o.onscrollend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = new Document(); return o.onsecuritypolicyviolation; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onseeked",
+    "expr": "(() => { const o = new Document(); return o.onseeked; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onseeking",
+    "expr": "(() => { const o = new Document(); return o.onseeking; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselect",
+    "expr": "(() => { const o = new Document(); return o.onselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onslotchange",
+    "expr": "(() => { const o = new Document(); return o.onslotchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onstalled",
+    "expr": "(() => { const o = new Document(); return o.onstalled; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsubmit",
+    "expr": "(() => { const o = new Document(); return o.onsubmit; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsuspend",
+    "expr": "(() => { const o = new Document(); return o.onsuspend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = new Document(); return o.ontimeupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontoggle",
+    "expr": "(() => { const o = new Document(); return o.ontoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = new Document(); return o.onvolumechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwaiting",
+    "expr": "(() => { const o = new Document(); return o.onwaiting; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = new Document(); return o.onwebkitanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = new Document(); return o.onwebkitanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = new Document(); return o.onwebkitanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = new Document(); return o.onwebkittransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwheel",
+    "expr": "(() => { const o = new Document(); return o.onwheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ariaNotify",
+    "expr": "(() => { const o = new Document(); return o.ariaNotify(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ariaNotify",
+    "expr": "(() => { const o = new Document(); return o.ariaNotify(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "parseHTML",
+    "expr": "Object.prototype.toString.call(Document.parseHTML(\"x\"))",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "rootElement",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.rootElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "namedFlows",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.namedFlows); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "startViewTransition",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.startViewTransition()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "activeViewTransition",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.activeViewTransition); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementFromPoint",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.elementFromPoint(1, 1)); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "elementsFromPoint",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.elementsFromPoint(1, 1)); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "caretPositionFromPoint",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.caretPositionFromPoint(1, 1)); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "scrollingElement",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.scrollingElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "implementation",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.implementation); })()",
+    "expected": "[object DOMImplementation]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "doctype",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.doctype); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "documentElement",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.documentElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByTagName",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getElementsByTagName(\"x\")); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByTagNameNS",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getElementsByTagNameNS(\"x\", \"x\")); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByClassName",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getElementsByClassName(\"x\")); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createElement",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createElement(\"x\")); })()",
+    "expected": "[object Element]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createElementNS",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createElementNS(\"x\", \"x\")); })()",
+    "expected": "[object Element]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createDocumentFragment",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createDocumentFragment()); })()",
+    "expected": "[object DocumentFragment]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createTextNode",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createTextNode(\"x\")); })()",
+    "expected": "[object Text]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createCDATASection",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createCDATASection(\"x\")); })()",
+    "expected": "[object CDATASection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createComment",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createComment(\"x\")); })()",
+    "expected": "[object Comment]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createProcessingInstruction",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createProcessingInstruction(\"x\", \"x\")); })()",
+    "expected": "[object ProcessingInstruction]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createAttribute",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createAttribute(\"x\")); })()",
+    "expected": "[object Attr]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createAttributeNS",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createAttributeNS(\"x\", \"x\")); })()",
+    "expected": "[object Attr]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createEvent",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createEvent(\"x\")); })()",
+    "throws": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createRange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createRange()); })()",
+    "expected": "[object Range]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "exitFullscreen",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.exitFullscreen()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfullscreenchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onfullscreenchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfullscreenerror",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onfullscreenerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "location",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.location); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "readyState",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.readyState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "body",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.body); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "head",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.head); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "images",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.images); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "embeds",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.embeds); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "plugins",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.plugins); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "links",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.links); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "forms",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.forms); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "scripts",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.scripts); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementsByName",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getElementsByName(\"x\")); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "currentScript",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.currentScript); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "defaultView",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.defaultView); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "visibilityState",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.visibilityState); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onreadystatechange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onreadystatechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onvisibilitychange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onvisibilitychange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "anchors",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.anchors); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "applets",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.applets); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "all",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.all); })()",
+    "expected": "[object HTMLAllCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfreeze",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onfreeze); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onresume",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onresume); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "permissionsPolicy",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.permissionsPolicy); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "exitPictureInPicture",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.exitPictureInPicture()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerlockchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onpointerlockchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerlockerror",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onpointerlockerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onprerenderingchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onprerenderingchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasUnpartitionedCookieAccess",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.hasUnpartitionedCookieAccess()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fragmentDirective",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.fragmentDirective); })()",
+    "expected": "[object FragmentDirective]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getSelection",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getSelection()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasStorageAccess",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.hasStorageAccess()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "requestStorageAccess",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.requestStorageAccess()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasPrivateToken",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.hasPrivateToken(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasRedemptionRecord",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.hasRedemptionRecord(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "timeline",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.timeline); })()",
+    "expected": "[object DocumentTimeline]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "modelContext",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.modelContext); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fonts",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.fonts); })()",
+    "expected": "[object FontFaceSet]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getBoxQuads",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getBoxQuads()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getElementById",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.getElementById(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "customElementRegistry",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.customElementRegistry); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "children",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.children); })()",
+    "expected": "[object HTMLCollection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "firstElementChild",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.firstElementChild); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "lastElementChild",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.lastElementChild); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "querySelector",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.querySelector(\"x\")); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "querySelectorAll",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.querySelectorAll(\"x\")); })()",
+    "expected": "[object NodeList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "createExpression",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.createExpression(\"x\")); })()",
+    "expected": "[object XPathExpression]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onabort",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onabort); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onauxclick",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onauxclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onbeforeinput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onbeforematch); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onbeforetoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onblur",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onblur); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncancel",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncancel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncanplay",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncanplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncanplaythrough); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onclick",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onclose",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncommand",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncommand); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncontextlost); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncontextmenu); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncontextrestored); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncopy",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncopy); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncuechange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncuechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncut",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oncut); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondblclick",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondblclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondrag",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondrag); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragend",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondragend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragenter",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondragenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragleave",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondragleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragover",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondragover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondragstart",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondragstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondrop",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondrop); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ondurationchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onemptied",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onemptied); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onended",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onerror",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onfocus",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onfocus); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onformdata",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onformdata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oninput",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oninput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oninvalid",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.oninvalid); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeydown",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onkeydown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeypress",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onkeypress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onkeyup",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onkeyup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onload",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onloadeddata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onloadedmetadata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onloadstart",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onloadstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousedown",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmousedown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmouseenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmouseleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousemove",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmousemove); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseout",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmouseout); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseover",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmouseover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmouseup",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onmouseup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpaste",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onpaste); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpause",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onpause); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onplay",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onplaying",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onplaying); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onprogress",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onprogress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onratechange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onratechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onreset",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onreset); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onresize",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onresize); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscroll",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onscroll); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollend",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onscrollend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onsecuritypolicyviolation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onseeked",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onseeked); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onseeking",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onseeking); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselect",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onselect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onslotchange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onslotchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onstalled",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onstalled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsubmit",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onsubmit); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsuspend",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onsuspend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ontimeupdate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontoggle",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.ontoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onvolumechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwaiting",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwaiting); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwebkitanimationend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwebkitanimationiteration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwebkitanimationstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwebkittransitionend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwheel",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.onwheel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); return o.onbeforecopy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); return o.onbeforecut; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); return o.onbeforepaste; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); return o.onsearch; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); return o.onwebkitfullscreenchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); return o.onwebkitfullscreenerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "parseHTMLUnsafe",
+    "expr": "Object.prototype.toString.call(Document.parseHTMLUnsafe(\"<p>hi\"))",
+    "expected": "[object HTMLDocument]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "parseHTMLUnsafe",
+    "expr": "Document.parseHTMLUnsafe(\"<p>hi\").body.textContent",
+    "expected": "hi",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "parseHTMLUnsafe",
+    "expr": "Document.parseHTMLUnsafe(\"<p>hi\").querySelectorAll(\"p\").length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "parseHTMLUnsafe",
+    "expr": "Document.parseHTMLUnsafe()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "lastModified",
+    "expr": "(() => { const o = new Document(); return o.lastModified.length; })()",
+    "expected": 19,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "lastModified",
+    "expr": "(() => { const o = new Document(); return typeof o.lastModified; })()",
+    "expected": "string",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "activeElement",
+    "expr": "(() => { const o = new Document(); return o.activeElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "activeElement",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.activeElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = new Document(); return o.adoptedStyleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = new Document(); return Array.isArray(o.adoptedStyleSheets); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = new Document(); o.adoptedStyleSheets = []; return o.adoptedStyleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = new Document(); try { o.adoptedStyleSheets = [1]; return \"no-throw\"; } catch (x) { return x.name; } })()",
+    "expected": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "caretRangeFromPoint",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.caretRangeFromPoint(0, 0)); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "caretRangeFromPoint",
+    "expr": "(() => { const o = new Document(); return o.caretRangeFromPoint(); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "featurePolicy",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.featurePolicy); })()",
+    "expected": "[object PermissionsPolicy]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "fullscreenElement",
+    "expr": "(() => { const o = new Document(); return o.fullscreenElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getAnimations",
+    "expr": "(() => { const o = new Document(); return o.getAnimations().length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "getAnimations",
+    "expr": "(() => { const o = new Document(); return Array.isArray(o.getAnimations()); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "pictureInPictureElement",
+    "expr": "(() => { const o = new Document(); return o.pictureInPictureElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "pointerLockElement",
+    "expr": "(() => { const o = new Document(); return o.pointerLockElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "requestStorageAccessFor",
+    "expr": "(() => { const o = new Document(); const p = o.requestStorageAccessFor(\"https://example.com/\"); p.catch(function () {}); return Object.prototype.toString.call(p); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "styleSheets",
+    "expr": "(() => { const o = new Document(); return Object.prototype.toString.call(o.styleSheets); })()",
+    "expected": "[object StyleSheetList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "styleSheets",
+    "expr": "(() => { const o = new Document(); return o.styleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "styleSheets",
+    "expr": "(() => { const o = new Document(); return o.styleSheets.item(0); })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitCancelFullScreen",
+    "expr": "(() => { const o = new Document(); return o.webkitCancelFullScreen(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitExitFullscreen",
+    "expr": "(() => { const o = new Document(); return o.webkitExitFullscreen(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitExitFullscreen",
+    "expr": "(() => { const o = new Document(); return o.webkitCancelFullScreen === o.webkitExitFullscreen; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitCurrentFullScreenElement",
+    "expr": "(() => { const o = new Document(); return o.webkitCurrentFullScreenElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitFullscreenElement",
+    "expr": "(() => { const o = new Document(); return o.webkitFullscreenElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitFullscreenEnabled",
+    "expr": "(() => { const o = new Document(); return o.webkitFullscreenEnabled; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitIsFullScreen",
+    "expr": "(() => { const o = new Document(); return o.webkitIsFullScreen; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitHidden",
+    "expr": "(() => { const o = new Document(); return o.webkitHidden; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "webkitVisibilityState",
+    "expr": "(() => { const o = new Document(); return o.webkitVisibilityState; })()",
+    "expected": "hidden",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlEncoding",
+    "expr": "(() => { const o = new Document(); return o.xmlEncoding; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlStandalone",
+    "expr": "(() => { const o = new Document(); return o.xmlStandalone; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlStandalone",
+    "expr": "(() => { const o = new Document(); o.xmlStandalone = true; return o.xmlStandalone; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlStandalone",
+    "expr": "(() => { const o = new Document(); o.xmlStandalone = \"x\"; return o.xmlStandalone; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlVersion",
+    "expr": "(() => { const o = new Document(); return o.xmlVersion; })()",
+    "expected": "1.0",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlVersion",
+    "expr": "(() => { const o = new Document(); o.xmlVersion = \"1.0\"; return o.xmlVersion; })()",
+    "expected": "1.0",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "xmlVersion",
+    "expr": "(() => { const o = new Document(); try { o.xmlVersion = \"9.9\"; return \"no-throw\"; } catch (x) { return x.name; } })()",
+    "expected": "NotSupportedError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onanimationcancel = f; const r = o.onanimationcancel === f; o.onanimationcancel = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); o.onanimationcancel = 42; const r = o.onanimationcancel; o.onanimationcancel = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationcancel = function (e) { n = e.type === \"animationcancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationcancel\")); o.onanimationcancel = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onanimationend = f; const r = o.onanimationend === f; o.onanimationend = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); o.onanimationend = 42; const r = o.onanimationend; o.onanimationend = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationend = function (e) { n = e.type === \"animationend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationend\")); o.onanimationend = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onanimationiteration = f; const r = o.onanimationiteration === f; o.onanimationiteration = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); o.onanimationiteration = 42; const r = o.onanimationiteration; o.onanimationiteration = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationiteration = function (e) { n = e.type === \"animationiteration\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationiteration\")); o.onanimationiteration = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onanimationstart = f; const r = o.onanimationstart === f; o.onanimationstart = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); o.onanimationstart = 42; const r = o.onanimationstart; o.onanimationstart = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationstart = function (e) { n = e.type === \"animationstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationstart\")); o.onanimationstart = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onbeforecopy = f; const r = o.onbeforecopy === f; o.onbeforecopy = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); o.onbeforecopy = 42; const r = o.onbeforecopy; o.onbeforecopy = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforecopy = function (e) { n = e.type === \"beforecopy\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforecopy\")); o.onbeforecopy = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onbeforecut = f; const r = o.onbeforecut === f; o.onbeforecut = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); o.onbeforecut = 42; const r = o.onbeforecut; o.onbeforecut = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforecut = function (e) { n = e.type === \"beforecut\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforecut\")); o.onbeforecut = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onbeforepaste = f; const r = o.onbeforepaste === f; o.onbeforepaste = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); o.onbeforepaste = 42; const r = o.onbeforepaste; o.onbeforepaste = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforepaste = function (e) { n = e.type === \"beforepaste\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforepaste\")); o.onbeforepaste = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onbeforexrselect = f; const r = o.onbeforexrselect === f; o.onbeforexrselect = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); o.onbeforexrselect = 42; const r = o.onbeforexrselect; o.onbeforexrselect = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforexrselect = function (e) { n = e.type === \"beforexrselect\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforexrselect\")); o.onbeforexrselect = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.oncontentvisibilityautostatechange = f; const r = o.oncontentvisibilityautostatechange === f; o.oncontentvisibilityautostatechange = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); o.oncontentvisibilityautostatechange = 42; const r = o.oncontentvisibilityautostatechange; o.oncontentvisibilityautostatechange = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.oncontentvisibilityautostatechange = function (e) { n = e.type === \"contentvisibilityautostatechange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"contentvisibilityautostatechange\")); o.oncontentvisibilityautostatechange = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.ongotpointercapture = f; const r = o.ongotpointercapture === f; o.ongotpointercapture = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); o.ongotpointercapture = 42; const r = o.ongotpointercapture; o.ongotpointercapture = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ongotpointercapture = function (e) { n = e.type === \"gotpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"gotpointercapture\")); o.ongotpointercapture = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onlostpointercapture = f; const r = o.onlostpointercapture === f; o.onlostpointercapture = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); o.onlostpointercapture = 42; const r = o.onlostpointercapture; o.onlostpointercapture = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onlostpointercapture = function (e) { n = e.type === \"lostpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"lostpointercapture\")); o.onlostpointercapture = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onmousewheel = f; const r = o.onmousewheel === f; o.onmousewheel = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); o.onmousewheel = 42; const r = o.onmousewheel; o.onmousewheel = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onmousewheel = function (e) { n = e.type === \"mousewheel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"mousewheel\")); o.onmousewheel = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointercancel = f; const r = o.onpointercancel === f; o.onpointercancel = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); o.onpointercancel = 42; const r = o.onpointercancel; o.onpointercancel = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointercancel = function (e) { n = e.type === \"pointercancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointercancel\")); o.onpointercancel = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerdown = f; const r = o.onpointerdown === f; o.onpointerdown = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); o.onpointerdown = 42; const r = o.onpointerdown; o.onpointerdown = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerdown = function (e) { n = e.type === \"pointerdown\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerdown\")); o.onpointerdown = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerenter = f; const r = o.onpointerenter === f; o.onpointerenter = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); o.onpointerenter = 42; const r = o.onpointerenter; o.onpointerenter = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerenter = function (e) { n = e.type === \"pointerenter\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerenter\")); o.onpointerenter = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerleave = f; const r = o.onpointerleave === f; o.onpointerleave = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); o.onpointerleave = 42; const r = o.onpointerleave; o.onpointerleave = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerleave = function (e) { n = e.type === \"pointerleave\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerleave\")); o.onpointerleave = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointermove = f; const r = o.onpointermove === f; o.onpointermove = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); o.onpointermove = 42; const r = o.onpointermove; o.onpointermove = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointermove = function (e) { n = e.type === \"pointermove\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointermove\")); o.onpointermove = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerout = f; const r = o.onpointerout === f; o.onpointerout = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); o.onpointerout = 42; const r = o.onpointerout; o.onpointerout = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerout = function (e) { n = e.type === \"pointerout\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerout\")); o.onpointerout = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerover = f; const r = o.onpointerover === f; o.onpointerover = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); o.onpointerover = 42; const r = o.onpointerover; o.onpointerover = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerover = function (e) { n = e.type === \"pointerover\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerover\")); o.onpointerover = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerrawupdate = f; const r = o.onpointerrawupdate === f; o.onpointerrawupdate = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); o.onpointerrawupdate = 42; const r = o.onpointerrawupdate; o.onpointerrawupdate = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerrawupdate = function (e) { n = e.type === \"pointerrawupdate\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerrawupdate\")); o.onpointerrawupdate = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onpointerup = f; const r = o.onpointerup === f; o.onpointerup = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); o.onpointerup = 42; const r = o.onpointerup; o.onpointerup = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerup = function (e) { n = e.type === \"pointerup\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerup\")); o.onpointerup = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onscrollsnapchange = f; const r = o.onscrollsnapchange === f; o.onscrollsnapchange = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); o.onscrollsnapchange = 42; const r = o.onscrollsnapchange; o.onscrollsnapchange = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onscrollsnapchange = function (e) { n = e.type === \"scrollsnapchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchange\")); o.onscrollsnapchange = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onscrollsnapchanging = f; const r = o.onscrollsnapchanging === f; o.onscrollsnapchanging = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); o.onscrollsnapchanging = 42; const r = o.onscrollsnapchanging; o.onscrollsnapchanging = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onscrollsnapchanging = function (e) { n = e.type === \"scrollsnapchanging\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchanging\")); o.onscrollsnapchanging = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onsearch = f; const r = o.onsearch === f; o.onsearch = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); o.onsearch = 42; const r = o.onsearch; o.onsearch = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onsearch = function (e) { n = e.type === \"search\" ? 1 : 2; }; o.dispatchEvent(new Event(\"search\")); o.onsearch = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onselectionchange = f; const r = o.onselectionchange === f; o.onselectionchange = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); o.onselectionchange = 42; const r = o.onselectionchange; o.onselectionchange = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onselectionchange = function (e) { n = e.type === \"selectionchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectionchange\")); o.onselectionchange = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onselectstart = f; const r = o.onselectstart === f; o.onselectstart = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); o.onselectstart = 42; const r = o.onselectstart; o.onselectstart = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onselectstart = function (e) { n = e.type === \"selectstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectstart\")); o.onselectstart = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.ontransitioncancel = f; const r = o.ontransitioncancel === f; o.ontransitioncancel = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); o.ontransitioncancel = 42; const r = o.ontransitioncancel; o.ontransitioncancel = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitioncancel = function (e) { n = e.type === \"transitioncancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitioncancel\")); o.ontransitioncancel = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.ontransitionend = f; const r = o.ontransitionend === f; o.ontransitionend = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); o.ontransitionend = 42; const r = o.ontransitionend; o.ontransitionend = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionend = function (e) { n = e.type === \"transitionend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionend\")); o.ontransitionend = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.ontransitionrun = f; const r = o.ontransitionrun === f; o.ontransitionrun = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); o.ontransitionrun = 42; const r = o.ontransitionrun; o.ontransitionrun = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionrun = function (e) { n = e.type === \"transitionrun\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionrun\")); o.ontransitionrun = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.ontransitionstart = f; const r = o.ontransitionstart === f; o.ontransitionstart = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); o.ontransitionstart = 42; const r = o.ontransitionstart; o.ontransitionstart = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionstart = function (e) { n = e.type === \"transitionstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionstart\")); o.ontransitionstart = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onwebkitfullscreenchange = f; const r = o.onwebkitfullscreenchange === f; o.onwebkitfullscreenchange = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); o.onwebkitfullscreenchange = 42; const r = o.onwebkitfullscreenchange; o.onwebkitfullscreenchange = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onwebkitfullscreenchange = function (e) { n = e.type === \"webkitfullscreenchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"webkitfullscreenchange\")); o.onwebkitfullscreenchange = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); const f = function () {}; o.onwebkitfullscreenerror = f; const r = o.onwebkitfullscreenerror === f; o.onwebkitfullscreenerror = null; return r; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); o.onwebkitfullscreenerror = 42; const r = o.onwebkitfullscreenerror; o.onwebkitfullscreenerror = null; return r; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onwebkitfullscreenerror = function (e) { n = e.type === \"webkitfullscreenerror\" ? 1 : 2; }; o.dispatchEvent(new Event(\"webkitfullscreenerror\")); o.onwebkitfullscreenerror = null; return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); o.onanimationcancel = function () {}; o.onanimationcancel = null; return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationcancel = function () { n++; }; o.onanimationcancel = null; o.dispatchEvent(new Event(\"animationcancel\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); o.onanimationend = function () {}; o.onanimationend = null; return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationend",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationend = function () { n++; }; o.onanimationend = null; o.dispatchEvent(new Event(\"animationend\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); o.onanimationiteration = function () {}; o.onanimationiteration = null; return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationiteration = function () { n++; }; o.onanimationiteration = null; o.dispatchEvent(new Event(\"animationiteration\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); o.onanimationstart = function () {}; o.onanimationstart = null; return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onanimationstart = function () { n++; }; o.onanimationstart = null; o.dispatchEvent(new Event(\"animationstart\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); o.onbeforecopy = function () {}; o.onbeforecopy = null; return o.onbeforecopy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecopy",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforecopy = function () { n++; }; o.onbeforecopy = null; o.dispatchEvent(new Event(\"beforecopy\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); o.onbeforecut = function () {}; o.onbeforecut = null; return o.onbeforecut; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforecut",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforecut = function () { n++; }; o.onbeforecut = null; o.dispatchEvent(new Event(\"beforecut\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); o.onbeforepaste = function () {}; o.onbeforepaste = null; return o.onbeforepaste; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforepaste",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforepaste = function () { n++; }; o.onbeforepaste = null; o.dispatchEvent(new Event(\"beforepaste\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); o.onbeforexrselect = function () {}; o.onbeforexrselect = null; return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onbeforexrselect = function () { n++; }; o.onbeforexrselect = null; o.dispatchEvent(new Event(\"beforexrselect\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); o.oncontentvisibilityautostatechange = function () {}; o.oncontentvisibilityautostatechange = null; return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.oncontentvisibilityautostatechange = function () { n++; }; o.oncontentvisibilityautostatechange = null; o.dispatchEvent(new Event(\"contentvisibilityautostatechange\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); o.ongotpointercapture = function () {}; o.ongotpointercapture = null; return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ongotpointercapture = function () { n++; }; o.ongotpointercapture = null; o.dispatchEvent(new Event(\"gotpointercapture\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); o.onlostpointercapture = function () {}; o.onlostpointercapture = null; return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onlostpointercapture = function () { n++; }; o.onlostpointercapture = null; o.dispatchEvent(new Event(\"lostpointercapture\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); o.onmousewheel = function () {}; o.onmousewheel = null; return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onmousewheel = function () { n++; }; o.onmousewheel = null; o.dispatchEvent(new Event(\"mousewheel\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); o.onpointercancel = function () {}; o.onpointercancel = null; return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointercancel = function () { n++; }; o.onpointercancel = null; o.dispatchEvent(new Event(\"pointercancel\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); o.onpointerdown = function () {}; o.onpointerdown = null; return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerdown = function () { n++; }; o.onpointerdown = null; o.dispatchEvent(new Event(\"pointerdown\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); o.onpointerenter = function () {}; o.onpointerenter = null; return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerenter = function () { n++; }; o.onpointerenter = null; o.dispatchEvent(new Event(\"pointerenter\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); o.onpointerleave = function () {}; o.onpointerleave = null; return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerleave = function () { n++; }; o.onpointerleave = null; o.dispatchEvent(new Event(\"pointerleave\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); o.onpointermove = function () {}; o.onpointermove = null; return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointermove",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointermove = function () { n++; }; o.onpointermove = null; o.dispatchEvent(new Event(\"pointermove\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); o.onpointerout = function () {}; o.onpointerout = null; return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerout",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerout = function () { n++; }; o.onpointerout = null; o.dispatchEvent(new Event(\"pointerout\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); o.onpointerover = function () {}; o.onpointerover = null; return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerover",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerover = function () { n++; }; o.onpointerover = null; o.dispatchEvent(new Event(\"pointerover\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); o.onpointerrawupdate = function () {}; o.onpointerrawupdate = null; return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerrawupdate = function () { n++; }; o.onpointerrawupdate = null; o.dispatchEvent(new Event(\"pointerrawupdate\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); o.onpointerup = function () {}; o.onpointerup = null; return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onpointerup",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onpointerup = function () { n++; }; o.onpointerup = null; o.dispatchEvent(new Event(\"pointerup\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); o.onscrollsnapchange = function () {}; o.onscrollsnapchange = null; return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onscrollsnapchange = function () { n++; }; o.onscrollsnapchange = null; o.dispatchEvent(new Event(\"scrollsnapchange\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); o.onscrollsnapchanging = function () {}; o.onscrollsnapchanging = null; return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onscrollsnapchanging = function () { n++; }; o.onscrollsnapchanging = null; o.dispatchEvent(new Event(\"scrollsnapchanging\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); o.onsearch = function () {}; o.onsearch = null; return o.onsearch; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onsearch",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onsearch = function () { n++; }; o.onsearch = null; o.dispatchEvent(new Event(\"search\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); o.onselectionchange = function () {}; o.onselectionchange = null; return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onselectionchange = function () { n++; }; o.onselectionchange = null; o.dispatchEvent(new Event(\"selectionchange\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); o.onselectstart = function () {}; o.onselectstart = null; return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onselectstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onselectstart = function () { n++; }; o.onselectstart = null; o.dispatchEvent(new Event(\"selectstart\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); o.ontransitioncancel = function () {}; o.ontransitioncancel = null; return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitioncancel = function () { n++; }; o.ontransitioncancel = null; o.dispatchEvent(new Event(\"transitioncancel\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); o.ontransitionend = function () {}; o.ontransitionend = null; return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionend = function () { n++; }; o.ontransitionend = null; o.dispatchEvent(new Event(\"transitionend\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); o.ontransitionrun = function () {}; o.ontransitionrun = null; return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionrun = function () { n++; }; o.ontransitionrun = null; o.dispatchEvent(new Event(\"transitionrun\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); o.ontransitionstart = function () {}; o.ontransitionstart = null; return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = new Document(); let n = 0; o.ontransitionstart = function () { n++; }; o.ontransitionstart = null; o.dispatchEvent(new Event(\"transitionstart\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); o.onwebkitfullscreenchange = function () {}; o.onwebkitfullscreenchange = null; return o.onwebkitfullscreenchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenchange",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onwebkitfullscreenchange = function () { n++; }; o.onwebkitfullscreenchange = null; o.dispatchEvent(new Event(\"webkitfullscreenchange\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); o.onwebkitfullscreenerror = function () {}; o.onwebkitfullscreenerror = null; return o.onwebkitfullscreenerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "onwebkitfullscreenerror",
+    "expr": "(() => { const o = new Document(); let n = 0; o.onwebkitfullscreenerror = function () { n++; }; o.onwebkitfullscreenerror = null; o.dispatchEvent(new Event(\"webkitfullscreenerror\")); return n; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "exitFullscreen",
+    "expr": "(async () => { const o = new Document(); return await o.exitFullscreen(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "exitPictureInPicture",
+    "expr": "(async () => { const o = new Document(); return await o.exitPictureInPicture(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasUnpartitionedCookieAccess",
+    "expr": "(async () => { const o = new Document(); return await o.hasUnpartitionedCookieAccess(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasStorageAccess",
+    "expr": "(async () => { const o = new Document(); return await o.hasStorageAccess(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "requestStorageAccess",
+    "expr": "(async () => { const o = new Document(); return await o.requestStorageAccess(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasPrivateToken",
+    "expr": "(async () => { const o = new Document(); return await o.hasPrivateToken(\"x\"); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasPrivateToken",
+    "expr": "(async () => { const o = new Document(); return await o.hasPrivateToken(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasRedemptionRecord",
+    "expr": "(async () => { const o = new Document(); return await o.hasRedemptionRecord(\"x\"); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Document",
+    "member": "hasRedemptionRecord",
+    "expr": "(async () => { const o = new Document(); return await o.hasRedemptionRecord(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

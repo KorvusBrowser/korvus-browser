@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "SVGNumber",
+    "member": "constructor",
+    "expr": "new SVGNumber()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGNumber",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGNumber(); return o.value; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGNumber",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGNumber(); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGNumber",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGNumber(); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,10 @@
+[
+ "W2 outer sees inner Worker error [\"ErrorEvent\",\"Uncaught Error: inner\",\"blob:\",1,20,\"null\"]",
+ "W2 outer self.onerror [\"Uncaught Error: inner\",\"blob:\",1,20,\"null\"]",
+ "W2 page error [\"ErrorEvent\",\"Uncaught Error: inner\",\"blob:\",1,20]",
+ "W3 outer3 self.onerror Uncaught Error: inner3",
+ "W3 page error [\"ErrorEvent\",\"Uncaught Error: inner3\",\"blob:\",1,20]",
+ "window.onerror [\"Uncaught Error: inner\",\"blob:\",1,20,\"null\"]",
+ "window.onerror [\"Uncaught Error: inner3\",\"blob:\",1,20,\"null\"]",
+ "window.onerror [\"Uncaught Error: w1\",\"blob:\",1,20,\"null\"]"
+]

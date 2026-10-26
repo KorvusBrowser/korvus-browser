@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "CloseWatcher",
+    "member": "constructor",
+    "expr": "(() => { const o = new CloseWatcher(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CloseWatcher]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CloseWatcher",
+    "member": "requestClose",
+    "expr": "(() => { const o = new CloseWatcher(); return o.requestClose(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CloseWatcher",
+    "member": "close",
+    "expr": "(() => { const o = new CloseWatcher(); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CloseWatcher",
+    "member": "destroy",
+    "expr": "(() => { const o = new CloseWatcher(); return o.destroy(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CloseWatcher",
+    "member": "oncancel",
+    "expr": "(() => { const o = new CloseWatcher(); return o.oncancel; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CloseWatcher",
+    "member": "onclose",
+    "expr": "(() => { const o = new CloseWatcher(); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>default tabIndex</title>
+<!-- H15: HTMLElement.tabIndex read -1 for every element, focusable or not (tailscale.com: Ketch's focus-trap
+     found no tabbable node in its consent banner -- every <button> and <a href> answered -1). -->
+<body>
+<div id="host"></div>
+<script>
+const make = (html) => { const t = document.createElement('template'); t.innerHTML = html; return t.content.firstElementChild; };
+const cases = ['<a href="#">a</a>', '<a>a</a>', '<button>b</button>', '<input>', '<input type="hidden">', '<select></select>',
+  '<textarea></textarea>', '<iframe></iframe>', '<div></div>', '<div tabindex="3"></div>', '<span tabindex="-2"></span>',
+  '<div contenteditable="true"></div>', '<summary>s</summary>', '<details><summary>s</summary></details>', '<area href="#">',
+  '<object></object>', '<embed>', '<audio controls></audio>', '<video controls></video>', '<img>', '<label>l</label>',
+  '<button disabled>d</button>', '<fieldset></fieldset>', '<svg><a href="#"></a></svg>', '<p tabindex="x"></p>', '<dialog></dialog>'];
+const host = document.getElementById('host');
+window.R = JSON.stringify(cases.map((h) => { const e = make(h); host.appendChild(e); const el = h.startsWith('<details') ? e.firstElementChild : h.startsWith('<svg') ? e.firstElementChild : e; return h + '=' + el.tabIndex; }));
+</script>

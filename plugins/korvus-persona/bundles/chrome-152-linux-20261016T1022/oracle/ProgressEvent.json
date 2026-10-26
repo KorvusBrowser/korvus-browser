@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "ProgressEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ProgressEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ProgressEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProgressEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new ProgressEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProgressEvent",
+    "member": "lengthComputable",
+    "expr": "(() => { const o = new ProgressEvent(\"x\"); return o.lengthComputable; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProgressEvent",
+    "member": "loaded",
+    "expr": "(() => { const o = new ProgressEvent(\"x\"); return o.loaded; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ProgressEvent",
+    "member": "total",
+    "expr": "(() => { const o = new ProgressEvent(\"x\"); return o.total; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

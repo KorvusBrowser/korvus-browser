@@ -1,0 +1,31 @@
+<!doctype html><meta charset=utf-8><body><iframe src="blank.html"></iframe><script>
+// TEMPLATES P6 B21: a frame's and a popup's own window members have Chrome's shape -- the popup's are its OWN
+// realm's functions (they were the opener's), `self`/`frames`/`opener` stay accessors, `length`/`parent` keep
+// their [Replaceable] setters, `postMessage`/`close` are enumerable.
+const out = {};
+const t = (k, f) => { try { const v = f(); out[k] = v === undefined ? 'undefined' : typeof v === 'string' ? v : JSON.stringify(v); } catch (e) { out[k] = 'ERR ' + e.constructor.name + ': ' + e.message; } };
+const desc = (o, k) => { const d = Object.getOwnPropertyDescriptor(o, k); return d ? ('value' in d ? ['v', d.writable, d.enumerable, d.configurable] : ['a', d.enumerable, d.configurable, typeof d.set]).join() : 'none'; };
+addEventListener('load', () => {
+  const f = frames[0], w = window.open('about:blank', 'p1');
+  t('opened', () => w === null ? 'null' : typeof w);
+  const keys = ['postMessage', 'close', 'focus', 'blur', 'closed', 'name', 'length', 'parent', 'top', 'frameElement', 'setTimeout', 'queueMicrotask', 'location', 'self', 'window', 'frames', 'opener'];
+  for (const k of keys) t('d.' + k, () => [desc(window, k), desc(f, k), w ? desc(w, k) : 'nopopup'].join(' | '));
+  if (w) {
+    const realm = (k, part) => { const d = Object.getOwnPropertyDescriptor(w, k); const fn = d && (part ? d[part] : d.value); return fn ? (Object.getPrototypeOf(fn) === w.Function.prototype) + '/' + (Object.getPrototypeOf(fn) === Function.prototype) : 'none'; };
+    t('r.nameGet', () => realm('name', 'get'));
+    t('r.closedGet', () => realm('closed', 'get'));
+    t('r.close', () => realm('close'));
+    t('r.openerGet', () => realm('opener', 'get'));
+    t('name', () => w.name);
+    t('rename', () => { w.name = 'p2'; return w.name; });
+    t('opener', () => w.opener === window);
+    t('popupParentTop', () => [w.parent === w, w.top === w, w.frameElement, w.self === w].join());
+    t('openerForeign', () => Object.getOwnPropertyDescriptor(w, 'opener').get.call({}));
+    t('openerSet', () => { w.opener = null; return desc(w, 'opener') + ':' + w.opener; });
+  }
+  t('frame', () => [f.self === f, f.frames === f, f.opener, f.parent === window, f.top === window, f.length].join());
+  t('frameLengthSet', () => { f.length = 5; return desc(f, 'length') + ':' + f.length; });
+  window.R = JSON.stringify(out);
+  if (w) w.close();
+});
+</script>

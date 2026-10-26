@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "VideoTrack",
+    "member": "constructor",
+    "expr": "new VideoTrack()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

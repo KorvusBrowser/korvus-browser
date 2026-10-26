@@ -1,0 +1,25 @@
+<!doctype html><html><body style="margin:0">
+<div id=wrap><div id=dc style="display:contents"><p id=p1 style="margin:0;height:10px"></p><span id=s1>text</span></div><p id=p2 style="margin:0;height:5px"></p></div>
+<ul style="display:flex;margin:0;padding:0" id=fl><li style="display:contents"><a id=a1 style="display:block;width:30px;height:4px"></a></li><li style="width:20px;height:6px;display:block"></li></ul>
+<div id=root></div>
+<script>
+// REALWEB L7: an element with `display: contents` generates no box and its children are laid out in its place --
+// in a block, in a line, and as flex items. This engine dropped the whole subtree. On a replaced element, a form
+// control, <br>/<wbr> and an outermost <svg> the value computes to `none` (Chrome 150, CSS Display 3 Appendix B).
+var flow = {};
+flow.p1 = p1.offsetHeight + ' ' + p1.offsetTop; flow.s1 = s1.offsetWidth > 0; flow.p2 = p2.offsetTop; flow.wrap = wrap.offsetHeight;
+flow.dc = dc.offsetHeight + ' ' + dc.getBoundingClientRect().height + ' ' + dc.getClientRects().length;
+flow.flexItem = a1.offsetWidth + ' ' + a1.offsetLeft + ' ' + fl.offsetHeight;
+var tags = ['img','video','audio','canvas','iframe','embed','object','input','select','textarea','button','svg','meter','progress','fieldset','legend','details','summary','span','ul','li','table','tr','td','slot','template','br','wbr'];
+var unusual = {};
+for (var t of tags) {
+  var w = document.createElement('div');
+  var el = t === 'svg' ? document.createElementNS('http://www.w3.org/2000/svg', 'svg') : document.createElement(t);
+  el.style.display = 'contents';
+  var kid = document.createElement('i'); kid.textContent = 'kid'; kid.style.display = 'inline-block'; kid.style.width = '9px'; kid.style.height = '9px';
+  try { el.appendChild(kid); } catch (e) {}
+  w.appendChild(el); root.appendChild(w);
+  unusual[t] = [getComputedStyle(el).display, kid.offsetWidth, w.offsetHeight].join(' ');
+}
+document.title = JSON.stringify({ flow: flow, unusual: unusual });
+</script></body></html>

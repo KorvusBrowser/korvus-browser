@@ -1,0 +1,268 @@
+[
+  {
+    "iface": "HTMLLinkElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLLinkElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "constructor",
+    "expr": "new HTMLLinkElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "href",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.href; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.crossOrigin; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "crossOrigin",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.crossOrigin = \"x\", o.crossOrigin); })()",
+    "expected": "anonymous",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "rel",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.rel; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "rel",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.rel = \"x\", o.rel); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "as",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.as; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "as",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.as = \"x\", o.as); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.media; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.media = \"x\", o.media); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "integrity",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.integrity; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "integrity",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.integrity = \"x\", o.integrity); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "hreflang",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.hreflang; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "hreflang",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.hreflang = \"x\", o.hreflang); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "imageSrcset",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.imageSrcset; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "imageSrcset",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.imageSrcset = \"x\", o.imageSrcset); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "imageSizes",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.imageSizes; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "imageSizes",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.imageSizes = \"x\", o.imageSizes); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.referrerPolicy; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "referrerPolicy",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.referrerPolicy = \"x\", o.referrerPolicy); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.disabled = true, o.disabled); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "fetchPriority",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.fetchPriority; })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "fetchPriority",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.fetchPriority = \"x\", o.fetchPriority); })()",
+    "expected": "auto",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "charset",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.charset; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "charset",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.charset = \"x\", o.charset); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "rev",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.rev; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "rev",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.rev = \"x\", o.rev); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "target",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.target; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "target",
+    "expr": "(() => { const o = document.createElement(\"link\"); return (o.target = \"x\", o.target); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "sheet",
+    "expr": "(() => { const o = document.createElement(\"link\"); return o.sheet; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "relList",
+    "expr": "(() => { const o = document.createElement(\"link\"); return Object.prototype.toString.call(o.relList); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "sizes",
+    "expr": "(() => { const o = document.createElement(\"link\"); return Object.prototype.toString.call(o.sizes); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "blocking",
+    "expr": "(() => { const o = document.createElement(\"link\"); return Object.prototype.toString.call(o.blocking); })()",
+    "expected": "[object DOMTokenList]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLLinkElement",
+    "member": "sheet",
+    "expr": "(() => { const o = document.createElement(\"link\"); return Object.prototype.toString.call(o.sheet); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

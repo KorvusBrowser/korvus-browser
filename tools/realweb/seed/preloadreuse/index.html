@@ -1,0 +1,8 @@
+<!doctype html><html><head>
+<link rel="preload" href="a.js" as="script"><link rel="modulepreload" href="m.mjs"><link rel="preload" href="s.css" as="style"><link rel="preload" href="d.js" as="script" crossorigin>
+<link rel="stylesheet" href="s.css">
+</head><body><script src="a.js"></script><script type="module" src="m.mjs"></script><script src="d.js" crossorigin></script>
+<script>
+// REALWEB U16: a preloaded response is used by the element that asks for it: one fetch per resource.
+setTimeout(function(){ fetch('/hits').then(function(r){return r.json()}).then(function(h){ document.title=JSON.stringify({a:h['/a.js'],m:h['/m.mjs'],css:h['/s.css'],d:h['/d.js'],A:window.A}) }) }, 800);</script>
+</body></html>

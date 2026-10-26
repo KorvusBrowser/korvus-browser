@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "XPathExpression",
+    "member": "constructor",
+    "expr": "new XPathExpression()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XPathExpression",
+    "member": "evaluate",
+    "expr": "(() => { const o = document.createExpression(\"//a\"); return o.evaluate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "PaymentMethodChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentMethodChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PaymentMethodChangeEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PaymentMethodChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PaymentMethodChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PaymentMethodChangeEvent",
+    "member": "methodName",
+    "expr": "(() => { const o = new PaymentMethodChangeEvent(\"x\"); return o.methodName; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PaymentMethodChangeEvent",
+    "member": "methodDetails",
+    "expr": "(() => { const o = new PaymentMethodChangeEvent(\"x\"); return o.methodDetails; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

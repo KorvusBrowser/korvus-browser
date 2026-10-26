@@ -1,0 +1,6 @@
+[
+ "pool 0, 1 section(s): before:new sld:new state:gathering host:gathering srflx:gathering state:complete end:complete",
+ "pool 0, 3 section(s): before:new sld:new state:gathering host:gathering host:gathering host:gathering srflx:gathering srflx:gathering srflx:gathering state:complete end:complete",
+ "pool 1, 1 section(s): before:new sld:new host:new srflx:new state:gathering state:complete end:complete",
+ "pool 1, 3 section(s): before:new sld:new host:new srflx:new state:gathering host:gathering host:gathering srflx:gathering srflx:gathering state:complete end:complete"
+]

@@ -1,0 +1,136 @@
+DRAFT — NOT IN FORCE. This is a fill-in of the canonical Business Source License 1.1
+for korvus, using the decisions in docs/decisions.md (D112, D117, D129). Counsel MUST
+(1) verify the "Terms" section below against the official MariaDB BSL 1.1 text verbatim,
+(2) finalise the bracketed [TBD] parameters, and (3) decide the open question noted at
+the end, before any public release. When the public engine repo is created this file
+becomes its top-level LICENSE (per docs/license/README.md §2.1).
+
+Notes to counsel (remove before release):
+  - Licensor = 더베이스 (The Base) — the owner's choice (2026-10-26). A 개인사업자 (sole
+    proprietorship), not a 법인, so no liability shield. The proprietor's legal name, registration
+    number and address are private (docs/license/entity.private.md) and kept out of this public
+    LICENSE. RECOMMENDED (counsel/owner confirm): (1) contact = a role address on the product domain,
+    e.g. licensing@korvus.dev, not a personal gmail; (2) put NO governing-law/venue clause in this
+    public BSL — the canonical BSL has none and most OSS licenses omit it; place governing law (Korean
+    law) and dispute resolution (arbitration — KCAB in Seoul, or SIAC for international counterparties)
+    in the separate COMMERCIAL license agreement instead; (3) if the proprietor must be named, use the
+    English name "Trevor Kang"; "The Base" is a rendering of 더베이스 — confirm it is the intended
+    English name or keep the 상호 with a parenthetical. (korvus / bauta stay brand names; Trevor Kang is
+    the author, not the Licensor.)
+  - The business reg. number, DOB and address from the certificate are PRIVATE and must NOT appear in
+    this (public) LICENSE — they live in docs/license/entity.private.md for contracts/invoices only.
+  - "Licensed Work" is versioned: each released version carries its own Change Date
+    (release date + 3 years). A LICENSE stanza is added per version, or the template is
+    parameterised so the build stamps the version + date at release.
+  - Additional Use Grant is scale-based + self-attested (D129) AND bars offering korvus as a
+    hosted/managed service at any revenue (D132). Counsel: refine the exact scope of "hosted or
+    managed service" in clause (b) — the intent is to catch reselling korvus itself as a service
+    (e.g. a cloud-browser provider), not to catch embedding the engine inside a product that does
+    something else.
+
+-------------------------------------------------------------------------------
+
+Business Source License 1.1
+
+Parameters
+
+Licensor:             더베이스 (The Base)
+                      [A sole proprietorship. If counsel requires the proprietor to be named, use the
+                      English name "Trevor Kang". "The Base" is an English rendering of 더베이스 —
+                      confirm it is the intended English name. The reg. number, DOB and address are
+                      private (docs/license/entity.private.md) and are NOT printed in this public LICENSE.]
+
+Licensed Work:        korvus [VERSION]
+                      The Licensed Work is (c) 2026 더베이스 (The Base).
+
+Additional Use Grant: You may make production use of the Licensed Work provided that BOTH
+                      of the following are true:
+                        (a) in the most recent 12-month period, the total annual revenue of
+                            You and your affiliates is less than USD 10,000,000 (ten million
+                            US dollars) — self-attested; no audit is required; and
+                        (b) You do not provide the Licensed Work, or any modified or
+                            derivative version of it, to third parties as a hosted or managed
+                            service, where that service gives users access to any substantial
+                            set of the features or functionality of the Licensed Work.
+                      Non-production use — including development, testing, research and
+                      education — is always permitted and is subject to neither (a) nor (b).
+                      Any production use that does not meet both (a) and (b) — including any
+                      provision of the Licensed Work as a hosted or managed service, at any
+                      revenue — requires a commercial license from the Licensor.
+
+Change Date:          Three years from the date the specific version of the Licensed
+                      Work is first made publicly available.
+
+Change License:       Apache License, Version 2.0
+
+For information about alternative licensing arrangements for the Licensed Work, please
+contact licensing@korvus.dev  [recommended role address — set up forwarding; owner/counsel confirm].
+
+-------------------------------------------------------------------------------
+
+Notice
+
+Business Source License 1.1
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative works,
+redistribute, and make non-production use of the Licensed Work. The Licensor may make
+an Additional Use Grant, above, permitting limited production use.
+
+Effective on the Change Date, or the fourth anniversary of the first publicly available
+distribution of a specific version of the Licensed Work under this License, whichever
+comes first, the Licensor hereby grants you rights under the terms of the Change
+License, and the rights granted in the paragraph above terminate.
+
+If your use of the Licensed Work does not comply with the requirements currently in
+effect as described in this License, you must purchase a commercial license from the
+Licensor, its affiliated entities, or authorized resellers, or you must refrain from
+using the Licensed Work.
+
+All copies of the original and modified Licensed Work, and derivative works of the
+Licensed Work, are subject to this License. This License applies separately for each
+version of the Licensed Work and the Change Date may vary for each version of the
+Licensed Work released by Licensor.
+
+You must conspicuously display this License on each original or modified copy of the
+Licensed Work. If you receive the Licensed Work in original or modified form from a
+third party, the terms and conditions set forth in this License apply to your use of
+that work.
+
+Any use of the Licensed Work in violation of this License will automatically terminate
+your rights under this License for the current and all other versions of the Licensed
+Work.
+
+This License does not grant you any right in any trademark or logo of Licensor or its
+affiliates (provided that you may use a trademark or logo of Licensor as expressly
+required by this License).
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED WORK IS PROVIDED ON AN "AS IS"
+BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS, EXPRESS OR IMPLIED,
+INCLUDING (WITHOUT LIMITATION) WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, NON-INFRINGEMENT, AND TITLE.
+
+MariaDB hereby grants you permission to use this License's text to license your works,
+and to refer to it using the trademark "Business Source License", as long as you comply
+with the Covenants of Licensor below.
+
+Covenants of Licensor
+
+In consideration of the right to use this License's text and the "Business Source
+License" name and trademark, Licensor covenants to MariaDB, and to all other recipients
+of the licensed work to be provided by Licensor:
+
+1. To specify as the Change License the GPL Version 2.0 or any later version, or a
+   license that is compatible with GPL Version 2.0 or a later version, where
+   "compatible" means that software provided under the Change License can be included in
+   a program with software provided under GPL Version 2.0 or a later version. Licensor
+   may specify additional Change Licenses without limitation.
+
+2. To either: (a) specify an additional grant of rights to use that does not impose any
+   additional restriction on the right granted in this License, as the Additional Use
+   Grant; or (b) insert the text "None".
+
+3. To specify a Change Date.
+
+4. Not to modify this License in any other way.

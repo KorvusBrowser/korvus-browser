@@ -1,0 +1,118 @@
+[
+[
+"own names grew by",
+1
+],
+[
+"own names include frame name",
+false
+],
+[
+"hasOwnProperty(window, name)",
+false
+],
+[
+"descriptor on window",
+"none"
+],
+[
+"descriptor on Window.prototype",
+"none"
+],
+[
+"descriptor on WindowProperties",
+"{\"v\":\"object\",\"w\":true,\"e\":false,\"c\":true,\"g\":\"undefined\"}"
+],
+[
+"WindowProperties own names",
+"[]"
+],
+[
+"name in window",
+true
+],
+[
+"window.name is the frame",
+true
+],
+[
+"frames.name is the frame",
+true
+],
+[
+"self[name] is the frame",
+true
+],
+[
+"bare identifier",
+"object",
+true
+],
+[
+"Object.keys has it",
+false
+],
+[
+"for-in has it",
+false
+],
+[
+"delete answers",
+true,
+true
+],
+[
+"own property shadows",
+7,
+"{\"v\":\"number\",\"w\":true,\"e\":true,\"c\":true,\"g\":\"undefined\"}"
+],
+[
+"EventTarget member wins",
+true
+],
+[
+"Object.prototype member wins",
+true
+],
+[
+"frame before an id",
+true,
+false
+],
+[
+"two frames of one name",
+false,
+true
+],
+[
+"name set from inside",
+true,
+true
+],
+[
+"attribute renamed",
+true,
+false,
+"before1"
+],
+[
+"nested frame",
+true,
+true,
+false
+],
+[
+"removed frame",
+null,
+false
+],
+[
+"numeric name",
+true,
+true
+],
+[
+"own names (final, filtered)",
+"[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"fnamedx3\"]"
+]
+]

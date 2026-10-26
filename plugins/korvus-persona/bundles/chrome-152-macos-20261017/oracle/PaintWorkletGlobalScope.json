@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PaintWorkletGlobalScope",
+    "member": "constructor",
+    "expr": "new PaintWorkletGlobalScope()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

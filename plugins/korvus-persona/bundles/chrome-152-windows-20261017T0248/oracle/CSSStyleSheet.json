@@ -1,0 +1,116 @@
+[
+  {
+    "iface": "CSSStyleSheet",
+    "member": "constructor",
+    "expr": "(() => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CSSStyleSheet]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "ownerRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.ownerRule; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "insertRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.insertRule(\"x\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "insertRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.insertRule(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "deleteRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.deleteRule(1); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "deleteRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.deleteRule(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "replaceSync",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.replaceSync(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "replaceSync",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.replaceSync(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "addRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.addRule(); })()",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "removeRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return o.removeRule(); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "ownerRule",
+    "expr": "(() => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(o.ownerRule); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "cssRules",
+    "expr": "(() => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(o.cssRules); })()",
+    "expected": "[object CSSRuleList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "replace",
+    "expr": "(() => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(o.replace(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "rules",
+    "expr": "(() => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(o.rules); })()",
+    "expected": "[object CSSRuleList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "replace",
+    "expr": "(async () => { const o = new CSSStyleSheet(); return Object.prototype.toString.call(await o.replace(\"x\")); })()",
+    "expected": "[object CSSStyleSheet]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CSSStyleSheet",
+    "member": "replace",
+    "expr": "(async () => { const o = new CSSStyleSheet(); return await o.replace(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

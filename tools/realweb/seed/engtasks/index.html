@@ -1,0 +1,43 @@
+<!doctype html><title>t</title>
+<!-- H49 (C10 draft): a page that replaces setTimeout/setInterval must not cancel the engine's own task sources.
+     ?mode=stub: the replacements never call back.  ?mode=fb: FB's shape (instagram's replaceNativeTimer) -- a
+     "timer" is a MessageChannel post, so an engine that delivers port messages through window.setTimeout deadlocks. -->
+<script>
+const realSetTimeout = setTimeout.bind(window);
+const mode = new URLSearchParams(location.search).get('mode') || 'stub';
+const R = { mode };
+function swap() {
+  if (mode === 'stub') {
+    window.setTimeout = function () { return 1; };
+    window.setInterval = function () { return 1; };
+  } else {
+    const ch = new MessageChannel(), q = [];
+    ch.port1.onmessage = () => { const f = q.shift(); if (f) f(); };
+    window.setTimeout = function (f) { q.push(f); ch.port2.postMessage(null); return 1; };
+    window.setInterval = window.setTimeout;
+  }
+}
+addEventListener('load', () => {
+  swap();
+  R.swapped = window.setTimeout !== realSetTimeout;
+  const mc = new MessageChannel();
+  mc.port1.onmessage = e => { R.messagePort = e.data; };
+  mc.port2.postMessage('delivered');
+  requestAnimationFrame(t => { R.raf = typeof t; });
+  if (window.requestIdleCallback) requestIdleCallback(d => { R.ric = typeof d.timeRemaining; });
+  if (window.AbortSignal && AbortSignal.timeout) AbortSignal.timeout(10).onabort = () => { R.abortTimeout = true; };
+  if (window.scheduler && scheduler.postTask) scheduler.postTask(() => { R.postTask = true; });
+  try {
+    const open = indexedDB.open('h49-' + mode + '-' + Math.random());
+    open.onsuccess = () => { R.idb = 'success'; open.result.close(); };
+    open.onerror = () => { R.idb = 'error'; };
+  } catch (e) { R.idb = String(e); }
+  if (window.PerformanceObserver) {
+    new PerformanceObserver(l => { if (l.getEntries().some(x => x.name.includes('h49.css'))) R.perfObserver = true; })
+      .observe({ type: 'resource' });
+    const link = document.createElement('link'); link.rel = 'stylesheet'; link.href = 'h49.css?' + mode;
+    document.head.appendChild(link);
+  }
+  realSetTimeout(() => { document.title = JSON.stringify(R); }, 800);
+});
+</script>

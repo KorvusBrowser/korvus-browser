@@ -1,0 +1,130 @@
+[
+  {
+    "iface": "Permissions",
+    "member": "constructor",
+    "expr": "new Permissions()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(() => { const o = navigator.permissions; return o.request({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(() => { const o = navigator.permissions; return o.request(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(() => { const o = navigator.permissions; return o.revoke({}); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(() => { const o = navigator.permissions; return o.revoke(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(() => { const o = navigator.permissions; return Object.prototype.toString.call(o.request({})); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(() => { const o = navigator.permissions; return Object.prototype.toString.call(o.revoke({})); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "query",
+    "expr": "(() => { const o = navigator.permissions; return Object.prototype.toString.call(o.query({})); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(async () => { const o = navigator.permissions; return await o.request({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(async () => { const o = navigator.permissions; return Object.prototype.toString.call(await o.request({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "request",
+    "expr": "(async () => { const o = navigator.permissions; return await o.request(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(async () => { const o = navigator.permissions; return await o.revoke({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(async () => { const o = navigator.permissions; return Object.prototype.toString.call(await o.revoke({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "revoke",
+    "expr": "(async () => { const o = navigator.permissions; return await o.revoke(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "query",
+    "expr": "(async () => { const o = navigator.permissions; return await o.query({}); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "query",
+    "expr": "(async () => { const o = navigator.permissions; return Object.prototype.toString.call(await o.query({})); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Permissions",
+    "member": "query",
+    "expr": "(async () => { const o = navigator.permissions; return await o.query(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

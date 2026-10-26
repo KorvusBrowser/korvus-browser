@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "AnimationEffect",
+    "member": "constructor",
+    "expr": "new AnimationEffect()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "parent",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.parent; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "previousSibling",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.previousSibling; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "nextSibling",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.nextSibling; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "before",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.before(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "after",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.after(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "replace",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.replace(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "remove",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.remove(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "updateTiming",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return o.updateTiming(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "parent",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.parent); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "previousSibling",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.previousSibling); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "nextSibling",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.nextSibling); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "getTiming",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.getTiming()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AnimationEffect",
+    "member": "getComputedTiming",
+    "expr": "(() => { const o = document.createElement(\"div\").animate([{ opacity: 0 }], 1).effect; return Object.prototype.toString.call(o.getComputedTiming()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

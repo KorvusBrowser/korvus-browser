@@ -1,0 +1,19 @@
+<!doctype html><title>t</title>
+<!-- H37b: an import()'s parse and link errors reach the page as V8 made them -- the bare message, the SyntaxError
+     itself (no ` at URL:line:col` appended, no host `code`); an evaluation error passes through untouched. -->
+<script>
+const R = {};
+const show = e => [e && e.constructor && e.constructor.name, String(e && e.message).replace(location.origin, 'ORIGIN'),
+                   e && 'code' in e ? 'code:' + e.code : 'nocode'].join('|');
+(async () => {
+  for (const [k, u] of [['parse', './synerr.js'], ['nested', './nested.js'], ['link', './noexport.js'], ['eval', './throws.js']]) {
+    try { await import(u); R[k] = 'resolved'; } catch (e) { R[k] = show(e); }
+  }
+  // a second import() of the same failed module answers with the SAME error object (the module map keeps it)
+  let e1, e2;
+  try { await import('./synerr.js'); } catch (e) { e1 = e; }
+  try { await import('./synerr.js'); } catch (e) { e2 = e; }
+  R.parseSame = e1 === e2;
+  document.title = JSON.stringify(R);
+})().catch(e => { document.title = 'threw ' + e; });
+</script>

@@ -1,0 +1,54 @@
+[
+ [
+  "first style inside a wide container: opacity",
+  "0.2"
+ ],
+ [
+  "first style inside a wide container: getAnimations",
+  0
+ ],
+ [
+  "before the resize: opacity",
+  "1"
+ ],
+ [
+  "before the resize: animations on .a",
+  0
+ ],
+ [
+  "before the resize: cqw width",
+  "100px"
+ ],
+ [
+  "after the resize: opacity (a transition starts at 1)",
+  "1"
+ ],
+ [
+  "after the resize: getAnimations on .t",
+  "CSSTransition:opacity"
+ ],
+ [
+  "after the resize: getAnimations on .a",
+  "CSSAnimation:kf"
+ ],
+ [
+  "after the resize: cqw width (a transition starts at 100px)",
+  "100px"
+ ],
+ [
+  "after the resize: getAnimations on .q",
+  "CSSTransition:width"
+ ],
+ [
+  "settled: opacity",
+  "0.2"
+ ],
+ [
+  "settled: cqw width",
+  "300px"
+ ],
+ [
+  "settled: animations left",
+  0
+ ]
+]

@@ -1,0 +1,24 @@
+<!doctype html><meta charset=utf-8><body><iframe srcdoc="<!doctype html><body><p>frame</p>"></iframe><script>
+// TEMPLATES P8 B31: an interface-typed dictionary member or argument, and a trusted-types receiver, take a
+// platform object of the interface from ANY realm and refuse `Object.create(I.prototype)`, in stock Chrome.
+addEventListener('load', () => {
+  const out = {};
+  const t = (k, f) => { try { const v = f(); out[k] = 'ok ' + (v === undefined ? 'undefined' : typeof v === 'object' && v !== null ? Object.prototype.toString.call(v) : String(v)); } catch (e) { out[k] = e.constructor.name; } };
+  const fdoc = frames[0].document;
+  t('focusFake', () => new FocusEvent('x', { relatedTarget: Object.create(EventTarget.prototype) }).relatedTarget);
+  t('focusReal', () => new FocusEvent('x', { relatedTarget: document.body }).relatedTarget);
+  t('focusCross', () => new FocusEvent('x', { relatedTarget: fdoc.body }).relatedTarget === fdoc.body);
+  t('staticRangeFake', () => new StaticRange({ startContainer: Object.create(Node.prototype), startOffset: 0, endContainer: document.body, endOffset: 0 }).startOffset);
+  t('staticRangeCross', () => new StaticRange({ startContainer: fdoc.body, startOffset: 0, endContainer: fdoc.body, endOffset: 0 }).startContainer === fdoc.body);
+  t('computedFake', () => getComputedStyle(Object.create(Element.prototype)).display);
+  t('computedCross', () => typeof getComputedStyle(fdoc.body).display);
+  if (self.trustedTypes) {
+    t('ttPolicyFake', () => TrustedTypePolicy.prototype.createHTML.call(Object.create(TrustedTypePolicy.prototype), 'x'));
+    t('ttFactoryFake', () => TrustedTypePolicyFactory.prototype.isHTML.call(Object.create(TrustedTypePolicyFactory.prototype), 'x'));
+    const p = trustedTypes.createPolicy('b31', { createHTML: (s) => s });
+    t('ttPolicyReal', () => p.createHTML('<b>x</b>'));
+    t('ttFactoryReal', () => trustedTypes.isHTML('x'));
+  }
+  window.R = JSON.stringify(out);
+});
+</script>

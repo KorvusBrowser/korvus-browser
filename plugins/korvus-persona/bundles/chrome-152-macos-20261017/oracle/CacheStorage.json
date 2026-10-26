@@ -1,0 +1,130 @@
+[
+  {
+    "iface": "CacheStorage",
+    "member": "constructor",
+    "expr": "new CacheStorage()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "has",
+    "expr": "(() => { const o = caches; return Object.prototype.toString.call(o.has(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "open",
+    "expr": "(() => { const o = caches; return Object.prototype.toString.call(o.open(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "delete",
+    "expr": "(() => { const o = caches; return Object.prototype.toString.call(o.delete(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "keys",
+    "expr": "(() => { const o = caches; return Object.prototype.toString.call(o.keys()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "match",
+    "expr": "caches.match(\"/nope\") instanceof Promise",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "match",
+    "expr": "CacheStorage.prototype.match.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "match",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(CacheStorage.prototype.match.call(Object.create(CacheStorage.prototype), \"/x\")); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "ok:[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "match",
+    "expr": "(async () => { const o = caches; return await o.match(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "has",
+    "expr": "(async () => { const o = caches; return await o.has(\"x\"); })()",
+    "expected": false,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "has",
+    "expr": "(async () => { const o = caches; return await o.has(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "open",
+    "expr": "(async () => { const o = caches; return Object.prototype.toString.call(await o.open(\"x\")); })()",
+    "expected": "[object Cache]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "open",
+    "expr": "(async () => { const o = caches; return await o.open(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "delete",
+    "expr": "(async () => { const o = caches; return await o.delete(\"x\"); })()",
+    "expected": true,
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "delete",
+    "expr": "(async () => { const o = caches; return await o.delete(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "keys",
+    "expr": "(async () => { const o = caches; return await o.keys(); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CacheStorage",
+    "member": "keys",
+    "expr": "(async () => { const o = caches; return Object.prototype.toString.call(await o.keys()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

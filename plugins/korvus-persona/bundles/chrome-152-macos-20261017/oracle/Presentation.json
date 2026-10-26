@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "Presentation",
+    "member": "constructor",
+    "expr": "new Presentation()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Presentation",
+    "member": "defaultRequest",
+    "expr": "(() => { const o = navigator.presentation; return o.defaultRequest; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Presentation",
+    "member": "defaultRequest",
+    "expr": "(() => { const o = navigator.presentation; return Object.prototype.toString.call(o.defaultRequest); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Presentation",
+    "member": "receiver",
+    "expr": "(() => { const o = navigator.presentation; return o.receiver; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "Presentation",
+    "member": "receiver",
+    "expr": "(() => { const o = navigator.presentation; return Object.prototype.toString.call(o.receiver); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

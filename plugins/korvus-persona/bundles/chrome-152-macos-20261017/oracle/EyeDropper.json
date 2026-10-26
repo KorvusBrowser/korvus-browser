@@ -1,0 +1,32 @@
+[
+  {
+    "iface": "EyeDropper",
+    "member": "constructor",
+    "expr": "(() => { const o = new EyeDropper(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object EyeDropper]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(() => { const o = new EyeDropper(); return Object.prototype.toString.call(o.open()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(async () => { const o = new EyeDropper(); return await o.open(); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "EyeDropper",
+    "member": "open",
+    "expr": "(async () => { const o = new EyeDropper(); return Object.prototype.toString.call(await o.open()); })()",
+    "throws": "NotAllowedError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

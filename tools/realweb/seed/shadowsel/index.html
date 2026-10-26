@@ -1,0 +1,23 @@
+<!doctype html><title>t</title>
+<!-- S26b: ShadowRoot.getSelection() (Chromium's non-standard member) is the shadow root's own Selection, not the
+     document's: a range in the light tree is not visible through it, a range inside the shadow tree is. -->
+<p id=light>light text</p><div id=host></div>
+<script>
+const R = {};
+const sr = document.getElementById('host').attachShadow({ mode: 'open' });
+sr.innerHTML = '<span id=in>shadow text</span>';
+const ds = document.getSelection(), ss = sr.getSelection();
+R.distinct = ss !== ds;
+R.same = sr.getSelection() === ss;
+R.type = Object.prototype.toString.call(ss);
+const r = document.createRange(); r.selectNodeContents(document.getElementById('light')); ds.removeAllRanges(); ds.addRange(r);
+R.lightDoc = [ds.rangeCount, ds.anchorNode && ds.anchorNode.id, ds.toString()].join('|');
+R.lightShadow = [ss.rangeCount, ss.anchorNode && (ss.anchorNode.id || ss.anchorNode.nodeName), ss.toString(), ss.type].join('|');
+const t = sr.getElementById('in').firstChild, r2 = document.createRange(); r2.setStart(t, 0); r2.setEnd(t, 6);
+ds.removeAllRanges(); ds.addRange(r2);
+R.inDoc = [ds.rangeCount, ds.anchorNode && ds.anchorNode.nodeName, ds.anchorOffset, ds.toString()].join('|');
+R.inShadow = [ss.rangeCount, ss.anchorNode && ss.anchorNode.nodeName, ss.anchorOffset, ss.toString(), ss.type].join('|');
+ds.removeAllRanges();
+R.cleared = [ss.rangeCount, ss.type].join('|');
+document.title = JSON.stringify(R);
+</script>

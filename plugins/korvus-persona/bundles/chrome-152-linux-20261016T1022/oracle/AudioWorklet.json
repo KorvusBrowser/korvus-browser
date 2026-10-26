@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "AudioWorklet",
+    "member": "constructor",
+    "expr": "new AudioWorklet()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioWorklet",
+    "member": "port",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).audioWorklet; return o.port; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "AudioWorklet",
+    "member": "port",
+    "expr": "(() => { const o = new OfflineAudioContext(1, 1, 44100).audioWorklet; return Object.prototype.toString.call(o.port); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

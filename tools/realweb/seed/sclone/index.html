@@ -1,0 +1,13 @@
+<!doctype html><html><body><iframe id=f srcdoc="<script>onmessage=function(e){parent.postMessage({got:Object.prototype.toString.call(e.data)},'*')}</script>"></iframe><script>
+// REALWEB H22: only SERIALIZABLE platform objects survive structured clone; any other platform object --
+// PluginArray, Navigator, an element, an Event -- is a DataCloneError (a fingerprinting script posts navigator.plugins to a frame).
+var R={};
+function sc(name, v){ try { var c=structuredClone(v); R[name]='ok '+Object.prototype.toString.call(c)+(c&&typeof c==='object'?' keys='+Object.keys(c).length:''); } catch(e){ R[name]=e.name+': '+e.message; } }
+sc('plugins', navigator.plugins); sc('plugin0', navigator.plugins[0]); sc('mimeTypes', navigator.mimeTypes); sc('navigator', navigator); sc('window', window);
+sc('body', document.body); sc('location', location); sc('style', document.body.style); sc('nodeList', document.querySelectorAll('*')); sc('event', new Event('x'));
+sc('domrect', new DOMRect(1,2,3,4)); sc('domexc', new DOMException('m','NotFoundError')); sc('imagedata', new ImageData(1,1)); sc('blob', new Blob(['a'])); sc('file', new File(['a'],'f'));
+sc('dommatrix', new DOMMatrix()); sc('fn', function(){}); sc('symbol', Symbol('s')); sc('err', new TypeError('t')); sc('screen', screen); sc('history', history); sc('perfentry', performance.timing);
+sc('headers', new Headers()); sc('urlObj', new URL('http://a/')); sc('abortsignal', new AbortController().signal); sc('storage', localStorage); sc('crypto', crypto); sc('uadata', navigator.userAgentData);
+try { f.contentWindow.postMessage(navigator.plugins, '*'); R.postPlugins='posted'; } catch(e) { R.postPlugins=e.name+': '+e.message; }
+setTimeout(function(){ document.title=JSON.stringify(R); }, 300);
+</script></body></html>

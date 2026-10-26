@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "HTMLDataElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLDataElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDataElement",
+    "member": "constructor",
+    "expr": "new HTMLDataElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDataElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"data\"); return o.value; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLDataElement",
+    "member": "value",
+    "expr": "(() => { const o = document.createElement(\"data\"); return (o.value = \"x\", o.value); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

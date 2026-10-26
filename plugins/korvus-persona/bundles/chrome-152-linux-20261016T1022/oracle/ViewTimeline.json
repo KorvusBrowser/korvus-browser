@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "ViewTimeline",
+    "member": "constructor",
+    "expr": "(() => { const o = new ViewTimeline(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object ViewTimeline]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ViewTimeline",
+    "member": "subject",
+    "expr": "(() => { const o = new ViewTimeline(); return o.subject; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ViewTimeline",
+    "member": "startOffset",
+    "expr": "(() => { const o = new ViewTimeline(); return o.startOffset; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "ViewTimeline",
+    "member": "endOffset",
+    "expr": "(() => { const o = new ViewTimeline(); return o.endOffset; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

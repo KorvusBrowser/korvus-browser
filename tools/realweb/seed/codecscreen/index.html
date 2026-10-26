@@ -1,0 +1,24 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P6 B11: TextEncoder, TextDecoder and Screen are this engine's own classes (moved out of the kernel).
+const t = (f) => { try { const v = f(); return typeof v + ':' + (v instanceof Uint8Array ? '[' + v.join() + ']' : typeof v === 'object' && v ? JSON.stringify(v) : String(v)); } catch (e) { return e.name + ': ' + e.message + (e.code !== undefined ? ' [code ' + e.code + ']' : ''); } };
+const g = (P, k) => Object.getOwnPropertyDescriptor(P.prototype, k).get;
+const te = new TextEncoder(), td = new TextDecoder();
+window.R = JSON.stringify({
+  encFake: t(() => TextEncoder.prototype.encode.call({})),
+  encGetCreated: t(() => g(TextEncoder, 'encoding').call(Object.create(TextEncoder.prototype))),
+  decFake: t(() => TextDecoder.prototype.decode.call({})),
+  decGetCreated: t(() => g(TextDecoder, 'fatal').call(Object.create(TextDecoder.prototype))),
+  screenFake: t(() => g(Screen, 'width').call({})),
+  screenCreated: t(() => g(Screen, 'isExtended').call(Object.create(Screen.prototype))),
+  screenCtorChain: t(() => Object.getPrototypeOf(Screen) === EventTarget),
+  screenProtoDesc: t(() => JSON.stringify(Object.getOwnPropertyDescriptor(Screen, 'prototype'), ['writable', 'enumerable', 'configurable'])),
+  screenNew: t(() => new Screen()),
+  screenCall: t(() => Screen()),
+  screenReal: t(() => typeof screen.width + ',' + typeof screen.availHeight + ',' + screen.isExtended + ',' + (screen instanceof Screen) + ',' + Object.prototype.toString.call(screen)),
+  screenOrder: t(() => Object.getOwnPropertyNames(Screen.prototype).join()),
+  encode: t(() => te.encode('hé')), encodeInto: t(() => te.encodeInto('héllo', new Uint8Array(4))),
+  decode: t(() => td.decode(new Uint8Array([104, 105]).buffer) + new TextDecoder('utf-8', { fatal: true }).fatal + td.ignoreBOM + td.encoding),
+  lengths: t(() => [TextEncoder.length, TextDecoder.length, te.encode.length, te.encodeInto.length, td.decode.length, TextEncoder.name, TextDecoder.name, Screen.name].join()),
+  noNew: t(() => TextDecoder()),
+});
+</script>

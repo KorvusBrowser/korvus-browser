@@ -1,0 +1,10 @@
+contentWindow.JSON === JSON => false
+contentWindow.Array === Array => false
+contentWindow.Object.prototype === Object.prototype => false
+contentWindow.Node === Node => false
+contentWindow.document instanceof Document => false
+contentWindow.document instanceof contentWindow.Document => true
+[] instanceof contentWindow.Array => false
+contentWindow.eval("[]") instanceof Array => false
+Array.isArray(contentWindow.eval("[]")) => true
+contentWindow.Function("return this")() === contentWindow => true

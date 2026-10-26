@@ -1,0 +1,48 @@
+{
+ "page": {
+  "len": 1232,
+  "at": 1230,
+  "before": [
+   "webkitSpeechRecognitionEvent",
+   "webkitRequestFileSystem",
+   "webkitResolveLocalFileSystemURL"
+  ],
+  "after": [
+   "where"
+  ],
+  "last": [
+   "webkitSpeechRecognitionError",
+   "webkitSpeechRecognitionEvent",
+   "webkitRequestFileSystem",
+   "webkitResolveLocalFileSystemURL",
+   "SharedArrayBuffer",
+   "where"
+  ],
+  "coi": true,
+  "keysAt": -1,
+  "desc": "[\"value\",\"writable\",\"enumerable\",\"configurable\",false]"
+ },
+ "frame": {
+  "len": 1232,
+  "at": 1230,
+  "before": [
+   "webkitSpeechRecognitionEvent",
+   "webkitRequestFileSystem",
+   "webkitResolveLocalFileSystemURL"
+  ],
+  "after": [
+   "where"
+  ],
+  "last": [
+   "webkitSpeechRecognitionError",
+   "webkitSpeechRecognitionEvent",
+   "webkitRequestFileSystem",
+   "webkitResolveLocalFileSystemURL",
+   "SharedArrayBuffer",
+   "where"
+  ],
+  "coi": true,
+  "keysAt": -1,
+  "desc": "[\"value\",\"writable\",\"enumerable\",\"configurable\",false]"
+ }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "iface": "BroadcastChannel",
+    "member": "constructor",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object BroadcastChannel]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "constructor",
+    "expr": "(() => { const o = new BroadcastChannel(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "name",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.name; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "postMessage",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.postMessage(1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "postMessage",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.postMessage(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "close",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "onmessage",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "BroadcastChannel",
+    "member": "onmessageerror",
+    "expr": "(() => { const o = new BroadcastChannel(\"x\"); return o.onmessageerror; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

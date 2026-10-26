@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset=utf-8></head><body>
+<script>
+// Frames whose navigation answers an HTTP error status, an empty body, or fails outright; an <object> and an
+// <embed> answered 404. The server (`frame_status_live.rs`, or `frames_srv.py` for the Chrome recording) answers
+// /f/<status> with frame.html for that status (an empty body for `?empty`, as text/plain for `?text`), /reset by
+// closing the connection with no response; port 1 refuses. Rows: [what, answer], to `window.__out` and POST /report.
+var got = [], events = {};
+addEventListener("message", function (e) { got.push(String(e.data)); });
+function track(el) { events[el.id] = []; ["load", "error"].forEach(function (t) { el.addEventListener(t, function () { events[el.id].push(t); }); }); }
+var IDS = ["f200", "f403", "f404", "f500", "f418", "f404e", "f500e", "f404t", "fnet", "freset"];
+var SRC = {f200: "/f/200", f403: "/f/403", f404: "/f/404", f500: "/f/500", f418: "/f/418", f404e: "/f/404?empty", f500e: "/f/500?empty",
+           f404t: "/f/404?text", fnet: "http://127.0.0.1:1/refused", freset: "/reset"};
+IDS.forEach(function (id) { var f = document.createElement("iframe"); f.id = id; track(f); f.src = SRC[id]; document.body.appendChild(f); });
+var o = document.createElement("object"); o.id = "o404"; track(o); o.data = "/f/404?o"; o.type = "text/html"; o.textContent = "FALLBACK"; document.body.appendChild(o);
+var m = document.createElement("embed"); m.id = "e404"; track(m); m.src = "/f/404?e"; m.type = "text/html"; document.body.appendChild(m);
+setTimeout(function () {
+  var frames = got.filter(function (s) { return s.indexOf("embed") < 0; }), embedded = got.filter(function (s) { return s.indexOf("embed") >= 0; });
+  var out = [["messages", frames.sort().join(",")], ["embed messages", embedded.join(",")], ["window.length", window.length]];
+  IDS.forEach(function (id) {
+    var f = document.getElementById(id), d = null, href;
+    try { d = f.contentDocument; } catch (e) { d = "threw"; }
+    try { href = f.contentWindow.location.href.replace(/:\d+\//, ":PORT/"); } catch (e) { href = "threw " + e.name; }
+    out.push([id + " events", events[id].join(",")]);
+    out.push([id + " contentDocument", d === null ? "null" : d === "threw" ? d : "document"]);
+    out.push([id + " location", href]);
+    if (d && d !== "threw") {
+      out.push([id + " title", d.title]);
+      out.push([id + " text", d.body ? d.body.textContent.trim().slice(0, 20) : "no body"]);
+      out.push([id + " scripts", d.scripts.length]);
+      out.push([id + " contentType", d.contentType]);
+    }
+  });
+  out.push(["o404 events", events.o404.join(",")]);
+  out.push(["o404 contentDocument", o.contentDocument === null ? "null" : "document"]);
+  out.push(["e404 events", events.e404.join(",")]);
+  window.__out = out;
+  fetch("/report", {method: "POST", body: JSON.stringify(out)});
+}, 3000);
+</script></body></html>

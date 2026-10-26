@@ -1,0 +1,6 @@
+<!doctype html><html data-chain="off"><title>s</title><script src="chain.js"></script>
+<script>
+// The first visit refreshes to its own URL; the second goes on with the chain.
+if (!document.cookie.includes('selfdone=1')) { document.cookie = 'selfdone=1; path=/'; document.write('<meta http-equiv="refresh" content="0">'); }
+else location.href = '/nav.html?k=afterself';
+</script>

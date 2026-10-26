@@ -1,0 +1,198 @@
+[
+  {
+    "iface": "MouseEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MouseEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MouseEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "pageX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.pageX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "pageY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.pageY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "x",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.x; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "y",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.y; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "offsetX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.offsetX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "offsetY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.offsetY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "screenX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.screenX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "screenY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.screenY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "clientX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.clientX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "clientY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.clientY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "layerX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.layerX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "layerY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.layerY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "ctrlKey",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.ctrlKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "shiftKey",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.shiftKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "altKey",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.altKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "metaKey",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.metaKey; })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "button",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.button; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "buttons",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.buttons; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "relatedTarget",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.relatedTarget; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.getModifierState(\"x\"); })()",
+    "expected": false,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "getModifierState",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.getModifierState(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "initMouseEvent",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.initMouseEvent(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "initMouseEvent",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.initMouseEvent(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "movementX",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.movementX; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "movementY",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return o.movementY; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MouseEvent",
+    "member": "relatedTarget",
+    "expr": "(() => { const o = new MouseEvent(\"x\"); return Object.prototype.toString.call(o.relatedTarget); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

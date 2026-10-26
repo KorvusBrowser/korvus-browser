@@ -1,0 +1,182 @@
+{
+ "what": "ABPROG F12: page.html on stock Chrome 150.0.7871.46, headed under Xvfb, no DevTools client, a fresh profile; record.py chrome, three runs byte-identical (2026-10-11).",
+ "rows": {
+  "head-gz": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "gzip"
+  },
+  "empty-gz": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "gzip"
+  },
+  "gz": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "gzip"
+  },
+  "gz-trunc": {
+   "status": 200,
+   "ok": true,
+   "len": 585,
+   "sum": 15421428,
+   "head": "korvus conte",
+   "ce": "gzip"
+  },
+  "gz-header-only": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "gzip"
+  },
+  "gz-badcrc": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "gzip"
+  },
+  "gz-two": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "gzip"
+  },
+  "gz-junk-after": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "gzip"
+  },
+  "gz-identity": {
+   "status": 200,
+   "ok": true,
+   "len": 147,
+   "sum": 1427619,
+   "head": "\u001f\u008b\b\u0000\u0000\u0000\u0000\u0000\u0000\u00ff}\u00d0",
+   "ce": "gzip, identity"
+  },
+  "gz-empty-token": {
+   "status": 200,
+   "ok": true,
+   "len": 147,
+   "sum": 1427619,
+   "head": "\u001f\u008b\b\u0000\u0000\u0000\u0000\u0000\u0000\u00ff}\u00d0",
+   "ce": "gzip,"
+  },
+  "identity-gz": {
+   "status": 200,
+   "ok": true,
+   "len": 147,
+   "sum": 1427619,
+   "head": "\u001f\u008b\b\u0000\u0000\u0000\u0000\u0000\u0000\u00ff}\u00d0",
+   "ce": "identity, gzip"
+  },
+  "x-gzip": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "X-GZIP"
+  },
+  "deflate-zlib": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "deflate"
+  },
+  "deflate-raw": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "deflate"
+  },
+  "deflate-zlib-trunc": {
+   "status": 200,
+   "ok": true,
+   "len": 693,
+   "sum": 21605568,
+   "head": "korvus conte",
+   "ce": "deflate"
+  },
+  "br": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "br"
+  },
+  "empty-br": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "br"
+  },
+  "zstd": {
+   "status": 200,
+   "ok": true,
+   "len": 1240,
+   "sum": 68958890,
+   "head": "korvus conte",
+   "ce": "zstd"
+  },
+  "empty-zstd": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "zstd"
+  },
+  "garbage-gz": {
+   "stage": "body",
+   "status": 200,
+   "err": "TypeError"
+  },
+  "head-garbage-gz": {
+   "status": 200,
+   "ok": true,
+   "len": 0,
+   "sum": 0,
+   "head": "",
+   "ce": "gzip"
+  },
+  "xhr:head-gz": {
+   "status": 200,
+   "len": 0
+  },
+  "xhr:gz-trunc": {
+   "status": 200,
+   "len": 585
+  },
+  "xhr:garbage-gz": {
+   "status": 0,
+   "err": "error"
+  }
+ }
+}

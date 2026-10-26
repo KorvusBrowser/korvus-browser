@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new IDBVersionChangeEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object IDBVersionChangeEvent]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new IDBVersionChangeEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "oldVersion",
+    "expr": "(() => { const o = new IDBVersionChangeEvent(\"x\"); return o.oldVersion; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "newVersion",
+    "expr": "(() => { const o = new IDBVersionChangeEvent(\"x\"); return o.newVersion; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLoss",
+    "expr": "new IDBVersionChangeEvent(\"versionchange\").dataLoss",
+    "expected": "none",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLoss",
+    "expr": "new IDBVersionChangeEvent(\"versionchange\", { dataLoss: \"total\" }).dataLoss",
+    "expected": "total",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLoss",
+    "expr": "Object.getOwnPropertyDescriptor(IDBVersionChangeEvent.prototype, \"dataLoss\").get.call(Object.create(IDBVersionChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLossMessage",
+    "expr": "new IDBVersionChangeEvent(\"versionchange\").dataLossMessage",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLossMessage",
+    "expr": "typeof new IDBVersionChangeEvent(\"versionchange\").dataLossMessage",
+    "expected": "string",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "IDBVersionChangeEvent",
+    "member": "dataLossMessage",
+    "expr": "Object.getOwnPropertyDescriptor(IDBVersionChangeEvent.prototype, \"dataLossMessage\").get.call(Object.create(IDBVersionChangeEvent.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

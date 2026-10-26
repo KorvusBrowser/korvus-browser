@@ -1,0 +1,7 @@
+<!doctype html><title>world</title><body><p id=p>world body</p><script>
+window.pageVar = 1;
+HTMLElement.prototype.pageProto = 1;
+document.body.custom = 1;
+Object.defineProperty(document, 'title', {get() { return 'spoofed'; }});
+document.querySelector = function () { return 'hooked'; };
+</script></body>

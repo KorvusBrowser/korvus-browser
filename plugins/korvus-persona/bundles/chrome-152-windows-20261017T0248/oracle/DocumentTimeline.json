@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "DocumentTimeline",
+    "member": "constructor",
+    "expr": "(() => { const o = new DocumentTimeline(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DocumentTimeline]",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

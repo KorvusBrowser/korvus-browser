@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="./testing.js"></script>
+
+<script id=basic>
+  {
+    const reader = new FileReader();
+    testing.expectEqual(0, reader.readyState);
+    testing.expectEqual(null, reader.result);
+    testing.expectEqual(null, reader.error);
+  }
+
+  // Constants
+  testing.expectEqual(0, FileReader.EMPTY);
+  testing.expectEqual(1, FileReader.LOADING);
+  testing.expectEqual(2, FileReader.DONE);
+</script>
+
+<script id=readAsText type=module>
+  const state = await testing.async();
+  const reader = new FileReader();
+  const blob = new Blob(["Hello, World!"], { type: "text/plain" });
+
+  let loadstartFired = false;
+  let progressFired = false;
+  let loadFired = false;
+  let loadendFired = false;
+
+  let loadstartType = null;
+  let loadstartReadyState = null;
+  let progressLoaded = null;
+  let progressTotal = null;
+  let loadReadyState = null;
+  let loadResult = null;
+
+  reader.onloadstart = function(e) {
+    loadstartFired = true;
+    loadstartType = e.type;
+    loadstartReadyState = reader.readyState;
+  };
+
+  reader.onprogress = function(e) {
+    progressFired = true;
+    progressLoaded = e.loaded;
+    progressTotal = e.total;
+  };
+
+  reader.onload = function(e) {
+    loadFired = true;
+    loadReadyState = reader.readyState;
+    loadResult = reader.result;
+  };
+
+  reader.onloadend = function(e) {
+    loadendFired = true;
+    state.resolve();
+  };
+
+  reader.readAsText(blob);
+
+  await state.done(() => {
+    testing.expectEqual(true, loadstartFired);
+    testing.expectEqual("loadstart", loadstartType);
+    testing.expectEqual(1, loadstartReadyState);
+
+    testing.expectEqual(true, progressFired);
+    testing.expectEqual(13, progressLoaded);
+    testing.expectEqual(13, progressTotal);
+
+    testing.expectEqual(true, loadFired);
+    testing.expectEqual(2, loadReadyState);
+    testing.expectEqual("Hello, World!", loadResult);
+
+    testing.expectEqual(true, loadendFired);
+  });
+</script>
+
+<script id=readAsDataURL type=module>
+  const state = await testing.async();
+
+  const reader1 = new FileReader();
+  const blob1 = new Blob(["test"], { type: "text/plain" });
+  const result1 = await new Promise((resolve) => {
+    reader1.onload = function() { resolve(reader1.result); };
+    reader1.readAsDataURL(blob1);
+  });
+
+  // Empty MIME type
+  const reader2 = new FileReader();
+  const blob2 = new Blob(["test"]);
+  const result2 = await new Promise((resolve) => {
+    reader2.onload = function() { resolve(reader2.result); };
+    reader2.readAsDataURL(blob2);
+  });
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual("data:text/plain;base64,dGVzdA==", result1);
+    testing.expectEqual("data:application/octet-stream;base64,dGVzdA==", result2);
+  });
+</script>
+
+<script id=readAsArrayBuffer type=module>
+  const state = await testing.async();
+  const reader = new FileReader();
+  const blob = new Blob([new Uint8Array([65, 66, 67])]);
+  const result = await new Promise((resolve) => {
+    reader.onload = function() { resolve(reader.result); };
+    reader.readAsArrayBuffer(blob);
+  });
+  const view = new Uint8Array(result);
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, result instanceof ArrayBuffer);
+    testing.expectEqual(3, result.byteLength);
+    testing.expectEqual(65, view[0]);
+    testing.expectEqual(66, view[1]);
+    testing.expectEqual(67, view[2]);
+  });
+</script>
+
+<script id=readAsBinaryString type=module>
+  const state = await testing.async();
+  const reader = new FileReader();
+  const blob = new Blob(["ABC"]);
+  const result = await new Promise((resolve) => {
+    reader.onload = function() { resolve(reader.result); };
+    reader.readAsBinaryString(blob);
+  });
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual("ABC", result);
+  });
+</script>
+
+<script id=abort>
+  // Test aborting when not loading (should do nothing)
+  {
+    const reader = new FileReader();
+    reader.abort(); // Should not throw
+    testing.expectEqual(0, reader.readyState);
+  }
+
+  // Note: Testing abort during read is implementation-dependent.
+  // In synchronous implementations (like ours), the read completes before abort can be called.
+  // In async implementations (like Firefox), you can abort during the read.
+  // We test that abort() at least doesn't throw and maintains correct state.
+</script>
+
+<script id=multipleReads type=module>
+  const state = await testing.async();
+  const reader = new FileReader();
+  const blob1 = new Blob(["first"]);
+  const blob2 = new Blob(["second"]);
+
+  // First read
+  const result1 = await new Promise((resolve) => {
+    reader.onload = function() { resolve(reader.result); };
+    reader.readAsText(blob1);
+  });
+
+  // Second read - should work after first completes
+  const result2 = await new Promise((resolve) => {
+    reader.onload = function() { resolve(reader.result); };
+    reader.readAsText(blob2);
+  });
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual("first", result1);
+    testing.expectEqual("second", result2);
+  });
+</script>
+
+<script id=addEventListener type=module>
+  const state = await testing.async();
+  const reader = new FileReader();
+  const blob = new Blob(["test"]);
+
+  let loadFired = false;
+  await new Promise((resolve) => {
+    reader.addEventListener("load", function() {
+      loadFired = true;
+      resolve();
+    });
+    reader.readAsText(blob);
+  });
+
+  state.resolve();
+  await state.done(() => {
+    testing.expectEqual(true, loadFired);
+  });
+</script>

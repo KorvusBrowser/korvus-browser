@@ -1,0 +1,170 @@
+[
+  {
+    "iface": "MediaDevices",
+    "member": "constructor",
+    "expr": "new MediaDevices()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "selectAudioOutput",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.selectAudioOutput(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "setCaptureHandleConfig",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.setCaptureHandleConfig(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "setSupportedCaptureActions",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.setSupportedCaptureActions([]); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "setSupportedCaptureActions",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.setSupportedCaptureActions(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "oncaptureaction",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.oncaptureaction; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "ondevicechange",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.ondevicechange; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getViewportMedia",
+    "expr": "(() => { const o = navigator.mediaDevices; return o.getViewportMedia(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "selectAudioOutput",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.selectAudioOutput()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "oncaptureaction",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.oncaptureaction); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "ondevicechange",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.ondevicechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "enumerateDevices",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.enumerateDevices()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getSupportedConstraints",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.getSupportedConstraints()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getUserMedia",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.getUserMedia()); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getViewportMedia",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.getViewportMedia()); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getDisplayMedia",
+    "expr": "(() => { const o = navigator.mediaDevices; return Object.prototype.toString.call(o.getDisplayMedia()); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "selectAudioOutput",
+    "expr": "(async () => { const o = navigator.mediaDevices; return await o.selectAudioOutput(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "selectAudioOutput",
+    "expr": "(async () => { const o = navigator.mediaDevices; return Object.prototype.toString.call(await o.selectAudioOutput()); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "enumerateDevices",
+    "expr": "(async () => { const o = navigator.mediaDevices; return Object.prototype.toString.call(await o.enumerateDevices()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getUserMedia",
+    "expr": "(async () => { const o = navigator.mediaDevices; return await o.getUserMedia(); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getUserMedia",
+    "expr": "(async () => { const o = navigator.mediaDevices; return Object.prototype.toString.call(await o.getUserMedia()); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getViewportMedia",
+    "expr": "(async () => { const o = navigator.mediaDevices; return await o.getViewportMedia(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "MediaDevices",
+    "member": "getViewportMedia",
+    "expr": "(async () => { const o = navigator.mediaDevices; return Object.prototype.toString.call(await o.getViewportMedia()); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

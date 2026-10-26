@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "constructor",
+    "expr": "new PerformanceServerTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"name\").get.call(Object.create(PerformanceServerTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "name",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"name\").get.name",
+    "expected": "get name",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "duration",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"duration\").get.call(Object.create(PerformanceServerTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "duration",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"duration\").get.name",
+    "expected": "get duration",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "description",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"description\").get.call(Object.create(PerformanceServerTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "description",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceServerTiming.prototype, \"description\").get.name",
+    "expected": "get description",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "toJSON",
+    "expr": "PerformanceServerTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "toJSON",
+    "expr": "PerformanceServerTiming.prototype.toJSON.name",
+    "expected": "toJSON",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "PerformanceServerTiming",
+    "member": "toJSON",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceServerTiming.prototype.toJSON.call(Object.create(PerformanceServerTiming.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "iface": "SFrameEncryptorStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new SFrameEncryptorStream({}); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SFrameEncryptorStream",
+    "member": "constructor",
+    "expr": "(() => { const o = new SFrameEncryptorStream(); return Object.prototype.toString.call(o); })()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

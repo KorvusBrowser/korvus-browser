@@ -1,0 +1,14 @@
+<!doctype html><html><body><script>
+// REALWEB H31: history.pushState / replaceState in a FRAME move the FRAME's URL and state, never the page's;
+// a URL of another origin is a SecurityError (the page's too). a challenge provider's widget frame replaces its own URL,
+// and Korvus moved the PAGE's to the challenge URL -- the page then read the frame's origin as its own.
+var out = { before: location.pathname + location.search };
+history.replaceState({ page: 1 }, '');
+try { history.replaceState(null, '', 'http://example.com/x'); out.pageCross = 'no throw'; } catch (e) { out.pageCross = e.name; }
+addEventListener('message', function (e) { if (e.data && e.data.frame) out.frame = e.data.frame; });
+var f = document.createElement('iframe'); f.src = 'http://127.0.0.1:' + (+location.port + 1) + '/c.html?frame'; document.body.appendChild(f);
+f.onload = function () { setTimeout(function () {
+  out.after = location.pathname + location.search + location.hash; out.state = JSON.stringify(history.state);
+  document.title = JSON.stringify(out);
+}, 300); };
+</script></body></html>

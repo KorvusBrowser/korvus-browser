@@ -1,0 +1,1934 @@
+[
+  {
+    "iface": "SVGElement",
+    "member": "constructor",
+    "expr": "new SVGElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ownerSVGElement",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ownerSVGElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "viewportElement",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.viewportElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onabort",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onabort; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onauxclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onauxclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onbeforeinput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onbeforematch; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onbeforetoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onblur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onblur; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncanplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncanplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncanplaythrough; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onclose",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncommand",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncommand; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncontextlost; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncontextmenu; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncontextrestored; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncopy",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncopy; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncuechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncut",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncut; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondblclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondblclick; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondrag",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondrag; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondragend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondragenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondragleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondragover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondragstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondrop",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondrop; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ondurationchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onemptied",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onemptied; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onended; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onfocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onfocus; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onformdata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onformdata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oninput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oninput; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oninvalid",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oninvalid; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeydown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onkeydown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeypress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onkeypress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeyup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onkeyup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onload; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onloadeddata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onloadedmetadata; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onloadstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousedown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmousedown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmouseenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmouseleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousemove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmousemove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmouseout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmouseover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmouseup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpaste",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpaste; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpause",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpause; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onplay; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onplaying",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onplaying; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onprogress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onprogress; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onratechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onratechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onreset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onreset; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onresize",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onresize; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscroll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onscroll; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onscrollend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onsecuritypolicyviolation; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onseeked",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onseeked; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onseeking",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onseeking; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onslotchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onstalled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onstalled; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsubmit",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onsubmit; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsuspend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onsuspend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontimeupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontoggle; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onvolumechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwaiting",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwaiting; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwebkitanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwebkitanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwebkitanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwebkittransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onwheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "nonce",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.nonce; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "nonce",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return (o.nonce = \"x\", o.nonce); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "autofocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.autofocus; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "autofocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return (o.autofocus = true, o.autofocus); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.tabIndex; })()",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return (o.tabIndex = 1, o.tabIndex); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "focus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.focus(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "blur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.blur(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "tabIndex",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return (o.tabIndex = \"1\", o.tabIndex); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "className",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.className); })()",
+    "expected": "[object SVGAnimatedString]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ownerSVGElement",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ownerSVGElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "viewportElement",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.viewportElement); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onabort",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onabort); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onauxclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onauxclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforeinput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onbeforeinput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforematch",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onbeforematch); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforetoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onbeforetoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onblur",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onblur); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncancel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncanplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncanplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncanplaythrough",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncanplaythrough); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onclose",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncommand",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncommand); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextlost",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncontextlost); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextmenu",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncontextmenu); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontextrestored",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncontextrestored); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncopy",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncopy); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncuechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncuechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncut",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oncut); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondblclick",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondblclick); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondrag",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondrag); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondragend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondragenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondragleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondragover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondragstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondragstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondrop",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondrop); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ondurationchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ondurationchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onemptied",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onemptied); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onended",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onended); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onerror",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onfocus",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onfocus); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onformdata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onformdata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oninput",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oninput); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oninvalid",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.oninvalid); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeydown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onkeydown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeypress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onkeypress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onkeyup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onkeyup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onload",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onload); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadeddata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onloadeddata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadedmetadata",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onloadedmetadata); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onloadstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onloadstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousedown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmousedown); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmouseenter); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmouseleave); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousemove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmousemove); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmouseout); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmouseover); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmouseup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onmouseup); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpaste",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onpaste); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpause",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onpause); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onplay",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onplay); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onplaying",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onplaying); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onprogress",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onprogress); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onratechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onratechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onreset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onreset); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onresize",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onresize); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscroll",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onscroll); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onscrollend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsecuritypolicyviolation",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onsecuritypolicyviolation); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onseeked",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onseeked); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onseeking",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onseeking); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onselect); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onslotchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onstalled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onstalled); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsubmit",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onsubmit); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onsuspend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onsuspend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontimeupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ontimeupdate); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontoggle",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.ontoggle); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onvolumechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onvolumechange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwaiting",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwaiting); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwebkitanimationend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwebkitanimationiteration); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkitanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwebkitanimationstart); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwebkittransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwebkittransitionend); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onwheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.onwheel); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "dataset",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.dataset); })()",
+    "expected": "[object DOMStringMap]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "style",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.style); })()",
+    "expected": "[object CSSStyleDeclaration]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onanimationcancel = f; return o.onanimationcancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onanimationcancel = 42; return o.onanimationcancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationcancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onanimationcancel = function (e) { n = e.type === \"animationcancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationcancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onanimationend = f; return o.onanimationend === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onanimationend = 42; return o.onanimationend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onanimationend = function (e) { n = e.type === \"animationend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationend\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onanimationiteration = f; return o.onanimationiteration === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onanimationiteration = 42; return o.onanimationiteration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationiteration",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onanimationiteration = function (e) { n = e.type === \"animationiteration\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationiteration\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onanimationstart = f; return o.onanimationstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onanimationstart = 42; return o.onanimationstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onanimationstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onanimationstart = function (e) { n = e.type === \"animationstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"animationstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onbeforexrselect = f; return o.onbeforexrselect === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onbeforexrselect = 42; return o.onbeforexrselect; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onbeforexrselect",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onbeforexrselect = function (e) { n = e.type === \"beforexrselect\" ? 1 : 2; }; o.dispatchEvent(new Event(\"beforexrselect\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.oncontentvisibilityautostatechange = f; return o.oncontentvisibilityautostatechange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.oncontentvisibilityautostatechange = 42; return o.oncontentvisibilityautostatechange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "oncontentvisibilityautostatechange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.oncontentvisibilityautostatechange = function (e) { n = e.type === \"contentvisibilityautostatechange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"contentvisibilityautostatechange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.ongotpointercapture = f; return o.ongotpointercapture === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.ongotpointercapture = 42; return o.ongotpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ongotpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.ongotpointercapture = function (e) { n = e.type === \"gotpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"gotpointercapture\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onlostpointercapture = f; return o.onlostpointercapture === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onlostpointercapture = 42; return o.onlostpointercapture; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onlostpointercapture",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onlostpointercapture = function (e) { n = e.type === \"lostpointercapture\" ? 1 : 2; }; o.dispatchEvent(new Event(\"lostpointercapture\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onmousewheel = f; return o.onmousewheel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onmousewheel = 42; return o.onmousewheel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onmousewheel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onmousewheel = function (e) { n = e.type === \"mousewheel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"mousewheel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointercancel = f; return o.onpointercancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointercancel = 42; return o.onpointercancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointercancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointercancel = function (e) { n = e.type === \"pointercancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointercancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerdown = f; return o.onpointerdown === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerdown = 42; return o.onpointerdown; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerdown",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerdown = function (e) { n = e.type === \"pointerdown\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerdown\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerenter = f; return o.onpointerenter === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerenter = 42; return o.onpointerenter; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerenter",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerenter = function (e) { n = e.type === \"pointerenter\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerenter\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerleave = f; return o.onpointerleave === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerleave = 42; return o.onpointerleave; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerleave",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerleave = function (e) { n = e.type === \"pointerleave\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerleave\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointermove = f; return o.onpointermove === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointermove = 42; return o.onpointermove; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointermove",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointermove = function (e) { n = e.type === \"pointermove\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointermove\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerout = f; return o.onpointerout === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerout = 42; return o.onpointerout; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerout",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerout = function (e) { n = e.type === \"pointerout\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerout\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerover = f; return o.onpointerover === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerover = 42; return o.onpointerover; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerover",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerover = function (e) { n = e.type === \"pointerover\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerover\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerrawupdate = f; return o.onpointerrawupdate === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerrawupdate = 42; return o.onpointerrawupdate; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerrawupdate",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerrawupdate = function (e) { n = e.type === \"pointerrawupdate\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerrawupdate\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onpointerup = f; return o.onpointerup === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onpointerup = 42; return o.onpointerup; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onpointerup",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onpointerup = function (e) { n = e.type === \"pointerup\" ? 1 : 2; }; o.dispatchEvent(new Event(\"pointerup\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onscrollsnapchange = f; return o.onscrollsnapchange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onscrollsnapchange = 42; return o.onscrollsnapchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onscrollsnapchange = function (e) { n = e.type === \"scrollsnapchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onscrollsnapchanging = f; return o.onscrollsnapchanging === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onscrollsnapchanging = 42; return o.onscrollsnapchanging; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onscrollsnapchanging",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onscrollsnapchanging = function (e) { n = e.type === \"scrollsnapchanging\" ? 1 : 2; }; o.dispatchEvent(new Event(\"scrollsnapchanging\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onselectionchange = f; return o.onselectionchange === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onselectionchange = 42; return o.onselectionchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectionchange",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onselectionchange = function (e) { n = e.type === \"selectionchange\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectionchange\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.onselectstart = f; return o.onselectstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.onselectstart = 42; return o.onselectstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "onselectstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.onselectstart = function (e) { n = e.type === \"selectstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"selectstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.ontransitioncancel = f; return o.ontransitioncancel === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.ontransitioncancel = 42; return o.ontransitioncancel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitioncancel",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.ontransitioncancel = function (e) { n = e.type === \"transitioncancel\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitioncancel\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.ontransitionend = f; return o.ontransitionend === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.ontransitionend = 42; return o.ontransitionend; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionend",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.ontransitionend = function (e) { n = e.type === \"transitionend\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionend\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.ontransitionrun = f; return o.ontransitionrun === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.ontransitionrun = 42; return o.ontransitionrun; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionrun",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.ontransitionrun = function (e) { n = e.type === \"transitionrun\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionrun\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); const f = function () {}; o.ontransitionstart = f; return o.ontransitionstart === f; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); o.ontransitionstart = 42; return o.ontransitionstart; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "ontransitionstart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); let n = 0; o.ontransitionstart = function (e) { n = e.type === \"transitionstart\" ? 1 : 2; }; o.dispatchEvent(new Event(\"transitionstart\")); return n; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "attributeStyleMap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return Object.prototype.toString.call(o.attributeStyleMap); })()",
+    "expected": "[object StylePropertyMap]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "attributeStyleMap",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.attributeStyleMap.size; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SVGElement",
+    "member": "focusGroupStart",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"animateColor\"); return o.focusGroupStart; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

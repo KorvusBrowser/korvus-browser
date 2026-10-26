@@ -1,0 +1,65 @@
+[
+  {
+    "iface": "IdleDetector",
+    "member": "constructor",
+    "expr": "(() => { const o = new IdleDetector(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object IdleDetector]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "userState",
+    "expr": "(() => { const o = new IdleDetector(); return o.userState; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "screenState",
+    "expr": "(() => { const o = new IdleDetector(); return o.screenState; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "onchange",
+    "expr": "(() => { const o = new IdleDetector(); return o.onchange; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "requestPermission",
+    "expr": "Object.prototype.toString.call(IdleDetector.requestPermission())",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "userState",
+    "expr": "(() => { const o = new IdleDetector(); return Object.prototype.toString.call(o.userState); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "screenState",
+    "expr": "(() => { const o = new IdleDetector(); return Object.prototype.toString.call(o.screenState); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "onchange",
+    "expr": "(() => { const o = new IdleDetector(); return Object.prototype.toString.call(o.onchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "IdleDetector",
+    "member": "start",
+    "expr": "(() => { const o = new IdleDetector(); return Object.prototype.toString.call(o.start()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

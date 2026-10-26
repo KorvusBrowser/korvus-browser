@@ -1,0 +1,29 @@
+<!doctype html><html><body>
+<iframe id=f srcdoc="<script>parent.postMessage('fromframe','*')</script>"></iframe>
+<script>
+// REALWEB H18/H19: every MessageEvent a browser delivers is TRUSTED -- worker <-> page, MessagePort,
+// BroadcastChannel, window.postMessage -- and a worker has Trusted Types. a challenge provider's
+// challenge frame talks to its worker only through a gate that checks isTrusted, origin '' and source null.
+window.R = null;
+var out = {};
+var ev = function (e) { return { t: e.isTrusted, o: e.origin, s: e.source === null ? 'null' : typeof e.source, c: e.constructor.name, id: e.lastEventId, p: e.ports.length }; };
+var wcode = "var ev=" + ev.toString() + ";" +
+  "onmessage=function(e){ var mc=new MessageChannel(); mc.port1.onmessage=function(pe){" +
+  " var tt=self.trustedTypes===null?'null':Object.prototype.toString.call(self.trustedTypes), te;" +
+  " try{var p=self.trustedTypes.createPolicy('w',{createScript:function(s){return s}}); te=String(eval(p.createScript('40+2')))+'/'+String((0,eval)(p.createScript('1+1')))}catch(x){te='threw '+x.name}" +
+  " postMessage({inWorker:ev(e), workerPort:ev(pe), tt:tt, ttEval:te}) }; mc.port2.postMessage(1); }";
+var w = new Worker(URL.createObjectURL(new Blob([wcode], {type: 'text/javascript'})));
+w.onmessage = function (e) { out.fromWorker = ev(e); out.worker = e.data; };
+w.postMessage('go');
+var gate = "var _p=null;if(self.trustedTypes)try{_p=self.trustedTypes.createPolicy('g',{createScript:function(s){return s;}})}catch(e){self.postMessage({type:'tt-policy-error',msg:e.message})}" +
+  "onmessage=function(e){e.isTrusted&&''===e.origin&&null===e.source&&eval(_p?_p.createScript(e.data):e.data)}";
+var gu = URL.createObjectURL(new Blob([gate], {type: 'text/javascript'}));
+var g = new Worker(gu); URL.revokeObjectURL(gu);
+g.onmessage = function (e) { out.gate = e.data; };
+g.postMessage("postMessage({answered:typeof self.navigator.hardwareConcurrency})");
+var mc = new MessageChannel(); mc.port1.onmessage = function (e) { out.port = ev(e); }; mc.port2.postMessage(1);
+var b1 = new BroadcastChannel('msgtrust'), b2 = new BroadcastChannel('msgtrust'); b2.onmessage = function (e) { out.broadcast = ev(e); }; b1.postMessage(1);
+addEventListener('message', function (e) { out[e.data === 'self' ? 'windowSelf' : 'fromFrame'] = { t: e.isTrusted, c: e.constructor.name }; });
+postMessage('self', '*');
+setTimeout(function () { window.R = JSON.stringify(out, Object.keys(out).sort().concat(['t','o','s','c','id','p','inWorker','workerPort','tt','ttEval','answered','type','msg'])); }, 1200);
+</script></body></html>

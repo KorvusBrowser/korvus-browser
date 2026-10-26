@@ -1,0 +1,143 @@
+{
+ "sc": true,
+ "handlers": [
+  true,
+  true,
+  true
+ ],
+ "ifaces": [
+  "function",
+  "function"
+ ],
+ "requestPermission": [
+  true,
+  true
+ ],
+ "main": [
+  [
+   "devicemotion",
+   true,
+   16
+  ],
+  [
+   "deviceorientation",
+   true,
+   false
+  ],
+  [
+   "deviceorientationabsolute",
+   true,
+   true
+  ]
+ ],
+ "frames": {
+  "blank": {
+   "ev": [
+    [
+     "devicemotion",
+     true,
+     16,
+     true
+    ],
+    [
+     "deviceorientation",
+     true,
+     false,
+     true
+    ],
+    [
+     "deviceorientationabsolute",
+     true,
+     true,
+     true
+    ]
+   ]
+  },
+  "cross": {
+   "sc": true,
+   "ev": []
+  },
+  "crossAllow2": {
+   "sc": true,
+   "ev": [
+    [
+     "devicemotion",
+     true,
+     16
+    ],
+    [
+     "deviceorientation",
+     true,
+     false
+    ]
+   ]
+  },
+  "crossAllow3": {
+   "sc": true,
+   "ev": [
+    [
+     "devicemotion",
+     true,
+     16
+    ],
+    [
+     "deviceorientation",
+     true,
+     false
+    ],
+    [
+     "deviceorientationabsolute",
+     true,
+     true
+    ]
+   ]
+  },
+  "detached": {
+   "ev": []
+  },
+  "same": {
+   "sc": true,
+   "ev": [
+    [
+     "devicemotion",
+     true,
+     16
+    ],
+    [
+     "deviceorientation",
+     true,
+     false
+    ],
+    [
+     "deviceorientationabsolute",
+     true,
+     true
+    ]
+   ]
+  },
+  "sameNoGyro": {
+   "sc": true,
+   "ev": []
+  },
+  "sameNoMagnet": {
+   "sc": true,
+   "ev": [
+    [
+     "devicemotion",
+     true,
+     16
+    ],
+    [
+     "deviceorientation",
+     true,
+     false
+    ]
+   ]
+  },
+  "sandboxed": {
+   "sc": true,
+   "ev": []
+  }
+ },
+ "hidden": false
+}

@@ -1,0 +1,13 @@
+<!doctype html><html><head><script>
+// REALWEB F31: a script's microtasks run INSIDE "execute the script element" -- the checkpoint in "clean up after
+// running script" comes before currentScript is restored -- so a promise job of a script still sees that script
+// as document.currentScript, and it has run before the next script starts. In a frame too (tiptap.dev: Turbopack
+// runs Next's appBootstrap from an awaited promise and reads document.currentScript).
+window.R = {};</script>
+<script src="b.js?k=pageSync"></script><script async src="b.js?k=pageAsync"></script>
+<script>Promise.resolve().then(function () { var c = document.currentScript; R.pageInline_mt = c ? c.tagName : String(c); window.pageFlag = 1; });</script>
+<script>R.pageFlagAtNext = window.pageFlag || 0;</script>
+</head><body><iframe id=f src="inner.html"></iframe><script>
+var s = document.createElement('script'); s.src = 'b.js?k=pageDyn'; document.head.appendChild(s);
+addEventListener('message', function (e) { if (e.data && e.data.R) { R.frame = e.data.R; document.title = JSON.stringify(R); } });
+</script></body></html>

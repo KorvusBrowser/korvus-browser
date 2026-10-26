@@ -1,0 +1,11 @@
+<!doctype html><html><body>
+<dialog id="d"></dialog>
+<script>
+const d = document.getElementById('d');
+d.showModal();
+const afterShow = d.open;
+d.close('confirmed');
+const afterClose = d.open;
+globalThis.__obstacle = 'dialog:' + afterShow + ':' + afterClose + ':' + d.returnValue;
+</script>
+</body></html>

@@ -1,0 +1,16 @@
+<!doctype html><title>t</title>
+<!-- T13: page-set request headers go on the wire in Blink's header-map order (a hash table: the order the page set them does not matter -- [d,c,b,a] is [a,b,c,d] -- and it moves as headers are added), interleaved with User-Agent and the client hints, before the fixed tail (accept ... accept-language). Brave 151 = Chrome 150 here. -->
+<script>
+const cases = [['x1', ['a']], ['x2', ['a', 'b']], ['x3', ['a', 'b', 'c']], ['x4', ['a', 'b', 'c', 'd']], ['x5', ['a', 'b', 'c', 'd', 'e']],
+  ['x6', ['d', 'c', 'b', 'a']], ['xc1', ['content-type', 'a', 'b']], ['xc2', ['a', 'b', 'content-type']], ['xg', ['a', 'b', 'c']]];
+(async () => {
+  for (const [k, hs] of cases) {
+    const x = new XMLHttpRequest(); x.open(k === 'xg' ? 'GET' : 'POST', '/r/?k=' + k);
+    for (const h of hs) x.setRequestHeader(h === 'content-type' ? h : 'x-' + h, h === 'content-type' ? 'text/plain' : '1');
+    x.send(k === 'xg' ? null : 'v'); await new Promise(r => x.onloadend = r);
+  }
+  await fetch('/r/?k=f3', {method: 'POST', body: 'v', headers: [['x-a', '1'], ['x-b', '1'], ['x-c', '1']]});
+  await fetch('/r/?k=f3g', {headers: [['x-a', '1'], ['x-b', '1'], ['x-c', '1']]});
+  window.__hdr = await fetch('/report').then(r => r.json()); document.title = 'done';
+})();
+</script>

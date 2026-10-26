@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "constructor",
+    "expr": "new PerformanceLongTaskTiming()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "attribution",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceLongTaskTiming.prototype, \"attribution\").get.call(Object.create(PerformanceLongTaskTiming.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "attribution",
+    "expr": "Object.getOwnPropertyDescriptor(PerformanceLongTaskTiming.prototype, \"attribution\").get.name",
+    "expected": "get attribution",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "toJSON",
+    "expr": "PerformanceLongTaskTiming.prototype.toJSON.length",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "toJSON",
+    "expr": "PerformanceLongTaskTiming.prototype.toJSON.name",
+    "expected": "toJSON",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "PerformanceLongTaskTiming",
+    "member": "toJSON",
+    "expr": "(function () { try { return \"ok:\" + Object.prototype.toString.call(PerformanceLongTaskTiming.prototype.toJSON.call(Object.create(PerformanceLongTaskTiming.prototype))); } catch (e) { return \"throw:\" + e.name; } })()",
+    "expected": "throw:TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

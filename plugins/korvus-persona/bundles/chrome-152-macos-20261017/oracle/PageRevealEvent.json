@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "PageRevealEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageRevealEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object PageRevealEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PageRevealEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new PageRevealEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "PageRevealEvent",
+    "member": "viewTransition",
+    "expr": "(() => { const o = new PageRevealEvent(\"x\"); return o.viewTransition; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

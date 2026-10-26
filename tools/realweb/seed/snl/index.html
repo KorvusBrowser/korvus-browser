@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>style setters and null</title>
+<!-- S28: `el.style.display = null` stored the STRING "null" (and getComputedStyle answered display "null");
+     the CSS property attributes are [LegacyNullToEmptyString], so null removes the declaration. An invalid
+     value is ignored. worldbank.org resets its sections with style.display = null: innerText lost 80 %. -->
+<body><div id="a" style="display:flex;color:red"></div>
+<script>
+var a = document.getElementById('a'), r = {};
+a.style.display = null; r.displayNull = [a.style.display, getComputedStyle(a).display, a.getAttribute('style')];
+a.style.color = null; r.colorNull = [a.style.color, getComputedStyle(a).color];
+a.style.display = 'grid'; a.style.display = 'bogus'; r.invalidKept = [a.style.display, getComputedStyle(a).display];
+a.style.display = undefined; r.displayUndefined = [a.style.display, getComputedStyle(a).display];
+a.style.setProperty('display', null); r.setPropertyNull = [a.style.display, a.getAttribute('style')];
+a.style.width = '10px'; a.style['width'] = null; r.bracketNull = [a.style.width];
+a.style.cssText = 'margin: 3px'; a.style.cssText = null; r.cssTextNull = [a.style.cssText];
+a.style.marginTop = 5; r.numberNoUnit = [a.style.marginTop];
+a.style.opacity = 0.5; r.numberOpacity = [a.style.opacity];
+window.R = JSON.stringify(r);
+</script>

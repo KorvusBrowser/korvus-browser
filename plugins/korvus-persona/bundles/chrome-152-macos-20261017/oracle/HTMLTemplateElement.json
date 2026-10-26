@@ -1,0 +1,107 @@
+[
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLTemplateElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "constructor",
+    "expr": "new HTMLTemplateElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootMode",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootMode; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootMode",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootMode = \"x\", o.shadowRootMode); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootDelegatesFocus",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootDelegatesFocus; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootDelegatesFocus",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootDelegatesFocus = true, o.shadowRootDelegatesFocus); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootSlotAssignment",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootSlotAssignment; })()",
+    "expected": "named",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootSlotAssignment",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootSlotAssignment = \"x\", o.shadowRootSlotAssignment); })()",
+    "expected": "named",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootClonable",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootClonable; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootClonable",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootClonable = true, o.shadowRootClonable); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootSerializable",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootSerializable; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootSerializable",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootSerializable = true, o.shadowRootSerializable); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootCustomElementRegistry",
+    "expr": "(() => { const o = document.createElement(\"template\"); return o.shadowRootCustomElementRegistry; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "shadowRootCustomElementRegistry",
+    "expr": "(() => { const o = document.createElement(\"template\"); return (o.shadowRootCustomElementRegistry = \"x\", o.shadowRootCustomElementRegistry); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLTemplateElement",
+    "member": "content",
+    "expr": "(() => { const o = document.createElement(\"template\"); return Object.prototype.toString.call(o.content); })()",
+    "expected": "[object DocumentFragment]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

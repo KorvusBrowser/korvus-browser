@@ -1,0 +1,32 @@
+<!doctype html><title>t</title>
+<!-- L19: the `inherit` keyword on a NON-inherited property takes the PARENT's computed value -- `html {
+     box-sizing: border-box } *, *::before, *::after { box-sizing: inherit }` (CSS-Tricks' pattern; fontshare.com's
+     stylesheet) makes every element border-box in Chrome. korvus gave the initial value below the root. -->
+<style>
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+#w { width: 300px; padding: 10px; border: 2px solid; }
+#wi { width: inherit; }
+#oc { overflow: hidden; }
+#oc > div { overflow: inherit; }
+#pos { position: relative; }
+#pos > span { position: inherit; display: inherit; }
+#bg { background-color: rgb(1, 2, 3); }
+#bg > div { background-color: inherit; }
+#m { margin-left: 7px; }
+#m > div { margin-left: inherit; }
+</style>
+<div id=w><div id=wi>x</div></div>
+<div id=oc><div id=ocin>x</div></div>
+<div id=pos><span id=posin>x</span></div>
+<div id=bg><div id=bgin>x</div></div>
+<div id=m><div id=min>x</div></div>
+<p id=p>para</p>
+<script>
+const g = (id, p) => getComputedStyle(document.getElementById(id)).getPropertyValue(p);
+document.title = JSON.stringify({
+  html: getComputedStyle(document.documentElement).boxSizing, body: getComputedStyle(document.body).boxSizing, p: g('p', 'box-sizing'),
+  wBox: Math.round(document.getElementById('w').getBoundingClientRect().width), wi: g('wi', 'width'),
+  oc: g('ocin', 'overflow'), pos: g('posin', 'position') + '/' + g('posin', 'display'), bg: g('bgin', 'background-color'), m: g('min', 'margin-left'),
+});
+</script>

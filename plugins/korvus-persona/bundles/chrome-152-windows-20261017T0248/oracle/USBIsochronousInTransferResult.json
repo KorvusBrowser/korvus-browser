@@ -1,0 +1,86 @@
+[
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "constructor",
+    "expr": "(() => { const o = new USBIsochronousInTransferResult([]); return Object.prototype.toString.call(o); })()",
+    "expected": "[object USBIsochronousInTransferResult]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "constructor",
+    "expr": "(() => { const o = new USBIsochronousInTransferResult(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "data",
+    "expr": "(() => { const o = new USBIsochronousInTransferResult([]); return o.data; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "packets",
+    "expr": "(() => { const o = new USBIsochronousInTransferResult([]); return o.packets; })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "constructor",
+    "expr": "new USBIsochronousInTransferResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "constructor",
+    "expr": "new USBIsochronousInTransferResult(3)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "packets",
+    "expr": "new USBIsochronousInTransferResult([new USBIsochronousInTransferPacket(\"ok\")]).packets.length",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "packets",
+    "expr": "Object.prototype.toString.call(new USBIsochronousInTransferResult([new USBIsochronousInTransferPacket(\"ok\")]).packets[0])",
+    "expected": "[object USBIsochronousInTransferPacket]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "packets",
+    "expr": "Object.isFrozen(new USBIsochronousInTransferResult([]).packets)",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "packets",
+    "expr": "(() => { const r = new USBIsochronousInTransferResult([]); return r.packets === r.packets; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "data",
+    "expr": "new USBIsochronousInTransferResult([]).data",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "USBIsochronousInTransferResult",
+    "member": "data",
+    "expr": "new USBIsochronousInTransferResult([], new DataView(new ArrayBuffer(6))).data.byteLength",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

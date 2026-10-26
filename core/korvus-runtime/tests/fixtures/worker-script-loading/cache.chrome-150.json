@@ -1,0 +1,42 @@
+[
+[
+"page <script>",
+"load"
+],
+[
+"page worker importScripts",
+"w 1"
+],
+[
+"frame workers",
+"wc 1, wn 1, wb 1"
+],
+[
+"127.0.0.1 script requests",
+1
+],
+[
+"localhost script requests",
+1
+],
+[
+"localhost cacheable worker script requests",
+1
+],
+[
+"frame <script> request",
+"script / no-cors / same-origin / referer http://localhost:PORT/html?b=..."
+],
+[
+"frame worker script request",
+"worker / same-origin / same-origin / referer http://localhost:PORT/html?b=..."
+],
+[
+"frame worker importScripts request",
+"script / no-cors / same-origin / referer http://localhost:PORT/js?b=..."
+],
+[
+"page worker script request",
+"worker / same-origin / same-origin / referer http://127.0.0.1:PORT/"
+]
+]

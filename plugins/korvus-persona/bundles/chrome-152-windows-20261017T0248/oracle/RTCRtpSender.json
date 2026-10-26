@@ -1,0 +1,117 @@
+[
+  {
+    "iface": "RTCRtpSender",
+    "member": "getCapabilities",
+    "expr": "RTCRtpSender.getCapabilities(\"x\")",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "constructor",
+    "expr": "new RTCRtpSender()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "transform",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return o.transform; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "track",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return o.track; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "transport",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return o.transport; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "setStreams",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return o.setStreams(); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "getCapabilities",
+    "expr": "Object.prototype.toString.call(RTCRtpSender.getCapabilities(\"x\"))",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "transform",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.transform); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "track",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.track); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "transport",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.transport); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "getParameters",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.getParameters()); })()",
+    "expected": "[object Object]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "getStats",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.getStats()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "dtmf",
+    "expr": "(() => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(o.dtmf); })()",
+    "expected": "[object RTCDTMFSender]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "setParameters",
+    "expr": "(async () => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return await o.setParameters(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "replaceTrack",
+    "expr": "(async () => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return await o.replaceTrack(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "RTCRtpSender",
+    "member": "getStats",
+    "expr": "(async () => { const o = new RTCPeerConnection().addTransceiver(\"audio\").sender; return Object.prototype.toString.call(await o.getStats()); })()",
+    "expected": "[object RTCStatsReport]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

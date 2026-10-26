@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "CloseEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CloseEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CloseEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CloseEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new CloseEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CloseEvent",
+    "member": "wasClean",
+    "expr": "(() => { const o = new CloseEvent(\"x\"); return o.wasClean; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CloseEvent",
+    "member": "code",
+    "expr": "(() => { const o = new CloseEvent(\"x\"); return o.code; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CloseEvent",
+    "member": "reason",
+    "expr": "(() => { const o = new CloseEvent(\"x\"); return o.reason; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  }
+]

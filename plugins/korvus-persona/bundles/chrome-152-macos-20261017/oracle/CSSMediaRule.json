@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "CSSMediaRule",
+    "member": "constructor",
+    "expr": "new CSSMediaRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSMediaRule",
+    "member": "matches",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@media screen { a { color: red } }\"); return s.cssRules[0]; })(); return o.matches; })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CSSMediaRule",
+    "member": "media",
+    "expr": "(() => { const o = (() => { const s = new CSSStyleSheet(); s.replaceSync(\"@media screen { a { color: red } }\"); return s.cssRules[0]; })(); return Object.prototype.toString.call(o.media); })()",
+    "expected": "[object MediaList]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

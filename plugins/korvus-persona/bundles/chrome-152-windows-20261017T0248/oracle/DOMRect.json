@@ -1,0 +1,212 @@
+[
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "new DOMRect(1, 2, 3, 4).x",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "new DOMRect(1).x",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "(() => { const r = new DOMRect(); r.x = 5; return r.x + ',' + r.left + ',' + r.right; })()",
+    "expected": "5,5,5",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "new DOMRect(1, 2, 3, 4).y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "new DOMRect(1, 2).y",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "(() => { const r = new DOMRect(); r.y = 5; return r.y + ',' + r.top + ',' + r.bottom; })()",
+    "expected": "5,5,5",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "new DOMRect(1, 2, 3, 4).width",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "(() => { const r = new DOMRect(2, 2, -4, 4); return r.width + ',' + r.left + ',' + r.right; })()",
+    "expected": "-4,-2,2",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "(() => { const r = new DOMRect(5, 5); r.width = 5; return r.right; })()",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "new DOMRect(1, 2, 3, 4).height",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "(() => { const r = new DOMRect(2, 2, 4, -4); return r.height + ',' + r.top + ',' + r.bottom; })()",
+    "expected": "-4,-2,2",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "(() => { const r = new DOMRect(5, 5); r.height = 5; return r.bottom; })()",
+    "expected": 10,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "fromRect",
+    "expr": "DOMRect.fromRect({ x: 1, y: 2, width: 3, height: 4 }).width",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "fromRect",
+    "expr": "DOMRect.fromRect({ x: 1, y: 2, width: 3, height: 4 }).bottom",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "fromRect",
+    "expr": "DOMRect.fromRect().y",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "fromRect",
+    "expr": "DOMRect.fromRect({ width: 5 }).right",
+    "expected": 5,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "fromRect",
+    "expr": "DOMRect.fromRect({ x: 1, y: 2, width: 3, height: 4 }) instanceof DOMRect",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMRect(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMRect]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "(() => { const o = new DOMRect(); return o.x; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "(() => { const o = new DOMRect(); return (o.x = 1, o.x); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "(() => { const o = new DOMRect(); return o.y; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "(() => { const o = new DOMRect(); return (o.y = 1, o.y); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "(() => { const o = new DOMRect(); return o.width; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "(() => { const o = new DOMRect(); return (o.width = 1, o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "(() => { const o = new DOMRect(); return o.height; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "(() => { const o = new DOMRect(); return (o.height = 1, o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "x",
+    "expr": "(() => { const o = new DOMRect(); return (o.x = \"1\", o.x); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "y",
+    "expr": "(() => { const o = new DOMRect(); return (o.y = \"1\", o.y); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "width",
+    "expr": "(() => { const o = new DOMRect(); return (o.width = \"1\", o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "DOMRect",
+    "member": "height",
+    "expr": "(() => { const o = new DOMRect(); return (o.height = \"1\", o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

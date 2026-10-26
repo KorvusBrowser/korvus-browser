@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "LinearAccelerationSensor",
+    "member": "constructor",
+    "expr": "(() => { const o = new LinearAccelerationSensor(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object LinearAccelerationSensor]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

@@ -1,0 +1,4 @@
+<!doctype html><html><body><script>
+// REALWEB F36: an unsandboxed cross-origin frame's <a target=_top>.click() navigates the page (Chrome 150).
+var f = document.createElement('iframe'); f.src = 'http://localhost:' + location.port + '/x.html?how=anchor'; document.body.appendChild(f);
+</script></body></html>

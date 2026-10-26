@@ -1,0 +1,118 @@
+[
+  {
+    "iface": "CaptureController",
+    "member": "constructor",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CaptureController]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "oncapturedmousechange",
+    "expr": "(() => { const o = new CaptureController(); return o.oncapturedmousechange; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "getSupportedZoomLevels",
+    "expr": "(() => { const o = new CaptureController(); return o.getSupportedZoomLevels(); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "zoomLevel",
+    "expr": "(() => { const o = new CaptureController(); return o.zoomLevel; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "onzoomlevelchange",
+    "expr": "(() => { const o = new CaptureController(); return o.onzoomlevelchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "setFocusBehavior",
+    "expr": "(() => { const o = new CaptureController(); return o.setFocusBehavior(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "oncapturedmousechange",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.oncapturedmousechange); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "getSupportedZoomLevels",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.getSupportedZoomLevels()); })()",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "increaseZoomLevel",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.increaseZoomLevel()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "decreaseZoomLevel",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.decreaseZoomLevel()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "resetZoomLevel",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.resetZoomLevel()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "onzoomlevelchange",
+    "expr": "(() => { const o = new CaptureController(); return Object.prototype.toString.call(o.onzoomlevelchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "increaseZoomLevel",
+    "expr": "(async () => { const o = new CaptureController(); return await o.increaseZoomLevel(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "decreaseZoomLevel",
+    "expr": "(async () => { const o = new CaptureController(); return await o.decreaseZoomLevel(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "resetZoomLevel",
+    "expr": "(async () => { const o = new CaptureController(); return await o.resetZoomLevel(); })()",
+    "throws": "InvalidStateError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "CaptureController",
+    "member": "forwardWheel",
+    "expr": "(async () => { const o = new CaptureController(); return await o.forwardWheel(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

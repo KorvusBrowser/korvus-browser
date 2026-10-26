@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "QuotaExceededError",
+    "member": "constructor",
+    "expr": "(() => { const o = new QuotaExceededError(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object QuotaExceededError]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "QuotaExceededError",
+    "member": "quota",
+    "expr": "(() => { const o = new QuotaExceededError(); return o.quota; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "QuotaExceededError",
+    "member": "requested",
+    "expr": "(() => { const o = new QuotaExceededError(); return o.requested; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

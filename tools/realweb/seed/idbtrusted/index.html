@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><body>
+<script>
+// TEMPLATES P8 B36: the events IndexedDB fires are TRUSTED -- the user agent dispatches them -- as every
+// event the engine itself fires is: `isTrusted` is true on each, and on none a page constructs.
+const out = {};
+const t = (k, ev) => { out[k] = ev.type + ' ' + ev.isTrusted; };
+const req = indexedDB.open('b36-' + Math.random().toString(36).slice(2), 1);
+req.onupgradeneeded = (ev) => { t('upgradeneeded', ev); req.result.createObjectStore('s'); };
+req.onsuccess = (ev) => {
+  t('open.success', ev);
+  const db = req.result;
+  const tx = db.transaction('s', 'readwrite');
+  const put = tx.objectStore('s').put(1, 'k');
+  put.onsuccess = (e) => t('put.success', e);
+  const dup = tx.objectStore('s').add(2, 'k');
+  dup.onerror = (e) => { t('add.error', e); e.preventDefault(); };
+  tx.oncomplete = (e) => {
+    t('tx.complete', e);
+    out.constructed = String(new Event('x').isTrusted);
+    db.close();
+    window.R = JSON.stringify(out);
+  };
+  tx.onabort = () => { out.aborted = String(tx.error); window.R = JSON.stringify(out); };
+};
+req.onerror = () => { out.openError = String(req.error); window.R = JSON.stringify(out); };
+</script>

@@ -1,0 +1,762 @@
+[
+  {
+    "iface": "Navigator",
+    "member": "constructor",
+    "expr": "new Navigator()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "attribution",
+    "expr": "(() => { const o = navigator; return o.attribution; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "audioSession",
+    "expr": "(() => { const o = navigator; return o.audioSession; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getAutoplayPolicy",
+    "expr": "(() => { const o = navigator; return o.getAutoplayPolicy(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "sendBeacon",
+    "expr": "(() => { const o = navigator; return o.sendBeacon(\"x\"); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "sendBeacon",
+    "expr": "(() => { const o = navigator; return o.sendBeacon(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "contacts",
+    "expr": "(() => { const o = navigator; return o.contacts; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "cpuPerformance",
+    "expr": "(() => { const o = navigator; return o.cpuPerformance; })()",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "deprecatedReplaceInURN",
+    "expr": "(() => { const o = navigator; return o.deprecatedReplaceInURN(); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-20260907T1006"
+  },
+  {
+    "iface": "Navigator",
+    "member": "deprecatedURNtoURL",
+    "expr": "(() => { const o = navigator; return o.deprecatedURNtoURL(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "adAuctionComponents",
+    "expr": "(() => { const o = navigator; return o.adAuctionComponents(1); })()",
+    "expected": [],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "adAuctionComponents",
+    "expr": "(() => { const o = navigator; return o.adAuctionComponents(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getGamepads",
+    "expr": "(() => { const o = navigator; return o.getGamepads(); })()",
+    "expected": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "queryHandwritingRecognizer",
+    "expr": "(() => { const o = navigator; return o.queryHandwritingRecognizer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "createHandwritingRecognizer",
+    "expr": "(() => { const o = navigator; return o.createHandwritingRecognizer(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "preferences",
+    "expr": "(() => { const o = navigator; return o.preferences; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "maxTouchPoints",
+    "expr": "(() => { const o = navigator; return o.maxTouchPoints; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "vibrate",
+    "expr": "(() => { const o = navigator; return o.vibrate(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "bluetooth",
+    "expr": "(() => { const o = navigator; return o.bluetooth; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "Navigator",
+    "member": "share",
+    "expr": "(() => { const o = navigator; return o.share(); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "canShare",
+    "expr": "(() => { const o = navigator; return o.canShare(); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "crossOriginStorage",
+    "expr": "(() => { const o = navigator; return o.crossOriginStorage; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "deviceMemory",
+    "expr": "(() => { const o = navigator; return o.deviceMemory; })()",
+    "expected": 32,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "globalPrivacyControl",
+    "expr": "(() => { const o = navigator; return o.globalPrivacyControl; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "appCodeName",
+    "expr": "(() => { const o = navigator; return o.appCodeName; })()",
+    "expected": "Mozilla",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "appName",
+    "expr": "(() => { const o = navigator; return o.appName; })()",
+    "expected": "Netscape",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "product",
+    "expr": "(() => { const o = navigator; return o.product; })()",
+    "expected": "Gecko",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "productSub",
+    "expr": "(() => { const o = navigator; return o.productSub; })()",
+    "expected": "20030107",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "vendor",
+    "expr": "(() => { const o = navigator; return o.vendor; })()",
+    "expected": "Google Inc.",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "vendorSub",
+    "expr": "(() => { const o = navigator; return o.vendorSub; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "language",
+    "expr": "(() => { const o = navigator; return o.language; })()",
+    "expected": "ko-KR",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "languages",
+    "expr": "(() => { const o = navigator; return o.languages; })()",
+    "expected": [
+      "ko-KR",
+      "ko",
+      "en-US",
+      "en"
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "onLine",
+    "expr": "(() => { const o = navigator; return o.onLine; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "registerProtocolHandler",
+    "expr": "(() => { const o = navigator; return o.registerProtocolHandler(\"x\", \"x\"); })()",
+    "throws": "SecurityError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "registerProtocolHandler",
+    "expr": "(() => { const o = navigator; return o.registerProtocolHandler(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "unregisterProtocolHandler",
+    "expr": "(() => { const o = navigator; return o.unregisterProtocolHandler(\"x\", \"x\"); })()",
+    "throws": "SecurityError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "unregisterProtocolHandler",
+    "expr": "(() => { const o = navigator; return o.unregisterProtocolHandler(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "cookieEnabled",
+    "expr": "(() => { const o = navigator; return o.cookieEnabled; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "javaEnabled",
+    "expr": "(() => { const o = navigator; return o.javaEnabled(); })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "pdfViewerEnabled",
+    "expr": "(() => { const o = navigator; return o.pdfViewerEnabled; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "webdriver",
+    "expr": "(() => { const o = navigator; return o.webdriver; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "ml",
+    "expr": "(() => { const o = navigator; return o.ml; })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "attribution",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.attribution); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "audioSession",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.audioSession); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getBattery",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.getBattery()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "clipboard",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.clipboard); })()",
+    "expected": "[object Clipboard]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "contacts",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.contacts); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "credentials",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.credentials); })()",
+    "expected": "[object CredentialsContainer]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "devicePosture",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.devicePosture); })()",
+    "expected": "[object DevicePosture]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMediaKeySystemAccess",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.requestMediaKeySystemAccess(\"x\", [])); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "adAuctionComponents",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.adAuctionComponents(1)); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getGamepads",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.getGamepads()); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "geolocation",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.geolocation); })()",
+    "expected": "[object Geolocation]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getInstalledRelatedApps",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.getInstalledRelatedApps()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "userActivation",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.userActivation); })()",
+    "expected": "[object UserActivation]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "ink",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.ink); })()",
+    "expected": "[object Ink]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "scheduling",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.scheduling); })()",
+    "expected": "[object Scheduling]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "keyboard",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.keyboard); })()",
+    "expected": "[object Keyboard]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "login",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.login); })()",
+    "expected": "[object NavigatorLogin]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "managed",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.managed); })()",
+    "expected": "[object NavigatorManagedData]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "mediaCapabilities",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.mediaCapabilities); })()",
+    "expected": "[object MediaCapabilities]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "mediaDevices",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.mediaDevices); })()",
+    "expected": "[object MediaDevices]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "preferences",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.preferences); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "mediaSession",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.mediaSession); })()",
+    "expected": "[object MediaSession]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "permissions",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.permissions); })()",
+    "expected": "[object Permissions]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "presentation",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.presentation); })()",
+    "expected": "[object Presentation]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "wakeLock",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.wakeLock); })()",
+    "expected": "[object WakeLock]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "serial",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.serial); })()",
+    "expected": "[object Serial]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "serviceWorker",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.serviceWorker); })()",
+    "expected": "[object ServiceWorkerContainer]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "virtualKeyboard",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.virtualKeyboard); })()",
+    "expected": "[object VirtualKeyboard]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "bluetooth",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.bluetooth); })()",
+    "expected": "[object Bluetooth]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "share",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.share()); })()",
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "hid",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.hid); })()",
+    "expected": "[object HID]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMIDIAccess",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.requestMIDIAccess()); })()",
+    "expected": "[object Promise]",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "usb",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.usb); })()",
+    "expected": "[object USB]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "xr",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.xr); })()",
+    "expected": "[object XRSystem]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "windowControlsOverlay",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.windowControlsOverlay); })()",
+    "expected": "[object WindowControlsOverlay]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "setAppBadge",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.setAppBadge()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "clearAppBadge",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.clearAppBadge()); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "crossOriginStorage",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.crossOriginStorage); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "languages",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.languages); })()",
+    "expected": "[object Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "plugins",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.plugins); })()",
+    "expected": "[object PluginArray]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "mimeTypes",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.mimeTypes); })()",
+    "expected": "[object MimeTypeArray]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "connection",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.connection); })()",
+    "expected": "[object NetworkInformation]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "storageBuckets",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.storageBuckets); })()",
+    "expected": "[object StorageBucketManager]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "storage",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.storage); })()",
+    "expected": "[object StorageManager]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "userAgentData",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.userAgentData); })()",
+    "expected": "[object NavigatorUAData]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "locks",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.locks); })()",
+    "expected": "[object LockManager]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "gpu",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.gpu); })()",
+    "expected": "[object GPU]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "ml",
+    "expr": "(() => { const o = navigator; return Object.prototype.toString.call(o.ml); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getBattery",
+    "expr": "(async () => { const o = navigator; return Object.prototype.toString.call(await o.getBattery()); })()",
+    "expected": "[object BatteryManager]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMediaKeySystemAccess",
+    "expr": "(async () => { const o = navigator; return await o.requestMediaKeySystemAccess(\"x\", []); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMediaKeySystemAccess",
+    "expr": "(async () => { const o = navigator; return Object.prototype.toString.call(await o.requestMediaKeySystemAccess(\"x\", [])); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMediaKeySystemAccess",
+    "expr": "(async () => { const o = navigator; return await o.requestMediaKeySystemAccess(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "deprecatedReplaceInURN",
+    "expr": "(async () => { const o = navigator; return await o.deprecatedReplaceInURN(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "deprecatedURNtoURL",
+    "expr": "(async () => { const o = navigator; return await o.deprecatedURNtoURL(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getInstalledRelatedApps",
+    "expr": "(async () => { const o = navigator; return await o.getInstalledRelatedApps(); })()",
+    "expected": [],
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "getInstalledRelatedApps",
+    "expr": "(async () => { const o = navigator; return Object.prototype.toString.call(await o.getInstalledRelatedApps()); })()",
+    "expected": "[object Array]",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "queryHandwritingRecognizer",
+    "expr": "(async () => { const o = navigator; return await o.queryHandwritingRecognizer(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "createHandwritingRecognizer",
+    "expr": "(async () => { const o = navigator; return await o.createHandwritingRecognizer(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "share",
+    "expr": "(async () => { const o = navigator; return await o.share(); })()",
+    "await": true,
+    "throws": "TypeError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMIDIAccess",
+    "expr": "(async () => { const o = navigator; return await o.requestMIDIAccess(); })()",
+    "await": true,
+    "throws": "NotAllowedError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "requestMIDIAccess",
+    "expr": "(async () => { const o = navigator; return Object.prototype.toString.call(await o.requestMIDIAccess()); })()",
+    "await": true,
+    "throws": "NotAllowedError",
+    "source": "brave-151-linux-headless"
+  },
+  {
+    "iface": "Navigator",
+    "member": "setAppBadge",
+    "expr": "(async () => { const o = navigator; return await o.setAppBadge(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "Navigator",
+    "member": "clearAppBadge",
+    "expr": "(async () => { const o = navigator; return await o.clearAppBadge(); })()",
+    "undefined": true,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "iface": "HTMLObjectElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLObjectElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "constructor",
+    "expr": "new HTMLObjectElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "data",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.data; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.form; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.height; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.height = \"x\", o.height); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "contentDocument",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.contentDocument; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "contentWindow",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.contentWindow; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "getSVGDocument",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.getSVGDocument(); })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "willValidate",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.willValidate; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "validationMessage",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.validationMessage; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "checkValidity",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.checkValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "reportValidity",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.reportValidity(); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.setCustomValidity(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "setCustomValidity",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.setCustomValidity(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "archive",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.archive; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "archive",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.archive = \"x\", o.archive); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "code",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.code; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "code",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.code = \"x\", o.code); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "declare",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.declare; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "declare",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.declare = true, o.declare); })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "hspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.hspace; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "hspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.hspace = 1, o.hspace); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "standby",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.standby; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "standby",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.standby = \"x\", o.standby); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "vspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.vspace; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "vspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.vspace = 1, o.vspace); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "codeBase",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.codeBase; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "codeType",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.codeType; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "codeType",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.codeType = \"x\", o.codeType); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "useMap",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.useMap; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "useMap",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.useMap = \"x\", o.useMap); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "border",
+    "expr": "(() => { const o = document.createElement(\"object\"); return o.border; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "border",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.border = \"x\", o.border); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "hspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.hspace = \"1\", o.hspace); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "vspace",
+    "expr": "(() => { const o = document.createElement(\"object\"); return (o.vspace = \"1\", o.vspace); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "form",
+    "expr": "(() => { const o = document.createElement(\"object\"); return Object.prototype.toString.call(o.form); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "contentDocument",
+    "expr": "(() => { const o = document.createElement(\"object\"); return Object.prototype.toString.call(o.contentDocument); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "contentWindow",
+    "expr": "(() => { const o = document.createElement(\"object\"); return Object.prototype.toString.call(o.contentWindow); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "getSVGDocument",
+    "expr": "(() => { const o = document.createElement(\"object\"); return Object.prototype.toString.call(o.getSVGDocument()); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLObjectElement",
+    "member": "validity",
+    "expr": "(() => { const o = document.createElement(\"object\"); return Object.prototype.toString.call(o.validity); })()",
+    "expected": "[object ValidityState]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

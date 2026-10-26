@@ -1,0 +1,18 @@
+<!doctype html><html><head><title>ch</title></head><body>
+<script>
+// Challenge-probe fixture: Client Hints as Chrome sends them after `Accept-CH` / `Critical-CH`. Served by
+// server.py (or the test's own server) on 127.0.0.1 -- `localhost` on the same port is the cross-site
+// origin. The SERVER records each request's header names in order; the page only makes the requests.
+const X = 'http://localhost:' + location.port;
+const load = (tag, attrs) => new Promise(res => { const e = document.createElement(tag); Object.assign(e, attrs); e.onload = e.onerror = () => res(); document.body.appendChild(e); });
+(async () => {
+  await load('script', {src: '/ch/s.js'});
+  await load('script', {src: X + '/ch/x.js'});
+  await new Promise(res => { const x = new XMLHttpRequest(); x.open('POST', '/ch/xhr'); x.setRequestHeader('x-test', '1'); x.onloadend = res; x.send('a=1'); });
+  await fetch('/ch/fetch').then(r => r.text());
+  await load('iframe', {src: '/ch/frame.html'});
+  await load('iframe', {src: X + '/ch/frame.html'});
+  location.assign('/ch/next');
+})();
+</script>
+</body></html>

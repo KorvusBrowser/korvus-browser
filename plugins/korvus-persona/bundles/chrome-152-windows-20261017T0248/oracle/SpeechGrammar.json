@@ -1,0 +1,30 @@
+[
+  {
+    "iface": "SpeechGrammar",
+    "member": "src",
+    "expr": "(() => { const o = (() => { const l = new webkitSpeechGrammarList(); l.addFromString(\"#JSGF V1.0;\", 1); return l[0]; })(); return o.src; })()",
+    "expected": "data:application/xml,%23JSGF%20V1.0%3B",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammar",
+    "member": "weight",
+    "expr": "(() => { const o = (() => { const l = new webkitSpeechGrammarList(); l.addFromString(\"#JSGF V1.0;\", 1); return l[0]; })(); return o.weight; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammar",
+    "member": "weight",
+    "expr": "(() => { const o = (() => { const l = new webkitSpeechGrammarList(); l.addFromString(\"#JSGF V1.0;\", 1); return l[0]; })(); return (o.weight = 1, o.weight); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "SpeechGrammar",
+    "member": "weight",
+    "expr": "(() => { const o = (() => { const l = new webkitSpeechGrammarList(); l.addFromString(\"#JSGF V1.0;\", 1); return l[0]; })(); return (o.weight = \"1\", o.weight); })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

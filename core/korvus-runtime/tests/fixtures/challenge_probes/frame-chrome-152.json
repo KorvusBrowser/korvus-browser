@@ -1,0 +1,104 @@
+{
+ "top": {
+  "notif": "default",
+  "notifQuery": "prompt",
+  "workerData": [
+   true,
+   true,
+   "[object Object]",
+   "Object",
+   "a,b,c,d",
+   true,
+   true,
+   true
+  ],
+  "img": [
+   "load",
+   65,
+   51,
+   65,
+   51,
+   true,
+   [
+    13260,
+    0
+   ]
+  ],
+  "bitmap": "THROW InvalidStateError: The source image could not be decoded.",
+  "decode": [
+   65,
+   51
+  ],
+  "paint": "first-paint,first-contentful-paint",
+  "computed": [
+   476,
+   "accent-color",
+   "align-content",
+   "-webkit-writing-mode",
+   "auto",
+   1222,
+   "value,writable,enumerable,configurable",
+   "value,writable,enumerable,configurable",
+   "none",
+   true,
+   1213,
+   "block"
+  ],
+  "styleEnum": [
+   476,
+   "accent-color,align-content,align-items,align-self,alignment-baseline",
+   "-webkit-text-stroke-color,-webkit-text-stroke-width,-webkit-user-drag,-webkit-user-modify,-webkit-writing-mode"
+  ]
+ },
+ "frame": {
+  "notif": "denied",
+  "notifQuery": "denied",
+  "workerData": [
+   true,
+   true,
+   "[object Object]",
+   "Object",
+   "a,b,c,d",
+   true,
+   true,
+   true
+  ],
+  "img": [
+   "load",
+   65,
+   51,
+   65,
+   51,
+   true,
+   [
+    13260,
+    0
+   ]
+  ],
+  "bitmap": "THROW InvalidStateError: The source image could not be decoded.",
+  "decode": [
+   65,
+   51
+  ],
+  "paint": "first-paint,first-contentful-paint",
+  "computed": [
+   476,
+   "accent-color",
+   "align-content",
+   "-webkit-writing-mode",
+   "auto",
+   1222,
+   "value,writable,enumerable,configurable",
+   "value,writable,enumerable,configurable",
+   "none",
+   true,
+   1213,
+   "block"
+  ],
+  "styleEnum": [
+   476,
+   "accent-color,align-content,align-items,align-self,alignment-baseline",
+   "-webkit-text-stroke-color,-webkit-text-stroke-width,-webkit-user-drag,-webkit-user-modify,-webkit-writing-mode"
+  ]
+ }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "SVGStyleElement",
+    "member": "constructor",
+    "expr": "new SVGStyleElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return o.media; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return (o.media = \"x\", o.media); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "title",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return o.title; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "title",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return (o.title = \"x\", o.title); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return o.disabled; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "disabled",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return (o.disabled = true, o.disabled); })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "SVGStyleElement",
+    "member": "sheet",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"style\"); return o.sheet; })()",
+    "expected": null,
+    "source": "chrome-152-macos-20261017"
+  }
+]

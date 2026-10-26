@@ -1,0 +1,89 @@
+webgl => ANGLE_instanced_arrays|[object ANGLEInstancedArrays]|tag=ANGLEInstancedArraysc|parent=true|same=true|VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE=35070e,drawArraysInstancedANGLE()4ewc,drawElementsInstancedANGLE()5ewc,vertexAttribDivisorANGLE()2ewc
+webgl => EXT_blend_minmax|[object EXTBlendMinMax]|tag=EXTBlendMinMaxc|parent=true|same=true|MIN_EXT=32775e,MAX_EXT=32776e
+webgl => EXT_clip_control|[object EXTClipControl]|tag=EXTClipControlc|parent=true|same=true|LOWER_LEFT_EXT=36001e,UPPER_LEFT_EXT=36002e,NEGATIVE_ONE_TO_ONE_EXT=37726e,ZERO_TO_ONE_EXT=37727e,CLIP_ORIGIN_EXT=37724e,CLIP_DEPTH_MODE_EXT=37725e,clipControlEXT()2ewc
+webgl => EXT_color_buffer_half_float|[object EXTColorBufferHalfFloat]|tag=EXTColorBufferHalfFloatc|parent=true|same=true|RGBA16F_EXT=34842e,RGB16F_EXT=34843e,FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT=33297e,UNSIGNED_NORMALIZED_EXT=35863e
+webgl => EXT_depth_clamp|[object EXTDepthClamp]|tag=EXTDepthClampc|parent=true|same=true|DEPTH_CLAMP_EXT=34383e
+webgl => EXT_float_blend|[object EXTFloatBlend]|tag=EXTFloatBlendc|parent=true|same=true|
+webgl => EXT_frag_depth|[object EXTFragDepth]|tag=EXTFragDepthc|parent=true|same=true|
+webgl => EXT_polygon_offset_clamp|[object EXTPolygonOffsetClamp]|tag=EXTPolygonOffsetClampc|parent=true|same=true|POLYGON_OFFSET_CLAMP_EXT=36379e,polygonOffsetClampEXT()3ewc
+webgl => EXT_shader_texture_lod|[object EXTShaderTextureLOD]|tag=EXTShaderTextureLODc|parent=true|same=true|
+webgl => EXT_texture_compression_bptc|[object EXTTextureCompressionBPTC]|tag=EXTTextureCompressionBPTCc|parent=true|same=true|COMPRESSED_RGBA_BPTC_UNORM_EXT=36492e,COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT=36493e,COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT=36494e,COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT=36495e
+webgl => EXT_texture_compression_rgtc|[object EXTTextureCompressionRGTC]|tag=EXTTextureCompressionRGTCc|parent=true|same=true|COMPRESSED_RED_RGTC1_EXT=36283e,COMPRESSED_SIGNED_RED_RGTC1_EXT=36284e,COMPRESSED_RED_GREEN_RGTC2_EXT=36285e,COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT=36286e
+webgl => EXT_texture_filter_anisotropic|[object EXTTextureFilterAnisotropic]|tag=EXTTextureFilterAnisotropicc|parent=true|same=true|TEXTURE_MAX_ANISOTROPY_EXT=34046e,MAX_TEXTURE_MAX_ANISOTROPY_EXT=34047e
+webgl => EXT_texture_mirror_clamp_to_edge|[object EXTTextureMirrorClampToEdge]|tag=EXTTextureMirrorClampToEdgec|parent=true|same=true|MIRROR_CLAMP_TO_EDGE_EXT=34627e
+webgl => EXT_sRGB|[object EXTsRGB]|tag=EXTsRGBc|parent=true|same=true|SRGB_EXT=35904e,SRGB_ALPHA_EXT=35906e,SRGB8_ALPHA8_EXT=35907e,FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT=33296e
+webgl => OES_element_index_uint|[object OESElementIndexUint]|tag=OESElementIndexUintc|parent=true|same=true|
+webgl => OES_fbo_render_mipmap|[object OESFboRenderMipmap]|tag=OESFboRenderMipmapc|parent=true|same=true|
+webgl => OES_standard_derivatives|[object OESStandardDerivatives]|tag=OESStandardDerivativesc|parent=true|same=true|FRAGMENT_SHADER_DERIVATIVE_HINT_OES=35723e
+webgl => OES_texture_float|[object OESTextureFloat]|tag=OESTextureFloatc|parent=true|same=true|
+webgl => OES_texture_float_linear|[object OESTextureFloatLinear]|tag=OESTextureFloatLinearc|parent=true|same=true|
+webgl => OES_texture_half_float|[object OESTextureHalfFloat]|tag=OESTextureHalfFloatc|parent=true|same=true|HALF_FLOAT_OES=36193e
+webgl => OES_texture_half_float_linear|[object OESTextureHalfFloatLinear]|tag=OESTextureHalfFloatLinearc|parent=true|same=true|
+webgl => OES_vertex_array_object|[object OESVertexArrayObject]|tag=OESVertexArrayObjectc|parent=true|same=true|VERTEX_ARRAY_BINDING_OES=34229e,bindVertexArrayOES()0ewc,createVertexArrayOES()0ewc,deleteVertexArrayOES()0ewc,isVertexArrayOES()0ewc
+webgl => WEBGL_color_buffer_float|[object WebGLColorBufferFloat]|tag=WebGLColorBufferFloatc|parent=true|same=true|RGBA32F_EXT=34836e,FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT=33297e,UNSIGNED_NORMALIZED_EXT=35863e
+webgl => WEBGL_compressed_texture_s3tc|[object WebGLCompressedTextureS3TC]|tag=WebGLCompressedTextureS3TCc|parent=true|same=true|COMPRESSED_RGB_S3TC_DXT1_EXT=33776e,COMPRESSED_RGBA_S3TC_DXT1_EXT=33777e,COMPRESSED_RGBA_S3TC_DXT3_EXT=33778e,COMPRESSED_RGBA_S3TC_DXT5_EXT=33779e
+webgl => WEBGL_compressed_texture_s3tc_srgb|[object WebGLCompressedTextureS3TCsRGB]|tag=WebGLCompressedTextureS3TCsRGBc|parent=true|same=true|COMPRESSED_SRGB_S3TC_DXT1_EXT=35916e,COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT=35917e,COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT=35918e,COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT=35919e
+webgl => WEBGL_debug_renderer_info|[object WebGLDebugRendererInfo]|tag=WebGLDebugRendererInfoc|parent=true|same=true|UNMASKED_VENDOR_WEBGL=37445e,UNMASKED_RENDERER_WEBGL=37446e
+webgl => WEBGL_debug_shaders|[object WebGLDebugShaders]|tag=WebGLDebugShadersc|parent=true|same=true|getTranslatedShaderSource()1ewc
+webgl => WEBGL_depth_texture|[object WebGLDepthTexture]|tag=WebGLDepthTexturec|parent=true|same=true|UNSIGNED_INT_24_8_WEBGL=34042e
+webgl => WEBGL_draw_buffers=null
+webgl => WEBGL_lose_context|[object WebGLLoseContext]|tag=WebGLLoseContextc|parent=true|same=true|loseContext()0ewc,restoreContext()0ewc
+webgl => WEBGL_multi_draw|[object WebGLMultiDraw]|tag=WebGLMultiDrawc|parent=true|same=true|multiDrawArraysInstancedWEBGL()8ewc,multiDrawArraysWEBGL()6ewc,multiDrawElementsInstancedWEBGL()9ewc,multiDrawElementsWEBGL()7ewc
+webgl => WEBGL_polygon_mode|[object WebGLPolygonMode]|tag=WebGLPolygonModec|parent=true|same=true|POLYGON_MODE_WEBGL=2880e,POLYGON_OFFSET_LINE_WEBGL=10754e,LINE_WEBGL=6913e,FILL_WEBGL=6914e,polygonModeWEBGL()2ewc
+webgl names that are no extension =>   [object WebGLLoseContext]
+webgl no global names the interfaces => undefined undefined undefined
+webgl2 => EXT_clip_control|[object EXTClipControl]|tag=EXTClipControlc|parent=true|same=true|LOWER_LEFT_EXT=36001e,UPPER_LEFT_EXT=36002e,NEGATIVE_ONE_TO_ONE_EXT=37726e,ZERO_TO_ONE_EXT=37727e,CLIP_ORIGIN_EXT=37724e,CLIP_DEPTH_MODE_EXT=37725e,clipControlEXT()2ewc
+webgl2 => EXT_color_buffer_float|[object EXTColorBufferFloat]|tag=EXTColorBufferFloatc|parent=true|same=true|
+webgl2 => EXT_color_buffer_half_float|[object EXTColorBufferHalfFloat]|tag=EXTColorBufferHalfFloatc|parent=true|same=true|RGBA16F_EXT=34842e,RGB16F_EXT=34843e,FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT=33297e,UNSIGNED_NORMALIZED_EXT=35863e
+webgl2 => EXT_conservative_depth|[object EXTConservativeDepth]|tag=EXTConservativeDepthc|parent=true|same=true|
+webgl2 => EXT_depth_clamp|[object EXTDepthClamp]|tag=EXTDepthClampc|parent=true|same=true|DEPTH_CLAMP_EXT=34383e
+webgl2 => EXT_float_blend|[object EXTFloatBlend]|tag=EXTFloatBlendc|parent=true|same=true|
+webgl2 => EXT_polygon_offset_clamp|[object EXTPolygonOffsetClamp]|tag=EXTPolygonOffsetClampc|parent=true|same=true|POLYGON_OFFSET_CLAMP_EXT=36379e,polygonOffsetClampEXT()3ewc
+webgl2 => EXT_texture_compression_bptc|[object EXTTextureCompressionBPTC]|tag=EXTTextureCompressionBPTCc|parent=true|same=true|COMPRESSED_RGBA_BPTC_UNORM_EXT=36492e,COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT=36493e,COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT=36494e,COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT=36495e
+webgl2 => EXT_texture_compression_rgtc|[object EXTTextureCompressionRGTC]|tag=EXTTextureCompressionRGTCc|parent=true|same=true|COMPRESSED_RED_RGTC1_EXT=36283e,COMPRESSED_SIGNED_RED_RGTC1_EXT=36284e,COMPRESSED_RED_GREEN_RGTC2_EXT=36285e,COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT=36286e
+webgl2 => EXT_texture_filter_anisotropic|[object EXTTextureFilterAnisotropic]|tag=EXTTextureFilterAnisotropicc|parent=true|same=true|TEXTURE_MAX_ANISOTROPY_EXT=34046e,MAX_TEXTURE_MAX_ANISOTROPY_EXT=34047e
+webgl2 => EXT_texture_mirror_clamp_to_edge|[object EXTTextureMirrorClampToEdge]|tag=EXTTextureMirrorClampToEdgec|parent=true|same=true|MIRROR_CLAMP_TO_EDGE_EXT=34627e
+webgl2 => NV_shader_noperspective_interpolation|[object NVShaderNoperspectiveInterpolation]|tag=NVShaderNoperspectiveInterpolationc|parent=true|same=true|
+webgl2 => OES_draw_buffers_indexed|[object OESDrawBuffersIndexed]|tag=OESDrawBuffersIndexedc|parent=true|same=true|blendEquationSeparateiOES()3ewc,blendEquationiOES()2ewc,blendFuncSeparateiOES()5ewc,blendFunciOES()3ewc,colorMaskiOES()5ewc,disableiOES()2ewc,enableiOES()2ewc
+webgl2 => OES_sample_variables|[object OESSampleVariables]|tag=OESSampleVariablesc|parent=true|same=true|
+webgl2 => OES_shader_multisample_interpolation|[object OESShaderMultisampleInterpolation]|tag=OESShaderMultisampleInterpolationc|parent=true|same=true|MIN_FRAGMENT_INTERPOLATION_OFFSET_OES=36443e,MAX_FRAGMENT_INTERPOLATION_OFFSET_OES=36444e,FRAGMENT_INTERPOLATION_OFFSET_BITS_OES=36445e
+webgl2 => OES_texture_float_linear|[object OESTextureFloatLinear]|tag=OESTextureFloatLinearc|parent=true|same=true|
+webgl2 => OVR_multiview2=null
+webgl2 => WEBGL_clip_cull_distance|[object WebGLClipCullDistance]|tag=WebGLClipCullDistancec|parent=true|same=true|MAX_CLIP_DISTANCES_WEBGL=3378e,MAX_CULL_DISTANCES_WEBGL=33529e,MAX_COMBINED_CLIP_AND_CULL_DISTANCES_WEBGL=33530e,CLIP_DISTANCE0_WEBGL=12288e,CLIP_DISTANCE1_WEBGL=12289e,CLIP_DISTANCE2_WEBGL=12290e,CLIP_DISTANCE3_WEBGL=12291e,CLIP_DISTANCE4_WEBGL=12292e,CLIP_DISTANCE5_WEBGL=12293e,CLIP_DISTANCE6_WEBGL=12294e,CLIP_DISTANCE7_WEBGL=12295e
+webgl2 => WEBGL_compressed_texture_s3tc|[object WebGLCompressedTextureS3TC]|tag=WebGLCompressedTextureS3TCc|parent=true|same=true|COMPRESSED_RGB_S3TC_DXT1_EXT=33776e,COMPRESSED_RGBA_S3TC_DXT1_EXT=33777e,COMPRESSED_RGBA_S3TC_DXT3_EXT=33778e,COMPRESSED_RGBA_S3TC_DXT5_EXT=33779e
+webgl2 => WEBGL_compressed_texture_s3tc_srgb|[object WebGLCompressedTextureS3TCsRGB]|tag=WebGLCompressedTextureS3TCsRGBc|parent=true|same=true|COMPRESSED_SRGB_S3TC_DXT1_EXT=35916e,COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT=35917e,COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT=35918e,COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT=35919e
+webgl2 => WEBGL_debug_renderer_info|[object WebGLDebugRendererInfo]|tag=WebGLDebugRendererInfoc|parent=true|same=true|UNMASKED_VENDOR_WEBGL=37445e,UNMASKED_RENDERER_WEBGL=37446e
+webgl2 => WEBGL_debug_shaders|[object WebGLDebugShaders]|tag=WebGLDebugShadersc|parent=true|same=true|getTranslatedShaderSource()1ewc
+webgl2 => WEBGL_lose_context|[object WebGLLoseContext]|tag=WebGLLoseContextc|parent=true|same=true|loseContext()0ewc,restoreContext()0ewc
+webgl2 => WEBGL_multi_draw|[object WebGLMultiDraw]|tag=WebGLMultiDrawc|parent=true|same=true|multiDrawArraysInstancedWEBGL()8ewc,multiDrawArraysWEBGL()6ewc,multiDrawElementsInstancedWEBGL()9ewc,multiDrawElementsWEBGL()7ewc
+webgl2 => WEBGL_polygon_mode|[object WebGLPolygonMode]|tag=WebGLPolygonModec|parent=true|same=true|POLYGON_MODE_WEBGL=2880e,POLYGON_OFFSET_LINE_WEBGL=10754e,LINE_WEBGL=6913e,FILL_WEBGL=6914e,polygonModeWEBGL()2ewc
+webgl2 => WEBGL_stencil_texturing|[object WebGLStencilTexturing]|tag=WebGLStencilTexturingc|parent=true|same=true|DEPTH_STENCIL_TEXTURE_MODE_WEBGL=37098e,STENCIL_INDEX_WEBGL=6401e
+webgl2 names that are no extension =>   [object WebGLLoseContext]
+webgl2 no global names the interfaces => undefined undefined undefined
+loseContext => fn=loseContext/0 ; fired:none ; getError:37442 ; getError:0 ; isContextLost:true ; getParameter:null ; getShaderPrecisionFormat:null ; createBuffer:[object WebGLBuffer] ; isBuffer:false ; isProgram:false ; isEnabled:false ; getAttribLocation:-1 ; getUniformLocation:null ; checkFramebufferStatus:36061 ; getProgramParameter:null ; getShaderInfoLog:null ; getVertexAttribOffset:0 ; getContextAttributes:null ; getSupportedExtensions:null ; getExtension:null ; drawingBufferWidth:0 ; readPixels:7,7,7,7 ; loseContext again:undefined ; getError:1282 ; fired:lost:WebGLContextEvent:true:true ; getError:0 ; restore refused: isContextLost:true ; getError:1282 ; fired:lost:WebGLContextEvent:true:true
+lost event is a task => sync,microtask,listener
+restoreContext after preventDefault => lost ; restore sync lost=true err=37442 ; restored false true ; isTexture(old)=false err=0 clearColor=0,0,0,0 sameExt=true
+restoreContext when not lost => 1282
+extension methods on foreign receivers => TypeError: Illegal invocation ## TypeError: Illegal invocation ## lost=false
+OES_vertex_array_object => [object WebGLVertexArrayObjectOES] 0 false true false false
+ANGLE_instanced_arrays arity => THROW TypeError: Failed to execute 'vertexAttribDivisorANGLE' on 'ANGLEInstancedArrays': 2 arguments required, but only 1 present.
+WEBGL_debug_shaders on an uncompiled shader => ""
+WEBGL_multi_draw drawcount past the lists => 1282
+gate webgl UNMASKED_VENDOR_WEBGL => null err=1280 ext=object err=0
+gate webgl2 UNMASKED_VENDOR_WEBGL => null err=1280 ext=object err=0
+gate webgl MAX_TEXTURE_MAX_ANISOTROPY_EXT => null err=1280 ext=object err=0
+gate webgl2 MAX_TEXTURE_MAX_ANISOTROPY_EXT => null err=1280 ext=object err=0
+gate webgl MAX_DRAW_BUFFERS_WEBGL => null err=1280 ext=null err=0
+gate webgl2 MAX_DRAW_BUFFERS_WEBGL => number err=0 ext=null err=0
+gate webgl FRAGMENT_SHADER_DERIVATIVE_HINT_OES => null err=1280 ext=object err=0
+gate webgl2 FRAGMENT_SHADER_DERIVATIVE_HINT_OES => number err=0 ext=null err=0
+gate webgl CLIP_ORIGIN_EXT => null err=1280 ext=object err=0
+gate webgl2 CLIP_ORIGIN_EXT => null err=1280 ext=object err=0
+gate webgl POLYGON_MODE_WEBGL => null err=1280 ext=object err=0
+gate webgl2 POLYGON_MODE_WEBGL => null err=1280 ext=object err=0
+gate webgl POLYGON_OFFSET_CLAMP_EXT => null err=1280 ext=object err=0
+gate webgl2 POLYGON_OFFSET_CLAMP_EXT => null err=1280 ext=object err=0
+gate webgl DEPTH_CLAMP_EXT => null err=1280 ext=object err=0
+gate webgl2 DEPTH_CLAMP_EXT => null err=1280 ext=object err=0
+gate: enable(DEPTH_CLAMP_EXT) before the extension => false 1280 1280
+extension state enums after enabling => 36001 37726 6914 0

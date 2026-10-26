@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "constructor",
+    "expr": "(() => { const o = new EncodedVideoChunk({}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "constructor",
+    "expr": "(() => { const o = new EncodedVideoChunk(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "type",
+    "expr": "(() => { const o = new EncodedVideoChunk({ type: \"key\", timestamp: 0, data: new Uint8Array(1) }); return o.type; })()",
+    "expected": "key",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "timestamp",
+    "expr": "(() => { const o = new EncodedVideoChunk({ type: \"key\", timestamp: 0, data: new Uint8Array(1) }); return o.timestamp; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "duration",
+    "expr": "(() => { const o = new EncodedVideoChunk({ type: \"key\", timestamp: 0, data: new Uint8Array(1) }); return o.duration; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "byteLength",
+    "expr": "(() => { const o = new EncodedVideoChunk({ type: \"key\", timestamp: 0, data: new Uint8Array(1) }); return o.byteLength; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "EncodedVideoChunk",
+    "member": "copyTo",
+    "expr": "(() => { const o = new EncodedVideoChunk({ type: \"key\", timestamp: 0, data: new Uint8Array(1) }); return o.copyTo(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

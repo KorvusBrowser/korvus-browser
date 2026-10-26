@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CrossOriginStorageManager",
+    "member": "constructor",
+    "expr": "new CrossOriginStorageManager()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

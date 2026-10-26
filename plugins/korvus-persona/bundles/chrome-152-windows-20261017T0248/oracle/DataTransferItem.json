@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "DataTransferItem",
+    "member": "constructor",
+    "expr": "new DataTransferItem()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

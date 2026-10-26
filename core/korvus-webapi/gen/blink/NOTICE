@@ -1,0 +1,16 @@
+Blink element-factory tables, vendored so the generators are hermetic.
+Copied verbatim from the Chromium repository, third_party/blink/renderer/{core/html,core/svg,core/mathml}/*_tag_names.json5.
+Copyright The Chromium Authors. Licensed under the BSD-3-Clause license in ./LICENSE.
+Refresh: tools/version/next.py blink-data (from the Chrome release tools/version/chrome.toml pins; no checkout).
+
+idl/blink.idl: extracted from the Chrome release tools/version/chrome.toml pins third_party/blink/renderer/**/*.idl by
+tools/sync/extract_blink_idl.py (dictionaries, enums, typedefs, callbacks, constructors, FrozenArray attributes).
+sanitizer/builtins_default_config.json: copied verbatim from the Chrome release tools/version/chrome.toml pins
+third_party/blink/renderer/core/sanitizer/builtins_default_config.json (the Sanitizer API's default configuration).
+webgpu/wgsl_language_features.json: the WGSL language features the Chrome release tools/version/chrome.toml pins ships
+(third_party/dawn/src/tint/lang/wgsl/feature_status.cc), in the order Chrome 150 enumerates them.
+idl/blink-returns.json: every regular operation's return type in the Chrome release tools/version/chrome.toml pins's
+third_party/blink/renderer/**/*.idl, by tools/sync/extract_blink_idl.py.
+idl/blink-frozen-arrays.json: every FrozenArray attribute in the Chrome release tools/version/chrome.toml pins's
+third_party/blink/renderer/**/*.idl and what a second read answers (its caching extended attribute, or its
+C++ getter's return type in the header beside the IDL file), by tools/sync/extract_blink_idl.py.

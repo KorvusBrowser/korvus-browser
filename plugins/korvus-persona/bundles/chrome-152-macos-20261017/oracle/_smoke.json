@@ -1,0 +1,20 @@
+[
+  {
+    "iface": "_smoke",
+    "member": "value",
+    "expr": "1 + 1",
+    "expected": 2
+  },
+  {
+    "iface": "_smoke",
+    "member": "string",
+    "expr": "'a' + 'b'",
+    "expected": "ab"
+  },
+  {
+    "iface": "_smoke",
+    "member": "throws",
+    "expr": "null.x",
+    "throws": "TypeError"
+  }
+]

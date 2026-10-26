@@ -1,0 +1,14 @@
+<!doctype html><html><body><script>
+var B = 'http://127.0.0.1:18253/r/x?k=';
+var cases = [['plain', {}], ['ae', { headers: { 'Accept-Encoding': 'gzip, deflate, br' } }], ['ua', { headers: { 'User-Agent': 'page-ua' } }],
+  ['cookie', { headers: { 'Cookie': 'a=b' } }], ['ae-request', 'request'], ['ct-json', { headers: { 'Content-Type': 'application/json' } }],
+  ['nocache', { cache: 'no-cache' }], ['nostore', { cache: 'no-store' }], ['reload', { cache: 'reload' }]];
+Promise.all(cases.map(function (c) {
+  var p = c[1] === 'request' ? fetch(new Request(B + c[0], { headers: { 'Accept-Encoding': 'gzip' } })) : fetch(B + c[0], c[1]);
+  return p.then(function () { return 1; }, function () { return 0; });
+})).then(function () { return fetch('http://127.0.0.1:18253/report').then(function (r) { return r.json(); }); }).then(function (rep) {
+  var out = {};
+  cases.forEach(function (c) { var x = rep[c[0]]; out[c[0]] = x ? x.method + '|' + x.names.filter(function (n) { return ['cookie', 'cache-control', 'pragma', 'content-type'].indexOf(n) >= 0; }).join('+') : 'none'; });
+  window.R = JSON.stringify(out);
+}, function (e) { window.R = 'report failed: ' + e; });
+</script></body></html>

@@ -1,0 +1,191 @@
+# ─── THE ML-DSA REV PIN ────────────────────────────────────────────────────────────
+# WHAT THIS BUYS. Every shipping Chromium-family browser leads `signature_algorithms` with the three
+# ML-DSA codepoints 0x0904/0x0905/0x0906, and korvus's JA4 third component differed from its own
+# persona's browser by exactly that -- the first thing a wall reads, before a byte of JS runs.
+# Closing it needs a BoringSSL that REGISTERS those algorithms in libssl; the published pin does not.
+#
+# WHY A PIN AND NOT A FORK. Upstream BoringSSL merged the registration on 2026-04-23 (`4a3cda40b96`,
+# "Support ML-DSA in libssl"); `btls-sys 0.5.6` was PUBLISHED 2026-04-20 and missed it by three days.
+# btls `main` pins its BoringSSL submodule at `f1f2556a` (2026-07-21), which carries all four sites
+# the offer path needs -- the `SSL_SIGN_ML_DSA_*` constants, the `kSignatureAlgorithms` rows, the
+# `kSignatureAlgorithmNames` entries ("mldsa44"/"mldsa65"/"mldsa87", the exact spelling
+# `korvus-transport::client_for` passes) and the peer-SPKI algorithm list. So nothing is patched,
+# forked or vendored here: we point at one rev of upstream `main` that already has it.
+#
+# THE DO-NOTHING OPTION, STATED SO IT IS NOT DISCOVERED LATER. A published `btls-sys 0.5.7` carrying
+# that submodule bump would need NO entry in this block at all. Checked against the live crates.io
+# sparse index and the GitHub API on 2026-09-19: `0.5.6` is still the newest published version;
+# `v0.5.6` is still the newest tag and the newest release; `main` is **101 commits ahead** of it; the
+# last publish was 2026-04-20, i.e. 152 days ago, after four releases in the preceding 57 days; and
+# no issue or PR in that repository mentions `0.5.7`. That is the measurement. Whether the author
+# intends to publish again CANNOT BE TOLD from it, and nothing here should be read as predicting one.
+#
+# WHAT WE CARRY MEANWHILE, precisely: a pin on THREE crates of an UNRELEASED third-party `main`
+# (`0x676e67/btls`, the `wreq` author's), BY SHA -- so it does NOT follow that branch and cannot move
+# under us. The rev ages instead; bumping it is a deliberate act. `compio-btls` lives in that
+# workspace and is not in our graph, so it is not pinned. `main` still declares version 0.5.6, so the
+# semver arithmetic is free and this resolves exactly three packages.
+#
+# RESIDUAL COST, plainly. This pulls BoringSSL as a git SUBMODULE rather than as vendored crate
+# source, so a clean build now needs network for the submodule fetch (it needed `git` already --
+# `btls-sys`'s build script shells out to `git apply` for its own patch stack). Under a git
+# dependency cargo also SUPPRESSES build-script warnings, so the build log no longer prints
+# `applying post quantum crypto patch to boringssl`: the ML-KEM `0x11ec` key share must be checked on
+# the SOCKET, which `clienthello.rs` does.
+#
+# HOW IT COMES OUT. The day btls publishes a release whose BoringSSL submodule carries the
+# registration, DELETE this whole block and relock -- that is the entire removal: three lines here,
+# `cargo update -p btls -p btls-sys -p tokio-btls`, and the lockfile returns to registry sources. The
+# `korvus-transport` hunk stays as it is; it asks BoringSSL for names a published crate would then
+# also answer to. Nothing else in the tree references this block.
+#
+# AND IT CANNOT BE DROPPED QUIETLY. A `[patch]` override matches by name and semver range: a future
+# `btls-sys 0.6` stops matching, the override falls out, the three codepoints vanish from the wire --
+# and NOTHING FAILS TO COMPILE. That is why `the_four_presets_emit_the_browser_familys_own_ja4` in
+# `plugins/korvus-transport/tests/clienthello.rs` asserts the JA4 and the codepoints in bytes: it is
+# the red. There is no honest test that goes red the day 0.5.7 is PUBLISHED -- a test that reached
+# the registry would be a network call in the gate, and one that pinned a date would be a countdown,
+# not a measurement -- so the removal condition is written here and is not mechanised. Said plainly
+# rather than papered over with a green test.
+[patch.crates-io]
+# Human decision 2026-09-25: ECH, the dependency change included: `wreq 0.16.1`, VENDORED
+# with one patch -- a per-host ECH config hook on the connect path (`vendor/wreq/src/tls.rs`, search
+# `KORVUS PATCH`). wreq exposes only ECH GREASE; the config list goes on BoringSSL's `SSL` object
+# (`set_ech_config_list`), which only wreq's connector holds. Removal: the day wreq offers per-host ECH
+# configuration, delete this line and `vendor/wreq`, and relock.
+wreq = { path = "vendor/wreq" }
+# The owner's decision (2026-09-30, 2026-10-02):
+# `deno_core 0.410.0`, VENDORED with patches (search `KORVUS PATCH`): `GothamState` (every
+# `OpState::try_borrow`) keys a hash map by TypeId instead of a BTreeMap, so a per-call state lookup costs
+# the same whatever the TypeIds are, and hands the value out without a second type check
+# (`vendor/deno_core/gotham_state.rs`); `JsRuntime::op_state_from` is inlined and counts no `Rc` of the
+# runtime state (`vendor/deno_core/runtime/jsruntime.rs`); and an `import()`'s rejection is
+# the error V8 made, not a copy with ` at URL:line:col` appended, and a graph that failed to parse or link
+# rejects a second `import()` with the same error (`vendor/deno_core/runtime/bindings.rs`,
+# `vendor/deno_core/modules/map.rs`). Also: no prepare-stack-trace callback -- V8 formats
+# `error.stack` and hands a page's `Error.prepareStackTrace` its own call sites (`runtime/setup.rs`) -- a page module's
+# `//# sourceMappingURL` is never registered (`modules/map.rs`), and an ECMAScript error carrying Blink's operation
+# context is made with the detail and takes the whole message after, as Blink's are (`error.rs`, `native_error`).
+# Removal: the day deno_core's GothamState stops ordering by TypeId AND leaves import
+# errors alone, delete this line and `vendor/deno_core`, and relock.
+deno_core = { path = "vendor/deno_core" }
+# `deno_v8 0.2.0` (the facade deno_core and serde_v8 reach V8 through), VENDORED with one patch (search
+# `KORVUS PATCH`): it asks for the `v8` crate korvus wears -- 152.2.0, Chrome 152's V8 -- where every published
+# deno_v8 (0.2.0 to 0.4.0) still asks for `^150.4.0`. The facade is `pub use v8::*`, so nothing else changes.
+# Removal: the day a published deno_v8 asks for the `v8` major `tools/version/chrome.toml` pins, delete this
+# line and `vendor/deno_v8`, and relock.
+deno_v8 = { path = "vendor/deno_v8" }
+# `http2 0.5.20` (wreq-proto's HTTP/2), VENDORED with one patch (search `KORVUS PATCH`): a request's
+# HEADERS priority is Chromium's -- weight from the request's priority, an exclusive dependency on the newest open
+# stream of the same or a higher priority (`net/spdy/http2_priority_dependencies.cc`) -- where the crate gives every
+# stream of a connection one fixed dependency (Chrome 150 sent weight byte 219 for a `u=1` favicon where korvus sent
+# 255 on every stream). `vendor/http2/src/ext.rs` `ChromiumPriority`,
+# `vendor/http2/src/proto/streams/streams.rs` `PriorityDependencies`. Removal: the day the crate takes a per-request
+# stream dependency, delete this line and `vendor/http2`, and relock.
+http2 = { path = "vendor/http2" }
+# `skia-safe 0.99.0` (rust-skia's Rust API over Skia m150), VENDORED with one patch (search `KORVUS PATCH`): korvus
+# builds it over the Skia Chrome 152 ships (m152; `scripts/skia-source.sh`), whose `SkRRect` gained a point overload
+# of `contains`, so bindgen names the rect one `contains1` (`vendor/skia-safe/src/core/rrect.rs`). rust-skia
+# publishes no m152 release (0.99 is m150, 0.153 is m153). Removal: the day korvus wears a Skia a published
+# skia-safe binds, delete this line and `vendor/skia-safe`, and relock.
+skia-safe = { path = "vendor/skia-safe" }
+btls = { git = "https://github.com/0x676e67/btls", rev = "10ac71fca7f43496dce28c31b6970f9147e7c790" }
+btls-sys = { git = "https://github.com/0x676e67/btls", rev = "10ac71fca7f43496dce28c31b6970f9147e7c790" }
+tokio-btls = { git = "https://github.com/0x676e67/btls", rev = "10ac71fca7f43496dce28c31b6970f9147e7c790" }
+
+[workspace]
+resolver = "2"
+members = [
+    "core/korvus-kernel",
+    "core/korvus-runtime",
+    "core/korvus-webapi",
+    "core/korvus-webapi/macros",
+    "core/korvus-webapi/gen",
+    "core/korvus-dom",
+    "core/korvus-page",
+    "core/korvus-plugin-host",
+    "plugins/korvus-persona",
+    "plugins/korvus-render",
+    "plugins/korvus-transport",
+    "plugins/korvus-cdp",
+    "plugins/korvus-behavior",
+    "plugins/korvus-analysis",
+    "korvus",
+]
+# vendor/libvpx-sys links a VENDORED libvpx that its build.rs REQUIRES (built by scripts/vpx-source.sh).
+# EXCLUDED from the workspace so `cargo test --workspace` / `cargo build --workspace` never compile it
+# (an auto-included path-dep member would run its build.rs and demand libvpx on every machine). It is
+# pulled in ONLY as korvus-runtime's optional `webrtc-media` dependency, so the default build -- the gate,
+# every peer worktree, a machine without libvpx -- is untouched.
+exclude = ["vendor/libvpx-sys"]
+
+[workspace.dependencies]
+spec = { path = "core/korvus-kernel", package = "korvus-kernel" }
+engine = { path = "core/korvus-runtime", package = "korvus-runtime" }
+webapi = { path = "core/korvus-webapi", package = "korvus-webapi" }
+macros = { path = "core/korvus-webapi/macros", package = "korvus-webapi-macros" }
+korvus-dom = { path = "core/korvus-dom" }
+page = { path = "core/korvus-page", package = "korvus-page" }
+plugin_host = { path = "core/korvus-plugin-host", package = "korvus-plugin-host" }
+persona = { path = "plugins/korvus-persona", package = "korvus-persona" }
+render = { path = "plugins/korvus-render", package = "korvus-render" }
+transport = { path = "plugins/korvus-transport", package = "korvus-transport" }
+behavior = { path = "plugins/korvus-behavior", package = "korvus-behavior" }
+cdp = { path = "plugins/korvus-cdp", package = "korvus-cdp" }
+analysis = { path = "plugins/korvus-analysis", package = "korvus-analysis" }
+
+[workspace.package]
+version = "152.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/korvus-browser/korvus-browser"
+
+# DEBUG INFO IS THE OTHER HALF OF THE TEST-BINARY WRITE VOLUME.
+#
+# WHY. `tests/all.rs` cut the NUMBER of test binaries (144 files to 7 binaries); this cuts what each
+# one WEIGHS. Measured 2026-09-11 on this box: with the dev default `debuginfo=2` applied to the whole
+# graph a test binary was 443 MB, and the autonomous loop relinking them wrote 3.6 TB/day to the root
+# NVMe -- a DRAM-less Samsung 980, whose sustained write collapses to ~80-110 MB/s once its SLC cache
+# is exhausted and never recovers because the loop never leaves it idle. Demand exceeded the device,
+# the queue grew without bound, and the whole system sat in PSI io FULL stall 72 % of the time: load
+# 82.9 with 124 tasks in D state while the CPU was 97 % idle. Dropping debug info for dependencies
+# halves the binaries (443 MB -> 218 MB); with the binary count that is 55.6 GB -> 1.65 GB per build.
+#
+# WHAT IS DELIBERATELY KEPT. Workspace crates stay at `debug = 2`, so gdb/lldb still inspect variables
+# in OUR code -- the thing worth debugging. Only third-party crates (deno_core, V8 and the rest of the
+# 396-crate graph) lose debug info, and nobody steps through those. `split-debuginfo = "unpacked"`
+# leaves DWARF in the .o/.dwo files instead of copying it into every linked binary.
+#
+# DO NOT "simplify" this to a single `debug = 0`: that would take the workspace's own debug info with
+# it. And do not drop the file -- a `git checkout Cargo.toml` silently doubles the write volume again.
+[profile.dev]
+debug = 2
+split-debuginfo = "unpacked"
+
+[profile.dev.package."*"]
+debug = 0
+
+[profile.test]
+debug = 2
+split-debuginfo = "unpacked"
+
+[profile.test.package."*"]
+debug = 0
+
+# Skia is built from source now (scripts/skia-source.sh), and a dependency's build script is handed its OWN
+# opt-level: without this, every dev and test build would rasterize through Skia compiled at -O0.
+[profile.dev.package.skia-bindings]
+opt-level = 3
+
+[profile.test.package.skia-bindings]
+opt-level = 3
+
+# The build korvus SHIPS as -- never the one the gate builds (`cargo build --profile dist`). Link-time
+# optimisation across the crates and one codegen unit, for size and speed. The file is left unstripped here
+# and stripped by `tools/lean/dist.sh`, which first splits the debug symbols into `korvus.debug` (with a
+# gnu-debuglink), so a crash report still symbolises. NOT `panic = "abort"`: `webapi::behavior_rt::__dispatch`
+# turns an op's panic into the page's JavaScript error through `catch_unwind`; abort would end the process.
+[profile.dist]
+inherits = "release"
+lto = "fat"
+codegen-units = 1

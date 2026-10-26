@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_UNKNOWN",
+    "expr": "SVGLength.SVG_LENGTHTYPE_UNKNOWN",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_NUMBER",
+    "expr": "SVGLength.SVG_LENGTHTYPE_NUMBER",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_PERCENTAGE",
+    "expr": "SVGLength.SVG_LENGTHTYPE_PERCENTAGE",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_EMS",
+    "expr": "SVGLength.SVG_LENGTHTYPE_EMS",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_EXS",
+    "expr": "SVGLength.SVG_LENGTHTYPE_EXS",
+    "expected": 4,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_PX",
+    "expr": "SVGLength.SVG_LENGTHTYPE_PX",
+    "expected": 5,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_CM",
+    "expr": "SVGLength.SVG_LENGTHTYPE_CM",
+    "expected": 6,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_MM",
+    "expr": "SVGLength.SVG_LENGTHTYPE_MM",
+    "expected": 7,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_IN",
+    "expr": "SVGLength.SVG_LENGTHTYPE_IN",
+    "expected": 8,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_PT",
+    "expr": "SVGLength.SVG_LENGTHTYPE_PT",
+    "expected": 9,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "SVG_LENGTHTYPE_PC",
+    "expr": "SVGLength.SVG_LENGTHTYPE_PC",
+    "expected": 10,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "constructor",
+    "expr": "new SVGLength()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "unitType",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.unitType; })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.value; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return (o.value = 1, o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.valueInSpecifiedUnits; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return (o.valueInSpecifiedUnits = 1, o.valueInSpecifiedUnits); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "valueAsString",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.valueAsString; })()",
+    "expected": "0",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "valueAsString",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return (o.valueAsString = \"x\", o.valueAsString); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "newValueSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.newValueSpecifiedUnits(1, 1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "newValueSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.newValueSpecifiedUnits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "convertToSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.convertToSpecifiedUnits(1); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "convertToSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return o.convertToSpecifiedUnits(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "value",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return (o.value = \"1\", o.value); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGLength",
+    "member": "valueInSpecifiedUnits",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"svg\").createSVGLength(); return (o.valueInSpecifiedUnits = \"1\", o.valueInSpecifiedUnits); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

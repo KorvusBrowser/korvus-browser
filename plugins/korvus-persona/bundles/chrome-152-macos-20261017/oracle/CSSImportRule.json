@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "CSSImportRule",
+    "member": "constructor",
+    "expr": "new CSSImportRule()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

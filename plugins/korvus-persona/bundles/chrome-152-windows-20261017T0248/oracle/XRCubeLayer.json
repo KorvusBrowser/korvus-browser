@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "XRCubeLayer",
+    "member": "constructor",
+    "expr": "new XRCubeLayer()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "XRCubeLayer.prototype.space",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").get.call(Object.create(XRCubeLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "XRCubeLayer.prototype.orientation",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").get.call(Object.create(XRCubeLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "XRCubeLayer.prototype.onredraw",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").get.call(Object.create(XRCubeLayer.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").set.call({}, null)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").get.call(Object.create(XRCubeLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "space",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"space\").set.call(Object.create(XRCubeLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").get.call(Object.create(XRCubeLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "orientation",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"orientation\").set.call(Object.create(XRCubeLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").get.call(Object.create(XRCubeLayer.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").set.call({}, null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRCubeLayer",
+    "member": "onredraw",
+    "expr": "(() => { try { Object.getOwnPropertyDescriptor(XRCubeLayer.prototype, \"onredraw\").set.call(Object.create(XRCubeLayer.prototype), null); return \"returned undefined\"; } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

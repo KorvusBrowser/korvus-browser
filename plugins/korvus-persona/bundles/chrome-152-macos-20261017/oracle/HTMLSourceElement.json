@@ -1,0 +1,121 @@
+[
+  {
+    "iface": "HTMLSourceElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLSourceElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "constructor",
+    "expr": "new HTMLSourceElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "srcset",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.srcset; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "srcset",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.srcset = \"x\", o.srcset); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "sizes",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.sizes; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "sizes",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.sizes = \"x\", o.sizes); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.media; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "media",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.media = \"x\", o.media); })()",
+    "expected": "x",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.width; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.width = 1, o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"source\"); return o.height; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.height = 1, o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.width = \"1\", o.width); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "HTMLSourceElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"source\"); return (o.height = \"1\", o.height); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

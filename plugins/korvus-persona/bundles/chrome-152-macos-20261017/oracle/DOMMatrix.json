@@ -1,0 +1,681 @@
+[
+  {
+    "iface": "DOMMatrix",
+    "member": "constructor",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "a",
+    "expr": "(() => { const o = new DOMMatrix(); return o.a; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "a",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.a = 1, o.a); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "b",
+    "expr": "(() => { const o = new DOMMatrix(); return o.b; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "b",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.b = 1, o.b); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "c",
+    "expr": "(() => { const o = new DOMMatrix(); return o.c; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "c",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.c = 1, o.c); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "d",
+    "expr": "(() => { const o = new DOMMatrix(); return o.d; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "d",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.d = 1, o.d); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "e",
+    "expr": "(() => { const o = new DOMMatrix(); return o.e; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "e",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.e = 1, o.e); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "f",
+    "expr": "(() => { const o = new DOMMatrix(); return o.f; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "f",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.f = 1, o.f); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m11",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m11; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m11",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m11 = 1, o.m11); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m12",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m12; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m12",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m12 = 1, o.m12); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m13",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m13; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m13",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m13 = 1, o.m13); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m14",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m14; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m14",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m14 = 1, o.m14); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m21",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m21; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m21",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m21 = 1, o.m21); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m22",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m22; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m22",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m22 = 1, o.m22); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m23",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m23; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m23",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m23 = 1, o.m23); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m24",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m24; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m24",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m24 = 1, o.m24); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m31",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m31; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m31",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m31 = 1, o.m31); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m32",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m32; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m32",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m32 = 1, o.m32); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m33",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m33; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m33",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m33 = 1, o.m33); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m34",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m34; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m34",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m34 = 1, o.m34); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m41",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m41; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m41",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m41 = 1, o.m41); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m42",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m42; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m42",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m42 = 1, o.m42); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m43",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m43; })()",
+    "expected": 0,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m43",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m43 = 1, o.m43); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m44",
+    "expr": "(() => { const o = new DOMMatrix(); return o.m44; })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m44",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m44 = 1, o.m44); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "setMatrixValue",
+    "expr": "(() => { const o = new DOMMatrix(); return o.setMatrixValue(\"x\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "setMatrixValue",
+    "expr": "(() => { const o = new DOMMatrix(); return o.setMatrixValue(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "a",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.a = \"1\", o.a); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "b",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.b = \"1\", o.b); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "c",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.c = \"1\", o.c); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "d",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.d = \"1\", o.d); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "e",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.e = \"1\", o.e); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "f",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.f = \"1\", o.f); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m11",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m11 = \"1\", o.m11); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m12",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m12 = \"1\", o.m12); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m13",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m13 = \"1\", o.m13); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m14",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m14 = \"1\", o.m14); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m21",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m21 = \"1\", o.m21); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m22",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m22 = \"1\", o.m22); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m23",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m23 = \"1\", o.m23); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m24",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m24 = \"1\", o.m24); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m31",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m31 = \"1\", o.m31); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m32",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m32 = \"1\", o.m32); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m33",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m33 = \"1\", o.m33); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m34",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m34 = \"1\", o.m34); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m41",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m41 = \"1\", o.m41); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m42",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m42 = \"1\", o.m42); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m43",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m43 = \"1\", o.m43); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "m44",
+    "expr": "(() => { const o = new DOMMatrix(); return (o.m44 = \"1\", o.m44); })()",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromMatrix",
+    "expr": "Object.prototype.toString.call(DOMMatrix.fromMatrix())",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "multiplySelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.multiplySelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "preMultiplySelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.preMultiplySelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "translateSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.translateSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "scaleSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.scaleSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "scale3dSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.scale3dSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "rotateSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.rotateSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "rotateFromVectorSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.rotateFromVectorSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "rotateAxisAngleSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.rotateAxisAngleSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "skewXSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.skewXSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "skewYSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.skewYSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "invertSelf",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.invertSelf()); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "setMatrixValue",
+    "expr": "(() => { const o = new DOMMatrix(); return Object.prototype.toString.call(o.setMatrixValue(\"x\")); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "(() => { const m = DOMMatrix.fromFloat32Array(new Float32Array([2,0,0,3,4,5])); return [m.a,m.b,m.c,m.d,m.e,m.f].join(','); })()",
+    "expected": "2,0,0,3,4,5",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "(() => { const m = DOMMatrix.fromFloat32Array(new Float32Array([2,0,0,3,4,5])); return m.is2D; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "(() => { const m = DOMMatrix.fromFloat32Array(new Float32Array(16)); return m.is2D; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "(() => { return Object.prototype.toString.call(DOMMatrix.fromFloat32Array(new Float32Array(6))); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrix.fromFloat32Array(new Float32Array(5))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrix.fromFloat32Array([2,0,0,3,4,5])",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrix.fromFloat32Array()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat32Array",
+    "expr": "DOMMatrix.fromFloat32Array.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "(() => { const m = DOMMatrix.fromFloat64Array(new Float64Array([2,0,0,3,4,5])); return [m.a,m.b,m.c,m.d,m.e,m.f].join(','); })()",
+    "expected": "2,0,0,3,4,5",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "(() => { const m = DOMMatrix.fromFloat64Array(new Float64Array([2,0,0,3,4,5])); return m.is2D; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "(() => { const a = new Float64Array(16); a[0]=1; a[5]=1; a[10]=1; a[15]=1; const m = DOMMatrix.fromFloat64Array(a); return m.isIdentity; })()",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "(() => { return Object.prototype.toString.call(DOMMatrix.fromFloat64Array(new Float64Array(16))); })()",
+    "expected": "[object DOMMatrix]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrix.fromFloat64Array(new Float64Array(7))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrix.fromFloat64Array(new Float32Array(6))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "DOMMatrix",
+    "member": "fromFloat64Array",
+    "expr": "DOMMatrix.fromFloat64Array.length",
+    "expected": 1,
+    "source": "chrome-152-macos-20261017"
+  }
+]

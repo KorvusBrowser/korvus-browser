@@ -1,0 +1,100 @@
+[
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "constructor",
+    "expr": "(() => { const o = new HTMLEmbedElement(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "constructor",
+    "expr": "new HTMLEmbedElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "src",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.src; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.type; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "type",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return (o.type = \"x\", o.type); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.height; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return (o.height = \"x\", o.height); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "getSVGDocument",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.getSVGDocument(); })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return o.name; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "HTMLEmbedElement",
+    "member": "name",
+    "expr": "(() => { const o = document.createElement(\"embed\"); return (o.name = \"x\", o.name); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

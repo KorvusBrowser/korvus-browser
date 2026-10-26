@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "WebGLContextEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebGLContextEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object WebGLContextEvent]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WebGLContextEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebGLContextEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "WebGLContextEvent",
+    "member": "statusMessage",
+    "expr": "(() => { const o = new WebGLContextEvent(\"x\"); return o.statusMessage; })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  }
+]

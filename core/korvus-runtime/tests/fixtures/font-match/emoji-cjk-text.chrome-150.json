@@ -1,0 +1,378 @@
+[
+[
+"width 24px sans-serif | \" \"",
+6.7199859619140625
+],
+[
+"width 24px sans-serif | \"\ud83d\ude00 \"",
+35.32093811035156
+],
+[
+"width 24px sans-serif | \"\ud83d\ude00 \u6f22\"",
+59.32086181640625
+],
+[
+"width 24px sans-serif | \"\u6f22\u5b57 ok\"",
+81.16775512695312
+],
+[
+"width 24px sans-serif | \"x \u6f22\"",
+41.327880859375
+],
+[
+"width 24px sans-serif | \"a b\"",
+35.06390380859375
+],
+[
+"width 24px sans-serif | \"a, b!\"",
+49.511871337890625
+],
+[
+"width 24px sans-serif | \"\u6f22, b!\"",
+58.6318359375
+],
+[
+"width 24px sans-serif | \"(\u6f22)\"",
+40.22386169433594
+],
+[
+"width 24px sans-serif | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+116.48869323730469
+],
+[
+"width 24px sans-serif | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+395.3438720703125
+],
+[
+"width 24px sans-serif | \"\uac00 \ub098\"",
+49.53587341308594
+],
+[
+"width 24px sans-serif | \"\u00e9 \u00e8\"",
+33.31190490722656
+],
+[
+"width 24px sans-serif | \"tab\\there\"",
+92.39971923828125
+],
+[
+"width 24px serif | \" \"",
+7.439971923828125
+],
+[
+"width 24px serif | \"\ud83d\ude00 \"",
+36.08892822265625
+],
+[
+"width 24px serif | \"\ud83d\ude00 \u6f22\"",
+60.08885192871094
+],
+[
+"width 24px serif | \"\u6f22\u5b57 ok\"",
+82.84774780273438
+],
+[
+"width 24px serif | \"x \u6f22\"",
+43.67987060546875
+],
+[
+"width 24px serif | \"a b\"",
+36.11988830566406
+],
+[
+"width 24px serif | \"a, b!\"",
+51.71983337402344
+],
+[
+"width 24px serif | \"\u6f22, b!\"",
+60.959808349609375
+],
+[
+"width 24px serif | \"(\u6f22)\"",
+41.47187805175781
+],
+[
+"width 24px serif | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+118.93667602539062
+],
+[
+"width 24px serif | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+420.25579833984375
+],
+[
+"width 24px serif | \"\uac00 \ub098\"",
+52.5118408203125
+],
+[
+"width 24px serif | \"\u00e9 \u00e8\"",
+33.695892333984375
+],
+[
+"width 24px serif | \"tab\\there\"",
+96.55171203613281
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \" \"",
+6.7199859619140625
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\ud83d\ude00 \"",
+35.32093811035156
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\ud83d\ude00 \u6f22\"",
+59.32086181640625
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\u6f22\u5b57 ok\"",
+81.16775512695312
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"x \u6f22\"",
+41.327880859375
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"a b\"",
+35.06390380859375
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"a, b!\"",
+49.511871337890625
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\u6f22, b!\"",
+58.6318359375
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"(\u6f22)\"",
+40.22386169433594
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+116.48869323730469
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+395.3438720703125
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\uac00 \ub098\"",
+49.53587341308594
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"\u00e9 \u00e8\"",
+33.31190490722656
+],
+[
+"width 24px \"Noto Sans CJK KR\" | \"tab\\there\"",
+92.39971923828125
+],
+[
+"width 24px Arial | \" \"",
+6.66796875
+],
+[
+"width 24px Arial | \"\ud83d\ude00 \"",
+36.6129150390625
+],
+[
+"width 24px Arial | \"\ud83d\ude00 \u6f22\"",
+60.61283874511719
+],
+[
+"width 24px Arial | \"\u6f22\u5b57 ok\"",
+80.01547241210938
+],
+[
+"width 24px Arial | \"x \u6f22\"",
+42.66789245605469
+],
+[
+"width 24px Arial | \"a b\"",
+33.36328125
+],
+[
+"width 24px Arial | \"a, b!\"",
+46.69921875
+],
+[
+"width 24px Arial | \"\u6f22, b!\"",
+57.35148620605469
+],
+[
+"width 24px Arial | \"(\u6f22)\"",
+39.98429870605469
+],
+[
+"width 24px Arial | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+116.62838745117188
+],
+[
+"width 24px Arial | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+380.7574462890625
+],
+[
+"width 24px Arial | \"\uac00 \ub098\"",
+50.827850341796875
+],
+[
+"width 24px Arial | \"\u00e9 \u00e8\"",
+33.36328125
+],
+[
+"width 24px Arial | \"tab\\there\"",
+88.06640625
+],
+[
+"width 11pt no-real-font-123 | \" \"",
+4.103759765625
+],
+[
+"width 11pt no-real-font-123 | \"\ud83d\ude00 \"",
+21.574386596679688
+],
+[
+"width 11pt no-real-font-123 | \"\ud83d\ude00 \u6f22\"",
+36.23069763183594
+],
+[
+"width 11pt no-real-font-123 | \"\u6f22\u5b57 ok\"",
+49.56764221191406
+],
+[
+"width 11pt no-real-font-123 | \"x \u6f22\"",
+25.238174438476562
+],
+[
+"width 11pt no-real-font-123 | \"a b\"",
+21.412857055664062
+],
+[
+"width 11pt no-real-font-123 | \"a, b!\"",
+30.2359619140625
+],
+[
+"width 11pt no-real-font-123 | \"\u6f22, b!\"",
+35.80537414550781
+],
+[
+"width 11pt no-real-font-123 | \"(\u6f22)\"",
+24.56396484375
+],
+[
+"width 11pt no-real-font-123 | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+71.14202880859375
+],
+[
+"width 11pt no-real-font-123 | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+241.4333953857422
+],
+[
+"width 11pt no-real-font-123 | \"\uac00 \ub098\"",
+30.2506103515625
+],
+[
+"width 11pt no-real-font-123 | \"\u00e9 \u00e8\"",
+20.34295654296875
+],
+[
+"width 11pt no-real-font-123 | \"tab\\there\"",
+56.426666259765625
+],
+[
+"width 24px \"Noto Color Emoji\" | \" \"",
+30
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\ud83d\ude00 \"",
+60
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\ud83d\ude00 \u6f22\"",
+83.99992370605469
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\u6f22\u5b57 ok\"",
+105.79176330566406
+],
+[
+"width 24px \"Noto Color Emoji\" | \"x \u6f22\"",
+65.95188903808594
+],
+[
+"width 24px \"Noto Color Emoji\" | \"a b\"",
+58.34391784667969
+],
+[
+"width 24px \"Noto Color Emoji\" | \"a, b!\"",
+72.79188537597656
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\u6f22, b!\"",
+83.25584411621094
+],
+[
+"width 24px \"Noto Color Emoji\" | \"(\u6f22)\"",
+40.22386169433594
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+165.79176330566406
+],
+[
+"width 24px \"Noto Color Emoji\" | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+518.5189819335938
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\uac00 \ub098\"",
+74.15988159179688
+],
+[
+"width 24px \"Noto Color Emoji\" | \"\u00e9 \u00e8\"",
+56.5919189453125
+],
+[
+"width 24px \"Noto Color Emoji\" | \"tab\\there\"",
+117.02372741699219
+],
+[
+"pen x in \"\ud83d\ude00 x\"",
+"39.125..39.3125"
+],
+[
+"pen x in \"\u6f22 x\"",
+"33.375..33.5625"
+],
+[
+"pen \u6f22 in \"x \u6f22\"",
+"21.125..21.3125"
+],
+[
+"pen b in \"a b\"",
+"24.125..24.3125"
+],
+[
+"alpha 24px sans-serif | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+"8d1af224"
+],
+[
+"alpha 24px sans-serif | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+"ca0598a0"
+],
+[
+"alpha 24px serif | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+"30e70f20"
+],
+[
+"alpha 24px serif | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+"0fab1ee1"
+],
+[
+"alpha 11pt no-real-font-123 | \"\ud83d\ude00 \u6f22\u5b57 ok\"",
+"9b037991"
+],
+[
+"alpha 11pt no-real-font-123 | \"Cwm fjordbank glyphs vext quiz, \ud83d\ude03\"",
+"445fc240"
+]
+]

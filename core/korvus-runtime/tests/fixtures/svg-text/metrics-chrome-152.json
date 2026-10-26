@@ -1,0 +1,595 @@
+[
+ [
+  "italic 150px serif",
+  {
+   "n": 13,
+   "len": 1611.015625,
+   "sub03": 438.3125,
+   "sub25": 730.515625,
+   "ext0": [
+    10,
+    27,
+    146.109375,
+    216
+   ],
+   "extLast": [
+    1571.1875,
+    27,
+    49.828125,
+    216
+   ],
+   "start1": [
+    156.09375,
+    200
+   ],
+   "end1": [
+    302.203125,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    27,
+    1623.2010498046875,
+    216
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 serif",
+  {
+   "len": 1610.7362060546875,
+   "sub03": 438.2344970703125,
+   "ext0": [
+    10,
+    27.172481536865234,
+    146.0885772705078,
+    215.78465270996094
+   ],
+   "bbox": [
+    10,
+    27.172481536865234,
+    1622.881591796875,
+    215.78465270996094
+   ]
+  }
+ ],
+ [
+  "italic 150px sans-serif",
+  {
+   "n": 13,
+   "len": 1515.453125,
+   "sub03": 416.703125,
+   "sub25": 694.515625,
+   "ext0": [
+    10,
+    26,
+    138.90625,
+    217
+   ],
+   "extLast": [
+    1484.1875,
+    26,
+    41.265625,
+    217
+   ],
+   "start1": [
+    148.890625,
+    200
+   ],
+   "end1": [
+    287.8125,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    26,
+    1533.200927734375,
+    217
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 sans-serif",
+  {
+   "len": 1515.20654296875,
+   "sub03": 416.64666748046875,
+   "ext0": [
+    10,
+    26.173479080200195,
+    138.89263916015625,
+    216.7836456298828
+   ],
+   "bbox": [
+    10,
+    26.173479080200195,
+    1532.8990478515625,
+    216.7836456298828
+   ]
+  }
+ ],
+ [
+  "italic 150px monospace",
+  {
+   "n": 13,
+   "len": 975.015625,
+   "sub03": 225.015625,
+   "sub25": 375.015625,
+   "ext0": [
+    10,
+    26,
+    75.015625,
+    217
+   ],
+   "extLast": [
+    910,
+    26,
+    75.015625,
+    217
+   ],
+   "start1": [
+    85,
+    200
+   ],
+   "end1": [
+    160.015625,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    26,
+    976.0005493164062,
+    217
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 monospace",
+  {
+   "len": 974.855224609375,
+   "sub03": 224.9785919189453,
+   "ext0": [
+    10,
+    26.173479080200195,
+    75.0032730102539,
+    216.7836456298828
+   ],
+   "bbox": [
+    10,
+    26.173479080200195,
+    975.7763671875,
+    216.7836456298828
+   ]
+  }
+ ],
+ [
+  "italic 150px DejaVu Sans",
+  {
+   "n": 13,
+   "len": 1586.21875,
+   "sub03": 438.359375,
+   "sub25": 730.59375,
+   "ext0": [
+    10,
+    61,
+    146.125,
+    174
+   ],
+   "extLast": [
+    1554.53125,
+    61,
+    41.6875,
+    174
+   ],
+   "start1": [
+    156.109375,
+    200
+   ],
+   "end1": [
+    302.25,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    61,
+    1601.53125,
+    174
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 DejaVu Sans",
+  {
+   "len": 1585.948486328125,
+   "sub03": 438.29693603515625,
+   "ext0": [
+    10,
+    61.13858413696289,
+    146.10418701171875,
+    173.82652282714844
+   ],
+   "bbox": [
+    10,
+    61.13858413696289,
+    1601.2203369140625,
+    173.82652282714844
+   ]
+  }
+ ],
+ [
+  "italic 150px Liberation Mono",
+  {
+   "n": 13,
+   "len": 1170.203125,
+   "sub03": 270.046875,
+   "sub25": 450.09375,
+   "ext0": [
+    10,
+    75,
+    90.015625,
+    170
+   ],
+   "extLast": [
+    1090.171875,
+    75,
+    90.03125,
+    170
+   ],
+   "start1": [
+    100,
+    200
+   ],
+   "end1": [
+    190.03125,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    75,
+    1170.203125,
+    170
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 Liberation Mono",
+  {
+   "len": 1170.004150390625,
+   "sub03": 270.01177978515625,
+   "ext0": [
+    10,
+    75.12462615966797,
+    90.0039291381836,
+    169.83050537109375
+   ],
+   "bbox": [
+    10,
+    75.12462615966797,
+    1170.004150390625,
+    169.83050537109375
+   ]
+  }
+ ],
+ [
+  "italic 150px Liberation Sans",
+  {
+   "n": 13,
+   "len": 1349.5,
+   "sub03": 374.859375,
+   "sub25": 624.78125,
+   "ext0": [
+    10,
+    64,
+    124.953125,
+    168
+   ],
+   "extLast": [
+    1326.15625,
+    64,
+    33.34375,
+    168
+   ],
+   "start1": [
+    134.9375,
+    200
+   ],
+   "end1": [
+    259.90625,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    64,
+    1353.162109375,
+    168
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 Liberation Sans",
+  {
+   "len": 1349.2784423828125,
+   "sub03": 374.7978210449219,
+   "ext0": [
+    10,
+    64.13558959960938,
+    124.93781280517578,
+    167.83250427246094
+   ],
+   "bbox": [
+    10,
+    64.13558959960938,
+    1352.90869140625,
+    167.83250427246094
+   ]
+  }
+ ],
+ [
+  "italic 150px NoSuchFont-xyz, serif",
+  {
+   "n": 13,
+   "len": 1611.015625,
+   "sub03": 438.3125,
+   "sub25": 730.515625,
+   "ext0": [
+    10,
+    27,
+    146.109375,
+    216
+   ],
+   "extLast": [
+    1571.1875,
+    27,
+    49.828125,
+    216
+   ],
+   "start1": [
+    156.09375,
+    200
+   ],
+   "end1": [
+    302.203125,
+    200
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    27,
+    1623.2010498046875,
+    216
+   ]
+  }
+ ],
+ [
+  "scaled 1.000998 NoSuchFont-xyz, serif",
+  {
+   "len": 1610.7362060546875,
+   "sub03": 438.2344970703125,
+   "ext0": [
+    10,
+    27.172481536865234,
+    146.0885772705078,
+    215.78465270996094
+   ],
+   "bbox": [
+    10,
+    27.172481536865234,
+    1622.881591796875,
+    215.78465270996094
+   ]
+  }
+ ],
+ [
+  "plain 16px",
+  {
+   "n": 12,
+   "len": 91.390625,
+   "sub03": 25.0625,
+   "sub25": 27.75,
+   "ext0": [
+    10,
+    1,
+    11.65625,
+    24
+   ],
+   "extLast": [
+    91.453125,
+    1,
+    9.9375,
+    24
+   ],
+   "start1": [
+    21.640625,
+    20
+   ],
+   "end1": [
+    30.515625,
+    20
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    1,
+    91.390625,
+    24
+   ]
+  }
+ ],
+ [
+  "hit (40, 15)",
+  4,
+  "hit (5, 15)",
+  -1,
+  "hit (40, 99)",
+  -1
+ ],
+ [
+  "anchor middle",
+  {
+   "ext0": [
+    255.078125,
+    27,
+    12.171875,
+    29
+   ],
+   "start0": [
+    255.078125,
+    50
+   ],
+   "bbox": [
+    255.078125,
+    27,
+    89.84375,
+    29
+   ]
+  }
+ ],
+ [
+  "anchor end",
+  {
+   "ext0": [
+    210.15625,
+    27,
+    12.171875,
+    29
+   ],
+   "start0": [
+    210.15625,
+    50
+   ],
+   "bbox": [
+    210.15625,
+    27,
+    89.84375,
+    29
+   ]
+  }
+ ],
+ [
+  "tspan: text",
+  {
+   "n": 6,
+   "len": 63.34375,
+   "sub03": 33.359375,
+   "sub25": 39.71875,
+   "ext0": [
+    10,
+    57,
+    11.265625,
+    29
+   ],
+   "extLast": [
+    71.828125,
+    57,
+    6.515625,
+    29
+   ],
+   "start1": [
+    21.25,
+    80
+   ],
+   "end1": [
+    33.625,
+    80
+   ],
+   "rot0": 0,
+   "bbox": [
+    10,
+    57,
+    69.82998657226562,
+    29
+   ]
+  }
+ ],
+ [
+  "tspan: the tspan",
+  {
+   "n": 2,
+   "len": 22.125,
+   "ext0": [
+    38.625,
+    57,
+    9.734375,
+    29
+   ],
+   "bbox": [
+    38.625,
+    57,
+    22.125,
+    29
+   ]
+  }
+ ],
+ [
+  "whitespace",
+  {
+   "n": 5,
+   "len": 45.03125,
+   "start0": [
+    10,
+    120
+   ]
+  }
+ ],
+ [
+  "rotate",
+  {
+   "rot0": 30,
+   "rot1": 45,
+   "rot2": 45
+  }
+ ],
+ [
+  "detached",
+  {
+   "n": 0,
+   "len": 0,
+   "sub03": "threw IndexSizeError: Failed to execute 'getSubStringLength' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "sub25": "threw IndexSizeError: Failed to execute 'getSubStringLength' on 'SVGTextContentElement': The charnum provided (2) is greater than the maximum bound (0).",
+   "ext0": "threw IndexSizeError: Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "extLast": "threw IndexSizeError: Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': The charnum provided (4294967295) is greater than the maximum bound (0).",
+   "start1": "threw IndexSizeError: Failed to execute 'getStartPositionOfChar' on 'SVGTextContentElement': The charnum provided (1) is greater than the maximum bound (0).",
+   "end1": "threw IndexSizeError: Failed to execute 'getEndPositionOfChar' on 'SVGTextContentElement': The charnum provided (1) is greater than the maximum bound (0).",
+   "rot0": "threw IndexSizeError: Failed to execute 'getRotationOfChar' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "bbox": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ [
+  "display none",
+  {
+   "n": 0,
+   "len": 0,
+   "sub03": "threw IndexSizeError: Failed to execute 'getSubStringLength' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "sub25": "threw IndexSizeError: Failed to execute 'getSubStringLength' on 'SVGTextContentElement': The charnum provided (2) is greater than the maximum bound (0).",
+   "ext0": "threw IndexSizeError: Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "extLast": "threw IndexSizeError: Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': The charnum provided (4294967295) is greater than the maximum bound (0).",
+   "start1": "threw IndexSizeError: Failed to execute 'getStartPositionOfChar' on 'SVGTextContentElement': The charnum provided (1) is greater than the maximum bound (0).",
+   "end1": "threw IndexSizeError: Failed to execute 'getEndPositionOfChar' on 'SVGTextContentElement': The charnum provided (1) is greater than the maximum bound (0).",
+   "rot0": "threw IndexSizeError: Failed to execute 'getRotationOfChar' on 'SVGTextContentElement': The charnum provided (0) is greater than or equal to the maximum bound (0).",
+   "bbox": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ [
+  "errors",
+  "threw IndexSizeError: Failed to execute 'getSubStringLength' on 'SVGTextContentElement': The charnum provided (99) is greater than the maximum bound (3).",
+  "threw IndexSizeError: Failed to execute 'getExtentOfChar' on 'SVGTextContentElement': The charnum provided (3) is greater than or equal to the maximum bound (3).",
+  "threw IndexSizeError: Failed to execute 'getStartPositionOfChar' on 'SVGTextContentElement': The charnum provided (4294967295) is greater than the maximum bound (3).",
+  "threw IndexSizeError: Failed to execute 'selectSubString' on 'SVGTextContentElement': The charnum provided (5) is greater than the maximum bound (3).",
+  -1
+ ]
+]

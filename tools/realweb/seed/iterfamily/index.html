@@ -1,0 +1,49 @@
+<!doctype html><meta charset=utf-8><body><div id=a class="x y"></div><script>
+// TEMPLATES P6 B19: every WebIDL iterator is its interface's own "<I> Iterator" on one per-realm prototype,
+// over %MapIteratorPrototype% (maplike), %SetIteratorPrototype% (setlike) or %IteratorPrototype% (pair
+// iterable); results are {done, value}; a foreign `next` throws; @@iterator is entries (maplike, pair) or values (setlike).
+(async () => {
+const out = {};
+const IP = Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]()));
+const SIP = Object.getPrototypeOf(new Set().values()), MIP = Object.getPrototypeOf(new Map().values());
+const kind = (p) => p === IP ? 'IP' : p === SIP ? 'SetIter' : p === MIP ? 'MapIter' : p === Object.prototype ? 'OP' : String(p);
+const probe = (label, obj, kinds, alias) => {
+  const r = {};
+  try {
+    const it = obj[kinds[0]]();
+    const P = Object.getPrototypeOf(it);
+    r.tag = Object.prototype.toString.call(it);
+    r.own = Reflect.ownKeys(it).map(String).join();
+    r.protoKeys = Reflect.ownKeys(P).map(String).join();
+    r.chain = kind(Object.getPrototypeOf(P));
+    r.keys = Object.keys(it.next()).join();
+    r.shared = kinds.every((k) => Object.getPrototypeOf(obj[k]()) === P);
+    try { P.next.call({}); r.nextObj = 'no throw'; } catch (e) { r.nextObj = e.message; }
+    r.alias = alias ? String(obj[Symbol.iterator] === obj[alias]) : '-';
+    const d = Object.getOwnPropertyDescriptor(P, 'next');
+    r.nextDesc = d ? [d.writable, d.enumerable, d.configurable, d.value.length].join() : 'none';
+  } catch (e) { r.err = e.message; }
+  out[label] = r;
+};
+const h = new Highlight(); h.add(new Range());
+probe('Highlight', h, ['values', 'keys', 'entries'], 'values');
+CSS.highlights.set('hl', h);
+probe('HighlightRegistry', CSS.highlights, ['keys', 'values', 'entries'], 'entries');
+const fd = new FormData(); fd.append('a', '1');
+probe('FormData', fd, ['keys', 'values', 'entries'], 'entries');
+probe('Headers', new Headers({ a: '1' }), ['keys', 'values', 'entries'], 'entries');
+probe('URLSearchParams', new URLSearchParams('a=1'), ['keys', 'values', 'entries'], 'entries');
+probe('DOMTokenList', document.getElementById('a').classList, ['keys', 'values', 'entries'], 'values');
+probe('NodeList', document.querySelectorAll('div'), ['keys', 'values', 'entries'], 'values');
+probe('EventCounts', performance.eventCounts, ['keys', 'values', 'entries'], 'entries');
+class X extends HTMLElement { constructor() { super(); this.i = this.attachInternals(); } }
+customElements.define('x-el', X);
+const x = new X(); x.i.states.add('a');
+probe('CustomStateSet', x.i.states, ['values', 'keys', 'entries'], 'values');
+document.body.style.color = 'red';
+probe('StylePropertyMap', document.body.attributeStyleMap, ['keys', 'values', 'entries'], 'entries');
+const pc = new RTCPeerConnection(); const rep = await pc.getStats(); pc.close();
+probe('RTCStatsReport', rep, ['keys', 'values', 'entries'], 'entries');
+window.R = JSON.stringify(out);
+})();
+</script>

@@ -1,0 +1,237 @@
+[
+  {
+    "iface": "XRInputSourceArray",
+    "member": "constructor",
+    "expr": "new XRInputSourceArray()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.entries.call({}))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.entries.call(Object.create(XRInputSourceArray.prototype)))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.keys.call({}))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.keys.call(Object.create(XRInputSourceArray.prototype)))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.values.call({}))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "Object.prototype.toString.call(XRInputSourceArray.prototype.values.call(Object.create(XRInputSourceArray.prototype)))",
+    "expected": "[object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "XRInputSourceArray.prototype.forEach.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "XRInputSourceArray.prototype.forEach.call(Object.create(XRInputSourceArray.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "length",
+    "expr": "XRInputSourceArray.prototype.length",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "length",
+    "expr": "Object.getOwnPropertyDescriptor(XRInputSourceArray.prototype, \"length\").get.call(Object.create(XRInputSourceArray.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "XRInputSourceArray.prototype.forEach.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "XRInputSourceArray.prototype.entries === Array.prototype.entries",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "XRInputSourceArray.prototype.entries.call(['a']).next().value",
+    "expected": [
+      0,
+      "a"
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"entries\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "entries",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"entries\"].call(Object.create(XRInputSourceArray.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "XRInputSourceArray.prototype.keys === Array.prototype.keys",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "XRInputSourceArray.prototype.keys.call({ length: 3 }).next().value",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"keys\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "keys",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"keys\"].call(Object.create(XRInputSourceArray.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "XRInputSourceArray.prototype.values === Array.prototype.values",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "XRInputSourceArray.prototype[Symbol.iterator] === XRInputSourceArray.prototype.values",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "XRInputSourceArray.prototype.values.call(['a', 'b']).next().value",
+    "expected": "a",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"values\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "values",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"values\"].call(Object.create(XRInputSourceArray.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Array Iterator]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "XRInputSourceArray.prototype.forEach === Array.prototype.forEach",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype.forEach.call({ length: 0 }, () => {}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Undefined]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "(() => { try { const out = []; XRInputSourceArray.prototype.forEach.call(['a', 'b'], (x, i) => out.push(i + ':' + x)); return out.join(','); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "0:a,1:b",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"forEach\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: number 1 is not a function",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "forEach",
+    "expr": "(() => { try { const v = XRInputSourceArray.prototype[\"forEach\"].call(Object.create(XRInputSourceArray.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "length",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceArray.prototype, \"length\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "length",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRInputSourceArray.prototype, \"length\").get.call(Object.create(XRInputSourceArray.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRInputSourceArray",
+    "member": "length",
+    "expr": "(async () => { const o = await (navigator.xr.requestSession(\"inline\").then((s) => s.inputSources)); return o.length; })()",
+    "expected": 0,
+    "await": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

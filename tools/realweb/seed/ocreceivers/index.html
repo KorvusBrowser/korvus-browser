@@ -1,0 +1,54 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P8 (the Signature family): a platform member called on `Object.create(I.prototype)` -- an
+// object that has the interface's prototype but is not a platform object -- REFUSES it in stock Chrome:
+// it throws a TypeError (a promise-returning one rejects with one; a [LegacyLenientThis] attribute answers
+// undefined), and a real instance still answers. One row per member, across the families the lock counts.
+// The error CLASS only: what the message says is its own question (the next fixture).
+const probes = [
+  ['Navigator', 'userAgent'], ['Navigator', 'platform'], ['Navigator', 'hardwareConcurrency'], ['Navigator', 'webdriver'],
+  ['Navigator', 'languages'], ['Navigator', 'plugins'], ['Navigator', 'getBattery'], ['Navigator', 'javaEnabled'],
+  ['Document', 'title'], ['Document', 'cookie'], ['Document', 'body'], ['Document', 'createElement'], ['Document', 'querySelector'],
+  ['Document', 'onmouseenter'],
+  ['Node', 'nodeType'], ['Node', 'firstChild'], ['Node', 'appendChild'], ['Node', 'textContent'],
+  ['Element', 'tagName'], ['Element', 'getAttribute'], ['Element', 'innerHTML'], ['Element', 'getBoundingClientRect'],
+  ['HTMLElement', 'offsetWidth'], ['HTMLElement', 'hidden'], ['HTMLElement', 'click'], ['HTMLElement', 'onmouseenter'],
+  ['HTMLCanvasElement', 'getContext'], ['HTMLIFrameElement', 'contentWindow'], ['HTMLImageElement', 'naturalWidth'],
+  ['CanvasRenderingContext2D', 'font'], ['CanvasRenderingContext2D', 'fillRect'],
+  ['WebGLRenderingContext', 'getParameter'], ['WebGL2RenderingContext', 'getParameter'],
+  ['Performance', 'now'], ['History', 'length'], ['Screen', 'width'], ['Location', 'href'],
+  ['Storage', 'getItem'], ['CSSStyleDeclaration', 'getPropertyValue'], ['XMLHttpRequest', 'open'],
+  ['EventTarget', 'addEventListener'], ['Event', 'type'], ['MessagePort', 'postMessage'],
+  ['BaseAudioContext', 'createOscillator'], ['AudioNode', 'connect'], ['MediaDevices', 'enumerateDevices'],
+  ['Permissions', 'query'], ['NavigatorUAData', 'getHighEntropyValues'], ['Clipboard', 'readText'],
+];
+const out = {};
+const done = () => { window.R = JSON.stringify(out); };
+const pending = [];
+for (const [I, m] of probes) {
+  const k = I + '.' + m;
+  const C = self[I];
+  if (!C) { out[k] = 'no-iface'; continue; }
+  const d = Object.getOwnPropertyDescriptor(C.prototype, m);
+  if (!d) { out[k] = 'no-member'; continue; }
+  const f = d.get || d.value;
+  if (typeof f !== 'function') { out[k] = 'not-a-function'; continue; }
+  let fake;
+  try { fake = Object.create(C.prototype); } catch (e) { out[k] = 'create ' + e.constructor.name; continue; }
+  try {
+    const r = f.call(fake);
+    if (r && typeof r.then === 'function') {
+      out[k] = 'pending';
+      pending.push(r.then((v) => { out[k] = 'resolves ' + typeof v; }, (e) => { out[k] = 'rejects ' + (e && e.constructor && e.constructor.name); }));
+    } else {
+      out[k] = 'answers ' + (r === undefined ? 'undefined' : r === null ? 'null' : typeof r);
+    }
+  } catch (e) { out[k] = 'throws ' + e.constructor.name; }
+}
+// a real instance still answers
+const real = {};
+real.nodeType = String(Object.getOwnPropertyDescriptor(Node.prototype, 'nodeType').get.call(document.body));
+real.userAgent = typeof Object.getOwnPropertyDescriptor(Navigator.prototype, 'userAgent').get.call(navigator);
+real.title = typeof Object.getOwnPropertyDescriptor(Document.prototype, 'title').get.call(document);
+out['real'] = JSON.stringify(real);
+Promise.all(pending).then(done, done);
+</script>

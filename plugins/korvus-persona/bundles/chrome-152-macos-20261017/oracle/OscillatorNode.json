@@ -1,0 +1,44 @@
+[
+  {
+    "iface": "OscillatorNode",
+    "member": "constructor",
+    "expr": "new OscillatorNode()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OscillatorNode",
+    "member": "type",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return o.type; })()",
+    "expected": "sine",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OscillatorNode",
+    "member": "type",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.type); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OscillatorNode",
+    "member": "frequency",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.frequency); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OscillatorNode",
+    "member": "detune",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return Object.prototype.toString.call(o.detune); })()",
+    "expected": "[object AudioParam]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "OscillatorNode",
+    "member": "setPeriodicWave",
+    "expr": "(() => { const o = new OscillatorNode(new OfflineAudioContext(1, 1, 44100)); return o.setPeriodicWave(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

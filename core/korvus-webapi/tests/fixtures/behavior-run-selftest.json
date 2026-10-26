@@ -1,0 +1,147 @@
+[
+  {
+    "why": "THIS FILE IS NOT PART OF THE BEHAVIOR CORPUS. Every `outcome` below is a fact about behavior-run.js -- about the INSTRUMENT -- and not about any WebAPI member, which is why it may be written here by hand: nothing in it judges an implementation. It lives outside tests/fixtures/behavior-cases/ so it can never be loaded as a case, and no entry asks a question whose answer differs between engines.",
+    "what": "The runner is evaluated by four callers, two of which (tests/quality.rs inside Korvus, plugins/korvus-persona/capture/oracle.mjs inside a real Chrome over CDP) have their answers compared to each other case by case. If those two ever evaluate under different rules, a harness difference becomes a recorded behavior difference and the corpus is silently wrong. Both sides run THIS file and must produce THIS map: `cargo test -p korvus-webapi --test behavior_runner_async` and `node plugins/korvus-persona/capture/oracle.mjs --selftest`.",
+    "expr": "null"
+  },
+
+  {
+    "id": "order-awaited-listed-first",
+    "expr": "Promise.resolve(globalThis.__korvusSelftestOrder)",
+    "await": true,
+    "outcome": { "value": "sync-ran-first" },
+    "note": "Listed BEFORE the synchronous case that sets the global, and still sees its value: proof that awaited cases run in a second pass after every synchronous case, which is what keeps capture/collect.js's single-task guarantee intact for the synchronous corpus."
+  },
+  {
+    "id": "order-sync-listed-second",
+    "expr": "(globalThis.__korvusSelftestOrder = \"sync-ran-first\", 1)",
+    "outcome": { "value": 1 }
+  },
+
+  {
+    "id": "sync-number",
+    "expr": "1 + 1",
+    "outcome": { "value": 2 }
+  },
+  {
+    "id": "sync-undefined",
+    "expr": "void 0",
+    "outcome": { "undef": true },
+    "note": "`undefined` is its own outcome, never `unsupported` -- every void method returns it."
+  },
+  {
+    "id": "sync-throws",
+    "expr": "(() => { throw new TypeError(\"x\"); })()",
+    "outcome": { "threw": "TypeError" }
+  },
+  {
+    "id": "sync-object-is-unsupported",
+    "expr": "({})",
+    "outcome": { "unsupported": true }
+  },
+  {
+    "id": "sync-promise-is-still-unsupported",
+    "expr": "Promise.resolve(1)",
+    "outcome": { "unsupported": true },
+    "note": "THE REGRESSION GUARD FOR THE WHOLE CHANGE. Without `await: true` a promise is still an object the transport cannot carry, exactly as before. If this ever answers `{value:1}` the flip went global and every one of the ~137 members recorded as \"[object Promise]\" has been silently re-answered."
+  },
+  {
+    "id": "sync-promise-brand-still-readable",
+    "expr": "Object.prototype.toString.call(Promise.resolve(1))",
+    "outcome": { "value": "[object Promise]" },
+    "note": "The one question the synchronous runner could ask of a promise-returning member. It must keep working, because ~137 recorded cases are exactly this."
+  },
+
+  {
+    "id": "await-on-a-non-promise",
+    "expr": "1 + 1",
+    "await": true,
+    "outcome": { "value": 2 },
+    "note": "The flag never creates a deadline timer for a value that is not thenable."
+  },
+  {
+    "id": "await-resolved-string",
+    "expr": "Promise.resolve(\"ok\")",
+    "await": true,
+    "outcome": { "value": "ok" }
+  },
+  {
+    "id": "await-resolved-null",
+    "expr": "Promise.resolve(null)",
+    "await": true,
+    "outcome": { "value": null },
+    "note": "null is a value; undefined is not. The corpus distinguishes them and so must this."
+  },
+  {
+    "id": "await-resolved-undefined",
+    "expr": "Promise.resolve(undefined)",
+    "await": true,
+    "outcome": { "undef": true }
+  },
+  {
+    "id": "await-resolved-object",
+    "expr": "Promise.resolve({})",
+    "await": true,
+    "outcome": { "unsupported": true },
+    "note": "Settling does not widen the carrier: an object is still unrecordable, so an awaited member with no scalar surface is asked for its brand instead."
+  },
+  {
+    "id": "await-resolved-array",
+    "expr": "Promise.resolve([1, \"a\", null])",
+    "await": true,
+    "outcome": { "value": [1, "a", null] }
+  },
+  {
+    "id": "await-resolved-lone-surrogate",
+    "expr": "Promise.resolve(\"\\ud800x\")",
+    "await": true,
+    "outcome": { "unsupported": true },
+    "note": "The awaited path shares `jsonSafe`, so the value that once killed a chunk of thirty cases costs one case here too."
+  },
+  {
+    "id": "await-thenable-that-is-not-a-promise",
+    "expr": "({ then(r) { r(7); } })",
+    "await": true,
+    "outcome": { "value": 7 }
+  },
+  {
+    "id": "await-nested-promise",
+    "expr": "Promise.resolve(Promise.resolve(\"deep\"))",
+    "await": true,
+    "outcome": { "value": "deep" }
+  },
+  {
+    "id": "await-rejection-is-a-throw",
+    "expr": "Promise.reject(new TypeError(\"x\"))",
+    "await": true,
+    "outcome": { "threw": "TypeError" },
+    "note": "await routes a rejection into the same catch the synchronous path already had, which is why `wakeLock.request(\"screen\")` can be recorded as `throws: NotAllowedError` for free."
+  },
+  {
+    "id": "await-domexception-rejection-keeps-its-name",
+    "expr": "Promise.reject(new DOMException(\"x\", \"NotAllowedError\"))",
+    "await": true,
+    "outcome": { "threw": "NotAllowedError" }
+  },
+  {
+    "id": "await-expression-throws-synchronously",
+    "expr": "(() => { throw new RangeError(\"x\"); })()",
+    "await": true,
+    "outcome": { "threw": "RangeError" },
+    "note": "Marked awaitable but never reaching a promise at all: still a throw, not a timeout."
+  },
+  {
+    "id": "await-slow-but-settling",
+    "expr": "new Promise((r) => setTimeout(() => r(\"late\"), 50))",
+    "await": true,
+    "outcome": { "value": "late" },
+    "note": "50 ms against a 1500 ms deadline. Also proves the caller is really pumping timers: on the Korvus side a runtime that only drained microtasks would report a timeout here."
+  },
+  {
+    "id": "await-never-settles",
+    "expr": "new Promise(() => {})",
+    "await": true,
+    "outcome": { "timeout": true },
+    "note": "THE HONESTY REQUIREMENT. A question that never settles is reported as a timeout and nothing else -- not `undefined` (which is a real answer a member can give), not `unsupported` (which says the transport was too narrow). `outcomeToCase` drops it rather than recording it, and the Korvus side prints the member name."
+  }
+]

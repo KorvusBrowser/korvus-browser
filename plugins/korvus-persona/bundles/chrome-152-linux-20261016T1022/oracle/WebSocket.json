@@ -1,0 +1,156 @@
+[
+  {
+    "iface": "WebSocket",
+    "member": "CONNECTING",
+    "expr": "WebSocket.CONNECTING",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "OPEN",
+    "expr": "WebSocket.OPEN",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "CLOSING",
+    "expr": "WebSocket.CLOSING",
+    "expected": 2,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "CLOSED",
+    "expr": "WebSocket.CLOSED",
+    "expected": 3,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object WebSocket]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "constructor",
+    "expr": "(() => { const o = new WebSocket(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "readyState",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.readyState; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "bufferedAmount",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.bufferedAmount; })()",
+    "expected": 0,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onopen",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.onopen; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onerror",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.onerror; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onclose",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.onclose; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "extensions",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.extensions; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "protocol",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.protocol; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "close",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.close(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onmessage",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.onmessage; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "binaryType",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.binaryType; })()",
+    "expected": "blob",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "send",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return o.send(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onopen",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o.onopen); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onerror",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o.onerror); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onclose",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o.onclose); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "onmessage",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o.onmessage); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "WebSocket",
+    "member": "binaryType",
+    "expr": "(() => { const o = new WebSocket(\"x\"); return Object.prototype.toString.call(o.binaryType); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

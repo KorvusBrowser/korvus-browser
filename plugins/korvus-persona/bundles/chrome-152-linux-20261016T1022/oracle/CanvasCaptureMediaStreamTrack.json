@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "CanvasCaptureMediaStreamTrack",
+    "member": "constructor",
+    "expr": "new CanvasCaptureMediaStreamTrack()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CanvasCaptureMediaStreamTrack",
+    "member": "canvas",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return Object.prototype.toString.call(o.canvas); })()",
+    "expected": "[object HTMLCanvasElement]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CanvasCaptureMediaStreamTrack",
+    "member": "requestFrame",
+    "expr": "(() => { const o = document.createElement(\"canvas\").captureStream().getVideoTracks()[0]; return o.requestFrame(); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

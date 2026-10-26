@@ -1,0 +1,15 @@
+{
+  "source": "Chromium 152.0.7977.82: third_party/dawn/src/tint/lang/wgsl/feature_status.cc (the language features GetLanguageFeatureStatus reports kShippedWithKillswitch) as Blink's GPU::wgslLanguageFeatures exposes them, in the order stock Chrome 152 enumerates navigator.gpu.wgslLanguageFeatures (measured 2026-10-16 on the Wayland desktop, RTX 4060; the same ten in the same order as Chrome 150 on 2026-10-08)",
+  "features": [
+    "packed_4x8_integer_dot_product",
+    "subgroup_uniformity",
+    "immediate_address_space",
+    "linear_indexing",
+    "subgroup_id",
+    "readonly_and_readwrite_storage_textures",
+    "unrestricted_pointer_parameters",
+    "pointer_composite_access",
+    "texture_and_sampler_let",
+    "uniform_buffer_standard_layout"
+  ]
+}

@@ -1,0 +1,176 @@
+[
+  {
+    "iface": "XRRigidTransform",
+    "member": "constructor",
+    "expr": "(() => { const o = new XRRigidTransform(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object XRRigidTransform]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "position",
+    "expr": "(() => { const o = new XRRigidTransform(); return Object.prototype.toString.call(o.position); })()",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "orientation",
+    "expr": "(() => { const o = new XRRigidTransform(); return Object.prototype.toString.call(o.orientation); })()",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "matrix",
+    "expr": "(() => { const o = new XRRigidTransform(); return Object.prototype.toString.call(o.matrix); })()",
+    "expected": "[object Float32Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "inverse",
+    "expr": "(() => { const o = new XRRigidTransform(); return Object.prototype.toString.call(o.inverse); })()",
+    "expected": "[object XRRigidTransform]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "constructor",
+    "expr": "Object.prototype.toString.call(new XRRigidTransform())",
+    "expected": "[object XRRigidTransform]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "constructor",
+    "expr": "new XRRigidTransform({}, {x:0,y:0,z:0,w:0})",
+    "throws": "InvalidStateError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "constructor",
+    "expr": "new XRRigidTransform({x:0,y:0,z:0,w:0})",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "constructor",
+    "expr": "new XRRigidTransform(\"nope\")",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "position",
+    "expr": "Object.prototype.toString.call(new XRRigidTransform().position)",
+    "expected": "[object DOMPointReadOnly]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "position",
+    "expr": "[new XRRigidTransform().position.x, new XRRigidTransform().position.y, new XRRigidTransform().position.z, new XRRigidTransform().position.w]",
+    "expected": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "position",
+    "expr": "new XRRigidTransform({x:1,y:2,z:3,w:1}).position.z",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "orientation",
+    "expr": "[new XRRigidTransform().orientation.x, new XRRigidTransform().orientation.y, new XRRigidTransform().orientation.z, new XRRigidTransform().orientation.w]",
+    "expected": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "orientation",
+    "expr": "new XRRigidTransform({}, {x:0,y:0,z:2,w:0}).orientation.z",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "matrix",
+    "expr": "Object.prototype.toString.call(new XRRigidTransform().matrix)",
+    "expected": "[object Float32Array]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "matrix",
+    "expr": "Array.from(new XRRigidTransform().matrix)",
+    "expected": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "matrix",
+    "expr": "new XRRigidTransform({x:5,y:6,z:7,w:1}).matrix[13]",
+    "expected": 6,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "inverse",
+    "expr": "Object.prototype.toString.call(new XRRigidTransform().inverse)",
+    "expected": "[object XRRigidTransform]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "inverse",
+    "expr": "new XRRigidTransform({x:1,y:2,z:3,w:1}).inverse.position.x",
+    "expected": -1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "inverse",
+    "expr": "new XRRigidTransform({x:1,y:2,z:3,w:1}).inverse.inverse.position.z",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "XRRigidTransform",
+    "member": "inverse",
+    "expr": "(() => { const t = new XRRigidTransform(); return t.inverse === t.inverse; })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

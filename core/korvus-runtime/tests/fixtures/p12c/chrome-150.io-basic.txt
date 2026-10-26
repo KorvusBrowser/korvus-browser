@@ -1,0 +1,17 @@
+-- phase 0
+sync calls => 0
+sync takeRecords => 0
+io call1 n=2 array=true this=true | t is=true ratio=1 b=0,0,200,100 i=0,0,200,100 rb=0,0,VW,VH time=true vis=false proto=true ; far is=false ratio=0 b=0,3000-SY,200,100 i=0,0,0,0 rb=0,0,VW,VH time=true vis=false proto=true
+calls => 1
+-- phase 1
+no change, calls => 1
+scrolled to the bottom => true
+sync takeRecords after scroll => 0
+-- phase 2
+io call2 n=2 array=true this=true | t is=false ratio=0 b=0,-SY,200,100 i=0,0,0,0 rb=0,0,VW,VH time=true vis=false proto=true ; far is=true ratio=1 b=0,3000-SY,200,100 i=0,3000-SY,200,100 rb=0,0,VW,VH time=true vis=false proto=true
+calls => 2
+-- phase 3
+io call3 n=1 array=true this=true | t is=true ratio=1 b=0,0,200,100 i=0,0,200,100 rb=0,0,VW,VH time=true vis=false proto=true
+calls => 3
+-- phase 4
+calls => 3

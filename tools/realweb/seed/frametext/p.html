@@ -1,0 +1,17 @@
+<!doctype html><html><body><div>top text</div>
+<iframe id=f src="c.html" style="width:400px;height:300px"></iframe><iframe id=g src="c.html" style="display:none"></iframe>
+<script>
+// REALWEB F27: a frame document is rendered in its frame: getComputedStyle answers its computed style
+// (its own sheets, its own viewport for media queries) and innerText skips what is not rendered.
+window.R = null;
+var n = 0;
+function one(fr) {
+  var d = fr.contentDocument, w = fr.contentWindow, cs = function (s, p) { return w.getComputedStyle(d.querySelector(s))[p]; };
+  return { bodyText: d.body.innerText, docText: d.documentElement.innerText, outer: d.getElementById('a').outerText,
+    div: cs('#a', 'display'), color: cs('#a', 'color'), script: cs('script', 'display'), hidden: cs('[hidden]', 'display'), none: cs('.n', 'display'),
+    head: cs('head', 'display'), pMargin: cs('p', 'marginTop'), bodyMargin: cs('body', 'marginTop'), boxWidth: cs('#box', 'width'),
+    viaPage: getComputedStyle(d.querySelector('p')).display, many: w.getComputedStyle(d.querySelector('p')).length > 300 };
+}
+function done() { if (++n < 2) return; window.R = JSON.stringify({ shown: one(f), displayNone: one(g) }); }
+f.onload = done; g.onload = done;
+</script></body></html>

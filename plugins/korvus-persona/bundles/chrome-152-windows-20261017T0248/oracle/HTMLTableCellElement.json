@@ -1,0 +1,135 @@
+[
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "constructor",
+    "expr": "new HTMLTableCellElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.align; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "align",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.align = \"x\", o.align); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "axis",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.axis; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "axis",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.axis = \"x\", o.axis); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.height; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "height",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.height = \"x\", o.height); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.width; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "width",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.width = \"x\", o.width); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.ch; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "ch",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.ch = \"x\", o.ch); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.chOff; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "chOff",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.chOff = \"x\", o.chOff); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "noWrap",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.noWrap; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "noWrap",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.noWrap = true, o.noWrap); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.vAlign; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "vAlign",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.vAlign = \"x\", o.vAlign); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"td\"); return o.bgColor; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "HTMLTableCellElement",
+    "member": "bgColor",
+    "expr": "(() => { const o = document.createElement(\"td\"); return (o.bgColor = \"x\", o.bgColor); })()",
+    "expected": "x",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

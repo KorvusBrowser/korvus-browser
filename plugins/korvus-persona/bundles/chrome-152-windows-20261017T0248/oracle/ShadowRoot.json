@@ -1,0 +1,233 @@
+[
+  {
+    "iface": "ShadowRoot",
+    "member": "constructor",
+    "expr": "new ShadowRoot()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "mode",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.mode; })()",
+    "expected": "open",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "delegatesFocus",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.delegatesFocus; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "slotAssignment",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.slotAssignment; })()",
+    "expected": "named",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "clonable",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.clonable; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "serializable",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.serializable; })()",
+    "expected": false,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.onslotchange; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "setHTML",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.setHTML(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "setHTML",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.setHTML(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "setHTMLUnsafe",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.setHTMLUnsafe(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "getHTML",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.getHTML(); })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "innerHTML",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.innerHTML; })()",
+    "expected": "",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "mode",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.mode); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "slotAssignment",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.slotAssignment); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "host",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.host); })()",
+    "expected": "[object HTMLDivElement]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "onslotchange",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.onslotchange); })()",
+    "expected": "[object Null]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "innerHTML",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.innerHTML); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "customElementRegistry",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.customElementRegistry); })()",
+    "expected": "[object CustomElementRegistry]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "activeElement",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.activeElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.adoptedStyleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Array.isArray(o.adoptedStyleSheets); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "adoptedStyleSheets",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); o.adoptedStyleSheets = []; return o.adoptedStyleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "elementFromPoint",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.elementFromPoint(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "elementsFromPoint",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.elementsFromPoint(0, 0).length; })()",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "elementsFromPoint",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Array.isArray(o.elementsFromPoint(0, 0)); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "fullscreenElement",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.fullscreenElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "getAnimations",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.getAnimations().length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "getAnimations",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Array.isArray(o.getAnimations()); })()",
+    "expected": true,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "getSelection",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.getSelection()); })()",
+    "expected": "[object Selection]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "pictureInPictureElement",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.pictureInPictureElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "pointerLockElement",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.pointerLockElement; })()",
+    "expected": null,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "styleSheets",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return Object.prototype.toString.call(o.styleSheets); })()",
+    "expected": "[object StyleSheetList]",
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "ShadowRoot",
+    "member": "styleSheets",
+    "expr": "(() => { const o = document.createElement(\"div\").attachShadow({ mode: \"open\" }); return o.styleSheets.length; })()",
+    "expected": 0,
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>eval of a TrustedScript</title>
+<!-- H17: eval / new Function / setTimeout given a TrustedScript must run its text (the browser's code
+     generation hook stringifies it); korvus handed the object back. knockoutjs.com compiles every
+     data-bind with (0,eval)(policy.createScript(...)): "Unable to parse bindings ... is not a function". -->
+<script>
+var r = {};
+function t(n, f) { try { var v = f(); r[n] = v === undefined ? 'undefined' : typeof v === 'function' ? 'function' : JSON.stringify(v); } catch (e) { r[n] = 'threw ' + e.name; } }
+var p = trustedTypes.createPolicy('k', { createScript: function (s) { return s; } });
+t('indirectEval', function () { return (0, eval)(p.createScript('1+1')); });
+t('directEval', function () { return eval(p.createScript('2+2')); });
+t('evalFn', function () { return (0, eval)(p.createScript('(function(a){return a*3})'))(5); });
+t('newFunction', function () { return new Function(p.createScript('return 7'))(); });
+t('newFunctionArgs', function () { return new Function('a', p.createScript('return a+1'))(1); });
+t('evalPlainObject', function () { var o = { x: 1 }; return eval(o) === o; });
+t('evalString', function () { return eval('3*3'); });
+window.__st = 'unset';
+setTimeout(p.createScript("window.__st='ran'"), 0);
+setTimeout(function () { r.setTimeoutTrusted = window.__st; window.R = JSON.stringify(r); }, 50);
+</script>

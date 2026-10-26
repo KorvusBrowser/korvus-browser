@@ -1,0 +1,12 @@
+<!doctype html><title>t</title><body><script type=module>
+import { later } from './shared.js';
+const base = new URL('.', location.href).href, r = {};
+const msg = p => p.then(() => 'ok', e => e.name + ': ' + e.message.replace(base, 'BASE/'));
+r.block = await msg(import('./block.js'));
+r.sharedMissing = await msg(later(base + 'missing-from-shared.js'));
+r.sharedBare = await msg(later('bare-x'));
+const m = await import('./blockdyn.js');
+r.innerMissing = await msg(m.inner(base + 'missing-inner.js'));
+r.innerBare = await msg(m.inner('bare-y'));
+document.title = JSON.stringify(r);
+</script>

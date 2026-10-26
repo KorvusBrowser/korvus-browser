@@ -1,0 +1,39 @@
+{
+  "doc": {
+    "a": ["text/html,text/html;charset=utf-8"],
+    "b": ["text/html", "text/html;charset=utf-8"],
+    "c": ["text/plain,text/html"],
+    "d": ["bogus,text/html"],
+    "e": ["text/html,bogus"],
+    "f": ["text/html;charset=gbk,text/html"],
+    "g": ["text/html,text/html;charset=gbk"],
+    "h": ["*/*"],
+    "i": [""],
+    "j": ["text/html;charset=gbk,text/plain"],
+    "k": ["text/plain"],
+    "l": ["text/plain", "text/html"]
+  },
+  "script": {
+    "a": ["text/javascript,text/html"],
+    "b": ["text/html,text/javascript"],
+    "c": ["text/html", "text/javascript"],
+    "d": ["text/javascript", "text/html"]
+  },
+  "style": {
+    "a": ["text/css,text/plain"],
+    "b": ["text/plain,text/css"],
+    "c": ["text/plain", "text/css"],
+    "d": ["text/css", "text/plain"],
+    "e": []
+  },
+  "xhr": {
+    "a": ["text/plain,text/xml"],
+    "b": ["text/xml,text/plain"],
+    "c": ["text/html", "text/xml"]
+  },
+  "fetch": {
+    "a": ["text/plain;charset=gbk,text/html"],
+    "b": ["Text/Plain; Charset=UTF-8"],
+    "c": ["text/html", "text/plain"]
+  }
+}

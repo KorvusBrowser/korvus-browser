@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "Table",
+    "member": "constructor",
+    "expr": "new Table()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

@@ -1,0 +1,158 @@
+[
+ [
+  "html element",
+  "<div xmlns=\"http://www.w3.org/1999/xhtml\" a=\"x&quot;&lt;&gt;&amp;\"><b>t&amp;&lt;</b><br />text<!--c--></div>"
+ ],
+ [
+  "text",
+  "a&lt;b&gt;&amp;\""
+ ],
+ [
+  "comment",
+  "<!--x-->"
+ ],
+ [
+  "svg",
+  "<svg xmlns=\"http://www.w3.org/2000/svg\"><rect/></svg>"
+ ],
+ [
+  "fragment",
+  "<p xmlns=\"http://www.w3.org/1999/xhtml\"></p>z"
+ ],
+ [
+  "doctype",
+  "<!DOCTYPE html>"
+ ],
+ [
+  "doctype ids",
+  "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">"
+ ],
+ [
+  "xml element names",
+  [
+   "urn:d",
+   "urn:a",
+   "a",
+   "c",
+   "urn:d"
+  ]
+ ],
+ [
+  "xml attribute names",
+  [
+   [
+    "xmlns:a",
+    "http://www.w3.org/2000/xmlns/",
+    "xmlns",
+    "a"
+   ],
+   [
+    "xmlns",
+    "http://www.w3.org/2000/xmlns/",
+    null,
+    "xmlns"
+   ]
+  ]
+ ],
+ [
+  "xml document",
+  "<root xmlns:a=\"urn:a\" xmlns=\"urn:d\"><a:c d=\"1\"/><e/></root>"
+ ],
+ [
+  "xml outerHTML",
+  "<root xmlns:a=\"urn:a\" xmlns=\"urn:d\"><a:c d=\"1\"/><e/></root>"
+ ],
+ [
+  "xml innerHTML",
+  "<a:c xmlns:a=\"urn:a\" d=\"1\"/><e xmlns=\"urn:d\"/>"
+ ],
+ [
+  "whitespace escapes",
+  "<div xmlns=\"http://www.w3.org/1999/xhtml\" t=\"a&#9;b&#10;c&#13;d\">x\ty\nz\r&gt;</div>"
+ ],
+ [
+  "template",
+  "<template xmlns=\"http://www.w3.org/1999/xhtml\"><i>q</i></template>"
+ ],
+ [
+  "pi and cdata",
+  "<r><?pt pd?><![CDATA[a]b<&]]></r>"
+ ],
+ [
+  "null namespace child",
+  "<div xmlns=\"http://www.w3.org/1999/xhtml\" t=\"a&#9;b&#10;c&#13;d\">x\ty\nz\r&gt;<nonamespace xmlns=\"\"/></div>"
+ ],
+ [
+  "xlink attribute",
+  "<svg xmlns=\"http://www.w3.org/2000/svg\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#a\"/></svg>"
+ ],
+ [
+  "html document",
+  "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>T</title></head><body></body></html>"
+ ],
+ [
+  "html attributes",
+  [
+   [
+    "xmlns",
+    null,
+    null,
+    "xmlns"
+   ],
+   [
+    "xmlns:foo",
+    null,
+    null,
+    "xmlns:foo"
+   ],
+   [
+    "xml:lang",
+    null,
+    null,
+    "xml:lang"
+   ]
+  ]
+ ],
+ [
+  "foreign attributes",
+  [
+   [
+    "xmlns",
+    "http://www.w3.org/2000/xmlns/",
+    null,
+    "xmlns"
+   ],
+   [
+    "xmlns:xlink",
+    "http://www.w3.org/2000/xmlns/",
+    "xmlns",
+    "xlink"
+   ],
+   [
+    "xlink:href",
+    "http://www.w3.org/1999/xlink",
+    "xlink",
+    "href"
+   ]
+  ]
+ ],
+ [
+  "html p attributes",
+  [
+   [
+    "xlink:href",
+    null,
+    null,
+    "xlink:href"
+   ]
+  ]
+ ],
+ [
+  "parsed html serialized",
+  "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:foo=\"urn:f\" xml:lang=\"en\"><head></head><body><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><use xlink:href=\"#a\"/></svg><p xlink:href=\"x\">t</p></body></html>"
+ ],
+ [
+  "not a node",
+  "TypeError"
+ ]
+]

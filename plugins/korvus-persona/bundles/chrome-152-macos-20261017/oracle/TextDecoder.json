@@ -1,0 +1,333 @@
+[
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder().encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('UTF-8').encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('unicode-1-1-utf-8').encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('Shift_JIS').encoding",
+    "expected": "shift_jis",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('  shift-jis  ').encoding",
+    "expected": "shift_jis",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('utf-16le').encoding",
+    "expected": "utf-16le",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('windows-1252').encoding",
+    "expected": "windows-1252",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).encoding",
+    "expected": "utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "new TextDecoder().fatal",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "new TextDecoder('utf-8', { fatal: true }).fatal",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "new TextDecoder('utf-8', { fatal: false }).fatal",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "new TextDecoder('utf-8', { FATAL: true }).fatal",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "new TextDecoder('shift_jis', { ignoreBOM: true }).fatal",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "(() => { const d = new TextDecoder('utf-8', { fatal: true }); return [d.fatal, d.decode(new Uint8Array([97]))]; })()",
+    "expected": [
+      true,
+      "a"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder().ignoreBOM",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder('utf-8', { ignoreBOM: true }).ignoreBOM",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder('utf-8', { ignorebom: true }).ignoreBOM",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder('utf-8', { ignoreBOM: true, fatal: true }).ignoreBOM",
+    "expected": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder('utf-8', { ignoreBOM: true }).decode(new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]))",
+    "expected": "﻿abc",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "(() => { const d = new TextDecoder('utf-8', { ignoreBOM: true }); const b = new Uint8Array([0xEF, 0xBB, 0xBF, 0x61]); return [d.decode(b), d.decode(b)]; })()",
+    "expected": [
+      "﻿a",
+      "﻿a"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "new TextDecoder('utf-16le', { ignoreBOM: true }).decode(new Uint8Array([0xFF, 0xFE, 0x61, 0x00, 0x62, 0x00, 0x63, 0x00]))",
+    "expected": "﻿abc",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([72, 105]))",
+    "expected": "Hi",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(undefined)",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]))",
+    "expected": "abc",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0x61, 0xEF, 0xBB, 0xBF, 0x62]))",
+    "expected": "a﻿b",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0xC3, 0xA9]))",
+    "expected": "é",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0xF0, 0x9F, 0x98, 0x80]))",
+    "expected": "😀",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0x61, 0x62]).buffer)",
+    "expected": "ab",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new DataView(new Uint8Array([0xE2, 0x82, 0xAC]).buffer))",
+    "expected": "€",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0x61, 0x62, 0x63]).subarray(1))",
+    "expected": "bc",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0xFF]))",
+    "expected": "�",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder().decode(new Uint8Array([0xE2, 0x82]))",
+    "expected": "�",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder('utf-8', { fatal: true }).decode(new Uint8Array([0xFF]))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "(() => { const d = new TextDecoder(); const a = d.decode(new Uint8Array([0xF0, 0x9F]), { stream: true }); const b = d.decode(new Uint8Array([0x98, 0x80])); return [a, b]; })()",
+    "expected": [
+      "",
+      "😀"
+    ],
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "(() => { const d = new TextDecoder(); d.decode(new Uint8Array([0xC9]), { stream: true }); return d.decode(undefined); })()",
+    "expected": "�",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "(() => { const d = new TextDecoder(); d.decode(new Uint8Array([0xE2, 0x82])); return d.decode(new Uint8Array([0xAC])); })()",
+    "expected": "�",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder('shift_jis').decode(new Uint8Array([0x82, 0x60]))",
+    "expected": "Ａ",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder('utf-16le').decode(new Uint8Array([0x61, 0x00, 0x62, 0x00]))",
+    "expected": "ab",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder('utf-16le').decode(new Uint8Array([0xFF, 0xFE, 0x61, 0x00]))",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "new TextDecoder('utf-16be').decode(new Uint8Array([0x00, 0x61]))",
+    "expected": "a",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "constructor",
+    "expr": "(() => { const o = new TextDecoder(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object TextDecoder]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "decode",
+    "expr": "(() => { const o = new TextDecoder(); return o.decode(); })()",
+    "expected": "",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "encoding",
+    "expr": "(() => { const o = new TextDecoder(); return o.encoding; })()",
+    "expected": "utf-8",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "fatal",
+    "expr": "(() => { const o = new TextDecoder(); return o.fatal; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "TextDecoder",
+    "member": "ignoreBOM",
+    "expr": "(() => { const o = new TextDecoder(); return o.ignoreBOM; })()",
+    "expected": false,
+    "source": "chrome-152-macos-20261017"
+  }
+]

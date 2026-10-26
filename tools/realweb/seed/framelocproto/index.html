@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><body>
+<script>
+// TEMPLATES P8 B35: a frame's `location` has Location's IMMUTABLE prototype, as the page's has -- the bit
+// belongs to Location's instance template, and every Location is made from it. Probed from the page and
+// from the frame's own realm; the page's own `location` is the control.
+const out = {};
+const probe = (k, loc) => {
+  out[k + '.reflect'] = String(Reflect.setPrototypeOf(loc, {}));
+  try { Object.setPrototypeOf(loc, {}); out[k + '.set'] = 'no throw'; }
+  catch (e) { out[k + '.set'] = e.constructor.name + ': ' + e.message; }
+  out[k + '.isLocation'] = String(Object.prototype.toString.call(loc));
+};
+probe('page', location);
+const f = document.createElement('iframe');
+f.srcdoc = '<script>parent.frameProbe = () => { const o = {}; o.reflect = String(Reflect.setPrototypeOf(location, {})); ' +
+  'try { Object.setPrototypeOf(location, {}); o.set = "no throw"; } catch (e) { o.set = e.constructor.name + ": " + e.message; } ' +
+  'o.own = String(Object.getPrototypeOf(location) === Location.prototype); return o; };<\/script>';
+f.onload = () => {
+  probe('frameFromPage', f.contentWindow.location);
+  out.frameProtoIsItsOwn = String(Object.getPrototypeOf(f.contentWindow.location) === f.contentWindow.Location.prototype);
+  const inner = window.frameProbe ? window.frameProbe() : { missing: 'true' };
+  for (const k of Object.keys(inner)) out['frameInside.' + k] = inner[k];
+  window.R = JSON.stringify(out);
+};
+document.body.appendChild(f);
+</script>

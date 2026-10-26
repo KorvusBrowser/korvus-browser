@@ -1,0 +1,72 @@
+[
+  {
+    "iface": "XRHitTestResult",
+    "member": "constructor",
+    "expr": "new XRHitTestResult()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "getPose",
+    "expr": "XRHitTestResult.prototype.getPose.call({})",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "getPose",
+    "expr": "XRHitTestResult.prototype.getPose.call(Object.create(XRHitTestResult.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "createAnchor",
+    "expr": "Object.prototype.toString.call(XRHitTestResult.prototype.createAnchor.call({}))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "createAnchor",
+    "expr": "Object.prototype.toString.call(XRHitTestResult.prototype.createAnchor.call(Object.create(XRHitTestResult.prototype)))",
+    "expected": "[object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "getPose",
+    "expr": "XRHitTestResult.prototype.getPose.call({}, 1)",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "getPose",
+    "expr": "(() => { try { const v = XRHitTestResult.prototype[\"getPose\"].call({}, 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "getPose",
+    "expr": "(() => { try { const v = XRHitTestResult.prototype[\"getPose\"].call(Object.create(XRHitTestResult.prototype), 1); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "createAnchor",
+    "expr": "(() => { try { const v = XRHitTestResult.prototype[\"createAnchor\"].call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "XRHitTestResult",
+    "member": "createAnchor",
+    "expr": "(() => { try { const v = XRHitTestResult.prototype[\"createAnchor\"].call(Object.create(XRHitTestResult.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "returned [object Promise]",
+    "source": "chrome-152-macos-20261017"
+  }
+]

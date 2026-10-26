@@ -1,0 +1,34 @@
+<!doctype html><meta charset=utf-8><body><script>
+// TEMPLATES P7 B26: a platform object is an instance of its interface whichever realm's function is called
+// on it (Chrome's V8 signature is per isolate). Three hand-written checks compared the receiver's chain with
+// the CALLING realm's prototype only -- Crypto's, the plugin arrays', scheduler.postTask's signal -- so a
+// frame's function refused the page's object and the reverse: shopee.com.br's security module calls a
+// frame's crypto.getRandomValues on the page's crypto, and its app never started.
+const out = {};
+const t = (k, fn) => { try { const v = fn(); out[k] = v === undefined ? 'undefined' : (v && typeof v === 'object' ? Object.prototype.toString.call(v) + ':' + (v.length ?? '') : typeof v + ':' + String(v).length); } catch (e) { out[k] = 'ERR ' + e.name + ': ' + e.message; } };
+const f = document.createElement('iframe');
+document.body.appendChild(f);
+const fw = f.contentWindow;
+t('grvFrameFnPageRecv', () => fw.crypto.getRandomValues.call(crypto, new Uint8Array(4)));
+t('grvPageFnFrameRecv', () => crypto.getRandomValues.call(fw.crypto, new Uint8Array(4)));
+t('uuidFrameFnPageRecv', () => fw.crypto.randomUUID.call(crypto));
+t('subtleFrameGetterPageRecv', () => Object.getOwnPropertyDescriptor(fw.Crypto.prototype, 'subtle').get.call(crypto));
+t('grvForeignRecv', () => crypto.getRandomValues.call({}, new Uint8Array(4)));
+t('grvProtoRecv', () => Crypto.prototype.getRandomValues.call(Crypto.prototype, new Uint8Array(4)));
+t('pluginsItemCross', () => fw.PluginArray.prototype.item.call(navigator.plugins, 0));
+t('pluginsLengthCross', () => Object.getOwnPropertyDescriptor(fw.PluginArray.prototype, 'length').get.call(navigator.plugins));
+t('mimeItemCross', () => fw.MimeTypeArray.prototype.item.call(navigator.mimeTypes, 0));
+t('pluginsForeign', () => PluginArray.prototype.item.call({}, 0));
+const results = [];
+const signalOf = (w) => new w.AbortController().signal;
+Promise.all([
+  scheduler.postTask(() => 'ran', { signal: signalOf(fw) }).then((v) => 'resolved:' + v, (e) => 'rejected:' + e.name + ':' + e.message),
+  (() => { const c = new fw.AbortController(); const p = scheduler.postTask(() => 'ran', { signal: c.signal }); c.abort(); return p.then((v) => 'resolved:' + v, (e) => 'rejected:' + e.name); })(),
+  scheduler.postTask(() => 'ran', { signal: {} }).then((v) => 'resolved:' + v, (e) => 'rejected:' + e.name + ':' + e.message),
+]).then(([a, b, c]) => {
+  out.postTaskFrameSignal = a;
+  out.postTaskFrameSignalAborted = b;
+  out.postTaskPlainSignal = c;
+  window.R = JSON.stringify(out);
+});
+</script>

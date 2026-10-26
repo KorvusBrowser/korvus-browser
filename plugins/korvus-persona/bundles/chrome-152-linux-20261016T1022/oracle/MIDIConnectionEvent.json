@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "MIDIConnectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MIDIConnectionEvent(\"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object MIDIConnectionEvent]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MIDIConnectionEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MIDIConnectionEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MIDIConnectionEvent",
+    "member": "port",
+    "expr": "(() => { const o = new MIDIConnectionEvent(\"x\"); return o.port; })()",
+    "expected": null,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

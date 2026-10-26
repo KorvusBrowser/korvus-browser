@@ -1,0 +1,177 @@
+[
+  {
+    "iface": "VTTCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object VTTCue]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new VTTCue(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "constructor",
+    "expr": "(() => { const o = new VTTCue(\"1\", \"1\", \"x\"); return Object.prototype.toString.call(o); })()",
+    "expected": "[object VTTCue]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "region",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.region; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "vertical",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.vertical; })()",
+    "expected": "",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "snapToLines",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.snapToLines; })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "snapToLines",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return (o.snapToLines = true, o.snapToLines); })()",
+    "expected": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "line",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.line; })()",
+    "expected": "auto",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "lineAlign",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.lineAlign; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "position",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.position; })()",
+    "expected": "auto",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "positionAlign",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.positionAlign; })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "size",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.size; })()",
+    "expected": 100,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "size",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return (o.size = 1, o.size); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "align",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.align; })()",
+    "expected": "center",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "text",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return o.text; })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "text",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return (o.text = \"x\", o.text); })()",
+    "expected": "x",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "size",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return (o.size = \"1\", o.size); })()",
+    "expected": 1,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "region",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.region); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "vertical",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.vertical); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "line",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.line); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "lineAlign",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.lineAlign); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "position",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.position); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "positionAlign",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.positionAlign); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "align",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.align); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "VTTCue",
+    "member": "getCueAsHTML",
+    "expr": "(() => { const o = new VTTCue(1, 1, \"x\"); return Object.prototype.toString.call(o.getCueAsHTML()); })()",
+    "expected": "[object DocumentFragment]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

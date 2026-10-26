@@ -1,0 +1,1460 @@
+[
+[
+"(any-hover)",
+true,
+"(any-hover)"
+],
+[
+"(any-hover: none)",
+false,
+"(any-hover: none)"
+],
+[
+"(any-hover: hover)",
+true,
+"(any-hover: hover)"
+],
+[
+"(any-hover: fine)",
+false,
+"(any-hover: fine)"
+],
+[
+"(hover)",
+true,
+"(hover)"
+],
+[
+"(hover: none)",
+false,
+"(hover: none)"
+],
+[
+"(hover: hover)",
+true,
+"(hover: hover)"
+],
+[
+"(any-pointer)",
+true,
+"(any-pointer)"
+],
+[
+"(any-pointer: none)",
+false,
+"(any-pointer: none)"
+],
+[
+"(any-pointer: coarse)",
+false,
+"(any-pointer: coarse)"
+],
+[
+"(any-pointer: fine)",
+true,
+"(any-pointer: fine)"
+],
+[
+"(pointer)",
+true,
+"(pointer)"
+],
+[
+"(pointer: none)",
+false,
+"(pointer: none)"
+],
+[
+"(pointer: coarse)",
+false,
+"(pointer: coarse)"
+],
+[
+"(pointer: fine)",
+true,
+"(pointer: fine)"
+],
+[
+"(pointer: hover)",
+false,
+"(pointer: hover)"
+],
+[
+"(color)",
+true,
+"(color)"
+],
+[
+"(color: 8)",
+true,
+"(color: 8)"
+],
+[
+"(min-color: 1)",
+true,
+"(min-color: 1)"
+],
+[
+"(max-color: 8)",
+true,
+"(max-color: 8)"
+],
+[
+"(max-color: 7)",
+false,
+"(max-color: 7)"
+],
+[
+"(color: 0)",
+false,
+"(color: 0)"
+],
+[
+"(color > 4)",
+true,
+"(color > 4)"
+],
+[
+"(color: 8.5)",
+false,
+"(color: 8.5)"
+],
+[
+"(min-color: 10)",
+false,
+"(min-color: 10)"
+],
+[
+"(color: 8px)",
+false,
+"(color: 8px)"
+],
+[
+"(color-index)",
+false,
+"(color-index)"
+],
+[
+"(color-index: 0)",
+true,
+"(color-index: 0)"
+],
+[
+"(min-color-index: 0)",
+true,
+"(min-color-index: 0)"
+],
+[
+"(max-color-index: 0)",
+true,
+"(max-color-index: 0)"
+],
+[
+"(min-color-index: 1)",
+false,
+"(min-color-index: 1)"
+],
+[
+"(monochrome)",
+false,
+"(monochrome)"
+],
+[
+"(monochrome: 0)",
+true,
+"(monochrome: 0)"
+],
+[
+"(min-monochrome: 0)",
+true,
+"(min-monochrome: 0)"
+],
+[
+"(max-monochrome: 0)",
+true,
+"(max-monochrome: 0)"
+],
+[
+"(monochrome: 1)",
+false,
+"(monochrome: 1)"
+],
+[
+"(monochrome >= 0)",
+true,
+"(monochrome >= 0)"
+],
+[
+"(color-gamut)",
+true,
+"(color-gamut)"
+],
+[
+"(color-gamut: srgb)",
+true,
+"(color-gamut: srgb)"
+],
+[
+"(color-gamut: p3)",
+false,
+"(color-gamut: p3)"
+],
+[
+"(color-gamut: rec2020)",
+false,
+"(color-gamut: rec2020)"
+],
+[
+"(color-gamut: foo)",
+false,
+"(color-gamut: foo)"
+],
+[
+"(dynamic-range)",
+false,
+"(dynamic-range)"
+],
+[
+"(dynamic-range: standard)",
+true,
+"(dynamic-range: standard)"
+],
+[
+"(dynamic-range: high)",
+false,
+"(dynamic-range: high)"
+],
+[
+"(video-dynamic-range)",
+false,
+"(video-dynamic-range)"
+],
+[
+"(video-dynamic-range: standard)",
+false,
+"(video-dynamic-range: standard)"
+],
+[
+"(video-dynamic-range: high)",
+false,
+"(video-dynamic-range: high)"
+],
+[
+"(forced-colors)",
+false,
+"(forced-colors)"
+],
+[
+"(forced-colors: none)",
+true,
+"(forced-colors: none)"
+],
+[
+"(forced-colors: active)",
+false,
+"(forced-colors: active)"
+],
+[
+"(inverted-colors)",
+false,
+"(inverted-colors)"
+],
+[
+"(inverted-colors: none)",
+false,
+"(inverted-colors: none)"
+],
+[
+"(inverted-colors: inverted)",
+false,
+"(inverted-colors: inverted)"
+],
+[
+"(prefers-color-scheme)",
+true,
+"(prefers-color-scheme)"
+],
+[
+"(prefers-color-scheme: light)",
+true,
+"(prefers-color-scheme: light)"
+],
+[
+"(prefers-color-scheme: dark)",
+false,
+"(prefers-color-scheme: dark)"
+],
+[
+"(prefers-color-scheme: no-preference)",
+false,
+"(prefers-color-scheme: no-preference)"
+],
+[
+"(prefers-contrast)",
+false,
+"(prefers-contrast)"
+],
+[
+"(prefers-contrast: no-preference)",
+true,
+"(prefers-contrast: no-preference)"
+],
+[
+"(prefers-contrast: more)",
+false,
+"(prefers-contrast: more)"
+],
+[
+"(prefers-contrast: less)",
+false,
+"(prefers-contrast: less)"
+],
+[
+"(prefers-contrast: custom)",
+false,
+"(prefers-contrast: custom)"
+],
+[
+"(prefers-reduced-motion)",
+false,
+"(prefers-reduced-motion)"
+],
+[
+"(prefers-reduced-motion: no-preference)",
+true,
+"(prefers-reduced-motion: no-preference)"
+],
+[
+"(prefers-reduced-motion: reduce)",
+false,
+"(prefers-reduced-motion: reduce)"
+],
+[
+"(prefers-reduced-data)",
+false,
+"(prefers-reduced-data)"
+],
+[
+"(prefers-reduced-data: no-preference)",
+false,
+"(prefers-reduced-data: no-preference)"
+],
+[
+"(prefers-reduced-data: reduce)",
+false,
+"(prefers-reduced-data: reduce)"
+],
+[
+"(prefers-reduced-transparency)",
+false,
+"(prefers-reduced-transparency)"
+],
+[
+"(prefers-reduced-transparency: no-preference)",
+true,
+"(prefers-reduced-transparency: no-preference)"
+],
+[
+"(prefers-reduced-transparency: reduce)",
+false,
+"(prefers-reduced-transparency: reduce)"
+],
+[
+"(grid)",
+false,
+"(grid)"
+],
+[
+"(grid: 0)",
+true,
+"(grid: 0)"
+],
+[
+"(grid: 1)",
+false,
+"(grid: 1)"
+],
+[
+"(grid: 2)",
+false,
+"(grid: 2)"
+],
+[
+"(min-grid: 0)",
+false,
+"(min-grid: 0)"
+],
+[
+"(grid: 0.0)",
+true,
+"(grid: 0)"
+],
+[
+"(scan)",
+false,
+"(scan)"
+],
+[
+"(scan: progressive)",
+false,
+"(scan: progressive)"
+],
+[
+"(scan: interlace)",
+false,
+"(scan: interlace)"
+],
+[
+"(update)",
+true,
+"(update)"
+],
+[
+"(update: none)",
+false,
+"(update: none)"
+],
+[
+"(update: slow)",
+false,
+"(update: slow)"
+],
+[
+"(update: fast)",
+true,
+"(update: fast)"
+],
+[
+"(overflow-inline)",
+true,
+"(overflow-inline)"
+],
+[
+"(overflow-inline: none)",
+false,
+"(overflow-inline: none)"
+],
+[
+"(overflow-inline: scroll)",
+true,
+"(overflow-inline: scroll)"
+],
+[
+"(overflow-inline: paged)",
+false,
+"(overflow-inline: paged)"
+],
+[
+"(overflow-block)",
+true,
+"(overflow-block)"
+],
+[
+"(overflow-block: none)",
+false,
+"(overflow-block: none)"
+],
+[
+"(overflow-block: scroll)",
+true,
+"(overflow-block: scroll)"
+],
+[
+"(overflow-block: paged)",
+false,
+"(overflow-block: paged)"
+],
+[
+"(scripting)",
+true,
+"(scripting)"
+],
+[
+"(scripting: enabled)",
+true,
+"(scripting: enabled)"
+],
+[
+"(scripting: initial-only)",
+false,
+"(scripting: initial-only)"
+],
+[
+"(scripting: none)",
+false,
+"(scripting: none)"
+],
+[
+"(display-mode)",
+true,
+"(display-mode)"
+],
+[
+"(display-mode: browser)",
+true,
+"(display-mode: browser)"
+],
+[
+"(display-mode: fullscreen)",
+false,
+"(display-mode: fullscreen)"
+],
+[
+"(display-mode: standalone)",
+false,
+"(display-mode: standalone)"
+],
+[
+"(display-mode: minimal-ui)",
+false,
+"(display-mode: minimal-ui)"
+],
+[
+"(display-mode: window-controls-overlay)",
+false,
+"(display-mode: window-controls-overlay)"
+],
+[
+"(display-mode: tabbed)",
+false,
+"(display-mode: tabbed)"
+],
+[
+"(display-mode: picture-in-picture)",
+false,
+"(display-mode: picture-in-picture)"
+],
+[
+"(display-mode: unframed)",
+false,
+"(display-mode: unframed)"
+],
+[
+"(display-mode: foo)",
+false,
+"(display-mode: foo)"
+],
+[
+"(display-state)",
+false,
+"(display-state)"
+],
+[
+"(display-state: normal)",
+false,
+"(display-state: normal)"
+],
+[
+"(resizable)",
+false,
+"(resizable)"
+],
+[
+"(resizable: true)",
+false,
+"(resizable: true)"
+],
+[
+"(device-posture)",
+true,
+"(device-posture)"
+],
+[
+"(device-posture: continuous)",
+true,
+"(device-posture: continuous)"
+],
+[
+"(device-posture: folded)",
+false,
+"(device-posture: folded)"
+],
+[
+"(horizontal-viewport-segments)",
+true,
+"(horizontal-viewport-segments)"
+],
+[
+"(horizontal-viewport-segments: 1)",
+true,
+"(horizontal-viewport-segments: 1)"
+],
+[
+"(horizontal-viewport-segments: 2)",
+false,
+"(horizontal-viewport-segments: 2)"
+],
+[
+"(horizontal-viewport-segments >= 1)",
+true,
+"(horizontal-viewport-segments >= 1)"
+],
+[
+"(min-horizontal-viewport-segments: 1)",
+false,
+"(min-horizontal-viewport-segments: 1)"
+],
+[
+"(vertical-viewport-segments)",
+true,
+"(vertical-viewport-segments)"
+],
+[
+"(vertical-viewport-segments: 1)",
+true,
+"(vertical-viewport-segments: 1)"
+],
+[
+"(vertical-viewport-segments: 0)",
+false,
+"(vertical-viewport-segments: 0)"
+],
+[
+"(vertical-viewport-segments < 2)",
+true,
+"(vertical-viewport-segments < 2)"
+],
+[
+"(-webkit-transform-3d)",
+true,
+"(-webkit-transform-3d)"
+],
+[
+"(-webkit-transform-3d: 1)",
+true,
+"(-webkit-transform-3d: 1)"
+],
+[
+"(-webkit-transform-3d: 0)",
+false,
+"(-webkit-transform-3d: 0)"
+],
+[
+"(-webkit-transform-3d: 2)",
+false,
+"(-webkit-transform-3d: 2)"
+],
+[
+"(-webkit-transform-3d: 1.0)",
+true,
+"(-webkit-transform-3d: 1)"
+],
+[
+"(-webkit-device-pixel-ratio)",
+true,
+"(-webkit-device-pixel-ratio)"
+],
+[
+"(-webkit-min-device-pixel-ratio: 0.5)",
+true,
+"(-webkit-min-device-pixel-ratio: 0.5)"
+],
+[
+"(-webkit-max-device-pixel-ratio: 100)",
+true,
+"(-webkit-max-device-pixel-ratio: 100)"
+],
+[
+"(-webkit-device-pixel-ratio: 1dppx)",
+false,
+"(-webkit-device-pixel-ratio: 1dppx)"
+],
+[
+"(-webkit-min-device-pixel-ratio: 1.5)",
+false,
+"(-webkit-min-device-pixel-ratio: 1.5)"
+],
+[
+"(resolution)",
+true,
+"(resolution)"
+],
+[
+"(min-resolution: 0.5dppx)",
+true,
+"(min-resolution: 0.5dppx)"
+],
+[
+"(max-resolution: 100x)",
+true,
+"(max-resolution: 100x)"
+],
+[
+"(min-resolution: 48dpi)",
+true,
+"(min-resolution: 48dpi)"
+],
+[
+"(min-resolution: 18.9dpcm)",
+true,
+"(min-resolution: 18.9dpcm)"
+],
+[
+"(resolution: 1)",
+false,
+"(resolution: 1)"
+],
+[
+"(resolution > 0.1dppx)",
+true,
+"(resolution > 0.1dppx)"
+],
+[
+"(min-resolution: -1dppx)",
+false,
+"(min-resolution: -1dppx)"
+],
+[
+"(MIN-RESOLUTION: 2X)",
+false,
+"(min-resolution: 2x)"
+],
+[
+"(min-resolution: 100x)",
+false,
+"(min-resolution: 100x)"
+],
+[
+"(width)",
+true,
+"(width)"
+],
+[
+"(height)",
+true,
+"(height)"
+],
+[
+"(min-width: 1px)",
+true,
+"(min-width: 1px)"
+],
+[
+"(max-width: 100000px)",
+true,
+"(max-width: 100000px)"
+],
+[
+"(width > 0)",
+true,
+"(width > 0)"
+],
+[
+"(0 < width < 100000px)",
+true,
+"(0 < width < 100000px)"
+],
+[
+"(width: 100)",
+false,
+"(width: 100)"
+],
+[
+"(min-width: 0)",
+true,
+"(min-width: 0)"
+],
+[
+"(width >= 10em)",
+true,
+"(width >= 10em)"
+],
+[
+"(min-width: calc(10px + 1em))",
+true,
+"(min-width: calc(1em + 10px))"
+],
+[
+"(width >= calc(100px * 2))",
+true,
+"(width >= calc(200px))"
+],
+[
+"(10px < width)",
+true,
+"(10px < width)"
+],
+[
+"(100000px > width > 1px)",
+true,
+"(100000px > width > 1px)"
+],
+[
+"(1px < width > 2px)",
+false,
+"(1px < width > 2px)"
+],
+[
+"(width = 5px)",
+false,
+"(width = 5px)"
+],
+[
+"(min-width: 1e3px)",
+true,
+"(min-width: 1000px)"
+],
+[
+"(min-width: .5em)",
+true,
+"(min-width: 0.5em)"
+],
+[
+"(min-height: 1px)",
+true,
+"(min-height: 1px)"
+],
+[
+"(max-height: 100000px)",
+true,
+"(max-height: 100000px)"
+],
+[
+"(height > 0px)",
+true,
+"(height > 0px)"
+],
+[
+"(device-width)",
+true,
+"(device-width)"
+],
+[
+"(device-height)",
+true,
+"(device-height)"
+],
+[
+"(min-device-width: 1px)",
+true,
+"(min-device-width: 1px)"
+],
+[
+"(max-device-width: 100000px)",
+true,
+"(max-device-width: 100000px)"
+],
+[
+"(device-height > 1px)",
+true,
+"(device-height > 1px)"
+],
+[
+"(min-device-height: 0)",
+true,
+"(min-device-height: 0)"
+],
+[
+"(orientation)",
+true,
+"(orientation)"
+],
+[
+"(orientation: foo)",
+false,
+"(orientation: foo)"
+],
+[
+"(min-orientation: landscape)",
+false,
+"(min-orientation: landscape)"
+],
+[
+"(aspect-ratio)",
+true,
+"(aspect-ratio)"
+],
+[
+"(min-aspect-ratio: 1/100)",
+true,
+"(min-aspect-ratio: 1 / 100)"
+],
+[
+"(max-aspect-ratio: 100/1)",
+true,
+"(max-aspect-ratio: 100 / 1)"
+],
+[
+"(min-aspect-ratio: 0.01)",
+true,
+"(min-aspect-ratio: 0.01 / 1)"
+],
+[
+"(max-aspect-ratio: 100)",
+true,
+"(max-aspect-ratio: 100 / 1)"
+],
+[
+"(aspect-ratio: 0/0)",
+false,
+"(aspect-ratio: 1 / 0)"
+],
+[
+"(min-aspect-ratio: 16 / 9 )",
+true,
+"(min-aspect-ratio: 16 / 9)"
+],
+[
+"(aspect-ratio > 1/100)",
+true,
+"(aspect-ratio > 1 / 100)"
+],
+[
+"(min-aspect-ratio: -1/2)",
+false,
+"(min-aspect-ratio: -1/2)"
+],
+[
+"(min-aspect-ratio: 1/-2)",
+false,
+"(min-aspect-ratio: 1/-2)"
+],
+[
+"(device-aspect-ratio)",
+true,
+"(device-aspect-ratio)"
+],
+[
+"(min-device-aspect-ratio: 1/100)",
+true,
+"(min-device-aspect-ratio: 1 / 100)"
+],
+[
+"(max-device-aspect-ratio: 100/1)",
+true,
+"(max-device-aspect-ratio: 100 / 1)"
+],
+[
+"(inline-size)",
+false,
+"(inline-size)"
+],
+[
+"(min-inline-size: 1px)",
+false,
+"(min-inline-size: 1px)"
+],
+[
+"(block-size > 0px)",
+false,
+"(block-size > 0px)"
+],
+[
+"(stuck: top)",
+false,
+"(stuck: top)"
+],
+[
+"(snapped: x)",
+false,
+"(snapped: x)"
+],
+[
+"(scrollable: top)",
+false,
+"(scrollable: top)"
+],
+[
+"(scrolled: top)",
+false,
+"(scrolled: top)"
+],
+[
+"(fallback)",
+false,
+"(fallback)"
+],
+[
+"(navigation-controls)",
+false,
+"(navigation-controls)"
+],
+[
+"(navigation-controls: back-button)",
+false,
+"(navigation-controls: back-button)"
+],
+[
+"(nav-controls: back)",
+false,
+"(nav-controls: back)"
+],
+[
+"(origin-trial-test)",
+false,
+"(origin-trial-test)"
+],
+[
+"(environment-blending: opaque)",
+false,
+"(environment-blending: opaque)"
+],
+[
+"(shape: rect)",
+false,
+"(shape: rect)"
+],
+[
+"(foo)",
+false,
+"(foo)"
+],
+[
+"(foo: bar)",
+false,
+"(foo: bar)"
+],
+[
+"(  foo  :  bar  )",
+false,
+"(  foo  :  bar  )"
+],
+[
+"(--x)",
+false,
+"(--x)"
+],
+[
+"(--x: 1)",
+false,
+"(--x: 1)"
+],
+[
+"",
+true,
+""
+],
+[
+" ",
+true,
+""
+],
+[
+"all",
+true,
+"all"
+],
+[
+"screen",
+true,
+"screen"
+],
+[
+"SCREEN",
+true,
+"screen"
+],
+[
+"print",
+false,
+"print"
+],
+[
+"tv",
+false,
+"tv"
+],
+[
+"speech",
+false,
+"speech"
+],
+[
+"foo",
+false,
+"foo"
+],
+[
+"not print",
+true,
+"not print"
+],
+[
+"not screen",
+false,
+"not screen"
+],
+[
+"not foo",
+true,
+"not foo"
+],
+[
+"only screen",
+true,
+"only screen"
+],
+[
+"only print",
+false,
+"only print"
+],
+[
+"only",
+false,
+"not all"
+],
+[
+"not screen and (color)",
+false,
+"not screen and (color)"
+],
+[
+"only screen and (min-width: 1px)",
+true,
+"only screen and (min-width: 1px)"
+],
+[
+"Screen And (Color)",
+true,
+"screen and (color)"
+],
+[
+"screen and (color), print",
+true,
+"screen and (color), print"
+],
+[
+"print, screen",
+true,
+"print, screen"
+],
+[
+"print, speech",
+false,
+"print, speech"
+],
+[
+"(color) and (hover)",
+true,
+"(color) and (hover)"
+],
+[
+"(color) or (hover)",
+true,
+"(color) or (hover)"
+],
+[
+"(color) and (hover) and (pointer: fine)",
+true,
+"(color) and (hover) and (pointer: fine)"
+],
+[
+"(color) or (foo)",
+true,
+"(color) or (foo)"
+],
+[
+"(foo) or (color)",
+true,
+"(foo) or (color)"
+],
+[
+"(foo) and (color)",
+false,
+"(foo) and (color)"
+],
+[
+"screen and (color) or (hover)",
+false,
+"not all"
+],
+[
+"(color) and (hover) or (pointer)",
+false,
+"not all"
+],
+[
+"not (color)",
+false,
+"not (color)"
+],
+[
+"not (foo)",
+false,
+"not (foo)"
+],
+[
+"not (color) and (hover)",
+false,
+"not all"
+],
+[
+"(not (color))",
+false,
+"(not (color))"
+],
+[
+"((color))",
+true,
+"((color))"
+],
+[
+"((foo))",
+false,
+"((foo))"
+],
+[
+"(color) and (not (hover))",
+false,
+"(color) and (not (hover))"
+],
+[
+"not ((color) or (foo))",
+false,
+"not ((color) or (foo))"
+],
+[
+"not all",
+false,
+"not all"
+],
+[
+"not all and (color)",
+false,
+"not all and (color)"
+],
+[
+"screen,",
+true,
+"screen, not all"
+],
+[
+",screen",
+true,
+"not all, screen"
+],
+[
+"screen and",
+false,
+"not all"
+],
+[
+"and (color)",
+false,
+"not all"
+],
+[
+"screen and(color)",
+false,
+"not all"
+],
+[
+"screen and (color) and",
+false,
+"not all"
+],
+[
+"screen (color)",
+false,
+"not all"
+],
+[
+"screen foo",
+false,
+"not all"
+],
+[
+"screen, print foo, all",
+true,
+"screen, not all, all"
+],
+[
+"not only screen",
+false,
+"not all"
+],
+[
+"screen or print",
+false,
+"not all"
+],
+[
+"only (color)",
+false,
+"not all"
+],
+[
+"not not (color)",
+false,
+"not all"
+],
+[
+"(min-width:1px)",
+true,
+"(min-width: 1px)"
+],
+[
+"( min-width : 1PX )",
+true,
+"(min-width: 1px)"
+],
+[
+"(MIN-WIDTH: 1PX)",
+true,
+"(min-width: 1px)"
+],
+[
+"(width>=1px)",
+true,
+"(width >= 1px)"
+],
+[
+"(1px<=width)",
+true,
+"(1px <= width)"
+],
+[
+"(width >= 1px) and (width <= 99999px)",
+true,
+"(width >= 1px) and (width <= 99999px)"
+],
+[
+"(1px < width <= 99999px)",
+true,
+"(1px < width <= 99999px)"
+],
+[
+"(99999px > width >= 1px)",
+true,
+"(99999px > width >= 1px)"
+],
+[
+"(hover: hover) and (pointer: fine)",
+true,
+"(hover: hover) and (pointer: fine)"
+],
+[
+"foo(bar)",
+false,
+"foo(bar)"
+],
+[
+"screen and foo(bar)",
+false,
+"screen and foo(bar)"
+],
+[
+"(color) and foo(bar)",
+false,
+"(color) and foo(bar)"
+],
+[
+"not foo(bar)",
+false,
+"not foo(bar)"
+],
+[
+"(color:)",
+false,
+"(color:)"
+],
+[
+"(:8)",
+false,
+"(:8)"
+],
+[
+"(color: 8) (hover)",
+false,
+"not all"
+],
+[
+"screen and (color) , (hover)",
+true,
+"screen and (color), (hover)"
+],
+[
+"(width < 1e9px)",
+true,
+"(width < 1e+09px)"
+],
+[
+"(color /* c */)",
+true,
+"(color)"
+],
+[
+"/* c */ screen",
+true,
+"screen"
+],
+[
+"(width: calc(1px * sin(0.5)))",
+false,
+"(width: calc(0.479426px))"
+],
+[
+"(min-width: calc(1px * sin(0.5)))",
+true,
+"(min-width: calc(0.479426px))"
+],
+[
+"(min-width: calc(50% + 1px))",
+false,
+"(min-width: calc(50% + 1px))"
+],
+[
+"(min-width: 1vw)",
+true,
+"(min-width: 1vw)"
+],
+[
+"(max-width: 100vmax)",
+true,
+"(max-width: 100vmax)"
+],
+[
+"(min-height: 1vh)",
+true,
+"(min-height: 1vh)"
+],
+[
+"(min-width: 0.5rem)",
+true,
+"(min-width: 0.5rem)"
+],
+[
+"(min-width: 1Q)",
+true,
+"(min-width: 1q)"
+],
+[
+"(min-width: 1in)",
+true,
+"(min-width: 1in)"
+],
+[
+"(color: calc(4 + 4))",
+true,
+"(color: calc(8))"
+],
+[
+"@media #0",
+"screen and (min-width: 1px)",
+"screen and (min-width: 1px)",
+1,
+"@media screen and (min-width: 1px) {\n  a { color: red; }\n}"
+],
+[
+"@media #1",
+"(color) or (foo:bar)",
+"(color) or (foo:bar)",
+1,
+"@media (color) or (foo:bar) {\n  a { color: red; }\n}"
+],
+[
+"@media #2",
+"not all and (monochrome)",
+"not all and (monochrome)",
+1,
+"@media not all and (monochrome) {\n  a { color: red; }\n}"
+],
+[
+"@media #3",
+"(min-aspect-ratio: 16 / 9), print",
+"(min-aspect-ratio: 16 / 9), print",
+2,
+"@media (min-aspect-ratio: 16 / 9), print {\n  a { color: red; }\n}"
+]
+]

@@ -1,0 +1,2530 @@
+{
+ "nav": {
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "appVersion": "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "appName": "Netscape",
+  "appCodeName": "Mozilla",
+  "product": "Gecko",
+  "productSub": "20030107",
+  "vendor": "Google Inc.",
+  "vendorSub": "",
+  "platform": "MacIntel",
+  "language": "en-US",
+  "hardwareConcurrency": 3,
+  "deviceMemory": 8,
+  "maxTouchPoints": 0,
+  "pdfViewerEnabled": true,
+  "doNotTrack": null,
+  "cookieEnabled": true,
+  "onLine": true,
+  "webdriver": false,
+  "cpuPerformance": 2,
+  "languages": [
+   "en-US"
+  ],
+  "acceptLanguage": "en-US,en;q=0.9",
+  "plugins": [
+   {
+    "name": "PDF Viewer",
+    "description": "Portable Document Format",
+    "filename": "internal-pdf-viewer",
+    "length": 2,
+    "mimes": [
+     {
+      "type": "application/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     },
+     {
+      "type": "text/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     }
+    ]
+   },
+   {
+    "name": "Chrome PDF Viewer",
+    "description": "Portable Document Format",
+    "filename": "internal-pdf-viewer",
+    "length": 2,
+    "mimes": [
+     {
+      "type": "application/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     },
+     {
+      "type": "text/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     }
+    ]
+   },
+   {
+    "name": "Chromium PDF Viewer",
+    "description": "Portable Document Format",
+    "filename": "internal-pdf-viewer",
+    "length": 2,
+    "mimes": [
+     {
+      "type": "application/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     },
+     {
+      "type": "text/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     }
+    ]
+   },
+   {
+    "name": "Microsoft Edge PDF Viewer",
+    "description": "Portable Document Format",
+    "filename": "internal-pdf-viewer",
+    "length": 2,
+    "mimes": [
+     {
+      "type": "application/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     },
+     {
+      "type": "text/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     }
+    ]
+   },
+   {
+    "name": "WebKit built-in PDF",
+    "description": "Portable Document Format",
+    "filename": "internal-pdf-viewer",
+    "length": 2,
+    "mimes": [
+     {
+      "type": "application/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     },
+     {
+      "type": "text/pdf",
+      "suffixes": "pdf",
+      "description": "Portable Document Format"
+     }
+    ]
+   }
+  ],
+  "mimeTypes": [
+   {
+    "type": "application/pdf",
+    "suffixes": "pdf",
+    "description": "Portable Document Format",
+    "enabledPlugin": "PDF Viewer"
+   },
+   {
+    "type": "text/pdf",
+    "suffixes": "pdf",
+    "description": "Portable Document Format",
+    "enabledPlugin": "PDF Viewer"
+   }
+  ],
+  "userAgentData": {
+   "brands": [
+    {
+     "brand": "Not?A_Brand",
+     "version": "24"
+    },
+    {
+     "brand": "Chromium",
+     "version": "152"
+    }
+   ],
+   "mobile": false,
+   "platform": "macOS",
+   "highEntropy": {
+    "architecture": "arm",
+    "bitness": "64",
+    "brands": [
+     {
+      "brand": "Not?A_Brand",
+      "version": "24"
+     },
+     {
+      "brand": "Chromium",
+      "version": "152"
+     }
+    ],
+    "formFactors": [
+     "Desktop"
+    ],
+    "fullVersionList": [
+     {
+      "brand": "Not?A_Brand",
+      "version": "24.0.0.0"
+     },
+     {
+      "brand": "Chromium",
+      "version": "152.0.7977.82"
+     }
+    ],
+    "mobile": false,
+    "model": "",
+    "platform": "macOS",
+    "platformVersion": "14.8.9",
+    "uaFullVersion": "152.0.7977.82",
+    "wow64": false
+   }
+  },
+  "connection": {
+   "effectiveType": "4g",
+   "rtt": 100,
+   "downlink": 1.55,
+   "saveData": false
+  },
+  "storageEstimate": {
+   "quota": 10737418240,
+   "usage": 0,
+   "usageDetails": {}
+  },
+  "battery": {
+   "has": true,
+   "keys": [
+    "charging",
+    "chargingTime",
+    "dischargingTime",
+    "level",
+    "onchargingchange",
+    "onchargingtimechange",
+    "ondischargingtimechange",
+    "onlevelchange",
+    "constructor"
+   ]
+  },
+  "permissions": {
+   "geolocation": "prompt",
+   "notifications": "prompt",
+   "camera": "prompt",
+   "microphone": "prompt",
+   "midi": "prompt",
+   "background-sync": "granted",
+   "persistent-storage": "prompt",
+   "clipboard-read": "prompt",
+   "clipboard-write": "granted",
+   "accelerometer": "granted",
+   "gyroscope": "granted",
+   "magnetometer": "granted",
+   "screen-wake-lock": "granted",
+   "payment-handler": "granted",
+   "storage-access": "granted",
+   "idle-detection": "prompt",
+   "background-fetch": "granted",
+   "periodic-background-sync": "denied",
+   "keyboard-lock": "prompt",
+   "pointer-lock": "granted",
+   "display-capture": "prompt",
+   "local-fonts": "prompt",
+   "window-management": "prompt",
+   "captured-surface-control": "prompt",
+   "local-network-access": "prompt",
+   "local-network": "prompt",
+   "loopback-network": "prompt"
+  },
+  "mediaDevices": {
+   "count": 2,
+   "kinds": [
+    "audioinput",
+    "audiooutput"
+   ],
+   "labelled": 0,
+   "supported": {
+    "aspectRatio": true,
+    "autoGainControl": true,
+    "brightness": true,
+    "channelCount": true,
+    "colorTemperature": true,
+    "contrast": true,
+    "deviceId": true,
+    "displaySurface": true,
+    "echoCancellation": true,
+    "exposureCompensation": true,
+    "exposureMode": true,
+    "exposureTime": true,
+    "facingMode": true,
+    "focusDistance": true,
+    "focusMode": true,
+    "frameRate": true,
+    "groupId": true,
+    "height": true,
+    "iso": true,
+    "latency": true,
+    "noiseSuppression": true,
+    "pan": true,
+    "pointsOfInterest": true,
+    "resizeMode": true,
+    "restrictOwnAudio": true,
+    "sampleRate": true,
+    "sampleSize": true,
+    "saturation": true,
+    "sharpness": true,
+    "suppressLocalAudioPlayback": true,
+    "tilt": true,
+    "torch": true,
+    "voiceIsolation": true,
+    "whiteBalanceMode": true,
+    "width": true,
+    "zoom": true
+   }
+  },
+  "keyboardLayoutMap": [
+   [
+    "KeyK",
+    "k"
+   ],
+   [
+    "KeyG",
+    "g"
+   ],
+   [
+    "Digit2",
+    "2"
+   ],
+   [
+    "Digit0",
+    "0"
+   ],
+   [
+    "KeyV",
+    "v"
+   ],
+   [
+    "KeyA",
+    "a"
+   ],
+   [
+    "Backquote",
+    "`"
+   ],
+   [
+    "KeyL",
+    "l"
+   ],
+   [
+    "IntlBackslash",
+    "<"
+   ],
+   [
+    "Quote",
+    "'"
+   ],
+   [
+    "KeyW",
+    "w"
+   ],
+   [
+    "Digit8",
+    "8"
+   ],
+   [
+    "KeyM",
+    "m"
+   ],
+   [
+    "KeyH",
+    "h"
+   ],
+   [
+    "Period",
+    "."
+   ],
+   [
+    "Digit7",
+    "7"
+   ],
+   [
+    "Digit1",
+    "1"
+   ],
+   [
+    "KeyP",
+    "p"
+   ],
+   [
+    "KeyD",
+    "d"
+   ],
+   [
+    "KeyF",
+    "f"
+   ],
+   [
+    "KeyO",
+    "o"
+   ],
+   [
+    "KeyQ",
+    "q"
+   ],
+   [
+    "KeyC",
+    "c"
+   ],
+   [
+    "KeyN",
+    "n"
+   ],
+   [
+    "BracketLeft",
+    "["
+   ],
+   [
+    "KeyZ",
+    "z"
+   ],
+   [
+    "KeyY",
+    "y"
+   ],
+   [
+    "Digit3",
+    "3"
+   ],
+   [
+    "Digit6",
+    "6"
+   ],
+   [
+    "Digit5",
+    "5"
+   ],
+   [
+    "KeyX",
+    "x"
+   ],
+   [
+    "Slash",
+    "/"
+   ],
+   [
+    "Backslash",
+    "\\"
+   ],
+   [
+    "Comma",
+    ","
+   ],
+   [
+    "Minus",
+    "-"
+   ],
+   [
+    "Digit4",
+    "4"
+   ],
+   [
+    "KeyB",
+    "b"
+   ],
+   [
+    "KeyT",
+    "t"
+   ],
+   [
+    "Digit9",
+    "9"
+   ],
+   [
+    "KeyS",
+    "s"
+   ],
+   [
+    "KeyI",
+    "i"
+   ],
+   [
+    "KeyU",
+    "u"
+   ],
+   [
+    "Equal",
+    "="
+   ],
+   [
+    "KeyJ",
+    "j"
+   ],
+   [
+    "Semicolon",
+    ";"
+   ],
+   [
+    "KeyR",
+    "r"
+   ],
+   [
+    "BracketRight",
+    "]"
+   ],
+   [
+    "KeyE",
+    "e"
+   ]
+  ]
+ },
+ "screen": {
+  "width": 1920,
+  "height": 1080,
+  "availWidth": 1920,
+  "availHeight": 970,
+  "availLeft": 0,
+  "availTop": 25,
+  "colorDepth": 24,
+  "pixelDepth": 24,
+  "isExtended": false,
+  "orientation": {
+   "type": "landscape-primary",
+   "angle": 0
+  }
+ },
+ "win": {
+  "innerWidth": 1200,
+  "innerHeight": 783,
+  "outerWidth": 1200,
+  "outerHeight": 926,
+  "screenX": 0,
+  "screenY": 0,
+  "screenLeft": 22,
+  "screenTop": 47,
+  "devicePixelRatio": 1,
+  "scrollX": 0,
+  "scrollY": 0,
+  "originAgentCluster": true,
+  "crossOriginIsolated": false,
+  "visualViewport": {
+   "width": 1200,
+   "height": 783,
+   "scale": 1,
+   "offsetLeft": 0,
+   "offsetTop": 0
+  },
+  "documentElement": {
+   "clientWidth": 1200,
+   "clientHeight": 783
+  }
+ },
+ "memory": {
+  "jsHeapSizeLimit": 3858759680,
+  "totalJSHeapSize": 27730642,
+  "usedJSHeapSize": 12273158
+ },
+ "chrome": {
+  "keys": [
+   "loadTimes",
+   "csi",
+   "app"
+  ],
+  "hasRuntime": false,
+  "loadTimes": "function",
+  "csi": "function",
+  "app": [
+   "isInstalled",
+   "getDetails",
+   "getIsInstalled",
+   "installState",
+   "runningState",
+   "InstallState",
+   "RunningState"
+  ]
+ },
+ "intl": {
+  "timeZone": "UTC",
+  "locale": "en-US",
+  "timeZoneName": "",
+  "offsetMinutes": 0
+ },
+ "fonts": {
+  "present": [
+   "Arial",
+   "Arial Black",
+   "Arial Narrow",
+   "Arial Rounded MT Bold",
+   "Helvetica",
+   "Helvetica Neue",
+   "Times",
+   "Times New Roman",
+   "Courier",
+   "Courier New",
+   "Georgia",
+   "Palatino",
+   "Comic Sans MS",
+   "Trebuchet MS",
+   "Impact",
+   "Verdana",
+   "Tahoma",
+   "Geneva",
+   "Lucida Grande",
+   "Monaco",
+   "Menlo",
+   "Gill Sans",
+   "Optima",
+   "Futura",
+   "Baskerville",
+   "American Typewriter",
+   "Andale Mono",
+   "Apple Chancery",
+   "Apple Color Emoji",
+   "AppleGothic",
+   "Avenir",
+   "Avenir Next",
+   "Big Caslon",
+   "Brush Script MT",
+   "Chalkboard",
+   "Cochin",
+   "Copperplate",
+   "Didot",
+   "Herculanum",
+   "Hoefler Text",
+   "Marker Felt",
+   "Noteworthy",
+   "Papyrus",
+   "Phosphate",
+   "Rockwell",
+   "Savoye LET",
+   "SignPainter",
+   "Skia",
+   "Snell Roundhand",
+   "Zapfino",
+   "PT Sans",
+   "PT Serif",
+   "Apple SD Gothic Neo",
+   "PingFang SC",
+   "Hiragino Sans",
+   "Hiragino Kaku Gothic ProN",
+   "Songti SC",
+   "Heiti SC"
+  ],
+  "count": 58,
+  "generic": {
+   "monospace": 1517.16796875,
+   "sans-serif": 1767.76171875,
+   "serif": 1695.62109375
+  },
+  "widths": {
+   "Arial": 1767.76171875,
+   "Arial Black": 2040.1875,
+   "Arial Narrow": 1449.59765625,
+   "Arial Rounded MT Bold": 1834.76953125,
+   "Helvetica": 1767.76171875,
+   "Helvetica Neue": 1769.183837890625,
+   "Times": 1695.62109375,
+   "Times New Roman": 1695.62109375,
+   "Courier": 1512.24609375,
+   "Courier New": 1512.24609375,
+   "Georgia": 1828.0546875,
+   "Palatino": 1814.484375,
+   "Palatino Linotype": 1767.76171875,
+   "Garamond": 1767.76171875,
+   "Bookman": 1767.76171875,
+   "Comic Sans MS": 1838.390625,
+   "Trebuchet MS": 1695.09375,
+   "Impact": 1584.73828125,
+   "Verdana": 1979.859375,
+   "Tahoma": 1741.7109375,
+   "Geneva": 1904.02734375,
+   "Lucida Console": 1767.76171875,
+   "Lucida Grande": 1851.3984375,
+   "Lucida Sans Unicode": 1767.76171875,
+   "Monaco": 1512.24609375,
+   "Menlo": 1517.16796875,
+   "Consolas": 1767.76171875,
+   "Segoe UI": 1767.76171875,
+   "Segoe UI Emoji": 1767.76171875,
+   "Calibri": 1767.76171875,
+   "Cambria": 1767.76171875,
+   "Candara": 1767.76171875,
+   "Constantia": 1767.76171875,
+   "Corbel": 1767.76171875,
+   "Franklin Gothic Medium": 1767.76171875,
+   "Gill Sans": 1752.71484375,
+   "Optima": 1820.159912109375,
+   "Futura": 1859.23828125,
+   "Baskerville": 1708.5234375,
+   "American Typewriter": 1888.127685546875,
+   "Andale Mono": 1512.24609375,
+   "Apple Chancery": 1691.19140625,
+   "Apple Color Emoji": 2191.32421875,
+   "AppleGothic": 1950.69580078125,
+   "Avenir": 1785.3118896484375,
+   "Avenir Next": 1843.48779296875,
+   "Big Caslon": 1698.83984375,
+   "Brush Script MT": 1297.37109375,
+   "Chalkboard": 1753.140380859375,
+   "Cochin": 1732.1038818359375,
+   "Copperplate": 1787.39990234375,
+   "Didot": 1878.0479736328125,
+   "Herculanum": 1881.216064453125,
+   "Hoefler Text": 1841.0396728515625,
+   "Marker Felt": 1719.35986328125,
+   "Noteworthy": 1534.769775390625,
+   "Papyrus": 1517.23828125,
+   "Phosphate": 1652.615966796875,
+   "Rockwell": 2019.41015625,
+   "Savoye LET": 1151.859375,
+   "SignPainter": 1216.0078125,
+   "Skia": 1853.5078125,
+   "Snell Roundhand": 1594.5118408203125,
+   "Zapfino": 2812.85986328125,
+   "PT Sans": 1672.9918212890625,
+   "PT Serif": 1777.6077880859375,
+   "Roboto": 1767.76171875,
+   "Noto Sans": 1767.76171875,
+   "Noto Serif": 1767.76171875,
+   "Noto Color Emoji": 1767.76171875,
+   "Noto Sans CJK KR": 1767.76171875,
+   "Noto Sans CJK JP": 1767.76171875,
+   "DejaVu Sans": 1767.76171875,
+   "DejaVu Serif": 1767.76171875,
+   "DejaVu Sans Mono": 1767.76171875,
+   "Liberation Sans": 1767.76171875,
+   "Liberation Serif": 1767.76171875,
+   "Liberation Mono": 1767.76171875,
+   "Ubuntu": 1767.76171875,
+   "Cantarell": 1767.76171875,
+   "FreeSans": 1767.76171875,
+   "Malgun Gothic": 1767.76171875,
+   "AppleSDGothicNeo": 1767.76171875,
+   "Apple SD Gothic Neo": 1663.559814453125,
+   "Nanum Gothic": 1767.76171875,
+   "NanumGothic": 1767.76171875,
+   "Batang": 1767.76171875,
+   "Dotum": 1767.76171875,
+   "Gulim": 1767.76171875,
+   "MS Gothic": 1767.76171875,
+   "MS PGothic": 1767.76171875,
+   "Meiryo": 1767.76171875,
+   "Yu Gothic": 1767.76171875,
+   "SimSun": 1767.76171875,
+   "SimHei": 1767.76171875,
+   "Microsoft YaHei": 1767.76171875,
+   "PingFang SC": 1799.27978515625,
+   "Hiragino Sans": 1966.4638671875,
+   "Hiragino Kaku Gothic ProN": 1966.4638671875,
+   "Songti SC": 1636.84765625,
+   "STHeiti": 1767.76171875,
+   "Heiti SC": 1844.639892578125
+  },
+  "check": {
+   "Arial": true,
+   "Arial Black": true,
+   "Arial Narrow": true,
+   "Arial Rounded MT Bold": true,
+   "Helvetica": true,
+   "Helvetica Neue": true,
+   "Times": true,
+   "Times New Roman": true,
+   "Courier": true,
+   "Courier New": true,
+   "Georgia": true,
+   "Palatino": true,
+   "Palatino Linotype": true,
+   "Garamond": true,
+   "Bookman": true,
+   "Comic Sans MS": true,
+   "Trebuchet MS": true,
+   "Impact": true,
+   "Verdana": true,
+   "Tahoma": true,
+   "Geneva": true,
+   "Lucida Console": true,
+   "Lucida Grande": true,
+   "Lucida Sans Unicode": true,
+   "Monaco": true,
+   "Menlo": true,
+   "Consolas": true,
+   "Segoe UI": true,
+   "Segoe UI Emoji": true,
+   "Calibri": true,
+   "Cambria": true,
+   "Candara": true,
+   "Constantia": true,
+   "Corbel": true,
+   "Franklin Gothic Medium": true,
+   "Gill Sans": true,
+   "Optima": true,
+   "Futura": true,
+   "Baskerville": true,
+   "American Typewriter": true,
+   "Andale Mono": true,
+   "Apple Chancery": true,
+   "Apple Color Emoji": true,
+   "AppleGothic": true,
+   "Avenir": true,
+   "Avenir Next": true,
+   "Big Caslon": true,
+   "Brush Script MT": true,
+   "Chalkboard": true,
+   "Cochin": true,
+   "Copperplate": true,
+   "Didot": true,
+   "Herculanum": true,
+   "Hoefler Text": true,
+   "Marker Felt": true,
+   "Noteworthy": true,
+   "Papyrus": true,
+   "Phosphate": true,
+   "Rockwell": true,
+   "Savoye LET": true,
+   "SignPainter": true,
+   "Skia": true,
+   "Snell Roundhand": true,
+   "Zapfino": true,
+   "PT Sans": true,
+   "PT Serif": true,
+   "Roboto": true,
+   "Noto Sans": true,
+   "Noto Serif": true,
+   "Noto Color Emoji": true,
+   "Noto Sans CJK KR": true,
+   "Noto Sans CJK JP": true,
+   "DejaVu Sans": true,
+   "DejaVu Serif": true,
+   "DejaVu Sans Mono": true,
+   "Liberation Sans": true,
+   "Liberation Serif": true,
+   "Liberation Mono": true,
+   "Ubuntu": true,
+   "Cantarell": true,
+   "FreeSans": true,
+   "Malgun Gothic": true,
+   "AppleSDGothicNeo": true,
+   "Apple SD Gothic Neo": true,
+   "Nanum Gothic": true,
+   "NanumGothic": true,
+   "Batang": true,
+   "Dotum": true,
+   "Gulim": true,
+   "MS Gothic": true,
+   "MS PGothic": true,
+   "Meiryo": true,
+   "Yu Gothic": true,
+   "SimSun": true,
+   "SimHei": true,
+   "Microsoft YaHei": true,
+   "PingFang SC": true,
+   "Hiragino Sans": true,
+   "Hiragino Kaku Gothic ProN": true,
+   "Songti SC": true,
+   "STHeiti": true,
+   "Heiti SC": true
+  },
+  "status": "loaded"
+ },
+ "speech": {
+  "voices": [
+   {
+    "name": "Samantha",
+    "lang": "en-US",
+    "localService": true,
+    "default": true,
+    "voiceURI": "Samantha"
+   },
+   {
+    "name": "Aaron",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Aaron"
+   },
+   {
+    "name": "Albert",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Albert"
+   },
+   {
+    "name": "Alice",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Alice"
+   },
+   {
+    "name": "Alva",
+    "lang": "sv-SE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Alva"
+   },
+   {
+    "name": "Amélie",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Amélie"
+   },
+   {
+    "name": "Amira",
+    "lang": "ms-MY",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Amira"
+   },
+   {
+    "name": "Anna",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Anna"
+   },
+   {
+    "name": "Arthur",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Arthur"
+   },
+   {
+    "name": "Bad News",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Bad News"
+   },
+   {
+    "name": "Bahh",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Bahh"
+   },
+   {
+    "name": "Bells",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Bells"
+   },
+   {
+    "name": "Boing",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Boing"
+   },
+   {
+    "name": "Bubbles",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Bubbles"
+   },
+   {
+    "name": "Carmit",
+    "lang": "he-IL",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Carmit"
+   },
+   {
+    "name": "Catherine",
+    "lang": "en-AU",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Catherine"
+   },
+   {
+    "name": "Cellos",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Cellos"
+   },
+   {
+    "name": "Damayanti",
+    "lang": "id-ID",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Damayanti"
+   },
+   {
+    "name": "Daniel (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Daniel (English (United Kingdom))"
+   },
+   {
+    "name": "Daniel (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Daniel (French (France))"
+   },
+   {
+    "name": "Daria",
+    "lang": "bg-BG",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Daria"
+   },
+   {
+    "name": "Eddy (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (German (Germany))"
+   },
+   {
+    "name": "Eddy (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (English (United Kingdom))"
+   },
+   {
+    "name": "Eddy (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (English (United States))"
+   },
+   {
+    "name": "Eddy (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (Spanish (Spain))"
+   },
+   {
+    "name": "Eddy (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (Spanish (Mexico))"
+   },
+   {
+    "name": "Eddy (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (Finnish (Finland))"
+   },
+   {
+    "name": "Eddy (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (French (Canada))"
+   },
+   {
+    "name": "Eddy (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (French (France))"
+   },
+   {
+    "name": "Eddy (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (Italian (Italy))"
+   },
+   {
+    "name": "Eddy (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Eddy (Portuguese (Brazil))"
+   },
+   {
+    "name": "Ellen",
+    "lang": "nl-BE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Ellen"
+   },
+   {
+    "name": "Flo (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (German (Germany))"
+   },
+   {
+    "name": "Flo (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (English (United Kingdom))"
+   },
+   {
+    "name": "Flo (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (English (United States))"
+   },
+   {
+    "name": "Flo (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (Spanish (Spain))"
+   },
+   {
+    "name": "Flo (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (Spanish (Mexico))"
+   },
+   {
+    "name": "Flo (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (Finnish (Finland))"
+   },
+   {
+    "name": "Flo (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (French (Canada))"
+   },
+   {
+    "name": "Flo (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (French (France))"
+   },
+   {
+    "name": "Flo (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (Italian (Italy))"
+   },
+   {
+    "name": "Flo (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Flo (Portuguese (Brazil))"
+   },
+   {
+    "name": "Fred",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Fred"
+   },
+   {
+    "name": "Good News",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Good News"
+   },
+   {
+    "name": "Gordon",
+    "lang": "en-AU",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Gordon"
+   },
+   {
+    "name": "Grandma (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (German (Germany))"
+   },
+   {
+    "name": "Grandma (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (English (United Kingdom))"
+   },
+   {
+    "name": "Grandma (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (English (United States))"
+   },
+   {
+    "name": "Grandma (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (Spanish (Spain))"
+   },
+   {
+    "name": "Grandma (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (Spanish (Mexico))"
+   },
+   {
+    "name": "Grandma (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (Finnish (Finland))"
+   },
+   {
+    "name": "Grandma (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (French (Canada))"
+   },
+   {
+    "name": "Grandma (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (French (France))"
+   },
+   {
+    "name": "Grandma (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (Italian (Italy))"
+   },
+   {
+    "name": "Grandma (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandma (Portuguese (Brazil))"
+   },
+   {
+    "name": "Grandpa (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (German (Germany))"
+   },
+   {
+    "name": "Grandpa (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (English (United Kingdom))"
+   },
+   {
+    "name": "Grandpa (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (English (United States))"
+   },
+   {
+    "name": "Grandpa (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (Spanish (Spain))"
+   },
+   {
+    "name": "Grandpa (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (Spanish (Mexico))"
+   },
+   {
+    "name": "Grandpa (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (Finnish (Finland))"
+   },
+   {
+    "name": "Grandpa (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (French (Canada))"
+   },
+   {
+    "name": "Grandpa (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (French (France))"
+   },
+   {
+    "name": "Grandpa (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (Italian (Italy))"
+   },
+   {
+    "name": "Grandpa (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Grandpa (Portuguese (Brazil))"
+   },
+   {
+    "name": "Hattori",
+    "lang": "ja-JP",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Hattori"
+   },
+   {
+    "name": "Helena",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Helena"
+   },
+   {
+    "name": "Ioana",
+    "lang": "ro-RO",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Ioana"
+   },
+   {
+    "name": "Jacques",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Jacques"
+   },
+   {
+    "name": "Jester",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Jester"
+   },
+   {
+    "name": "Joana",
+    "lang": "pt-PT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Joana"
+   },
+   {
+    "name": "Junior",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Junior"
+   },
+   {
+    "name": "Kanya",
+    "lang": "th-TH",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Kanya"
+   },
+   {
+    "name": "Karen",
+    "lang": "en-AU",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Karen"
+   },
+   {
+    "name": "Kathy",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Kathy"
+   },
+   {
+    "name": "Kyoko",
+    "lang": "ja-JP",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Kyoko"
+   },
+   {
+    "name": "Lana",
+    "lang": "hr-HR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Lana"
+   },
+   {
+    "name": "Laura",
+    "lang": "sk-SK",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Laura"
+   },
+   {
+    "name": "Lekha",
+    "lang": "hi-IN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Lekha"
+   },
+   {
+    "name": "Lesya",
+    "lang": "uk-UA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Lesya"
+   },
+   {
+    "name": "Li-Mu",
+    "lang": "zh-CN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Li-Mu"
+   },
+   {
+    "name": "Linh",
+    "lang": "vi-VN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Linh"
+   },
+   {
+    "name": "Luciana",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Luciana"
+   },
+   {
+    "name": "Majed",
+    "lang": "ar-001",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Majed"
+   },
+   {
+    "name": "Marie",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Marie"
+   },
+   {
+    "name": "Martha",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Martha"
+   },
+   {
+    "name": "Martin",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Martin"
+   },
+   {
+    "name": "Meijia",
+    "lang": "zh-TW",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Meijia"
+   },
+   {
+    "name": "Melina",
+    "lang": "el-GR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Melina"
+   },
+   {
+    "name": "Milena",
+    "lang": "ru-RU",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Milena"
+   },
+   {
+    "name": "Moira",
+    "lang": "en-IE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Moira"
+   },
+   {
+    "name": "Montse",
+    "lang": "ca-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Montse"
+   },
+   {
+    "name": "Mónica",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Mónica"
+   },
+   {
+    "name": "Nicky",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Nicky"
+   },
+   {
+    "name": "Nora",
+    "lang": "nb-NO",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Nora"
+   },
+   {
+    "name": "O-Ren",
+    "lang": "ja-JP",
+    "localService": true,
+    "default": false,
+    "voiceURI": "O-Ren"
+   },
+   {
+    "name": "Organ",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Organ"
+   },
+   {
+    "name": "Paulina",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Paulina"
+   },
+   {
+    "name": "Ralph",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Ralph"
+   },
+   {
+    "name": "Reed (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (German (Germany))"
+   },
+   {
+    "name": "Reed (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (English (United Kingdom))"
+   },
+   {
+    "name": "Reed (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (English (United States))"
+   },
+   {
+    "name": "Reed (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (Spanish (Spain))"
+   },
+   {
+    "name": "Reed (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (Spanish (Mexico))"
+   },
+   {
+    "name": "Reed (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (Finnish (Finland))"
+   },
+   {
+    "name": "Reed (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (French (Canada))"
+   },
+   {
+    "name": "Reed (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (Italian (Italy))"
+   },
+   {
+    "name": "Reed (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Reed (Portuguese (Brazil))"
+   },
+   {
+    "name": "Rishi",
+    "lang": "en-IN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rishi"
+   },
+   {
+    "name": "Rocko (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (German (Germany))"
+   },
+   {
+    "name": "Rocko (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (English (United Kingdom))"
+   },
+   {
+    "name": "Rocko (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (English (United States))"
+   },
+   {
+    "name": "Rocko (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (Spanish (Spain))"
+   },
+   {
+    "name": "Rocko (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (Spanish (Mexico))"
+   },
+   {
+    "name": "Rocko (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (Finnish (Finland))"
+   },
+   {
+    "name": "Rocko (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (French (Canada))"
+   },
+   {
+    "name": "Rocko (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (French (France))"
+   },
+   {
+    "name": "Rocko (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (Italian (Italy))"
+   },
+   {
+    "name": "Rocko (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Rocko (Portuguese (Brazil))"
+   },
+   {
+    "name": "Sandy (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (German (Germany))"
+   },
+   {
+    "name": "Sandy (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (English (United Kingdom))"
+   },
+   {
+    "name": "Sandy (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (English (United States))"
+   },
+   {
+    "name": "Sandy (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (Spanish (Spain))"
+   },
+   {
+    "name": "Sandy (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (Spanish (Mexico))"
+   },
+   {
+    "name": "Sandy (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (Finnish (Finland))"
+   },
+   {
+    "name": "Sandy (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (French (Canada))"
+   },
+   {
+    "name": "Sandy (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (French (France))"
+   },
+   {
+    "name": "Sandy (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (Italian (Italy))"
+   },
+   {
+    "name": "Sandy (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sandy (Portuguese (Brazil))"
+   },
+   {
+    "name": "Sara",
+    "lang": "da-DK",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sara"
+   },
+   {
+    "name": "Satu",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Satu"
+   },
+   {
+    "name": "Shelley (German (Germany))",
+    "lang": "de-DE",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (German (Germany))"
+   },
+   {
+    "name": "Shelley (English (United Kingdom))",
+    "lang": "en-GB",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (English (United Kingdom))"
+   },
+   {
+    "name": "Shelley (English (United States))",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (English (United States))"
+   },
+   {
+    "name": "Shelley (Spanish (Spain))",
+    "lang": "es-ES",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (Spanish (Spain))"
+   },
+   {
+    "name": "Shelley (Spanish (Mexico))",
+    "lang": "es-MX",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (Spanish (Mexico))"
+   },
+   {
+    "name": "Shelley (Finnish (Finland))",
+    "lang": "fi-FI",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (Finnish (Finland))"
+   },
+   {
+    "name": "Shelley (French (Canada))",
+    "lang": "fr-CA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (French (Canada))"
+   },
+   {
+    "name": "Shelley (French (France))",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (French (France))"
+   },
+   {
+    "name": "Shelley (Italian (Italy))",
+    "lang": "it-IT",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (Italian (Italy))"
+   },
+   {
+    "name": "Shelley (Portuguese (Brazil))",
+    "lang": "pt-BR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Shelley (Portuguese (Brazil))"
+   },
+   {
+    "name": "Sinji",
+    "lang": "zh-HK",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Sinji"
+   },
+   {
+    "name": "Superstar",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Superstar"
+   },
+   {
+    "name": "Tessa",
+    "lang": "en-ZA",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Tessa"
+   },
+   {
+    "name": "Thomas",
+    "lang": "fr-FR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Thomas"
+   },
+   {
+    "name": "Tingting",
+    "lang": "zh-CN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Tingting"
+   },
+   {
+    "name": "Trinoids",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Trinoids"
+   },
+   {
+    "name": "Tünde",
+    "lang": "hu-HU",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Tünde"
+   },
+   {
+    "name": "Whisper",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Whisper"
+   },
+   {
+    "name": "Wobble",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Wobble"
+   },
+   {
+    "name": "Xander",
+    "lang": "nl-NL",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Xander"
+   },
+   {
+    "name": "Yelda",
+    "lang": "tr-TR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Yelda"
+   },
+   {
+    "name": "Yu-shu",
+    "lang": "zh-CN",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Yu-shu"
+   },
+   {
+    "name": "Yuna",
+    "lang": "ko-KR",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Yuna"
+   },
+   {
+    "name": "Zarvox",
+    "lang": "en-US",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Zarvox"
+   },
+   {
+    "name": "Zosia",
+    "lang": "pl-PL",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Zosia"
+   },
+   {
+    "name": "Zuzana",
+    "lang": "cs-CZ",
+    "localService": true,
+    "default": false,
+    "voiceURI": "Zuzana"
+   }
+  ]
+ },
+ "deviceOracle": {
+  "webgl": {
+   "unmaskedVendor": "Google Inc. (Apple)",
+   "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple Paravirtual device, Unspecified Version)",
+   "vendor": "WebKit",
+   "renderer": "WebKit WebGL",
+   "versionV1": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+   "shadingV1": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+   "versionV2": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+   "shadingV2": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+   "paramsByNum": {
+    "32777": 32774,
+    "34877": 32774,
+    "32968": 0,
+    "32969": 1,
+    "32970": 0,
+    "32971": 1,
+    "32773": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "2884": false,
+    "3042": false,
+    "3024": true,
+    "2960": false,
+    "2929": false,
+    "3089": false,
+    "32823": false,
+    "32926": false,
+    "32928": false,
+    "2849": 1,
+    "33901": [
+     1,
+     511
+    ],
+    "33902": [
+     1,
+     1
+    ],
+    "2885": 1029,
+    "2886": 2305,
+    "2928": [
+     0,
+     1
+    ],
+    "2930": true,
+    "2931": 1,
+    "2932": 513,
+    "2961": 0,
+    "2962": 519,
+    "2964": 7680,
+    "2965": 7680,
+    "2966": 7680,
+    "2967": 0,
+    "2963": 4294967295,
+    "2968": 4294967295,
+    "34816": 519,
+    "34817": 7680,
+    "34818": 7680,
+    "34819": 7680,
+    "36003": 0,
+    "36004": 4294967295,
+    "36005": 4294967295,
+    "2978": [
+     0,
+     0,
+     64,
+     64
+    ],
+    "3088": [
+     0,
+     0,
+     64,
+     64
+    ],
+    "3106": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "3107": "true,true,true,true",
+    "3317": 4,
+    "3333": 4,
+    "3379": 16384,
+    "3386": [
+     16384,
+     16384
+    ],
+    "3408": 4,
+    "3410": 8,
+    "3411": 8,
+    "3412": 8,
+    "3413": 8,
+    "3414": 24,
+    "3415": 0,
+    "10752": 0,
+    "32824": 0,
+    "32936": 1,
+    "32937": 4,
+    "32938": 1,
+    "32939": false,
+    "34467": [],
+    "33170": 4352,
+    "34921": 16,
+    "36347": 1024,
+    "36348": 30,
+    "35661": 32,
+    "35660": 16,
+    "34930": 16,
+    "36349": 1024,
+    "35724": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+    "7936": "WebKit",
+    "7937": "WebKit WebGL",
+    "7938": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+    "34076": 16384,
+    "34016": 33984,
+    "35738": 5121,
+    "35739": 6408,
+    "34024": 16384,
+    "37440": false,
+    "37441": false,
+    "37443": 37444,
+    "2880": 6914,
+    "10754": false,
+    "34047": 16,
+    "34383": false,
+    "34852": 8,
+    "34853": 1029,
+    "34854": 1029,
+    "34855": 1029,
+    "34856": 1029,
+    "34857": 1029,
+    "34858": 1029,
+    "34859": 1029,
+    "34860": 1029,
+    "35068": 1,
+    "35723": 4352,
+    "36063": 8,
+    "36379": 0,
+    "36392": 0,
+    "36795": false,
+    "37445": "Google Inc. (Apple)",
+    "37446": "ANGLE (Apple, ANGLE Metal Renderer: Apple Paravirtual device, Unspecified Version)",
+    "37724": 36001,
+    "37725": 37726
+   },
+   "paramsByNumV2": {
+    "32777": 32774,
+    "34877": 32774,
+    "32968": 0,
+    "32969": 1,
+    "32970": 0,
+    "32971": 1,
+    "32773": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "2884": false,
+    "3042": false,
+    "3024": true,
+    "2960": false,
+    "2929": false,
+    "3089": false,
+    "32823": false,
+    "32926": false,
+    "32928": false,
+    "2849": 1,
+    "33901": [
+     1,
+     511
+    ],
+    "33902": [
+     1,
+     1
+    ],
+    "2885": 1029,
+    "2886": 2305,
+    "2928": [
+     0,
+     1
+    ],
+    "2930": true,
+    "2931": 1,
+    "2932": 513,
+    "2961": 0,
+    "2962": 519,
+    "2964": 7680,
+    "2965": 7680,
+    "2966": 7680,
+    "2967": 0,
+    "2963": 4294967295,
+    "2968": 4294967295,
+    "34816": 519,
+    "34817": 7680,
+    "34818": 7680,
+    "34819": 7680,
+    "36003": 0,
+    "36004": 4294967295,
+    "36005": 4294967295,
+    "2978": [
+     0,
+     0,
+     64,
+     64
+    ],
+    "3088": [
+     0,
+     0,
+     64,
+     64
+    ],
+    "3106": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "3107": "true,true,true,true",
+    "3317": 4,
+    "3333": 4,
+    "3379": 16384,
+    "3386": [
+     16384,
+     16384
+    ],
+    "3408": 4,
+    "3410": 8,
+    "3411": 8,
+    "3412": 8,
+    "3413": 8,
+    "3414": 24,
+    "3415": 0,
+    "10752": 0,
+    "32824": 0,
+    "32936": 1,
+    "32937": 4,
+    "32938": 1,
+    "32939": false,
+    "34467": [],
+    "33170": 4352,
+    "34921": 16,
+    "36347": 1024,
+    "36348": 30,
+    "35661": 32,
+    "35660": 16,
+    "34930": 16,
+    "36349": 1024,
+    "7936": "WebKit",
+    "7937": "WebKit WebGL",
+    "34076": 16384,
+    "34016": 33984,
+    "35738": 5121,
+    "35739": 6408,
+    "34024": 16384,
+    "37440": false,
+    "37441": false,
+    "37443": 37444,
+    "3074": 1029,
+    "3314": 0,
+    "3315": 0,
+    "3316": 0,
+    "3330": 0,
+    "3331": 0,
+    "3332": 0,
+    "32877": 0,
+    "32878": 0,
+    "32883": 2048,
+    "33000": 2147483647,
+    "33001": 2147483647,
+    "34045": 15,
+    "34852": 8,
+    "34853": 1029,
+    "34854": 1029,
+    "34855": 1029,
+    "34856": 1029,
+    "34857": 1029,
+    "34858": 1029,
+    "34859": 1029,
+    "34860": 1029,
+    "35657": 4096,
+    "35658": 4096,
+    "35723": 4352,
+    "35071": 2048,
+    "35076": -8,
+    "35077": 7,
+    "35659": 120,
+    "35968": 4,
+    "35977": false,
+    "35978": 128,
+    "35979": 4,
+    "36063": 8,
+    "36183": 4,
+    "35371": 16,
+    "35373": 16,
+    "35374": 32,
+    "35375": 32,
+    "35376": 16384,
+    "35377": 69632,
+    "35379": 69632,
+    "35380": 16,
+    "37154": 120,
+    "37157": 120,
+    "37137": 0,
+    "36387": false,
+    "36388": false,
+    "36203": 4294967294,
+    "37447": 0,
+    "2880": 6914,
+    "3378": 8,
+    "10754": false,
+    "12288": false,
+    "12289": false,
+    "12290": false,
+    "12291": false,
+    "12292": false,
+    "12293": false,
+    "12294": false,
+    "12295": false,
+    "33529": 0,
+    "33530": 0,
+    "34047": 16,
+    "34383": false,
+    "35068": 1,
+    "36379": 0,
+    "36392": 0,
+    "36431": 36430,
+    "36443": -0.5,
+    "36444": 0.5,
+    "36445": 4,
+    "36795": false,
+    "37445": "Google Inc. (Apple)",
+    "37446": "ANGLE (Apple, ANGLE Metal Renderer: Apple Paravirtual device, Unspecified Version)",
+    "37724": 36001,
+    "37725": 37726
+   },
+   "extensions": [
+    "ANGLE_instanced_arrays",
+    "EXT_blend_minmax",
+    "EXT_clip_control",
+    "EXT_color_buffer_half_float",
+    "EXT_depth_clamp",
+    "EXT_disjoint_timer_query",
+    "EXT_float_blend",
+    "EXT_frag_depth",
+    "EXT_polygon_offset_clamp",
+    "EXT_shader_texture_lod",
+    "EXT_texture_compression_bptc",
+    "EXT_texture_compression_rgtc",
+    "EXT_texture_filter_anisotropic",
+    "EXT_texture_mirror_clamp_to_edge",
+    "EXT_sRGB",
+    "KHR_parallel_shader_compile",
+    "OES_element_index_uint",
+    "OES_fbo_render_mipmap",
+    "OES_standard_derivatives",
+    "OES_texture_float",
+    "OES_texture_float_linear",
+    "OES_texture_half_float",
+    "OES_texture_half_float_linear",
+    "OES_vertex_array_object",
+    "WEBGL_blend_func_extended",
+    "WEBGL_color_buffer_float",
+    "WEBGL_compressed_texture_astc",
+    "WEBGL_compressed_texture_etc",
+    "WEBGL_compressed_texture_etc1",
+    "WEBGL_compressed_texture_pvrtc",
+    "WEBGL_compressed_texture_s3tc",
+    "WEBGL_compressed_texture_s3tc_srgb",
+    "WEBGL_debug_renderer_info",
+    "WEBGL_debug_shaders",
+    "WEBGL_depth_texture",
+    "WEBGL_draw_buffers",
+    "WEBGL_lose_context",
+    "WEBGL_multi_draw",
+    "WEBGL_polygon_mode"
+   ],
+   "extensionsV2": [
+    "EXT_clip_control",
+    "EXT_color_buffer_float",
+    "EXT_color_buffer_half_float",
+    "EXT_conservative_depth",
+    "EXT_depth_clamp",
+    "EXT_disjoint_timer_query_webgl2",
+    "EXT_float_blend",
+    "EXT_polygon_offset_clamp",
+    "EXT_render_snorm",
+    "EXT_texture_compression_bptc",
+    "EXT_texture_compression_rgtc",
+    "EXT_texture_filter_anisotropic",
+    "EXT_texture_mirror_clamp_to_edge",
+    "EXT_texture_norm16",
+    "KHR_parallel_shader_compile",
+    "NV_shader_noperspective_interpolation",
+    "OES_draw_buffers_indexed",
+    "OES_sample_variables",
+    "OES_shader_multisample_interpolation",
+    "OES_texture_float_linear",
+    "WEBGL_blend_func_extended",
+    "WEBGL_clip_cull_distance",
+    "WEBGL_compressed_texture_astc",
+    "WEBGL_compressed_texture_etc",
+    "WEBGL_compressed_texture_etc1",
+    "WEBGL_compressed_texture_pvrtc",
+    "WEBGL_compressed_texture_s3tc",
+    "WEBGL_compressed_texture_s3tc_srgb",
+    "WEBGL_debug_renderer_info",
+    "WEBGL_debug_shaders",
+    "WEBGL_lose_context",
+    "WEBGL_multi_draw",
+    "WEBGL_polygon_mode",
+    "WEBGL_provoking_vertex",
+    "WEBGL_render_shared_exponent",
+    "WEBGL_stencil_texturing"
+   ],
+   "contextAttributes": {
+    "alpha": true,
+    "antialias": true,
+    "depth": true,
+    "desynchronized": false,
+    "failIfMajorPerformanceCaveat": false,
+    "powerPreference": "default",
+    "premultipliedAlpha": true,
+    "preserveDrawingBuffer": true,
+    "stencil": false,
+    "xrCompatible": false
+   },
+   "precision": {
+    "VERTEX_SHADER.LOW_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "VERTEX_SHADER.MEDIUM_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "VERTEX_SHADER.HIGH_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "VERTEX_SHADER.LOW_INT": [
+     31,
+     30,
+     0
+    ],
+    "VERTEX_SHADER.MEDIUM_INT": [
+     31,
+     30,
+     0
+    ],
+    "VERTEX_SHADER.HIGH_INT": [
+     31,
+     30,
+     0
+    ],
+    "FRAGMENT_SHADER.LOW_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "FRAGMENT_SHADER.MEDIUM_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "FRAGMENT_SHADER.HIGH_FLOAT": [
+     127,
+     127,
+     23
+    ],
+    "FRAGMENT_SHADER.LOW_INT": [
+     31,
+     30,
+     0
+    ],
+    "FRAGMENT_SHADER.MEDIUM_INT": [
+     31,
+     30,
+     0
+    ],
+    "FRAGMENT_SHADER.HIGH_INT": [
+     31,
+     30,
+     0
+    ]
+   },
+   "internalformatSamples": {
+    "32849": [
+     4,
+     2
+    ],
+    "32854": [
+     4,
+     2
+    ],
+    "32855": [
+     4,
+     2
+    ],
+    "32856": [
+     4,
+     2
+    ],
+    "32857": [
+     4,
+     2
+    ],
+    "32859": [
+     4,
+     2
+    ],
+    "33189": [
+     4,
+     2
+    ],
+    "33190": [
+     4,
+     2
+    ],
+    "33321": [
+     4,
+     2
+    ],
+    "33322": [
+     4,
+     2
+    ],
+    "33323": [
+     4,
+     2
+    ],
+    "33324": [
+     4,
+     2
+    ],
+    "33325": [
+     4,
+     2
+    ],
+    "33326": [
+     4,
+     2
+    ],
+    "33327": [
+     4,
+     2
+    ],
+    "33328": [
+     4,
+     2
+    ],
+    "34836": [
+     4,
+     2
+    ],
+    "34842": [
+     4,
+     2
+    ],
+    "35056": [
+     4,
+     2
+    ],
+    "35898": [
+     4,
+     2
+    ],
+    "35907": [
+     4,
+     2
+    ],
+    "36012": [
+     4,
+     2
+    ],
+    "36013": [
+     4,
+     2
+    ],
+    "36168": [
+     4,
+     2
+    ],
+    "36194": [
+     4,
+     2
+    ]
+   }
+  },
+  "canvas": {
+   "dataUrl": "data:image/png;base64,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"
+  },
+  "audio": {
+   "sampleRate": 48000,
+   "renderedHash": "662eee81",
+   "classicSum": 124.0434748024636
+  }
+ }
+}

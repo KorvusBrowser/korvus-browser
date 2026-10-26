@@ -1,0 +1,17 @@
+<!doctype html><meta charset=utf-8><title>rates</title><body><p>Engine task rates: MessageChannel, window.postMessage and a worker round trip.</p><script>
+// ACCESS 2026-10-04: korvus delivered engine tasks through the nesting-clamped timer (217/s) and parked the
+// page loop 5 ms per worker frame (176 round trips/s); Chrome 150 headed: ~410,000 / ~314,000 / ~168,000.
+window.__r = null;
+const rate = (kick, ms) => new Promise(res => { let n = 0; const t0 = performance.now(); const step = () => { n++; if (performance.now() - t0 < ms) kick(step); else res(n * 1000 / ms); }; kick(step); });
+(async () => {
+  const ch = new MessageChannel(); let cb; ch.port1.onmessage = () => cb();
+  const mc = await rate(f => { cb = f; ch.port2.postMessage(0); }, 200);
+  let cb2; addEventListener('message', e => { if (e.data === 'k') cb2(); });
+  const pm = await rate(f => { cb2 = f; postMessage('k', '*'); }, 200);
+  const w = new Worker(URL.createObjectURL(new Blob(['onmessage = e => postMessage(e.data)'], {type: 'text/javascript'})));
+  let cb3; w.onmessage = () => cb3();
+  const wk = await rate(f => { cb3 = f; w.postMessage(0); }, 300);
+  const st = await rate(f => setTimeout(f, 0), 200);
+  window.__r = JSON.stringify({messageChannelOver20k: mc > 20000, postMessageOver20k: pm > 20000, workerOver5k: wk > 5000, setTimeoutClamped: st < 400});
+})();
+</script>

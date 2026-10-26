@@ -1,0 +1,51 @@
+[
+  {
+    "iface": "CanvasGradient",
+    "member": "constructor",
+    "expr": "new CanvasGradient()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); return o.addColorStop(0, \"red\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); return o.addColorStop(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); return o.addColorStop(2, \"red\"); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); return o.addColorStop(-1, \"red\"); })()",
+    "throws": "IndexSizeError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); return o.addColorStop(0, \"not-a-color\"); })()",
+    "throws": "SyntaxError",
+    "source": "chrome-152-macos-20261017"
+  },
+  {
+    "iface": "CanvasGradient",
+    "member": "addColorStop",
+    "expr": "(() => { const o = document.createElement(\"canvas\").getContext(\"2d\").createLinearGradient(0, 0, 1, 1); o.addColorStop(0, \"red\"); return o.addColorStop(1, \"blue\"); })()",
+    "undefined": true,
+    "source": "chrome-152-macos-20261017"
+  }
+]

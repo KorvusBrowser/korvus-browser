@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "MediaError",
+    "member": "MEDIA_ERR_ABORTED",
+    "expr": "MediaError.MEDIA_ERR_ABORTED",
+    "expected": 1,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaError",
+    "member": "MEDIA_ERR_NETWORK",
+    "expr": "MediaError.MEDIA_ERR_NETWORK",
+    "expected": 2,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaError",
+    "member": "MEDIA_ERR_DECODE",
+    "expr": "MediaError.MEDIA_ERR_DECODE",
+    "expected": 3,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaError",
+    "member": "MEDIA_ERR_SRC_NOT_SUPPORTED",
+    "expr": "MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED",
+    "expected": 4,
+    "source": "chrome-152-windows-20261017T0248"
+  },
+  {
+    "iface": "MediaError",
+    "member": "constructor",
+    "expr": "new MediaError()",
+    "throws": "TypeError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

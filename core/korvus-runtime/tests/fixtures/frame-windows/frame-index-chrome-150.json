@@ -1,0 +1,29 @@
+{
+ "a": {
+  "desc": "[\"value\",\"writable\",\"enumerable\",\"configurable\"]",
+  "enumerable": true,
+  "frames": 1,
+  "has0": true,
+  "inSelf": true,
+  "keys0": true,
+  "length": 1,
+  "zeroIsChild": true
+ },
+ "b": {
+  "desc": "[\"value\",\"writable\",\"enumerable\",\"configurable\"]",
+  "enumerable": true,
+  "frames": 1,
+  "has0": true,
+  "inSelf": true,
+  "keys0": true,
+  "length": 1,
+  "zeroIsChild": true
+ },
+ "top": {
+  "keys": [
+   "0",
+   "1"
+  ],
+  "length": 2
+ }
+}

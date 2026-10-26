@@ -1,0 +1,89 @@
+[
+  {
+    "iface": "CustomElementRegistry",
+    "member": "constructor",
+    "expr": "(() => { const o = new CustomElementRegistry(); return Object.prototype.toString.call(o); })()",
+    "expected": "[object CustomElementRegistry]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "define",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.define(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "get",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.get(\"x\"); })()",
+    "undefined": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "get",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.get(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "getName",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.getName(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "upgrade",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.upgrade(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "initialize",
+    "expr": "(() => { const o = new CustomElementRegistry(); return o.initialize(); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "get",
+    "expr": "(() => { const o = new CustomElementRegistry(); return Object.prototype.toString.call(o.get(\"x\")); })()",
+    "expected": "[object Undefined]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "whenDefined",
+    "expr": "(() => { const o = new CustomElementRegistry(); return Object.prototype.toString.call(o.whenDefined(\"x\")); })()",
+    "expected": "[object Promise]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "whenDefined",
+    "expr": "(async () => { const o = new CustomElementRegistry(); return await o.whenDefined(\"x\"); })()",
+    "throws": "SyntaxError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "whenDefined",
+    "expr": "(async () => { const o = new CustomElementRegistry(); return Object.prototype.toString.call(await o.whenDefined(\"x\")); })()",
+    "throws": "SyntaxError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "CustomElementRegistry",
+    "member": "whenDefined",
+    "expr": "(async () => { const o = new CustomElementRegistry(); return await o.whenDefined(); })()",
+    "throws": "TypeError",
+    "await": true,
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

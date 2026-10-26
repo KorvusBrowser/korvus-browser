@@ -1,0 +1,16 @@
+<!doctype html><html><head><style>.track{display:flex;width:max-content} .slide{display:flex;flex-shrink:0} .slide img{height:auto;max-height:70px;width:auto}</style></head><body>
+<div style="width:300px;overflow:hidden" id="wrap"><div class="track" id="track"><div class="slide"><img src="logo.png" id="orig"></div></div></div>
+<script>
+addEventListener('load', function () {
+  var R = {}, o = document.getElementById('orig');
+  R.orig = [o.complete, o.naturalWidth, o.width, o.getBoundingClientRect().width].join('/');
+  var c = o.cloneNode(true); R.cloneDetached = [c.complete, c.naturalWidth, c.width].join('/');
+  var s = document.querySelector('.slide').cloneNode(true); var ci = s.querySelector('img'); ci.loading = 'lazy'; document.getElementById('track').appendChild(s);
+  R.cloneLazyAppended = [ci.complete, ci.naturalWidth, ci.width, Math.round(ci.getBoundingClientRect().width)].join('/');
+  var n = new Image(); n.src = 'logo.png'; R.newImageSameSrc = [n.complete, n.naturalWidth, n.width].join('/');
+  var t = document.getElementById('track'), w = document.getElementById('wrap'), kids = Array.prototype.slice.call(t.children), i = 0;
+  for (; t.scrollWidth < 2 * w.clientWidth && i++ < 64;) kids.forEach(function (k) { var x = k.cloneNode(true); x.querySelectorAll('img').forEach(function (m) { m.loading = 'lazy'; }); t.appendChild(x); });
+  R.fillIterations = i; R.trackScrollWidth = t.scrollWidth;
+  window.R = JSON.stringify(R);
+});
+</script></body></html>

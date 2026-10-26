@@ -1,0 +1,11 @@
+[
+ "nav [[\"cfL4\",0,\"?proto=TCP&rtt=13092&min_rtt=12801&cwnd=242\"],[\"cfExtPri\",0,\"\"],[\"db\",53.2,\"Database\"],[\"miss\",0,\"\"],[\"a\",2,\"tok\"]]",
+ "/sub.js [[\"sub\",1.5,\"same\"]]",
+ "/xo.js []",
+ "/xo-tao.js [[\"xotao\",3,\"tao\"]]",
+ "array [false,true,true,true,[],\"[object PerformanceServerTiming]\",true]",
+ "toJSON {\"name\":\"cfL4\",\"duration\":0,\"description\":\"?proto=TCP&rtt=13092&min_rtt=12801&cwnd=242\"} [{\"name\":\"cfL4\",\"duration\":0,\"description\":\"?proto=TCP&rtt=13092&min_rtt=12801&cwnd=242\"},{\"name\":\"cfExtPri\",\"duration\":0,\"description\":\"\"},{\"name\":\"db\",\"duration\":53.2,\"description\":\"Database\"},{\"name\":\"miss\",\"duration\":0,\"description\":\"\"},{\"name\":\"a\",\"duration\":2,\"description\":\"tok\"}]",
+ "proto [[\"name\",\"duration\",\"description\",\"toJSON\",\"constructor\"],0]",
+ "ctor TypeError: Failed to construct 'PerformanceServerTiming': Illegal constructor",
+ "done"
+]

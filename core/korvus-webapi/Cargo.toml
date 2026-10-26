@@ -1,0 +1,131 @@
+[package]
+name = "korvus-webapi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+exclude = ["macros", "gen"]
+
+# One binary for every integration test: see tests/all.rs for the measurement.
+# `autotests = false` stops Cargo auto-discovering tests/*.rs as separate binaries.
+autotests = false
+
+[[test]]
+name = "all"
+path = "tests/all.rs"
+
+[lib]
+name = "webapi"
+
+# webapi defines native Web-API classes via deno_core's #[op2] impl, so it depends on deno_core
+# directly (the v8-only-in-engine invariant was relaxed in G1.2). `engine` composes webapi's
+# extension, so the dependency edge points engine -> webapi (no cycle).
+[features]
+# The template impact recorder: compiled only into a recording run's
+# WPT runner. Even disabled, a hook on the member-call path moved the per-call bench by up to 12 %
+# (code layout, measured 2026-09-27), so a production build does not contain it at all.
+touch-log = []
+# korvus-analysis Layer 1 (plugins/korvus-analysis): every page call into native code recorded with its
+# receiver, arguments, result, throw and JS stack. Compiled only into an analysis build, for the same
+# reason as `touch-log`: a production build carries no hook on the member-call path.
+analysis = ["spec/analysis"]
+# V8 itself reports builtin calls and constant reads (tools/v8-trace). Needs the
+# PATCHED V8 built from source (tools/v8-trace/build-korvus.sh); a prebuilt V8 has no such entry point.
+analysis-v8 = ["analysis"]
+
+[dependencies]
+spec = { workspace = true }
+macros = { workspace = true }
+# The arena DOM + CSS selector matcher (v8-free); HostDom wraps korvus_dom::Dom.
+korvus-dom = { workspace = true }
+# The style/layout pipeline, for its PURE-RUST Web Animations timing model (page::animation): the
+# timeline arithmetic -- currentTime, playState, getComputedTiming, the easing curves -- has no V8 in
+# it and belongs in the crate that owns computation over the document. The edge webapi -> page has no
+# cycle (page depends only on spec/cssparser/korvus-dom/taffy) and does NOT drag deno_core into page,
+# which `scripts/check-invariants.sh` enforces from the other side.
+page = { workspace = true }
+# document.cookie is backed by the shared network cookie jar (a bot sensor a bot cookie etc. must be readable by
+# page JS AND ride requests). transport owns that jar; the edge webapi -> transport has no cycle.
+transport = { workspace = true }
+# The `webapi` plugin slot: a claimed member's exit goes to the loaded plugins (`src/plugin_call.rs`).
+plugin_host = { workspace = true }
+# WHATWG URL, for HTMLHyperlinkElementUtils: an anchor's protocol, host and pathname are
+# components of its href parsed as a URL, and there is no honest way to expose them without a real
+# parser. Already the runtime's dependency, at the same version.
+url = "2"
+# The CSS tokenizer, for the Typed OM (`core/css/typed_om.rs`): `CSSNumericValue.parse`, and the
+# token-by-token serialization of a `CSSUnparsedValue`. Already page's dependency, at the same version.
+cssparser = "0.34"
+encoding_rs = "0.8" # the document encoding override for URL query serialization (WHATWG URL "percent-encode after encoding")
+# The stylesheet-load frame's clock (`core/css/sheet_loads.rs`): an async op that sleeps.
+# Already in the graph through deno_core, at the same major version; `time` is the one feature used.
+tokio = { version = "1", features = ["time"] }
+deno_core = "0.410"
+deno_error = "0.7"
+serde = { version = "1", features = ["derive"] }
+# IndexedDB's committed databases as bytes for the context store (`modules/indexeddb/sync.rs`); the workspace's one bincode.
+bincode = "=1.3.3"
+serde_json = "1"
+html5ever = "0.39.0"
+# An SVG <img> rasterized for the canvas (the human's choice 2026-09-26: pure Rust, in
+# this crate, rather than Skia's SVG module across the render plugin). No system font discovery -- an SVG's <text>
+# does not render yet -- but its embedded raster images do (`raster-images`: PNG, JPEG, GIF, WebP, pure-Rust decoders):
+# a Lottie animation's frames are `<image>`s of data URLs, and minea's dashboard mockup was 28 blank ones.
+resvg = { version = "0.48", default-features = false, features = ["raster-images"] }
+markup5ever_rcdom = "0.39.0"
+# XML parsing (case-preserving, namespaces, CDATA, PI) — distinct from html5ever's HTML path.
+quick-xml = "0.37"
+# WebCrypto (SubtleCrypto) primitives — same RustCrypto stack the engine crypto ops used.
+sha2 = "0.10"
+sha1 = "0.10"
+hmac = "0.12"
+aes = "0.8"
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+getrandom = "0.2"
+# RSA and elliptic-curve keys. ADDS NO CRATE TO THE GRAPH and no C to the build:
+# `btls` (Apache-2.0, a BoringSSL wrapper) and `btls-sys` (MIT) already arrive through `wreq` under
+# `transport`, which THIS CRATE ALREADY DEPENDS ON (see `transport` above), and the root
+# `[patch.crates-io]` pins both to one git rev. Measured 2026-09-21: the lockfile has 365 entries
+# before and 365 after, and `libcrypto.a` was already being built and linked into `korvus`.
+#
+# WHY BORINGSSL RATHER THAN THE RustCrypto STACK. This is a parity goal and BoringSSL is what
+# Chrome's WebCrypto is built on, so the moduli it accepts, the curves it names and the sentence a
+# malformed DER produces are the browser's by construction rather than by imitation. The priced
+# alternative (`rsa 0.9` + `p256`/`p384`/`p521`) was 26 new crates, 25 CPU-seconds -- and
+# RUSTSEC-2023-0071, the Marvin Attack, which is `patched = []` in `rsa 0.9.10` AND in `0.10.0-rc`.
+btls = "0.5.6"
+# `btls` has no `Encrypter`/`Decrypter` and keeps `extern crate btls_sys as ffi` private, so
+# RSA-OAEP with a CHOSEN digest is unreachable from its safe API. `binding/btls_oaep.rs` is the one
+# file that reaches past it, and these two are what it needs; nothing else in the crate uses them.
+btls-sys = "0.5.6"
+foreign-types = "0.5"
+# `canvas.toDataURL` serializes the rastered buffer; the bytes come from the render backend
+# (Skia) and this turns them into the data: URL a page reads.
+base64 = "0.22"
+percent-encoding = "2" # decode data: URL ES-module sources in the module loader
+# DEFLATE for `CompressionStream` / `DecompressionStream` -- the raw codec plus CRC-32.
+# The gzip and zlib framing around it is this engine's own (core/streams/compression_stream.rs), so
+# that the header can be emitted in its own chunk the way Chrome's does. Already in `Cargo.lock` at
+# this version through the transport stack, so the build compiles it either way.
+flate2 = "1.1"
+# A WOFF2 font is one Brotli stream (the crate the HTTP stack already decodes `br` with).
+brotli-decompressor = "5"
+
+
+# The unified webapi quality harness (tests/quality.rs) is the
+# single home for webapi tests. Its probe boots the engine to introspect the LIVE JS surface, so it
+# dev-depends on korvus-runtime (lib `engine`). korvus-runtime depends on korvus-webapi, so this is a
+# dev-dependency CYCLE — Cargo permits these (a dev-dep never enters the normal build graph, so it can
+# point "back up"). This is what lets engine-booting webapi tests live here instead of in korvus-runtime.
+[build-dependencies]
+# Compiles shim/codegen.cc (see build.rs). Already in the graph (rusty_v8's own build).
+cc = "1"
+
+[dev-dependencies]
+engine = { workspace = true }
+persona = { workspace = true }
+# spec (korvus-kernel) for the Phase-C cross-layer coherence audit run in the harness.
+spec = { workspace = true }
+# The v8-free aggregator (WebIDL corpus merge + snapshot reader + Chrome profile + the 5-axis `assess`).
+# Reused verbatim so the end-to-end harness grades with the SAME code the `webapi quality` CLI runs.
+korvus-webapi-gen = { path = "gen" }
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time"] }

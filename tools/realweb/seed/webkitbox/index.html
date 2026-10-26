@@ -1,0 +1,23 @@
+<!doctype html><title>t</title><style>body{margin:0;font:16px/20px monospace} .w{width:100px}</style><body>
+<div id=clamp class=w style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii</div>
+<div id=clamp3 class=w style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3">aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii</div>
+<div id=noorient class=w style="display:-webkit-box;-webkit-line-clamp:2">aaaa bbbb cccc dddd eeee ffff</div>
+<div id=hbox style="display:-webkit-box;width:300px"><span id=h1>one</span><span id=h2>two</span></div>
+<div id=vbox style="display:-webkit-box;-webkit-box-orient:vertical;width:300px"><span id=v1>one</span><span id=v2>two</span></div>
+<div id=flexbox style="display:-webkit-box;width:300px"><div id=f1 style="-webkit-box-flex:1">a</div><div id=f2 style="width:50px">b</div></div>
+<div id=packbox style="display:-webkit-box;-webkit-box-pack:center;width:300px"><div id=p1 style="width:50px">c</div></div>
+<span id=ibox style="display:-webkit-inline-box"><span id=i1>x</span></span>
+<script>
+addEventListener('load', () => {
+  const g = id => document.getElementById(id), r = {};
+  for (const id of ['clamp', 'clamp3', 'noorient', 'hbox', 'vbox', 'flexbox', 'packbox', 'ibox']) {
+    const e = g(id), cs = getComputedStyle(e);
+    r[id] = [cs.display, e.offsetWidth, e.offsetHeight, e.innerText.length];
+  }
+  for (const id of ['h1', 'h2', 'v1', 'v2', 'f1', 'f2', 'p1', 'i1']) {
+    const e = g(id), cs = getComputedStyle(e), b = e.getBoundingClientRect();
+    r[id] = [cs.display, cs.minWidth, Math.round(b.left), Math.round(b.top), Math.round(b.width), Math.round(b.height)];
+  }
+  document.title = JSON.stringify(r);
+});
+</script>

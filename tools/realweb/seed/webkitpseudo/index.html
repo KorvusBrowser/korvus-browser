@@ -1,0 +1,14 @@
+<!doctype html><title>t</title><style id=s></style><body><a id=lnk href="#x">l</a><input id=inp>
+<script>
+const sels = [':-webkit-autofill', ':-webkit-any-link', ':-webkit-drag', ':-webkit-full-page-media', ':-webkit-full-screen',
+  ':-webkit-full-screen-ancestor', ':-webkit-any(a, b)', ':-webkit-any(a b)', ':-webkit-foo', ':-WEBKIT-AUTOFILL', ':any-link',
+  ':autofill', ':link', '::-webkit-foo', ':-webkit-scrollbar', ':-internal-autofill-selected'];
+const sheet = document.getElementById('s').sheet, r = {};
+for (const s of sels) {
+  let ins, text, qsa;
+  try { sheet.insertRule('a' + s + ' { color: red }', 0); ins = 'ok'; text = sheet.cssRules[0].selectorText; sheet.deleteRule(0); } catch (e) { ins = e.name; }
+  try { qsa = document.querySelectorAll('a' + s).length; } catch (e) { qsa = e.name; }
+  r[s] = [CSS.supports('selector(' + s + ')'), ins, text || null, qsa];
+}
+document.title = JSON.stringify(r);
+</script>

@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "MediaKeyMessageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaKeyMessageEvent(\"x\", {}); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaKeyMessageEvent",
+    "member": "constructor",
+    "expr": "(() => { const o = new MediaKeyMessageEvent(); return Object.prototype.toString.call(o); })()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaKeyMessageEvent",
+    "member": "messageType",
+    "expr": "(() => { const o = new MediaKeyMessageEvent(\"x\", { messageType: \"license-request\", message: new ArrayBuffer(1) }); return o.messageType; })()",
+    "expected": "license-request",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaKeyMessageEvent",
+    "member": "messageType",
+    "expr": "(() => { const o = new MediaKeyMessageEvent(\"x\", { messageType: \"license-request\", message: new ArrayBuffer(1) }); return Object.prototype.toString.call(o.messageType); })()",
+    "expected": "[object String]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "MediaKeyMessageEvent",
+    "member": "message",
+    "expr": "(() => { const o = new MediaKeyMessageEvent(\"x\", { messageType: \"license-request\", message: new ArrayBuffer(1) }); return Object.prototype.toString.call(o.message); })()",
+    "expected": "[object ArrayBuffer]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

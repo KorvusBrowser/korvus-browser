@@ -1,0 +1,37 @@
+[
+  {
+    "iface": "XRSubImage",
+    "member": "constructor",
+    "expr": "new XRSubImage()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSubImage",
+    "member": "viewport",
+    "expr": "XRSubImage.prototype.viewport",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSubImage",
+    "member": "viewport",
+    "expr": "Object.getOwnPropertyDescriptor(XRSubImage.prototype, \"viewport\").get.call(Object.create(XRSubImage.prototype))",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSubImage",
+    "member": "viewport",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSubImage.prototype, \"viewport\").get.call({}); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "XRSubImage",
+    "member": "viewport",
+    "expr": "(() => { try { const v = Object.getOwnPropertyDescriptor(XRSubImage.prototype, \"viewport\").get.call(Object.create(XRSubImage.prototype)); return \"returned \" + Object.prototype.toString.call(v); } catch (e) { return e.name + \": \" + e.message; } })()",
+    "expected": "TypeError: Illegal invocation",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]

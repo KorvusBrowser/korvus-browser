@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "FileSystemDirectoryReader",
+    "member": "constructor",
+    "expr": "new FileSystemDirectoryReader()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-macos-20261017"
+  }
+]

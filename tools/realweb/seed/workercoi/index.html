@@ -1,0 +1,9 @@
+<!doctype html><html><body><script>
+// REALWEB H28: a dedicated worker of a cross-origin-isolated document -- here a blob: worker, which takes its
+// creator's policy -- is cross-origin isolated too: self.crossOriginIsolated and SharedArrayBuffer (webR picks its
+// SharedBufferChannel from the page's crossOriginIsolated and its worker threw "SharedArrayBuffer is not defined").
+var code = 'postMessage({ coi: self.crossOriginIsolated, sab: typeof SharedArrayBuffer, grow: typeof SharedArrayBuffer === "function" ? new SharedArrayBuffer(8).byteLength : -1 })';
+var w = new Worker(URL.createObjectURL(new Blob([code], { type: 'text/javascript' })));
+w.onmessage = function (e) { document.title = JSON.stringify({ page: { coi: self.crossOriginIsolated, sab: typeof SharedArrayBuffer }, worker: e.data }); };
+w.onerror = function (e) { document.title = 'worker error ' + e.message; };
+</script></body></html>

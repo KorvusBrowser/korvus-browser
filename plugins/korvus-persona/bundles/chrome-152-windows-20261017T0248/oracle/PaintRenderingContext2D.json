@@ -1,0 +1,9 @@
+[
+  {
+    "iface": "PaintRenderingContext2D",
+    "member": "constructor",
+    "expr": "new PaintRenderingContext2D()",
+    "throws": "ReferenceError",
+    "source": "chrome-152-windows-20261017T0248"
+  }
+]

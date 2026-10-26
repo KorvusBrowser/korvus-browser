@@ -1,0 +1,15 @@
+[package]
+name = "korvus-analysis"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "analysis"
+
+# korvus-analysis Layer 1: drains the call recorder's queue (`spec::analysis`, filled by korvus-webapi's
+# `analysis` feature) on its own thread and writes it as NDJSON. Pure Rust: no v8 -- the capture is
+# webapi's, on the JS thread; this crate only ever sees plain records.
+[dependencies]
+spec = { workspace = true, features = ["analysis"] }
+serde_json = "1"

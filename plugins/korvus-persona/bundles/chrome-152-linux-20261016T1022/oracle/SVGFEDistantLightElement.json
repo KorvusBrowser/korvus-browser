@@ -1,0 +1,23 @@
+[
+  {
+    "iface": "SVGFEDistantLightElement",
+    "member": "constructor",
+    "expr": "new SVGFEDistantLightElement()",
+    "throws": "TypeError",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEDistantLightElement",
+    "member": "azimuth",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDistantLight\"); return Object.prototype.toString.call(o.azimuth); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  },
+  {
+    "iface": "SVGFEDistantLightElement",
+    "member": "elevation",
+    "expr": "(() => { const o = document.createElementNS(\"http://www.w3.org/2000/svg\", \"feDistantLight\"); return Object.prototype.toString.call(o.elevation); })()",
+    "expected": "[object SVGAnimatedNumber]",
+    "source": "chrome-152-linux-20261016T1022"
+  }
+]
