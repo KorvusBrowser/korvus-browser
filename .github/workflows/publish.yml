@@ -1,16 +1,19 @@
 # korvus-browser PyPI publish — Trusted Publishing (OIDC, no tokens).
 #
-# Publishes the Python launcher (python/, package `korvus-browser`) on a release. DISPATCH-ONLY until:
-#   1. a PyPI pending publisher is created — Owner=KorvusBrowser, Repository=korvus-browser,
-#      Workflow=publish.yml, Environment=pypi (https://pypi.org/manage/account/publishing/); and
-#   2. the `pypi` environment exists on the repo
-#      (`gh api -X PUT repos/KorvusBrowser/korvus-browser/environments/pypi`).
-# Then pin pypa/gh-action-pypi-publish to a commit sha and enable the `release` trigger below.
+# Publishes the Python launcher (python/, package `korvus-browser`) on a release, via OIDC (no token).
+# The `pypi` environment exists, the action is pinned to a commit sha, and the `release` trigger is on.
+# The ONE remaining prerequisite is the PyPI **pending publisher** (owner's PyPI account + 2FA):
+#   https://pypi.org/manage/account/publishing/ → add a pending publisher —
+#   Project `korvus-browser`, Owner `KorvusBrowser`, Repository `korvus-browser`,
+#   Workflow `publish.yml`, Environment `pypi`.
+# Until that exists, a release's publish job runs but fails at the OIDC exchange (harmless; it succeeds on
+# a re-run once the pending publisher is added).
 name: publish
 
 on:
   workflow_dispatch:
-  # release: { types: [published] }
+  release:
+    types: [published]
 
 permissions:
   id-token: write    # OIDC Trusted Publishing
@@ -31,6 +34,6 @@ jobs:
           python -m pip install --upgrade build
           python -m build
       - name: publish to PyPI (Trusted Publishing — no token)
-        uses: pypa/gh-action-pypi-publish@release/v1   # TODO: pin to a commit sha before enabling
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086  # v1.14.3
         with:
           packages-dir: python/dist
