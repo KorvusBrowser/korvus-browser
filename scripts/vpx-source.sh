@@ -39,7 +39,7 @@ case "$(uname)" in
     exit 1 ;;
 esac
 
-CACHE=${KORVUS_VPX_CACHE:-$HOME/.cache/korvus/libvpx-$CHROME-${VPX_REV:0:8}}
+CACHE=${KORVUS_VPX_CACHE:-$HOME/.cache/korvus/libvpx-$CHROME-${VPX_REV:0:8}-vp9}
 LINK=$REPO/third_party/libvpx-chrome
 
 # fetch <repository> <revision> <dir>: one commit, no history, into an empty <dir>.
