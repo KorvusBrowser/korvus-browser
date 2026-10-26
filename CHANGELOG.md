@@ -43,6 +43,9 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 - The Windows build (x86-64) is back in the release: `korvus-windows-x86_64.zip`, and
   `irm https://korvusbrowser.com/install.ps1 | iex` installs it. From this release on, every release ships Linux,
   macOS and Windows together, or none of them; 152.0.2 shipped Linux and macOS only.
+- The installers say what they do, a line a step: the platform, the release, the download (its size, then a progress
+  bar), the checksum, where korvus went and what changed on the PATH, in colour on a terminal and as plain text in a
+  log. Until now `curl … | bash` printed nothing while it downloaded.
 - Otherwise the engine is 152.0.2's, under the Korvus Binary License Version 1.1.
 
 ## v152.0.2
