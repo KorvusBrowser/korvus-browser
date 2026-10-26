@@ -49,14 +49,24 @@ rustfft = "=6.4.1"
 image-webp = "=0.2.4"
 avif-parse = "=2.1.0"
 rav1d = { version = "=1.1.0", default-features = false, features = ["bitdepth_8", "bitdepth_16"] }
-# A `<video>`'s H.264 (`video_decode`): Cisco's OpenH264 decoder, built from the source the crate carries (BSD-2), its
-# assembly through nasm where the machine has one and plain C where it does not. AV1 is the `rav1d` above.
-openh264 = "=0.9.9"
+# A `<video>`'s H.264 (`video_decode`): Cisco's OpenH264 decoder, built from the source the crate carries (BSD-2).
+# OPTIONAL and OFF by default (the `h264-decode` feature). Building OpenH264 from source does NOT inherit Cisco's
+# AVC patent-royalty coverage — that applies only to Cisco's own prebuilt binary (which is why Firefox downloads it
+# at runtime rather than bundling a self-built one) — so the shipped binary links no H.264 decoder and answers None
+# for avc1/avc3 (the element shows its poster). AV1 (`rav1d`) and VP8/VP9 (libvpx) are royalty-free. Enable this
+# feature only in a build that carries its own AVC/H.264 patent coverage. See docs/license self-review (2026-10-27).
+openh264 = { version = "=0.9.9", optional = true }
 # A `<video>`'s VP9 and VP8 (`video_decode`): libvpx's decoders — declared in the
 # [target.'cfg(not windows)'.dependencies] section at the end of the file (D144; Linux/macOS, Windows deferred).
 # A page's web fonts (`web_fonts`): WOFF 1.0 and WOFF2 bodies back to the sfnt Skia and skrifa read -- WOFF2's
 # glyf/loca and hmtx transforms included. Pure Rust; its brotli and zlib decoders are already in the lock.
 wuff = "=0.2.9"
+
+[features]
+# H.264 decode via OpenH264. OFF by default for AVC patent reasons (see the openh264 dep comment above): a
+# self-compiled OpenH264 is not covered by Cisco's royalty. Turn it on only in a build that carries its own
+# AVC/H.264 patent coverage — `cargo build -p korvus --features korvus-render/h264-decode`.
+h264-decode = ["dep:openh264"]
 
 [build-dependencies]
 # The vendored fdlibm (third_party/fdlibm): Chrome's math for the dynamics compressor.

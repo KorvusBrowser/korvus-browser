@@ -11,6 +11,8 @@ edition = "2021"
 links = "vpx"
 build = "build.rs"
 publish = false
+# The crate is a thin FFI shim; the library it binds (libvpx) is BSD-3-Clause (Google/WebM).
+license = "BSD-3-Clause"
 
 [build-dependencies]
 # Already in the graph (skia-bindings uses bindgen); reused here, no new binding version. libvpx's shipped

@@ -8,7 +8,7 @@ version = "152.0.0"
 description = "Launcher for the korvus browser engine (downloads and runs the matching release binary)"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "BSL-1.1 — see the project LICENSE" }
+license = { text = "BUSL-1.1 — see the project LICENSE" }
 authors = [{ name = "Trevor Kang" }]
 
 [project.urls]

@@ -12,7 +12,7 @@ use spec::{VideoCodec, VideoDecoder, YuvFrame};
 /// The decoder for `codec`, or `None` for a format this build does not decode.
 pub fn decoder(codec: &VideoCodec) -> Option<Box<dyn VideoDecoder>> {
     match &codec.fourcc {
-        b"avc1" | b"avc3" => H264::new(&codec.config).map(|d| Box::new(d) as Box<dyn VideoDecoder>),
+        b"avc1" | b"avc3" => h264_decoder(&codec.config),
         b"av01" => Av1::new().map(|d| Box::new(d) as Box<dyn VideoDecoder>),
         b"vp09" => vpx_decoder(true),
         b"vp08" => vpx_decoder(false),
@@ -34,15 +34,32 @@ fn vpx_decoder(_vp9: bool) -> Option<Box<dyn VideoDecoder>> {
     None
 }
 
+/// The H.264 decoder, when this build ships one. OFF by default: the engine builds OpenH264 from source,
+/// and Cisco's MPEG-LA/Via-LA AVC royalty coverage applies only to Cisco's OWN prebuilt binary, not to a
+/// self-compiled one (as Firefox's runtime-download model reflects). So the default build links no H.264
+/// decoder and `avc1`/`avc3` answer `None` (the element shows its poster) — enable `--features h264-decode`
+/// only in a build that carries its own AVC patent coverage. See docs/license self-review (2026-10-27).
+#[cfg(feature = "h264-decode")]
+fn h264_decoder(config: &[u8]) -> Option<Box<dyn VideoDecoder>> {
+    H264::new(config).map(|d| Box::new(d) as Box<dyn VideoDecoder>)
+}
+
+#[cfg(not(feature = "h264-decode"))]
+fn h264_decoder(_config: &[u8]) -> Option<Box<dyn VideoDecoder>> {
+    None
+}
+
 // ---- H.264 ----------------------------------------------------------------------------------------
 
 /// An `avcC` record's parts: the NAL length size, and the parameter sets (SPS and PPS, as NAL units).
+#[cfg(feature = "h264-decode")]
 struct AvcConfig {
     length_size: usize,
     sps: Vec<Vec<u8>>,
     pps: Vec<Vec<u8>>,
 }
 
+#[cfg(feature = "h264-decode")]
 fn avc_config(b: &[u8]) -> Option<AvcConfig> {
     if b.len() < 7 || b[0] != 1 {
         return None;
@@ -66,11 +83,13 @@ fn avc_config(b: &[u8]) -> Option<AvcConfig> {
 }
 
 /// Exp-Golomb reading over an RBSP (emulation prevention bytes removed).
+#[cfg(feature = "h264-decode")]
 struct Bits<'a> {
     b: &'a [u8],
     at: usize,
 }
 
+#[cfg(feature = "h264-decode")]
 impl Bits<'_> {
     fn bit(&mut self) -> Option<u32> {
         let byte = *self.b.get(self.at / 8)?;
@@ -113,10 +132,12 @@ fn rbsp(nal: &[u8]) -> Vec<u8> {
 
 /// An SPS's colour description -- the VUI's `matrix_coefficients` and `video_full_range_flag` -- or unspecified,
 /// limited range when it carries none.
+#[cfg(feature = "h264-decode")]
 fn sps_colour(sps: &[u8]) -> (u8, bool) {
     sps_colour_inner(&rbsp(sps)).unwrap_or((2, false))
 }
 
+#[cfg(feature = "h264-decode")]
 fn sps_colour_inner(b: &[u8]) -> Option<(u8, bool)> {
     let mut r = Bits { b, at: 8 };
     let profile = r.bits(8)?;
@@ -196,6 +217,7 @@ fn sps_colour_inner(b: &[u8]) -> Option<(u8, bool)> {
     None
 }
 
+#[cfg(feature = "h264-decode")]
 struct H264 {
     decoder: openh264::decoder::Decoder,
     config: AvcConfig,
@@ -204,6 +226,7 @@ struct H264 {
     primed: bool,
 }
 
+#[cfg(feature = "h264-decode")]
 impl H264 {
     fn new(config: &[u8]) -> Option<Self> {
         let config = avc_config(config)?;
@@ -243,6 +266,7 @@ impl H264 {
     }
 }
 
+#[cfg(feature = "h264-decode")]
 impl VideoDecoder for H264 {
     fn decode(&mut self, sample: &[u8]) -> Vec<YuvFrame> {
         let stream = self.annex_b(sample);
@@ -264,6 +288,7 @@ impl VideoDecoder for H264 {
     }
 }
 
+#[cfg(feature = "h264-decode")]
 impl H264 {
     /// A decoded picture's planes, copied out of the decoder at their own size.
     fn frame_with(yuv: &openh264::decoder::DecodedYUV, colour: (u8, bool)) -> YuvFrame {
@@ -675,6 +700,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg(feature = "h264-decode")]
     fn an_h264_clip_decodes_to_its_colour() {
         // WPT's 2x2-green.mp4: every frame green
         let frames = decode_all("v.mp4");
@@ -689,6 +715,7 @@ mod tests {
     }
 
     #[test]
+    #[cfg(feature = "h264-decode")]
     fn an_h264_clip_gives_every_frame() {
         let (_, _, samples) = mp4_track(&wpt("vectors/h264.mp4"));
         let frames = decode_all("vectors/h264.mp4");

@@ -1,46 +1,10 @@
-DRAFT — NOT IN FORCE. This is a fill-in of the canonical Business Source License 1.1
-for korvus, using the decisions in docs/decisions.md (D112, D117, D129). Counsel MUST
-(1) verify the "Terms" section below against the official MariaDB BSL 1.1 text verbatim,
-(2) finalise the bracketed [TBD] parameters, and (3) decide the open question noted at
-the end, before any public release. When the public engine repo is created this file
-becomes its top-level LICENSE (per docs/license/README.md §2.1).
-
-Notes to counsel (remove before release):
-  - Licensor = 더베이스 (The Base) — the owner's choice (2026-10-26). A 개인사업자 (sole
-    proprietorship), not a 법인, so no liability shield. The proprietor's legal name, registration
-    number and address are private (docs/license/entity.private.md) and kept out of this public
-    LICENSE. RECOMMENDED (counsel/owner confirm): (1) contact = a role address on the product domain,
-    e.g. licensing@korvus.dev, not a personal gmail; (2) put NO governing-law/venue clause in this
-    public BSL — the canonical BSL has none and most OSS licenses omit it; place governing law (Korean
-    law) and dispute resolution (arbitration — KCAB in Seoul, or SIAC for international counterparties)
-    in the separate COMMERCIAL license agreement instead; (3) if the proprietor must be named, use the
-    English name "Trevor Kang"; "The Base" is a rendering of 더베이스 — confirm it is the intended
-    English name or keep the 상호 with a parenthetical. (korvus / bauta stay brand names; Trevor Kang is
-    the author, not the Licensor.)
-  - The business reg. number, DOB and address from the certificate are PRIVATE and must NOT appear in
-    this (public) LICENSE — they live in docs/license/entity.private.md for contracts/invoices only.
-  - "Licensed Work" is versioned: each released version carries its own Change Date
-    (release date + 3 years). A LICENSE stanza is added per version, or the template is
-    parameterised so the build stamps the version + date at release.
-  - Additional Use Grant is scale-based + self-attested (D129) AND bars offering korvus as a
-    hosted/managed service at any revenue (D132). Counsel: refine the exact scope of "hosted or
-    managed service" in clause (b) — the intent is to catch reselling korvus itself as a service
-    (e.g. a cloud-browser provider), not to catch embedding the engine inside a product that does
-    something else.
-
--------------------------------------------------------------------------------
-
 Business Source License 1.1
 
 Parameters
 
 Licensor:             더베이스 (The Base)
-                      [A sole proprietorship. If counsel requires the proprietor to be named, use the
-                      English name "Trevor Kang". "The Base" is an English rendering of 더베이스 —
-                      confirm it is the intended English name. The reg. number, DOB and address are
-                      private (docs/license/entity.private.md) and are NOT printed in this public LICENSE.]
 
-Licensed Work:        korvus [VERSION]
+Licensed Work:        korvus
                       The Licensed Work is (c) 2026 더베이스 (The Base).
 
 Additional Use Grant: You may make production use of the Licensed Work provided that BOTH
@@ -64,7 +28,7 @@ Change Date:          Three years from the date the specific version of the Lice
 Change License:       Apache License, Version 2.0
 
 For information about alternative licensing arrangements for the Licensed Work, please
-contact licensing@korvus.dev  [recommended role address — set up forwarding; owner/counsel confirm].
+contact licensing@korvus.dev.
 
 -------------------------------------------------------------------------------
 

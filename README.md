@@ -68,7 +68,7 @@ both for that context:
 
 `korvus serve` also prints the address of its own client -- a browser front end with tabs, popups as windows and
 dialogs -- to open in your browser: `korvus client: http://127.0.0.1:9222/client/#ticket=…`. The ticket is the key to
-the browser; keep the address to yourself. The client is open source ([client](client/README.md)) and can be put in
+the browser; keep the address to yourself. The client is source-available ([client](client/README.md)) and can be put in
 your own page.
 
 Named personas keep their profile (cookies, storage) across runs: `korvus persona new <name>`, then connect to
