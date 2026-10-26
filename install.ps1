@@ -1,7 +1,9 @@
 # korvus installer for Windows: downloads korvus for this machine from the latest release, checks it against the
 # release's SHA256SUMS, unpacks it under ~\.korvus, puts it on your PATH, and runs `korvus setup`.
 #
-#   irm https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.ps1 | iex
+#   irm https://korvusbrowser.com/install.ps1 | iex
+#
+# (korvusbrowser.com hands out the latest release's copy of this file, which is also each release's install.ps1.)
 #
 # Run it again to update. Each release unpacks into a directory of its own (~\.korvus\dist\<version>) and
 # ~\.korvus\current points at the newest. korvus keeps its configuration, license and named personas in ~\.korvus too.
@@ -35,6 +37,19 @@ function script:SumsLine([string]$sums, [string]$name) {
   return $null
 }
 
+# The version the korvus binary $exe says it is: `korvus --version` (152.0.2 on), or the first line of the banner older
+# releases print for it; KORVUS_VERSION's when it says neither.
+function script:VersionOf([string]$exe) {
+  $prev = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'  # an older release exits non-zero after its banner; that is not an error here
+  try { $said = @(& $exe --version 2>$null) } catch { $said = @() } finally { $ErrorActionPreference = $prev }
+  foreach ($line in $said) {
+    if ("$line" -match '^korvus (\d+\.\d+\.\d+)') { return $Matches[1] }
+  }
+  if ($env:KORVUS_VERSION) { return $env:KORVUS_VERSION.TrimStart('v') }
+  return $null
+}
+
 function Get-KorvusPlatform {
   switch ($env:PROCESSOR_ARCHITECTURE) {
     'AMD64' { return 'windows-x86_64' }
@@ -58,18 +73,26 @@ function Install-Korvus {
       throw "korvus: $asset does not match the release's SHA256SUMS"
     }
     Expand-Archive -LiteralPath "$work\$asset" -DestinationPath "$work\x"
-    $top = @(Get-ChildItem -LiteralPath "$work\x" -Directory)
-    if ($top.Count -ne 1 -or -not (Test-Path -LiteralPath (Join-Path $top[0].FullName 'korvus.exe'))) {
-      throw "korvus: $asset holds no korvus.exe"
+    # The archive holds korvus.exe at its root (152.0.0 on), or in one folder named korvus-<version>-<platform> (before).
+    if (Test-Path -LiteralPath "$work\x\korvus.exe") {
+      $src = "$work\x"
+      $version = script:VersionOf "$src\korvus.exe"
+    } else {
+      $top = @(Get-ChildItem -LiteralPath "$work\x" -Directory)
+      if ($top.Count -ne 1 -or -not (Test-Path -LiteralPath (Join-Path $top[0].FullName 'korvus.exe'))) {
+        throw "korvus: $asset holds no korvus.exe"
+      }
+      $src = $top[0].FullName
+      $version = $top[0].Name -replace '^korvus-', '' -replace "-$platform$", ''
     }
-    $version = $top[0].Name -replace '^korvus-', '' -replace "-$platform$", ''
+    if (-not $version) { throw "korvus: cannot tell which version $asset is: set KORVUS_VERSION=vX.Y.Z" }
     $dist = Join-Path $root 'dist'
     New-Item -ItemType Directory -Force -Path $dist | Out-Null
     $dir = Join-Path $dist $version
     if (Test-Path -LiteralPath $dir) {
       Write-Host "korvus: $version is installed already: $dir"
     } else {
-      Move-Item -LiteralPath $top[0].FullName -Destination $dir
+      Move-Item -LiteralPath $src -Destination $dir
     }
     # ~\.korvus\current: a junction to the newest release (a running `korvus serve` runs its own release's files)
     $current = Join-Path $root 'current'
@@ -97,8 +120,7 @@ function Install-Korvus {
       if ($interactive) { & $exe setup } else { & $exe setup --non-interactive }
       if ($LASTEXITCODE -ne 0) { Write-Host 'korvus is installed; run "korvus setup" to finish' }
     }
-    Write-Host 'Next: "korvus serve" (a DevTools endpoint on :9222), "korvus login" for a plan.'
-    Write-Host 'Docs: https://github.com/KorvusBrowser/korvus-browser'
+    Write-Host 'Next: "korvus serve" (a DevTools endpoint on :9222). Docs: https://korvusbrowser.com/docs'
   } finally {
     Remove-Item -Recurse -Force -ErrorAction SilentlyContinue $work
   }

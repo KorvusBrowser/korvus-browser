@@ -38,6 +38,19 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
 
+## v152.0.2
+
+- No limits: korvus runs as many sessions at once as the machine holds, with no account, plan or license key. The
+  session cap (one session without a license) and its waiting queue are gone, and `korvus serve` calls no server of
+  korvus's: no activation, no heartbeat, no install id sent. `korvus login`, `logout`, `status` and `activate` are
+  gone with them (they now only say so), and `korvus stats` shows the active sessions.
+- korvus's site is korvusbrowser.com: `curl -fsSL https://korvusbrowser.com/install.sh | bash` and
+  `irm https://korvusbrowser.com/install.ps1 | iex` install the latest release. The licensing contact is
+  licensing@korvusbrowser.com (korvus.dev was never korvus's).
+- The installers install a release whose archive holds korvus at its root, as 152.0.0's and 152.0.1's do (until now
+  they stopped with "holds no korvus"), and take its version from the binary.
+- `korvus --version` prints the release's version (the banner of 152.0.0 and 152.0.1 both said 152.0.0).
+
 ## v152.0.1
 
 - The `pip install korvus-browser` launcher now verifies the downloaded archive against the release's

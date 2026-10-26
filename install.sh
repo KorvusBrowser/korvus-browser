@@ -2,7 +2,9 @@
 # korvus installer for Linux and macOS: downloads this platform's korvus from the latest release, checks it against
 # the release's SHA256SUMS, unpacks it under ~/.korvus, puts it on your PATH, and runs `korvus setup`.
 #
-#   curl -fsSL https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.sh | sh
+#   curl -fsSL https://korvusbrowser.com/install.sh | bash
+#
+# (korvusbrowser.com hands out the latest release's copy of this file, which is also each release's install.sh.)
 #
 # Run it again to update. Each release unpacks into a directory of its own (~/.korvus/dist/<version>) and
 # ~/.korvus/current points at the newest, so a `korvus serve` already running keeps its own files. korvus keeps its
@@ -96,6 +98,14 @@ korvus_add_path() {
   done
 }
 
+# The version the korvus binary $1 says it is: `korvus --version` (152.0.2 on), or the first line of the banner older
+# releases print for it; KORVUS_VERSION's when it says neither.
+korvus_version_of() {
+  _v=$("$1" --version 2>/dev/null </dev/null | awk '$1 == "korvus" && $2 ~ /^[0-9]+[.][0-9]+[.][0-9]+$/ { print $2; exit }')
+  [ -n "$_v" ] || _v=${KORVUS_VERSION#v}
+  printf '%s\n' "$_v"
+}
+
 # Whether `korvus setup` may ask its two questions on the terminal.
 korvus_can_prompt() {
   [ -z "${CI:-}" ] && [ -z "${KORVUS_NO_PROMPT:-}" ] && [ ! -e /.dockerenv ] && (: </dev/tty) 2>/dev/null
@@ -122,15 +132,23 @@ korvus_install() {
   fi
   mkdir -p "$work/x"
   tar -xzf "$work/$asset" -C "$work/x"
-  top=$(ls "$work/x")
-  version=${top#korvus-}
-  version=${version%-"$platform"}
-  [ -x "$work/x/$top/korvus" ] || { korvus_say "$asset holds no korvus"; exit 1; }
+  # The archive holds korvus at its root (152.0.0 on), or in one folder named korvus-<version>-<platform> (before).
+  if [ -x "$work/x/korvus" ]; then
+    src=$work/x
+    version=$(korvus_version_of "$src/korvus")
+  else
+    top=$(ls "$work/x")
+    src=$work/x/$top
+    version=${top#korvus-}
+    version=${version%-"$platform"}
+  fi
+  [ -x "$src/korvus" ] || { korvus_say "$asset holds no korvus"; exit 1; }
+  [ -n "$version" ] || { korvus_say "cannot tell which version $asset is: set KORVUS_VERSION=vX.Y.Z"; exit 1; }
   mkdir -p "$home/dist"
   if [ -e "$home/dist/$version" ]; then
     korvus_say "$version is installed already: $home/dist/$version"
   else
-    mv "$work/x/$top" "$home/dist/.$version.new"
+    mv "$src" "$home/dist/.$version.new"
     mv "$home/dist/.$version.new" "$home/dist/$version"
   fi
   ln -sfn "dist/$version" "$home/current"
@@ -155,8 +173,7 @@ korvus_install() {
   else
     KORVUS_HOME=$home "$home/current/korvus" setup --non-interactive </dev/null
   fi
-  echo "Next: \`korvus serve\` (a DevTools endpoint on :9222), \`korvus login\` for a plan. Docs:"
-  echo "https://github.com/KorvusBrowser/korvus-browser"
+  echo "Next: \`korvus serve\` (a DevTools endpoint on :9222). Docs: https://korvusbrowser.com/docs"
 }
 
 [ "${KORVUS_INSTALL_LIB:-}" = 1 ] || korvus_install

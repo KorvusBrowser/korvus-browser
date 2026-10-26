@@ -11,7 +11,7 @@
 //!   korvus persona import <name> <file>        a file `export` wrote, as its profile
 //!   korvus plugin ls                           the plugins a run loads, and the slots each fills
 //!   korvus plugin check <path>                 load one plugin library and print what it declares
-//!   korvus stats [--port 9222]                 a running `korvus serve`'s active and queued sessions
+//!   korvus stats [--port 9222]                 a running `korvus serve`'s active sessions
 //!
 //! A named persona is a persona document (`persona.json`) and, once a context has worn it, its profile (`profile/`):
 //! the cookies and storage its pages kept, which the next context of that name starts with.
@@ -428,7 +428,6 @@ pub fn stats(args: &[String]) -> i32 {
     let body = raw.split_once("\r\n\r\n").map(|(_, b)| b).unwrap_or("");
     let Ok(v) = serde_json::from_str::<Value>(body.trim()) else { return fail(format!("{addr} answered no sessions: {}", body.trim())) };
     println!("active {}", v["active"]);
-    println!("queued {}", v["queued"].as_u64().unwrap_or(0));
     for c in v["contexts"].as_array().into_iter().flatten() {
         println!("  {}\t{}\t{} page(s)", c["context"].as_str().unwrap_or(""), c["name"].as_str().unwrap_or("-"), c["pages"]);
     }

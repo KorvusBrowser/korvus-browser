@@ -3195,9 +3195,9 @@ pub fn proxy_url(url: &str) -> String {
     }
 }
 
-/// One HTTP request korvus makes for itself, not for a page -- an IP echo through a context's proxy, a license
-/// server's activation and heartbeat (goal 1020 steps 4-6): `method` to `url` with `headers` and `body` (its content
-/// type and bytes), through `proxy` when given, its status and body. Blocking, on a thread of its own, at most
+/// One HTTP request korvus makes for itself, not for a page -- an IP echo through a context's proxy (goal 1020 step
+/// 4): `method` to `url` with `headers` and `body` (its content type and bytes), through `proxy` when given, its
+/// status and body. Blocking, on a thread of its own, at most
 /// `within`, so a caller in any runtime (or none) can make it.
 pub fn http_request(
     method: &str,

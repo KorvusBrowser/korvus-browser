@@ -789,7 +789,7 @@ fn process() -> &'static RwLock<Process> {
 }
 
 /// This process's browser context and persona, as `context_id()` and `persona_name()` answer them, and the secret
-/// `seed(domain)` is keyed by (the license's, once licensing holds one; until then the context's own id).
+/// `seed(domain)` is keyed by (the context's own id).
 pub fn set_context(context: &str, persona: &str, secret: &str) {
     let mut p = process().write().unwrap_or_else(|e| e.into_inner());
     p.context = CString::new(context).unwrap_or_default();
@@ -2670,27 +2670,6 @@ pub fn context_allow(tenant: i64, context: &str) -> bool {
         }
     }
     true
-}
-
-/// ABI 3 (step 8, G4, `queue_order`): the sessions waiting under the license cap belong to `tenants` -- the first
-/// plugin that fills the slot (the answer slots' order, last loaded first) returns the INDEX into `tenants` of the
-/// one to admit next. `None` when no plugin fills it or a plugin returns an out-of-range index (korvus's own order
-/// then stands); this is fairness within the cap and cannot change it.
-pub fn queue_order(tenants: &[i64]) -> Option<usize> {
-    traced("queue_order", "");
-    if tenants.is_empty() {
-        return None;
-    }
-    let ids: Vec<c_long> = tenants.iter().map(|&t| t as c_long).collect();
-    for p in answerers() {
-        let Some(f) = p.desc.queue_order else { continue };
-        // SAFETY: the slice lives across the call, `len` long; the plugin's own callback with its own self.
-        let idx = unsafe { f(p.desc.self_, ids.as_ptr(), ids.len() as c_uint) };
-        if idx >= 0 && (idx as u64) < tenants.len() as u64 {
-            return Some(idx as usize);
-        }
-    }
-    None
 }
 
 // ── ABI 3 (step 10): page bindings (B4), file chooser (7.3), a new context's proxy (D2) ────────────

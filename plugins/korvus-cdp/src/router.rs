@@ -451,7 +451,7 @@ struct Client {
     /// A `/devtools/page/<id>` connection: its session-less commands are that page's.
     page_socket: Option<String>,
     /// The tenant this connection belongs to (plugin ABI 3, G1): the id `on_connect` returned, or -1 when no
-    /// tenancy plugin gates connections. Read for `context_allow` (G2) and `queue_order` (G4).
+    /// tenancy plugin gates connections. Read for `context_allow` (G2).
     tenant: i64,
     /// The sessions (`""`: a page socket's own) that sent `Page.enable`: they hear a page's dialogs and may answer
     /// them, as Chrome's `PageHandler` does (D88 step 2).
@@ -515,8 +515,6 @@ enum Ev {
     PluginEvent { method: String, params: String },
     /// Time to write the named personas' profiles.
     Flush,
-    /// The license's cap changed (`set_cap`).
-    Cap,
     /// Time to sample the page processes' CPU and memory into the per-context metrics (plugin ABI 3, G3).
     Sample,
     /// A tenancy plugin asked to idle / wake a context (plugin ABI 3, G5): freeze or thaw its page processes.
@@ -759,8 +757,6 @@ struct Browser {
     /// Metric totals from the page processes and the router's own slots (plugin ABI 3, A6), summed per
     /// (context, name, labels).
     metrics: Vec<MetricRow>,
-    /// `createTarget`s waiting for a session under the license's cap (goal 1020 step 6), first come first served.
-    queue: std::collections::VecDeque<Job>,
     /// Contexts a `createTarget` is starting a page in: sessions already, for the count.
     starting: HashMap<String, usize>,
     /// The shared per-context key/value store a tenancy plugin keeps across a context's hibernate/resume (plugin
@@ -772,32 +768,6 @@ struct Browser {
     tickets: HashMap<String, crate::viewer::Ticket>,
 }
 
-/// The sessions this endpoint may run at once (the license's allocation, goal 1020 step 6): none counted until the
-/// endpoint sets it. A lower cap never stops a running session (invariant I3); it only makes a new one wait.
-static CAP: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(usize::MAX);
-/// The sessions running now and waiting now, as the actor last counted them.
-static ACTIVE: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
-static QUEUED: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
-/// The actor, for [`set_cap`].
-static ACTOR: std::sync::OnceLock<mpsc::UnboundedSender<Ev>> = std::sync::OnceLock::new();
-
-/// Set the license's cap on sessions; a raised one lets waiting sessions in.
-pub fn set_cap(n: usize) {
-    CAP.store(n, std::sync::atomic::Ordering::Relaxed);
-    if let Some(tx) = ACTOR.get() {
-        let _ = tx.send(Ev::Cap);
-    }
-}
-
-/// The sessions running now (what a heartbeat reports).
-pub fn active() -> usize {
-    ACTIVE.load(std::sync::atomic::Ordering::Relaxed)
-}
-
-/// The sessions waiting for one to end, or for a larger cap.
-pub fn queued() -> usize {
-    QUEUED.load(std::sync::atomic::Ordering::Relaxed)
-}
 
 impl Drop for Browser {
     fn drop(&mut self) {
@@ -862,13 +832,11 @@ pub async fn serve_browser(listener: TcpListener, persona: Arc<dyn spec::Persona
         store,
         then: Vec::new(),
         metrics: Vec::new(),
-        queue: Default::default(),
         starting: HashMap::new(),
         kv: HashMap::new(),
         popup_rids: HashMap::new(),
         tickets: HashMap::new(),
     };
-    let _ = ACTOR.set(ev_tx.clone());
     // D88 step 3: the endpoint's own viewer ticket, for its own client -- any route, interactive, for the endpoint's
     // life -- said where the person who started it reads it. Not when a tenancy plugin gates connections: its tenants'
     // own tickets are their servers' to mint.
@@ -1238,7 +1206,7 @@ impl plugin_host::Tenancy for TenancyHandle {
         }
         // TODO(1021-verify): this blocks the calling thread for the actor's reply. It is safe from a tenancy
         // plugin's own thread (the intended caller), but a plugin that calls kv_get synchronously from on_connect /
-        // context_allow / queue_order / on_cdp_call runs ON the actor and would deadlock -- confirm tenancy plugins
+        // context_allow / on_cdp_call runs ON the actor and would deadlock -- confirm tenancy plugins
         // touch the KV only off-actor, or move the store behind a shared lock reached without the actor.
         rx.blocking_recv().ok().flatten()
     }
@@ -1439,7 +1407,6 @@ impl Browser {
         self.store.close(id);
         self.kv.remove(id);
         plugin_host::event("context.closed", &json!({ "context": id }).to_string());
-        self.drain();
     }
 
     fn ctx(&self, id: &str) -> Option<&Ctx> {
@@ -1536,11 +1503,6 @@ impl Browser {
         self.targets.iter().find(|t| t.id == tid).is_some_and(|t| self.sees(client, &t.context))
     }
 
-    /// The tenant a connection belongs to (plugin ABI 3): its `on_connect` id, or -1 when it was not gated.
-    fn tenant_of(&self, client: u64) -> i64 {
-        self.clients.get(&client).map(|c| c.tenant).unwrap_or(-1)
-    }
-
     fn target(&mut self, id: &str) -> Option<&mut Target> {
         self.targets.iter_mut().find(|t| t.id == id)
     }
@@ -1565,8 +1527,8 @@ impl Browser {
                 })
             })
             .collect();
-        // sessions as the license counts them: contexts a client made a page in; and those waiting for a place
-        json!({ "active": self.sessions_now(), "queued": self.queue.len(), "contexts": rows })
+        // sessions: contexts a client made a page in
+        json!({ "active": self.sessions_now(), "contexts": rows })
     }
 
     /// Handle one event; `true` when the browser should close.
@@ -1622,10 +1584,6 @@ impl Browser {
             }
             Ev::Flush => {
                 self.flush_profiles();
-                false
-            }
-            Ev::Cap => {
-                self.drain();
                 false
             }
             Ev::Sample => {
@@ -1702,7 +1660,6 @@ impl Browser {
             json!({
                 "tenancy": plugin_host::has_connect_auth(),
                 "active": self.sessions_now(),
-                "queued": self.queue.len(),
                 "metrics": metrics["metrics"].clone(),
             })
             .to_string()
@@ -1863,7 +1820,6 @@ impl Browser {
         self.end_screencast(client, None);
         self.clients.remove(&client);
         self.pending.retain(|_, (c, _, _)| *c != client);
-        self.queue.retain(|j| j.client != client);
         let doomed: Vec<String> = self.contexts.iter().filter(|c| c.owner == Some(client) && c.dispose_on_detach).map(|c| c.id.clone()).collect();
         for id in doomed {
             self.remove_context(&id);
@@ -2093,22 +2049,13 @@ impl Browser {
                 return;
             }
         }
-        let job = Job { client, id, context: ctx, url, popup: None };
-        // A page in a context that is not a session yet makes it one: over the license's cap, it waits (its answer
-        // with it), and a running session goes on (invariant I3).
-        if !self.is_session(&job.context) && (self.sessions_now() >= CAP.load(std::sync::atomic::Ordering::Relaxed) || !self.queue.is_empty()) {
-            self.queue.push_back(job);
-            eprintln!("[korvus] a new session waits: {} of {} in use, {} waiting", self.sessions_now(), CAP.load(std::sync::atomic::Ordering::Relaxed), self.queue.len());
-            self.recount();
-            return;
-        }
-        self.start(job);
+        // A page in a context that is not a session yet makes it one; there is no limit to wait under (D153).
+        self.start(Job { client, id, context: ctx, url, popup: None });
     }
 
     /// Start the page a `createTarget` asked for.
     fn start(&mut self, job: Job) {
         *self.starting.entry(job.context.clone()).or_default() += 1;
-        self.recount();
         let ctx = job.context.clone();
         let (launch, ev, persona, path) = (self.launch.clone(), self.ev.clone(), self.persona.clone(), self.spec_path(&ctx));
         // a popup's process knows its opener's origin (`-`: opened `noopener`, no opener)
@@ -2130,43 +2077,6 @@ impl Browser {
     /// The sessions running now.
     fn sessions_now(&self) -> usize {
         self.contexts.iter().filter(|c| self.is_session(&c.id)).count()
-    }
-
-    fn recount(&self) {
-        ACTIVE.store(self.sessions_now(), std::sync::atomic::Ordering::Relaxed);
-        QUEUED.store(self.queue.len(), std::sync::atomic::Ordering::Relaxed);
-    }
-
-    /// Let in the waiting sessions the cap now has room for, first come first served; a page for a context that is
-    /// a session already does not wait for a place, and one whose client or context went goes.
-    fn drain(&mut self) {
-        let mut waiting: Vec<Job> = Vec::from(std::mem::take(&mut self.queue));
-        while !waiting.is_empty() {
-            // G4: a tenancy plugin may pick which waiting session is admitted next, by tenant; without one the
-            // oldest goes first. The pick only orders who takes a freed slot -- it cannot change the cap.
-            let idx = {
-                let tenants: Vec<i64> = waiting.iter().map(|j| self.tenant_of(j.client)).collect();
-                // A tenancy plugin is untrusted: clamp its index into range so a bad `queue_order` cannot panic
-                // `remove` and take down the endpoint. `waiting` is non-empty here, so `len() - 1` is valid.
-                plugin_host::queue_order(&tenants).unwrap_or(0).min(waiting.len() - 1)
-            };
-            let job = waiting.remove(idx);
-            if job.popup.is_none() && !self.clients.contains_key(&job.client) {
-                continue;
-            }
-            if self.ctx(&job.context).is_none() {
-                if let Some(c) = self.clients.get(&job.client) {
-                    c.send(json!({ "id": job.id, "error": RpcError::server("Failed to find browser context with id".into()).to_json() }));
-                }
-                continue;
-            }
-            if self.is_session(&job.context) || (self.queue.is_empty() && self.sessions_now() < CAP.load(std::sync::atomic::Ordering::Relaxed)) {
-                self.start(job);
-            } else {
-                self.queue.push_back(job);
-            }
-        }
-        self.recount();
     }
 
     /// A `createTarget`'s process listens: the target exists, as Chrome reports a new one.
@@ -2208,7 +2118,6 @@ impl Browser {
         plugin_host::event("page.created", &json!({ "target": tid, "context": t.context }).to_string());
         t.counted = true;
         self.targets.insert(0, t);
-        self.recount();
         let viewers: Vec<u64> = self.clients.keys().copied().filter(|&c| self.sees(c, &job.context)).collect();
         for &c in &viewers {
             let mut events = Vec::new();
@@ -2571,8 +2480,6 @@ impl Browser {
         }
         self.popup_rids.retain(|(a, _), b| a.as_str() != tid && b.as_str() != tid);
         self.targets.retain(|t| t.id != tid);
-        // a session may have ended: one waiting takes its place
-        self.drain();
     }
 
     /// Load `url` into new target `tid`, as Chrome does a `createTarget`'s or a popup's. Its answer is the router's own (an
@@ -2785,12 +2692,7 @@ impl Browser {
                 if !noopener {
                     self.popup_rids.insert((from.to_string(), rid), String::new());
                 }
-                if self.is_session(&context) || self.sessions_now() < CAP.load(std::sync::atomic::Ordering::Relaxed) {
-                    self.start(job);
-                } else {
-                    self.queue.push_back(job);
-                    self.recount();
-                }
+                self.start(job);
             }
             POPUP_POST_LINE => {
                 if let Some(t) = popup.and_then(|b| self.targets.iter().find(|t| t.id == b)) {

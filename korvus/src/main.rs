@@ -6,12 +6,10 @@
 
 use spec::{Persona, RenderBackend};
 
-mod account;
 mod cli;
-mod license;
 mod settings;
 
-/// korvus's version, as its license calls and its banner state it.
+/// korvus's version, as its banner states it.
 pub(crate) const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 /// The persona korvus wears, resolved by the crate that owns the question ([`persona::from_env`]): the persona
@@ -120,26 +118,17 @@ async fn main() -> anyhow::Result<()> {
     let making_snapshot = command == engine::snapshot::MAKE_ARG;
     // The commands that run no page.
     match command.as_str() {
+        "--version" | "-V" | "version" => {
+            println!("korvus {VERSION}");
+            std::process::exit(0);
+        }
         "setup" => std::process::exit(cli::setup(&argv[2..])),
         "stats" => std::process::exit(cli::stats(&argv[2..])),
         "persona" => std::process::exit(cli::persona(&argv[2..])),
+        // The account commands of releases before 152.0.2: korvus has no accounts or plans now, and no session limit.
         "login" | "logout" | "status" | "activate" => {
-            let done = match command.as_str() {
-                "login" => account::login(),
-                "logout" => account::logout(),
-                "status" => account::status(),
-                _ => match argv.get(2) {
-                    Some(key) => account::activate(key),
-                    None => Err("usage: korvus activate <key>".into()),
-                },
-            };
-            std::process::exit(match done {
-                Ok(()) => 0,
-                Err(e) => {
-                    eprintln!("korvus: {e}");
-                    2
-                }
-            });
+            eprintln!("korvus: there is no account to sign in to: every session is free, with no limit");
+            std::process::exit(0);
         }
         "plugin" => match argv.get(2).map(String::as_str) {
             Some("ls") => {
@@ -809,38 +798,8 @@ async fn probe_url(url: &str) -> anyhow::Result<()> {
 /// `korvus serve` (and `korvus browser [port]`): the browser endpoint. Each page target it makes is this binary's own
 /// `serve-page` in a process of its own ([`serve_target_child`]); see `cdp::router`.
 async fn browser_endpoint(addr: std::net::SocketAddr) -> anyhow::Result<()> {
-    // The license (goal 1020 step 6): how many sessions this machine may run at once -- the token kept, renewed, or a
-    // first run's free one -- and a heartbeat a minute that renews it and brings a changed cap with no command. Only
-    // this process talks to the license server (invariant I4); a lower cap never stops a running session (I3).
-    let server = license::server();
-    let (held, why) = {
-        let s = server.clone();
-        tokio::task::spawn_blocking(move || license::ensure(&s)).await?
-    };
-    let cap = license::sessions(held.as_ref());
-    match (&held, why) {
-        (Some(l), _) => eprintln!("[korvus] license {} ({}): {cap} session(s) on this machine", l.id, l.plan),
-        (None, Some(why)) => eprintln!("[korvus] license: {why}; serving {cap} session(s), the free one"),
-        (None, None) => eprintln!("[korvus] license: none; serving {cap} session(s), the free one"),
-    }
-    cdp::router::set_cap(cap);
-    tokio::spawn(async move {
-        loop {
-            tokio::time::sleep(std::time::Duration::from_secs(60)).await;
-            let Some(key) = license::key() else { continue };
-            let (s, active) = (server.clone(), cdp::router::active());
-            match tokio::task::spawn_blocking(move || license::heartbeat(&s, &key, active)).await {
-                Ok(Ok(license::Beat::Renewed(l))) => cdp::router::set_cap(license::sessions(Some(&l))),
-                Ok(Ok(license::Beat::Revoked(why))) => {
-                    eprintln!("[korvus] license: the server revoked it ({why}): new sessions wait, running ones go on");
-                    cdp::router::set_cap(0);
-                }
-                // unreachable: the token kept holds until it expires
-                Ok(Err(_)) => cdp::router::set_cap(license::sessions(license::read().ok().as_ref())),
-                Err(_) => {}
-            }
-        }
-    });
+    // No license and no session limit (D153): the endpoint calls no server of korvus's and runs every session it is
+    // asked for.
     let listener = tokio::net::TcpListener::bind(addr).await?;
     println!("korvus serve on http://{} (WebSocket url: GET /json/version)", listener.local_addr()?);
     let persona: std::sync::Arc<dyn Persona> = std::sync::Arc::from(build_persona());
@@ -1579,7 +1538,7 @@ fn banner() {
     // is a launch-time error surfaced to the operator.
     let incoherences = spec::coherence::audit(persona_ref);
 
-    println!("korvus {VERSION} (commands: serve, fetch, run, probe, setup, login, logout, status, activate, persona, plugin ls, plugin check, stats)");
+    println!("korvus {VERSION} (commands: serve, fetch, run, probe, setup, persona, plugin ls, plugin check, stats, --version)");
     println!("  engine:    {}", engine::engine_name());
     println!("  webapi:    {}", webapi::surface_name());
     println!("  render:    {}", render_ref.name());

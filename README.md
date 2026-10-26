@@ -8,14 +8,17 @@ so Playwright, Puppeteer and any CDP client drive it as they drive Chrome.
 Linux (x86-64, glibc) and macOS (Apple silicon):
 
 ```sh
-curl -fsSL https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.sh | sh
+curl -fsSL https://korvusbrowser.com/install.sh | bash
 ```
 
 Windows (x86-64), in PowerShell:
 
 ```powershell
-irm https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.ps1 | iex
+irm https://korvusbrowser.com/install.ps1 | iex
 ```
+
+korvusbrowser.com hands out the installers of the latest release; the same files are in every release
+(`https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.sh`, `install.ps1`).
 
 The installer checks the download against the release's `SHA256SUMS`, unpacks it into `~/.korvus/dist/<version>`,
 points `~/.korvus/current` at it, adds that to your `PATH` and runs `korvus setup`. Run it again to update. On a Linux
@@ -76,7 +79,7 @@ Named personas keep their profile (cookies, storage) across runs: `korvus person
 settings; `korvus persona ls` and `korvus persona rm <name>` manage them. `korvus persona reset <name>` drops a
 profile, `korvus persona export <name> [file]` writes it as JSON (with its cookies, HttpOnly ones included) and
 `korvus persona import <name> <file>` puts one back; `"persistent": false` in a persona's `session` keeps none. `korvus
-plugin ls` lists the loaded plugins and the slots they fill. `korvus stats` shows the active and queued sessions.
+plugin ls` lists the loaded plugins and the slots they fill. `korvus stats` shows the active sessions.
 
 A context starts as its persona, and what a client asks for over DevTools is honoured as Chrome honours it: Playwright's
 `newContext({ userAgent, locale, timezoneId, viewport, colorScheme, geolocation, permissions, javaScriptEnabled,
@@ -112,24 +115,12 @@ The script runs as the browser itself -- as Chrome 152, the milestone korvus pre
 client that ships it. For a clean mint each time, give each run its own session: over CDP, a `newContext()` per mint
 (each is a fresh persona with no cookies or storage under D8); with `korvus run`, each invocation is already its own.
 
-## Plans
+## Free, with no limits
 
-A session is a browser context a client opened a page in. korvus is licensed by how many run at once:
-
-| | sessions at once |
-|---|---|
-| no account | 1 per machine |
-| free account (`korvus login`) | 3; 10 for the first 30 days |
-| paid plans | by sessions |
-
-Every plan has every feature. Over your plan's limit, a new session waits for a free place, first come first
-served; a running session is never stopped. `korvus login` signs in with GitHub, `korvus status` shows your plan,
-and `korvus activate <key>` takes a key from your account page. A plan change reaches a running `korvus serve`
-within a minute.
-
-Only `korvus serve` talks to korvus's license server, once a minute: your license key, this install's id, how many
-sessions are active and the korvus version. Pages send nothing to us, and nothing about pages, URLs, proxies or
-personas is ever sent. The [binary license](BINARY-LICENSE.md) says exactly what is sent and when.
+korvus has no plans, no accounts and no license key. A release runs as many sessions at once as your machine holds,
+with every feature, the stealth persona included. `korvus serve` calls no server of ours: its traffic is the pages you
+load, your own settings (a proxy, a plugin) and a browser's own work, such as certificate checks. The
+[binary license](BINARY-LICENSE.md) says the same.
 
 ## Plugins
 
@@ -143,8 +134,11 @@ your machine and your pages.
 
 ## License
 
-- The engine source and documentation in this repository are under the [Business Source License 1.1](LICENSE)
-  (source-available; see the license for the change date and the additional-use grant).
+- The engine source and documentation in this repository are under the [Business Source License 1.1](LICENSE), which
+  is source-available: anyone may read, change and build it, and use it in production while their yearly revenue is
+  under USD 10 million (self-attested) and they do not offer korvus to others as a hosted or managed service.
+  Development, testing, research and education are always free. Each version becomes Apache-2.0 three years after it
+  is first released.
 - The plugin interface — the C ABI header (`plugin-sdk/korvus_plugin.h`), the SDKs and the examples — is under the
   [MIT License](LICENSE.plugins), so anyone may write and share plugins.
 - The korvus binary is under the [Korvus Binary License](BINARY-LICENSE.md). Running it on your own machines for your

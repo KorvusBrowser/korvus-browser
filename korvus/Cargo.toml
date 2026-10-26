@@ -44,6 +44,3 @@ toml = "0.8"
 # A named persona's profile (`store.bin`, the context store's bincode rows) for `korvus persona export|import`; the
 # workspace's one bincode.
 bincode = "=1.3.3"
-# The license token's Ed25519 signature and its base64url / hex (goal 1020 step 6), as the license readers check them.
-ring = "0.17"
-data-encoding = "2"

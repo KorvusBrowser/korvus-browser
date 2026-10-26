@@ -128,7 +128,7 @@ extern "C" {
 //             info is handed to a page to tap yet.
 //
 // THE SEED. host->seed(domain) returns a uint32 stable for one persona and one domain, different for another (keyed
-// by the context's license). Key a per-persona, per-site shift off it -- the same persona reproduces the same
+// by the context's own id). Key a per-persona, per-site shift off it -- the same persona reproduces the same
 // fingerprint, a different persona gets a different one -- whether perturbing readback metrics or a parameter answer.
 // korvus hands you the point and the seed; the shift is yours.
 
@@ -365,8 +365,8 @@ typedef struct KorvusHost {
   void (*virtual_time_resume)(void);
 
   // ── ABI 3 (step 8 / step 9 G5): tenancy, the router's side ──
-  // These are router services a tenancy plugin triggers from the endpoint process (where on_connect, context_allow
-  // and queue_order run). The router installs the handler; until it does they are no-ops and kv_get returns NULL.
+  // These are router services a tenancy plugin triggers from the endpoint process (where on_connect and
+  // context_allow run). The router installs the handler; until it does they are no-ops and kv_get returns NULL.
   // Each takes a context's CDP id, not the opaque handle on_call's host calls take -- a router-side plugin manages
   // many contexts and names the one it means. (Note: the host calls above -- metric, virtual_time_* -- take no
   // plugin self either; the plugin's self is handed to its own slots, not to the host.)
@@ -582,9 +582,9 @@ typedef struct KorvusPlugin {
   // context; it never stops a context already running (invariant I3).
   int (*context_allow)(void* self, long tenant, const char* context);
 
-  // G4: the sessions waiting under the license cap belong to the tenants in `tenants`[0..n). Return the INDEX into
-  // that array of the session to admit next -- tenant fairness WITHIN the cap (it cannot change the cap). Optional:
-  // korvus's own order stands when no plugin fills it or a plugin returns an out-of-range index.
+  // G4: once, the order in which sessions waiting under a license cap were admitted. korvus has had no session cap
+  // since 152.0.2, so no session waits and korvus never calls this slot; it stays so the struct's layout does not
+  // change. Leave it NULL.
   long (*queue_order)(void* self, const long* tenants, unsigned n);
 
   // ── ABI 3 (step 10) ──
