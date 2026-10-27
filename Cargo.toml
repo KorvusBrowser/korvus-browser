@@ -137,7 +137,7 @@ cdp = { path = "plugins/korvus-cdp", package = "korvus-cdp" }
 analysis = { path = "plugins/korvus-analysis", package = "korvus-analysis" }
 
 [workspace.package]
-version = "152.0.3"
+version = "152.0.4"
 edition = "2021"
 # The engine source is Business Source License 1.1 (see ./LICENSE). SPDX id is BUSL-1.1 (not "BSL-1.1").
 # (The MIT plugin SDK is LICENSE.plugins; korvus-stealth and libvpx-sys carry their own license fields.)
