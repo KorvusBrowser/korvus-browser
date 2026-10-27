@@ -8,6 +8,7 @@ use spec::{Persona, RenderBackend};
 
 mod cli;
 mod settings;
+mod update;
 
 /// korvus's version, as its banner states it.
 pub(crate) const VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -116,6 +117,12 @@ async fn main() -> anyhow::Result<()> {
     let command = argv.get(1).cloned().unwrap_or_default();
     let endpoint = command == "serve" || command == "browser";
     let making_snapshot = command == engine::snapshot::MAKE_ARG;
+    // Run in a terminal, a person's command first checks for a newer release, at most once a day, and asks to update
+    // as Oh My Zsh does (D183, `update::on_start`); an update it installs runs in this one's place at once. Not
+    // `setup`, which the installer itself runs, nor the processes korvus starts for itself.
+    if matches!(command.as_str(), "serve" | "browser" | "persona" | "plugin" | "stats" | "fetch" | "run" | "probe") && update::on_start() {
+        update::run_current(&std::env::args_os().collect::<Vec<_>>());
+    }
     // The commands that run no page.
     match command.as_str() {
         "--version" | "-V" | "version" => {
@@ -123,6 +130,7 @@ async fn main() -> anyhow::Result<()> {
             std::process::exit(0);
         }
         "setup" => std::process::exit(cli::setup(&argv[2..])),
+        "update" => std::process::exit(update::update_command(&argv[2..])),
         "stats" => std::process::exit(cli::stats(&argv[2..])),
         "persona" => std::process::exit(cli::persona(&argv[2..])),
         // The account commands of releases before 152.0.2: korvus has no accounts or plans now, and no session limit.
@@ -1554,7 +1562,7 @@ fn banner() {
     // is a launch-time error surfaced to the operator.
     let incoherences = spec::coherence::audit(persona_ref);
 
-    println!("korvus {VERSION} (commands: serve, fetch, run, probe, setup, persona, plugin ls, plugin check, stats, --version)");
+    println!("korvus {VERSION} (commands: serve, fetch, run, probe, setup, persona, plugin ls, plugin check, stats, update, --version)");
     println!("  engine:    {}", engine::engine_name());
     println!("  webapi:    {}", webapi::surface_name());
     println!("  render:    {}", render_ref.name());

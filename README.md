@@ -21,7 +21,8 @@ korvusbrowser.com hands out the installers of the latest release; the same files
 (`https://github.com/KorvusBrowser/korvus-browser/releases/latest/download/install.sh`, `install.ps1`).
 
 The installer checks the download against the release's `SHA256SUMS`, unpacks it into `~/.korvus/dist/<version>`,
-points `~/.korvus/current` at it, adds that to your `PATH` and runs `korvus setup`. Run it again to update. On a Linux
+points `~/.korvus/current` at it, adds that to your `PATH` and runs `korvus setup`. `korvus update` updates it (or run
+the install command again). On a Linux
 server without fontconfig, install it first (`sudo apt-get install libfontconfig1`). Linux on arm64 has no build yet.
 
 You can also unpack an archive from [Releases](https://github.com/KorvusBrowser/korvus-browser/releases) yourself and
@@ -119,8 +120,25 @@ client that ships it. For a clean mint each time, give each run its own session:
 
 korvus has no plans, no accounts and no license key. A release runs as many sessions at once as your machine holds,
 with every feature, the stealth persona included. `korvus serve` calls no server of ours: its traffic is the pages you
-load, your own settings (a proxy, a plugin) and a browser's own work, such as certificate checks. The
-[binary license](BINARY-LICENSE.md) says the same. It is free in production for a company under USD 10 million of
+load, your own settings (a proxy, a plugin) and a browser's own work, such as certificate checks, and an update
+check: run in a terminal, korvus asks GitHub once a day for its latest release and, when there is a newer one, asks
+`Update now? [Y/n]`. The [binary license](BINARY-LICENSE.md) says the same.
+
+## Updates
+
+`korvus update` installs the latest release the way you installed korvus: the installer's way (beside the one you
+have, `~/.korvus/current` moved to it, a `korvus serve` already running left on its version until it restarts), or
+with pip for `pip install korvus-browser`. Run in a terminal, korvus checks for a newer release at most once a day and
+asks `Update now? [Y/n]` (Enter updates), as Oh My Zsh does. Its modes, in `~/.korvus/config.toml`:
+
+```toml
+[update]
+mode = "prompt"     # prompt (asks; the default), auto (updates without asking), reminder (only says so), off
+frequency = 1       # days between checks
+```
+
+`KORVUS_UPDATE=prompt|auto|reminder|off` sets the mode for one run. Outside a terminal (a script, CI, a container)
+korvus never checks or asks. It is free in production for a company under USD 10 million of
 yearly revenue, and for any non-production use ([License](#license)).
 
 ## Plugins

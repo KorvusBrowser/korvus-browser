@@ -1,9 +1,9 @@
 # Korvus Binary License
 
-**Version 1.1 — October 2026**
+**Version 1.2 — October 2026**
 
-Version 1.1 applies to korvus 152.0.2 and later. A release you obtained under Version 1.0 (korvus 152.0.0 and 152.0.1)
-stays under Version 1.0.
+Version 1.2 applies to korvus 152.0.4 and later. A release you obtained under an earlier version stays under it:
+korvus 152.0.2 and 152.0.3 under Version 1.1, korvus 152.0.0 and 152.0.1 under Version 1.0.
 
 Copyright (c) 2026 The Base (더베이스). All rights reserved.
 
@@ -146,7 +146,10 @@ The Binary contains no telemetry, analytics or tracking. Its network traffic com
 
 - the pages and services you load;
 - your own configuration;
-- the normal workings of a browser, such as certificate checks.
+- the normal workings of a browser, such as certificate checks;
+- an update check: run in a terminal, korvus asks GitHub, at most once a day, for the version of its latest release,
+  and sends nothing about you, your machine or your pages. `KORVUS_UPDATE=off` turns the check off; outside a
+  terminal it never runs.
 
 If a paid version ever needs to check a license key over the network, this section will say so before that version
 is released.

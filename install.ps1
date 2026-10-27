@@ -201,6 +201,9 @@ function Install-Korvus {
     Write-Host '  Open a new terminal, then:  ' -NoNewline
     Write-Host 'korvus serve' -ForegroundColor Cyan -NoNewline
     Write-Host '   (a DevTools endpoint on :9222)'
+    Write-Host '  Later: ' -NoNewline
+    Write-Host 'korvus update' -ForegroundColor Cyan -NoNewline
+    Write-Host '  (korvus also asks when a release is out)'
     Write-Host '  Docs:  https://korvusbrowser.com/docs'
     Write-Host ''
   } finally {

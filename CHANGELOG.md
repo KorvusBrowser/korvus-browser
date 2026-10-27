@@ -4,6 +4,11 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- `korvus update` installs the latest release the way korvus was installed: the installer's way, beside the version
+  you have with `~/.korvus/current` moved to it, or with pip. Run in a terminal, korvus checks for a newer release at
+  most once a day and asks `Update now? [Y/n]` (Enter updates), as Oh My Zsh does; `[update] mode` in `config.toml`
+  (`prompt`, `auto`, `reminder`, `off`) or `KORVUS_UPDATE` changes that, and outside a terminal it never checks. The
+  binary's license is Version 1.2, which says so under "Data collection".
 - `korvus serve` says why it cannot listen and what to do: a port another process holds, or, on Windows, one the OS
   reserves for Hyper-V or WSL (`os error 10013`), with the `netsh` command that lists those ranges; `--port` picks
   another.

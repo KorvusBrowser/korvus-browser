@@ -242,6 +242,7 @@ korvus_install() {
     *) printf '  Restart your shell, or run:  %sexport PATH="%s:$PATH"%s\n' "$K_C" "$home/current" "$K_0" >&2 ;;
   esac
   printf '  Then:  %skorvus serve%s   %s(a DevTools endpoint on :9222)%s\n' "$K_C" "$K_0" "$K_D" "$K_0" >&2
+  printf '  Later: %skorvus update%s  %s(korvus also asks when a release is out)%s\n' "$K_C" "$K_0" "$K_D" "$K_0" >&2
   printf '  Docs:  https://korvusbrowser.com/docs\n\n' >&2
 }
 

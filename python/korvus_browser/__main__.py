@@ -96,6 +96,9 @@ def _ensure_binary() -> Path:
 def main() -> None:
     binary = _ensure_binary()
     argv = [str(binary), *sys.argv[1:]]
+    # korvus updates a pip install with pip, through this interpreter (`korvus update`, and the check a terminal run
+    # makes): https://korvusbrowser.com/docs/install#updates
+    os.environ["KORVUS_PIP_PYTHON"] = sys.executable
     if os.name == "nt":
         import subprocess
         raise SystemExit(subprocess.call(argv))
