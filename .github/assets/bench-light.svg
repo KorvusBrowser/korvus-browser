@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 524" width="960" height="524" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title>Measured against headless Chrome: korvus against headless Chrome and Playwright</title>
+<rect width="960" height="524" rx="14" fill="#f6f7f9"/>
+<text x="24" y="47" font-size="21" fill="#10141f" font-weight="600">Measured against headless Chrome</text>
+<rect x="622" y="35" width="12" height="12" rx="2" fill="#10141f"/>
+<text x="640" y="46" font-size="13.5" fill="#3e4456">korvus</text>
+<rect x="700" y="35" width="12" height="12" rx="2" fill="#c3c7d0"/>
+<text x="718" y="46" font-size="13.5" fill="#3e4456">Chrome (Playwright on live sites)</text>
+<rect x="24" y="74" width="448" height="230" rx="10" fill="#ffffff" stroke="#e1e4ea"/>
+<text x="42" y="105" font-size="16.5" fill="#10141f" font-weight="600">Memory</text>
+<text x="454" y="105" font-size="13" fill="#616779" text-anchor="end">MiB, lower is better</text>
+<text x="42" y="126" font-size="13" fill="#616779">korvus beside Chrome 152.0.7977.82, headless</text>
+<text x="42" y="171" font-size="14.5" fill="#3e4456">Idle</text>
+<rect x="170" y="152" width="4.2" height="13" rx="2" fill="#10141f"/>
+<rect x="170" y="169" width="38.5" height="13" rx="2" fill="#c3c7d0"/>
+<text x="180" y="163.5" font-size="13" fill="#10141f" font-weight="600">113</text>
+<text x="214" y="180.5" font-size="13" fill="#616779">1,025</text>
+<text x="454" y="173" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">9.1× less</text>
+<text x="42" y="221" font-size="14.5" fill="#3e4456">One page</text>
+<rect x="170" y="202" width="11.5" height="13" rx="2" fill="#10141f"/>
+<rect x="170" y="219" width="31.7" height="13" rx="2" fill="#c3c7d0"/>
+<text x="188" y="213.5" font-size="13" fill="#10141f" font-weight="600">307</text>
+<text x="208" y="230.5" font-size="13" fill="#616779">844</text>
+<text x="454" y="223" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">2.7× less</text>
+<text x="42" y="271" font-size="14.5" fill="#3e4456">Ten tabs</text>
+<rect x="170" y="252" width="60.7" height="13" rx="2" fill="#10141f"/>
+<rect x="170" y="269" width="138.0" height="13" rx="2" fill="#c3c7d0"/>
+<text x="237" y="263.5" font-size="13" fill="#10141f" font-weight="600">1,618</text>
+<text x="314" y="280.5" font-size="13" fill="#616779">3,676</text>
+<text x="454" y="273" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">2.3× less</text>
+<rect x="488" y="74" width="448" height="230" rx="10" fill="#ffffff" stroke="#e1e4ea"/>
+<text x="506" y="105" font-size="16.5" fill="#10141f" font-weight="600">Speed</text>
+<text x="918" y="105" font-size="13" fill="#616779" text-anchor="end">ms, lower is better</text>
+<text x="506" y="126" font-size="13" fill="#616779">korvus beside Chrome 152.0.7977.82, headless</text>
+<text x="506" y="171" font-size="14.5" fill="#3e4456">Cold start</text>
+<rect x="634" y="152" width="9.4" height="13" rx="2" fill="#10141f"/>
+<rect x="634" y="169" width="104.0" height="13" rx="2" fill="#c3c7d0"/>
+<text x="649" y="163.5" font-size="13" fill="#10141f" font-weight="600">68</text>
+<text x="744" y="180.5" font-size="13" fill="#616779">756</text>
+<text x="918" y="173" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">11× faster</text>
+<text x="506" y="221" font-size="14.5" fill="#3e4456">First page, cold</text>
+<rect x="634" y="202" width="20.1" height="13" rx="2" fill="#10141f"/>
+<rect x="634" y="219" width="138.0" height="13" rx="2" fill="#c3c7d0"/>
+<text x="660" y="213.5" font-size="13" fill="#10141f" font-weight="600">146</text>
+<text x="778" y="230.5" font-size="13" fill="#616779">1,003</text>
+<text x="918" y="223" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">6.9× faster</text>
+<text x="506" y="271" font-size="14.5" fill="#3e4456">First page, warm</text>
+<rect x="634" y="252" width="7.7" height="13" rx="2" fill="#10141f"/>
+<rect x="634" y="269" width="42.5" height="13" rx="2" fill="#c3c7d0"/>
+<text x="648" y="263.5" font-size="13" fill="#10141f" font-weight="600">56</text>
+<text x="683" y="280.5" font-size="13" fill="#616779">309</text>
+<text x="918" y="273" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">5.5× faster</text>
+<rect x="24" y="320" width="448" height="180" rx="10" fill="#ffffff" stroke="#e1e4ea"/>
+<text x="42" y="351" font-size="16.5" fill="#10141f" font-weight="600">Scale</text>
+<text x="454" y="351" font-size="13" fill="#616779" text-anchor="end">pages a minute, higher is better</text>
+<text x="42" y="372" font-size="13" fill="#616779">korvus beside Chrome 152.0.7977.82, headless</text>
+<text x="42" y="417" font-size="14.5" fill="#3e4456">4 tabs at once</text>
+<rect x="170" y="398" width="116.1" height="13" rx="2" fill="#10141f"/>
+<rect x="170" y="415" width="74.5" height="13" rx="2" fill="#c3c7d0"/>
+<text x="292" y="409.5" font-size="13" fill="#10141f" font-weight="600">106</text>
+<text x="250" y="426.5" font-size="13" fill="#616779">68</text>
+<text x="454" y="419" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">1.6× more</text>
+<text x="42" y="467" font-size="14.5" fill="#3e4456">16 tabs at once</text>
+<rect x="170" y="448" width="138.0" height="13" rx="2" fill="#10141f"/>
+<rect x="170" y="465" width="69.0" height="13" rx="2" fill="#c3c7d0"/>
+<text x="314" y="459.5" font-size="13" fill="#10141f" font-weight="600">126</text>
+<text x="245" y="476.5" font-size="13" fill="#616779">63</text>
+<text x="454" y="469" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">2.0× more</text>
+<rect x="488" y="320" width="448" height="180" rx="10" fill="#ffffff" stroke="#e1e4ea"/>
+<text x="506" y="351" font-size="16.5" fill="#10141f" font-weight="600">Real sites</text>
+<text x="918" y="351" font-size="13" fill="#616779" text-anchor="end">% of sites loaded, higher is better</text>
+<text x="506" y="372" font-size="13" fill="#616779">korvus beside Playwright 1.64.1's headless shell</text>
+<text x="506" y="417" font-size="14.5" fill="#3e4456">Bot-protected</text>
+<rect x="634" y="398" width="118.7" height="13" rx="2" fill="#10141f"/>
+<rect x="634" y="415" width="66.2" height="13" rx="2" fill="#c3c7d0"/>
+<text x="759" y="409.5" font-size="13" fill="#10141f" font-weight="600">86%</text>
+<text x="706" y="426.5" font-size="13" fill="#616779">48%</text>
+<text x="918" y="419" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">+38 points</text>
+<text x="506" y="467" font-size="14.5" fill="#3e4456">All 100</text>
+<rect x="634" y="448" width="127.0" height="13" rx="2" fill="#10141f"/>
+<rect x="634" y="465" width="96.6" height="13" rx="2" fill="#c3c7d0"/>
+<text x="767" y="459.5" font-size="13" fill="#10141f" font-weight="600">92%</text>
+<text x="737" y="476.5" font-size="13" fill="#616779">70%</text>
+<text x="918" y="469" font-size="16" fill="#9a5230" font-weight="600" text-anchor="end">+22 points</text>
+</svg>
