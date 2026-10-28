@@ -1610,6 +1610,11 @@ thread_local! {
     static LAST_DRAG: std::cell::RefCell<Option<v8::Global<v8::Value>>> = const { std::cell::RefCell::new(None) };
 }
 
+/// Drop [`LAST_DRAG`]: a handle into the realm being torn down ([`crate::release_realm_handles`]).
+pub(crate) fn forget_drag() {
+    LAST_DRAG.with(|l| l.borrow_mut().take());
+}
+
 /// [`fire`], keeping the event it built ([`LAST_DRAG`]) so its `DataTransfer` can be read back.
 fn fire_keeping(scope: &mut v8::PinScope, st: &St, target: NodeId, spec: &Spec) -> bool {
     KEEP_EVENT.with(|k| k.set(true));

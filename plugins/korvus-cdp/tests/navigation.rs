@@ -71,6 +71,8 @@ fn fixture(path: &str, other_port: u16) -> Option<Fixture> {
         "/d.js" => ok("text/javascript", b"log('defer')".to_vec()),
         "/slow-a.js" => ok("text/javascript", b"log('async-slow')".to_vec()),
         "/quiet.html" => html(b"<!doctype html><title>quiet</title><p>nothing scheduled</p>".to_vec()),
+        "/leave-a.html" => html(LEAVE_A.as_bytes().to_vec()),
+        "/leave-b.html" => html(b"<!doctype html><title>leave-b</title><script>console.log('b-loaded')</script>".to_vec()),
         "/idletimer.html" => html(b"<!doctype html><title>start</title><script>setTimeout(()=>{document.title='fired'},300)</script>".to_vec()),
         "/mr0.html" => html(page("mr0", r#"<meta http-equiv=refresh content="0; url=target.html">"#, "")),
         "/mr1.html" => html(page("mr1", r#"<meta http-equiv=refresh content="1; url=target.html">"#, "")),
@@ -1158,4 +1160,76 @@ async fn a_history_entry_the_client_goes_to_is_where_the_next_command_finds_the_
     for (to, index, here, there) in seen {
         assert_eq!((index, here), (to, there), "the next command finds the tab at the entry it was sent to");
     }
+}
+
+/// A document that writes to the console as it is left: `beforeunload`, `pagehide` and `unload` each log, and
+/// `unload` throws too.
+const LEAVE_A: &str = "<!doctype html><title>leave-a</title><script>
+console.log('a-loaded');
+addEventListener('beforeunload',()=>console.log('a-beforeunload'));
+addEventListener('pagehide',()=>console.log('a-pagehide'));
+addEventListener('unload',()=>{console.log('a-unload');throw new Error('a-unload-throw')});
+</script>";
+
+/// What a document logs as it is LEFT. A console call's values are handles into the realm that made them, and that
+/// realm goes with the isolate the navigation drops: what `pagehide` logged was drained in the NEXT document's isolate
+/// and the page process died ("attempt to access Handle hosted by disposed Isolate" -- every eBay run of a minter
+/// that navigated a second time, 2026-10-27).
+///
+/// Stock Chrome 150.0.7871.46 (`--headless=new`, these two fixtures, `Page.enable` + `Runtime.enable`):
+///
+/// ```text
+/// FSN leave-b.html | FSL | LOG a-beforeunload @A | ECC | ECC | FN leave-b.html | CTX @B | LOG b-loaded @B
+/// ```
+///
+/// `beforeunload`'s message in the leaving document's own context, before its contexts are cleared; nothing of what
+/// `pagehide` and `unload` logged or threw.
+#[tokio::test]
+async fn what_a_document_logs_as_it_is_left_is_what_chrome_reports() {
+    let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let a = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let pa = a.local_addr().unwrap().port();
+    tokio::spawn(serve_fixtures(a, pa));
+    let cdp_listener = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let cdp_addr = cdp_listener.local_addr().unwrap();
+    let server = cdp::serve_connection(cdp_listener, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{cdp_addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Runtime.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{pa}/leave-a.html") })).await;
+        c.pump(Duration::from_millis(300)).await;
+        let mark = c.events.len();
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{pa}/leave-b.html") })).await;
+        c.pump(Duration::from_millis(300)).await;
+        // the page is alive in its new document
+        let title = c.call("Runtime.evaluate", json!({ "expression": "document.title", "returnByValue": true })).await;
+        c.ws.send(Message::Close(None)).await.unwrap();
+        (c.events, mark, title)
+    };
+    let (server, (events, mark, title)) = tokio::join!(server, client);
+    server.unwrap();
+    assert_eq!(title["result"]["value"], "leave-b");
+    let ctx_a = events[..mark].iter().rev().find(|(_, e)| e["method"] == "Runtime.executionContextCreated").map(|(_, e)| e["params"]["context"]["id"].clone());
+    let ctx_b = events[mark..].iter().find(|(_, e)| e["method"] == "Runtime.executionContextCreated").map(|(_, e)| e["params"]["context"]["id"].clone());
+    let (ctx_a, ctx_b) = (ctx_a.expect("leave-a's context"), ctx_b.expect("leave-b's context"));
+    let at = |id: &Value| if *id == ctx_a { "@A" } else if *id == ctx_b { "@B" } else { "@?" };
+    let got: Vec<String> = events[mark..]
+        .iter()
+        .filter_map(|(_, e)| {
+            let p = &e["params"];
+            Some(match e["method"].as_str()? {
+                "Page.frameStartedNavigating" => format!("FSN {}", p["url"].as_str()?.rsplit('/').next()?),
+                "Page.frameStartedLoading" => "FSL".into(),
+                "Runtime.consoleAPICalled" => format!("LOG {} {}", p["args"][0]["value"].as_str()?, at(&p["executionContextId"])),
+                "Runtime.exceptionThrown" => format!("THROW {}", p["exceptionDetails"]["text"].as_str()?),
+                "Runtime.executionContextsCleared" => "ECC".into(),
+                "Page.frameNavigated" => format!("FN {}", p["frame"]["url"].as_str()?.rsplit('/').next()?),
+                "Runtime.executionContextCreated" => format!("CTX {}", at(&p["context"]["id"])),
+                _ => return None,
+            })
+        })
+        .collect();
+    assert_eq!(got, seq("FSN leave-b.html | FSL | LOG a-beforeunload @A | ECC | ECC | FN leave-b.html | CTX @B | LOG b-loaded @B"));
 }

@@ -1457,6 +1457,10 @@ async fn request_document(
     if !first_document {
         engine.fire_beforeunload();
     }
+    // What its `beforeunload` logged, drained while `ids` still name the leaving document's contexts: Chrome 150 reports
+    // it in that document's context, after `frameStartedLoading` and before the contexts are cleared (and nothing of
+    // what `pagehide` and `unload` log, which `Engine::successor` lets go of).
+    let unloading_log = if first_document { Vec::new() } else { devtools_events(engine, ids) };
     // Whatever the document being left requested and has not reported yet belongs to ITS navigation,
     // so it is reported before the ledger starts a new generation.
     let mut events: Vec<Value> = flush_network(rep).into_iter().map(|(_, ev)| ev).collect();
@@ -1472,6 +1476,7 @@ async fn request_document(
     events.push(json!({ "method": "Page.frameStartedNavigating", "params": {
         "frameId": frame_id, "url": url, "loaderId": loader, "navigationType": "differentDocument" } }));
     events.push(json!({ "method": "Page.frameStartedLoading", "params": { "frameId": frame_id } }));
+    events.extend(unloading_log);
     // A NEW NAVIGATION IS A NEW LEDGER GENERATION, started before the document request so
     // that the document's own row is in it. The `Network.*` events are then exactly
     // this navigation's requests, never the previous page's as well.

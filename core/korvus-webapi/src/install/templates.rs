@@ -140,6 +140,14 @@ thread_local! {
     static CAPTURE: RefCell<Vec<Capture>> = const { RefCell::new(Vec::new()) };
 }
 
+/// Drop every recording still open: each one's functions are handles into the realm being torn down
+/// ([`crate::release_realm_handles`]). A realm's install closes its recordings before its first script runs
+/// ([`persist`]), so one open past that was abandoned, and a later realm's lookups ([`recipe_of`], [`forget`]) would
+/// open its handles in an isolate that is not theirs.
+pub(crate) fn abandon_captures() {
+    CAPTURE.with(|c| c.borrow_mut().clear());
+}
+
 /// A snapshot diagnostic: a report line under `KORVUS_TPL_REPORT`, and under `KORVUS_SNAPSHOT_REPORT` too --
 /// the switch a RESTORED run can carry (the template reporter observes the install: a reporting run installs).
 pub(crate) fn report_snap(line: &str) {

@@ -72,6 +72,12 @@ pub fn take() -> Vec<Entry> {
     LOG.with(|l| std::mem::take(&mut *l.borrow_mut()))
 }
 
+/// Drop what was logged and not drained: its values are handles into the realm being torn down
+/// ([`crate::release_realm_handles`]).
+pub(crate) fn forget() {
+    LOG.with(|l| l.borrow_mut().clear());
+}
+
 fn push(e: Entry) {
     LOG.with(|l| {
         let mut l = l.borrow_mut();

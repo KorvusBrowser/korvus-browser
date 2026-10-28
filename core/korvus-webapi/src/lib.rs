@@ -269,6 +269,17 @@ pub fn page_base_url(scope: &mut deno_core::v8::PinScope) -> String {
     core::dom::base_url(scope)
 }
 
+/// Let go of every handle this thread keeps outside a realm's own state: what the DevTools log holds that was not
+/// drained, the last drag event, and a template recording left open. Called with the page realm's isolate still
+/// alive, just before it is dropped (`Engine::successor`): each is a `v8::Global` of that isolate, and the next
+/// document's isolate on this thread opened what the log still held -- "attempt to access Handle hosted by disposed
+/// Isolate", which ended the page process on its second navigation.
+pub fn release_realm_handles() {
+    devtools_log::forget();
+    core::events::pointer_input::forget_drag();
+    install::templates::abandon_captures();
+}
+
 /// Banner string used by the binary.
 pub fn surface_name() -> &'static str {
     "korvus-webapi (native DOM, G1.6)"

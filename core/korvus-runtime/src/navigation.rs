@@ -2136,6 +2136,10 @@ impl crate::Engine {
         // fresh one, so a Brave persona's farbled `hardwareConcurrency`/`deviceMemory` changed across a
         // navigation on the same site -- a bot challenge reload among them. Brave keeps them.
         let seed = self.runtime.op_state().borrow().try_borrow::<spec::farble::SessionSeed>().copied();
+        // What the leaving document logged after its last drain -- its `pagehide` and `unload` handlers', which Chrome
+        // 150 does not report -- and any other handle this thread keeps into its realm, released while the isolate
+        // they belong to is alive: drained after this, in the next document's isolate, they panicked.
+        webapi::release_realm_handles();
         drop(self);
         let mut next = crate::Engine::assemble_shared(persona).expect("the persona the previous document wore assembles again");
         webapi::page::restore_storage(&next.runtime.op_state(), storage);
