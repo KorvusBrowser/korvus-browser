@@ -1268,9 +1268,16 @@ const NETWORK_FLUSH_MS: u64 = 50;
 ///
 /// Once the page's `load` has fired (`loaded`), a request it makes after that waits for the load's own events, which
 /// go out when the load returns: Chrome sends `Page.loadEventFired` before a request the `load` handler's timers
-/// make. Sent as they came, a client waiting for quiet from `load` on -- Stagehand's `networkidle`: 500 ms with no new
-/// request -- saw them before the `load` it counts from and called the page settled; it read YC's company list before
-/// its Algolia query had started, 2.5 s in, where it read Chrome's at 6.3 s.
+/// make, and these came before it.
+///
+/// KNOWN, not fixed by this: a client that counts quiet from `load` on, and only the requests it sees start after it
+/// (Stagehand's `networkidle`: 500 ms with none), still misses what the page requested in the meantime, since no
+/// command is answered while a document loads. Stagehand asks `Page.setLifecycleEventsEnabled` and the
+/// `document.readyState` before it listens for `load`; Chrome answers them mid-load, so its waiter is in place when
+/// `load` comes, and PostHog's script on YC's companies page (`load` + 1 ms to + 1.2 s) keeps it busy until the
+/// company list is asked for. Here both answers follow the load, the script has been reported by then, and the page
+/// is settled or not by the race between the list's query and the 500 ms (it went out at `load` + 518 ms in one run,
+/// Chrome's at + 273): 5 of 13 runs read the list, Chrome's 3 of 3 (2026-10-28).
 async fn reporting_network<T>(
     mut load: impl std::future::Future<Output = T> + Unpin,
     rep: &fetch::Rep,

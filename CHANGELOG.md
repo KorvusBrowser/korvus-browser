@@ -15,9 +15,8 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   rate that throttles nothing (1 or less) and refuses a higher one rather than ignoring it.
 - `Page.navigate` to a `data:` URL loads its document, as Chrome does (`page.goto('data:text/html,…')`); it loaded an
   empty page.
-- What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it. It came
-  before, so a client that waits for network quiet counted from `load` on (Stagehand's `networkidle`) missed the
-  requests a `load` handler's timers start and read a page before its data had been asked for.
+- What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it (a `load`
+  handler's own request before it, what its timers request after); it all came before.
 - The accessibility tree follows Chrome 152 in more places: a `<label>`'s text names its control as its line lays it
   out (`<label>Search <input></label>` is `"Search "`, a block in it a space between its neighbours); a
   `display: contents` element keeps its role (a `<form class="contents">` is still a form); an `<a>` with no `href`

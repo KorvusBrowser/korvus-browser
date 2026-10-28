@@ -1206,11 +1206,10 @@ async fn a_data_url_the_client_navigates_to_is_the_document() {
 
 /// What a page requests once its `load` has fired is reported after `Page.loadEventFired`, as Chrome reports it.
 ///
-/// The load's events went out when the load had returned, after what the `load` handler's timers had requested
-/// (and the favicon), so a client counting from `load` on -- Stagehand's `networkidle`, 500 ms with no new request --
-/// saw none of it and called the page settled before its data had been asked for (YC's company list). Chrome 152 over
-/// loopback (2026-10-28), this page: `/load-sync`, the `load` handler's own request, before `Page.loadEventFired`;
-/// the two handlers' `setTimeout(0)` requests after it.
+/// The load's events went out when the load had returned, after what the `load` handler's timers had requested (and
+/// the favicon). Chrome 152 over loopback (2026-10-28), this page: `/load-sync`, the `load` handler's own request,
+/// before `Page.loadEventFired`; the two handlers' `setTimeout(0)` requests after it. (What this does not give a
+/// client that counts quiet from `load` on, Stagehand's `networkidle`, is in `reporting_network`.)
 #[tokio::test]
 async fn what_a_page_requests_after_its_load_is_reported_after_the_load() {
     let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
