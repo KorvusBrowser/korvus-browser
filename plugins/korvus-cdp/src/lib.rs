@@ -2763,6 +2763,33 @@ async fn dispatch(
             let cookies: Vec<Value> = transport::cookies::devtools_cookies(None).iter().map(network::cookie_json).collect();
             (Ok(json!({ "cookies": cookies })), vec![])
         }
+        // korvus's own method (Chrome has none): what this page's requests wear, for a client that carries on without
+        // the browser -- a session minted here and replayed by an HTTP client of the caller's. The headers of the
+        // persona a navigation of this page sends (with any `Network.setUserAgentOverride`), in the order they go out;
+        // the client hints an origin's `Accept-CH` adds; the TLS and HTTP/2 preset its connections emulate and the OS it
+        // claims; the proxy every request goes through; the zone and locale the page reports; and the context's cookies.
+        "Korvus.getIdentity" => {
+            let e = engine.get();
+            let url = e.current_url();
+            let req = transport::FetchRequest::navigation(url.clone()).worn_by(e.persona().as_ref());
+            let headers: Vec<Value> = transport::wire_order(&req.headers).iter().map(|(k, v)| json!({ "name": k, "value": v })).collect();
+            let hints: serde_json::Map<String, Value> =
+                req.high_entropy_hints.as_deref().into_iter().flatten().map(|(k, v)| (k.clone(), json!(v))).collect();
+            let wire = req.wire.clone().unwrap_or_default();
+            let env = |k: &str| std::env::var(k).ok().filter(|v| !v.is_empty());
+            let cookies: Vec<Value> = transport::cookies::devtools_cookies(None).iter().map(network::cookie_json).collect();
+            let identity = json!({
+                "url": url,
+                "headers": headers,
+                "clientHints": hints,
+                "tls": { "emulation": wire.id, "platform": wire.platform },
+                "proxy": env("ALL_PROXY"),
+                "timezone": env("TZ"),
+                "locale": env("LC_ALL").map(|l| l.trim_end_matches(".UTF-8").to_string()),
+                "cookies": cookies,
+            });
+            (Ok(identity), vec![])
+        }
         "Network.setCookie" => match transport::cookies::devtools_set(&network::cookie_init(params)) {
             Ok(success) => (Ok(json!({ "success": success })), vec![]),
             Err(m) => (Err(RpcError::invalid_params(m.to_string())), vec![]),

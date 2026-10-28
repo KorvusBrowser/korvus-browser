@@ -1536,6 +1536,14 @@ fn devtools_spelling(authored: &[(String, String)], name: &str) -> String {
     }
 }
 
+/// `headers` in the order a navigation sends them ([`CHROME_HEADER_ORDER`]; a name it does not list last, as given):
+/// for a client that replays a page's identity with an HTTP client of its own (`Korvus.getIdentity`).
+pub fn wire_order(headers: &[(String, String)]) -> Vec<(String, String)> {
+    let mut out = headers.to_vec();
+    out.sort_by_key(|(k, _)| CHROME_HEADER_ORDER.iter().position(|n| k.eq_ignore_ascii_case(n)).unwrap_or(usize::MAX));
+    out
+}
+
 fn navigation_order() -> wreq::header::OrigHeaderMap {
     let mut order = wreq::header::OrigHeaderMap::new();
     for n in CHROME_HEADER_ORDER {

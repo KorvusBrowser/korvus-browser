@@ -1248,3 +1248,34 @@ async fn an_evaluate_timeout_ends_the_script_and_not_its_await() {
     };
     tokio::join!(server, client).0.unwrap();
 }
+
+/// `Korvus.getIdentity`: what the page's requests wear, for a client that replays a minted session without the browser
+/// -- the persona's headers as a navigation sends them, in their order, with a `Network.setUserAgentOverride` in them,
+/// the high-entropy hints, the TLS preset, and the context's cookies.
+#[tokio::test]
+async fn the_identity_a_page_wears_is_given_to_its_client() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async {
+        let mut ws = connect_cdp(addr).await;
+        let ua = call(&mut ws, 1, "Runtime.evaluate", json!({ "expression": "navigator.userAgent", "returnByValue": true })).await;
+        let ua = ua["result"]["value"].as_str().unwrap().to_string();
+        call(&mut ws, 2, "Network.setCookie", json!({ "name": "minted", "value": "tok", "url": "https://example.com/" })).await;
+        let id = call(&mut ws, 3, "Korvus.getIdentity", json!({})).await;
+        let headers: Vec<(String, String)> =
+            id["headers"].as_array().unwrap().iter().map(|h| (h["name"].as_str().unwrap().into(), h["value"].as_str().unwrap().into())).collect();
+        let at = |n: &str| headers.iter().position(|(k, _)| k == n).unwrap_or_else(|| panic!("{n} in {headers:?}"));
+        assert_eq!(headers[at("user-agent")].1, ua, "the UA the page reports");
+        assert!(at("sec-ch-ua") < at("user-agent") && at("user-agent") < at("accept-language"), "a navigation's order: {headers:?}");
+        assert!(id["clientHints"]["sec-ch-ua-full-version-list"].is_string(), "{id}");
+        assert!(!id["tls"]["emulation"].as_str().unwrap().is_empty(), "{id}");
+        assert!(id["cookies"].as_array().unwrap().iter().any(|c| c["name"] == "minted" && c["value"] == "tok"), "{id}");
+        call(&mut ws, 4, "Network.setUserAgentOverride", json!({ "userAgent": "Replayed/1.0" })).await;
+        let id = call(&mut ws, 5, "Korvus.getIdentity", json!({})).await;
+        assert!(id["headers"].as_array().unwrap().iter().any(|h| h["name"] == "user-agent" && h["value"] == "Replayed/1.0"), "{id}");
+        ws.send(Message::Close(None)).await.unwrap();
+    };
+    tokio::join!(server, client).0.unwrap();
+}

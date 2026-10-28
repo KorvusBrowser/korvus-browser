@@ -139,6 +139,9 @@ pub const POPUP_HOSTED_CLOSE_LINE: &str = "KORVUS-POPUP-HOSTED-CLOSE ";
 /// for `Target.getTargetInfo` and the next `targetInfoChanged`, as Chrome's browser keeps a tab's title, and relays it
 /// to no client.
 pub const TITLE_EVENT: &str = "Korvus.targetTitle";
+
+/// The `Korvus.*` methods of a page a client may call on its session; every other is the router's own.
+const CLIENT_PAGE_METHODS: &[&str] = &["Korvus.getIdentity"];
 /// A page's `alert` / `confirm` / `prompt` (D88 step 2, `webapi`'s `core/html/dialog.rs`): from its process
 /// `{type, message, defaultPrompt}` while its thread waits; to it the answer `{accept, promptText}`, or
 /// `{unhandled: true}` at once when no session that enabled `Page` is there to answer.
@@ -1900,8 +1903,8 @@ impl Browser {
         let route = if browser_session.is_some() { None } else { route };
         if let Some((to, sess)) = route {
             // `Korvus.*` is the router's own channel to a page's process (`Korvus.setWindowBounds`); a client's is not
-            // relayed, and is refused as any domain the engine does not have.
-            if method.starts_with("Korvus.") {
+            // relayed, and is refused as any domain the engine does not have -- but for the page methods a client has.
+            if method.starts_with("Korvus.") && !CLIENT_PAGE_METHODS.contains(&method.as_str()) {
                 let mut err = json!({ "id": id, "error": RpcError::method_not_found(&method).to_json() });
                 if let Some(s) = &sess {
                     err["sessionId"] = json!(s);
