@@ -59,3 +59,25 @@ fn a_load_waiting_on_the_network_ends_at_the_timeout_with_the_page_printed() {
     assert_eq!(out.status.code(), Some(1), "{stderr}");
     assert!(stderr.contains("did not reach DOMContentLoaded"), "{stderr}");
 }
+
+/// `--max-heap` is taken off the line wherever it stands, and a page runs under it; a heap of no megabytes is refused,
+/// not run.
+#[test]
+fn a_run_under_a_heap_cap_is_a_run() {
+    let l = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+    let port = l.local_addr().unwrap().port();
+    std::thread::spawn(move || {
+        for s in l.incoming() {
+            let Ok(mut s) = s else { continue };
+            let _ = BufReader::new(s.try_clone().unwrap()).read_line(&mut String::new());
+            let body = "<!doctype html><title>capped</title>";
+            let _ = write!(s, "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{body}", body.len());
+        }
+    });
+    let page = &format!("http://127.0.0.1:{port}/");
+    let (out, _) = korvus(&["--max-heap", "256", "fetch", page, "--eval", "document.title"]);
+    assert_eq!(String::from_utf8_lossy(&out.stdout).trim(), "capped", "{}", String::from_utf8_lossy(&out.stderr));
+    let (out, _) = korvus(&["fetch", page, "--max-heap", "0"]);
+    assert_eq!(out.status.code(), Some(2));
+    assert!(String::from_utf8_lossy(&out.stderr).contains("--max-heap"), "{}", String::from_utf8_lossy(&out.stderr));
+}

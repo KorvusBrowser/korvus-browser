@@ -205,6 +205,7 @@ for that context:
 | `--fresh` | every named persona starts with no cookies or storage and keeps none (a clean, repeatable run) |
 | `--block KINDS` | drop requests before the network, to spend no bandwidth on what a scrape does not need: a list of Fetch kinds (`image`, `font`, `media`, `script`, `style`, `xhr`, …) and `host:<substr>` (a top-level navigation is never dropped by a kind rule). The page sees what DevTools' blocked-URL list makes it see |
 | `--http-cache-max MB` | cap the in-memory HTTP cache below its 50 MB default (`0` turns it off), so more pages run at once; never above 50 (Chrome's own budget) |
+| `--max-heap MB` | cap each page's JavaScript heap at MB, rather than size it from the machine's memory as Chrome does (4 GB from 8 GB up): a page that needs more dies, as a Chrome tab past its limit does |
 
 </details>
 

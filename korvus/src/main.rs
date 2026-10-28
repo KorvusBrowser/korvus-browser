@@ -87,6 +87,14 @@ async fn main() -> anyhow::Result<()> {
         }
         std::env::set_var("KORVUS_HTTP_CACHE_MAX", mb.trim());
     }
+    // `--max-heap=<MB>`: each page's V8 heap capped there (`KORVUS_MAX_HEAP_MB`), not sized from the machine's memory as
+    // Chrome sizes it -- a page's memory is its V8 heap and its DOM, so this is what bounds a session's.
+    if let Some(mb) = take_value(&mut argv, "--max-heap", "a size in MB") {
+        if mb.trim().parse::<usize>().map_or(true, |n| n == 0) {
+            exit_with("--max-heap: a whole number of megabytes, above 0");
+        }
+        std::env::set_var("KORVUS_MAX_HEAP_MB", mb.trim());
+    }
     // `--context <spec>`: this process is a page of a browser endpoint's context (`cdp::router`), which fixed the
     // context's proxy, timezone and locale when it made it (goal 1020 invariant I1) and holds what its pages share.
     // Applied before anything below reads the environment it sets.

@@ -31,6 +31,7 @@ with its own persona.
   --fresh                      every named persona starts with no cookies or storage and keeps none
   --block KINDS                drop requests of these Fetch kinds (`image`, `font`, ...) or `host:<substr>`
   --http-cache-max MB          cap the in-memory HTTP cache below 50 MB (`0` turns it off)
+  --max-heap MB                cap each page's JavaScript heap (a page past it dies, as a Chrome tab does)
 {SETTINGS}"
         ),
         "fetch" => format!(

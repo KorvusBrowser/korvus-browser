@@ -137,8 +137,16 @@ pub fn init_platform() {
 /// the persona's `jsHeapSizeLimit`, captured there), so a page that holds 2 GB died here and lived in Chrome. The
 /// memory is the machine's, as Chrome reads it: `sysconf(_SC_PHYS_PAGES) * _SC_PAGESIZE` is `MemTotal`; the virtual
 /// limit is `RLIMIT_DATA`, 0 when unlimited. A machine that answers neither keeps V8's defaults.
+///
+/// `KORVUS_MAX_HEAP_MB` (`--max-heap`) caps it instead: what a page may hold, so a machine running many sessions
+/// knows each one's bound. A page that needs more dies as a Chrome tab past its limit does. The persona's
+/// `jsHeapSizeLimit` is what `performance.memory` reports either way.
 fn chrome_heap_constraints(options: &mut RuntimeOptions) {
     if options.create_params.is_some() {
+        return;
+    }
+    if let Some(mb) = std::env::var("KORVUS_MAX_HEAP_MB").ok().and_then(|v| v.trim().parse::<usize>().ok()).filter(|&mb| mb > 0) {
+        options.create_params = Some(deno_core::v8::CreateParams::default().heap_limits(0, mb << 20));
         return;
     }
     let physical = std::fs::read_to_string("/proc/meminfo").ok().and_then(|m| {
