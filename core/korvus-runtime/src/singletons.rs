@@ -401,6 +401,17 @@ pub(crate) fn traverse_to_key(scope: &mut v8::PinScope, key: String) {
     queue_traversal(scope, Traversal::Key(key));
 }
 
+/// `Page.navigateToHistoryEntry`'s traversal to the entry `key` names: the BROWSER's own, so it waits for no round
+/// trip from the page -- Chrome's `NavigationController::GoToIndex` starts it at once, and a command sent after it is
+/// answered by the document it went to. Chrome 152.0.7977.82, loopback, 2026-10-28: back from the second of two
+/// documents, then `Runtime.evaluate` and `Page.getNavigationHistory` at once, read the first document `complete`
+/// and `currentIndex` 1, from the back/forward cache or not (`no-store`). Queued as the page's own are, the step ran
+/// a round trip later: a client reading the URL right after going back read the document it had left, and one
+/// going straight forward found nothing ahead and stayed (Stagehand's core eval `navigation/back_forward`).
+pub(crate) fn browser_traverse_to_key(scope: &mut v8::PinScope, key: String) {
+    traverse_step(scope, Traversal::Key(key));
+}
+
 /// Is `this` the `history` singleton? Anything else throws Chrome's `Illegal invocation` -- probed on
 /// headless Chrome 150.0.7871.46 over a loopback server, 2026-09-11:
 /// `Object.getOwnPropertyDescriptor(History.prototype, "length").get.call({})` throws.

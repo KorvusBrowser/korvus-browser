@@ -13,6 +13,10 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 - `DOM.getDocument` and `DOM.describeNode` honour `depth` and `pierce` (shadow roots and frame documents), so a client
   can read the whole DOM tree in one call, and `DOM.querySelector`, `querySelectorAll`, `requestNode` and
   `getNodeForLocation` are answered.
+- `Page.navigateToHistoryEntry` goes back or forward at once, as Chrome does: the next command finds the tab at the
+  entry it was sent to. It used to wait a round trip first, so a client reading the URL straight after going back
+  read the page it had left, and one going back and then straight forward (Stagehand's `goBack()`, `goForward()`)
+  found nothing ahead.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing

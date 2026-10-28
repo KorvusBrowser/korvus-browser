@@ -1104,3 +1104,58 @@ async fn constraint_validation_gates_every_submission_but_the_submit_method() {
         assert_eq!(labels(&events, (pa, pb)), one_document(file), "{file}: an invalid form navigates nothing");
     }
 }
+
+/// A history entry a client sends the tab to is where the tab is for the very next command, as Chrome's
+/// browser-side traversal is: Chrome 152.0.7977.82, loopback, 2026-10-28, two documents then back and forward, the
+/// history and the document read at once after each:
+///
+/// ```text
+/// after the two navigations    currentIndex 2   about:blank /dropdown /resistor
+/// back                         currentIndex 1   /dropdown complete     (from the back/forward cache or not)
+/// forward                      currentIndex 2   /resistor complete
+/// ```
+///
+/// Stagehand reads both without waiting for a load (its core eval `navigation/back_forward`): korvus answered the
+/// leaving document and its index until the traversal's round trip had passed, so going straight forward found
+/// nothing ahead, and the URL read right after going back was the one it had left.
+#[tokio::test]
+async fn a_history_entry_the_client_goes_to_is_where_the_next_command_finds_the_tab() {
+    let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let a = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let pa = a.local_addr().unwrap().port();
+    tokio::spawn(serve_fixtures(a, pa));
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let base = format!("http://127.0.0.1:{pa}");
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        for path in ["/quiet.html", "/target.html"] {
+            c.call("Page.navigate", json!({ "url": format!("{base}{path}") })).await;
+            c.pump(Duration::from_millis(300)).await;
+        }
+        let h = c.call("Page.getNavigationHistory", json!({})).await;
+        let at = h["currentIndex"].as_u64().unwrap() as usize;
+        let entries = h["entries"].as_array().unwrap().clone();
+        assert_eq!(entries[at]["url"], format!("{base}/target.html"), "{h}");
+        assert_eq!(entries[at - 1]["url"], format!("{base}/quiet.html"), "{h}");
+        let mut seen = Vec::new();
+        for (to, path) in [(at - 1, "/quiet.html"), (at, "/target.html")] {
+            c.call("Page.navigateToHistoryEntry", json!({ "entryId": entries[to]["id"] })).await;
+            let index = c.call("Page.getNavigationHistory", json!({})).await["currentIndex"].as_u64().unwrap() as usize;
+            let probe = json!({ "expression": "location.pathname + ' ' + document.readyState", "returnByValue": true });
+            let here = c.call("Runtime.evaluate", probe).await["result"]["value"].as_str().unwrap().to_string();
+            seen.push((to, index, here, format!("{path} complete")));
+            c.pump(Duration::from_millis(300)).await;
+        }
+        c.ws.send(Message::Close(None)).await.unwrap();
+        seen
+    };
+    let (server, seen) = tokio::join!(server, client);
+    server.unwrap();
+    for (to, index, here, there) in seen {
+        assert_eq!((index, here), (to, there), "the next command finds the tab at the entry it was sent to");
+    }
+}

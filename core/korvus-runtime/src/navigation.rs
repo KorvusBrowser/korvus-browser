@@ -1805,7 +1805,7 @@ impl crate::Engine {
             let href = crate::location::current_href(scope);
             match webapi::page::with_history(scope, href, |h| h.entries.iter().find(|e| e.serial == serial).map(|e| e.key.clone())) {
                 Some(key) => {
-                    crate::singletons::traverse_to_key(scope, key);
+                    crate::singletons::browser_traverse_to_key(scope, key);
                     true
                 }
                 None => false,
