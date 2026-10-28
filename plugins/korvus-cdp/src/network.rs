@@ -194,8 +194,8 @@ struct ResponseView<'a> {
     /// Who reports it (see [`headers_object`]).
     navigation: bool,
     from_cache: bool,
-    /// The body length the ledger measured (decoded; see `encodedDataLength` below).
-    bytes: usize,
+    /// The body's bytes as they came over the wire, content-coded (the ledger's `encoded_bytes`).
+    encoded: u64,
     /// When it arrived, Unix milliseconds.
     response_time_ms: f64,
 }
@@ -214,11 +214,9 @@ impl ResponseView<'_> {
             "fromDiskCache": self.from_cache,
             "fromServiceWorker": false,
             "fromPrefetchCache": false,
-            // The DECODED body length. This transport hands its callers a decoded
-            // string and never sees the compressed count, so `encodedDataLength` and
-            // `encodedBodyLength` carry the one length it measured rather than a
-            // compression ratio nobody computed.
-            "encodedDataLength": self.bytes,
+            // The body as it came over the wire, still compressed: what the request cost. Chrome counts
+            // the headers' bytes too, which the transport does not see.
+            "encodedDataLength": self.encoded,
             "responseTime": self.response_time_ms,
             "protocol": "",
             "securityState": "unknown"
@@ -330,7 +328,7 @@ pub fn hop_request_event(r: &transport::RequestRecord, hop: Option<usize>, ctx: 
             headers: &h.headers,
             navigation: is_navigation(&r.kind),
             from_cache: false,
-            bytes: 0,
+            encoded: 0,
             response_time_ms: (ctx.wall_s + h.at_ms / 1000.0) * 1000.0,
         };
         params["redirectResponse"] = view.to_json();
@@ -388,7 +386,7 @@ pub fn completion_events(r: &transport::RequestRecord, ctx: &NavContext, on_work
                 headers: &r.headers,
                 navigation: is_navigation(&r.kind),
                 from_cache: r.from_cache,
-                bytes: r.bytes,
+                encoded: r.encoded_bytes,
                 response_time_ms: (ctx.wall_s + (r.started_ms + r.ms) / 1000.0) * 1000.0,
             };
             let mut params = json!({
@@ -408,7 +406,7 @@ pub fn completion_events(r: &transport::RequestRecord, ctx: &NavContext, on_work
                 "params": {
                     "requestId": id,
                     "timestamp": end_s,
-                    "encodedDataLength": r.bytes
+                    "encodedDataLength": r.encoded_bytes
                 }
             }));
         }
@@ -766,6 +764,7 @@ mod tests {
             status_text: if status.is_some() { "OK".into() } else { String::new() },
             hops: Vec::new(),
             bytes: 11,
+            encoded_bytes: 7,
             from_cache: false,
             ms: 5.0,
             initiator: None,
@@ -934,7 +933,7 @@ mod tests {
         let resp = &ev[1]["params"]["response"];
         assert_eq!(resp["mimeType"], json!("text/html"), "parameters are stripped from content-type");
         assert_eq!(resp["headers"]["content-type"], json!("text/html; charset=utf-8"));
-        assert_eq!(resp["encodedDataLength"], json!(11));
+        assert_eq!(resp["encodedDataLength"], json!(7), "the body as it came over the wire, not decoded");
         assert_eq!(resp["statusText"], json!("OK"), "the status line's own text");
     }
 

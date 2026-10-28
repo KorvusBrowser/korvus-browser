@@ -2811,10 +2811,15 @@ pub struct RequestRecord {
     pub hops: Vec<RedirectHop>,
     /// Body bytes, AFTER content decoding (gzip/br/zstd removed) — the length of
     /// `FetchResponse::bytes`, so a binary body counts its real bytes rather than the UTF-8 length of
-    /// its lossy text view. There is no encoded length to report and inventing one would be a fake. Chrome's
-    /// `encodedDataLength` is the compressed count; the two are not comparable and the snapshot
-    /// schema does not ask them to be (`bytes (body)`).
+    /// its lossy text view. The snapshot schema's `bytes (body)`; what came over the wire is
+    /// [`RequestRecord::encoded_bytes`].
     pub bytes: usize,
+    /// Body bytes AS THEY CAME OVER THE WIRE, still content-coded (`encodedBodySize`, measured as the
+    /// decoder is fed): what the request cost a metered proxy, and `Network.*`'s `encodedDataLength`. 0 for
+    /// an answer the HTTP cache served or a `304` confirmed (its body crossed no wire) and for one that
+    /// never went out (a `data:` URL, a fulfilled request). The headers are not counted: the transport
+    /// does not see their bytes.
+    pub encoded_bytes: u64,
     /// The answer was served from the HTTP cache as stored (`http_cache`; DevTools' "from disk cache"), not
     /// fetched; a stored answer a `304` confirmed is a network row with status 304.
     pub from_cache: bool,
@@ -3038,6 +3043,7 @@ impl RequestLedger {
                 status_text: String::new(),
                 hops: Vec::new(),
                 bytes: 0,
+                encoded_bytes: 0,
                 from_cache: false,
                 ms: 0.0,
                 initiator: req.initiator.clone(),
@@ -3080,6 +3086,7 @@ impl RequestLedger {
                 r.status_text = resp.status_text.clone();
                 r.from_cache = resp.timing.cache == "local";
                 r.bytes = resp.bytes.len();
+                r.encoded_bytes = if resp.timing.cache.is_empty() { resp.timing.encoded_size } else { 0 };
                 r.final_url = resp.url.clone();
                 r.headers = resp.headers.clone();
             }
@@ -4949,6 +4956,24 @@ mod tests {
         assert!(!rows[0].from_cache, "a fetched answer is a network row, not a cache one");
         assert_eq!(rows[0].headers.len(), 1);
         assert_eq!(rows[0].ms, 12.5, "`ms` is the wire time the caller passed in, not entry-to-return");
+
+        // A compressed body: `bytes` is what the page read, `encoded_bytes` what the wire carried -- and an answer
+        // the cache served carried nothing over it.
+        l.reset();
+        let wire = |cache: &str| {
+            let mut r = FetchResponse::new(200, "OK".into(), "https://example-korvus.test/".into(), Vec::new(), vec![b'a'; 1000]);
+            r.timing.encoded_size = 40;
+            r.timing.cache = cache.into();
+            r
+        };
+        for cache in ["", "local", "validated"] {
+            let row = l.begin(&FetchRequest::navigation("https://example-korvus.test/"));
+            l.finish(row, 1.0, &Ok(wire(cache)));
+        }
+        let rows = l.records();
+        assert_eq!((rows[0].bytes, rows[0].encoded_bytes), (1000, 40), "decoded and as the wire carried it");
+        assert_eq!((rows[1].bytes, rows[1].encoded_bytes), (1000, 0), "the cache's answer crossed no wire");
+        assert_eq!((rows[2].bytes, rows[2].encoded_bytes), (1000, 0), "nor did the body a 304 confirmed");
 
         l.reset();
         assert!(l.records().is_empty(), "a new generation starts empty");
