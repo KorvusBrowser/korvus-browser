@@ -1,0 +1,62 @@
+<!doctype html><title>ax-structure</title><body><div id="w-contents-div"><div style=display:contents><span>t1</span></div></div>
+<div id="w-contents-span"><span style=display:contents>s</span></div>
+<div id="w-contents-section"><section style=display:contents><p>t2</p></section></div>
+<div id="w-contents-section-named"><section aria-label=s style=display:contents><p>t3</p></section></div>
+<div id="w-contents-form"><form style=display:contents><button>Go</button></form></div>
+<div id="w-contents-form-named"><form aria-label=f style=display:contents><button>Go</button></form></div>
+<div id="w-contents-nav"><nav style=display:contents><a href=#>x</a></nav></div>
+<div id="w-contents-ul"><ul style=display:contents><li>i</li></ul></div>
+<div id="w-contents-li"><ul><li style=display:contents>i1</li><li>i2</li></ul></div>
+<div id="w-contents-button"><button style=display:contents>b</button></div>
+<div id="w-contents-a"><a href=# style=display:contents>l</a></div>
+<div id="w-contents-h1"><h1 style=display:contents>h</h1></div>
+<div id="w-contents-p"><p style=display:contents>para</p></div>
+<div id="w-contents-p-id"><p id=pc style=display:contents>para</p></div>
+<div id="w-contents-group"><div role=group style=display:contents><span>g</span></div></div>
+<div id="w-contents-none"><div role=none style=display:contents><span>n</span></div></div>
+<div id="w-contents-main"><main style=display:contents><p>m</p></main></div>
+<div id="w-contents-table"><table style=display:contents><tr><td>c</td></tr></table></div>
+<div id="w-contents-title"><div title=t style=display:contents><span>x</span></div></div>
+<div id="w-contents-nested"><div style=display:contents><div style=display:contents><button>deep</button></div></div></div>
+<div id="w-contents-blockquote"><blockquote style=display:contents>x</blockquote></div>
+<div id="w-contents-article"><article style=display:contents>x</article></div>
+<div id="w-contents-fieldset"><fieldset style=display:contents>x</fieldset></div>
+<div id="w-contents-ol"><ol style=display:contents><li>x</li></ol></div>
+<div id="w-contents-label"><label style=display:contents><input type=checkbox> lab</label></div>
+<div id="w-a-none"><a>none</a></div>
+<div id="w-a-onclick"><a onclick='1'>onclick</a></div>
+<div id="w-a-click"><a data-click>listen</a></div>
+<div id="w-a-click-name"><a data-click><span>inner</span> text</a></div>
+<div id="w-a-click-role"><a data-click role=button>btn</a></div>
+<div id="w-a-onmousedown"><a onmousedown='1'>md</a></div>
+<div id="w-a-onmouseup"><a onmouseup='1'>mu</a></div>
+<div id="w-a-onkeydown"><a onkeydown='1'>kd</a></div>
+<div id="w-a-tabindex"><a tabindex=0>ti</a></div>
+<div id="w-a-parent-click"><div data-click><a>child</a></div></div>
+<div id="w-a-href-hidden"><a href=# aria-hidden=true>x</a></div>
+<div id="w-span-onclick"><span onclick='1'>sp</span></div>
+<div id="w-span-click"><span data-click>sc</span></div>
+<div id="w-div-click"><div data-click>dc</div></div>
+<div id="w-div-click-empty"><div data-click></div></div>
+<div id="w-i-click"><i data-click>ic</i></div>
+<div id="w-img-click"><img data-click alt=pic src=x.png></div>
+<div id="w-span-onkeydown"><span onkeydown='1'>sk</span></div>
+<div id="w-check-text"><label><input type=checkbox> Plain text</label></div>
+<div id="w-check-span"><label><input type=checkbox><span>Span text</span></label></div>
+<div id="w-check-spans"><label><input type=checkbox><span>Two</span><span>91</span></label></div>
+<div id="w-check-strong"><label><input type=checkbox> <strong>Bold</strong> text</label></div>
+<div id="w-check-before"><label>Before <input type=checkbox></label></div>
+<div id="w-check-link"><label><input type=checkbox> Text <a href=#>link</a></label></div>
+<div id="w-radio-text"><label><input type=radio name=r> Radio text</label></div>
+<div id="w-radio-span"><label><input type=radio name=r><span>Radio span</span></label></div>
+<div id="w-check-for"><label for=cf>For label</label><input type=checkbox id=cf></div>
+<div id="w-check-for-span"><label for=cfs><span>For span</span></label><input type=checkbox id=cfs></div>
+<div id="w-check-div"><label><input type=checkbox><div>Block text</div></label></div>
+<div id="w-check-nested"><label><input type=checkbox><span><span>Nested</span></span></label></div>
+<div id="w-check-img"><label><input type=checkbox><img alt=pic src=x.png></label></div>
+<div id="w-check-wrapped"><label><span><input type=checkbox></span> Wrapped control</label></div>
+<div id="w-check-comment"><label><input type=checkbox><!-- c --> Commented</label></div>
+<div id="w-check-br"><label><input type=checkbox><br>Broken</label></div><script>
+const f = () => {};
+document.querySelectorAll("[data-click]").forEach((e) => e.addEventListener("click", f));
+</script></body>

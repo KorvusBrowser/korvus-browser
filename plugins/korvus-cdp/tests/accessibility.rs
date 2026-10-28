@@ -26,7 +26,7 @@
 use engine::Engine;
 use futures_util::{SinkExt, StreamExt};
 use serde_json::{json, Value};
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::time::{Duration, Instant};
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpListener;
@@ -37,7 +37,7 @@ type ClientWs = tokio_tungstenite::WebSocketStream<tokio_tungstenite::MaybeTlsSt
 const PAGE: &str = include_str!("fixtures/accessibility.html");
 const CHROME: &str = include_str!("fixtures/accessibility.chrome-150.json");
 
-async fn fixture_server() -> u16 {
+async fn fixture_server(page: &'static str) -> u16 {
     let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
     let port = l.local_addr().unwrap().port();
     tokio::spawn(async move {
@@ -46,7 +46,7 @@ async fn fixture_server() -> u16 {
             tokio::spawn(async move {
                 let mut buf = [0u8; 4096];
                 let _ = s.read(&mut buf).await;
-                let resp = format!("HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nCache-Control: no-store\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{PAGE}", PAGE.len());
+                let resp = format!("HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nCache-Control: no-store\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{page}", page.len());
                 let _ = s.write_all(resp.as_bytes()).await;
                 let _ = s.flush().await;
             });
@@ -210,7 +210,7 @@ async fn the_accessibility_tree_and_the_dom_tree_are_chromes() {
     let chrome_nodes = chrome["full"].as_array().unwrap();
     let by_id = |id: &Value| chrome_nodes.iter().find(|n| n["nodeId"] == *id).unwrap();
 
-    let port = fixture_server().await;
+    let port = fixture_server(PAGE).await;
     let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
     let addr = l.local_addr().unwrap();
     let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
@@ -307,4 +307,126 @@ async fn the_accessibility_tree_and_the_dom_tree_are_chromes() {
     };
     let (served, ()) = tokio::join!(server, client);
     served.expect("the connection is served");
+}
+
+/// Each element's `id` by its backend id, in a `DOM.getDocument` tree.
+fn element_ids(n: &Value, out: &mut HashMap<i64, String>) {
+    if let Some(a) = n["attributes"].as_array() {
+        for kv in a.chunks(2) {
+            if kv[0] == "id" {
+                out.insert(n["backendNodeId"].as_i64().unwrap(), kv[1].as_str().unwrap().to_string());
+            }
+        }
+    }
+    for c in n["children"].as_array().into_iter().flatten() {
+        element_ids(c, out);
+    }
+}
+
+/// A control's name from its `<label>`: the label's text as its line shows it, never trimmed.
+///
+/// korvus trimmed it for every control but a checkbox or radio. Chrome 152 (`fixtures/labels.chrome-152.json`:
+/// 152.0.7977.82, headless, `--lang=en-US`, a fresh profile, `Accessibility.getFullAXTree` on `fixtures/labels.html`,
+/// each control's role and name by its `id`) keeps what its line keeps: `<label>Search <input></label>` names the
+/// textbox `"Search "`, `<label> Name <input> </label>` `"Name "`, `<label><input> after</label>` `" after"`, a label
+/// that ends its block `"Two lines"`. chrome-devtools-mcp's snapshot shows the name as it is. What the label holds
+/// beyond text is read as the tree holds it: a space beside the control is none (`<input> <strong>Bold</strong> text`:
+/// `"Bold text"`), a block a space between its neighbours but none at the edges (`<input><div>B</div>`: `"B"`), a
+/// `<br>` a space even there (`<br>B `: `" B "`).
+#[tokio::test]
+async fn a_label_names_its_control_as_its_line_shows_it() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let chrome: Value = serde_json::from_str(include_str!("fixtures/labels.chrome-152.json")).expect("the recording is JSON");
+    let port = fixture_server(include_str!("fixtures/labels.html")).await;
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/labels.html") })).await;
+        c.wait_for("Page.loadEventFired").await;
+        let doc = c.call("DOM.getDocument", json!({ "depth": -1 })).await;
+        let mut ids = HashMap::new();
+        element_ids(&doc["result"]["root"], &mut ids);
+        let full = c.call("Accessibility.getFullAXTree", json!({})).await;
+        let mut got = serde_json::Map::new();
+        for n in full["result"]["nodes"].as_array().unwrap_or_else(|| panic!("a tree: {full}")) {
+            if let Some(id) = n["backendDOMNodeId"].as_i64().and_then(|b| ids.get(&b)) {
+                got.insert(id.clone(), json!([n["role"]["value"], n["name"]["value"]]));
+            }
+        }
+        c.ws.send(Message::Close(None)).await.unwrap();
+        got
+    };
+    let (server, got) = tokio::join!(server, client);
+    server.unwrap();
+    let mut wrong = Vec::new();
+    for (id, want) in chrome.as_object().unwrap() {
+        if got.get(id) != Some(want) {
+            wrong.push(format!("#{id}: Chrome {want}, korvus {}", got.get(id).cloned().unwrap_or_default()));
+        }
+    }
+    assert!(wrong.is_empty(), "{} of {} controls named otherwise:\n{}", wrong.len(), chrome.as_object().unwrap().len(), wrong.join("\n"));
+}
+
+/// An element without a box, a clickable one, and a checkbox's label, as Chrome lists them.
+///
+/// Stagehand's snapshots (D185's A/B) showed three ways korvus's tree was not Chrome's. A `display: contents` element
+/// was left out with its role: Tailwind's `<form class="contents">` lost its `form`, though Chrome 152 keeps every
+/// role but a paragraph's (which needs what keeps a generic). An `<a>` with no `href` stayed generic with a click
+/// listener, where Chrome makes it a link, and a generic element with one is a node of its own (Blink's
+/// `IsClickable`: `click`, `mousedown`, `mouseup`, a listener or an `on…` attribute; not a parent's, not `keydown`).
+/// And a checkbox's `<label>` was always left out, where Chrome keeps it as a `LabelText` round the control once it
+/// holds more than text (YC's company filters: `<label><input type=checkbox><span>`). `fixtures/ax-structure.chrome-152.json`
+/// is Chrome 152.0.7977.82's tree under each case's `<div id="w-…">` (headless, `--lang=en-US`, a fresh profile):
+/// `role:"name"[children]`, an ignored node's role in parentheses.
+#[tokio::test]
+async fn an_element_without_a_box_or_with_a_click_listener_is_listed_as_chromes_is() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let chrome: Value = serde_json::from_str(include_str!("fixtures/ax-structure.chrome-152.json")).expect("the recording is JSON");
+    let port = fixture_server(include_str!("fixtures/ax-structure.html")).await;
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/ax-structure.html") })).await;
+        c.wait_for("Page.loadEventFired").await;
+        let doc = c.call("DOM.getDocument", json!({ "depth": -1 })).await;
+        let mut ids = HashMap::new();
+        element_ids(&doc["result"]["root"], &mut ids);
+        let full = c.call("Accessibility.getFullAXTree", json!({})).await;
+        c.ws.send(Message::Close(None)).await.unwrap();
+        (ids, full)
+    };
+    let (server, (ids, full)) = tokio::join!(server, client);
+    server.unwrap();
+    let nodes = full["result"]["nodes"].as_array().unwrap_or_else(|| panic!("a tree: {full}"));
+    let by_id: HashMap<&str, &Value> = nodes.iter().filter_map(|n| Some((n["nodeId"].as_str()?, n))).collect();
+    fn shown(n: &Value, by_id: &HashMap<&str, &Value>) -> String {
+        let role = n["role"]["value"].as_str().unwrap_or_default();
+        let mut s = if n["ignored"] == true { format!("({role})") } else { role.to_string() };
+        if let Some(name) = n["name"]["value"].as_str().filter(|s| !s.is_empty()) {
+            s += &format!(":{}", Value::from(name));
+        }
+        let kids: Vec<String> = n["childIds"].as_array().into_iter().flatten().filter_map(|c| by_id.get(c.as_str()?)).map(|c| shown(c, by_id)).collect();
+        if !kids.is_empty() {
+            s += &format!("[{}]", kids.join(" "));
+        }
+        s
+    }
+    let mut wrong = Vec::new();
+    for (case, want) in chrome.as_object().unwrap() {
+        let wrapper = format!("w-{case}");
+        let node = nodes.iter().find(|n| n["backendDOMNodeId"].as_i64().and_then(|b| ids.get(&b)) == Some(&wrapper));
+        let got = node.map(|n| n["childIds"].as_array().into_iter().flatten().filter_map(|c| by_id.get(c.as_str()?)).map(|c| shown(c, &by_id)).collect::<Vec<_>>().join(" "));
+        if got.as_deref() != want.as_str() {
+            wrong.push(format!("{case}:\n  Chrome {}\n  korvus {}", want.as_str().unwrap(), got.unwrap_or_else(|| "no node".to_string())));
+        }
+    }
+    assert!(wrong.is_empty(), "{} of {} cases listed otherwise:\n{}", wrong.len(), chrome.as_object().unwrap().len(), wrong.join("\n"));
 }

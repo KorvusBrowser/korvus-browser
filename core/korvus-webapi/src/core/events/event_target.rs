@@ -333,6 +333,30 @@ pub(crate) fn node_has_listener(scope: &mut v8::PinScope, id: u32, ty: &str, cap
     dom.is_some_and(|d| d.node_type(id) == 1 && d.get_attribute(id, &format!("on{ty}")).is_some())
 }
 
+/// The nodes with a listener of their own for any of `types` -- registered or set through an `on<type>` IDL
+/// attribute, on any node; or an `on<type>` content attribute not compiled yet, on an element of `among`: what
+/// [`node_has_listener`] answers for one node, for a whole document in one pass (the accessibility tree's clickable
+/// elements).
+pub(crate) fn nodes_listening(scope: &mut v8::PinScope, types: &[&str], among: &[u32]) -> std::collections::HashSet<u32> {
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let st = op_state.borrow();
+    let mut out = std::collections::HashSet::new();
+    if let Some(l) = st.try_borrow::<EventListeners>() {
+        for (key, by_type) in &l.map {
+            if let EtKey::Node(id) = key {
+                if types.iter().any(|t| by_type.get(*t).is_some_and(|l| !l.is_empty())) {
+                    out.insert(*id);
+                }
+            }
+        }
+    }
+    if let Some(dom) = st.try_borrow::<crate::binding::host_dom::HostDom>().map(|h| &h.0) {
+        let attrs: Vec<String> = types.iter().map(|t| format!("on{t}")).collect();
+        out.extend(among.iter().copied().filter(|&id| dom.node_type(id) == 1 && attrs.iter().any(|a| dom.get_attribute(id, a).is_some())));
+    }
+    out
+}
+
 /// Is a listener for `ty` registered on any target at all -- Blink's `EventHandlerRegistry` question for
 /// `pointerrawupdate`, which is dispatched only when some listener wants it.
 pub(crate) fn any_listener(scope: &mut v8::PinScope, ty: &str) -> bool {

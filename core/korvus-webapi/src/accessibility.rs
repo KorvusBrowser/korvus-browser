@@ -295,6 +295,11 @@ pub fn ax_tree(scope: &mut v8::PinScope, doc: NodeId, url: &str) -> Option<AxTre
             styles.insert(el, Style::of(&row));
         }
     }
+    // An element with a `click`, `mousedown` or `mouseup` listener of its own is clickable (Blink's `IsClickable`):
+    // an `<a>` with no `href` is a link for it (vantechjournal.com's "Sign Up"), a generic element a node of its own.
+    // Chrome 152: an `onclick` attribute counts, a `keydown`, `pointerdown` or `mouseover` listener does not, nor a
+    // parent's, nor `tabindex`.
+    let clickable = crate::core::events::event_target::nodes_listening(scope, &["click", "mousedown", "mouseup"], &elements);
     let st = op_state.borrow();
     let dom = &st.try_borrow::<crate::HostDom>()?.0;
     let theme = crate::core::css::cssom::media_context(&st).theme;
@@ -305,6 +310,7 @@ pub fn ax_tree(scope: &mut v8::PinScope, doc: NodeId, url: &str) -> Option<AxTre
         styles,
         labels: HashMap::new(),
         text: HashMap::new(),
+        clickable,
         focused,
         submit_label: if theme.submit_label.is_empty() { "Submit" } else { theme.submit_label },
         reset_label: if theme.reset_label.is_empty() { "Reset" } else { theme.reset_label },
@@ -432,6 +438,8 @@ struct Builder<'a> {
     labels: HashMap<NodeId, Vec<NodeId>>,
     /// Each rendered text node's text, its white space collapsed as the line it sits on collapses it.
     text: HashMap<NodeId, String>,
+    /// The elements a click listener makes clickable ([`ax_tree`]).
+    clickable: HashSet<NodeId>,
     focused: Option<NodeId>,
     submit_label: &'static str,
     reset_label: &'static str,
@@ -557,11 +565,14 @@ impl<'a> Builder<'a> {
         self.dom.find_descendant(label, |d| self.dom.is_element(d) && self.labelable(d))
     }
 
-    /// The control a `<label>` labels when it is a checkbox or a radio button: Chrome leaves such a label out as a
-    /// node (`labelFor`), its text being the control's name.
+    /// The control a `<label>` labels when Chrome leaves the label out as a node (`labelFor`), its text being the
+    /// control's name: a checkbox or a radio button, the label holding nothing but text and the control itself. Chrome
+    /// 152 keeps a `LabelText` round the control for anything more -- a `<span>`, a `<strong>`, an `<img>`, a link, a
+    /// `<span>` round the control (Stagehand's `login` and YC's company filters: `<label><input type=checkbox><span>`).
     fn check_label_control(&self, label: NodeId) -> Option<NodeId> {
         let c = self.label_control(label)?;
-        (self.tag(c) == "input" && matches!(self.dom.input_type(c), "checkbox" | "radio")).then_some(c)
+        let plain = self.dom.children(label).into_iter().all(|k| k == c || !self.dom.is_element(k));
+        (self.tag(c) == "input" && matches!(self.dom.input_type(c), "checkbox" | "radio") && plain).then_some(c)
     }
 
     // ── Text on its lines ──────────────────────────────────────────────────────────────────
@@ -753,6 +764,7 @@ impl<'a> Builder<'a> {
         let in_section = |el| self.inside(el, &["article", "aside", "main", "nav", "section"]);
         Some(match self.tag(el) {
             "a" | "area" if self.has_attr(el, "href") => aria("link", 110),
+            "a" if self.clickable.contains(&el) => aria("link", 110),
             "abbr" => internal("Abbr", 1),
             "address" | "hgroup" | "fieldset" | "optgroup" => aria("group", 93),
             "article" => aria("article", 5),
@@ -898,11 +910,15 @@ impl<'a> Builder<'a> {
             Some(Some(r)) => Some(self.contextual(el, r)),
             _ => self.native_role(el),
         };
+        // a `<p>` with no box (`display: contents`) is only a paragraph with what keeps a generic (Chrome 152: an `id`
+        // keeps it, else its text stands in its place); every other role keeps its element without a box
+        let role = role.filter(|r| !(r.name == "paragraph" && tag == "p" && self.style(el).display == Display::Contents && !self.generic_kept(el)));
         let keep = match role {
             Some(r) if r != GENERIC => Keep::Node(r),
             _ => {
-                // a `<marquee>`'s text scrolls in a box of its own, which Chrome always lists
-                if self.generic_kept(el) || tag == "marquee" {
+                // a `<marquee>`'s text scrolls in a box of its own, which Chrome always lists; a clickable element is
+                // one Chrome lists (Blink's `IsClickable`: `<span onclick>`, even an empty `<div>` with a listener)
+                if self.generic_kept(el) || tag == "marquee" || self.clickable.contains(&el) {
                     Keep::Node(role.unwrap_or(GENERIC))
                 } else if self.block_level(el) {
                     if self.has_rendered_children(el) {
@@ -918,8 +934,11 @@ impl<'a> Builder<'a> {
             }
         };
         if let Some(h) = walk.hidden_by {
+            // a link only for its click listener is none under `aria-hidden` (Chrome 152 lists nothing for it; an
+            // `<a href>` there is an ignored node)
+            let clicked_link = tag == "a" && !self.has_attr(el, "href") && self.explicit_role(el).is_none();
             return match keep {
-                Keep::Node(r) if r != GENERIC => Keep::Ignored("ariaHiddenSubtree", AxValue::Idref(vec![Related { node: h, idref: None, text: None }])),
+                Keep::Node(r) if r != GENERIC && !clicked_link => Keep::Ignored("ariaHiddenSubtree", AxValue::Idref(vec![Related { node: h, idref: None, text: None }])),
                 _ => Keep::Drop,
             };
         }
@@ -1141,9 +1160,13 @@ impl<'a> Builder<'a> {
         if self.attr(el, "aria-hidden").is_some_and(|v| v.trim().eq_ignore_ascii_case("true")) && walk.hidden_by.is_none() {
             walk.hidden_by = Some(el);
         }
-        if st.display == Display::Contents || !st.visible {
-            // no box of its own (`display: contents`), or not shown (`visibility: hidden`): out of the tree, its
-            // children in its place -- a `visibility: visible` child of a hidden parent still shows
+        // `display: contents` -- no box of its own -- is not out of the tree: Chrome 152 keeps the element as the node its
+        // role makes it, its children under it (a `<form class=contents>`, Tailwind's, is still a `form`; a `<nav>`,
+        // `<ul>`, `<button>`, link or heading too); a generic one goes as any generic does. A `<slot>` (`display:
+        // contents` by the user agent's sheet) is its assigned nodes in its place, as Chrome 150 lists them.
+        if !st.visible || st.display == Display::Contents && self.dom.is_html_slot_element(el) {
+            // not shown (`visibility: hidden`): out of the tree, its children in its place -- a `visibility: visible`
+            // child of a hidden parent still shows
             for c in self.flat_children(el) {
                 if self.contents_render(el, c) {
                     self.walk(c, parent, walk, st.visible);
@@ -1346,7 +1369,7 @@ impl<'a> Builder<'a> {
         let refs = self.idrefs(el, "aria-labelledby");
         if !refs.is_empty() {
             let mut visited = HashSet::from([el]);
-            let parts: Vec<(String, NodeId, String)> = refs.into_iter().map(|(id, n)| (id, n, self.alternative(n, &mut visited, true))).collect();
+            let parts: Vec<(String, NodeId, String)> = refs.into_iter().map(|(id, n)| (id, n, self.alternative(n, &mut visited, true, false))).collect();
             let joined = parts.iter().map(|p| collapse(&p.2).trim().to_string()).filter(|s| !s.is_empty()).collect::<Vec<_>>().join(" ");
             if !joined.is_empty() {
                 let related = parts.into_iter().map(|(id, n, t)| Related { node: n, idref: Some(id), text: Some(collapse(&t).trim().to_string()) }).collect();
@@ -1363,7 +1386,7 @@ impl<'a> Builder<'a> {
         }
         if name_from_content(role.name) {
             let mut visited = HashSet::from([el]);
-            let n = collapse(&self.content_text(el, &mut visited, false)).trim().to_string();
+            let n = collapse(&self.content_text(el, &mut visited, false, false)).trim().to_string();
             if !n.is_empty() {
                 return (n, Name::Other);
             }
@@ -1396,20 +1419,24 @@ impl<'a> Builder<'a> {
         let tag = self.tag(el);
         if self.labelable(el) {
             if let Some(labels) = self.labels.get(&el).filter(|l| !l.is_empty()) {
-                // a checkbox or radio a label wraps keeps the label's text as it is (Chrome 150: `" Remember me"`)
-                let keep_edges = tag == "input" && matches!(dom.input_type(el), "checkbox" | "radio");
+                // A label's text as its line shows it, not trimmed: a space at a line's start or end goes, one beside the
+                // control stays. Chrome 152: `<label>Search <input></label>` names the textbox `"Search "`, a checkbox
+                // after which the text runs `" Gift wrap"`, `<label for=j>  Spaced   label  </label><input id=j>`
+                // `"Spaced label "`, a label that ends its block `"Two lines"` -- every labelable control alike. A
+                // block in it is a space between its neighbours and none at the label's edges (`<input><div>B</div>`:
+                // `"B"`; `A<div>B</div>C `: `"A B C "`), a `<br>` a space wherever it is (`<br>B `: `" B "`).
                 let mut related = Vec::new();
                 let mut parts = Vec::new();
                 for &l in labels {
                     let mut visited = HashSet::from([el]);
-                    let t = collapse(&self.content_text(l, &mut visited, true));
-                    let t = if keep_edges { t } else { t.trim().to_string() };
+                    let t = self.content_text(l, &mut visited, true, true);
+                    let t = collapse(&t.trim_matches(BLOCK_GAP).replace(BLOCK_GAP, " "));
                     related.push(Related { node: l, idref: None, text: Some(t.trim().to_string()) });
                     if !t.trim().is_empty() {
                         parts.push(t);
                     }
                 }
-                let joined = parts.join(" ");
+                let joined = collapse(&parts.join(" "));
                 if !joined.trim().is_empty() {
                     return Some((joined, Name::Labels(related)));
                 }
@@ -1432,17 +1459,17 @@ impl<'a> Builder<'a> {
             "fieldset" => {
                 let legend = dom.children(el).into_iter().find(|&c| self.tag(c) == "legend")?;
                 let mut visited = HashSet::from([el]);
-                Some((collapse(&self.content_text(legend, &mut visited, false)).trim().to_string(), Name::Labels(vec![Related { node: legend, idref: None, text: None }])))
+                Some((collapse(&self.content_text(legend, &mut visited, false, false)).trim().to_string(), Name::Labels(vec![Related { node: legend, idref: None, text: None }])))
             }
             "table" => {
                 let cap = dom.children(el).into_iter().find(|&c| self.tag(c) == "caption")?;
                 let mut visited = HashSet::from([el]);
-                Some((collapse(&self.content_text(cap, &mut visited, false)).trim().to_string(), Name::Labels(vec![Related { node: cap, idref: None, text: None }])))
+                Some((collapse(&self.content_text(cap, &mut visited, false, false)).trim().to_string(), Name::Labels(vec![Related { node: cap, idref: None, text: None }])))
             }
             "figure" => {
                 let cap = dom.children(el).into_iter().find(|&c| self.tag(c) == "figcaption")?;
                 let mut visited = HashSet::from([el]);
-                Some((collapse(&self.content_text(cap, &mut visited, false)).trim().to_string(), Name::Other))
+                Some((collapse(&self.content_text(cap, &mut visited, false, false)).trim().to_string(), Name::Other))
             }
             "optgroup" => self.attr(el, "label").map(text),
             "option" => self.attr(el, "label").filter(|l| !l.trim().is_empty()).map(text).or_else(|| Some(text(&dom.text_content(el)))),
@@ -1453,7 +1480,7 @@ impl<'a> Builder<'a> {
     /// The text alternative of a node reached while naming another (accname §4.3.2, steps 2B-2I): `labelledby` when
     /// the walk came through `aria-labelledby` -- a hidden node then counts, as Chrome 150 names an input after a
     /// `display: none` span.
-    fn alternative(&self, n: NodeId, visited: &mut HashSet<NodeId>, via_labelledby: bool) -> String {
+    fn alternative(&self, n: NodeId, visited: &mut HashSet<NodeId>, via_labelledby: bool, laid_out: bool) -> String {
         let dom = self.dom;
         if dom.node_type(n) == 3 {
             return dom.node_value(n).unwrap_or_default();
@@ -1466,7 +1493,7 @@ impl<'a> Builder<'a> {
         }
         if !via_labelledby {
             let refs = self.idrefs(n, "aria-labelledby");
-            let joined = refs.into_iter().map(|(_, r)| collapse(&self.alternative(r, visited, true)).trim().to_string()).filter(|s| !s.is_empty()).collect::<Vec<_>>().join(" ");
+            let joined = refs.into_iter().map(|(_, r)| collapse(&self.alternative(r, visited, true, false)).trim().to_string()).filter(|s| !s.is_empty()).collect::<Vec<_>>().join(" ");
             if !joined.is_empty() {
                 return joined;
             }
@@ -1503,41 +1530,50 @@ impl<'a> Builder<'a> {
                 return t;
             }
         }
-        let content = self.content_text(n, visited, via_labelledby);
-        if !content.trim().is_empty() {
+        let content = self.content_text(n, visited, via_labelledby, laid_out);
+        if !content.trim_matches(|c: char| c.is_whitespace() || c == BLOCK_GAP).is_empty() {
             return content;
         }
         self.attr(n, "title").map(str::to_string).unwrap_or_default()
     }
 
     /// `el`'s content as text (accname 2F): each child's text alternative in the flat tree, a block-level child set
-    /// apart by spaces. `include_hidden` when the walk came through `aria-labelledby`.
-    fn content_text(&self, el: NodeId, visited: &mut HashSet<NodeId>, include_hidden: bool) -> String {
+    /// apart by spaces. `include_hidden` when the walk came through `aria-labelledby`. `laid_out`, for a label's text:
+    /// the text the tree holds -- a rendered text node as its line collapses it ([`Builder::text`]), none for a space
+    /// the tree leaves out beside a control, a `<br>` as the space its line break collapses to -- and a block set apart
+    /// by [`BLOCK_GAP`]s, which the label trims at its edges; the DOM's text otherwise.
+    fn content_text(&self, el: NodeId, visited: &mut HashSet<NodeId>, include_hidden: bool, laid_out: bool) -> String {
         let mut out = String::new();
         for c in self.flat_children(el) {
             match self.dom.node_type(c) {
-                3 => {
-                    if include_hidden || self.text.contains_key(&c) {
-                        out.push_str(&self.dom.node_value(c).unwrap_or_default());
-                    }
-                }
+                3 => match self.text.get(&c).filter(|_| laid_out) {
+                    Some(t) if t.trim().is_empty() && self.beside_control(c) => {}
+                    Some(t) => out.push_str(t),
+                    None if include_hidden || self.text.contains_key(&c) => out.push_str(&self.dom.node_value(c).unwrap_or_default()),
+                    None => {}
+                },
                 1 => {
                     if !include_hidden && (!self.renders(c) || !self.style(c).visible && self.style(c).display != Display::Contents) {
                         if self.renders(c) {
                             // a hidden parent's visible child still shows
-                            out.push_str(&self.content_text(c, visited, include_hidden));
+                            out.push_str(&self.content_text(c, visited, include_hidden, laid_out));
                         }
                         continue;
                     }
                     if visited.contains(&c) {
                         continue;
                     }
+                    if laid_out && self.tag(c) == "br" {
+                        out.push(' ');
+                        continue;
+                    }
                     let block = self.block_level(c);
-                    let t = self.alternative(c, visited, include_hidden);
+                    let t = self.alternative(c, visited, include_hidden, laid_out);
                     if block {
-                        out.push(' ');
+                        let gap = if laid_out { BLOCK_GAP } else { ' ' };
+                        out.push(gap);
                         out.push_str(&t);
-                        out.push(' ');
+                        out.push(gap);
                     } else {
                         out.push_str(&t);
                     }
@@ -1568,7 +1604,7 @@ impl<'a> Builder<'a> {
         // a `<summary>` outside a `<details>` is a `generic`, which its content describes
         if self.tag(el) == "summary" && !self.dom.parent(el).is_some_and(|p| self.tag(p) == "details") {
             let mut visited = HashSet::from([el]);
-            let t = collapse(&self.content_text(el, &mut visited, false)).trim().to_string();
+            let t = collapse(&self.content_text(el, &mut visited, false, false)).trim().to_string();
             if !t.is_empty() {
                 return Some(t);
             }
@@ -1576,7 +1612,7 @@ impl<'a> Builder<'a> {
         let refs = self.idrefs(el, "aria-describedby");
         if !refs.is_empty() {
             let mut visited = HashSet::from([el]);
-            let d = refs.into_iter().map(|(_, n)| collapse(&self.alternative(n, &mut visited, true)).trim().to_string()).filter(|s| !s.is_empty()).collect::<Vec<_>>().join(" ");
+            let d = refs.into_iter().map(|(_, n)| collapse(&self.alternative(n, &mut visited, true, false)).trim().to_string()).filter(|s| !s.is_empty()).collect::<Vec<_>>().join(" ");
             if !d.is_empty() {
                 return Some(d);
             }
@@ -1922,6 +1958,10 @@ struct Line {
     /// The text node whose last character is the line's last, a space a line end would take.
     trailing: Option<NodeId>,
 }
+
+/// What sets a block apart in a label's text ([`Builder::content_text`]): a space between its neighbours, none at the
+/// label's edges.
+const BLOCK_GAP: char = '\u{1}';
 
 /// Every run of ASCII white space as one space.
 fn collapse(s: &str) -> String {

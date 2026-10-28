@@ -18,6 +18,11 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 - What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it. It came
   before, so a client that waits for network quiet counted from `load` on (Stagehand's `networkidle`) missed the
   requests a `load` handler's timers start and read a page before its data had been asked for.
+- The accessibility tree follows Chrome 152 in more places: a `<label>`'s text names its control as its line lays it
+  out (`<label>Search <input></label>` is `"Search "`, a block in it a space between its neighbours); a
+  `display: contents` element keeps its role (a `<form class="contents">` is still a form); an `<a>` with no `href`
+  but a click listener is a link, and a generic element with one is listed; and a checkbox's label that holds more
+  than text is kept as a `LabelText` round it.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
