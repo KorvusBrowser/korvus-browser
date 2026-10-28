@@ -1163,6 +1163,119 @@ async fn a_history_entry_the_client_goes_to_is_where_the_next_command_finds_the_
     }
 }
 
+/// A `data:` URL a client navigates to is the document: its markup, its type, its opaque origin, the charset it names.
+///
+/// Every scheme but http(s) loaded an empty document, so `page.goto('data:text/html,...')` -- Stagehand's
+/// `observe_main_frame_element_ids` builds its page so -- showed a blank page. Chrome 152 answers each probe below
+/// with exactly these values (headless, raw CDP, 2026-10-28).
+#[tokio::test]
+async fn a_data_url_the_client_navigates_to_is_the_document() {
+    let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let cases = [
+        ("data:text/html,<p>hi</p>", r#"["<p>hi</p>","BackCompat","text/html","null","windows-1252"]"#),
+        ("data:text/html,%3C!doctype%20html%3E%3Cp%3Ea%23b%3C%2Fp%3E", r#"["<p>a#b</p>","CSS1Compat","text/html","null","windows-1252"]"#),
+        ("data:text/html;base64,PHA+aGk8L3A+", r#"["<p>hi</p>","BackCompat","text/html","null","windows-1252"]"#),
+        ("data:text/html;charset=utf-8,%3Cp%3Ehi%3C%2Fp%3E", r#"["<p>hi</p>","BackCompat","text/html","null","UTF-8"]"#),
+        ("data:text/html;charset=iso-8859-1,%E9t%E9", r#"["été","BackCompat","text/html","null","windows-1252"]"#),
+        ("data:,hello%20there", r#"["<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">hello there</pre>","CSS1Compat","text/plain","null","windows-1252"]"#),
+    ];
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        let mut seen = Vec::new();
+        for (url, chrome) in cases {
+            c.call("Page.navigate", json!({ "url": url })).await;
+            c.pump(Duration::from_millis(300)).await;
+            let probe = "JSON.stringify([document.body.innerHTML, document.compatMode, document.contentType, origin, document.characterSet])";
+            let here = c.call("Runtime.evaluate", json!({ "expression": probe, "returnByValue": true })).await;
+            seen.push((url, here["result"]["value"].as_str().unwrap_or_default().to_string(), chrome));
+        }
+        c.ws.send(Message::Close(None)).await.unwrap();
+        seen
+    };
+    let (server, seen) = tokio::join!(server, client);
+    server.unwrap();
+    for (url, here, chrome) in seen {
+        assert_eq!(here, chrome, "{url}");
+    }
+}
+
+/// What a page requests once its `load` has fired is reported after `Page.loadEventFired`, as Chrome reports it.
+///
+/// The load's events went out when the load had returned, after what the `load` handler's timers had requested
+/// (and the favicon), so a client counting from `load` on -- Stagehand's `networkidle`, 500 ms with no new request --
+/// saw none of it and called the page settled before its data had been asked for (YC's company list). Chrome 152 over
+/// loopback (2026-10-28), this page: `/load-sync`, the `load` handler's own request, before `Page.loadEventFired`;
+/// the two handlers' `setTimeout(0)` requests after it.
+#[tokio::test]
+async fn what_a_page_requests_after_its_load_is_reported_after_the_load() {
+    let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let site = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let port = site.local_addr().unwrap().port();
+    tokio::spawn(async move {
+        const PAGE: &str = "<!doctype html><title>lo</title><body><p>x</p><script src=/slow.js></script><script>
+fetch('/parse');
+document.addEventListener('DOMContentLoaded', () => { fetch('/dcl-sync'); setTimeout(() => fetch('/dcl-timeout0'), 0); });
+addEventListener('load', () => { fetch('/load-sync'); setTimeout(() => fetch('/load-timeout0'), 0); });
+</script><img src=/img.png></body>";
+        loop {
+            let Ok((mut s, _)) = site.accept().await else { return };
+            tokio::spawn(async move {
+                let mut buf = [0u8; 4096];
+                let n = s.read(&mut buf).await.unwrap_or(0);
+                let path = String::from_utf8_lossy(&buf[..n]).split_whitespace().nth(1).unwrap_or("/").to_string();
+                // what the load waits for comes late, so the parse's and the handlers' requests fall on either side
+                if path == "/slow.js" || path == "/img.png" {
+                    tokio::time::sleep(Duration::from_millis(300)).await;
+                }
+                let (ty, body) = if path == "/" { ("text/html", PAGE) } else { ("text/plain", "1") };
+                let resp = format!("HTTP/1.1 200 OK\r\nContent-Type: {ty}\r\nCache-Control: no-store\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{body}", body.len());
+                let _ = s.write_all(resp.as_bytes()).await;
+            });
+        }
+    });
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Network.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/") })).await;
+        c.pump(Duration::from_millis(500)).await;
+        c.ws.send(Message::Close(None)).await.unwrap();
+        c.events
+    };
+    let (server, events) = tokio::join!(server, client);
+    server.unwrap();
+    let order: Vec<String> = events
+        .iter()
+        .filter_map(|(_, e)| match e["method"].as_str()? {
+            "Page.loadEventFired" => Some("load".to_string()),
+            "Network.requestWillBeSent" => {
+                let url = e["params"]["request"]["url"].as_str()?;
+                let path = url.split_once(&format!(":{port}")).map(|(_, p)| p)?;
+                matches!(path, "/parse" | "/dcl-sync" | "/load-sync" | "/dcl-timeout0" | "/load-timeout0").then(|| path.to_string())
+            }
+            _ => None,
+        })
+        .collect();
+    let at = |what: &str| order.iter().position(|o| o == what).unwrap_or_else(|| panic!("{what} in {order:?}"));
+    // the page's own `load`: the first one is the blank document's the tab started at
+    let load = order.iter().rposition(|o| o == "load").expect("the page's load");
+    for before in ["/parse", "/dcl-sync", "/load-sync"] {
+        assert!(at(before) < load, "{before} before the load's event: {order:?}");
+    }
+    for after in ["/dcl-timeout0", "/load-timeout0"] {
+        assert!(at(after) > load, "{after} after the load's event, as Chrome reports it: {order:?}");
+    }
+}
+
 /// A document that writes to the console as it is left: `beforeunload`, `pagehide` and `unload` each log, and
 /// `unload` throws too.
 const LEAVE_A: &str = "<!doctype html><title>leave-a</title><script>

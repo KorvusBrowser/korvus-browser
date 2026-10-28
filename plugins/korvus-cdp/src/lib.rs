@@ -1265,11 +1265,18 @@ const NETWORK_FLUSH_MS: u64 = 50;
 /// The rows go out where the load yields (a fetch, a timer, a parse waiting for bytes); a running script is not
 /// interrupted, and what it requested is reported when it returns. A client that has gone is noticed by the next write
 /// after the load.
+///
+/// Once the page's `load` has fired (`loaded`), a request it makes after that waits for the load's own events, which
+/// go out when the load returns: Chrome sends `Page.loadEventFired` before a request the `load` handler's timers
+/// make. Sent as they came, a client waiting for quiet from `load` on -- Stagehand's `networkidle`: 500 ms with no new
+/// request -- saw them before the `load` it counts from and called the page settled; it read YC's company list before
+/// its Algolia query had started, 2.5 s in, where it read Chrome's at 6.3 s.
 async fn reporting_network<T>(
     mut load: impl std::future::Future<Output = T> + Unpin,
     rep: &fetch::Rep,
     write: &fetch::Out,
     page_session: Option<&str>,
+    loaded: &engine::LoadMark,
 ) -> T {
     let mut tick = tokio::time::interval(std::time::Duration::from_millis(NETWORK_FLUSH_MS));
     tick.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Delay);
@@ -1282,7 +1289,8 @@ async fn reporting_network<T>(
                 let rev = transport::ledger().revision();
                 if rev != flushed_at {
                     flushed_at = rev;
-                    let _ = write.send_all(fetch::flushed_messages(rep, page_session)).await;
+                    let before = loaded.get().map(|at| transport::ledger().ms_since_start(at));
+                    let _ = write.send_all(fetch::flushed_messages_before(rep, page_session, before)).await;
                 }
             }
         }
@@ -1291,9 +1299,14 @@ async fn reporting_network<T>(
 
 /// The network events this connection has not sent yet (see `network::Reporting::flush`).
 fn flush_network(rep: &fetch::Rep) -> Vec<(network::Stamp, Value)> {
+    flush_network_before(rep, None)
+}
+
+/// [`flush_network`] of the requests that started before `before_ms` (`network::Reporting::flush`).
+fn flush_network_before(rep: &fetch::Rep, before_ms: Option<f64>) -> Vec<(network::Stamp, Value)> {
     let rows = transport::ledger().records();
     let targets = transport::ledger().targets();
-    fetch::rep_lock(rep).flush(&rows, &targets, ids::hex32)
+    fetch::rep_lock(rep).flush(&rows, &targets, ids::hex32, before_ms)
 }
 
 /// The execution context id a worker child's realm is announced with (its index among the page's children).
@@ -2225,7 +2238,9 @@ async fn finish_navigate(
     // Boxed: the load's future is large, and wrapped by value it left a page's `load` handler short of V8 stack -- a
     // form's `submit()` from `onload` threw `RangeError: Maximum call stack size exceeded` (`tests/navigation.rs`,
     // `a_form_submits_to_the_url_and_the_context_chrome_chooses`, red by value and green boxed).
-    if let Err(e) = reporting_network(Box::pin(load_document(&mut engine, &url, document, injected)), rep, write, page_session).await {
+    let loaded = engine::LoadMark::default();
+    engine.mark_load_in(loaded.clone());
+    if let Err(e) = reporting_network(Box::pin(load_document(&mut engine, &url, document, injected)), rep, write, page_session, &loaded).await {
         eprintln!("cdp: loading {url} failed after commit: {e}");
     }
     // Each world the document got is a context of its own, numbered after the document's (Chrome 150: the default 3,
@@ -2242,8 +2257,10 @@ async fn finish_navigate(
         world_events.push(world_context_event(ids, id, &name, &origin, &frame_id));
     }
     // The ledger, as the protocol: every row of this navigation the load did not report as it ran -- see
-    // `network.rs` for what is and is not claimed. Rows that finish later are reported by later flushes.
-    let net_events = flush_network(rep);
+    // `network.rs` for what is and is not claimed. Rows that finish later are reported by later flushes. What the page
+    // requested once its `load` had fired follows the load's events (see `reporting_network`).
+    let after_load = loaded.get().map(|at| transport::ledger().ms_since_start(at));
+    let net_events = flush_network_before(rep, after_load);
     // Playwright's page.goto waits for these lifecycle/load events.
     //
     // THE TIMESTAMP WAS THE LITERAL `0.0` ON ALL FOUR OF THEM, and that is a fixed value
@@ -2371,6 +2388,9 @@ async fn finish_navigate(
         handover.announced = true;
     }
     events.extend(page_events.into_iter().map(|ev| (network::Stamp::Page, ev)));
+    if after_load.is_some() {
+        events.extend(flush_network(rep));
+    }
     navtrace::flush(&url);
     (engine, events)
 }
@@ -3836,7 +3856,7 @@ fn download_name(headers: &[(String, String)], url: &str) -> Option<String> {
 }
 
 /// The navigation's document request: `(the URL the document came from, its bytes and WHOLE header
-/// block)`, or no document for a non-http url, which gets an empty one instead.
+/// block)`: a `data:` URL's own, or no document for another non-http url, which gets an empty one instead.
 async fn fetch_document(
     engine: &mut Engine,
     nav: &engine::PageNavigation,
@@ -3869,6 +3889,13 @@ async fn fetch_document(
         let final_url =
             if resp.url.is_empty() || resp.url == requested { url.to_string() } else { resp.url.clone() };
         Ok((final_url, Some((resp.bytes, resp.headers))))
+    } else if let Some((ty, bytes)) = webapi::decode_data_url(url).filter(|_| nav.initiator.is_none()) {
+        // A `data:` URL is its own document, its type and bytes the data: URL processor's. A driver's navigation loads
+        // one (`page.goto('data:text/html,...')`, Stagehand's `observe_main_frame_element_ids`): it loaded an empty
+        // document, every scheme but http(s) did. A page's own navigation of its top frame to one is not taken here:
+        // Chrome refuses that.
+        let headers = if ty.is_empty() { Vec::new() } else { vec![("content-type".to_string(), ty)] };
+        Ok((url.to_string(), Some((bytes, headers))))
     } else {
         Ok((url.to_string(), None))
     }

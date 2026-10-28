@@ -626,12 +626,15 @@ impl Reporting {
 
     /// Everything the ledger now holds that this connection has not reported, in start order: child
     /// announcements first, then each row's `requestWillBeSent` and completion on the session that
-    /// reports it. `new_session` mints a child session id.
+    /// reports it. `new_session` mints a child session id. With `before_ms`, only the requests that started before
+    /// it (a row's `started_ms`): the ones a page made once its `load` had fired wait for the load's own events, which
+    /// Chrome sends before them.
     pub fn flush(
         &mut self,
         rows: &[transport::RequestRecord],
         targets: &[transport::ChildTarget],
         mut new_session: impl FnMut() -> String,
+        before_ms: Option<f64>,
     ) -> Vec<(Stamp, Value)> {
         let Some(ctx) = self.nav.clone() else { return Vec::new() };
         let mut out = Vec::new();
@@ -659,6 +662,9 @@ impl Reporting {
             }
         }
         for r in rows {
+            if before_ms.is_some_and(|b| r.started_ms >= b) {
+                continue;
+            }
             // The request as first sent, then every redirect it has followed since -- each on the session that
             // reports the request (N27).
             let sent = self.hops_sent.get(&r.id).copied().unwrap_or(0);
@@ -844,14 +850,32 @@ mod tests {
         let _ = rep.begin_navigation(nav());
         let mut inflight = row(1, "http://h/a.txt", "empty", None);
         inflight.error = None;
-        let ev = rep.flush(&[inflight.clone()], &[], || "S".into());
+        let ev = rep.flush(&[inflight.clone()], &[], || "S".into(), None);
         assert_eq!(ev.len(), 1, "requestWillBeSent only: the request has not finished");
-        assert!(rep.flush(&[inflight.clone()], &[], || "S".into()).is_empty(), "nothing is reported twice");
+        assert!(rep.flush(&[inflight.clone()], &[], || "S".into(), None).is_empty(), "nothing is reported twice");
         let done = row(1, "http://h/a.txt", "empty", Some(200));
-        let ev = rep.flush(&[done.clone(), row(2, "http://h/b.txt", "empty", Some(200))], &[], || "S".into());
+        let ev = rep.flush(&[done.clone(), row(2, "http://h/b.txt", "empty", Some(200))], &[], || "S".into(), None);
         let methods: Vec<&str> = ev.iter().map(|(_, e)| e["method"].as_str().unwrap()).collect();
         assert_eq!(methods, ["Network.responseReceived", "Network.loadingFinished", "Network.requestWillBeSent",
                              "Network.responseReceived", "Network.loadingFinished"]);
+    }
+
+    // A flush up to the `load`'s instant holds back what started at or after it -- request and completion alike --
+    // until a flush with no cutoff, which the load's own events precede.
+    #[test]
+    fn a_flush_before_an_instant_holds_back_what_started_after_it() {
+        let mut rep = Reporting { page_network: true, ..Default::default() };
+        let _ = rep.begin_navigation(nav());
+        let mut early = row(1, "http://h/a.txt", "empty", Some(200));
+        early.started_ms = 10.0;
+        let mut late = row(2, "http://h/b.txt", "empty", Some(200));
+        late.started_ms = 30.0;
+        let ev = rep.flush(&[early.clone(), late.clone()], &[], || "S".into(), Some(20.0));
+        let urls: Vec<&str> = ev.iter().filter_map(|(_, e)| e["params"]["request"]["url"].as_str()).collect();
+        assert_eq!((ev.len(), urls), (3, vec!["http://h/a.txt"]), "the request that started before the cutoff, whole");
+        let ev = rep.flush(&[early, late], &[], || "S".into(), None);
+        let urls: Vec<&str> = ev.iter().filter_map(|(_, e)| e["params"]["request"]["url"].as_str()).collect();
+        assert_eq!((ev.len(), urls), (3, vec!["http://h/b.txt"]), "the one held back, once the cutoff is gone");
     }
 
     // The measured Chrome shape: a dedicated worker's script is requested on the page and answered on
@@ -869,14 +893,14 @@ mod tests {
         let mut shared = row(3, "http://h/shw-fetched.txt", "empty", Some(200));
         shared.reporter.target = Some("SH".into());
         let rows = [script, own, shared];
-        let ev = rep.flush(&rows, &targets, || "CHILD".into());
+        let ev = rep.flush(&rows, &targets, || "CHILD".into(), None);
         assert_eq!(ev[0].1["method"], json!("Target.attachedToTarget"));
         assert_eq!(ev[0].1["params"]["targetInfo"]["type"], json!("worker"));
         assert_eq!(ev.len(), 2, "attach + the page's requestWillBeSent for w.js; the rest waits for Network.enable");
         assert_eq!(ev[1], (Stamp::Page, ev[1].1.clone()));
         let idx = rep.child("CHILD").unwrap();
         rep.enable_child_network(idx);
-        let ev = rep.flush(&rows, &targets, || "X".into());
+        let ev = rep.flush(&rows, &targets, || "X".into(), None);
         let got: Vec<(Stamp, &str, &str)> = ev.iter().map(|(s, e)| (s.clone(), e["method"].as_str().unwrap(), e["params"]["requestId"].as_str().unwrap())).collect();
         let child = Stamp::Session("CHILD".into());
         assert_eq!(got, [
@@ -896,9 +920,9 @@ mod tests {
         let _ = rep.begin_navigation(nav());
         let mut own = row(1, "http://h/w-fetched.txt", "empty", Some(200));
         own.reporter.target = Some("W".into());
-        assert!(rep.flush(&[own], &[worker("W", "worker")], || "S".into()).is_empty());
+        assert!(rep.flush(&[own], &[worker("W", "worker")], || "S".into(), None).is_empty());
         rep.set_auto_attach(true);
-        let _ = rep.flush(&[], &[worker("W", "worker")], || "S".into());
+        let _ = rep.flush(&[], &[worker("W", "worker")], || "S".into(), None);
         let ev = rep.begin_navigation(nav());
         assert_eq!(ev.len(), 1);
         assert_eq!(ev[0].1["method"], json!("Target.detachedFromTarget"));
@@ -1003,11 +1027,11 @@ mod tests {
         let _ = rep.begin_navigation(nav());
         let mut inflight = row(1, "http://h/f-r1", "empty", None);
         inflight.error = None;
-        assert_eq!(rep.flush(&[inflight.clone()], &[], || "S".into()).len(), 1);
+        assert_eq!(rep.flush(&[inflight.clone()], &[], || "S".into(), None).len(), 1);
         inflight.hops = vec![hop("http://h/f-r1", 307, "Temporary Redirect", "http://h/f-r2", 5.0)];
-        let ev = rep.flush(&[inflight.clone()], &[], || "S".into());
+        let ev = rep.flush(&[inflight.clone()], &[], || "S".into(), None);
         assert_eq!(ev.len(), 1);
         assert_eq!(ev[0].1["params"]["request"]["url"], json!("http://h/f-r2"));
-        assert!(rep.flush(&[inflight], &[], || "S".into()).is_empty(), "nothing is reported twice");
+        assert!(rep.flush(&[inflight], &[], || "S".into(), None).is_empty(), "nothing is reported twice");
     }
 }

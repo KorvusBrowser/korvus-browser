@@ -320,10 +320,14 @@ fn cb_do_load(scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, _r
     // handler already started a navigation -- Chrome then never reports this document's
     // `Page.loadEventFired` (measured: `onload = () => location.href = ...`).
     let during = navigation_pending(scope);
+    let now = std::time::Instant::now();
     with_fate(scope, |f| {
-        f.loaded_at = Some(std::time::Instant::now());
+        f.loaded_at = Some(now);
         f.navigated_during_load = during;
     });
+    if let Some(m) = deno_core::JsRuntime::op_state_from(scope).borrow().try_borrow::<crate::LoadMarkSlot>() {
+        m.0.set(Some(now));
+    }
     schedule_declarative_refresh(scope);
     // Lazy images near the viewport, the favicon, the manifest's icon.
     webapi::page::load_event_finished(scope);
@@ -2066,6 +2070,13 @@ impl crate::Engine {
     /// driver's own tail on every page. Chrome's own is the event's time; so is this.
     pub fn lifecycle_marks(&mut self) -> (Option<std::time::Instant>, Option<std::time::Instant>) {
         self.with_scope(|scope| with_fate(scope, |f| (f.dcl_at, f.loaded_at)))
+    }
+
+    /// Set `mark` to the instant this document's `load` event fires (the moment [`Engine::lifecycle_marks`] reports
+    /// later): a host reporting the load while it runs -- korvus-cdp's network flush, with the engine busy loading --
+    /// learns it there.
+    pub fn mark_load_in(&mut self, mark: crate::LoadMark) {
+        self.runtime.op_state().borrow_mut().put(crate::LoadMarkSlot(mark));
     }
 
     /// `beforeunload` at the window: the first step of leaving a document, before the next one is

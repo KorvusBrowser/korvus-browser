@@ -13,6 +13,11 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   is the page's own window), and `Browser.setContentsSize` and `Browser.getWindowBounds` are answered, so Puppeteer's
   `page.resize()` (chrome-devtools-mcp's `resize_page`) sizes the viewport. `Emulation.setCPUThrottlingRate` takes a
   rate that throttles nothing (1 or less) and refuses a higher one rather than ignoring it.
+- `Page.navigate` to a `data:` URL loads its document, as Chrome does (`page.goto('data:text/html,…')`); it loaded an
+  empty page.
+- What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it. It came
+  before, so a client that waits for network quiet counted from `load` on (Stagehand's `networkidle`) missed the
+  requests a `load` handler's timers start and read a page before its data had been asked for.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing

@@ -3144,6 +3144,11 @@ impl RequestLedger {
             .collect()
     }
 
+    /// `at` on the clock a row's `started_ms` is read from: milliseconds since this generation began.
+    pub fn ms_since_start(&self, at: std::time::Instant) -> f64 {
+        at.saturating_duration_since(self.inner.lock().unwrap().epoch).as_secs_f64() * 1000.0
+    }
+
     /// Every row of the current generation, in the order the requests STARTED.
     pub fn records(&self) -> Vec<RequestRecord> {
         self.inner.lock().unwrap().rows.clone()

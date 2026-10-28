@@ -172,6 +172,13 @@ struct PrintBuffer(Vec<String>);
 #[derive(Default)]
 pub(crate) struct LoadFired(pub(crate) bool);
 
+/// Where a host is told the instant the page's `load` event fired, while the load it awaits still holds the engine
+/// ([`Engine::mark_load_in`]).
+pub type LoadMark = std::rc::Rc<std::cell::Cell<Option<std::time::Instant>>>;
+
+/// The [`LoadMark`] a host gave this engine.
+pub(crate) struct LoadMarkSlot(pub(crate) LoadMark);
+
 
 
 /// Native `print` — appends to the [`PrintBuffer`] in `OpState`.

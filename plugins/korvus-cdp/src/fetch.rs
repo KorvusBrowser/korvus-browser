@@ -90,9 +90,14 @@ pub(crate) fn rep_lock(rep: &Rep) -> std::sync::MutexGuard<'_, network::Reportin
 
 /// Every `Network.*` event `rep` has not reported, each with the session it goes to (the page's: `page_session`).
 pub(crate) fn flushed_messages(rep: &Rep, page_session: Option<&str>) -> Vec<Message> {
+    flushed_messages_before(rep, page_session, None)
+}
+
+/// [`flushed_messages`] of the requests that started before `before_ms` ([`crate::network::Reporting::flush`]).
+pub(crate) fn flushed_messages_before(rep: &Rep, page_session: Option<&str>, before_ms: Option<f64>) -> Vec<Message> {
     let rows = transport::ledger().records();
     let targets = transport::ledger().targets();
-    let events = rep_lock(rep).flush(&rows, &targets, crate::ids::hex32);
+    let events = rep_lock(rep).flush(&rows, &targets, crate::ids::hex32, before_ms);
     events
         .into_iter()
         .map(|(stamp, ev)| {
