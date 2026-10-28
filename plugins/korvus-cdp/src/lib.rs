@@ -2896,18 +2896,32 @@ async fn dispatch(
             // `-32000 "execute_script failed: Error: boom\n    at cdp:Runtime.evaluate:1:7"`, which
             // was a tell twice over and unusable to every client that reads `exceptionDetails`.
             // See `engine::EvalOutcome` for Chrome's measured shape.
+            // `timeout` (ms), as Chrome 150 keeps it: the script's own run is terminated when it falls due -- a
+            // `while(true){}` with `timeout: 300` is answered `-32000 "Execution was terminated"` at 0.30 s and the
+            // page runs on -- and an awaited promise is NOT cut by it (one that settles at 1 s under `timeout: 300` is
+            // answered at 1 s). This server bounds an await by its own budget (`Deferred`); a longer `timeout`
+            // extends that budget, so a client that says how long it will wait is waited for that long.
+            let timeout_ms = params.get("timeout").and_then(Value::as_f64).filter(|t| *t > 0.0);
+            let watch = timeout_ms.map(|ms| EvalTimeout::start(ms, engine.get().isolate_interrupt()));
             let r = if await_promise {
                 // CDP awaitPromise: a promise still pending is answered when it settles, from the connection's loop
                 // (`Deferred`), which goes on answering the client's other commands meanwhile -- as Chrome does. A
                 // page that awaits something only the client can give it (a binding's answer) needs that.
                 match engine.get().eval_remote_begin_in(world, expr, rbv) {
                     engine::Awaited::Ready(outcome) => Ok(evaluate_result(engine.get(), outcome, ids, ctx)),
-                    engine::Awaited::Pending(h) => Ok(Deferred::marker(h, ctx, rbv)),
+                    engine::Awaited::Pending(h) => Ok(Deferred::marker(h, ctx, rbv, timeout_ms)),
                 }
             } else {
                 let outcome = engine.get().eval_remote_details_in(world, expr, rbv);
                 Ok(evaluate_result(engine.get(), outcome, ids, ctx))
             };
+            if watch.is_some_and(EvalTimeout::finish) {
+                engine.get().clear_termination();
+                if let Some(h) = r.as_ref().ok().and_then(|v| v.get(Deferred::KEY)).and_then(Value::as_u64) {
+                    let _ = engine.get().release_object(h as u32);
+                }
+                return (Err(RpcError::server("Execution was terminated".to_string())), vec![]);
+            }
             (r, vec![])
         }
 
@@ -2938,7 +2952,7 @@ async fn dispatch(
                 // answered when it settles, as `Runtime.evaluate`'s awaited promise is (`Deferred`)
                 let r = match engine.get().call_function_on_begin_in(in_world, &fn_decl, this_id, args, rbv) {
                     Ok(engine::Awaited::Ready(outcome)) => Ok(evaluate_result(engine.get(), outcome, ids, ctx)),
-                    Ok(engine::Awaited::Pending(h)) => Ok(Deferred::marker(h, ctx, rbv)),
+                    Ok(engine::Awaited::Pending(h)) => Ok(Deferred::marker(h, ctx, rbv, None)),
                     Err(e) => Err(RpcError::from(e)),
                 };
                 return (r, vec![]);
@@ -4397,7 +4411,8 @@ fn ua_metadata(m: &Value) -> spec::devtools::UaMetadata {
 
 /// An awaited evaluation still pending: its command's id and session, the promise's handle (`Engine::settled`), the
 /// context it ran in, `returnByValue`, and how long it may wait. Chrome waits forever; this connection waits the
-/// `awaitPromise` budget (`KORVUS_AWAIT_PROMISE_MS`) and then says so with a `-32000`.
+/// `awaitPromise` budget (`KORVUS_AWAIT_PROMISE_MS`), or the evaluation's own `timeout` when that is longer, and then
+/// says so with a `-32000`.
 struct Deferred {
     id: i64,
     session: Option<String>,
@@ -4411,15 +4426,16 @@ impl Deferred {
     /// The key `dispatch` answers a pending awaited evaluation with, for the loop to park instead of sending.
     const KEY: &'static str = "__korvus_deferred_await";
 
-    fn marker(handle: u32, ctx: i64, rbv: bool) -> Value {
-        json!({ Self::KEY: handle, "ctx": ctx, "rbv": rbv })
+    fn marker(handle: u32, ctx: i64, rbv: bool, timeout_ms: Option<f64>) -> Value {
+        json!({ Self::KEY: handle, "ctx": ctx, "rbv": rbv, "timeout": timeout_ms })
     }
 
     /// A pending evaluation, when `result` is `dispatch`'s marker for one.
     fn of(result: &Result<Value, RpcError>, id: i64, session: Option<String>) -> Option<Deferred> {
         let v = result.as_ref().ok()?;
         let handle = v.get(Self::KEY)?.as_u64()? as u32;
-        let budget = std::time::Duration::from_millis(env_ms("KORVUS_AWAIT_PROMISE_MS", AWAIT_PROMISE_MS_DEFAULT));
+        let asked = v.get("timeout").and_then(Value::as_f64).map(|ms| ms as u64).unwrap_or(0);
+        let budget = std::time::Duration::from_millis(env_ms("KORVUS_AWAIT_PROMISE_MS", AWAIT_PROMISE_MS_DEFAULT).max(asked));
         Some(Deferred {
             id,
             session,
@@ -4428,6 +4444,38 @@ impl Deferred {
             rbv: v.get("rbv").and_then(Value::as_bool).unwrap_or(false),
             until: std::time::Instant::now() + budget,
         })
+    }
+}
+
+/// `Runtime.evaluate`'s `timeout` over the script's own run: a thread of its own terminates the isolate's execution
+/// when the timeout falls due -- a script that never yields cannot be stopped from the thread it runs on.
+struct EvalTimeout {
+    stop: std::sync::mpsc::Sender<()>,
+    fired: std::sync::Arc<std::sync::atomic::AtomicBool>,
+    thread: std::thread::JoinHandle<()>,
+}
+
+impl EvalTimeout {
+    fn start(ms: f64, interrupt: engine::IsolateInterrupt) -> EvalTimeout {
+        let (stop, stopped) = std::sync::mpsc::channel::<()>();
+        let fired = std::sync::Arc::new(std::sync::atomic::AtomicBool::new(false));
+        let flag = fired.clone();
+        let due = std::time::Duration::from_secs_f64(ms / 1000.0);
+        let thread = std::thread::spawn(move || {
+            if let Err(std::sync::mpsc::RecvTimeoutError::Timeout) = stopped.recv_timeout(due) {
+                flag.store(true, std::sync::atomic::Ordering::SeqCst);
+                interrupt.terminate();
+            }
+        });
+        EvalTimeout { stop, fired, thread }
+    }
+
+    /// The run is over: stop the timer and say whether it terminated the run, in which case the isolate's termination
+    /// is still pending (`Engine::clear_termination`). Joined first, so no termination can land after this returns.
+    fn finish(self) -> bool {
+        let _ = self.stop.send(());
+        let _ = self.thread.join();
+        self.fired.load(std::sync::atomic::Ordering::SeqCst)
     }
 }
 
@@ -4656,5 +4704,25 @@ mod io_stream_tests {
         assert_eq!(super::io_streams::read(&h, Some(0), 4), Some((b"%PDF".to_vec(), false)), "an offset reads from there");
         assert!(super::io_streams::close(&h));
         assert!(super::io_streams::read(&h, None, 1).is_none(), "a closed stream is gone");
+    }
+}
+
+#[cfg(test)]
+mod deferred_tests {
+    use super::*;
+
+    /// An awaited evaluation waits the connection's budget, or the evaluation's own `timeout` when that is longer --
+    /// never less than the budget, since Chrome waits an awaited promise out whatever `timeout` says.
+    #[test]
+    fn an_await_waits_the_budget_or_a_longer_timeout() {
+        let budget = std::time::Duration::from_millis(env_ms("KORVUS_AWAIT_PROMISE_MS", AWAIT_PROMISE_MS_DEFAULT));
+        let wait = |timeout: Option<f64>| {
+            let d = Deferred::of(&Ok(Deferred::marker(1, 3, false, timeout)), 7, None).expect("a pending evaluation");
+            d.until.saturating_duration_since(std::time::Instant::now())
+        };
+        let near = |got: std::time::Duration, want: std::time::Duration| got <= want && want - got < std::time::Duration::from_secs(1);
+        assert!(near(wait(None), budget));
+        assert!(near(wait(Some(300.0)), budget), "a shorter timeout does not cut the await");
+        assert!(near(wait(Some(120_000.0)), std::time::Duration::from_secs(120).max(budget)));
     }
 }

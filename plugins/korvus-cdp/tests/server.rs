@@ -1217,3 +1217,34 @@ async fn a_throwing_evaluate_answers_chromes_exception_details() {
     };
     tokio::join!(server, client).0.unwrap();
 }
+
+/// `Runtime.evaluate`'s `timeout`, as stock Chrome 150.0.7871.46 keeps it (`--headless=new`, 2026-10-28): the script's
+/// own run is terminated when it falls due -- `while(true){}` under `timeout: 300` is answered `-32000 "Execution was
+/// terminated"` at 0.30 s, and the page answers the next evaluation as ever -- and an awaited promise is not cut by it:
+/// one that settles at 1 s under `timeout: 300` is answered `done` at 1 s. It was ignored, and a script that never
+/// yielded held the page forever.
+#[tokio::test]
+async fn an_evaluate_timeout_ends_the_script_and_not_its_await() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async {
+        let mut ws = connect_cdp(addr).await;
+        let t = std::time::Instant::now();
+        let r = call_full(&mut ws, 1, "Runtime.evaluate", json!({ "expression": "while(true){}", "timeout": 300 })).await;
+        assert_eq!(r["error"]["code"], -32000, "{r}");
+        assert_eq!(r["error"]["message"], "Execution was terminated", "{r}");
+        assert!(t.elapsed() < std::time::Duration::from_secs(5), "terminated at its timeout, not later: {:?}", t.elapsed());
+        let r = call(&mut ws, 2, "Runtime.evaluate", json!({ "expression": "1+1", "returnByValue": true })).await;
+        assert_eq!(r["result"]["value"], 2, "the page runs on after a terminated evaluation: {r}");
+        let r = call_full(&mut ws, 3, "Runtime.evaluate", json!({
+            "expression": "new Promise(r=>setTimeout(()=>r('done'),1000))", "awaitPromise": true, "timeout": 300, "returnByValue": true,
+        })).await;
+        assert_eq!(r["result"]["result"]["value"], "done", "an await outlives a shorter timeout: {r}");
+        let r = call_full(&mut ws, 4, "Runtime.evaluate", json!({ "expression": "'fast'", "timeout": 300, "returnByValue": true })).await;
+        assert_eq!(r["result"]["result"]["value"], "fast", "a run within its timeout is answered as ever: {r}");
+        ws.send(Message::Close(None)).await.unwrap();
+    };
+    tokio::join!(server, client).0.unwrap();
+}
