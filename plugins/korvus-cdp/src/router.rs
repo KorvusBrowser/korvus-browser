@@ -308,6 +308,15 @@ fn context_info(spec: &ContextSpec, exit_ip: String) -> plugin_host::ContextInfo
     }
 }
 
+/// Why a loaded plugin refuses to make this context (`refuse_context`): what it would wear is not coherent -- e.g. a
+/// proxy whose exit the persona's zone and locale cannot follow. `None` to make it.
+pub fn refused(spec: &ContextSpec) -> Option<String> {
+    if !plugin_host::any() {
+        return None;
+    }
+    plugin_host::refusal(&context_info(spec, String::new()))
+}
+
 /// Ask the loaded plugins' answer slots about a new context: rotation (its seed and stable name), then device (the
 /// machine it presents, for that seed), then identity (its whole persona document, given that device). `None` when no
 /// plugin answers any of them. Also how a process that is its own one context (`korvus fetch`, `serve`) finds the
@@ -1337,6 +1346,9 @@ impl Browser {
                 let bypass = spec.proxy.as_ref().and_then(|p| p.bypass.clone());
                 spec.proxy = Some(ProxySpec { server, bypass });
             }
+        }
+        if let Some(why) = refused(&spec) {
+            anyhow::bail!("{why}");
         }
         spec.drawn = drawn(&spec);
         self.store.open(&id);

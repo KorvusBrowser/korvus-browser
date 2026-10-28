@@ -1,6 +1,6 @@
 //! Goal 1020 invariants I5 and I6. The engine holds none of the persona layer -- no rotation, device pool, persona OS
 //! map, IP database or readback noise -- outside the korvus-stealth plugin (D12), and korvus-stealth's source never
-//! enters `korvus/public/`, the tree mirrored to the public repository (D18).
+//! enters the engine's tree, which is published as it is (D18; the engine's own repository since D134).
 //!
 //! A grep, deliberately: the layer is a set of names (the noise and its seed, the pool and its file, the OS map), and a
 //! name that comes back into an engine crate is how the layer comes back. `KORVUS_LAYER_ROOT` points the check at
@@ -82,27 +82,43 @@ fn the_engine_holds_none_of_the_persona_layer() {
     assert!(found.is_empty(), "the persona layer is korvus-stealth's (I5), and the engine holds {}:\n{}", found.len(), found.join("\n"));
 }
 
+/// korvus-stealth beside the engine (`korvus/stealth` in the private repository, D138) carries the marker on every
+/// source, and no file of the engine's tree does (I6). A clone of the engine alone has no korvus-stealth beside it, and
+/// only the second half is asked of it.
 #[test]
 fn korvus_stealth_s_source_stays_out_of_the_public_tree() {
     let root = root();
-    let stealth = root.join("plugins/korvus-stealth");
-    let mut theirs = Vec::new();
-    files(&stealth, &mut theirs);
-    theirs.retain(|p| p.extension().is_some_and(|e| e == "rs" || e == "toml"));
-    assert!(!theirs.is_empty(), "korvus-stealth's sources under {}", stealth.display());
-    for p in &theirs {
-        let text = std::fs::read_to_string(p).unwrap();
-        assert!(text.contains(MARKER), "{} does not carry the private-source marker", p.display());
+    let stealth = root.join("../stealth");
+    if stealth.is_dir() {
+        let mut theirs = Vec::new();
+        files(&stealth, &mut theirs);
+        theirs.retain(|p| p.extension().is_some_and(|e| e == "rs" || e == "toml"));
+        assert!(!theirs.is_empty(), "korvus-stealth's sources under {}", stealth.display());
+        for p in &theirs {
+            let text = std::fs::read_to_string(p).unwrap();
+            assert!(text.contains(MARKER), "{} does not carry the private-source marker", p.display());
+        }
     }
+    // the engine's own files: what it vendors or builds is not where a source of its could land
     let mut public = Vec::new();
-    files(&root.join("public"), &mut public);
-    assert!(!public.is_empty(), "the public tree");
+    for e in std::fs::read_dir(&root).unwrap().flatten() {
+        let name = e.file_name();
+        if e.path().is_dir() {
+            if !["target", "vendor", "third_party", ".git", "node_modules"].iter().any(|n| name == *n) {
+                files(&e.path(), &mut public);
+            }
+        } else {
+            public.push(e.path());
+        }
+    }
+    assert!(public.iter().any(|p| p.ends_with("korvus_plugin.h")), "the engine's tree at {}", root.display());
     let leaked: Vec<String> = public
         .iter()
+        .filter(|p| !p.ends_with("korvus-runtime/tests/persona_layer.rs"))
         .filter(|p| std::fs::read(p).is_ok_and(|b| String::from_utf8_lossy(&b).contains(MARKER)))
         .map(|p| p.display().to_string())
         .collect();
-    assert!(leaked.is_empty(), "korvus-stealth's source in korvus/public/ (I6): {leaked:?}");
+    assert!(leaked.is_empty(), "korvus-stealth's source in the engine's tree (I6): {leaked:?}");
 }
 
 #[test]

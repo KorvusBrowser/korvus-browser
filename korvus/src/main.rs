@@ -42,6 +42,8 @@ async fn main() -> anyhow::Result<()> {
     if let Ok(exe) = std::env::current_exe() {
         render::gpu::use_service_process(exe);
     }
+    // korvus's own GET for a plugin's `download` (ABI 5): what a plugin installs at `korvus setup`
+    plugin_host::set_downloader(download_to);
     // `--persona <folder>` plugs in the persona this run wears (`persona::CapturedPersona::plugged_in`), anywhere on
     // the command line: as `KORVUS_PERSONA_DIR`, so the page and frame processes this binary starts wear it too.
     let mut argv: Vec<String> = std::env::args().collect();
@@ -136,7 +138,27 @@ async fn main() -> anyhow::Result<()> {
             println!("korvus {VERSION}");
             std::process::exit(0);
         }
-        "setup" => std::process::exit(cli::setup(&argv[2..])),
+        // config.toml's answers, then each plugin they load installs what it needs (`setup`, ABI 5)
+        // `--plugins`: the plugins' part alone, config.toml kept as it is (the installer's, over an existing install)
+        "setup" => {
+            let plugins_only = argv.iter().any(|a| a == "--plugins");
+            let code = if plugins_only { 0 } else { cli::setup(&argv[2..]) };
+            if code != 0 || argv.iter().any(|a| a == "--no-plugins") {
+                std::process::exit(code);
+            }
+            let s = resolve(&flags);
+            let mut list = s.plugins.clone();
+            if s.identity == "stealth" {
+                // a build without the stealth library (from the public source) has nothing of it to set up
+                match stealth_library() {
+                    Ok(lib) => list.insert(0, format!("{lib}:{}", s.stealth_config())),
+                    Err(e) => eprintln!("korvus: {e}"),
+                }
+            }
+            load_plugins(None, list);
+            let ready = settings::home().is_some_and(|home| plugin_host::setup(&home));
+            std::process::exit(if ready { 0 } else { 1 });
+        }
         "update" => std::process::exit(update::update_command(&argv[2..])),
         "stats" => std::process::exit(cli::stats(&argv[2..])),
         "persona" => std::process::exit(cli::persona(&argv[2..])),
@@ -205,6 +227,9 @@ async fn main() -> anyhow::Result<()> {
                     // context's
                     let proxy = s.proxy.clone().map(|server| cdp::router::ProxySpec { server, bypass: None });
                     let own = cdp::router::ContextSpec { proxy, timezone: s.timezone.clone(), locale: s.locale.clone(), ..own };
+                    if let Some(why) = cdp::router::refused(&own) {
+                        exit_with(&why);
+                    }
                     apply_context(&own);
                     own
                 };
@@ -1021,6 +1046,19 @@ fn read_or_exit(path: &str) -> String {
 
 /// Calls the plugins' `shutdown` as `main` returns.
 struct PluginsDown;
+
+/// A plugin's `download` (ABI 5): `url` into `path`, written whole (through a `.partial` beside it) and only for a 200.
+fn download_to(url: &str, path: &std::path::Path, within: std::time::Duration) -> Result<u16, String> {
+    let (status, body) = transport::http_request("GET", url, &[], None, None, within)?;
+    if status == 200 {
+        if let Some(dir) = path.parent().filter(|d| !d.as_os_str().is_empty()) {
+            std::fs::create_dir_all(dir).map_err(|e| format!("{}: {e}", dir.display()))?;
+        }
+        let partial = path.with_extension("partial");
+        std::fs::write(&partial, &body).and_then(|()| std::fs::rename(&partial, path)).map_err(|e| format!("{}: {e}", path.display()))?;
+    }
+    Ok(status)
+}
 
 /// End the process with `result`, as returning it from `main` would -- the plugins' `shutdown`, the error printed as
 /// `main` prints one, exit status 1 -- without the runtime's teardown, which waits for every task still running.

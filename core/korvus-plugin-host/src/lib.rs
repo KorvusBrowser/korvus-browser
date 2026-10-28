@@ -37,8 +37,10 @@ use std::sync::{Arc, Mutex, OnceLock, RwLock};
 /// `req_hold_id` / `resume_request` / `modify_and_resume` host calls -- D7 async on_request hold, with the new
 /// `KORVUS_HOLD` verdict -- and the `cache_get` / `cache_put` plugin slots -- D10 a plugin-backed response cache).
 /// 4 (D110) adds the `return_json` / `call_stack` host calls, so an `on_call` tracer reads a claimed member's whole
-/// call -- its return value as JSON and the JS stack it was called from -- not only a per-member tally.
-pub const ABI: u32 = 4;
+/// call -- its return value as JSON and the JS stack it was called from -- not only a per-member tally. 5 adds the
+/// `download` host call and the `setup` / `refuse_context` plugin slots: a plugin installs what it needs at `korvus
+/// setup`, and refuses a context it cannot serve coherently, with the engine knowing nothing of what either is.
+pub const ABI: u32 = 5;
 
 pub const READBACK_CANVAS: i32 = 0;
 pub const READBACK_WEBGL: i32 = 1;
@@ -268,6 +270,9 @@ pub struct KorvusHost {
     // offset and a host built before ABI 4 zero-fills these, so a plugin checks `host->abi >= 4` before calling them.
     pub return_json: unsafe extern "C" fn(CallPtr, *mut c_char, usize) -> usize,
     pub call_stack: unsafe extern "C" fn(CallPtr, c_int, *mut c_char, usize) -> usize,
+    // ABI 5: korvus's own GET of `url` into the file `path`, at most `timeout_ms`; the HTTP status, 0 for no answer,
+    // and why into `err` (see [`set_downloader`]).
+    pub download: unsafe extern "C" fn(*const c_char, *const c_char, u32, *mut c_char, usize) -> c_int,
 }
 
 type RotationFn = unsafe extern "C" fn(*mut c_void, *const KorvusContextInfo, *mut u64, *mut c_char, usize) -> c_int;
@@ -288,6 +293,9 @@ type KindsFn = unsafe extern "C" fn(*mut c_void) -> u32;
 type OnCdpCallFn = unsafe extern "C" fn(*mut c_void, *const c_char, *const c_char) -> *const c_char;
 // ABI 3 (wave 1).
 type OnCallPreFn = unsafe extern "C" fn(*mut c_void, CallPtr) -> c_int;
+// ABI 5.
+type SetupFn = unsafe extern "C" fn(*mut c_void, *const c_char) -> c_int;
+type RefuseContextFn = unsafe extern "C" fn(*mut c_void, *const KorvusContextInfo) -> *const c_char;
 type VerifyCertFn = unsafe extern "C" fn(*mut c_void, *const c_char, *const c_char) -> c_int;
 type InitScriptFn = unsafe extern "C" fn(*mut c_void, c_int) -> *const c_char;
 type OnFrameFn = unsafe extern "C" fn(*mut c_void, *const KorvusFrame);
@@ -400,6 +408,9 @@ pub struct KorvusPlugin {
     /// ABI 3 (WebExtension message bus, P1b): a binding call that RETURNS a response string (unlike the void
     /// `on_binding`), so a bound global's call -- e.g. chrome.runtime.sendMessage -- resolves to the plugin's answer.
     pub on_binding_call: Option<OnBindingCallFn>,
+    /// ABI 5: what `korvus setup` asks of the plugin, and a new context it refuses.
+    pub setup: Option<SetupFn>,
+    pub refuse_context: Option<RefuseContextFn>,
 }
 
 /// An ABI-1 descriptor's size: the fields up to `shutdown`. A plugin built against that header is loaded, its later
@@ -589,6 +600,12 @@ impl Loaded {
         }
         if d.cache_get.is_some() || d.cache_put.is_some() {
             s.push("cache");
+        }
+        if d.setup.is_some() {
+            s.push("setup");
+        }
+        if d.refuse_context.is_some() {
+            s.push("refuse");
         }
         s
     }
@@ -1941,8 +1958,83 @@ fn host_table() -> &'static KorvusHost {
         spawn_background: h_spawn_background,
         return_json: h_return_json,
         call_stack: h_call_stack,
+        download: h_download,
     };
     &HOST
+}
+
+// ── ABI 5: setup, a refused context, and korvus's own download ──────────────────────────────────────────────
+
+/// What fetches a URL into a file for `download`: korvus's own HTTP request, which this crate has no transport for.
+/// `Ok(status)` (the file written only for a 200), or why there was no answer.
+pub type Downloader = fn(url: &str, path: &Path, within: std::time::Duration) -> Result<u16, String>;
+
+static DOWNLOADER: OnceLock<Downloader> = OnceLock::new();
+
+/// Install the [`Downloader`] the `download` host call runs (the binary does, before it loads a plugin).
+pub fn set_downloader(f: Downloader) {
+    let _ = DOWNLOADER.set(f);
+}
+
+unsafe extern "C" fn h_download(url: *const c_char, path: *const c_char, timeout_ms: u32, err: *mut c_char, cap: usize) -> c_int {
+    let say = |why: &str| {
+        if !err.is_null() && cap > 0 {
+            let mut n = why.len().min(cap - 1);
+            while n > 0 && !why.is_char_boundary(n) {
+                n -= 1;
+            }
+            std::ptr::copy_nonoverlapping(why.as_ptr(), err as *mut u8, n);
+            *err.add(n) = 0;
+        }
+    };
+    let (Some(url), Some(path)) = (cstr(url), cstr(path)) else {
+        say("no url or path");
+        return 0;
+    };
+    let Some(f) = DOWNLOADER.get() else {
+        say("this process makes no downloads");
+        return 0;
+    };
+    match f(url, Path::new(path), std::time::Duration::from_millis(u64::from(timeout_ms))) {
+        Ok(status) => {
+            if status != 200 {
+                say(&format!("{url}: {status}"));
+            }
+            c_int::from(status)
+        }
+        Err(e) => {
+            say(&e);
+            0
+        }
+    }
+}
+
+/// `korvus setup`: ask every loaded plugin with `setup` to install what it needs under `home`, in load order. `true`
+/// when each one has what it needs.
+pub fn setup(home: &Path) -> bool {
+    let h = CString::new(home.to_string_lossy().as_bytes()).unwrap_or_default();
+    let mut ok = true;
+    for p in loaded() {
+        if let Some(f) = p.desc.setup {
+            // SAFETY: the plugin's own callback with its own self; `h` lives across the call.
+            ok &= unsafe { f(p.desc.self_, h.as_ptr()) } == 0;
+        }
+    }
+    ok
+}
+
+/// Why a new context must not be made, when a loaded plugin refuses it (`refuse_context`); `None` to make it.
+pub fn refusal(i: &ContextInfo) -> Option<String> {
+    let c = info_c(i);
+    for p in loaded() {
+        let Some(f) = p.desc.refuse_context else { continue };
+        // SAFETY: as `identity`.
+        let s = unsafe { f(p.desc.self_, &c.info) };
+        if let Some(why) = take_string(&p, s) {
+            return Some(why);
+        }
+    }
+    None
 }
 
 // ── the plugin trace (debug) ─────────────────────────────────────────────────────────────────────
@@ -3157,6 +3249,31 @@ mod tests {
         assert_eq!(got, "\"hél"); // 5 bytes: ", h, é(2), l -- all whole
         // a script the executor does not answer yields 0
         assert_eq!(unsafe { h_page_eval(std::ptr::null(), c"1+1".as_ptr(), std::ptr::null_mut(), 0) }, 0);
+    }
+
+    #[test]
+    fn a_download_runs_through_the_installed_downloader_and_says_why_it_failed() {
+        fn fake(url: &str, path: &Path, _within: std::time::Duration) -> Result<u16, String> {
+            match url {
+                "https://ok/" => std::fs::write(path, b"x").map(|()| 200).map_err(|e| e.to_string()),
+                "https://gone/" => Ok(404),
+                _ => Err("no answer from the fake".into()),
+            }
+        }
+        set_downloader(fake);
+        let path = std::env::temp_dir().join(format!("korvus-download-{}", std::process::id()));
+        let p = CString::new(path.to_string_lossy().as_bytes()).unwrap();
+        let mut err = vec![0 as c_char; 64];
+        let get = |url: &CStr, err: &mut Vec<c_char>| unsafe { h_download(url.as_ptr(), p.as_ptr(), 1000, err.as_mut_ptr(), err.len()) };
+        assert_eq!(get(c"https://ok/", &mut err), 200);
+        assert_eq!(std::fs::read(&path).unwrap(), b"x");
+        assert_eq!(get(c"https://gone/", &mut err), 404);
+        assert_eq!(unsafe { CStr::from_ptr(err.as_ptr()) }.to_str().unwrap(), "https://gone/: 404");
+        // no answer: 0, and the reason cut to the buffer, NUL-terminated
+        let mut short = vec![0 as c_char; 8];
+        assert_eq!(get(c"https://down/", &mut short), 0);
+        assert_eq!(unsafe { CStr::from_ptr(short.as_ptr()) }.to_str().unwrap(), "no answ");
+        let _ = std::fs::remove_file(&path);
     }
 
     #[test]

@@ -63,7 +63,14 @@ document. The settings' flags (`korvus serve --help`) apply.
 "
         .into(),
         "probe" => "usage: korvus probe <url>\n\nLoad a page and report how far its scripts got: uncaught errors, console output, challenge markers, cookies.\n".into(),
-        "setup" => "usage: korvus setup [--non-interactive]\n\nAsk two questions (stealth by default? a new persona per session?) and write the answers to config.toml.\n".into(),
+        "setup" => "\
+usage: korvus setup [--non-interactive] [--no-plugins | --plugins]
+
+Ask two questions (stealth by default? a new persona per session?) and write the answers to config.toml, then have
+each plugin those answers load install what it needs (the stealth identity's data); --no-plugins skips that, and
+--plugins does only that, config.toml kept as it is.
+"
+        .into(),
         "update" => "usage: korvus update [--check]\n\nInstall the latest release if it is newer; --check only says whether there is one.\n".into(),
         "stats" => "usage: korvus stats [--port N]\n\nThe active sessions of the `korvus serve` on this port (9222).\n".into(),
         "persona" => "\

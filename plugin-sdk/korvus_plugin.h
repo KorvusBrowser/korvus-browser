@@ -76,7 +76,11 @@ extern "C" {
 //          member's whole call at on_call (its return value as JSON, and the JS stack it was called from), so a
 //          tracer plugin records args + result + stack rather than only a per-member tally. A host built before
 //          ABI 4 does not carry them, so check `host->abi >= 4` before calling them.
-#define KORVUS_PLUGIN_ABI 4u
+//   ABI 5: KorvusHost.download, appended at the end of KorvusHost -- korvus's own GET of a URL into a file, for what
+//          a plugin needs installed (a database, a model); and KorvusPlugin's setup (what `korvus setup` asks of each
+//          loaded plugin) and refuse_context (a new context the plugin cannot serve, refused with its reason),
+//          appended at the end of KorvusPlugin. Check `host->abi >= 5` before calling download.
+#define KORVUS_PLUGIN_ABI 5u
 
 // The realm a call is made from.
 #define KORVUS_REALM_PAGE 0
@@ -464,6 +468,13 @@ typedef struct KorvusHost {
   //                0 when there is no stack. depth <= 0 is treated as 1.
   size_t (*return_json)(KorvusCall*, char* buf, size_t cap);
   size_t (*call_stack)(KorvusCall*, int depth, char* buf, size_t cap);
+
+  // ── ABI 5 ──
+  // GET `url` into the file at `path` (written whole or not at all), korvus's own request: no persona, no proxy, no
+  // page. Waits at most `timeout_ms`, so call it from setup or a thread of your own, never from a page's callback.
+  // Returns the HTTP status (the file is written only for a 200), or 0 when there was no answer; why it failed goes to
+  // err[0..cap), NUL-terminated and cut to fit. Present only when host->abi >= 5.
+  int (*download)(const char* url, const char* path, uint32_t timeout_ms, char* err, size_t cap);
 } KorvusHost;
 
 // What a plugin is, returned by `korvus_plugin_init`. Every callback is optional.
@@ -699,6 +710,16 @@ typedef struct KorvusPlugin {
   // that answers non-NULL wins; return NULL to pass (korvus then falls back to the void on_binding). Runs on the
   // page's thread, so answer inline without blocking.
   const char* (*on_binding_call)(void* self, const char* name, const char* payload);
+
+  // ── ABI 5 ──
+  // `korvus setup`, after it wrote config.toml: install what this plugin needs to run, under `home` (korvus's home
+  // directory, `~/.korvus` or $KORVUS_HOME). Return 0 when what it needs is there, non-zero when it is not (say why
+  // with host->log). Every loaded plugin with setup is asked, in load order; host->download fetches a file.
+  int (*setup)(void* self, const char* home);
+  // A new context, before its identity is drawn: return NULL to let it be made, or why it must not be (freed via
+  // free_string) -- what the plugin would give it is not coherent, and a client is better told so than served it.
+  // `ctx->exit_ip` is not yet known (""). Every plugin with refuse_context is asked; the first refusal is the answer.
+  const char* (*refuse_context)(void* self, const KorvusContextInfo* ctx);
 } KorvusPlugin;
 
 #if defined(_WIN32)

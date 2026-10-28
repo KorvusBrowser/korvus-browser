@@ -212,6 +212,36 @@ teardown and reuse:
 Treat the blob as opaque — store it keyed by `ctx->name` (or `ctx->context_id`) and hand the same bytes back on the
 next `storage_load` for that persona.
 
+## ABI 5: what a plugin installs, and a context it refuses
+
+A plugin that needs a file to run (a database, a model) installs it itself, and one that cannot serve a context
+coherently says so instead of serving it:
+
+- `setup(self, home)` — `korvus setup` asks each loaded plugin that fills it, in load order, after config.toml is
+  written (`korvus setup --plugins` asks only this, keeping config.toml; the installers run it on every install and
+  update). `home` is korvus's home directory (`~/.korvus`, or `$KORVUS_HOME`): install under it. Return 0 when what
+  the plugin needs is there, non-zero when it is not, and say why with `host->log`.
+- `host->download(url, path, timeout_ms, err, cap)` — korvus's own GET of `url` into the file `path`, written whole or
+  not at all, and only for a 200: no persona, no proxy, no page. It returns the HTTP status, or 0 for no answer, with
+  why it failed in `err[0..cap)`. It blocks for up to `timeout_ms`, so call it from `setup` or a thread of your own,
+  never from a page's callback. Check `host->abi >= 5` first.
+- `refuse_context(self, ctx)` — a new context, before its identity is drawn (`ctx->exit_ip` is `""`, not yet known).
+  Return NULL to let it be made, or the reason it must not be (freed via `free_string`): a `Target.createBrowserContext`
+  then fails with it, a one-shot run ends with it, and `korvus serve` does not start when its own default context is
+  refused. Every plugin that fills it is asked; the first refusal is the answer.
+
+```c
+// the file this plugin reads, installed at `korvus setup`; a context is refused while it is missing
+static int setup(void* self, const char* home) {
+  char path[4096], err[512];
+  snprintf(path, sizeof path, "%s/example/data.bin", home);
+  if (gHost->abi < 5) return 1;
+  if (gHost->download("https://example.com/data.bin", path, 60000, err, sizeof err) == 200) return 0;
+  gHost->log(KORVUS_LOG_WARN, err);
+  return 1;
+}
+```
+
 ## Debugging a plugin
 
 - **Trace the slots.** Set `KORVUS_PLUGIN_TRACE=1` in korvus's environment and korvus logs one stderr line each

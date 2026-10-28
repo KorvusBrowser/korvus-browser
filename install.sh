@@ -229,11 +229,15 @@ korvus_install() {
   korvus_add_path "$home/current"
   if [ -e "${KORVUS_CONFIG:-$home/config.toml}" ]; then
     korvus_ok Settings "kept ($(korvus_tilde "${KORVUS_CONFIG:-$home/config.toml}")); \`korvus setup\` changes them"
+    # what the plugins it loads need, which a release may have added
+    KORVUS_HOME=$home "$home/current/korvus" setup --plugins </dev/null ||
+      korvus_warn "korvus is installed; run \`korvus setup --plugins\` to finish"
   elif korvus_can_prompt; then
     korvus_step Setup "two questions, written to $(korvus_tilde "$home/config.toml")"
-    KORVUS_HOME=$home "$home/current/korvus" setup </dev/tty
+    KORVUS_HOME=$home "$home/current/korvus" setup </dev/tty || korvus_warn "korvus is installed; run \`korvus setup\` to finish"
   else
-    KORVUS_HOME=$home "$home/current/korvus" setup --non-interactive </dev/null
+    KORVUS_HOME=$home "$home/current/korvus" setup --non-interactive </dev/null ||
+      korvus_warn "korvus is installed; run \`korvus setup\` to finish"
   fi
   printf '\n%s%skorvus %s is ready.%s\n' "$K_B" "$K_G" "$version" "$K_0" >&2
   # shellcheck disable=SC2016  # $PATH is literal: it is the line the user pastes into their own shell

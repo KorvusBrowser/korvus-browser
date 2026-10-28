@@ -187,6 +187,9 @@ function Install-Korvus {
     $config = if ($env:KORVUS_CONFIG) { $env:KORVUS_CONFIG } else { Join-Path $root 'config.toml' }
     if (Test-Path -LiteralPath $config) {
       script:Ok 'Settings' "kept ($(script:Tilde $config)); ``korvus setup`` changes them"
+      # what the plugins it loads need, which a release may have added
+      & $exe setup --plugins
+      if ($LASTEXITCODE -ne 0) { script:Warn 'korvus is installed; run "korvus setup --plugins" to finish' }
     } else {
       $interactive = (-not [Console]::IsInputRedirected) -and (-not [Console]::IsOutputRedirected) `
         -and (-not $env:CI) -and ($env:KORVUS_NO_PROMPT -ne '1')
