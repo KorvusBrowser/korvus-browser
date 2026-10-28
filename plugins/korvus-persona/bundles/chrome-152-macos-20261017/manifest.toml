@@ -120,6 +120,13 @@ quic = "chrome_150"
 trust_anchors = "00cc08839a648c9b2d010804d679090704d679090d04d679090108839a648c9b2d010904d679090608839a648c9b2d010a0582df13021404d67909090582df13020104d679090b04d679090508839a648c9b2d010b04d679090808839a648c9b2d011204d679090a0582df1302060582df13021304d679090404d679090f08839a648c9b2d011308839a648c9b2d010c0582df13021204d679090304d679090c08839a648c9b2d01070582df13020f08839a648c9b2d010d0582df13020e04d679090e04d67909020582df13020d"
 
 [[known_incoherence]]
+id = "values-chrome-for-testing"
+layers = "capture <-> values (brands, speech voices)"
+detail = "The capture is Chrome for Testing 152.0.7977.82 (`korvus-mac-capture.yml`), which is Chromium under Google's name: its `userAgentData` lists two brands, `Not?A_Brand` and `Chromium`, and `speechSynthesis` none of Google's remote voices -- while its user agent, as every Chrome's, says `Chrome/152`. Worn as Google Chrome, the page read `Not?A_Brand/24|Chromium/152` and every request said so in `sec-ch-ua`. values.json carries Google Chrome 152.0.7977.82's for those fields instead: `brands`, `highEntropy.brands` and `fullVersionList` as Chromium's `GenerateBrandVersionList` orders three brands for major 152 (152 % 6 = 2: `Chromium`, `Not?A_Brand`, `Google Chrome`), which is what the Linux and Windows captures of the same build recorded; and Google's nineteen remote voices after the platform's own, none the default, as the Windows capture lists them after its Microsoft voices. Every other value is this capture's."
+why = "No Google Chrome 152 is left to capture on macOS: Google publishes no past stable builds, and Chrome for Testing is the one 152 it keeps. The two fields are the product's, not the platform's -- the same in every desktop Google Chrome 152 -- so they are carried at the family's measured value, as `[transport]` is."
+fix = "Capture macOS from Google Chrome itself at the next milestone (the workflow downloads Chrome for Testing), and check its brand list and voices against these before promoting."
+
+[[known_incoherence]]
 id = "ua-stylesheet-inherited"
 layers = "capture <-> ua-stylesheet"
 detail = "The `ua-stylesheet` artifact was not re-recorded by this promotion; it is still the one the previous bundle used, from a different session."

@@ -1403,6 +1403,38 @@ mod plugin_tests {
         let _ = std::fs::remove_dir_all(&dir);
     }
 
+    /// Every shipped bundle that is Google Chrome says so where Google Chrome does: `Google Chrome` at the user agent's
+    /// version in `userAgentData`'s three brand lists (what `sec-ch-ua` sends), and Google's remote voices. The macOS
+    /// bundle was captured from Chrome for Testing, which lists neither, and a page read `Not?A_Brand/24|Chromium/152`
+    /// beside a user agent that says `Chrome/152`.
+    #[test]
+    fn a_chrome_bundle_lists_google_chrome_as_chrome_does() {
+        let bundles = Path::new(env!("CARGO_MANIFEST_DIR")).join("bundles");
+        let mut seen = 0;
+        for dir in std::fs::read_dir(&bundles).unwrap().flatten().map(|e| e.path()).filter(|p| p.join("manifest.toml").is_file()) {
+            let manifest = Bundle::parse(&std::fs::read_to_string(dir.join("manifest.toml")).unwrap()).unwrap();
+            if manifest.capture.browser != "chrome" {
+                continue;
+            }
+            seen += 1;
+            let v: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(dir.join("values.json")).unwrap()).unwrap();
+            let ua = v.pointer("/nav/userAgent").and_then(|u| u.as_str()).unwrap();
+            let major = ua.split("Chrome/").nth(1).and_then(|r| r.split('.').next()).unwrap();
+            let full = v.pointer("/nav/userAgentData/highEntropy/uaFullVersion").and_then(|u| u.as_str()).unwrap();
+            for (list, version) in [("/nav/userAgentData/brands", major), ("/nav/userAgentData/highEntropy/brands", major), ("/nav/userAgentData/highEntropy/fullVersionList", full)] {
+                let brands = v.pointer(list).and_then(|l| l.as_array()).unwrap();
+                assert!(
+                    brands.iter().any(|b| b["brand"] == "Google Chrome" && b["version"] == version),
+                    "{}: {list} lists no Google Chrome {version}: {brands:?}",
+                    dir.display()
+                );
+            }
+            let voices = v.pointer("/speech/voices").and_then(|l| l.as_array()).unwrap();
+            assert!(voices.iter().any(|x| x["name"] == "Google US English" && x["localService"] == false), "{}: no Google voices", dir.display());
+        }
+        assert!(seen >= 3, "the Linux, macOS and Windows bundles: {seen}");
+    }
+
     /// A real Windows persona bundle in this checkout, for the selection tests.
     fn a_windows_bundle_dir() -> std::path::PathBuf {
         let bundles = Path::new(env!("CARGO_MANIFEST_DIR")).join("bundles");
