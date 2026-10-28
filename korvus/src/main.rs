@@ -7,6 +7,7 @@
 use spec::{Persona, RenderBackend};
 
 mod cli;
+mod help;
 mod settings;
 mod update;
 
@@ -115,6 +116,12 @@ async fn main() -> anyhow::Result<()> {
         None => false,
     };
     let command = argv.get(1).cloned().unwrap_or_default();
+    // `--help` (`-h`) after a command, or as one: what it takes, and nothing run -- `korvus serve --help` started a server.
+    if matches!(command.as_str(), "--help" | "-h" | "help") || argv.iter().skip(2).any(|a| a == "--help" || a == "-h") {
+        let about = if command.starts_with('-') || command == "help" { argv.get(2).cloned().unwrap_or_default() } else { command };
+        print!("{}", help::usage(&about));
+        std::process::exit(0);
+    }
     let endpoint = command == "serve" || command == "browser";
     let making_snapshot = command == engine::snapshot::MAKE_ARG;
     // Run in a terminal, a person's command first checks for a newer release, at most once a day, and asks to update
@@ -315,7 +322,9 @@ async fn main() -> anyhow::Result<()> {
             let port: u16 = args.get(1).and_then(|s| s.parse().ok()).unwrap_or(9222);
             browser_endpoint(std::net::SocketAddr::from(([127, 0, 0, 1], port))).await
         }
-        Some("fetch") => record(fetch_cmd(&args[1..]).await),
+        // The run ends with its output: what the page left in flight (a request through a slow proxy, a worker's) is not
+        // waited for, as this runtime's teardown would wait for it -- `--timeout` bounds the whole run, not its load alone.
+        Some("fetch") => end_now(record(fetch_cmd(&args[1..]).await)),
         Some("probe") => {
             let url = args.get(1).ok_or_else(|| anyhow::anyhow!("usage: korvus probe <url>"))?;
             record(probe_url(url).await)
@@ -437,11 +446,15 @@ async fn fetch_cmd(args: &[String]) -> anyhow::Result<()> {
     // that turned every legacy-encoded page into mojibake. The document is the RESPONSE's URL, after
     // redirects, not the one asked for (L19 E11).
     let doc_url = if resp.url.is_empty() { url.clone() } else { resp.url.clone() };
-    // A load the deadline cut short (a script that never yields) is printed as it stands, not failed.
-    if let Err(err) = e.load_page_response(&resp.bytes, &doc_url, &early, &resp.headers).await {
-        if !deadline.as_ref().is_some_and(Deadline::fired) {
-            return Err(err);
-        }
+    // A load the deadline cut short is printed as it stands, not failed: a script that never yields, which the deadline's
+    // thread terminates, and a load still waiting on the network -- a parser-blocking script on its way -- which no
+    // termination reaches, so the wait itself ends at the deadline (`cut`). It ran on, and the run ended 5 s past the
+    // deadline with nothing printed (`PRINT_GRACE`).
+    let mut cut = false;
+    match within(timeout_at, e.load_page_response(&resp.bytes, &doc_url, &early, &resp.headers)).await {
+        Some(Err(err)) if !deadline.as_ref().is_some_and(Deadline::fired) => return Err(err),
+        Some(_) => {}
+        None => cut = true,
     }
     // Advance the event loop up to `wait_secs`. `pump` returns early if the page settles (no perpetual
     // timers); framework fixtures that finish their async render return fast, heavy ones use the budget.
@@ -460,7 +473,7 @@ async fn fetch_cmd(args: &[String]) -> anyhow::Result<()> {
     }
     let deadline_fired = || deadline.as_ref().is_some_and(Deadline::fired);
     loop {
-        if deadline_fired() {
+        if cut || deadline_fired() {
             break;
         }
         if let Some(nav) = e.take_due_navigation() {
@@ -479,10 +492,10 @@ async fn fetch_cmd(args: &[String]) -> anyhow::Result<()> {
                     if let Some(d) = &deadline {
                         d.follow(e.isolate_interrupt());
                     }
-                    if let Err(err) = e.load_page_response(&resp.bytes, &doc_url, &early, &resp.headers).await {
-                        if !deadline_fired() {
-                            return Err(err);
-                        }
+                    match within(timeout_at, e.load_page_response(&resp.bytes, &doc_url, &early, &resp.headers)).await {
+                        Some(Err(err)) if !deadline_fired() => return Err(err),
+                        Some(_) => {}
+                        None => cut = true,
                     }
                     continue;
                 }
@@ -521,7 +534,7 @@ async fn fetch_cmd(args: &[String]) -> anyhow::Result<()> {
 
     // The load is over; what follows prints. A deadline that fell due left a termination pending on the
     // isolate, which every script the printing runs would meet: clear it first.
-    let timed_out = deadline.as_ref().is_some_and(|d| d.finish_loading());
+    let timed_out = deadline.as_ref().is_some_and(|d| d.finish_loading()) || cut;
     if timed_out {
         e.clear_termination();
     }
@@ -1008,6 +1021,22 @@ fn read_or_exit(path: &str) -> String {
 
 /// Calls the plugins' `shutdown` as `main` returns.
 struct PluginsDown;
+
+/// End the process with `result`, as returning it from `main` would -- the plugins' `shutdown`, the error printed as
+/// `main` prints one, exit status 1 -- without the runtime's teardown, which waits for every task still running.
+fn end_now(result: anyhow::Result<()>) -> ! {
+    use std::io::Write as _;
+    plugin_host::shutdown();
+    let code = match result {
+        Ok(()) => 0,
+        Err(e) => {
+            eprintln!("Error: {e:?}");
+            1
+        }
+    };
+    let _ = std::io::stdout().flush();
+    std::process::exit(code)
+}
 
 impl Drop for PluginsDown {
     fn drop(&mut self) {
