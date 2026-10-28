@@ -898,11 +898,18 @@ pub struct NodeInfo {
     pub description: String,
 }
 
+/// The children DevTools shows of node `id`: all but the text nodes that are only white space, which Chrome's DOM agent
+/// leaves out of `children` and of `childNodeCount` alike (`InspectorDOMAgent::ShouldSkipNode`; Chrome 150's `<head>`
+/// with a `<title>`, a line break and a `<style>` counts 2).
+pub fn devtools_children(dom: &korvus_dom::Dom, id: u32) -> Vec<u32> {
+    dom.children(id).into_iter().filter(|&c| !(dom.node_type(c) == 3 && dom.node_value(c).is_some_and(|t| t.chars().all(|ch| ch.is_ascii_whitespace())))).collect()
+}
+
 /// Element `id`, described from the arena (`None` for a node that is not an element).
 pub fn node_info(scope: &mut v8::PinScope, id: u32) -> Option<NodeInfo> {
     with_host_dom(scope, |dom| {
         if (id as usize) < dom.len() && dom.node_type(id) == 9 {
-            let child_count = dom.children(id).len();
+            let child_count = devtools_children(dom, id).len();
             return Some(NodeInfo {
                 node_type: 9,
                 node_name: "#document".into(),
@@ -926,7 +933,174 @@ pub fn node_info(scope: &mut v8::PinScope, id: u32) -> Option<NodeInfo> {
                 description.push_str(class);
             }
         }
-        Some(NodeInfo { node_type: 1, node_name, local_name, child_count: dom.children(id).len(), attributes, description })
+        Some(NodeInfo { node_type: 1, node_name, local_name, child_count: devtools_children(dom, id).len(), attributes, description })
     })
     .flatten()
+}
+
+/// A node and what is under it, as CDP's `DOM.Node` lists them for `DOM.getDocument` / `DOM.describeNode` with a
+/// `depth`: Stagehand reads the whole tree this way (`depth: -1, pierce: true`) to find each element's XPath.
+#[derive(Debug, Clone)]
+pub struct DomTreeNode {
+    pub id: u32,
+    pub node_type: u32,
+    pub node_name: String,
+    pub local_name: String,
+    pub node_value: String,
+    /// `childNodeCount`, for a node that can have children.
+    pub child_count: Option<usize>,
+    /// Name/value pairs in document order, for an element.
+    pub attributes: Option<Vec<(String, String)>>,
+    /// `None` past the depth asked for.
+    pub children: Option<Vec<DomTreeNode>>,
+    /// An element's shadow root; `shadow_root_type` on the root itself (`open` / `closed`).
+    pub shadow_roots: Vec<DomTreeNode>,
+    pub shadow_root_type: Option<&'static str>,
+    /// A frame element's frame (its browsing context id) and the document it shows.
+    pub content_frame: Option<u32>,
+    pub content_document: Option<Box<DomTreeNode>>,
+    /// A `<template>`'s content.
+    pub template_content: Option<Box<DomTreeNode>>,
+    /// A document element: the frame its document is the document of (`Some(None)` the page's) -- Chrome puts the
+    /// frame's id on it.
+    pub document_of: Option<Option<u32>>,
+    /// A document's url, and its `compatibilityMode` (`NoQuirksMode`, `QuirksMode`, `LimitedQuirksMode`).
+    pub document_url: Option<String>,
+    pub compatibility_mode: Option<&'static str>,
+    /// A doctype's `publicId` and `systemId`.
+    pub doctype_ids: Option<(String, String)>,
+}
+
+/// Node `id` with its children to `depth` levels (`-1`: all of them), as Chrome's `InspectorDOMAgent` builds them: a
+/// node within the depth lists its children (`[]` for none), an element's shadow root and a frame element's document
+/// are listed always -- their contents only with `pierce` -- and a template's content always, with nothing under it.
+/// `document_push` is `DOM.getDocument`'s rule on top: a node at the last level still lists its children when its only
+/// child is text (`describeNode` has no such rule: Chrome 150's `#go` button, one text child, lists none). `page_url`
+/// is the page document's url (a frame's comes with the frame). `None` for an id the arena never issued.
+pub fn dom_tree(scope: &mut v8::PinScope, id: u32, depth: i64, pierce: bool, document_push: bool, page_url: &str) -> Option<DomTreeNode> {
+    let frames = crate::core::html::browsing_context::devtools_frames(scope);
+    with_host_dom(scope, |dom| {
+        if (id as usize) >= dom.len() {
+            return None;
+        }
+        let depth = if depth < 0 { i64::MAX } else { depth };
+        Some(dom_tree_node(dom, &frames, id, depth, pierce, document_push, page_url))
+    })
+    .flatten()
+}
+
+/// The element at client point `(x, y)` of the page's document: `document.elementFromPoint`'s hit test (CDP
+/// `DOM.getNodeForLocation`). `None` outside the viewport, or over nothing.
+pub fn element_at_point(scope: &mut v8::PinScope, x: f64, y: f64) -> Option<u32> {
+    let root = with_host_dom(scope, |dom| dom.root())?;
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let id = crate::core::dom::geometry_queries::element_from_point(&mut op_state.borrow_mut(), root, x as f32, y as f32);
+    u32::try_from(id).ok()
+}
+
+/// The elements under node `root` that `selector` matches, in tree order (only the first unless `all`), by the arena's
+/// own selector engine -- never the page's `querySelector`. `Some(Err(()))` for a selector that does not parse.
+pub fn query_selector(scope: &mut v8::PinScope, root: u32, selector: &str, all: bool) -> Option<Result<Vec<u32>, ()>> {
+    with_host_dom(scope, |dom| {
+        if (root as usize) >= dom.len() {
+            return None;
+        }
+        Some(if all {
+            dom.query_selector_all_in(root, selector).map_err(|_| ())
+        } else {
+            dom.query_selector_in(root, selector).map(|n| n.into_iter().collect()).map_err(|_| ())
+        })
+    })
+    .flatten()
+}
+
+#[allow(clippy::too_many_arguments)]
+fn dom_tree_node(dom: &korvus_dom::Dom, frames: &[crate::DevtoolsFrame], id: u32, depth: i64, pierce: bool, push: bool, page_url: &str) -> DomTreeNode {
+    // the arena keeps a shadow root as a document-kind node; DevTools sees the `DocumentFragment` it is
+    let node_type = if dom.is_shadow_root(id) { 11 } else { dom.node_type(id) };
+    let mut n = DomTreeNode {
+        id,
+        node_type,
+        node_name: String::new(),
+        local_name: String::new(),
+        node_value: String::new(),
+        child_count: None,
+        attributes: None,
+        children: None,
+        shadow_roots: Vec::new(),
+        shadow_root_type: None,
+        content_frame: None,
+        content_document: None,
+        template_content: None,
+        document_of: None,
+        document_url: None,
+        compatibility_mode: None,
+        doctype_ids: None,
+    };
+    match node_type {
+        1 => {
+            n.node_name = dom.element_tag_name(id).unwrap_or_default();
+            n.local_name = dom.tag_name(id).unwrap_or("").to_string();
+            n.attributes = Some(dom.attribute_pairs(id).to_vec());
+            if let Some(sr) = dom.shadow_root_of(id) {
+                n.shadow_roots.push(dom_tree_node(dom, frames, sr, if pierce { depth } else { 0 }, pierce, push, page_url));
+            }
+            if let Some(f) = frames.iter().find(|f| f.element == id) {
+                n.content_frame = Some(f.id);
+                if f.document != u32::MAX && (f.document as usize) < dom.len() {
+                    let mut doc = dom_tree_node(dom, frames, f.document, if pierce { depth } else { 0 }, pierce, push, &f.url);
+                    doc.document_url = Some(f.url.clone());
+                    n.content_document = Some(Box::new(doc));
+                }
+            }
+            if let Some(content) = dom.template_content_of(id) {
+                n.template_content = Some(Box::new(dom_tree_node(dom, frames, content, 0, pierce, push, page_url)));
+            }
+            if dom.parent(id).is_some_and(|p| dom.node_type(p) == 9) {
+                let doc = dom.parent(id).unwrap_or(id);
+                n.document_of = Some(if doc == dom.root() { None } else { frames.iter().find(|f| f.document == doc).map(|f| f.id) });
+            }
+        }
+        3 | 4 | 8 | 7 => {
+            n.node_name = match node_type {
+                3 => "#text".to_string(),
+                4 => "#cdata-section".to_string(),
+                8 => "#comment".to_string(),
+                _ => dom.pi_fields(id).0,
+            };
+            n.node_value = dom.node_value(id).unwrap_or_default();
+        }
+        9 => {
+            n.node_name = "#document".to_string();
+            n.document_url = Some(page_url.to_string());
+            n.compatibility_mode = Some(match dom.document_mode(id) {
+                korvus_dom::DocumentMode::Quirks => "QuirksMode",
+                korvus_dom::DocumentMode::LimitedQuirks => "LimitedQuirksMode",
+                korvus_dom::DocumentMode::NoQuirks => "NoQuirksMode",
+            });
+        }
+        10 => {
+            let (name, public_id, system_id) = dom.doctype_fields(id);
+            n.node_name = name;
+            n.doctype_ids = Some((public_id, system_id));
+        }
+        11 => {
+            n.node_name = "#document-fragment".to_string();
+            n.shadow_root_type = dom.shadow_mode(id).map(|m| match m {
+                korvus_dom::ShadowRootMode::Open => "open",
+                korvus_dom::ShadowRootMode::Closed => "closed",
+            });
+        }
+        _ => {}
+    }
+    if matches!(node_type, 1 | 9 | 11) {
+        let kids = devtools_children(dom, id);
+        n.child_count = Some(kids.len());
+        let only_text = push && kids.len() == 1 && dom.node_type(kids[0]) == 3;
+        if depth > 0 || only_text {
+            let below = if depth > 0 { depth - 1 } else { 0 };
+            n.children = Some(kids.into_iter().map(|c| dom_tree_node(dom, frames, c, below, pierce, push, page_url)).collect());
+        }
+    }
+    n
 }

@@ -189,6 +189,35 @@ impl crate::Engine {
         webapi::page::with_host_dom(scope, |dom| (dom.root(), dom.children(dom.root()).len()))
     }
 
+    /// Node `node` with its children to `depth` levels (`-1`: all), shadow roots and frame documents entered with
+    /// `pierce` (`DOM.getDocument` with `document_push`, `DOM.describeNode` without; `webapi::page::dom_tree`).
+    pub fn dom_tree(&mut self, node: u32, depth: i64, pierce: bool, document_push: bool) -> Option<webapi::page::DomTreeNode> {
+        let url = self.current_url();
+        self.with_scope(|scope| webapi::page::dom_tree(scope, node, depth, pierce, document_push, &url))
+    }
+
+    /// The accessibility tree of document `doc` -- the page's when `None` -- whose url is `url` (`Accessibility.*`;
+    /// `webapi::accessibility`).
+    pub fn ax_tree(&mut self, doc: Option<u32>, url: &str) -> Option<webapi::accessibility::AxTree> {
+        self.with_scope(|scope| {
+            let doc = match doc {
+                Some(d) => d,
+                None => webapi::page::with_host_dom(scope, |dom| dom.root())?,
+            };
+            webapi::accessibility::ax_tree(scope, doc, url)
+        })
+    }
+
+    /// The element at client point `(x, y)` (`DOM.getNodeForLocation`).
+    pub fn element_at_point(&mut self, x: f64, y: f64) -> Option<u32> {
+        self.with_scope(|scope| webapi::page::element_at_point(scope, x, y))
+    }
+
+    /// The elements under `root` that `selector` matches (`DOM.querySelector` / `querySelectorAll`).
+    pub fn query_selector(&mut self, root: u32, selector: &str, all: bool) -> Option<Result<Vec<u32>, ()>> {
+        self.with_scope(|scope| webapi::page::query_selector(scope, root, selector, all))
+    }
+
     /// Stored object `id`'s own properties and its prototype (`Runtime.getProperties` with `ownProperties`), read
     /// through V8's own property API: no getter runs, no page-replaceable `Object.*` is called. Every object value is
     /// stored and named by its new id. `None` for an id this engine never issued. A proxy lists nothing (its traps

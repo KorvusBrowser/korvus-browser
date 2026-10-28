@@ -627,7 +627,7 @@ fn measure<T>(state: &mut OpState, absent: T, f: impl FnOnce(&LaidOut) -> T) -> 
 ///
 /// `root` is the receiving document's arena root: the page's, or a frame's (Chrome
 /// answers `#in` for a point on it inside `frame.contentDocument`).
-fn element_from_point(state: &mut OpState, root: u32, x: f32, y: f32) -> i32 {
+pub(crate) fn element_from_point(state: &mut OpState, root: u32, x: f32, y: f32) -> i32 {
     // `-1`, not `0`: zero is a node id.
     measure_node(state, root, -1, |out| out.element_from_point(x, y).map_or(-1, |n| n as i32))
 }

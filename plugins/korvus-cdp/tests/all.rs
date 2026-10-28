@@ -13,6 +13,7 @@
 //! ADDING A TEST. Drop the file in `tests/` and add a line below. `every_test_file_is_in_this_suite`
 //! fails if you forget, because a test file that is never compiled looks exactly like coverage and is
 //! not.
+#[path = "accessibility.rs"] mod accessibility;
 #[path = "conformance.rs"] mod conformance;
 #[path = "dom_handles.rs"] mod dom_handles;
 #[path = "fetch_domain.rs"] mod fetch_domain;

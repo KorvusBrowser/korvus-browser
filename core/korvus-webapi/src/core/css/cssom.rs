@@ -213,6 +213,16 @@ pub(crate) fn computed_text(state: &mut OpState, node: u32, property: page::styl
     with_resolved(state, node, false, None, |p, dom, media, _| p.computed_value(dom, node, media, property, None))
 }
 
+/// [`computed_text`] for many elements of ONE document (its shadow trees included) at once: the page, the media
+/// context and the DOM are taken once, not once per read. Row `i` is `nodes[i]`'s value of each of `properties`, `None`
+/// for an element with no style. The accessibility tree reads five properties off every element of a document.
+pub(crate) fn computed_texts(state: &mut OpState, nodes: &[u32], properties: &[page::style::property::PropertyId]) -> Vec<Option<Vec<String>>> {
+    let Some(&first) = nodes.first() else { return Vec::new() };
+    with_resolved(state, first, false, vec![None; nodes.len()], |p, dom, media, _| {
+        nodes.iter().map(|&n| properties.iter().map(|&prop| p.computed_value(dom, n, media, prop, None)).collect()).collect()
+    })
+}
+
 /// RENDER: paint the current document to an offscreen RGBA8 frame through the compositor paint walk.
 /// Mirrors [`with_resolved`]'s gather — refresh the shared layout, take
 /// Page + Dom + MediaContext + the cached `LaidOut` — build the 2D display list in korvus-page's `paint`

@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><title>Accessibility Fixture</title>
+<style>.gone{display:none}.unseen{visibility:hidden}</style></head><body>
+<header><nav aria-label="Primary"><ul><li><a href="/home">Home</a></li><li><a href="/shop" title="The shop">Shop</a></li></ul></nav></header>
+<main>
+<h1>Store</h1>
+<p>Welcome to the <strong>store</strong>. <a href="#more">Read more</a></p>
+<h2 id="search-h">Search</h2>
+<form role="search" aria-labelledby="search-h">
+<label for="q">Query</label> <input id="q" name="q" placeholder="Find a product">
+<input type="search" aria-label="Quick find">
+<input type="email" placeholder="you@example.com" required>
+<input type="password" id="pw"><label for="pw">Password</label>
+<label><input type="checkbox" checked> Remember me</label>
+<fieldset><legend>Size</legend><label><input type="radio" name="s" value="s"> Small</label><label><input type="radio" name="s" value="l" checked> Large</label></fieldset>
+<select id="colour" aria-label="Colour"><option>Red</option><option selected>Green</option></select>
+<textarea placeholder="Notes"></textarea>
+<input type="range" min="0" max="10" value="3" aria-label="Volume">
+<input type="hidden" name="token" value="x">
+<input type="submit" value="Search now">
+<input type="reset">
+<button type="button" disabled>Disabled</button>
+<button type="button" aria-pressed="true">Toggle</button>
+<button type="button" aria-expanded="false" aria-haspopup="menu">Menu</button>
+<button type="button"><img src="data:," alt="Cart"></button>
+<input type="file" aria-label="Upload">
+</form>
+<img src="data:," alt="A logo">
+<img src="data:," alt="">
+<img src="data:,">
+<ul><li>One</li><li>Two</li></ul>
+<ol><li>First</li></ol>
+<table><caption>Prices</caption><thead><tr><th>Item</th><th>Price</th></tr></thead><tbody><tr><td>Tea</td><td>3</td></tr></tbody></table>
+<div role="dialog" aria-modal="true" aria-label="Offer"><p>Ten percent off</p><div role="button" tabindex="0">Claim</div></div>
+<div role="tablist"><div role="tab" aria-selected="true">Tab A</div><div role="tab" aria-selected="false">Tab B</div></div>
+<div role="checkbox" aria-checked="mixed" tabindex="0">Partial</div>
+<div class="gone"><button>Gone</button></div>
+<div class="unseen"><button>Unseen</button></div>
+<div hidden>Hidden attr</div>
+<div aria-hidden="true"><button>Aria hidden</button></div>
+<span role="img" aria-label="Star">*</span>
+<div>Plain <span>text</span> in a div</div>
+<details><summary>More info</summary><p>Inside details</p></details>
+<a>No href</a>
+<a href="/x" aria-label="Labelled link"><span>icon</span></a>
+<label id="l1">First</label><label id="l2">Last</label><input aria-labelledby="l1 l2">
+<input aria-describedby="hint" aria-label="Code"><span id="hint">Six digits</span>
+<progress value="40" max="100" aria-label="Loading"></progress>
+<h3 aria-level="5">Level five</h3>
+<div role="heading" aria-level="4">Div heading</div>
+<custom-card></custom-card>
+<iframe srcdoc="<button>In frame</button>" title="Inner"></iframe>
+</main>
+<footer><p>Footer text</p><a href="mailto:a@b.c">Mail</a></footer>
+<script>
+const host = document.querySelector('custom-card');
+const root = host.attachShadow({ mode: 'open' });
+root.innerHTML = '<h4>Shadow title</h4><slot></slot><button>Shadow button</button>';
+host.innerHTML = '<span>Slotted</span>';
+</script>
+</body></html>

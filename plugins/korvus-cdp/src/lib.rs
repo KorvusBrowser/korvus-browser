@@ -1957,6 +1957,29 @@ async fn dispatch_popup(
             (Ok(json!({})), events)
         }
         "Runtime.runIfWaitingForDebugger" => (Ok(json!({})), vec![]),
+        // the popup's own document, and its own accessibility tree (its frame is the popup's target): Stagehand reads a
+        // new tab through these two as it reads the page
+        "DOM.getDocument" if announced => {
+            let depth = params.get("depth").and_then(Value::as_i64).unwrap_or(2);
+            let pierce = params.get("pierce").and_then(Value::as_bool).unwrap_or(false);
+            match engine.get().dom_tree(rec.document, depth, pierce, true) {
+                Some(mut tree) => {
+                    tree.document_url = Some(rec.url.clone());
+                    (Ok(json!({ "root": dom_tree_json(&tree, None, ids) })), vec![])
+                }
+                None => (Err(RpcError::server("Document is not available".to_string())), vec![]),
+            }
+        }
+        "Accessibility.getFullAXTree" | "Accessibility.getRootAXNode" | "Accessibility.getChildAXNodes" | "Accessibility.getPartialAXTree"
+        | "Accessibility.getAXNodeAndAncestors" | "Accessibility.queryAXTree"
+            if announced =>
+        {
+            let node = node_param(engine.get(), params);
+            match engine.get().ax_tree(Some(rec.document), &rec.url) {
+                Some(tree) => (ax_answer(method, params, &tree, &rec.target, node), vec![]),
+                None => (Err(RpcError::server("Document is not available".to_string())), vec![]),
+            }
+        }
         "Page.createIsolatedWorld" => {
             let world = params.get("worldName").and_then(Value::as_str).unwrap_or("").to_string();
             if let Some(id) = ids.live_frame_world(&rec.target, &world) {
@@ -3360,6 +3383,17 @@ async fn dispatch(
         // and the like are the page's to replace). Chrome 150's answers on the same page are pinned in
         // `tests/dom_handles.rs`. A node's `backendNodeId` is its arena id + 1 (Chrome never hands out 0); its `nodeId`,
         // which no client relies on across sessions, is the same number.
+        // With a `depth` -- and for a node `node_info` does not describe (text, a comment, a shadow root) -- the node
+        // and its children to that depth, as `DOM.getDocument` lists them (`dom_tree_json`): Stagehand expands a tree
+        // a client's CBOR stack could not take whole this way.
+        "DOM.describeNode" if params.get("depth").is_some() || node_param(engine.get(), params).is_some_and(|n| engine.get().node_info(n).is_none()) => {
+            let depth = params.get("depth").and_then(Value::as_i64).unwrap_or(0);
+            let pierce = params.get("pierce").and_then(Value::as_bool).unwrap_or(false);
+            match node_param(engine.get(), params).and_then(|n| engine.get().dom_tree(n, depth, pierce, false)) {
+                Some(tree) => (Ok(json!({ "node": dom_tree_json(&tree, None, ids) })), vec![]),
+                None => (Err(RpcError::server("Could not find node with given id".to_string())), vec![]),
+            }
+        }
         "DOM.describeNode" => match node_param(engine.get(), params).and_then(|n| engine.get().node_info(n).map(|i| (n, i))) {
             Some((n_id, info)) => {
                 let url = engine.get().current_url();
@@ -3438,20 +3472,70 @@ async fn dispatch(
             }
             None => (Err(RpcError::server("Node with given id does not belong to the document".to_string())), vec![]),
         },
-        "DOM.getDocument" => match engine.get().document_node() {
-            Some((root, children)) => {
-                let url = engine.get().current_url();
-                (
-                    Ok(json!({ "root": {
-                        "nodeId": root + 1, "backendNodeId": root + 1, "nodeType": 9, "nodeName": "#document", "localName": "",
-                        "nodeValue": "", "childNodeCount": children, "documentURL": url, "baseURL": url, "xmlVersion": "",
-                        "compatibilityMode": "NoQuirksMode",
-                    } })),
-                    vec![],
-                )
+        // The document and its nodes to `depth` levels -- 2 by default, as Chrome's (the document, `<html>`, its head and
+        // body); `-1` the whole tree, which is how Stagehand maps each element to its XPath -- shadow roots and frame
+        // documents entered with `pierce`.
+        "DOM.getDocument" => {
+            let depth = params.get("depth").and_then(Value::as_i64).unwrap_or(2);
+            let pierce = params.get("pierce").and_then(Value::as_bool).unwrap_or(false);
+            match engine.get().document_node().and_then(|(root, _)| engine.get().dom_tree(root, depth, pierce, true)) {
+                Some(tree) => (Ok(json!({ "root": dom_tree_json(&tree, None, ids) })), vec![]),
+                None => (Err(RpcError::server("Document is not available".to_string())), vec![]),
             }
-            None => (Err(RpcError::server("Document is not available".to_string())), vec![]),
+        }
+        // An element handle's node id, from the arena (Puppeteer's `ElementHandle` -> `DOM.requestNode`).
+        "DOM.requestNode" => match node_param(engine.get(), params) {
+            Some(n) => (Ok(json!({ "nodeId": n + 1 })), vec![]),
+            None => (Err(RpcError::server("Could not find node with given id".to_string())), vec![]),
         },
+        // The arena's own selector engine under a node (never the page's `querySelector`, which it may replace): the
+        // first match's id, `0` for none, as Chrome's; every match's for `querySelectorAll`.
+        "DOM.querySelector" | "DOM.querySelectorAll" => {
+            let all = method == "DOM.querySelectorAll";
+            let selector = params.get("selector").and_then(Value::as_str).unwrap_or("");
+            let Some(root) = node_param(engine.get(), params) else {
+                return (Err(RpcError::server("Could not find node with given id".to_string())), vec![]);
+            };
+            match engine.get().query_selector(root, selector, all) {
+                Some(Ok(found)) if all => (Ok(json!({ "nodeIds": found.iter().map(|n| n + 1).collect::<Vec<_>>() })), vec![]),
+                Some(Ok(found)) => (Ok(json!({ "nodeId": found.first().map_or(0, |n| n + 1) })), vec![]),
+                Some(Err(())) => (Err(RpcError::server("DOM Error while querying".to_string())), vec![]),
+                None => (Err(RpcError::server("Could not find node with given id".to_string())), vec![]),
+            }
+        }
+        // The element at a viewport point, by the page's own hit test (`document.elementFromPoint`'s): Stagehand's
+        // coordinate actions name their target this way.
+        "DOM.getNodeForLocation" => {
+            let n = |k: &str| params.get(k).and_then(Value::as_f64).unwrap_or(0.0);
+            match engine.get().element_at_point(n("x"), n("y")) {
+                Some(el) => (Ok(json!({ "backendNodeId": el + 1, "frameId": ids.frame_id(), "nodeId": el + 1 })), vec![]),
+                None => (Err(RpcError::server("No node found at given location".to_string())), vec![]),
+            }
+        }
+
+        // The accessibility tree (`webapi::accessibility`), in Chrome 150's shapes (recorded:
+        // `tests/fixtures/accessibility.chrome-150.json`): each node keyed by its DOM node's backend id, the nodes listed
+        // breadth first. Stagehand's `act` / `observe` / `extract` read a page through `getFullAXTree`, Puppeteer's
+        // `page.accessibility.snapshot()` too, and its `aria/` selectors through `queryAXTree`. Chrome answers
+        // `enable` / `disable` `{}`; the tree is built on each read, so there is nothing to keep between them.
+        "Accessibility.enable" | "Accessibility.disable" => (Ok(json!({})), vec![]),
+        // a document's own tree: the page's, or a frame's by its `frameId`
+        "Accessibility.getFullAXTree" | "Accessibility.getRootAXNode" | "Accessibility.getChildAXNodes" => {
+            match ax_document_tree(engine.get(), ids, params) {
+                Ok((tree, frame)) => (ax_answer(method, params, &tree, &frame, None), vec![]),
+                Err(e) => (Err(e), vec![]),
+            }
+        }
+        // the tree of the document the node named belongs to
+        "Accessibility.getPartialAXTree" | "Accessibility.getAXNodeAndAncestors" | "Accessibility.queryAXTree" => {
+            let Some(node) = node_param(engine.get(), params) else {
+                return (Err(RpcError::server("Could not find node with given id".to_string())), vec![]);
+            };
+            match ax_node_tree(engine.get(), ids, node) {
+                Ok((tree, frame)) => (ax_answer(method, params, &tree, &frame, Some(node)), vec![]),
+                Err(e) => (Err(e), vec![]),
+            }
+        }
 
         // The document as the compositor paints it (what `korvus fetch --screenshot` writes), as
         // Chrome's `{data}` -- base64 PNG. PNG is what this engine paints: a client asking for JPEG or WebP is told so,
@@ -3997,6 +4081,231 @@ fn node_json(node: u32, n: &engine::NodeInfo, document_url: &str) -> Value {
         "nodeId": node + 1, "backendNodeId": node + 1, "nodeType": 1, "nodeName": n.node_name, "localName": n.local_name,
         "nodeValue": "", "childNodeCount": n.child_count, "attributes": attributes,
     })
+}
+
+/// A node and what `DOM.getDocument` / `describeNode` fetched under it, with Chrome 150's keys (recorded on the
+/// accessibility fixture, `depth: -1, pierce: true`): its parent's id on each child, but not on a shadow root or a
+/// frame's document; the frame's id on a frame element and on each document's `<html>`.
+fn dom_tree_json(n: &webapi::page::DomTreeNode, parent: Option<u32>, ids: &ConnIds) -> Value {
+    let mut o = serde_json::Map::new();
+    o.insert("nodeId".into(), json!(n.id + 1));
+    if let Some(p) = parent {
+        o.insert("parentId".into(), json!(p + 1));
+    }
+    o.insert("backendNodeId".into(), json!(n.id + 1));
+    o.insert("nodeType".into(), json!(n.node_type));
+    o.insert("nodeName".into(), json!(n.node_name));
+    o.insert("localName".into(), json!(n.local_name));
+    o.insert("nodeValue".into(), json!(n.node_value));
+    if let Some((public_id, system_id)) = &n.doctype_ids {
+        o.insert("publicId".into(), json!(public_id));
+        o.insert("systemId".into(), json!(system_id));
+    }
+    if let Some(c) = n.child_count {
+        o.insert("childNodeCount".into(), json!(c));
+    }
+    if let Some(kids) = &n.children {
+        o.insert("children".into(), Value::Array(kids.iter().map(|k| dom_tree_json(k, Some(n.id), ids)).collect()));
+    }
+    if let Some(attrs) = &n.attributes {
+        o.insert("attributes".into(), json!(attrs.iter().flat_map(|(k, v)| [k.as_str(), v.as_str()]).collect::<Vec<_>>()));
+    }
+    if !n.shadow_roots.is_empty() {
+        o.insert("shadowRoots".into(), Value::Array(n.shadow_roots.iter().map(|r| dom_tree_json(r, None, ids)).collect()));
+    }
+    if let Some(t) = n.shadow_root_type {
+        o.insert("shadowRootType".into(), json!(t));
+    }
+    let frame_id = |bc: Option<u32>| match bc {
+        None => Some(ids.frame_id().to_string()),
+        Some(bc) => ids.frame_for(bc).map(|f| f.id.clone()),
+    };
+    if let Some(f) = n.content_frame.and_then(|bc| frame_id(Some(bc))) {
+        o.insert("frameId".into(), json!(f));
+    }
+    if let Some(f) = n.document_of.and_then(frame_id) {
+        o.insert("frameId".into(), json!(f));
+    }
+    if let Some(d) = &n.content_document {
+        o.insert("contentDocument".into(), dom_tree_json(d, None, ids));
+    }
+    if let Some(t) = &n.template_content {
+        o.insert("templateContent".into(), dom_tree_json(t, None, ids));
+    }
+    if let Some(url) = &n.document_url {
+        o.insert("documentURL".into(), json!(url));
+        o.insert("baseURL".into(), json!(url));
+        o.insert("xmlVersion".into(), json!(""));
+        o.insert("compatibilityMode".into(), json!(n.compatibility_mode.unwrap_or("NoQuirksMode")));
+    }
+    Value::Object(o)
+}
+
+/// The tree of the document an `Accessibility` command names by `frameId` -- the page's without one -- and that frame's
+/// id. Chrome's refusal of a frame it does not have is the one Stagehand looks for to retry without the id.
+fn ax_document_tree(engine: &mut Engine, ids: &ConnIds, params: &Value) -> Result<(webapi::accessibility::AxTree, String), RpcError> {
+    let fid = params.get("frameId").and_then(Value::as_str).filter(|f| *f != ids.frame_id());
+    let (doc, url, frame) = match fid {
+        None => (None, engine.current_url(), ids.frame_id().to_string()),
+        Some(fid) => {
+            let f = ids
+                .bc_for(fid)
+                .and_then(|bc| engine.devtools_frames().into_iter().find(|f| f.id == bc))
+                .filter(|f| f.document != u32::MAX)
+                .ok_or_else(|| RpcError::invalid_params("Frame with the given frameId is not found.".to_string()))?;
+            (Some(f.document), f.url, fid.to_string())
+        }
+    };
+    let tree = engine.ax_tree(doc, &url).ok_or_else(|| RpcError::server("Document is not available".to_string()))?;
+    Ok((tree, frame))
+}
+
+/// The tree of the document node `node` belongs to (a frame's, for a node of a frame), and that frame's id.
+fn ax_node_tree(engine: &mut Engine, ids: &ConnIds, node: u32) -> Result<(webapi::accessibility::AxTree, String), RpcError> {
+    match engine.frame_of_node(node) {
+        Some(None) => ax_document_tree(engine, ids, &json!({})),
+        Some(Some(bc)) => match ids.frame_for(bc).map(|f| f.id.clone()) {
+            Some(fid) => ax_document_tree(engine, ids, &json!({ "frameId": fid })),
+            None => Err(RpcError::server("Could not find node with given id".to_string())),
+        },
+        None => Err(RpcError::server("Could not find node with given id".to_string())),
+    }
+}
+
+/// An `Accessibility` method's answer over `tree`, the tree of one document (the page's, a frame's or a popup's) whose
+/// frame is `frame`; `node` the DOM node a node-based method names. Chrome 150's shapes:
+/// * `getFullAXTree` every node breadth first, with a `depth` only those that many unignored levels down;
+///   `getRootAXNode` the root; `getChildAXNodes` a node's children by its AX id;
+/// * `getPartialAXTree` the node and -- with `fetchRelatives`, the default -- its children, then its ancestors up to the
+///   root (Chrome on `#q`: the textbox, its two children, each ancestor); `getAXNodeAndAncestors` the node and its
+///   ancestors; a node the tree leaves out is answered as Chrome answers one, ignored as not rendered;
+/// * `queryAXTree` the nodes under the node (itself included) whose name is `accessibleName` and whose role is `role`,
+///   each when given, in document order, ignored nodes never matching (Puppeteer's `aria/Submit[role="button"]`).
+fn ax_answer(method: &str, params: &Value, tree: &webapi::accessibility::AxTree, frame: &str, node: Option<u32>) -> Result<Value, RpcError> {
+    let not_found = || RpcError::server("Could not find node with given id".to_string());
+    match method {
+        "Accessibility.getRootAXNode" => Ok(json!({ "node": ax_node_json(tree, 0, frame) })),
+        "Accessibility.getFullAXTree" => {
+            let depth = params.get("depth").and_then(Value::as_i64).filter(|d| *d >= 0).map(|d| d as usize);
+            Ok(json!({ "nodes": tree.breadth_first(depth).into_iter().map(|i| ax_node_json(tree, i, frame)).collect::<Vec<_>>() }))
+        }
+        "Accessibility.getChildAXNodes" => {
+            let id = params.get("id").and_then(Value::as_str).and_then(|s| s.parse::<i64>().ok());
+            let i = id.and_then(|id| tree.find_id(id)).ok_or_else(not_found)?;
+            Ok(json!({ "nodes": tree.nodes[i].children.iter().map(|&c| ax_node_json(tree, c, frame)).collect::<Vec<_>>() }))
+        }
+        "Accessibility.getPartialAXTree" | "Accessibility.getAXNodeAndAncestors" => {
+            let node = node.ok_or_else(not_found)?;
+            let Some(i) = tree.find_dom(node) else {
+                let n = json!({
+                    "nodeId": (node + 1).to_string(), "ignored": true,
+                    "ignoredReasons": [{ "name": "notRendered", "value": { "type": "boolean", "value": true } }],
+                    "role": { "type": "role", "value": "none" }, "chromeRole": { "type": "internalRole", "value": 0 },
+                    "childIds": [], "backendDOMNodeId": node + 1,
+                });
+                return Ok(json!({ "nodes": [n] }));
+            };
+            let partial = method == "Accessibility.getPartialAXTree";
+            let mut order = vec![i];
+            if !partial || params.get("fetchRelatives").and_then(Value::as_bool).unwrap_or(true) {
+                if partial {
+                    order.extend(tree.nodes[i].children.iter().copied());
+                }
+                order.extend(tree.ancestors(i));
+            }
+            Ok(json!({ "nodes": order.into_iter().map(|n| ax_node_json(tree, n, frame)).collect::<Vec<_>>() }))
+        }
+        "Accessibility.queryAXTree" => {
+            let node = node.ok_or_else(not_found)?;
+            let name = params.get("accessibleName").and_then(Value::as_str);
+            let role = params.get("role").and_then(Value::as_str);
+            // a document node finds the root, which is made for it
+            let found: Vec<Value> = tree
+                .find_dom(node)
+                .map(|s| tree.subtree(s))
+                .unwrap_or_default()
+                .into_iter()
+                .filter(|&i| {
+                    let n = &tree.nodes[i];
+                    !n.is_ignored() && name.is_none_or(|w| n.name == w) && role.is_none_or(|w| n.role.name == w)
+                })
+                .map(|i| ax_node_json(tree, i, frame))
+                .collect();
+            Ok(json!({ "nodes": found }))
+        }
+        _ => Err(RpcError::method_not_found(method)),
+    }
+}
+
+/// One AX value as CDP's `AXValue`: a number with no fraction written as an integer (Chrome 150's `"value": 40`).
+fn ax_value_json(v: &webapi::accessibility::AxValue) -> Value {
+    use webapi::accessibility::AxValue as V;
+    let related = |rel: &[webapi::accessibility::Related]| -> Value {
+        Value::Array(
+            rel.iter()
+                .map(|r| {
+                    let mut o = serde_json::Map::new();
+                    o.insert("backendDOMNodeId".into(), json!(r.node + 1));
+                    if let Some(id) = &r.idref {
+                        o.insert("idref".into(), json!(id));
+                    }
+                    if let Some(t) = &r.text {
+                        o.insert("text".into(), json!(t));
+                    }
+                    Value::Object(o)
+                })
+                .collect(),
+        )
+    };
+    match v {
+        V::Boolean(b) => json!({ "type": "boolean", "value": b }),
+        V::BooleanOrUndefined(b) => json!({ "type": "booleanOrUndefined", "value": b }),
+        V::Tristate(t) => json!({ "type": "tristate", "value": t }),
+        V::Token(t) => json!({ "type": "token", "value": t }),
+        V::TokenList(t) => json!({ "type": "tokenList", "value": t }),
+        V::Integer(i) => json!({ "type": "integer", "value": i }),
+        V::Number(n) if n.fract() == 0.0 && n.abs() < 9_007_199_254_740_992.0 => json!({ "type": "number", "value": *n as i64 }),
+        V::Number(n) => json!({ "type": "number", "value": n }),
+        V::String(s) => json!({ "type": "string", "value": s }),
+        V::Idref(rel) => json!({ "type": "idref", "relatedNodes": related(rel) }),
+        V::IdrefList(v, rel) => json!({ "type": "idrefList", "value": v, "relatedNodes": related(rel) }),
+        V::NodeList(rel) => json!({ "type": "nodeList", "relatedNodes": related(rel) }),
+    }
+}
+
+/// Node `i` of `tree` as CDP's `AXNode`, with Chrome 150's keys: an ignored node carries its reasons and no name or
+/// properties; the root carries its frame's id.
+fn ax_node_json(tree: &webapi::accessibility::AxTree, i: usize, frame: &str) -> Value {
+    let n = &tree.nodes[i];
+    let mut o = serde_json::Map::new();
+    o.insert("nodeId".into(), json!(n.id.to_string()));
+    o.insert("ignored".into(), json!(n.is_ignored()));
+    if n.is_ignored() {
+        o.insert("ignoredReasons".into(), Value::Array(n.ignored.iter().map(|(name, v)| json!({ "name": name, "value": ax_value_json(v) })).collect()));
+    }
+    o.insert("role".into(), json!({ "type": if n.role.internal { "internalRole" } else { "role" }, "value": n.role.name }));
+    o.insert("chromeRole".into(), json!({ "type": "internalRole", "value": n.role.chrome }));
+    if !n.is_ignored() {
+        o.insert("name".into(), json!({ "type": "computedString", "value": n.name }));
+        if let Some(d) = &n.description {
+            o.insert("description".into(), json!({ "type": "computedString", "value": d }));
+        }
+        if let Some(v) = &n.value {
+            o.insert("value".into(), ax_value_json(v));
+        }
+        o.insert("properties".into(), Value::Array(n.properties.iter().map(|(name, v)| json!({ "name": name, "value": ax_value_json(v) })).collect()));
+    }
+    if let Some(p) = n.parent {
+        o.insert("parentId".into(), json!(tree.nodes[p].id.to_string()));
+    }
+    o.insert("childIds".into(), Value::Array(n.children.iter().map(|&c| json!(tree.nodes[c].id.to_string())).collect()));
+    if let Some(d) = n.dom {
+        o.insert("backendDOMNodeId".into(), json!(d + 1));
+    }
+    if i == 0 {
+        o.insert("frameId".into(), json!(frame));
+    }
+    Value::Object(o)
 }
 
 /// The `objectId` is Chrome-shaped (`<isolate>.<context>.<serial>`, measured), and the serial is the

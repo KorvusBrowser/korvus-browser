@@ -4,6 +4,15 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- A CDP `Accessibility` domain: `getFullAXTree` (with `depth` and `frameId`), `getPartialAXTree`, `queryAXTree`,
+  `getRootAXNode`, `getChildAXNodes` and `getAXNodeAndAncestors` answer the page's accessibility tree as Chrome builds
+  it: each element's role, name, description, value and states, the nodes Chrome keeps as ignored, and text as its
+  lines lay it out. On a page with every HTML element and ARIA role, the tree a client reads matches Chrome 150's
+  node for node. Stagehand's `act`, `observe` and `extract`, Puppeteer's `page.accessibility.snapshot()` and its
+  `aria/` selectors now work against korvus.
+- `DOM.getDocument` and `DOM.describeNode` honour `depth` and `pierce` (shadow roots and frame documents), so a client
+  can read the whole DOM tree in one call, and `DOM.querySelector`, `querySelectorAll`, `requestNode` and
+  `getNodeForLocation` are answered.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing

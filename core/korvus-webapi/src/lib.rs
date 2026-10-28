@@ -39,6 +39,7 @@ pub(crate) mod core;
 /// The page pipeline's Rust seam for the kernel: document install, parser-induced loads,
 /// document readiness, the load-event deadline, `<body>` handler attributes.
 pub mod page;
+pub mod accessibility; // The accessibility tree a DevTools client reads (`Accessibility.*`), from the arena and the cascade.
 pub mod devtools_log; // What a CDP client with `Runtime` enabled is told the page logged, and the bindings it added.
 pub(crate) mod modules;
 mod idb;
