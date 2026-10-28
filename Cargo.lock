@@ -1510,6 +1510,7 @@ dependencies = [
  "anyhow",
  "base64",
  "bincode",
+ "futures-util",
  "korvus-analysis",
  "korvus-behavior",
  "korvus-cdp",
@@ -1522,6 +1523,7 @@ dependencies = [
  "korvus-webapi",
  "serde_json",
  "tokio",
+ "tokio-tungstenite",
  "toml 0.8.23",
  "url",
 ]

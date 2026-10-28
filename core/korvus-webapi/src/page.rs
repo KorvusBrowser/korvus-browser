@@ -675,6 +675,11 @@ pub fn node_type_of(scope: &mut v8::PinScope, v: v8::Local<v8::Value>) -> Option
     let id = node_id(scope, v)?;
     with_host_dom(scope, |d| d.node_type(id))
 }
+/// Is `id` a node of the arena -- an element, a document, text, a comment, a doctype, a fragment?
+pub fn node_exists(scope: &mut v8::PinScope, id: u32) -> bool {
+    with_host_dom(scope, |dom| (id as usize) < dom.len() && matches!(dom.node_type(id), 1 | 3 | 4 | 7 | 8 | 9 | 10 | 11)).unwrap_or(false)
+}
+
 pub fn with_host_dom<R>(scope: &mut v8::PinScope, f: impl FnOnce(&korvus_dom::Dom) -> R) -> Option<R> {
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let st = op_state.borrow();
@@ -823,9 +828,18 @@ pub fn node_id_of(scope: &mut v8::PinScope, v: v8::Local<v8::Value>) -> Option<u
     with_host_dom(scope, |dom| crate::core::dom::document::resolve_doc_root(dom, slot))
 }
 
-/// Element `id`'s border box in the viewport, CSS px `(x, y, width, height)` -- `getBoundingClientRect`'s
+/// Element `id`'s border box in the viewport (a text node's lines' bounds), CSS px `(x, y, width, height)` -- `getBoundingClientRect`'s
 /// numbers, measured by the engine (CDP `DOM.getContentQuads`, `DOM.getBoxModel`).
 pub fn node_viewport_rect(scope: &mut v8::PinScope, id: u32) -> (f64, f64, f64, f64) {
+    // a text node has no box: its lines' rects, united (Chrome's `DOM.getContentQuads` answers one for a text node, which
+    // chrome-devtools-mcp's `hover` points at when the snapshot listed a `StaticText`)
+    if let Some(len) = with_host_dom(scope, |dom| (dom.node_type(id) == 3).then(|| dom.node_value(id).map_or(0, |v| v.encode_utf16().count()))).flatten() {
+        let rects = crate::core::dom::geometry_queries::text_range_rects_of(scope, id, 0, len as u32);
+        let mut it = rects.into_iter().filter(|r| r[2] > 0.0 || r[3] > 0.0);
+        let Some([x, y, w, h]) = it.next() else { return (0.0, 0.0, 0.0, 0.0) };
+        let (l, t, r, b) = it.fold((x, y, x + w, y + h), |(l, t, r, b), [x, y, w, h]| (l.min(x), t.min(y), r.max(x + w), b.max(y + h)));
+        return (l, t, r - l, b - t);
+    }
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let mut st = op_state.borrow_mut();
     crate::core::dom::geometry_queries::element_viewport_rect(&mut st, id)

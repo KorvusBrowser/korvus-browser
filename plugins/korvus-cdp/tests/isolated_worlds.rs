@@ -182,3 +182,53 @@ async fn isolated_worlds_are_made_numbered_and_kept_apart_as_chromes() {
     assert_eq!(answers1, chrome["answers"]["answers1"], "every context's probe on the first document");
     assert_eq!(answers2, chrome["answers"]["answers2"], "every context's probe on the second");
 }
+
+/// An observer a WORLD makes is told while the page's own frame is pending, and so is the page's.
+///
+/// The observers' registry is the page's, shared by its worlds, and it was dropped whenever the running realm's
+/// `document` was not the one it had noted. A world's `document` is its own wrapper of the same document, so a world's
+/// `observe()` looked like a navigation: it forgot the page's observers and its pending frame, and that frame, when it
+/// ran, forgot the world's. Puppeteer's `locator.click()` waits on an `IntersectionObserver` in its utility world
+/// while it waits on `requestAnimationFrame` in the page's: it timed out ("The element did not become interactive",
+/// chrome-devtools-mcp's click and fill). Chrome 152 tells all three observers here.
+#[tokio::test]
+async fn an_observer_a_world_makes_is_told_while_the_pages_frame_is_pending() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let port = fixture_server().await;
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Runtime.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/world") })).await;
+        c.wait_for("Page.loadEventFired", 1).await;
+        let tree = c.call("Page.getFrameTree", json!({})).await;
+        let frame = tree["result"]["frameTree"]["frame"]["id"].as_str().unwrap().to_string();
+        let world = c.call("Page.createIsolatedWorld", json!({ "frameId": frame, "worldName": "w" })).await;
+        let world = world["result"]["executionContextId"].as_i64().expect("the world's context");
+        // the page: an observer of its own, and animation frames for 300 ms, so its frame is pending throughout
+        let page = "window.__told = 'not told'; new IntersectionObserver(() => { window.__told = 'told'; }).observe(document.getElementById('p'));
+            const t = performance.now(); const tick = () => { if (performance.now() - t < 300) requestAnimationFrame(tick); }; requestAnimationFrame(tick); 1";
+        c.call("Runtime.evaluate", json!({ "expression": page })).await;
+        let observe = "Promise.race([
+            Promise.all([
+                new Promise((r) => { const o = new IntersectionObserver(() => { o.disconnect(); r('io'); }); o.observe(document.getElementById('p')); }),
+                new Promise((r) => { const o = new ResizeObserver(() => { o.disconnect(); r('ro'); }); o.observe(document.getElementById('p')); }),
+            ]).then((a) => a.join(' ')),
+            new Promise((r) => setTimeout(() => r('not told in 2 s'), 2000)),
+        ])";
+        let r = c.call("Runtime.evaluate", json!({ "expression": observe, "contextId": world, "awaitPromise": true, "returnByValue": true })).await;
+        let in_world = r["result"]["result"]["value"].clone();
+        let r = c.call("Runtime.evaluate", json!({ "expression": "window.__told", "returnByValue": true })).await;
+        let in_page = r["result"]["result"]["value"].clone();
+        c.ws.send(Message::Close(None)).await.unwrap();
+        (in_world, in_page)
+    };
+    let (server, (in_world, in_page)) = tokio::join!(server, client);
+    server.unwrap();
+    assert_eq!(in_world, json!("io ro"), "the world's observers");
+    assert_eq!(in_page, json!("told"), "the page's observer, made before the world's");
+}

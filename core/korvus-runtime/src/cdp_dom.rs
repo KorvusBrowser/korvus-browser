@@ -37,7 +37,12 @@ impl crate::Engine {
         let class_name = obj.get_constructor_name().to_rust_string_lossy(scope);
         let meta = |subtype: Option<&'static str>, description: String| ObjectMeta { kind: "object", subtype, class_name: class_name.clone(), description };
         if let Some(node) = webapi::page::node_id_of(scope, v) {
-            let description = webapi::page::node_info(scope, node).map(|n| n.description).unwrap_or_else(|| class_name.clone());
+            // a text node is `#text` to Chrome, a comment `#comment`
+            let description = webapi::page::node_info(scope, node).map(|n| n.description).unwrap_or_else(|| match webapi::page::node_type_of(scope, v) {
+                Some(3) => "#text".to_string(),
+                Some(8) => "#comment".to_string(),
+                _ => class_name.clone(),
+            });
             return Some(meta(Some("node"), description));
         }
         if let Ok(a) = v8::Local::<v8::Array>::try_from(v) {
@@ -73,8 +78,10 @@ impl crate::Engine {
         webapi::page::node_id_of(scope, v)
     }
 
-    /// A stored handle to element `node`, made in `world` (`None`: the page's own), and its id (CDP
-    /// `DOM.resolveNode`). The wrapper is the node's one canonical object, so identity holds.
+    /// A stored handle to node `node`, made in `world` (`None`: the page's own), and its id (CDP
+    /// `DOM.resolveNode`). The wrapper is the node's one canonical object, so identity holds. Any node, as Chrome
+    /// resolves one: an element, a document, a text node -- chrome-devtools-mcp's `hover` resolves the `StaticText` a
+    /// snapshot listed, whose backend node is its text (`Text`, `#text`), and was told it no longer existed.
     pub fn object_for_node(&mut self, world: Option<usize>, node: u32) -> Option<u32> {
         let global = {
             let ctx = self.runtime.main_context();
@@ -85,7 +92,9 @@ impl crate::Engine {
                 None => scope.get_current_context(),
             };
             let scope: &mut v8::PinScope = &mut v8::ContextScope::new(scope, ctx);
-            webapi::page::node_info(scope, node)?;
+            if !webapi::page::node_exists(scope, node) {
+                return None;
+            }
             let obj = webapi::page::node_object(scope, node);
             v8::Global::new(scope, obj)
         };

@@ -165,3 +165,56 @@ async fn element_handles_are_named_described_and_resolved_as_chromes() {
     let (served, ()) = tokio::join!(server, client);
     served.expect("the connection is served");
 }
+
+/// A text node is resolved, described and measured, as Chrome's is.
+///
+/// chrome-devtools-mcp's `hover` on a snapshot's `StaticText` resolves the text's backend node (`DOM.resolveNode`),
+/// which this engine refused for anything but an element or a document ("No node with given id found"), so the tool
+/// said the element no longer existed; and a text node had no quads to point at. Chrome 152 (headless, 2026-10-28):
+/// `className` `Text`, `description` `#text`, one quad over the text's line, the same in an isolated world.
+#[tokio::test]
+async fn a_text_node_is_resolved_and_measured_as_chromes_is() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let port = fixture_server().await;
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let server = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/dom-handles.html") })).await;
+        c.wait_for("Page.loadEventFired").await;
+        let tree = c.call("Accessibility.getFullAXTree", json!({})).await;
+        let text = tree["result"]["nodes"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|n| n["role"]["value"] == "StaticText" && n["name"]["value"].as_str().is_some_and(|s| !s.trim().is_empty()) && n["backendDOMNodeId"].is_number())
+            .cloned()
+            .expect("a StaticText with its text node");
+        let backend = text["backendDOMNodeId"].clone();
+
+        let resolved = c.call("DOM.resolveNode", json!({ "backendNodeId": backend })).await;
+        let obj = &resolved["result"]["object"];
+        assert_eq!((&obj["subtype"], &obj["className"], &obj["description"]), (&json!("node"), &json!("Text"), &json!("#text")), "{resolved}");
+        let oid = obj["objectId"].as_str().unwrap().to_string();
+        let what = c.call("Runtime.callFunctionOn", json!({ "objectId": oid, "functionDeclaration": "function(){ return [this.nodeType, this.isConnected] }", "returnByValue": true })).await;
+        assert_eq!(what["result"]["result"]["value"], json!([3, true]), "{what}");
+        let described = c.call("DOM.describeNode", json!({ "objectId": oid })).await;
+        assert_eq!((&described["result"]["node"]["nodeType"], &described["result"]["node"]["nodeName"]), (&json!(3), &json!("#text")), "{described}");
+
+        let quads = c.call("DOM.getContentQuads", json!({ "objectId": oid })).await;
+        let q: Vec<f64> = quads["result"]["quads"][0].as_array().unwrap_or_else(|| panic!("a quad: {quads}")).iter().map(|n| n.as_f64().unwrap()).collect();
+        assert!(q[2] > q[0] && q[5] > q[1], "the text's line has an area: {q:?}");
+
+        let frame = c.call("Page.getFrameTree", json!({})).await["result"]["frameTree"]["frame"]["id"].clone();
+        let world = c.call("Page.createIsolatedWorld", json!({ "frameId": frame, "worldName": "w" })).await;
+        let ctx = world["result"]["executionContextId"].clone();
+        let in_world = c.call("DOM.resolveNode", json!({ "backendNodeId": backend, "executionContextId": ctx })).await;
+        assert_eq!(in_world["result"]["object"]["className"], "Text", "{in_world}");
+        let _ = c.ws.close(None).await;
+    };
+    let (served, ()) = tokio::join!(server, client);
+    served.expect("the connection is served");
+}

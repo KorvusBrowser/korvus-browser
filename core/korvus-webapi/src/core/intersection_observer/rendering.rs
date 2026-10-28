@@ -238,9 +238,25 @@ pub(crate) fn next_id(scope: &mut v8::PinScope) -> u64 {
 /// realm holds a different `document` -- asked there, the page's looked stale. An `observe()` in a frame, or a frame
 /// task a frame's `requestAnimationFrame` built, then dropped every observer of the page and the pending frame's
 /// flag, and a second chain of frames began beside the first: minea's frames ran rAF every 4-7 ms (Chrome: 16.7).
+///
+/// And the page's realm answers for its isolated worlds: a world's `document` is its own wrapper of the page's
+/// document, so asked in a world the page's looked stale too. Puppeteer observes from its utility world while it waits
+/// on an animation frame in the page's: the world's `observe()` dropped the page's observers and its pending frame,
+/// that frame dropped the world's when it ran, and `locator.click()` waited for an observation until it timed out.
 fn forget_stale_document(scope: &mut v8::PinScope) {
     if crate::core::html::browsing_context::realm_ctx(scope).is_some() {
         return;
+    }
+    match crate::core::html::isolated_world::current_document_owner(scope) {
+        // a world over a frame's document stands for that frame
+        Some(Some(_)) => return,
+        Some(None) => {
+            let main = crate::core::html::browsing_context::main_context(scope);
+            let scope = &mut v8::ContextScope::new(scope, main);
+            forget_stale_document(scope);
+            return;
+        }
+        None => {}
     }
     // The window's `document` accessor, not the memoised `document_val`: the memo outlives a
     // navigation, the accessor answers the document `install_document` minted for it.

@@ -1193,6 +1193,9 @@ fn permission_name(p: &str) -> String {
     }
 }
 
+/// The `Browser` window commands a page's session may send, answered by the router as on the browser's (see `on_client`).
+const PAGE_WINDOW_COMMANDS: &[&str] = &["Browser.getWindowForTarget", "Browser.getWindowBounds", "Browser.setWindowBounds", "Browser.setContentsSize"];
+
 fn fail(message: &str) -> Answer {
     (Err(RpcError::server(message.into())), Vec::new(), Vec::new(), false)
 }
@@ -1901,6 +1904,22 @@ impl Browser {
             _ => None,
         };
         let route = if browser_session.is_some() { None } else { route };
+        // A page session's window commands are the browser's too, answered on that session, as Chrome answers them:
+        // Puppeteer's `page.resize()` sends `Browser.getWindowForTarget` with no target, then `Browser.setContentsSize`,
+        // on the page's session (chrome-devtools-mcp's `resize_page`). The window it names by no target is its page's.
+        let mut params = params;
+        let (route, browser_session) = match route {
+            Some((Session::Page(tid), sess)) if PAGE_WINDOW_COMMANDS.contains(&method.as_str()) => {
+                if method == "Browser.getWindowForTarget" && params.get("targetId").is_none() {
+                    if !params.is_object() {
+                        params = json!({});
+                    }
+                    params["targetId"] = json!(tid);
+                }
+                (None, sess)
+            }
+            r => (r, browser_session),
+        };
         if let Some((to, sess)) = route {
             // `Korvus.*` is the router's own channel to a page's process (`Korvus.setWindowBounds`); a client's is not
             // relayed, and is refused as any domain the engine does not have -- but for the page methods a client has.
@@ -2030,6 +2049,23 @@ impl Browser {
             }
         }
         close
+    }
+
+    /// Bounds a client set on window `wid` (`Browser.setWindowBounds`, `Browser.setContentsSize`): kept for the window,
+    /// and handed its page's process, which sizes its window from them (D75) -- its viewport, layout, `resize` and frames
+    /// follow. The process's answer is the router's own (an id no client holds), dropped when it comes back.
+    fn set_window_bounds(&mut self, wid: u64, b: &serde_json::Map<String, Value>) -> Answer {
+        let cid = self.next_child_id;
+        let Some(t) = self.targets.iter_mut().find(|t| u64::from(t.window_id) == wid) else {
+            return fail("Browser window not found");
+        };
+        for (k, v) in b {
+            t.bounds[k] = v.clone();
+        }
+        let cmd = json!({ "id": cid, "method": "Korvus.setWindowBounds", "params": { "bounds": t.bounds } });
+        let _ = t.to_child.send(cmd.to_string());
+        self.next_child_id += 1;
+        (Ok(json!({})), Vec::new(), Vec::new(), false)
     }
 
     /// `Target.createTarget`: the process starts off the actor, and the answer follows when it listens.
@@ -2281,19 +2317,57 @@ impl Browser {
                 if state != "normal" && ["left", "top", "width", "height"].iter().any(|k| b.contains_key(*k)) {
                     return fail("The 'minimized', 'maximized' and 'fullscreen' states cannot be combined with 'left', 'top', 'width' or 'height'");
                 }
-                let cid = self.next_child_id;
-                let Some(t) = wid.and_then(|wid| self.targets.iter_mut().find(|t| u64::from(t.window_id) == wid)) else {
+                match wid {
+                    Some(wid) => self.set_window_bounds(wid, b),
+                    None => fail("Browser window not found"),
+                }
+            }
+            "Browser.getWindowBounds" => {
+                let Some(wid) = params.get("windowId").and_then(Value::as_u64) else {
+                    return (Err(RpcError::invalid_params("Invalid parameters".to_string())), Vec::new(), Vec::new(), false);
+                };
+                match self.targets.iter().find(|t| u64::from(t.window_id) == wid && self.sees(client, &t.context)) {
+                    Some(t) => ok(json!({ "bounds": t.bounds })),
+                    None => fail("Browser window not found"),
+                }
+            }
+            // The window sized so its viewport is `width` x `height`, its own frame kept around it (Puppeteer's
+            // `page.resize()`, chrome-devtools-mcp's `resize_page`). The frame is the persona's, as the page's process
+            // keeps it under `setWindowBounds` (D75). Chrome 152: 1000 x 700 on a 1534 x 910 window whose viewport was
+            // 1534 x 823 made it 1000 x 787.
+            "Browser.setContentsSize" => {
+                let invalid = |m: &str| (Err(RpcError::invalid_params(m.to_string())), Vec::new(), Vec::new(), false);
+                let int = |k: &str| match params.get(k) {
+                    None | Some(Value::Null) => Ok(None),
+                    Some(v) => v.as_i64().filter(|n| i32::try_from(*n).is_ok()).map(Some).ok_or(()),
+                };
+                let (Some(wid), Ok(width), Ok(height)) = (params.get("windowId").and_then(Value::as_u64), int("width"), int("height")) else {
+                    return invalid("Invalid parameters");
+                };
+                if width.is_none() && height.is_none() {
+                    return invalid("At least one of 'width' or 'height' must be specified");
+                }
+                for (k, v) in [("width", width), ("height", height)] {
+                    if v.is_some_and(|n| n <= 0) {
+                        return invalid(&format!("Contents '{k}' must be a positive value"));
+                    }
+                }
+                let Some(t) = self.targets.iter().find(|t| u64::from(t.window_id) == wid && self.sees(client, &t.context)) else {
                     return fail("Browser window not found");
                 };
-                for (k, v) in b {
-                    t.bounds[k] = v.clone();
+                if t.bounds["windowState"] != "normal" {
+                    return fail("Restore window to normal state before setting content size");
                 }
-                // The page's process sizes its window from them (D75): its viewport, layout, `resize` and frames
-                // follow. The answer is the router's own (an id no client holds), dropped when it comes back.
-                let cmd = json!({ "id": cid, "method": "Korvus.setWindowBounds", "params": { "bounds": t.bounds } });
-                let _ = t.to_child.send(cmd.to_string());
-                self.next_child_id += 1;
-                ok(json!({}))
+                let s = self.persona.screen();
+                let frame = |outer: u32, inner: u32| if outer > 0 && inner > 0 { i64::from(outer.saturating_sub(inner)) } else { 0 };
+                let mut b = serde_json::Map::new();
+                if let Some(w) = width {
+                    b.insert("width".into(), json!(w + frame(s.window_outer_width, s.window_inner_width)));
+                }
+                if let Some(h) = height {
+                    b.insert("height".into(), json!(h + frame(s.window_outer_height, s.window_inner_height)));
+                }
+                self.set_window_bounds(wid, &b)
             }
             "Target.getBrowserContexts" => {
                 let home = self.clients.get(&client).map(|c| c.home.clone()).unwrap_or_default();

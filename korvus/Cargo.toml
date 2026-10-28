@@ -44,3 +44,8 @@ toml = "0.8"
 # A named persona's profile (`store.bin`, the context store's bincode rows) for `korvus persona export|import`; the
 # workspace's one bincode.
 bincode = "=1.3.3"
+
+[dev-dependencies]
+# `tests/window.rs` drives `korvus serve`'s browser endpoint over CDP as a client does (korvus-cdp's own versions).
+tokio-tungstenite = "0.24"
+futures-util = "0.3"

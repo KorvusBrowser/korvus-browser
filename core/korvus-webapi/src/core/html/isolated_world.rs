@@ -74,6 +74,13 @@ pub(crate) fn current(scope: &mut v8::PinScope, op_state: &Rc<RefCell<OpState>>)
     worlds.list.iter().position(|w| v8::Local::new(scope, &w.context) == running)
 }
 
+/// Is a world running, and over whose document: `Some(None)` the page's, `Some(Some(frame))` a frame's.
+pub(crate) fn current_document_owner(scope: &mut v8::PinScope) -> Option<Option<u32>> {
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let world = current(scope, &op_state)?;
+    Some(world_frame(&op_state, world))
+}
+
 /// World `world`'s object for node `id`: the one it made before, or a new one of its own prototypes. Called with the
 /// world's context running.
 pub(crate) fn wrap<'s>(scope: &mut v8::PinScope<'s, '_>, op_state: &Rc<RefCell<OpState>>, world: usize, id: u32) -> Option<v8::Local<'s, v8::Object>> {

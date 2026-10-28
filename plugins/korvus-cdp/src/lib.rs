@@ -2691,6 +2691,14 @@ async fn dispatch(
             spec::devtools::set_geolocation(None);
             (Ok(json!({})), vec![])
         }
+        // CPU throttling: chrome-devtools-mcp's `emulate` sets a rate on every call, 1 when it emulates none. This engine
+        // slows no page down, so a rate of 1 or less -- no throttling, as Chrome takes it -- is what it does already;
+        // a higher one is refused rather than accepted and not applied.
+        "Emulation.setCPUThrottlingRate" => match params.get("rate").and_then(Value::as_f64) {
+            None => (Err(RpcError::invalid_params("Invalid parameters".to_string())), vec![]),
+            Some(r) if r <= 1.0 => (Ok(json!({})), vec![]),
+            Some(_) => (Err(RpcError::server("CPU throttling is not supported".to_string())), vec![]),
+        },
         // The colour under the page in its pictures (`screenshot({omitBackground})` sends one with no alpha).
         "Emulation.setDefaultBackgroundColorOverride" => {
             let c = params.get("color").filter(|c| c.is_object()).map(|c| {

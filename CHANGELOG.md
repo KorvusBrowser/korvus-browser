@@ -4,6 +4,15 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- Puppeteer's locators (`locator.click()`, `fill()`, `select()`) and chrome-devtools-mcp's `click`, `fill` and
+  `fill_form` work: the observer Puppeteer's isolated world makes to see an element in the viewport was dropped the
+  first time the page's own script ran a frame, so a locator waited until it timed out ("did not become
+  interactive"). chrome-devtools-mcp's `hover` works too: `DOM.resolveNode` resolves a text node (a snapshot's
+  `StaticText`) and `DOM.getContentQuads` measures one, as Chrome does.
+- A page's session answers the browser's window commands as Chrome's does (`Browser.getWindowForTarget` with no target
+  is the page's own window), and `Browser.setContentsSize` and `Browser.getWindowBounds` are answered, so Puppeteer's
+  `page.resize()` (chrome-devtools-mcp's `resize_page`) sizes the viewport. `Emulation.setCPUThrottlingRate` takes a
+  rate that throttles nothing (1 or less) and refuses a higher one rather than ignoring it.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
