@@ -2846,6 +2846,10 @@ pub struct RequestRecord {
     /// load priority Blink gave the request, in the one spelling that reaches the wire;
     /// `Network.requestWillBeSent`'s `initialPriority` is read from it.
     pub priority: Option<String>,
+    /// The request was sent with a body (`Network.Request.hasPostData`); the bytes, while kept, are [`request_body`]'s.
+    /// Not in the `--requests` line, which predates it.
+    #[serde(skip)]
+    pub has_post_data: bool,
 }
 
 /// One redirect a request followed: the hop that got a redirect response, and the hop it led to.
@@ -2909,15 +2913,34 @@ pub fn net_error_name(e: &anyhow::Error) -> String {
     "net::ERR_FAILED".into()
 }
 
-/// The response bodies a DevTools client may still ask for (`Network.getResponseBody`), by ledger row: kept only
-/// while a client has the `Network` domain on ([`keep_bodies`]), the oldest dropped past [`BODY_CAP`] bytes.
+/// The bodies a DevTools client may still ask for, by ledger row -- the responses' (`Network.getResponseBody`) and the
+/// requests' (`Network.requestWillBeSent`'s `postData`, `Network.getRequestPostData`), one store each: kept only while
+/// a client has the `Network` domain on ([`keep_bodies`]), the oldest dropped past [`BODY_CAP`] bytes.
 #[derive(Default)]
 struct Bodies {
     rows: std::collections::VecDeque<(u64, std::sync::Arc<Vec<u8>>)>,
     total: usize,
 }
 
-/// How many body bytes are kept at most for `Network.getResponseBody`.
+impl Bodies {
+    fn keep(&mut self, id: u64, bytes: &[u8]) {
+        self.rows.retain(|(r, _)| *r != id);
+        self.total += bytes.len();
+        self.rows.push_back((id, std::sync::Arc::new(bytes.to_vec())));
+        while self.total > BODY_CAP {
+            match self.rows.pop_front() {
+                Some((_, old)) => self.total -= old.len(),
+                None => break,
+            }
+        }
+    }
+
+    fn get(&self, id: u64) -> Option<std::sync::Arc<Vec<u8>>> {
+        self.rows.iter().find(|(r, _)| *r == id).map(|(_, b)| b.clone())
+    }
+}
+
+/// How many body bytes each store keeps at most.
 const BODY_CAP: usize = 64 * 1024 * 1024;
 
 static KEEP_BODIES: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
@@ -2927,33 +2950,37 @@ fn bodies() -> &'static Mutex<Bodies> {
     B.get_or_init(Default::default)
 }
 
-/// Keep each response's body for `Network.getResponseBody` (a client enabled `Network`), or stop and drop them.
+fn request_bodies() -> &'static Mutex<Bodies> {
+    static B: OnceLock<Mutex<Bodies>> = OnceLock::new();
+    B.get_or_init(Default::default)
+}
+
+/// Keep each request's and response's body for a DevTools client (it enabled `Network`), or stop and drop them.
 pub fn keep_bodies(on: bool) {
     KEEP_BODIES.store(on, std::sync::atomic::Ordering::Relaxed);
     if !on {
         *bodies().lock().unwrap_or_else(|e| e.into_inner()) = Bodies::default();
+        *request_bodies().lock().unwrap_or_else(|e| e.into_inner()) = Bodies::default();
     }
 }
 
-fn store_body(id: u64, bytes: &[u8]) {
+fn store_body(store: &Mutex<Bodies>, id: u64, bytes: &[u8]) {
     if !KEEP_BODIES.load(std::sync::atomic::Ordering::Relaxed) || bytes.len() > BODY_CAP {
         return;
     }
-    let mut b = bodies().lock().unwrap_or_else(|e| e.into_inner());
-    b.rows.retain(|(r, _)| *r != id);
-    b.total += bytes.len();
-    b.rows.push_back((id, std::sync::Arc::new(bytes.to_vec())));
-    while b.total > BODY_CAP {
-        match b.rows.pop_front() {
-            Some((_, old)) => b.total -= old.len(),
-            None => break,
-        }
-    }
+    store.lock().unwrap_or_else(|e| e.into_inner()).keep(id, bytes);
 }
 
 /// The body ledger row `id`'s response came with, when it is still kept.
 pub fn response_body(id: u64) -> Option<std::sync::Arc<Vec<u8>>> {
-    bodies().lock().unwrap_or_else(|e| e.into_inner()).rows.iter().find(|(r, _)| *r == id).map(|(_, b)| b.clone())
+    bodies().lock().unwrap_or_else(|e| e.into_inner()).get(id)
+}
+
+/// The body ledger row `id`'s request was sent with (the page's `fetch`/XHR body, a form's), when it is still kept:
+/// what a client that records what a page signed reads back (`postData`, `Network.getRequestPostData`). A request
+/// with a body says so in [`RequestRecord::has_post_data`] whether or not it is kept.
+pub fn request_body(id: u64) -> Option<std::sync::Arc<Vec<u8>>> {
+    request_bodies().lock().unwrap_or_else(|e| e.into_inner()).get(id)
 }
 
 /// The transport's record of every request it performed since the last [`ledger_reset`].
@@ -3012,7 +3039,11 @@ impl RequestLedger {
                 blocked_reason: None,
                 reporter: req.reporter.clone(),
                 priority: chromium_priority(req),
+                has_post_data: req.body.as_ref().is_some_and(|b| !b.is_empty()),
             });
+        }
+        if let Some(body) = req.body.as_deref().filter(|b| !b.is_empty()) {
+            store_body(request_bodies(), id, body);
         }
         id
     }
@@ -3035,7 +3066,7 @@ impl RequestLedger {
         r.ms = ms;
         match out {
             Ok(resp) => {
-                store_body(id, &resp.bytes);
+                store_body(bodies(), id, &resp.bytes);
                 // a 304 confirmed a stored answer: the wire said 304 (DevTools does), the page reads the stored one
                 r.status = Some(if resp.timing.cache == "validated" { 304 } else { resp.status });
                 r.status_text = resp.status_text.clone();

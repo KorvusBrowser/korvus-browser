@@ -306,6 +306,20 @@ pub fn hop_request_event(r: &transport::RequestRecord, hop: Option<usize>, ctx: 
         "type": ty,
         "hasUserGesture": false
     });
+    // The body it was sent with, as Chrome 150 reports a `fetch()` POST's (measured: a JSON string, four binary bytes,
+    // a `URLSearchParams`, a `FormData`, 64 KiB and 1 MiB alike): `hasPostData`, the bytes in one `postDataEntries`
+    // entry, and `postData` as their text -- UTF-8, else a byte a character, as `\u0000\u0001\u0002\u00ff` read back.
+    // A redirect that turned the request into a GET dropped it. Bytes no longer kept (the client turned `Network` off
+    // meanwhile, or past the store's cap) leave `hasPostData` alone, as a `Blob` body's does in Chrome.
+    let method_keeps_body = !matches!(method, "GET" | "HEAD");
+    if r.has_post_data && method_keeps_body {
+        params["request"]["hasPostData"] = json!(true);
+        if let Some(body) = transport::request_body(r.id) {
+            use base64::Engine as _;
+            params["request"]["postData"] = json!(post_data_text(&body));
+            params["request"]["postDataEntries"] = json!([{ "bytes": base64::engine::general_purpose::STANDARD.encode(&*body) }]);
+        }
+    }
     if let Some(h) = led {
         // The redirect response, as the hop that got it reports it. Its body is not read, so its measured length
         // is none.
@@ -325,6 +339,14 @@ pub fn hop_request_event(r: &transport::RequestRecord, hop: Option<usize>, ctx: 
         params["frameId"] = json!(ctx.frame_id);
     }
     json!({ "method": "Network.requestWillBeSent", "params": params })
+}
+
+/// A request body as `Network.Request.postData` writes it: its text when it is UTF-8, else one character per byte.
+pub(crate) fn post_data_text(body: &[u8]) -> String {
+    match std::str::from_utf8(body) {
+        Ok(text) => text.to_string(),
+        Err(_) => body.iter().map(|&b| char::from(b)).collect(),
+    }
 }
 
 /// `Network.Request.initialPriority`: Blink's load priority, read back off the h2 `priority` field the
@@ -753,6 +775,7 @@ mod tests {
             blocked_reason: None,
             reporter: Default::default(),
             priority: None,
+            has_post_data: false,
         }
     }
 

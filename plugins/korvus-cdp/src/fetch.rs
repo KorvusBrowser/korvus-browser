@@ -697,7 +697,7 @@ fn paused_event(a: &Announce, network_id: Option<String>, frame_id: Option<Strin
     }
     let mut request = json!({ "url": r.url, "method": r.method, "headers": Value::Object(headers) });
     if let Some(body) = r.body.as_ref().filter(|b| !b.is_empty()) {
-        request["postData"] = json!(String::from_utf8_lossy(body));
+        request["postData"] = json!(network::post_data_text(body));
         request["hasPostData"] = json!(true);
         request["postDataEntries"] = json!([{ "bytes": base64::engine::general_purpose::STANDARD.encode(body) }]);
     }

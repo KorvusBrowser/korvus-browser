@@ -72,6 +72,7 @@ fn fixture(path: &str, other_port: u16) -> Option<Fixture> {
         "/slow-a.js" => ok("text/javascript", b"log('async-slow')".to_vec()),
         "/quiet.html" => html(b"<!doctype html><title>quiet</title><p>nothing scheduled</p>".to_vec()),
         "/leave-a.html" => html(LEAVE_A.as_bytes().to_vec()),
+        "/posts.html" => html(POSTS.as_bytes().to_vec()),
         "/leave-b.html" => html(b"<!doctype html><title>leave-b</title><script>console.log('b-loaded')</script>".to_vec()),
         "/idletimer.html" => html(b"<!doctype html><title>start</title><script>setTimeout(()=>{document.title='fired'},300)</script>".to_vec()),
         "/mr0.html" => html(page("mr0", r#"<meta http-equiv=refresh content="0; url=target.html">"#, "")),
@@ -1232,4 +1233,82 @@ async fn what_a_document_logs_as_it_is_left_is_what_chrome_reports() {
         })
         .collect();
     assert_eq!(got, seq("FSN leave-b.html | FSL | LOG a-beforeunload @A | ECC | ECC | FN leave-b.html | CTX @B | LOG b-loaded @B"));
+}
+
+/// A page's `fetch()`es with bodies of each kind, and one without.
+const POSTS: &str = "<!doctype html><title>posts</title><script>
+fetch('/sink-json',{method:'POST',headers:{'Content-Type':'application/json'},body:'{\"a\":1}'});
+fetch('/sink-bin',{method:'POST',body:new Uint8Array([0,1,2,255])});
+fetch('/sink-form',{method:'POST',body:new URLSearchParams({q:'x y'})});
+fetch('/sink-get');
+</script>";
+
+/// The body a request was sent with, over CDP `Network`: a client that records what a page signed reads it back, and
+/// a signature that covers the body is checked against it. Stock Chrome 150.0.7871.46 (`--headless=new`, `POSTS`,
+/// `Network.enable`): each POST's `requestWillBeSent` carries `hasPostData`, `postData` (UTF-8 text, else a byte a
+/// character) and one `postDataEntries` entry of its bytes; `Network.getRequestPostData` answers the text, or base64 for
+/// bytes that are not UTF-8; a GET carries none of the three and has no post data to ask for.
+#[tokio::test]
+async fn a_request_body_is_reported_as_chrome_reports_it() {
+    let _turn = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let a = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let pa = a.local_addr().unwrap().port();
+    tokio::spawn(serve_fixtures(a, pa));
+    let cdp_listener = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let cdp_addr = cdp_listener.local_addr().unwrap();
+    let server = cdp::serve_connection(cdp_listener, Engine::new(Box::new(persona::CapturedPersona::default())));
+    let client = async move {
+        let ws = tokio_tungstenite::connect_async(format!("ws://{cdp_addr}/devtools/page/x")).await.unwrap().0;
+        let mut c = Client { ws, next: 0, events: Vec::new() };
+        c.call("Page.enable", json!({})).await;
+        c.call("Network.enable", json!({})).await;
+        c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{pa}/posts.html") })).await;
+        c.pump(Duration::from_millis(300)).await;
+        let sent: Vec<(String, Value)> = c
+            .events
+            .iter()
+            .filter(|(_, e)| e["method"] == "Network.requestWillBeSent")
+            .filter_map(|(_, e)| {
+                let file = e["params"]["request"]["url"].as_str()?.rsplit('/').next()?.to_string();
+                file.starts_with("sink-").then(|| (file, e["params"].clone()))
+            })
+            .collect();
+        let mut out = Vec::new();
+        for (file, p) in sent {
+            c.next += 1;
+            let id = c.next;
+            let ask = json!({ "id": id, "method": "Network.getRequestPostData", "params": { "requestId": p["requestId"] } });
+            c.ws.send(Message::Text(ask.to_string())).await.unwrap();
+            let answer = loop {
+                let Some(Ok(Message::Text(t))) = c.ws.next().await else { panic!("the socket closed") };
+                let v: Value = serde_json::from_str(&t).unwrap();
+                if v["id"] == id {
+                    break v;
+                }
+            };
+            out.push((file, p["request"].clone(), answer));
+        }
+        c.ws.send(Message::Close(None)).await.unwrap();
+        out
+    };
+    let (server, mut seen) = tokio::join!(server, client);
+    server.unwrap();
+    seen.sort_by(|a, b| a.0.cmp(&b.0));
+    let files: Vec<&str> = seen.iter().map(|(f, _, _)| f.as_str()).collect();
+    assert_eq!(files, ["sink-bin", "sink-form", "sink-get", "sink-json"]);
+    for (file, request, answer) in &seen {
+        let body = |k: &str| request.get(k).cloned().unwrap_or(Value::Null);
+        let (want_text, want_bytes, want_answer) = match file.as_str() {
+            "sink-json" => (json!("{\"a\":1}"), json!([{ "bytes": "eyJhIjoxfQ==" }]), json!({ "postData": "{\"a\":1}", "base64Encoded": false })),
+            "sink-bin" => (json!("\u{0}\u{1}\u{2}\u{ff}"), json!([{ "bytes": "AAEC/w==" }]), json!({ "postData": "AAEC/w==", "base64Encoded": true })),
+            "sink-form" => (json!("q=x+y"), json!([{ "bytes": "cT14K3k=" }]), json!({ "postData": "q=x+y", "base64Encoded": false })),
+            _ => {
+                assert_eq!((body("hasPostData"), body("postData"), body("postDataEntries")), (Value::Null, Value::Null, Value::Null), "{file}");
+                assert_eq!(answer["error"]["message"], "No post data available for the request", "{file}");
+                continue;
+            }
+        };
+        assert_eq!((body("hasPostData"), body("postData"), body("postDataEntries")), (json!(true), want_text, want_bytes), "{file}");
+        assert_eq!(answer["result"], want_answer, "{file}");
+    }
 }

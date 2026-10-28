@@ -2548,6 +2548,28 @@ async fn dispatch(
             }
         }
 
+        // The body a request was sent with, as Chrome 150 answers it: its text when it is UTF-8 (`base64Encoded`
+        // false), else base64 -- `{"a":1}` as itself, four binary bytes as `AAEC/w==`; a request that had none, or
+        // whose bytes are no longer kept, "No post data available for the request".
+        "Network.getRequestPostData" => {
+            let rid = params.get("requestId").and_then(Value::as_str).unwrap_or("");
+            let row = if rid == ids.loader_id() {
+                transport::ledger().records().into_iter().find(|r| r.kind == "document").map(|r| r.id)
+            } else {
+                rid.rsplit_once('.').and_then(|(_, n)| n.parse::<u64>().ok())
+            };
+            match row.and_then(transport::request_body) {
+                Some(body) => match std::str::from_utf8(&body) {
+                    Ok(text) => (Ok(json!({ "postData": text, "base64Encoded": false })), vec![]),
+                    Err(_) => {
+                        use base64::Engine as _;
+                        (Ok(json!({ "postData": base64::engine::general_purpose::STANDARD.encode(&*body), "base64Encoded": true })), vec![])
+                    }
+                },
+                None => (Err(RpcError::server("No post data available for the request".to_string())), vec![]),
+            }
+        }
+
         // Headers every request of the page carries from now on, over its own of the same name (`Network.Headers`, an
         // object of name -> value).
         "Network.setExtraHTTPHeaders" => {
