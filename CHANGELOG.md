@@ -4,19 +4,6 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
-- A CDP `Accessibility` domain: `getFullAXTree` (with `depth` and `frameId`), `getPartialAXTree`, `queryAXTree`,
-  `getRootAXNode`, `getChildAXNodes` and `getAXNodeAndAncestors` answer the page's accessibility tree as Chrome builds
-  it: each element's role, name, description, value and states, the nodes Chrome keeps as ignored, and text as its
-  lines lay it out. On a page with every HTML element and ARIA role, the tree a client reads matches Chrome 150's
-  node for node. Stagehand's `act`, `observe` and `extract`, Puppeteer's `page.accessibility.snapshot()` and its
-  `aria/` selectors now work against korvus.
-- `DOM.getDocument` and `DOM.describeNode` honour `depth` and `pierce` (shadow roots and frame documents), so a client
-  can read the whole DOM tree in one call, and `DOM.querySelector`, `querySelectorAll`, `requestNode` and
-  `getNodeForLocation` are answered.
-- `Page.navigateToHistoryEntry` goes back or forward at once, as Chrome does: the next command finds the tab at the
-  entry it was sent to. It used to wait a round trip first, so a client reading the URL straight after going back
-  read the page it had left, and one going back and then straight forward (Stagehand's `goBack()`, `goForward()`)
-  found nothing ahead.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
@@ -50,6 +37,48 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 - `worker.evaluate` and a worker's console messages; `page.setContent`; `page.pdf()`; HTML drag and drop (`dragTo`);
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
+
+## v152.0.5
+
+- A second navigation no longer ends the page's process when the page being left logged something as it went (a
+  console message, an error in its `unload`); what it logged is reported as Chrome reports it.
+- `Network.requestWillBeSent` carries a request's body (`hasPostData`, `postData`, `postDataEntries`) and
+  `Network.getRequestPostData` answers it, so a client sees what a form or a `fetch()` POSTed.
+- `Runtime.evaluate` honours `timeout`: a script that runs past it is stopped ("Execution was terminated") and the page
+  runs on. An awaited promise is not cut short by it, as in Chrome.
+- `korvus fetch --timeout` bounds the whole run, the load included: a page still waiting on the network when the
+  deadline falls due is printed as it stands, as headless Chrome's `--timeout` does, and the run ends.
+- `korvus <command> --help` says what the command takes and runs nothing (`korvus serve --help` started a server).
+- The macOS persona's `sec-ch-ua` and `navigator.userAgentData` list "Google Chrome" beside Chromium, as Google Chrome
+  does, and its speech voices are Google Chrome's: it had been captured from Chrome for Testing, which lists Chromium
+  alone.
+- `korvus setup` installs what the stealth identity needs to follow a proxy: DB-IP's IP-to-city database ("IP
+  Geolocation by DB-IP", CC BY 4.0), fetched from db-ip.com under `~/.korvus/geo/`, so a persona's time zone and
+  locale are those of where its proxy exits. The installers run it; `korvus setup --plugins` runs it again. Without
+  the database, a context behind a proxy is refused with the reason, rather than given a time zone its IP
+  contradicts.
+- `Korvus.getIdentity` on a page's session: the headers its requests carry (`sec-ch-ua`, `user-agent`,
+  `accept-language` and the rest, in their order), the client hints, the TLS and HTTP/2 preset, the proxy, the time
+  zone, the locale and the context's cookies -- what a client needs to carry a session on with an HTTP client of its
+  own, wearing the same identity.
+- `encodedDataLength` (`Network.responseReceived`, `Network.loadingFinished`) is the body as it came over the wire,
+  still compressed, not its decoded length; `--requests` gives both (`bytes`, `encoded_bytes`).
+- `--max-heap <MB>` caps each page's JavaScript heap, so a machine running many sessions knows what each may take.
+- Plugin ABI 5: `setup` (what `korvus setup` asks of a plugin), `refuse_context` (a new context a plugin cannot serve,
+  refused with its reason) and `host->download` (korvus's own GET of a file).
+- A CDP `Accessibility` domain: `getFullAXTree` (with `depth` and `frameId`), `getPartialAXTree`, `queryAXTree`,
+  `getRootAXNode`, `getChildAXNodes` and `getAXNodeAndAncestors` answer the page's accessibility tree as Chrome builds
+  it: each element's role, name, description, value and states, the nodes Chrome keeps as ignored, and text as its
+  lines lay it out. On a page with every HTML element and ARIA role, the tree a client reads matches Chrome 150's
+  node for node. Stagehand's `act`, `observe` and `extract`, Puppeteer's `page.accessibility.snapshot()` and its
+  `aria/` selectors now work against korvus.
+- `DOM.getDocument` and `DOM.describeNode` honour `depth` and `pierce` (shadow roots and frame documents), so a client
+  can read the whole DOM tree in one call, and `DOM.querySelector`, `querySelectorAll`, `requestNode` and
+  `getNodeForLocation` are answered.
+- `Page.navigateToHistoryEntry` goes back or forward at once, as Chrome does: the next command finds the tab at the
+  entry it was sent to. It used to wait a round trip first, so a client reading the URL straight after going back
+  read the page it had left, and one going back and then straight forward (Stagehand's `goBack()`, `goForward()`)
+  found nothing ahead.
 
 ## v152.0.4
 
