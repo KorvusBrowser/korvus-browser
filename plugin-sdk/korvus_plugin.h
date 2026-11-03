@@ -11,7 +11,8 @@
 //
 // SLOTS. Each is optional; a NULL callback means "this plugin does not fill that slot".
 //
-//   rotation, device, identity   asked when a browser context is made, in the endpoint's process (the router)
+//   rotation, device, identity   asked when a browser context is made, in the endpoint's process (the router), on a
+//                                thread of the context's own: two contexts made at once are asked at once
 //   on_call                      Web API answers: the exit of every member the plugin claims in `labels`
 //   on_request, on_response      the network: before each request hop, after each response
 //   plan_move, type_text,        input: the mouse paths, keystrokes and wheel steps a CDP client's input becomes when

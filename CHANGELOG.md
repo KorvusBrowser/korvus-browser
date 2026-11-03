@@ -4,6 +4,11 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- Contexts made at once no longer wait on each other. `Target.createBrowserContext` asked the plugins for a proxied
+  context's identity on the endpoint's one thread, and that answer waits on the network (its time zone and locale follow
+  where the proxy exits, up to 10 s through a proxy that does not answer): three contexts behind a dead proxy held the
+  whole endpoint 30 s, every other context's pages with them. Each context's identity is drawn on a thread of its own
+  now; the three answer together in 10 s and the endpoint's other sessions run on untouched.
 - Puppeteer's locators (`locator.click()`, `fill()`, `select()`) and chrome-devtools-mcp's `click`, `fill` and
   `fill_form` work: the observer Puppeteer's isolated world makes to see an element in the viewport was dropped the
   first time the page's own script ran a frame, so a locator waited until it timed out ("did not become

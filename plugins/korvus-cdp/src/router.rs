@@ -340,6 +340,37 @@ pub fn drawn(spec: &ContextSpec) -> Option<Drawn> {
     Some(Drawn { seed, name: rotation.map(|r| r.1).filter(|n| !n.is_empty()), device: parse(device), identity: parse(identity) })
 }
 
+/// What the loaded plugins make of a new context's spec, once the actor made its part ([`Browser::context_spec`]): a
+/// proxy they choose, a refusal, the identity they draw ([`drawn`]). The answers can wait on the network (the
+/// identity's zone and locale follow where a proxy exits, [`exit_ip`]: up to 10 s for a proxy that does not answer), so
+/// a `createBrowserContext` asks them off the actor (`Browser::create_context`); a plugin is thread-safe (the header).
+fn settle_context(mut spec: ContextSpec) -> anyhow::Result<ContextSpec> {
+    // D2 (goal 1021 step 10, 4.2): a plugin may CHOOSE this context's proxy as it is made. When one answers,
+    // that proxy becomes the context's own -- written to the spec, so every page process of the context routes
+    // ALL of the context's traffic through it (the transport AND, with it, WebRTC/ICE: a page process's
+    // `apply_context` sets the proxy environment, which both the transport's clients and `ice::proxied` read),
+    // not per-request. This is the context-level proxy that closes the 1020 "4.5 per-request-proxy leak": a
+    // per-request `req_set_proxy` never reaches ICE, but a context's proxy does. The context's own configured
+    // bypass list carries over to the chosen proxy. Off entirely with no choose_proxy plugin (the slot is then
+    // never asked and the context keeps its configured proxy -- invariants I2/J2). Chosen before `drawn` below,
+    // so the identity is drawn against the proxy the context actually exits through.
+    // TODO(1021-verify): two judgment calls here -- (1) choose_proxy runs BEFORE `drawn`, so the exit-IP lookup
+    // and persona are drawn against the CHOSEN proxy (the proxy the context uses), not its configured one;
+    // (2) the chosen proxy inherits the configured proxy's bypass list. Confirm the owner wants both.
+    if plugin_host::has_choose_proxy() {
+        let info = context_info(&spec, String::new());
+        if let Some(server) = plugin_host::choose_proxy(&info) {
+            let bypass = spec.proxy.as_ref().and_then(|p| p.bypass.clone());
+            spec.proxy = Some(ProxySpec { server, bypass });
+        }
+    }
+    if let Some(why) = refused(&spec) {
+        anyhow::bail!("{why}");
+    }
+    spec.drawn = drawn(&spec);
+    Ok(spec)
+}
+
 /// Where a proxied context's proxy exits, for the identity's slots (a persona's zone and locale follow it): asked of an
 /// IP echo through the proxy (`$KORVUS_IP_ECHO`, else `https://api.ipify.org`) when the context asks for no identity
 /// of korvus's own and states no zone or locale of its own. "" when it has no proxy, or the echo does not answer.
@@ -506,6 +537,12 @@ struct PopupJob {
     opener_origin: String,
 }
 
+/// A new context's spec and the profile its store loads, between the actor's part and its commit.
+struct Made {
+    spec: ContextSpec,
+    profile: Option<PathBuf>,
+}
+
 /// Everything the browser's actor hears.
 enum Ev {
     /// An HTTP discovery request: the answer's body.
@@ -517,6 +554,8 @@ enum Ev {
     Gone { client: u64 },
     Child { target: String, ev: FromChild },
     Spawned { job: Job, result: Result<Target, String> },
+    /// A `createBrowserContext`'s plugins answered (`Browser::create_context`): the context to commit, or why not.
+    ContextMade { client: u64, id: Value, session: Option<String>, dispose: bool, result: Result<Made, String> },
     /// A page process's plugins recorded metrics (plugin ABI 3, A6): a JSON array of `{name, value, labels}`.
     Metric { target: String, json: String },
     /// A page process's popup line (D74 step 3): its prefix and its JSON.
@@ -1297,9 +1336,56 @@ impl Browser {
     }
 
     /// A context begins: its spec is written for its page processes and its slots open in the store.
-    fn add_context(&mut self, id: String, kind: Kind, owner: Option<u64>, dispose_on_detach: bool, mut spec: ContextSpec) -> anyhow::Result<()> {
-        spec.context = id.clone();
-        spec.store = Some(self.store.endpoint(&id));
+    fn add_context(&mut self, id: String, kind: Kind, owner: Option<u64>, dispose_on_detach: bool, spec: ContextSpec) -> anyhow::Result<()> {
+        let made = self.context_spec(&id, spec);
+        let spec = settle_context(made.spec)?;
+        self.commit_context(kind, owner, dispose_on_detach, Made { spec, ..made })
+    }
+
+    /// `Target.createBrowserContext`: the spec is made here, the plugins' part (`settle_context`) on a blocking thread,
+    /// and the context is committed and answered when it returns (`Ev::ContextMade`). The plugins' part can wait on the
+    /// network -- a proxied context's zone and locale follow where its proxy exits, asked through the proxy -- and on
+    /// the actor that wait held every client and page of the endpoint: three contexts behind a dead proxy stalled the
+    /// endpoint 30 s, its other contexts' mints with it.
+    fn create_context(&mut self, client: u64, id: Value, session: Option<String>, params: &Value) {
+        let ctx = hex32();
+        let dispose = params.get("disposeOnDetach").and_then(Value::as_bool).unwrap_or(false);
+        let made = self.context_spec(&ctx, ContextSpec::from_params(&ctx, params));
+        let ev = self.ev.clone();
+        tokio::task::spawn_blocking(move || {
+            let Made { spec, profile } = made;
+            let result = settle_context(spec).map(|spec| Made { spec, profile }).map_err(|e| e.to_string());
+            let _ = ev.send(Ev::ContextMade { client, id, session, dispose, result });
+        });
+    }
+
+    /// A `createBrowserContext`'s plugins answered: the context is committed and the client told, on the session it
+    /// asked on. A client gone meanwhile had nothing made: no store, no spec, no event.
+    fn context_made(&mut self, client: u64, id: Value, session: Option<String>, dispose: bool, result: Result<Made, String>) {
+        if !self.clients.contains_key(&client) {
+            return;
+        }
+        let result = result.and_then(|made| {
+            let ctx = made.spec.context.clone();
+            self.commit_context(Kind::Created, Some(client), dispose, made).map(|()| ctx).map_err(|e| e.to_string())
+        });
+        let mut resp = match result {
+            Ok(ctx) => json!({ "id": id, "result": { "browserContextId": ctx } }),
+            Err(e) => json!({ "id": id, "error": RpcError::server(format!("Failed to create the browser context: {e}")).to_json() }),
+        };
+        if let Some(s) = session {
+            resp["sessionId"] = json!(s);
+        }
+        if let Some(c) = self.clients.get(&client) {
+            c.send(resp);
+        }
+    }
+
+    /// A new context's spec as far as the actor makes it: its id, its store, the plugins its pages load, a named
+    /// persona's settings and the endpoint's defaults.
+    fn context_spec(&self, id: &str, mut spec: ContextSpec) -> Made {
+        spec.context = id.to_string();
+        spec.store = Some(self.store.endpoint(id));
         // The endpoint's own plugins load in every page process, ahead of the context's.
         let mut plugins: Vec<String> = plugin_host::loaded().iter().map(|p| format!("{}:{}", p.path.display(), p.config)).collect();
         plugins.append(&mut spec.plugins);
@@ -1334,31 +1420,16 @@ impl Browser {
                 spec.proxy = d.proxy.clone().map(|server| ProxySpec { server, bypass: None });
             }
         }
-        // D2 (goal 1021 step 10, 4.2): a plugin may CHOOSE this context's proxy as it is made. When one answers,
-        // that proxy becomes the context's own -- written to the spec, so every page process of the context routes
-        // ALL of the context's traffic through it (the transport AND, with it, WebRTC/ICE: a page process's
-        // `apply_context` sets the proxy environment, which both the transport's clients and `ice::proxied` read),
-        // not per-request. This is the context-level proxy that closes the 1020 "4.5 per-request-proxy leak": a
-        // per-request `req_set_proxy` never reaches ICE, but a context's proxy does. The context's own configured
-        // bypass list carries over to the chosen proxy. Off entirely with no choose_proxy plugin (the slot is then
-        // never asked and the context keeps its configured proxy -- invariants I2/J2). Chosen before `drawn` below,
-        // so the identity is drawn against the proxy the context actually exits through.
-        // TODO(1021-verify): two judgment calls here -- (1) choose_proxy runs BEFORE `drawn`, so the exit-IP lookup
-        // and persona are drawn against the CHOSEN proxy (the proxy the context uses), not its configured one;
-        // (2) the chosen proxy inherits the configured proxy's bypass list. Confirm the owner wants both.
-        if plugin_host::has_choose_proxy() {
-            let info = context_info(&spec, String::new());
-            if let Some(server) = plugin_host::choose_proxy(&info) {
-                let bypass = spec.proxy.as_ref().and_then(|p| p.bypass.clone());
-                spec.proxy = Some(ProxySpec { server, bypass });
-            }
-        }
-        if let Some(why) = refused(&spec) {
-            anyhow::bail!("{why}");
-        }
-        spec.drawn = drawn(&spec);
-        self.store.open(&id);
         let profile = persona.filter(|_| keeps_profile).map(|d| d.join("profile").join("store.bin"));
+        Made { spec, profile }
+    }
+
+    /// A context made: its slots open in the store (with a kept profile's or a storage plugin's state), its spec is
+    /// written for its page processes, and the plugins hear of it.
+    fn commit_context(&mut self, kind: Kind, owner: Option<u64>, dispose_on_detach: bool, made: Made) -> anyhow::Result<()> {
+        let Made { spec, profile } = made;
+        let id = spec.context.clone();
+        self.store.open(&id);
         if let Some(p) = &profile {
             if let Err(e) = self.store.load(&id, p) {
                 eprintln!("[korvus] persona {}: its profile {}: {e}", spec.name.as_deref().unwrap_or(""), p.display());
@@ -1571,6 +1642,10 @@ impl Browser {
             }
             Ev::Spawned { job, result } => {
                 self.spawned(job, result);
+                false
+            }
+            Ev::ContextMade { client, id, session, dispose, result } => {
+                self.context_made(client, id, session, dispose, result);
                 false
             }
             Ev::Metric { target, json } => {
@@ -2009,6 +2084,10 @@ impl Browser {
             self.create_target(client_id, id, &params);
             return false;
         }
+        if method == "Target.createBrowserContext" {
+            self.create_context(client_id, id, browser_session, &params);
+            return false;
+        }
         if method == "Target.detachFromTarget" {
             if let Some(s) = params.get("sessionId").and_then(Value::as_str) {
                 self.end_screencast(client_id, Some(s));
@@ -2375,15 +2454,6 @@ impl Browser {
                     "browserContextIds": self.contexts.iter().filter(|c| c.owner == Some(client)).map(|c| c.id.clone()).collect::<Vec<_>>(),
                     "defaultBrowserContextId": home,
                 }))
-            }
-            "Target.createBrowserContext" => {
-                let id = hex32();
-                let dispose = params.get("disposeOnDetach").and_then(Value::as_bool).unwrap_or(false);
-                let spec = ContextSpec::from_params(&id, params);
-                match self.add_context(id.clone(), Kind::Created, Some(client), dispose, spec) {
-                    Ok(()) => ok(json!({ "browserContextId": id })),
-                    Err(e) => fail(&format!("Failed to create the browser context: {e}")),
-                }
             }
             "Target.disposeBrowserContext" => {
                 let Some(ctx) = str_param("browserContextId").filter(|c| self.ctx(c).is_some_and(|x| x.owner == Some(client))) else {

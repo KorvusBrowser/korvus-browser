@@ -180,6 +180,15 @@ korvus persona ls
 included, HttpOnly ones too) and `korvus persona import <name> <file>` puts one back; `"persistent": false` in a
 persona's `session` keeps none. `korvus stats` shows the active sessions.
 
+Every page is a process of its own, as every Chrome tab is a renderer, so the contexts of one endpoint run side by
+side: for more sessions a minute, keep more contexts in flight on one endpoint rather than start more endpoints (each
+one adds its own ~90 MB). A context costs its page's process -- about 40 MB on a light page, 300 MB at the peak of a
+search engine's challenge page, which `--max-heap 96` brought to about 220 MB -- and is gone with
+`Target.disposeBrowserContext`. One endpoint, pages with ten seconds of network each: 6 a minute one at a time, 46 eight
+at a time, 136 twenty-four at a time. `Storage.getCookies` with a `browserContextId`, on the browser's own connection,
+reads a context's cookies as its pages set them, even while a page is loading, so a client waiting for one cookie need
+not wait for the page.
+
 A context starts as its persona, and what a client asks for over DevTools is honoured as Chrome honours it. An
 overridden user agent changes the strings, not the engine under them, as in Chrome; pass `userAgentMetadata`
 (`Emulation.setUserAgentOverride`) for the client hints to match it.
