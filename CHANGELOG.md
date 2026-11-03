@@ -4,29 +4,6 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
-- Contexts made at once no longer wait on each other. `Target.createBrowserContext` asked the plugins for a proxied
-  context's identity on the endpoint's one thread, and that answer waits on the network (its time zone and locale follow
-  where the proxy exits, up to 10 s through a proxy that does not answer): three contexts behind a dead proxy held the
-  whole endpoint 30 s, every other context's pages with them. Each context's identity is drawn on a thread of its own
-  now; the three answer together in 10 s and the endpoint's other sessions run on untouched.
-- Puppeteer's locators (`locator.click()`, `fill()`, `select()`) and chrome-devtools-mcp's `click`, `fill` and
-  `fill_form` work: the observer Puppeteer's isolated world makes to see an element in the viewport was dropped the
-  first time the page's own script ran a frame, so a locator waited until it timed out ("did not become
-  interactive"). chrome-devtools-mcp's `hover` works too: `DOM.resolveNode` resolves a text node (a snapshot's
-  `StaticText`) and `DOM.getContentQuads` measures one, as Chrome does.
-- A page's session answers the browser's window commands as Chrome's does (`Browser.getWindowForTarget` with no target
-  is the page's own window), and `Browser.setContentsSize` and `Browser.getWindowBounds` are answered, so Puppeteer's
-  `page.resize()` (chrome-devtools-mcp's `resize_page`) sizes the viewport. `Emulation.setCPUThrottlingRate` takes a
-  rate that throttles nothing (1 or less) and refuses a higher one rather than ignoring it.
-- `Page.navigate` to a `data:` URL loads its document, as Chrome does (`page.goto('data:text/html,…')`); it loaded an
-  empty page.
-- What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it (a `load`
-  handler's own request before it, what its timers request after); it all came before.
-- The accessibility tree follows Chrome 152 in more places: a `<label>`'s text names its control as its line lays it
-  out (`<label>Search <input></label>` is `"Search "`, a block in it a space between its neighbours); a
-  `display: contents` element keeps its role (a `<form class="contents">` is still a form); an `<a>` with no `href`
-  but a click listener is a link, and a generic element with one is listed; and a checkbox's label that holds more
-  than text is kept as a `LabelText` round it.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
@@ -60,6 +37,32 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 - `worker.evaluate` and a worker's console messages; `page.setContent`; `page.pdf()`; HTML drag and drop (`dragTo`);
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
+
+## v152.0.6
+
+- Contexts made at once no longer wait on each other. `Target.createBrowserContext` asked the plugins for a proxied
+  context's identity on the endpoint's one thread, and that answer waits on the network (its time zone and locale follow
+  where the proxy exits, up to 10 s through a proxy that does not answer): three contexts behind a dead proxy held the
+  whole endpoint 30 s, every other context's pages with them. Each context's identity is drawn on a thread of its own
+  now; the three answer together in 10 s and the endpoint's other sessions run on untouched.
+- Puppeteer's locators (`locator.click()`, `fill()`, `select()`) and chrome-devtools-mcp's `click`, `fill` and
+  `fill_form` work: the observer Puppeteer's isolated world makes to see an element in the viewport was dropped the
+  first time the page's own script ran a frame, so a locator waited until it timed out ("did not become
+  interactive"). chrome-devtools-mcp's `hover` works too: `DOM.resolveNode` resolves a text node (a snapshot's
+  `StaticText`) and `DOM.getContentQuads` measures one, as Chrome does.
+- A page's session answers the browser's window commands as Chrome's does (`Browser.getWindowForTarget` with no target
+  is the page's own window), and `Browser.setContentsSize` and `Browser.getWindowBounds` are answered, so Puppeteer's
+  `page.resize()` (chrome-devtools-mcp's `resize_page`) sizes the viewport. `Emulation.setCPUThrottlingRate` takes a
+  rate that throttles nothing (1 or less) and refuses a higher one rather than ignoring it.
+- `Page.navigate` to a `data:` URL loads its document, as Chrome does (`page.goto('data:text/html,…')`); it loaded an
+  empty page.
+- What a page requests after its `load` event is reported after `Page.loadEventFired`, as Chrome reports it (a `load`
+  handler's own request before it, what its timers request after); it all came before.
+- The accessibility tree follows Chrome 152 in more places: a `<label>`'s text names its control as its line lays it
+  out (`<label>Search <input></label>` is `"Search "`, a block in it a space between its neighbours); a
+  `display: contents` element keeps its role (a `<form class="contents">` is still a form); an `<a>` with no `href`
+  but a click listener is a link, and a generic element with one is listed; and a checkbox's label that holds more
+  than text is kept as a `LabelText` round it.
 
 ## v152.0.5
 
