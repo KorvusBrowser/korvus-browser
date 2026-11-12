@@ -202,8 +202,20 @@ mod tests {
 
     #[test]
     fn a_named_family_is_asked_at_its_size_and_a_character_font_takes_the_defaults() {
-        // this host's configuration (2026-10-10); another machine answers by its own
-        if !std::path::Path::new("/etc/fonts/conf.d/69-language-selector-ja.conf").exists() {
+        // this host's configuration (2026-10-10); another machine answers by its own -- having the file is not
+        // enough: the generic name must resolve to the JP face it unhints, and the KR face must be installed
+        let first_family = |pattern: &str| {
+            std::process::Command::new("fc-match")
+                .args(["-f", "%{family[0]}", pattern])
+                .output()
+                .ok()
+                .map(|o| String::from_utf8_lossy(&o.stdout).into_owned())
+        };
+        if !std::path::Path::new("/etc/fonts/conf.d/69-language-selector-ja.conf").exists()
+            || first_family("sans-serif").as_deref() != Some("Noto Sans CJK JP")
+            || first_family("Noto Sans CJK KR").as_deref() != Some("Noto Sans CJK KR")
+        {
+            eprintln!("skipped: this host's fontconfig is not the one the expectations were measured on");
             return;
         }
         assert_eq!(render_style(Some("Noto Sans CJK KR"), 16.0, false, false).hinting, Hinting::Slight);
