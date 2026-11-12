@@ -4,9 +4,45 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
-- A rotated persona is a whole machine, not a pool row: a laptop or a desktop, and with it a battery, media devices, a
-  disk (the storage quota), dark mode and reduced motion, an audio output rate and a window that is not always
-  maximized — each drawn from its seed. The context's language decides its Windows voices, whether it has the Korean
+- The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
+  way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
+  one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
+  is lost. (Render can still be turned off for a GPU-less CI job with the `KORVUS_RENDER=off` environment variable.)
+- `korvus serve --block=image,font,media,host:…` drops requests before the network (a scrape spends no bandwidth on
+  what it does not need), and `--http-cache-max=<MB>` caps the in-memory HTTP cache (0 turns it off) so more pages run
+  at once.
+- `korvus run --on-request <cmd>` answers a request dynamically from a command (for an SDK's challenge, with no
+  `serve`+CDP relay to build); `--as <name>` names the script (default `<anonymous>`, so a run leaves no `korvus:` tell
+  in a captured stack).
+- `korvus --analysis-out <dir>` turns the call recorder on by flag; the release ships an analysis build
+  (`korvus-analysis`) beside the stock binary, and a build without the recorder says so instead of recording nothing.
+- A CDP `Debugger` domain: `Debugger.enable` reports each classic script the page parses (`scriptParsed`) and hands
+  back its text (`getScriptSource`); `setBreakpointByUrl` and `setPauseOnExceptions` are accepted. The Sources side of
+  DevTools (and JS-analysis tools) now attach to korvus instead of erroring. Live pause/step is not offered yet.
+- Plugin ABI 4: an `on_call` tracer can read a claimed member's return value as JSON (`host->return_json`) and the JS
+  call stack it was called from (`host->call_stack`), so a tracer records args + result + stack, not just a tally.
+- What a DevTools client asks for is honoured as Chrome honours it: Playwright's context options (`userAgent`, `locale`,
+  `timezoneId`, `viewport`, `colorScheme`, `geolocation`, `permissions`, `javaScriptEnabled`, `bypassCSP`, `offline`,
+  `extraHTTPHeaders`, `ignoreHTTPSErrors`, `acceptDownloads`) and their page-level twins.
+- `context.cookies()`, `addCookies()`, `clearCookies()` and `storageState()` work over `connectOverCDP`.
+- Console messages and page errors reach the client; `page.exposeFunction`, response bodies, downloads, file choosers,
+  `tap()`, JPEG/WebP, clipped and full-page screenshots work; `fill()` replaces a prefilled value and the arrow keys
+  move the caret.
+- `korvus serve --fresh`, `korvus persona reset|export|import`, and `"persistent": false` in a persona document.
+- `korvus run <file.js> --url <page>`: a script run in a page, its files from disk, offline if asked.
+- Frames are reported and driven as Chrome's are: `page.frames`, `frameLocator`, `frame.evaluate`, clicks and typing
+  inside same-origin and cross-origin `<iframe>`s.
+- A popup a page opens is a page of its own to the client, same-site or not (`page.on('popup')`, `context.on('page')`),
+  and a `target=_blank` link opens one.
+- `worker.evaluate` and a worker's console messages; `page.setContent`; `page.pdf()`; HTML drag and drop (`dragTo`);
+  `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
+  files uploaded through a form arrive with their contents.
+
+## v152.0.7
+
+- A rotated persona is a whole machine, not a pool row: a laptop or a desktop, and with it a battery, media devices,
+  dark mode and reduced motion, an audio output rate and a window that is not always maximized — each drawn from its
+  seed. The context's language decides its Windows voices, whether it has the Korean
   Supplemental Fonts, and the browser's standard font (Times New Roman under a Latin-script UI instead of the
   capture's Malgun Gothic). A persona document can state each of these (`fonts`, `media_devices`, `battery`,
   `storage`, `preferences`, `audio`, `window.outer` and `window.position`).
@@ -49,40 +85,6 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   same noise as the 8-bit read instead of reading raw beside a noised `toDataURL`; and two `readPixels` of a WebGL
   framebuffer object agree where they overlap. Noise now moves opaque pixels only: a semi-transparent pixel's colour
   can only take values premultiplied storage allows, and a step off them was a value no device returns.
-
-- The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
-  way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
-  one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
-  is lost. (Render can still be turned off for a GPU-less CI job with the `KORVUS_RENDER=off` environment variable.)
-- `korvus serve --block=image,font,media,host:…` drops requests before the network (a scrape spends no bandwidth on
-  what it does not need), and `--http-cache-max=<MB>` caps the in-memory HTTP cache (0 turns it off) so more pages run
-  at once.
-- `korvus run --on-request <cmd>` answers a request dynamically from a command (for an SDK's challenge, with no
-  `serve`+CDP relay to build); `--as <name>` names the script (default `<anonymous>`, so a run leaves no `korvus:` tell
-  in a captured stack).
-- `korvus --analysis-out <dir>` turns the call recorder on by flag; the release ships an analysis build
-  (`korvus-analysis`) beside the stock binary, and a build without the recorder says so instead of recording nothing.
-- A CDP `Debugger` domain: `Debugger.enable` reports each classic script the page parses (`scriptParsed`) and hands
-  back its text (`getScriptSource`); `setBreakpointByUrl` and `setPauseOnExceptions` are accepted. The Sources side of
-  DevTools (and JS-analysis tools) now attach to korvus instead of erroring. Live pause/step is not offered yet.
-- Plugin ABI 4: an `on_call` tracer can read a claimed member's return value as JSON (`host->return_json`) and the JS
-  call stack it was called from (`host->call_stack`), so a tracer records args + result + stack, not just a tally.
-- What a DevTools client asks for is honoured as Chrome honours it: Playwright's context options (`userAgent`, `locale`,
-  `timezoneId`, `viewport`, `colorScheme`, `geolocation`, `permissions`, `javaScriptEnabled`, `bypassCSP`, `offline`,
-  `extraHTTPHeaders`, `ignoreHTTPSErrors`, `acceptDownloads`) and their page-level twins.
-- `context.cookies()`, `addCookies()`, `clearCookies()` and `storageState()` work over `connectOverCDP`.
-- Console messages and page errors reach the client; `page.exposeFunction`, response bodies, downloads, file choosers,
-  `tap()`, JPEG/WebP, clipped and full-page screenshots work; `fill()` replaces a prefilled value and the arrow keys
-  move the caret.
-- `korvus serve --fresh`, `korvus persona reset|export|import`, and `"persistent": false` in a persona document.
-- `korvus run <file.js> --url <page>`: a script run in a page, its files from disk, offline if asked.
-- Frames are reported and driven as Chrome's are: `page.frames`, `frameLocator`, `frame.evaluate`, clicks and typing
-  inside same-origin and cross-origin `<iframe>`s.
-- A popup a page opens is a page of its own to the client, same-site or not (`page.on('popup')`, `context.on('page')`),
-  and a `target=_blank` link opens one.
-- `worker.evaluate` and a worker's console messages; `page.setContent`; `page.pdf()`; HTML drag and drop (`dragTo`);
-  `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
-  files uploaded through a form arrive with their contents.
 
 ## v152.0.6
 
