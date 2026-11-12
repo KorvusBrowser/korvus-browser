@@ -14,28 +14,40 @@
 //! (`{}` as JSON), its four values are `BatteryManager.prototype` getters checking their receiver, its handlers are
 //! event handler IDL attributes, and it is an `EventTarget`.
 //!
-//! THE VALUES are the recorded answer of a desktop on mains power, fully charged: `charging` true, `chargingTime`
-//! 0, `dischargingTime` Infinity, `level` 1 -- what no persona field carries (see `persona_objects`).
+//! THE VALUES are the worn device's (`spec::Persona::battery`: a laptop's level and charging state), else the
+//! recorded answer of a desktop on mains power, fully charged: `charging` true, `chargingTime` 0, `dischargingTime`
+//! Infinity, `level` 1.
 
 use deno_core::v8;
 
 use crate::install::webidl::{brand, branded_getter_row};
 use crate::install::MemberDef;
 
-fn cb_charging(_scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
-    rv.set_bool(true);
+/// The worn device's battery (`spec::Persona::battery`), else a desktop on mains power: charging, full, `chargingTime`
+/// 0, `dischargingTime` Infinity -- what Chrome reports with no battery.
+fn state(scope: &mut v8::PinScope) -> spec::BatteryState {
+    crate::core::navigator::navigator::persona(scope).and_then(|p| p.battery()).unwrap_or(spec::BatteryState {
+        charging: true,
+        level: 1.0,
+        charging_time: 0.0,
+        discharging_time: f64::INFINITY,
+    })
 }
 
-fn cb_charging_time(_scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
-    rv.set_double(0.0);
+fn cb_charging(scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    rv.set_bool(state(scope).charging);
 }
 
-fn cb_discharging_time(_scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
-    rv.set_double(f64::INFINITY);
+fn cb_charging_time(scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    rv.set_double(state(scope).charging_time);
 }
 
-fn cb_level(_scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
-    rv.set_double(1.0);
+fn cb_discharging_time(scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    rv.set_double(state(scope).discharging_time);
+}
+
+fn cb_level(scope: &mut v8::PinScope, _args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    rv.set_double(state(scope).level);
 }
 
 /// The body every value row of [`BATTERYMANAGER`] names: a branded getter (a foreign receiver is `Illegal

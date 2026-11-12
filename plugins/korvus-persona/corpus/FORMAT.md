@@ -76,6 +76,13 @@ has always read them in its own file: a the sibling browser persona's facts ARE 
 | `webgpu` | optional | `vendor`, `architecture`, `device`, `description`, `limits` |
 | `voices` | optional | `[{"name", "lang"}]`, the OS's speech voices |
 | `window.frame` | optional | `[outerWidth - innerWidth, outerHeight - innerHeight]`, each 0-400 |
+| `window.outer`, `window.position` | optional | a window that is not maximized: `[outerWidth, outerHeight]` inside the available area, `[screenX, screenY]` (a window states `frame` or `outer`) |
+| `fonts` | optional | the families installed, by name: the build's families it does not list are absent |
+| `media_devices` | optional | the kinds `enumerateDevices()` lists before a permission: `audioinput`, `videoinput`, `audiooutput`, each once, in that order |
+| `battery` | optional | `{charging, level}` (0-1): a laptop's; absent, a desktop on mains |
+| `storage.quota` | optional | `navigator.storage.estimate()`'s quota, bytes |
+| `preferences` | optional | `color_scheme` (`light` or `dark`), `reduced_motion` (a boolean): the OS's settings |
+| `audio.sample_rate` | optional | the output device's rate, 8000-192000 (Hz): a live `AudioContext`'s |
 | `noise` | optional | the readbacks perturbed by the persona's seed: `canvas`, `audio`, `webgl`, `text`. `text` is the `measureText`/`TextMetrics` font box — korvus taps it (ABI-3 `KORVUS_READBACK_TEXT`); other engines accept-and-ignore it. (the sibling browser's compiler + the dataset validator still gate it to the first three until their lockstep update lands — decisions.md D94.) |
 
 A device never states the browser's version: that is the build's (§3).

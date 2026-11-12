@@ -116,8 +116,11 @@ pub struct WsRequest {
 impl WsRequest {
     /// Stamp a persona's identity onto this request -- headers and wire from ONE persona, as
     /// [`super::apply_persona_identity`] does for a fetch.
+    /// What a DevTools client set over the persona (`spec::devtools`) is the handshake's too: its user agent and its
+    /// `Accept-Language`, as on every fetch of the page.
     pub fn worn_by(mut self, id: &super::PersonaIdentity) -> Self {
         self.headers = id.headers.clone();
+        super::devtools_identity_headers(&mut self.headers, false);
         self.wire = Some(id.wire.clone());
         self
     }

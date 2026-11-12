@@ -123,11 +123,13 @@ fn cb_gpu_preferred_format(
     _args: v8::FunctionCallbackArguments,
     mut rv: v8::ReturnValue,
 ) {
-    let s = str_val(scope, PREFERRED_CANVAS_FORMAT);
+    // the worn adapter's (Chrome on Windows and macOS answers `bgra8unorm`), else the recorded control's
+    let fmt = persona_adapter(scope).and_then(|a| a.get("preferredFormat").and_then(|f| f.as_str()).map(str::to_string));
+    let s = str_val(scope, fmt.as_deref().unwrap_or(PREFERRED_CANVAS_FORMAT));
     rv.set(s);
 }
 
-/// `navigator.gpu.requestAdapter(options)` — a real promise, resolved with `null`.
+/// `navigator.gpu.requestAdapter(options)` — a real promise, resolved with the worn persona's adapter, or `null`.
 ///
 /// `null` is what the WebGPU spec says to resolve with when no adapter matches the request, and
 /// this engine has no adapter to match: there is no GPU backend behind `GPU*`, and the control this
@@ -139,10 +141,14 @@ fn cb_gpu_request_adapter(
     _args: v8::FunctionCallbackArguments,
     mut rv: v8::ReturnValue,
 ) {
-    let null = v8::null(scope);
-    // no adapter, answered by the GPU process a few milliseconds later (Chrome 150: after a 4 ms timer queued right
-    // after the call, before an 8 ms one -- `binding::protos::Settle`)
-    let p = crate::binding::protos::settle_later(scope, null.into(), false, crate::binding::protos::Settle::Task(5.0));
+    // the worn device's adapter when its persona carries one (`install_webgpu_adapter`), else none -- answered by
+    // the GPU process a few milliseconds later (Chrome 150: after a 4 ms timer queued right after the call, before an
+    // 8 ms one -- `binding::protos::Settle`)
+    let value: v8::Local<v8::Value> = match persona_adapter(scope) {
+        Some(a) => mint_adapter(scope, &a).into(),
+        None => v8::null(scope).into(),
+    };
+    let p = crate::binding::protos::settle_later(scope, value, false, crate::binding::protos::Settle::Task(5.0));
     rv.set(p);
 }
 
@@ -719,5 +725,264 @@ pub fn install_gpu_namespaces<'s>(scope: &mut v8::PinScope<'s, '_>, global: v8::
         pd.set_enumerable(false);
         pd.set_configurable(true);
         global.define_property(scope, key.into(), &pd);
+    }
+}
+
+// ── the adapter (`requestAdapter()` on a device whose persona carries one) ─────────────────────────────────────────
+//
+// `GPUAdapter`, `GPUAdapterInfo`, `GPUSupportedFeatures` and `GPUSupportedLimits` as Chrome hands them to a page that
+// asks for an adapter and reads what it is: its `info` (vendor, architecture, subgroup sizes), its features and its
+// limits -- what a fingerprinting script reads, and all it can read without a device. The values are the worn
+// persona's (`spec::Persona::webgpu_adapter`: the build's captured adapter with the device's GPU in its `info`).
+// `requestDevice()` is refused: no GPU backend serves this engine's WebGPU, so there is no device to give.
+//
+// Each object's state is a private slot (its part of the adapter's JSON), which is also its brand: a receiver
+// without one is `Illegal invocation`, as Chrome's internal-slot check is. `info`, `features` and `limits` are each
+// the same object every read ([SameObject]).
+
+const ADAPTER_PRIV: &str = "korvus_gpu_adapter";
+const ADAPTER_INFO_PRIV: &str = "korvus_gpu_adapter_info";
+const ADAPTER_FEATURES_PRIV: &str = "korvus_gpu_adapter_features";
+const ADAPTER_LIMITS_PRIV: &str = "korvus_gpu_adapter_limits";
+/// The JSON a sub-object answers from (its brand).
+const PART_PRIV: &str = "korvus_gpu_part";
+
+/// The worn persona's adapter, parsed; `None` for none.
+fn persona_adapter(scope: &mut v8::PinScope) -> Option<serde_json::Value> {
+    let json = crate::core::navigator::navigator::persona(scope)?.webgpu_adapter()?;
+    serde_json::from_str(&json).ok()
+}
+
+/// A new `GPUAdapter` over `adapter`.
+fn mint_adapter<'s>(scope: &mut v8::PinScope<'s, '_>, adapter: &serde_json::Value) -> v8::Local<'s, v8::Object> {
+    let obj = crate::install::live::mint_table(scope, "GPUAdapter");
+    let s = str_val(scope, &adapter.to_string());
+    priv_set(scope, obj, ADAPTER_PRIV, s);
+    obj
+}
+
+fn adapter_json(scope: &mut v8::PinScope, this: v8::Local<v8::Object>, slot: &str) -> Option<serde_json::Value> {
+    let v = priv_get(scope, this, slot)?;
+    serde_json::from_str(&v.to_rust_string_lossy(scope)).ok()
+}
+
+/// The adapter's `info` / `features` / `limits` object: made on the first read and the same one after.
+fn adapter_part(scope: &mut v8::PinScope, args: &v8::FunctionCallbackArguments, rv: &mut v8::ReturnValue, key: &str, iface: &str, cache: &str) {
+    let this = args.this();
+    let Some(a) = adapter_json(scope, this, ADAPTER_PRIV) else {
+        illegal_invocation(scope);
+        return;
+    };
+    if let Some(v) = priv_get(scope, this, cache) {
+        rv.set(v);
+        return;
+    }
+    let obj = crate::install::live::mint_table(scope, iface);
+    let s = str_val(scope, &a.get(key).cloned().unwrap_or(serde_json::Value::Null).to_string());
+    priv_set(scope, obj, PART_PRIV, s);
+    let v: v8::Local<v8::Value> = obj.into();
+    priv_set(scope, this, cache, v);
+    rv.set(v);
+}
+
+fn cb_adapter_info(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    adapter_part(scope, &args, &mut rv, "info", "GPUAdapterInfo", ADAPTER_INFO_PRIV);
+}
+
+fn cb_adapter_features(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    adapter_part(scope, &args, &mut rv, "features", "GPUSupportedFeatures", ADAPTER_FEATURES_PRIV);
+}
+
+fn cb_adapter_limits(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    adapter_part(scope, &args, &mut rv, "limits", "GPUSupportedLimits", ADAPTER_LIMITS_PRIV);
+}
+
+/// `requestDevice()`: no device can be made, refused as the browser refuses one it cannot create.
+fn cb_adapter_request_device(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    if adapter_json(scope, args.this(), ADAPTER_PRIV).is_none() {
+        let e = crate::binding::protos::make_dom_exc(scope, "Illegal invocation", "TypeError");
+        let p = crate::binding::protos::rejected_promise(scope, e.unwrap_or_else(|| v8::undefined(scope).into()));
+        rv.set(p);
+        return;
+    }
+    let e = crate::binding::protos::make_dom_exc(scope, "Failed to execute 'requestDevice' on 'GPUAdapter': Failed to create device.", "OperationError");
+    let p = crate::binding::protos::settle_later(scope, e.unwrap_or_else(|| v8::undefined(scope).into()), true, crate::binding::protos::Settle::Task(5.0));
+    rv.set(p);
+}
+
+/// A sub-object's JSON, or a pending `Illegal invocation`.
+fn part(scope: &mut v8::PinScope, this: v8::Local<v8::Object>) -> Option<serde_json::Value> {
+    let p = adapter_json(scope, this, PART_PRIV);
+    if p.is_none() {
+        illegal_invocation(scope);
+    }
+    p
+}
+
+/// A `GPUAdapterInfo` or `GPUSupportedLimits` attribute: the member's value from the part, by its name (the row's
+/// data).
+fn cb_part_value(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    let Some(p) = part(scope, args.this()) else { return };
+    let name = crate::binding::protos::body_data(scope, &args).to_rust_string_lossy(scope);
+    match p.get(&name) {
+        Some(serde_json::Value::String(s)) => {
+            let v = str_val(scope, s);
+            rv.set(v);
+        }
+        Some(serde_json::Value::Bool(b)) => rv.set_bool(*b),
+        Some(serde_json::Value::Number(n)) => rv.set_double(n.as_f64().unwrap_or(0.0)),
+        // a member the capture lacks: a string attribute reads "", a number 0
+        _ if matches!(name.as_str(), "vendor" | "architecture" | "device" | "description") => {
+            let v = str_val(scope, "");
+            rv.set(v);
+        }
+        _ if name == "isFallbackAdapter" => rv.set_bool(false),
+        _ => rv.set_double(0.0),
+    }
+}
+
+fn feature_list(p: &serde_json::Value) -> Vec<String> {
+    p.as_array().map(|a| a.iter().filter_map(|x| x.as_str().map(str::to_string)).collect()).unwrap_or_default()
+}
+
+fn cb_features_size(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    let Some(p) = part(scope, args.this()) else { return };
+    rv.set_uint32(feature_list(&p).len() as u32);
+}
+
+fn cb_features_iter(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    let Some(p) = part(scope, args.this()) else { return };
+    let which = crate::binding::protos::body_data(scope, &args).to_rust_string_lossy(scope);
+    let items: Vec<v8::Local<v8::Value>> = feature_list(&p)
+        .iter()
+        .map(|f| {
+            let s = str_val(scope, f);
+            if which == "entries" { crate::core::dom::webidl_iter::pair(scope, s, s) } else { s }
+        })
+        .collect();
+    if let Some(it) = crate::core::dom::webidl_iter::make_iter(scope, "GPUSupportedFeatures", crate::core::dom::webidl_iter::IterKind::Set, &items) {
+        rv.set(it.into());
+    }
+}
+
+fn cb_features_has(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mut rv: v8::ReturnValue) {
+    let Some(p) = part(scope, args.this()) else { return };
+    if !require_args(scope, &args, 1, "GPUSupportedFeatures", "has") {
+        return;
+    }
+    let Some(k) = args.get(0).to_string(scope) else { return };
+    let k = k.to_rust_string_lossy(scope);
+    rv.set_bool(feature_list(&p).iter().any(|f| *f == k));
+}
+
+fn cb_features_for_each<'s>(scope: &mut v8::PinScope<'s, '_>, args: v8::FunctionCallbackArguments<'s>, _rv: v8::ReturnValue) {
+    let Some(p) = part(scope, args.this()) else { return };
+    let feats: Vec<v8::Local<'s, v8::Value>> = feature_list(&p).iter().map(|f| str_val(scope, f)).collect();
+    crate::core::dom::webidl_iter::for_each(scope, &args, "GPUSupportedFeatures", |_, i| feats.get(i).map(|v| (*v, *v)));
+}
+
+/// Every `GPUAdapter`, `GPUAdapterInfo`, `GPUSupportedFeatures` and `GPUSupportedLimits` row (by label: the setlike's
+/// member names are `WGSLLanguageFeatures`' too).
+pub fn install_webgpu_adapter(scope: &mut v8::PinScope, proto: v8::Local<v8::Object>, member: &'static MemberDef) {
+    let iface = member.label.split("::").next().unwrap_or("");
+    match (iface, member.name) {
+        ("GPUAdapter", "info") => getter_row(scope, proto, member, cb_adapter_info),
+        ("GPUAdapter", "features") => getter_row(scope, proto, member, cb_adapter_features),
+        ("GPUAdapter", "limits") => getter_row(scope, proto, member, cb_adapter_limits),
+        ("GPUAdapter", "requestDevice") => method_row(scope, proto, member, cb_adapter_request_device),
+        ("GPUSupportedFeatures", "size") => getter_row(scope, proto, member, cb_features_size),
+        ("GPUSupportedFeatures", "entries" | "keys" | "values") => {
+            let d = str_val(scope, member.name);
+            crate::core::dom::shared::row_method_data(scope, proto, member, cb_features_iter, d);
+        }
+        ("GPUSupportedFeatures", "has") => method_row(scope, proto, member, cb_features_has),
+        ("GPUSupportedFeatures", "forEach") => method_row(scope, proto, member, cb_features_for_each),
+        ("GPUSupportedFeatures", "@@iterator") => {
+            let Some(values) = get_prop(scope, proto, "values") else { return };
+            crate::install::kits::define_value(scope, proto, member, values, true);
+        }
+        ("GPUAdapterInfo" | "GPUSupportedLimits", name) => {
+            let d = str_val(scope, name);
+            crate::core::dom::shared::row_getter_data(scope, proto, member, cb_part_value, d);
+        }
+        (i, other) => debug_assert!(false, "install_webgpu_adapter: unexpected member {i}.{other}"),
+    }
+}
+
+webapi::interface! {
+    "GPUAdapter" [interface, both, secure] {
+        ctor "GPUAdapter" len 0 = stub,
+        attr "features" : Any readonly = install_webgpu_adapter,
+        attr "limits" : Any readonly = install_webgpu_adapter,
+        attr "info" : Any readonly = install_webgpu_adapter,
+        method "requestDevice" : Promise = install_webgpu_adapter
+    }
+}
+
+webapi::interface! {
+    "GPUAdapterInfo" [interface, both, secure] {
+        ctor "GPUAdapterInfo" len 0 = stub,
+        attr "vendor" : DomString readonly = install_webgpu_adapter,
+        attr "architecture" : DomString readonly = install_webgpu_adapter,
+        attr "device" : DomString readonly = install_webgpu_adapter,
+        attr "description" : DomString readonly = install_webgpu_adapter,
+        attr "subgroupMinSize" : Integer readonly = install_webgpu_adapter,
+        attr "subgroupMaxSize" : Integer readonly = install_webgpu_adapter,
+        attr "isFallbackAdapter" : Boolean readonly = install_webgpu_adapter
+    }
+}
+
+webapi::interface! {
+    "GPUSupportedFeatures" [interface, both, secure] {
+        ctor "GPUSupportedFeatures" len 0 = stub,
+        attr "size" : Any readonly = install_webgpu_adapter,
+        method "entries" : Any = install_webgpu_adapter,
+        method "forEach" : Any len 1 = install_webgpu_adapter,
+        method "has" : Any len 1 = install_webgpu_adapter,
+        method "keys" : Any = install_webgpu_adapter,
+        method "values" : Any = install_webgpu_adapter,
+        method "@@iterator" : Any hidden = install_webgpu_adapter
+    }
+}
+
+webapi::interface! {
+    "GPUSupportedLimits" [interface, both, secure] {
+        ctor "GPUSupportedLimits" len 0 = stub,
+        attr "maxTextureDimension1D" : Integer readonly = install_webgpu_adapter,
+        attr "maxTextureDimension2D" : Integer readonly = install_webgpu_adapter,
+        attr "maxTextureDimension3D" : Integer readonly = install_webgpu_adapter,
+        attr "maxTextureArrayLayers" : Integer readonly = install_webgpu_adapter,
+        attr "maxBindGroups" : Integer readonly = install_webgpu_adapter,
+        attr "maxBindGroupsPlusVertexBuffers" : Integer readonly = install_webgpu_adapter,
+        attr "maxBindingsPerBindGroup" : Integer readonly = install_webgpu_adapter,
+        attr "maxDynamicUniformBuffersPerPipelineLayout" : Integer readonly = install_webgpu_adapter,
+        attr "maxDynamicStorageBuffersPerPipelineLayout" : Integer readonly = install_webgpu_adapter,
+        attr "maxSampledTexturesPerShaderStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxSamplersPerShaderStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageBuffersPerShaderStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageTexturesPerShaderStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxUniformBuffersPerShaderStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxUniformBufferBindingSize" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageBufferBindingSize" : Integer readonly = install_webgpu_adapter,
+        attr "minUniformBufferOffsetAlignment" : Integer readonly = install_webgpu_adapter,
+        attr "minStorageBufferOffsetAlignment" : Integer readonly = install_webgpu_adapter,
+        attr "maxVertexBuffers" : Integer readonly = install_webgpu_adapter,
+        attr "maxBufferSize" : Integer readonly = install_webgpu_adapter,
+        attr "maxVertexAttributes" : Integer readonly = install_webgpu_adapter,
+        attr "maxVertexBufferArrayStride" : Integer readonly = install_webgpu_adapter,
+        attr "maxInterStageShaderVariables" : Integer readonly = install_webgpu_adapter,
+        attr "maxColorAttachments" : Integer readonly = install_webgpu_adapter,
+        attr "maxColorAttachmentBytesPerSample" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeWorkgroupStorageSize" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeInvocationsPerWorkgroup" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeWorkgroupSizeX" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeWorkgroupSizeY" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeWorkgroupSizeZ" : Integer readonly = install_webgpu_adapter,
+        attr "maxComputeWorkgroupsPerDimension" : Integer readonly = install_webgpu_adapter,
+        attr "maxImmediateSize" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageBuffersInFragmentStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageTexturesInFragmentStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageBuffersInVertexStage" : Integer readonly = install_webgpu_adapter,
+        attr "maxStorageTexturesInVertexStage" : Integer readonly = install_webgpu_adapter
     }
 }

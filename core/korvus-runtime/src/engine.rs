@@ -317,7 +317,16 @@ impl Engine {
             // between. Everything below it kept the relative position it had.
             match snap {
                 // the page realm deserialised: what its install left in Rust, back; then the per-run heap baseline
-                Some(_) => restored = crate::snapshot::restore(scope).map(|()| webapi::mark_heap_baseline(scope)),
+                // The snapshot is keyed by the bundle, not by the device worn over it, so the device oracle it
+                // carries is whichever persona's made it: this persona's is seated over it, or every context of a
+                // bundle after the first presents that one's GPU strings and WebGL set (measured 2026-11-12, the
+                // linkability gate: 18 of 24 rotated personas read one RTX 4070 SUPER).
+                Some(_) => {
+                    restored = crate::snapshot::restore(scope).map(|()| {
+                        webapi::install::live::wire_worker_canvas_oracle(scope, &device_oracle_json);
+                        webapi::mark_heap_baseline(scope)
+                    })
+                }
                 None => install_window_realm(scope, &device_oracle_json),
             }
         }

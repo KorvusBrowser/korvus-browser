@@ -2332,8 +2332,8 @@ fn parse_uniform(
 /// From the drawing buffer, the plugins see the WHOLE buffer, top-left origin -- the positions `toDataURL` hands them
 /// -- so two reads of overlapping rectangles agree where they overlap and a pixel reads as the canvas exports it: the
 /// buffer is read whole (GL's rows, bottom-up), handed over top-down, and the rectangle cut from it; what lies outside
-/// the buffer stays zero. From a framebuffer object, which nothing else reads back, the rectangle is handed over as it
-/// is read. `None` when the device gave no bytes.
+/// the buffer stays zero. From a framebuffer object, the plugins see it from its origin to just past the rectangle,
+/// so a pixel's noise is its framebuffer position's in every read. `None` when the device gave no bytes.
 fn read_pixels_through_plugins(
     scope: &mut v8::PinScope,
     ctx: v8::Local<v8::Object>,
@@ -2350,14 +2350,44 @@ fn read_pixels_through_plugins(
         out
     };
     if edit(scope, ctx, |s| s.params.read_framebuffer()) != 0 {
-        let GlQueryResult::Bytes(b) = ask(scope, ctx, GlQuery::ReadPixels { x, y, width, height }) else { return None };
-        let (w, h) = (width as usize, height as usize);
-        if b.len() != w * h * 4 {
-            return Some(b);
+        // A framebuffer object has no size here to read whole, so the plugins see it from its origin to one pixel
+        // past the rectangle, GL's rows as they come: a pixel sits at its own framebuffer position in every read,
+        // with every 4-neighbour its noise looks at, and two reads agree where they overlap. Beyond what that
+        // costs, the rectangle as it is read.
+        let (rx1, ry1) = ((x as i64 + width as i64 + 1).max(1), (y as i64 + height as i64 + 1).max(1));
+        if rx1 * ry1 > 1 << 24 {
+            let GlQueryResult::Bytes(b) = ask(scope, ctx, GlQuery::ReadPixels { x, y, width, height }) else { return None };
+            let (w, h) = (width as usize, height as usize);
+            if b.len() != w * h * 4 {
+                return Some(b);
+            }
+            let mut img = Rgba8 { width, height, data: b };
+            plugin_host::readback_rgba(plugin_host::READBACK_WEBGL, img.width, img.height, &mut img.data);
+            return Some(img.data);
         }
-        let mut img = Rgba8 { width, height, data: flip(&b, w, h) };
-        plugin_host::readback_rgba(plugin_host::READBACK_WEBGL, img.width, img.height, &mut img.data);
-        return Some(flip(&img.data, w, h));
+        let (fw, fh) = (rx1 as u32, ry1 as u32);
+        let GlQueryResult::Bytes(b) = ask(scope, ctx, GlQuery::ReadPixels { x: 0, y: 0, width: fw, height: fh }) else { return None };
+        if b.len() != (fw as usize) * (fh as usize) * 4 {
+            return None;
+        }
+        let mut full = Rgba8 { width: fw, height: fh, data: b };
+        plugin_host::readback_rgba(plugin_host::READBACK_WEBGL, full.width, full.height, &mut full.data);
+        let mut out = vec![0u8; (width as usize) * (height as usize) * 4];
+        for r in 0..height as i64 {
+            let gy = y as i64 + r;
+            if gy < 0 || gy >= fh as i64 {
+                continue;
+            }
+            for c in 0..width as i64 {
+                let gx = x as i64 + c;
+                if gx < 0 || gx >= fw as i64 {
+                    continue;
+                }
+                let (si, di) = (((gy * fw as i64 + gx) * 4) as usize, ((r * width as i64 + c) * 4) as usize);
+                out[di..di + 4].copy_from_slice(&full.data[si..si + 4]);
+            }
+        }
+        return Some(out);
     }
     let bw = drawing_buffer_extent(scope, ctx, "width")?;
     let bh = drawing_buffer_extent(scope, ctx, "height")?;

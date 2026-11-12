@@ -621,16 +621,19 @@ pub(crate) fn context_2d_of<'s>(scope: &mut v8::PinScope<'s, '_>, canvas: v8::Lo
         .and_then(|v| v8::Local::<v8::Object>::try_from(v).ok())
 }
 
-/// A canvas's current bitmap and whether it is origin-clean.
+/// A canvas's current bitmap and whether it is origin-clean -- the bitmap as the device holds it, which is what a page
+/// reads back from it: the loaded plugins' perturbation in it (`read_back`). A copy of a canvas (`drawImage`,
+/// `createImageBitmap`, a pattern, a texture) is that device's pixels, so the copy reads back as the source does.
 fn canvas_pixels(scope: &mut v8::PinScope, canvas: v8::Local<v8::Object>, w: u32, h: u32) -> (Rgba8, bool) {
     if let Some(gl) = super::webgl::raster_canvas(scope, canvas, w, h) {
         // A WebGL canvas is never tainted: `texImage2D` refuses a tainted source instead.
-        return (gl, true);
+        return (super::html_canvas_element::read_back(plugin_host::READBACK_WEBGL, gl), true);
     }
     let Some(ctx) = context_2d_of(scope, canvas) else { return (Rgba8::transparent(w, h), true) };
     let (ops, tainted) = super::canvas_2d::ops_and_taint(scope, ctx);
     let params = super::canvas_2d::ctx_render_params(scope, ctx);
-    (raster_ops(scope, &ops, w, h, &params), !tainted)
+    let raw = raster_ops(scope, &ops, w, h, &params);
+    (super::canvas_readback::read_back_2d(raw, &ops), !tainted)
 }
 
 /// Raster a 2D display list through the active backend (transparent with none, e.g. in a worker), into the

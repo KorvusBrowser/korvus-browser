@@ -1245,7 +1245,7 @@ impl spec::SubresourceLoader for RuntimeSubresourceLoader {
             // reported `characterSet` "UTF-8" -- Chrome 150 reads the frame's own (`~/bench-a reference engine/obj/site/krf.html`:
             // `가|EUC-KR`), and WPT's `encoding/legacy-mb-*` reads every character through such a frame.
             let navigate = mode == transport::Mode::Navigate;
-            let locale = persona.navigator().languages.first().cloned().unwrap_or_default();
+            let locale = spec::devtools::navigator(persona.navigator()).languages.first().cloned().unwrap_or_default();
             let parent = req.parent_encoding.clone().zip(req.parent_origin.clone());
             out.map(|r| {
                 let (body, encoding) = if navigate {
@@ -1361,6 +1361,8 @@ extension!(
         // this thread's fonts and documents are the worn persona's (`page::font::worn_font_map`): its standard font is the
         // default of every document made from here on, the page plugin's first one included
         page::font::set_worn_font_map(persona.theme().map_or(0, |t| t.font_map));
+        // and its device's own fonts over the bundle's: the families it lacks, its UI locale's standard font
+        page::font::set_worn_font_layer(persona.font_layer());
         let mut loader = spec::kernel::Loader::new();
         // and render is one too: `KORVUS_RENDER=off` leaves it out (`render::wanted`)
         if render::wanted() {

@@ -20,6 +20,9 @@ pub(crate) mod html_dialog_element;
 pub(crate) mod html_marquee_element;
 pub(crate) mod html_canvas_element;
 pub(crate) mod canvas_2d;
+/// What a 2D canvas's read-backs hand the page once the plugins perturbed them: the page's own pixels exact, every
+/// format and space alike.
+pub(crate) mod canvas_readback;
 /// `CanvasImageSource`: the pixels behind an image argument, `ImageBitmap`, `createImageBitmap`, tainting.
 pub(crate) mod canvas_image;
 /// `ImageData` -- the canvas pixel buffer, as a table with a native constructor.

@@ -203,6 +203,14 @@ impl Settings {
         if s.rotation == "fixed" && s.seed.is_none() {
             return Err("rotation = fixed needs a seed (`--seed`, `seed` in the config; `korvus setup` draws one)".into());
         }
+        // a seed is every context's persona: beside `rotate` or `named` it silently gave every context the one device
+        if (s.rotation == "rotate" || s.rotation == "named") && s.seed.is_some() {
+            return Err(format!(
+                "rotation = {} draws each context's own seed, and a seed (`--seed`, $KORVUS_SEED, `seed` in the config) \
+                 would give every context the same persona: drop the seed, or use rotation = fixed",
+                s.rotation
+            ));
+        }
         if s.identity == "korvus" && s.device.as_deref().is_some_and(|d| d != "host") {
             return Err("korvus's own identity wears this machine; a device needs the stealth identity".into());
         }
@@ -271,5 +279,8 @@ mod tests {
         assert!(Settings::resolve(&Flags::default(), &config("rotation = \"fixed\"")).is_err());
         assert!(Settings::resolve(&Flags::default(), &config("identity = \"korvus\"\ndevice = \"pool\"")).is_err());
         assert!(Settings::resolve(&Flags::default(), &config("humanize = \"yes\"")).is_err());
+        assert!(Settings::resolve(&Flags::default(), &config("rotation = \"rotate\"\nseed = \"7\"")).is_err());
+        assert!(Settings::resolve(&Flags::default(), &config("rotation = \"named\"\nseed = \"7\"")).is_err());
+        assert!(Settings::resolve(&Flags::default(), &config("rotation = \"fixed\"\nseed = \"7\"")).is_ok());
     }
 }

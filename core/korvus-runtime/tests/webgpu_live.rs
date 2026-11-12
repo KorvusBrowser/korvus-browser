@@ -47,8 +47,10 @@ fn probe(e: &mut Engine, expr: &str) -> String {
     str_of(e, "l17-gpu-probe", src)
 }
 
-const IFACES: &[&str] =
-    &["GPU", "WGSLLanguageFeatures", "GPUCanvasContext", "GPUError", "GPUPipelineError", "GPUUncapturedErrorEvent"];
+const IFACES: &[&str] = &[
+    "GPU", "WGSLLanguageFeatures", "GPUCanvasContext", "GPUError", "GPUPipelineError", "GPUUncapturedErrorEvent", "GPUAdapter",
+    "GPUAdapterInfo", "GPUSupportedFeatures", "GPUSupportedLimits",
+];
 
 // -- 1. the capture's member list, in the capture's order ----------------------------------------
 
@@ -223,4 +225,42 @@ async fn the_three_concrete_errors_still_inherit_the_table_gpuerror() {
             "{iface} lost its inheritance from the table-owned GPUError"
         );
     }
+}
+
+// -- 5. a persona with an adapter -----------------------------------------------------------------
+
+/// A persona whose device states its GPU's WebGPU identity resolves `requestAdapter()` with an adapter: its `info` is
+/// the device's, its features and limits the captured adapter's, each the same object every read, every member
+/// refusing a foreign receiver, and `requestDevice()` refused (there is no device to give).
+#[tokio::test]
+async fn a_persona_s_adapter_is_what_requestadapter_resolves() {
+    let adapter = serde_json::json!({
+        "info": { "vendor": "intel", "architecture": "gen-12lp", "device": "", "description": "", "subgroupMinSize": 8, "subgroupMaxSize": 32, "isFallbackAdapter": false },
+        "features": ["texture-compression-bc", "shader-f16"],
+        "limits": { "maxBindGroups": 4, "maxTextureDimension2D": 16384 },
+        "preferredFormat": "bgra8unorm",
+    });
+    let p = persona::Overridden::on(persona::CapturedPersona::default()).webgpu_adapter(adapter.to_string());
+    let mut e = Engine::new(p.boxed());
+    e.run().await.unwrap();
+    e.load_html(PAGE).unwrap();
+    e.run().await.unwrap();
+    e.eval(
+        "gpu-adapter",
+        r#"navigator.gpu.requestAdapter().then(async a => {
+            const i = a.info, f = a.features, l = a.limits;
+            let dev; try { await a.requestDevice(); dev = "resolved"; } catch (err) { dev = err.name; }
+            let foreign; try { Object.getOwnPropertyDescriptor(GPUAdapterInfo.prototype, "vendor").get.call({}); foreign = "no"; } catch (err) { foreign = err.message; }
+            globalThis.__gpu = [Object.prototype.toString.call(a), i.vendor, i.architecture, i.subgroupMinSize, i === a.info,
+              f.size, f.has("shader-f16"), [...f].join(","), f === a.features, l.maxBindGroups, l.maxTextureDimension2D,
+              l.maxColorAttachments, Object.prototype.toString.call(l), dev, foreign, navigator.gpu.getPreferredCanvasFormat()].join("|");
+        })"#
+        .to_string(),
+    )
+    .unwrap();
+    e.run().await.unwrap();
+    assert_eq!(
+        str_of(&mut e, "gpu-adapter-read", "globalThis.__gpu".to_string()),
+        "[object GPUAdapter]|intel|gen-12lp|8|true|2|true|texture-compression-bc,shader-f16|true|4|16384|0|[object GPUSupportedLimits]|OperationError|Illegal invocation|bgra8unorm"
+    );
 }

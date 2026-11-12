@@ -1538,7 +1538,7 @@ fn inner_text_of<'s>(scope: &mut v8::PinScope<'s, '_>, op_state: &OpStateRc, thi
     if connected && in_closed_details {
         return String::new();
     }
-    let languages = crate::core::navigator::navigator::persona(scope).map(|p| p.navigator().languages).unwrap_or_default();
+    let languages = crate::core::navigator::navigator::persona(scope).map(|p| spec::devtools::navigator(p.navigator()).languages).unwrap_or_default();
     // An element inside a replaced element's fallback, inside SVG outside a `<text>`, or
     // an unslotted light child of a shadow host is not being rendered either. Chrome 150:
     // `<canvas><p id=t>INCAN</p></canvas>` reads `INCAN`, and so does an unslotted `<span>`.

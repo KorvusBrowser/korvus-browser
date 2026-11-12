@@ -250,6 +250,11 @@ async fn main() -> anyhow::Result<()> {
         };
         if let Some(doc) = doc {
             wear(&doc, Some(wear_file));
+            // a page runs on its device's cores -- not a browser endpoint, which runs none and whose page
+            // processes inherit its CPUs (each narrows them to its own persona's)
+            if !endpoint {
+                cap_to_worn_cores(&doc);
+            }
         }
     }
     // Coherence (DoD-5): the process timezone drives Intl.DateTimeFormat().resolvedOptions().timeZone.
@@ -1045,6 +1050,61 @@ fn wear(text: &str, dir: Option<std::path::PathBuf>) {
     }
 }
 
+/// [`cap_parallelism`] to the cores of the worn persona document `text`.
+fn cap_to_worn_cores(text: &str) {
+    let cores = serde_json::from_str::<serde_json::Value>(text).ok().and_then(|d| d.pointer("/device/hardware/cores").and_then(|c| c.as_u64()));
+    if let Some(cores) = cores {
+        let key = text.bytes().fold(0xcbf2_9ce4_8422_2325u64, |h, b| (h ^ b as u64).wrapping_mul(0x0000_0100_0000_01b3));
+        cap_parallelism(cores as usize, key);
+    }
+}
+
+/// The page's real parallelism, no more than the worn device's cores (the persona spec's §5.7): a page that times
+/// `hardwareConcurrency` workers against one (a parallel benchmark) measures the device it was told of, not a host
+/// with more. This process is pinned to `cores` of the CPUs it may run on, chosen from `key` so the contexts of one
+/// host spread over its CPUs. A host with fewer CPUs is left as it is (the host audit speaks to that), as is any host
+/// under `KORVUS_CPU_CAP=off`. Linux only.
+fn cap_parallelism(cores: usize, key: u64) {
+    #[cfg(target_os = "linux")]
+    {
+        if cores == 0 || std::env::var("KORVUS_CPU_CAP").is_ok_and(|v| v == "off") {
+            return;
+        }
+        // a cpu_set_t of 1024 CPUs
+        let mut set = [0u64; 16];
+        // SAFETY: the kernel writes at most `size` bytes into `set`, which is that large.
+        if unsafe { sched_getaffinity(0, std::mem::size_of_val(&set), set.as_mut_ptr()) } != 0 {
+            return;
+        }
+        let cpus: Vec<usize> = (0..1024).filter(|i| set[i / 64] & (1u64 << (i % 64)) != 0).collect();
+        if cpus.len() <= cores {
+            return;
+        }
+        let start = (key % cpus.len() as u64) as usize;
+        let mut mine = [0u64; 16];
+        for k in 0..cores {
+            let c = cpus[(start + k) % cpus.len()];
+            mine[c / 64] |= 1u64 << (c % 64);
+        }
+        // every thread of the process (a thread's mask is its own; the ones made later inherit their maker's)
+        let tids: Vec<i32> = std::fs::read_dir("/proc/self/task")
+            .map(|d| d.flatten().filter_map(|e| e.file_name().to_str().and_then(|t| t.parse().ok())).collect())
+            .unwrap_or_default();
+        for tid in tids.into_iter().chain([0]) {
+            // SAFETY: as above; the set lists CPUs this process may already run on.
+            unsafe { sched_setaffinity(tid, std::mem::size_of_val(&mine), mine.as_ptr()) };
+        }
+    }
+    #[cfg(not(target_os = "linux"))]
+    let _ = (cores, key);
+}
+
+#[cfg(target_os = "linux")]
+extern "C" {
+    fn sched_getaffinity(pid: i32, size: usize, mask: *mut u64) -> i32;
+    fn sched_setaffinity(pid: i32, size: usize, mask: *const u64) -> i32;
+}
+
 fn read_or_exit(path: &str) -> String {
     std::fs::read_to_string(path).unwrap_or_else(|e| {
         eprintln!("korvus: cannot read the persona document {path}: {e}");
@@ -1138,6 +1198,10 @@ fn apply_context(spec: &cdp::router::ContextSpec) {
     // the permissions a DevTools client granted the context before this page opened
     spec::devtools::set_permissions(spec.permissions.clone());
     spec::devtools::set_download_behavior(spec.downloads.clone());
+    // the identity overrides a client gave the context's earlier pages: this one is the same machine
+    for (method, params) in &spec.overrides {
+        cdp::set_identity_override(method, params);
+    }
     if let Some(store) = &spec.store {
         if let Err(e) = transport::context_store::connect(store.clone()) {
             eprintln!("korvus: cannot reach context {}'s store at {}: {e}", store.context, store.addr);

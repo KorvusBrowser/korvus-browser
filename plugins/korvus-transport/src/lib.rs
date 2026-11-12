@@ -1345,7 +1345,6 @@ fn apply_devtools_overrides(req: &mut FetchRequest, authored_language: bool) {
     };
     if let Some(o) = spec::devtools::user_agent() {
         if !o.user_agent.is_empty() {
-            set(req, "user-agent", o.user_agent.clone());
             // the client hints change only with the client's metadata; without it they stay the persona's, as
             // Chrome's stay its own (`spec::devtools::client_hints`)
             if let Some(m) = &o.metadata {
@@ -1358,16 +1357,33 @@ fn apply_devtools_overrides(req: &mut FetchRequest, authored_language: bool) {
                         req.headers.push(("sec-ch-ua-platform".into(), format!("\"{}\"", m.platform)));
                     }
                 }
-                req.high_entropy_hints = None;
+                // the high-entropy hints an origin asks for (`Accept-CH`) are the metadata's, as Chrome sends them
+                let hints = spec::devtools::client_hints(spec::ClientHints::default());
+                req.high_entropy_hints = Some(std::sync::Arc::new(client_hints::high_entropy_values(&hints)));
             }
         }
-        if !o.accept_language.is_empty() && !authored_language {
-            let langs = spec::devtools::languages_of(&o.accept_language);
-            set(req, "accept-language", spec::devtools::accept_language_header(&langs));
-        }
     }
+    devtools_identity_headers(&mut req.headers, authored_language);
     for (k, v) in spec::devtools::extra_headers() {
         set(req, &k.to_ascii_lowercase(), v);
+    }
+}
+
+/// The client's `User-Agent` and `Accept-Language` (`spec::devtools::user_agent`) over `headers` -- the identity
+/// headers every request of the page takes, a fetch's or a WebSocket handshake's. `authored_language`: the request
+/// states its own `Accept-Language`, which stays.
+pub(crate) fn devtools_identity_headers(headers: &mut Vec<(String, String)>, authored_language: bool) {
+    let Some(o) = spec::devtools::user_agent() else { return };
+    let mut set = |name: &str, value: String| {
+        headers.retain(|(k, _)| !k.eq_ignore_ascii_case(name));
+        headers.push((name.to_string(), value));
+    };
+    if !o.user_agent.is_empty() {
+        set("user-agent", o.user_agent.clone());
+    }
+    if !o.accept_language.is_empty() && !authored_language {
+        let langs = spec::devtools::languages_of(&o.accept_language);
+        set("accept-language", spec::devtools::accept_language_header(&langs));
     }
 }
 
@@ -3295,10 +3311,21 @@ pub fn http_request(
 /// Where `proxy` exits: the address an IP echo (`echo`, which answers a request with the address it came from, e.g.
 /// `https://api.ipify.org`) sees a request through it come from. Blocking, at most `within`.
 pub fn exit_ip(proxy: &str, echo: &str, within: std::time::Duration) -> Result<std::net::IpAddr, String> {
-    let (status, body) = http_request("GET", echo, &[], None, Some(proxy), within).map_err(|e| format!("{e} (through the proxy)"))?;
+    echo_ip(Some(proxy), echo, within)
+}
+
+/// Where this machine's own traffic exits -- [`exit_ip`] with no proxy: the address a proxy-less context's pages are
+/// seen from.
+pub fn direct_exit_ip(echo: &str, within: std::time::Duration) -> Result<std::net::IpAddr, String> {
+    echo_ip(None, echo, within)
+}
+
+fn echo_ip(proxy: Option<&str>, echo: &str, within: std::time::Duration) -> Result<std::net::IpAddr, String> {
+    let how = if proxy.is_some() { " through the proxy" } else { "" };
+    let (status, body) = http_request("GET", echo, &[], None, proxy, within).map_err(|e| format!("{e}{how}"))?;
     let body = String::from_utf8_lossy(&body);
     if status != 200 {
-        return Err(format!("{echo}: answered {status} through the proxy"));
+        return Err(format!("{echo}: answered {status}{how}"));
     }
     body.trim().parse::<std::net::IpAddr>().map_err(|_| format!("{echo}: not an IP ({})", body.trim()))
 }

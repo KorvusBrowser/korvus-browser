@@ -152,12 +152,12 @@ pub fn install_worker_webgpu<'s>(scope: &mut v8::PinScope<'s, '_>) {
 
 fn install_webgpu_interfaces<'s>(scope: &mut v8::PinScope<'s, '_>, global: v8::Local<'s, v8::Object>, realm: &str) {
     use crate::core::html::webgpu::{
-        cb_pipeline_error_ctor, cb_uncaptured_error_event_ctor, GPU, GPUCANVASCONTEXT, GPUERROR,
-        GPUPIPELINEERROR, GPUUNCAPTUREDERROREVENT, WGSLLANGUAGEFEATURES,
+        cb_pipeline_error_ctor, cb_uncaptured_error_event_ctor, GPU, GPUADAPTER, GPUADAPTERINFO, GPUCANVASCONTEXT, GPUERROR,
+        GPUPIPELINEERROR, GPUSUPPORTEDFEATURES, GPUSUPPORTEDLIMITS, GPUUNCAPTUREDERROREVENT, WGSLLANGUAGEFEATURES,
     };
 
     let mut ledger = installer::take_ledger(scope);
-    for def in [&GPU, &WGSLLANGUAGEFEATURES, &GPUCANVASCONTEXT, &GPUERROR] {
+    for def in [&GPU, &WGSLLANGUAGEFEATURES, &GPUCANVASCONTEXT, &GPUERROR, &GPUADAPTER, &GPUADAPTERINFO, &GPUSUPPORTEDFEATURES, &GPUSUPPORTEDLIMITS] {
         let built = installer::create_interface(scope, global, def, def.name, None, None, Flavor::Table, &mut ledger);
         for g in &built.gaps {
             eprintln!("[{realm}] webgpu install gap: {}.{}", g.interface, g.member);

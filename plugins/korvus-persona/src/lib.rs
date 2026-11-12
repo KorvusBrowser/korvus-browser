@@ -487,6 +487,10 @@ impl Persona for CapturedPersona {
             orientation_type: s.orientation.ty.clone(),
             orientation_angle: s.orientation.angle,
             refresh_rate: s.refresh_rate,
+            color_gamut: String::new(),
+            hdr: false,
+            prefers_dark: false,
+            reduced_motion: false,
         }
     }
 
@@ -979,6 +983,20 @@ pub struct Overridden {
     timezone: Option<String>,
     /// A persona document's device oracle (its GPU strings and WebGL set over the bundle's; `document::device_oracle`).
     device_oracle: Option<String>,
+    /// A persona document's OS release and CPU, as the high-entropy client hints carry them: `platformVersion`,
+    /// `architecture`, `bitness` (each empty = the bundle's).
+    os_release: Option<(String, String, String)>,
+    /// A persona document's speech voices (`speechSynthesis.getVoices()`) over the bundle's.
+    voices: Option<Vec<spec::SpeechVoice>>,
+    /// The device's fonts over the bundle's (`spec::FontLayer`).
+    font_layer: Option<spec::FontLayer>,
+    /// The kinds `enumerateDevices()` lists before a permission, in Chrome's order.
+    media_device_kinds: Option<Vec<String>>,
+    /// `navigator.storage.estimate()`'s quota, bytes.
+    storage_quota: Option<f64>,
+    battery: Option<spec::BatteryState>,
+    /// The WebGPU adapter the device's GPU answers with (`document::webgpu_adapter`), JSON.
+    webgpu_adapter: Option<String>,
 }
 
 impl Overridden {
@@ -989,7 +1007,7 @@ impl Overridden {
     /// Overrides on a specific base -- the one `KORVUS_BUNDLE` selected, rather than the embedded
     /// bundle [`new`](Self::new) always starts from.
     pub fn on(base: CapturedPersona) -> Self {
-        Self { base, navigator: None, screen: None, user_agent: None, no_oracle: false, hardware: None, korvus: None, locale: None, timezone: None, device_oracle: None }
+        Self { base, navigator: None, screen: None, user_agent: None, no_oracle: false, hardware: None, korvus: None, locale: None, timezone: None, device_oracle: None, os_release: None, voices: None, font_layer: None, media_device_kinds: None, storage_quota: None, battery: None, webgpu_adapter: None }
     }
     pub fn navigator(mut self, n: NavigatorProfile) -> Self {
         self.navigator = Some(n);
@@ -1054,6 +1072,42 @@ impl Overridden {
     /// The IANA zone the page's clock reads ("": this machine's own).
     pub fn timezone(mut self, zone: &str) -> Self {
         self.timezone = Some(zone.to_string());
+        self
+    }
+    /// The OS release and CPU the high-entropy client hints report: `platformVersion`, `architecture`, `bitness`
+    /// (an empty one keeps the bundle's).
+    pub fn os_release(mut self, platform_version: &str, architecture: &str, bitness: &str) -> Self {
+        self.os_release = Some((platform_version.to_string(), architecture.to_string(), bitness.to_string()));
+        self
+    }
+    /// The voices `speechSynthesis.getVoices()` lists.
+    pub fn voices(mut self, voices: Vec<spec::SpeechVoice>) -> Self {
+        self.voices = Some(voices);
+        self
+    }
+    /// The device's fonts over the bundle's.
+    pub fn font_layer(mut self, layer: spec::FontLayer) -> Self {
+        self.font_layer = Some(layer);
+        self
+    }
+    /// The media device kinds `enumerateDevices()` lists before a permission.
+    pub fn media_device_kinds(mut self, kinds: Vec<String>) -> Self {
+        self.media_device_kinds = Some(kinds);
+        self
+    }
+    /// `navigator.storage.estimate()`'s quota, bytes.
+    pub fn storage_quota(mut self, quota: f64) -> Self {
+        self.storage_quota = Some(quota);
+        self
+    }
+    /// The WebGPU adapter, JSON.
+    pub fn webgpu_adapter(mut self, json: String) -> Self {
+        self.webgpu_adapter = Some(json);
+        self
+    }
+    /// `navigator.getBattery()`'s values.
+    pub fn battery(mut self, b: spec::BatteryState) -> Self {
+        self.battery = Some(b);
         self
     }
     pub fn boxed(self) -> Box<dyn Persona> {
@@ -1251,6 +1305,19 @@ impl Persona for Overridden {
         if let Some(tag) = &self.locale {
             ch.intl_locale = tag.clone();
         }
+        if let Some(kinds) = &self.media_device_kinds {
+            ch.media_device_kinds = kinds.clone();
+        }
+        if let Some(q) = self.storage_quota {
+            ch.storage_quota = Some((q, ch.storage_quota.map_or(0.0, |(_, u)| u)));
+        }
+        if let Some((version, arch, bits)) = &self.os_release {
+            for (field, value) in [(&mut ch.platform_version, version), (&mut ch.architecture, arch), (&mut ch.bitness, bits)] {
+                if !value.is_empty() {
+                    *field = value.clone();
+                }
+            }
+        }
         ch
     }
     fn webdriver(&self) -> bool {
@@ -1298,7 +1365,19 @@ impl Persona for Overridden {
     }
 
     fn speech_voices(&self) -> Vec<spec::SpeechVoice> {
-        self.base.speech_voices()
+        self.voices.clone().unwrap_or_else(|| self.base.speech_voices())
+    }
+
+    fn font_layer(&self) -> Option<spec::FontLayer> {
+        self.font_layer.clone()
+    }
+
+    fn battery(&self) -> Option<spec::BatteryState> {
+        self.battery
+    }
+
+    fn webgpu_adapter(&self) -> Option<String> {
+        self.webgpu_adapter.clone()
     }
 
     fn webrtc_offer(&self) -> Option<std::sync::Arc<spec::WebrtcOffer>> {

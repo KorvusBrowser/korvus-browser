@@ -274,7 +274,7 @@ struct Shaper {
 
 impl Shaper {
     fn new(scope: &mut v8::PinScope) -> Shaper {
-        let lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+        let lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
         let op_state = deno_core::JsRuntime::op_state_from(scope);
         let st = op_state.borrow();
         let font_map = crate::core::dom::geometry_queries::media_context(&st).theme.font_map;

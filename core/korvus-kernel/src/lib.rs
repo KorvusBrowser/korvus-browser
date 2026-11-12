@@ -168,6 +168,23 @@ pub trait Persona: Send + Sync {
         Vec::new()
     }
 
+    /// Which of the bundle's installed font families this device has, and the standard font its browser's UI
+    /// locale sets ([`FontLayer`]). `None`: the bundle's own, as captured.
+    fn font_layer(&self) -> Option<FontLayer> {
+        None
+    }
+
+    /// The WebGPU adapter `navigator.gpu.requestAdapter()` resolves with, as JSON in the bundle's `webgpu-adapter.json`
+    /// shape (`info`, `features`, `limits`, `preferredFormat`). `None`: no adapter (`null`).
+    fn webgpu_adapter(&self) -> Option<String> {
+        None
+    }
+
+    /// `navigator.getBattery()`'s values. `None`: a desktop on mains power, as Chrome reports one with no battery.
+    fn battery(&self) -> Option<BatteryState> {
+        None
+    }
+
     /// The device's own SDP offer for one receive-only audio and one receive-only video transceiver.
     /// Which codecs, payload types, header extensions and feedback a section lists
     /// is the BUILD's, as the codec grid of [`Persona::codecs`] is: measured on the four installed browsers,
@@ -2908,6 +2925,14 @@ pub struct ScreenProfile {
     /// `1000 / refresh_rate` ms). Measured, not assumed: Chrome 150 on the captured desktop runs rAF
     /// every 16.7 ms. `0` = not captured; the engine then uses the common 60 Hz.
     pub refresh_rate: f64,
+    /// The display's gamut as `@media (color-gamut)` answers it: `srgb`, `p3` or `rec2020`. Empty = `srgb`.
+    pub color_gamut: String,
+    /// An HDR display: `@media (dynamic-range: high)` matches.
+    pub hdr: bool,
+    /// The OS's dark mode: `@media (prefers-color-scheme: dark)` matches (a DevTools emulation wins).
+    pub prefers_dark: bool,
+    /// The OS's "reduce motion" (Windows' animation effects off): `@media (prefers-reduced-motion: reduce)`.
+    pub reduced_motion: bool,
 }
 
 /// Navigator scalars that are structurally constant within a browser family. Defaults are the
@@ -3127,6 +3152,30 @@ pub trait RemoteFrameHost: Send + Sync {
 
 /// The remote-frame service handle on the kernel `Context`.
 pub struct RemoteFrames(pub std::sync::Arc<dyn RemoteFrameHost>);
+
+/// A device's fonts over its bundle's ([`Persona::font_layer`]): the bundle's families it lacks (a language's
+/// supplemental fonts on a machine without that language), and its browser's standard font when the UI locale sets
+/// another than the capture's.
+#[derive(Debug, Clone, Default, PartialEq, Eq)]
+pub struct FontLayer {
+    /// The families (any case) this device has, when it says: every family of the bundle not among them is absent.
+    pub installed: Option<Vec<String>>,
+    /// Families (any case) the bundle has and this device does not: they resolve to nothing.
+    pub absent: Vec<String>,
+    /// The family a document with no `font-family` uses; `None` keeps the bundle's.
+    pub standard: Option<String>,
+}
+
+/// `BatteryManager`'s four values ([`Persona::battery`]).
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct BatteryState {
+    pub charging: bool,
+    /// 0 to 1, in hundredths.
+    pub level: f64,
+    /// Seconds; `f64::INFINITY` for unknown, 0 when full.
+    pub charging_time: f64,
+    pub discharging_time: f64,
+}
 
 /// One `SpeechSynthesisVoice` (Web Speech API), as the persona's browser lists it.
 #[derive(Debug, Clone, Default, PartialEq, Eq, serde::Deserialize)]

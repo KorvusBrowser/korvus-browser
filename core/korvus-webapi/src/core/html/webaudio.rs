@@ -752,8 +752,14 @@ pub(crate) fn cb_new_audio_context(scope: &mut v8::PinScope, args: v8::FunctionC
     if !crate::binding::protos::require_ctor_new_target(scope, &args, "AudioContext") {
         return;
     }
-    let rate = crate::binding::protos::body_data(scope, &args).number_value(scope).filter(|r| *r > 0.0).unwrap_or(48000.0) as f32;
-    construct(scope, args, false, rate);
+    // the worn device's output rate, read off its oracle now, over the one bound at install: a realm restored from the
+    // bundle's snapshot carries the rate of whichever persona made it
+    let bound = crate::binding::protos::body_data(scope, &args).number_value(scope).filter(|r| *r > 0.0).unwrap_or(48000.0) as f32;
+    let live = crate::core::navigator::navigator::persona(scope)
+        .and_then(|p| serde_json::from_str::<serde_json::Value>(&p.device_oracle_json()).ok())
+        .and_then(|o| o.pointer("/audio/sampleRate").and_then(serde_json::Value::as_f64))
+        .filter(|r| *r > 0.0);
+    construct(scope, args, false, live.map_or(bound, |r| r as f32));
 }
 
 pub(crate) fn cb_new_offline_context(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, _rv: v8::ReturnValue) {

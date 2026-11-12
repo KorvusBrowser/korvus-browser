@@ -127,6 +127,47 @@ pub fn worn_font_map() -> &'static FontMap {
     font_map(WORN.with(|w| w.get()))
 }
 
+/// The worn device's fonts over its bundle's (`spec::FontLayer`): the families it lacks, lowercased, and the standard
+/// font its UI locale sets. Process-wide, as a process wears one persona and its workers measure with its fonts too.
+static LAYER: std::sync::RwLock<Option<(std::collections::HashSet<String>, Option<&'static str>)>> = std::sync::RwLock::new(None);
+
+/// Wear a device's font layer from here on (`None`: the bundle's fonts, as captured).
+pub fn set_worn_font_layer(layer: Option<spec::FontLayer>) {
+    let v = layer.map(|l| {
+        let mut absent: std::collections::HashSet<String> = l.absent.iter().map(|f| f.trim().to_lowercase()).collect();
+        // a device that lists its families lacks every one of the worn bundle's it does not list
+        if let Some(installed) = &l.installed {
+            let have: std::collections::HashSet<String> = installed.iter().map(|f| f.trim().to_lowercase()).collect();
+            absent.extend(worn_font_map().families.iter().map(|(n, _)| n.to_string()).filter(|n| !have.contains(n)));
+        }
+        // leaked once per process (a process wears one persona): the standard font is read as a `&'static str`
+        let standard = l.standard.filter(|s| !s.trim().is_empty()).map(|s| &*Box::leak(s.into_boxed_str()));
+        (absent, standard)
+    });
+    *LAYER.write().unwrap_or_else(|e| e.into_inner()) = v;
+}
+
+/// Is `family` (lowercase) one of the bundle's the worn device lacks?
+fn absent(family: &str) -> bool {
+    LAYER.read().unwrap_or_else(|e| e.into_inner()).as_ref().is_some_and(|(a, _)| a.contains(family))
+}
+
+/// The face of [`standard_family`] in `map`: what a list naming nothing installed falls back to.
+pub fn standard_face(map: &FontMap) -> &'static FontFace {
+    let fam = standard_family(map);
+    if fam != map.default_family {
+        if let Ok(i) = map.families.binary_search_by(|(n, _)| (*n).cmp(fam.to_lowercase().as_str())) {
+            return &font_table::FACES[map.families[i].1 as usize];
+        }
+    }
+    &font_table::FACES[map.default_face as usize]
+}
+
+/// The standard font of the worn device: its UI locale's, else the bundle's.
+pub fn standard_family(map: &FontMap) -> &'static str {
+    LAYER.read().unwrap_or_else(|e| e.into_inner()).as_ref().and_then(|(_, s)| *s).unwrap_or(map.default_family)
+}
+
 /// A persona's per-font-box shift of the VERTICAL font metrics (`ascent`/`descent`), in ems, keyed by the box it
 /// applies to — the `(ascent, descent)` em-ratios a face was captured with.
 ///
@@ -303,7 +344,7 @@ impl FontMetrics {
             if own > 0.0 {
                 return own;
             }
-            let fallback = font_table::FACES[worn_font_map().default_face as usize].styles[0].class_advances[class as usize];
+            let fallback = standard_face(worn_font_map()).styles[0].class_advances[class as usize];
             if fallback > 0.0 {
                 return fallback;
             }
@@ -577,7 +618,7 @@ impl FontProvider for PersonaFonts {
             }
             let faces: Vec<&'static FontFace> = families.split(',').filter_map(|family| resolve_face_in(self.map, family)).collect();
             let m = match faces.split_first() {
-                None => font_table::FACES[self.map.default_face as usize].style(bold, italic),
+                None => standard_face(self.map).style(bold, italic),
                 Some((primary, rest)) => {
                     let primary = primary.style(bold, italic);
                     if primary.covered == ALL_ASCII {
@@ -841,7 +882,7 @@ impl WithWebFonts {
             return self.persona.metrics_styled(families, bold, italic);
         }
         match faces.split_first() {
-            None => font_table::FACES[self.persona.map.default_face as usize].style(bold, italic),
+            None => standard_face(self.persona.map).style(bold, italic),
             Some((primary, _)) if primary.covered == ALL_ASCII => primary,
             Some((primary, rest)) => with_fallbacks(primary, rest),
         }
@@ -928,8 +969,11 @@ pub fn resolve_face_in(map: &FontMap, family: &str) -> Option<&'static FontFace>
     let lookup = |table: &'static [(&'static str, u16)], key: &str| {
         table.binary_search_by(|(n, _)| (*n).cmp(key)).ok().map(|i| &font_table::FACES[table[i].1 as usize])
     };
-    if let Some(face) = lookup(map.families, name) {
+    if let Some(face) = lookup(map.families, name).filter(|_| !absent(name)) {
         return Some(face);
+    }
+    if absent(name) {
+        return None;
     }
     if !quoted {
         // An unquoted generic keyword: `sans-serif`, `serif`, `monospace`, `system-ui`, ...
@@ -1301,7 +1345,7 @@ impl spec::CssValues for BuiltinFonts {
     }
 
     fn default_family(&self, font_map: u64) -> String {
-        self::font_map(font_map).default_family.to_string()
+        standard_family(self::font_map(font_map)).to_string()
     }
 
     fn parse_color(&self, text: &str) -> Option<[u8; 4]> {

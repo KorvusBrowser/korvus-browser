@@ -209,6 +209,11 @@ pub struct ContextSpec {
     /// How a DevTools client said the context downloads (`Browser.setDownloadBehavior`): `(behavior, downloadPath)`.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub downloads: Option<(String, String)>,
+    /// The identity overrides a DevTools client sent a page of the context (`crate::IDENTITY_OVERRIDES`: its user
+    /// agent and languages, zone, locale, media preferences), the last of each as given: its later pages and popups
+    /// start with them, so the context stays one machine from tab to tab.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub overrides: Vec<(String, Value)>,
 }
 
 /// The answer slots' answers for one context.
@@ -220,7 +225,34 @@ pub struct Drawn {
     pub identity: Option<Value>,
 }
 
+/// The korvus settings `Target.createBrowserContext` takes, as a `korvus` object's keys or `korvus.<setting>` keys.
+pub const CONTEXT_SETTINGS: &[&str] =
+    &["name", "identity", "seed", "device", "timezone", "locale", "rotation", "humanize", "fresh", "proxy", "plugins"];
+
 impl ContextSpec {
+    /// The korvus settings in `params` this endpoint does not have (`korvus.os`, a `korvus` object's `languages`), as
+    /// the client wrote them; `None` when there are none.
+    fn unknown_settings(params: &Value) -> Option<Vec<String>> {
+        let mut unknown: Vec<String> = Vec::new();
+        if let Some(o) = params.as_object() {
+            for (k, v) in o {
+                if let Some(s) = k.strip_prefix("korvus.") {
+                    if !CONTEXT_SETTINGS.contains(&s) {
+                        unknown.push(k.clone());
+                    }
+                } else if k == "korvus" {
+                    match v.as_object() {
+                        Some(inner) => unknown.extend(inner.keys().filter(|s| !CONTEXT_SETTINGS.contains(&s.as_str())).map(|s| format!("korvus.{s}"))),
+                        None if !v.is_null() => unknown.push("korvus (not an object)".into()),
+                        None => {}
+                    }
+                }
+            }
+        }
+        unknown.sort();
+        (!unknown.is_empty()).then_some(unknown)
+    }
+
     /// The spec at `path`, as the router wrote it.
     pub fn load(path: &Path) -> anyhow::Result<ContextSpec> {
         let text = std::fs::read_to_string(path).map_err(|e| anyhow::anyhow!("cannot read the context spec {}: {e}", path.display()))?;
@@ -285,6 +317,13 @@ static DEFAULTS: std::sync::OnceLock<Defaults> = std::sync::OnceLock::new();
 /// Set this endpoint's [`Defaults`], once, before it serves.
 pub fn set_defaults(d: Defaults) {
     let _ = DEFAULTS.set(d);
+}
+
+/// Whether a context of this `korvus.rotation` takes the endpoint's seed when it names none. The endpoint's seed is its
+/// `fixed` persona: a context that asks to rotate, or to be seeded by its name, must not be handed it -- every such
+/// context of the endpoint would wear the one device.
+fn takes_endpoint_seed(rotation: Option<&str>) -> bool {
+    !matches!(rotation, Some("rotate" | "named"))
 }
 
 /// A [`plugin_host::ContextInfo`] for `spec`, as the answer and storage slots read a context: its id, persona name,
@@ -374,13 +413,21 @@ fn settle_context(mut spec: ContextSpec) -> anyhow::Result<ContextSpec> {
 /// Where a proxied context's proxy exits, for the identity's slots (a persona's zone and locale follow it): asked of an
 /// IP echo through the proxy (`$KORVUS_IP_ECHO`, else `https://api.ipify.org`) when the context asks for no identity
 /// of korvus's own and states no zone or locale of its own. "" when it has no proxy, or the echo does not answer.
+///
+/// With no proxy, the context's pages are seen from this machine's own address, and its zone and locale follow that
+/// instead of the build's capture (a Korean bundle's `Asia/Seoul` on every proxy-less context was one constant every
+/// such persona shared): asked once with no proxy and kept for a quarter of an hour ([`host_exit_ip`]).
+/// `KORVUS_IP_ECHO=off` asks nothing.
 fn exit_ip(spec: &ContextSpec) -> String {
-    let Some(p) = spec.proxy.as_ref() else { return String::new() };
     if spec.identity.as_deref() == Some("korvus") || (spec.timezone.is_some() && spec.locale.is_some()) {
         return String::new();
     }
-    let server = if p.server.contains("://") { p.server.clone() } else { format!("http://{}", p.server) };
     let echo = std::env::var("KORVUS_IP_ECHO").ok().filter(|e| !e.is_empty()).unwrap_or_else(|| "https://api.ipify.org".into());
+    if echo == "off" {
+        return String::new();
+    }
+    let Some(p) = spec.proxy.as_ref() else { return host_exit_ip(&echo) };
+    let server = if p.server.contains("://") { p.server.clone() } else { format!("http://{}", p.server) };
     match transport::exit_ip(&server, &echo, std::time::Duration::from_secs(10)) {
         Ok(ip) => ip.to_string(),
         Err(e) => {
@@ -388,6 +435,30 @@ fn exit_ip(spec: &ContextSpec) -> String {
             String::new()
         }
     }
+}
+
+/// This machine's own exit address, for the proxy-less contexts' identities: asked of `echo` with no proxy (3 s at
+/// most), kept 15 minutes, and a failure kept 5 (an offline host does not pay the wait on every context). "" when
+/// unknown.
+fn host_exit_ip(echo: &str) -> String {
+    use std::time::{Duration, Instant};
+    static LAST: std::sync::Mutex<Option<(Instant, String)>> = std::sync::Mutex::new(None);
+    let mut last = LAST.lock().unwrap_or_else(|e| e.into_inner());
+    if let Some((at, ip)) = last.as_ref() {
+        let keep = if ip.is_empty() { Duration::from_secs(300) } else { Duration::from_secs(900) };
+        if at.elapsed() < keep {
+            return ip.clone();
+        }
+    }
+    let ip = match transport::direct_exit_ip(echo, Duration::from_secs(3)) {
+        Ok(ip) => ip.to_string(),
+        Err(e) => {
+            eprintln!("[korvus] where this machine's traffic exits: {e}; a proxy-less context keeps this machine's zone and locale");
+            String::new()
+        }
+    };
+    *last = Some((Instant::now(), ip.clone()));
+    ip
 }
 
 /// What a child's socket said, or that it closed.
@@ -1348,6 +1419,22 @@ impl Browser {
     /// the actor that wait held every client and page of the endpoint: three contexts behind a dead proxy stalled the
     /// endpoint 30 s, its other contexts' mints with it.
     fn create_context(&mut self, client: u64, id: Value, session: Option<String>, params: &Value) {
+        // a korvus setting this endpoint does not have is refused, not dropped: a client that names one believes the
+        // context wears it (persona spec, principle 4)
+        if let Some(unknown) = ContextSpec::unknown_settings(params) {
+            let mut resp = json!({ "id": id, "error": RpcError::invalid_params(format!(
+                "Failed to create the browser context: unknown korvus setting(s) {}; korvus takes {}",
+                unknown.join(", "),
+                CONTEXT_SETTINGS.join(", ")
+            )).to_json() });
+            if let Some(s) = session {
+                resp["sessionId"] = json!(s);
+            }
+            if let Some(c) = self.clients.get(&client) {
+                c.send(resp);
+            }
+            return;
+        }
         let ctx = hex32();
         let dispose = params.get("disposeOnDetach").and_then(Value::as_bool).unwrap_or(false);
         let made = self.context_spec(&ctx, ContextSpec::from_params(&ctx, params));
@@ -1411,7 +1498,9 @@ impl Browser {
             }
         }
         if let Some(d) = DEFAULTS.get() {
-            spec.seed = spec.seed.take().or_else(|| d.seed.clone());
+            if takes_endpoint_seed(spec.rotation.as_deref()) {
+                spec.seed = spec.seed.take().or_else(|| d.seed.clone());
+            }
             spec.device = spec.device.take().or_else(|| d.device.clone());
             spec.timezone = spec.timezone.take().or_else(|| d.timezone.clone());
             spec.locale = spec.locale.take().or_else(|| d.locale.clone());
@@ -1547,6 +1636,17 @@ impl Browser {
             cid += 1;
         }
         self.next_child_id = cid;
+    }
+
+    /// An identity override a page of the context was sent: kept in its spec (and the spec file its later page
+    /// processes read as they start), replacing the last of the same kind.
+    fn keep_context_override(&mut self, ctx: &str, (method, params): (String, Value)) {
+        let Some(c) = self.contexts.iter_mut().find(|c| c.id == ctx) else { return };
+        c.spec.overrides.retain(|(m, _)| *m != method);
+        c.spec.overrides.push((method, params));
+        if let Ok(text) = serde_json::to_string_pretty(&c.spec) {
+            let _ = std::fs::write(&c.spec_path, text);
+        }
     }
 
     /// A context's granted permissions: kept in its spec (and its spec file, which a page process of it reads as it
@@ -2035,6 +2135,14 @@ impl Browser {
             if !keep_session && (method == "Page.startScreencast" || method == "Page.stopScreencast") {
                 if let Some(t) = self.target(&tid) {
                     t.screencast = (method == "Page.startScreencast").then(|| (client_id, sess.clone()));
+                }
+            }
+            // an identity override is the context's from now on (`ContextSpec::overrides`)
+            if !keep_session {
+                if let Some(kept) = crate::kept_override(&method, &params) {
+                    if let Some(ctx) = self.target(&tid).map(|t| t.context.clone()) {
+                        self.keep_context_override(&ctx, kept);
+                    }
                 }
             }
             let cid = self.next_child_id;
@@ -3144,5 +3252,23 @@ mod tests {
         assert_eq!(s.seed.as_deref(), Some("7"));
         assert_eq!(s.plugins, vec!["/a.so".to_string()]);
         assert_eq!(ContextSpec::from_params("C", &json!({})), ContextSpec { context: "C".into(), ..ContextSpec::default() });
+    }
+
+    #[test]
+    fn an_unknown_korvus_setting_is_named_not_dropped() {
+        assert_eq!(ContextSpec::unknown_settings(&json!({ "korvus.seed": 7, "korvus": { "locale": "de-DE" }, "proxyServer": "x" })), None);
+        assert_eq!(
+            ContextSpec::unknown_settings(&json!({ "korvus.os": "macos", "korvus": { "languages": ["de"], "seed": 1 } })),
+            Some(vec!["korvus.languages".to_string(), "korvus.os".to_string()])
+        );
+    }
+
+    #[test]
+    fn a_rotating_context_does_not_take_the_endpoint_s_seed() {
+        assert!(takes_endpoint_seed(None));
+        assert!(takes_endpoint_seed(Some("off")));
+        assert!(takes_endpoint_seed(Some("fixed")));
+        assert!(!takes_endpoint_seed(Some("rotate")));
+        assert!(!takes_endpoint_seed(Some("named")));
     }
 }

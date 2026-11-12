@@ -307,11 +307,14 @@ pub fn media_context(state: &OpState) -> MediaContext {
         theme: persona.0.theme().unwrap_or_default(),
         // a remote frame's `<iframe scrolling=no>`
         scrollbars_off: crate::core::html::remote_frame::embedded_scrollbars_off(state),
+        color_gamut: page::style::media::gamut_rank(&screen.color_gamut).unwrap_or(0),
+        hdr: screen.hdr,
         // What a DevTools client emulates (`Emulation.setEmulatedMedia`, touch emulation): the media type and the
         // user preferences it named, over the device's own.
         print: spec::devtools::emulated_media().is_some_and(|m| m.media == "print"),
-        prefers_dark: spec::devtools::media_feature("prefers-color-scheme").is_some_and(|v| v == "dark"),
-        prefers_reduced_motion: spec::devtools::media_feature("prefers-reduced-motion").is_some_and(|v| v == "reduce"),
+        // a DevTools emulation over the device's own setting
+        prefers_dark: spec::devtools::media_feature("prefers-color-scheme").map_or(screen.prefers_dark, |v| v == "dark"),
+        prefers_reduced_motion: spec::devtools::media_feature("prefers-reduced-motion").map_or(screen.reduced_motion, |v| v == "reduce"),
         coarse_pointer: spec::devtools::touch_points().is_some_and(|n| n > 0),
         hover: !spec::devtools::touch_points().is_some_and(|n| n > 0),
         ..default

@@ -437,7 +437,7 @@ fn encode_canvas(
             plugin_host::READBACK_CANVAS,
         ),
     };
-    let img = read_back(kind, img);
+    let img = if kind == plugin_host::READBACK_CANVAS { super::canvas_readback::read_back_2d(img, &ops) } else { read_back(kind, img) };
     // Fall back to PNG for a format the backend cannot write -- the same rule HTML states for a type
     // the UA does not support.
     // (A WebGL canvas has no 2D context, so `provider` is false for it: its snapshot's tag is not measured.)

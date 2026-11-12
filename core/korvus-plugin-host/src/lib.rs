@@ -819,6 +819,11 @@ pub fn set_persona_document(json: &str) {
     process().write().unwrap_or_else(|e| e.into_inner()).document = CString::new(json).unwrap_or_default();
 }
 
+/// The persona document this process wears, as [`set_persona_document`] set it ("" for none).
+pub fn persona_document() -> String {
+    process().read().unwrap_or_else(|e| e.into_inner()).document.to_string_lossy().into_owned()
+}
+
 // ── ABI 3: the metric sink (A6) ──────────────────────────────────────────────────────────────────
 
 /// One accumulated measurement a plugin recorded (`host->metric`): a key, its running total, and the labels it was

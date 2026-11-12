@@ -51,7 +51,7 @@ pub const HTML_CSS: &str = include_str!("../../ua/html.css");
 /// Korean UI's 10px minimum (measured).
 fn default_font() -> String {
     // the worn persona's standard font (`font::worn_font_map`): a Windows persona's is Malgun Gothic, not Noto Sans CJK KR
-    format!("html {{ font-family: \"{}\" }}", crate::font::worn_font_map().default_family)
+    format!("html {{ font-family: \"{}\" }}", crate::font::standard_family(crate::font::worn_font_map()))
 }
 
 /// `<details>`' content slot, which Blink styles from the element's user-agent shadow tree rather than

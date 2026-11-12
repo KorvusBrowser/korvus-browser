@@ -4,6 +4,52 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- A rotated persona is a whole machine, not a pool row: a laptop or a desktop, and with it a battery, media devices, a
+  disk (the storage quota), dark mode and reduced motion, an audio output rate and a window that is not always
+  maximized — each drawn from its seed. The context's language decides its Windows voices, whether it has the Korean
+  Supplemental Fonts, and the browser's standard font (Times New Roman under a Latin-script UI instead of the
+  capture's Malgun Gothic). A persona document can state each of these (`fonts`, `media_devices`, `battery`,
+  `storage`, `preferences`, `audio`, `window.outer` and `window.position`).
+- `navigator.gpu.requestAdapter()` resolves with an adapter for a persona whose device names its GPU's WebGPU identity:
+  `info`, features and limits, and `getPreferredCanvasFormat()` as Chrome on that platform answers. `requestDevice()` is
+  refused.
+- A page process runs on no more CPUs than its persona has cores (Linux), so a parallel benchmark measures the device
+  `hardwareConcurrency` names. `KORVUS_CPU_CAP=off` leaves it.
+- Fixed: every context of one bundle presented the GPU strings and WebGL parameters of whichever persona the page
+  realm's snapshot was made with (the snapshot is keyed by the bundle, and carried that persona's device oracle). Each
+  page now seats its own persona's oracle over the restored realm. Found by the linkability gate: 18 of 24 rotated
+  personas read one GPU.
+- Canvas noise leaves alone what no device draws differently: the background, opaque solid `fillRect`s on pixel
+  boundaries, opaque image pixels `drawImage` copies one to one, and `putImageData`'s pixels. Exact-colour probes
+  (CreepJS's "getImageData: pixel data modified" lie) read what was painted. A copy of a canvas (`drawImage`,
+  `createImageBitmap`, a pattern, a texture) takes the source's pixels as the page reads them, so a copy reads back as
+  its source does. A float read's carried step at the top of the range no longer goes the wrong way.
+- `Target.createBrowserContext` refuses a `korvus.*` setting it does not have (`korvus.os`, `korvus.languages`, …)
+  with an error naming it, instead of silently making a context without it.
+- The identity overrides a client sends one page of a context — `setUserAgentOverride` (user agent, `acceptLanguage`,
+  `platform`, metadata), `setTimezoneOverride`, `setLocaleOverride`, `setEmulatedMedia`'s preferences — are kept by
+  the context, so its later pages and popups start as the same machine. WebSocket handshakes carry the overridden
+  `User-Agent` and `Accept-Language`; CSS, canvas text, `innerText`, SVG text and document decoding take the
+  overridden languages; a user agent overridden with metadata sends that metadata's high-entropy hints when an origin
+  asks for them (it sent none).
+- `Korvus.getIdentity` returns the persona document a page wears (`persona`: its seed's name, device and session).
+- A context with no proxy takes its zone and locale from where this machine's traffic exits (asked once of the IP echo
+  and kept a quarter of an hour; `KORVUS_IP_ECHO=off` asks nothing), else from this machine's own zone and language,
+  instead of the build's capture (`Asia/Seoul` and `ko-KR` for every proxy-less Windows context).
+- A persona document's `os_version` (as `platformVersion`, where the build can be that release), `architecture`,
+  `bitness`, `voices`, `screen.color_gamut` and `screen.hdr` are worn; `@media (color-gamut)` and
+  `(dynamic-range: high)` answer the device's display. Pool personas run at 60 Hz (not the Windows capture's 56 Hz)
+  and a Mac's display is `p3`. WebGL readbacks are perturbed under a seed salt of their own, apart from the 2D canvas.
+- `--rotate rotate` (or `named`) with a seed set anywhere — `--seed`, `$KORVUS_SEED`, `seed` in the config — is
+  refused instead of silently giving every context that one seed, and so one device. A context created with
+  `korvus.rotation: "rotate"` (or `"named"`) no longer inherits the endpoint's `fixed` seed.
+- Canvas noise passes the tamper probes a fingerprinting script runs: pixels the page wrote with `putImageData` (and
+  nothing drew over since) read back exactly as written, so put→get and get→put→get round trips are identity; a
+  `getImageData` in another pixel format or colour space, and every read of a `colorType: "float16"` canvas, takes the
+  same noise as the 8-bit read instead of reading raw beside a noised `toDataURL`; and two `readPixels` of a WebGL
+  framebuffer object agree where they overlap. Noise now moves opaque pixels only: a semi-transparent pixel's colour
+  can only take values premultiplied storage allows, and a step off them was a value no device returns.
+
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing

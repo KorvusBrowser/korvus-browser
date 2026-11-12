@@ -439,7 +439,7 @@ pub fn render_document_rgba(scope: &mut v8::PinScope) -> Option<spec::Rgba8> {
     let dbg = std::env::var_os("KORVUS_RENDER_DBG").is_some();
     let dbg_t0 = std::time::Instant::now();
     // the UI language, the language text is shaped and falls back in where the document names none
-    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     // Gather Page+Dom+Media+LaidOut, build the style display list, and collect the <img> boxes — all
     // under one borrow, which drops before the <img> pass (`img_state` re-borrows op_state itself).
@@ -1292,7 +1292,7 @@ fn area_ops(scope: &mut v8::PinScope, node: u32, t: &page::paint::ControlText, (
 
 /// How wide `text` is drawn in a control's font: shaped as its text is drawn (the backend's `text_ink`).
 fn control_text_width(scope: &mut v8::PinScope, t: &page::paint::ControlText, text: &str) -> f64 {
-    let lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+    let lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let st = op_state.borrow();
     let font_map = media_context(&st).theme.font_map;
@@ -1318,7 +1318,7 @@ fn frame_pixels(scope: &mut v8::PinScope, el: u32, depth: u32) -> Option<(spec::
     if depth >= FRAME_DEPTH {
         return None;
     }
-    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let (mut ops, replaced, w, h, root) = {
         let mut st = op_state.borrow_mut();
@@ -1367,7 +1367,7 @@ fn frame_pixels(scope: &mut v8::PinScope, el: u32, depth: u32) -> Option<(spec::
 /// document at its window's size, on white -- and encoded as `format`: `Page.captureScreenshot` on its target.
 pub fn render_popup_shot(scope: &mut v8::PinScope, root: u32, format: spec::ImageFormat, quality: Option<f64>) -> Option<Vec<u8>> {
     crate::core::animation::css::tick(scope);
-    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let (mut ops, replaced, w, h) = {
         let mut st = op_state.borrow_mut();
@@ -1622,7 +1622,7 @@ fn page_ranges(spec_: &str, count: u32) -> Result<Vec<u32>, String> {
 /// The document's display list as the frame paints it -- boxes, replaced content and the text's fonts -- at the
 /// current viewport, with its size: what the PDF printer draws. Nothing of a frame's caching or paint timing.
 fn document_display_list(scope: &mut v8::PinScope) -> Option<(Vec<spec::Canvas2DOp>, u32, u32)> {
-    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| p.navigator().languages.first().cloned()).unwrap_or_else(|| "en-US".into());
+    let ui_lang = crate::core::navigator::navigator::persona(scope).and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned()).unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let (mut ops, w, h, replaced) = {
         let mut st = op_state.borrow_mut();

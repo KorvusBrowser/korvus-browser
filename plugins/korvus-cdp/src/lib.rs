@@ -2622,14 +2622,7 @@ async fn dispatch(
         // `userAgent` keeps the persona's (Playwright sends one with a locale and no user agent). The engine under the
         // strings stays what it is, as Chrome's does under its override.
         "Network.setUserAgentOverride" | "Emulation.setUserAgentOverride" => {
-            let st = |k: &str| params.get(k).and_then(Value::as_str).unwrap_or("").to_string();
-            let metadata = params.get("userAgentMetadata").filter(|m| m.is_object()).map(ua_metadata);
-            spec::devtools::set_user_agent(Some(spec::devtools::UaOverride {
-                user_agent: st("userAgent"),
-                accept_language: st("acceptLanguage"),
-                platform: st("platform"),
-                metadata,
-            }));
+            set_identity_override(method, &params);
             (Ok(json!({})), vec![])
         }
 
@@ -2641,8 +2634,7 @@ async fn dispatch(
         // A zone for the page (`newContext({timezoneId})`): `TZ`, and V8 and ICU told to read it again. Empty clears
         // it back to the context's own. Before the page's realm exists it is simply what the realm starts with.
         "Emulation.setTimezoneOverride" => {
-            let tz = params.get("timezoneId").and_then(Value::as_str).unwrap_or("");
-            engine::set_timezone_override((!tz.is_empty()).then_some(tz));
+            set_identity_override(method, &params);
             if engine.built() {
                 engine.get().time_zone_changed();
             }
@@ -2652,8 +2644,7 @@ async fn dispatch(
         // `toLocaleString()` resolve to. Before the realm exists (a client sets it on a new page) the realm starts
         // in it; a realm already running gets it from its next document.
         "Emulation.setLocaleOverride" => {
-            let locale = params.get("locale").and_then(Value::as_str).unwrap_or("");
-            engine::set_locale_override((!locale.is_empty()).then_some(locale));
+            set_identity_override(method, &params);
             (Ok(json!({})), vec![])
         }
 
@@ -2684,19 +2675,7 @@ async fn dispatch(
         }
         // `page.emulateMedia`, `newContext({colorScheme, reducedMotion})`: the media type and the preferences named.
         "Emulation.setEmulatedMedia" => {
-            let features: Vec<(String, String)> = params
-                .get("features")
-                .and_then(Value::as_array)
-                .map(|a| {
-                    a.iter()
-                        .filter_map(|f| Some((f.get("name")?.as_str()?.to_string(), f.get("value").and_then(Value::as_str).unwrap_or("").to_string())))
-                        .collect()
-                })
-                .unwrap_or_default();
-            spec::devtools::set_emulated_media(Some(spec::devtools::EmulatedMedia {
-                media: params.get("media").and_then(Value::as_str).unwrap_or("").to_string(),
-                features,
-            }));
+            set_identity_override(method, &params);
             (Ok(json!({})), vec![])
         }
         "Emulation.setScriptExecutionDisabled" => {
@@ -2822,6 +2801,9 @@ async fn dispatch(
                 "timezone": env("TZ"),
                 "locale": env("LC_ALL").map(|l| l.trim_end_matches(".UTF-8").to_string()),
                 "cookies": cookies,
+                // the persona document the page wears -- its seed's name, its device (hardware, screen, GPU, noise)
+                // and its session -- so a client can record what each context presents; null for korvus's own
+                "persona": serde_json::from_str::<Value>(&plugin_host::persona_document()).ok(),
             });
             (Ok(identity), vec![])
         }
@@ -4451,6 +4433,73 @@ fn prop_value(engine: &mut Engine, v: engine::PropValue, ids: &ConnIds, ctx: i64
 }
 
 /// `Emulation.UserAgentMetadata` as the override keeps it.
+/// The DevTools overrides that describe the machine rather than the page -- its user agent and languages, its zone,
+/// its locale, its media preferences -- which the router keeps in the context so every later page of it starts with
+/// them (`router::ContextSpec::overrides`): a context is one machine, and a machine does not change between tabs.
+pub const IDENTITY_OVERRIDES: &[&str] = &[
+    "Network.setUserAgentOverride",
+    "Emulation.setUserAgentOverride",
+    "Emulation.setTimezoneOverride",
+    "Emulation.setLocaleOverride",
+    "Emulation.setEmulatedMedia",
+];
+
+/// Set one of [`IDENTITY_OVERRIDES`] on this page process, as its command asks: what a page's session does when the
+/// client sends it, and what a new page of the context does with the ones its context kept, before its engine exists.
+/// The engine, if built, is told separately (a zone change).
+pub fn set_identity_override(method: &str, params: &Value) {
+    let st = |k: &str| params.get(k).and_then(Value::as_str).unwrap_or("").to_string();
+    match method {
+        "Network.setUserAgentOverride" | "Emulation.setUserAgentOverride" => {
+            let metadata = params.get("userAgentMetadata").filter(|m| m.is_object()).map(ua_metadata);
+            spec::devtools::set_user_agent(Some(spec::devtools::UaOverride {
+                user_agent: st("userAgent"),
+                accept_language: st("acceptLanguage"),
+                platform: st("platform"),
+                metadata,
+            }));
+        }
+        "Emulation.setTimezoneOverride" => {
+            let tz = st("timezoneId");
+            engine::set_timezone_override((!tz.is_empty()).then_some(tz.as_str()));
+        }
+        "Emulation.setLocaleOverride" => {
+            let locale = st("locale");
+            engine::set_locale_override((!locale.is_empty()).then_some(locale.as_str()));
+        }
+        "Emulation.setEmulatedMedia" => {
+            let features: Vec<(String, String)> = params
+                .get("features")
+                .and_then(Value::as_array)
+                .map(|a| {
+                    a.iter()
+                        .filter_map(|f| Some((f.get("name")?.as_str()?.to_string(), f.get("value").and_then(Value::as_str).unwrap_or("").to_string())))
+                        .collect()
+                })
+                .unwrap_or_default();
+            spec::devtools::set_emulated_media(Some(spec::devtools::EmulatedMedia { media: st("media"), features }));
+        }
+        _ => {}
+    }
+}
+
+/// What a context keeps of an identity override its page's session was sent: the command as given, but for
+/// `setEmulatedMedia`'s media type (`print`), which is the page's, not the machine's. The two user-agent commands are
+/// one override, so they share a key.
+pub fn kept_override(method: &str, params: &Value) -> Option<(String, Value)> {
+    if !IDENTITY_OVERRIDES.contains(&method) {
+        return None;
+    }
+    let key = if method.ends_with("setUserAgentOverride") { "Emulation.setUserAgentOverride" } else { method };
+    let mut params = params.clone();
+    if method == "Emulation.setEmulatedMedia" {
+        if let Some(o) = params.as_object_mut() {
+            o.remove("media");
+        }
+    }
+    Some((key.to_string(), params))
+}
+
 fn ua_metadata(m: &Value) -> spec::devtools::UaMetadata {
     let st = |k: &str| m.get(k).and_then(Value::as_str).unwrap_or("").to_string();
     let brands = |k: &str| -> Vec<spec::Brand> {

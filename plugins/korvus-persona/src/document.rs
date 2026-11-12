@@ -104,7 +104,15 @@ pub fn read(text: &str) -> Result<Document, Vec<String>> {
 }
 
 const TOP: &[&str] = &["persona", "name", "device", "build", "session"];
-const DEVICE: &[&str] = &["os", "os_version", "architecture", "bitness", "model", "brand", "hardware", "screen", "gpu", "webgl", "webgpu", "voices", "window", "noise"];
+const DEVICE: &[&str] = &[
+    "os", "os_version", "architecture", "bitness", "model", "brand", "hardware", "screen", "gpu", "webgl", "webgpu", "voices", "window",
+    "noise", "fonts", "media_devices", "battery", "storage", "preferences", "audio",
+];
+const WINDOW: &[&str] = &["frame", "outer", "position"];
+const BATTERY: &[&str] = &["charging", "level"];
+const PREFERENCES: &[&str] = &["color_scheme", "reduced_motion"];
+/// The kinds `enumerateDevices()` lists, in Chrome's order.
+const MEDIA_KINDS: &[&str] = &["audioinput", "videoinput", "audiooutput"];
 const HARDWARE: &[&str] = &["cores", "memory_gb"];
 const SCREEN: &[&str] = &["width", "height", "avail_width", "avail_height", "avail_top", "avail_left", "dpr", "color_depth", "color_gamut", "hdr", "refresh_rate", "touch_points"];
 const GPU: &[&str] = &["vendor", "renderer"];
@@ -327,9 +335,58 @@ fn compiler_errors(out: &mut Vec<String>, device: &Map<String, Value>) {
         }
     }
     if let Some(window) = device.get("window") {
-        let ok = window.get("frame").and_then(Value::as_array).is_some_and(|f| f.len() == 2 && f.iter().all(|v| int(Some(v)).is_some_and(|n| (0..=400).contains(&n))));
-        if !ok {
+        if let Some(w) = window.as_object() {
+            unknown(out, "device.window.", w, WINDOW);
+        }
+        let pair = |k: &str, ok: &dyn Fn(i64) -> bool| window.get(k).is_none_or(|f| f.as_array().is_some_and(|f| f.len() == 2 && f.iter().all(|v| int(Some(v)).is_some_and(ok))));
+        if !window.is_object() || window.get("frame").is_none() && window.get("outer").is_none() || !pair("frame", &|n| (0..=400).contains(&n)) {
             out.push("window.frame is [outerWidth - innerWidth, outerHeight - innerHeight], each 0-400".into());
+        }
+        if !pair("outer", &|n| n > 0) {
+            out.push("window.outer is [outerWidth, outerHeight], positive".into());
+        }
+        if !pair("position", &|n| n.abs() < 100_000) {
+            out.push("window.position is [screenX, screenY]".into());
+        }
+    }
+    if let Some(f) = device.get("fonts") {
+        if !f.as_array().is_some_and(|a| a.iter().all(|x| x.as_str().is_some_and(|s| !s.trim().is_empty()))) {
+            out.push("device.fonts is a list of family names".into());
+        }
+    }
+    if let Some(m) = device.get("media_devices") {
+        let ok = m.as_array().is_some_and(|a| {
+            let kinds: Vec<&str> = a.iter().filter_map(Value::as_str).collect();
+            kinds.len() == a.len() && kinds.iter().all(|k| MEDIA_KINDS.contains(k)) && kinds.windows(2).all(|w| MEDIA_KINDS.iter().position(|k| *k == w[0]) < MEDIA_KINDS.iter().position(|k| *k == w[1]))
+        });
+        if !ok {
+            out.push("device.media_devices lists audioinput, videoinput, audiooutput, each once, in that order".into());
+        }
+    }
+    if let Some(b) = device.get("battery") {
+        if let Some(o) = b.as_object() {
+            unknown(out, "device.battery.", o, BATTERY);
+        }
+        if !b.get("charging").is_some_and(Value::is_boolean) || !num(b.get("level")).is_some_and(|l| (0.0..=1.0).contains(&l)) {
+            out.push("device.battery is {charging: boolean, level: 0-1}".into());
+        }
+    }
+    if let Some(st) = device.get("storage") {
+        if !num(st.get("quota")).is_some_and(|q| q > 0.0) {
+            out.push("device.storage.quota is a positive number of bytes".into());
+        }
+    }
+    if let Some(p) = device.get("preferences") {
+        if let Some(o) = p.as_object() {
+            unknown(out, "device.preferences.", o, PREFERENCES);
+        }
+        if p.get("color_scheme").is_some_and(|c| !matches!(c.as_str(), Some("light" | "dark"))) || p.get("reduced_motion").is_some_and(|r| !r.is_boolean()) {
+            out.push("device.preferences is {color_scheme: light|dark, reduced_motion: boolean}".into());
+        }
+    }
+    if let Some(a) = device.get("audio") {
+        if !num(a.get("sample_rate")).is_some_and(|r| (8000.0..=192000.0).contains(&r)) {
+            out.push("device.audio.sample_rate is 8000-192000 (Hz)".into());
         }
     }
 }
@@ -415,12 +472,32 @@ pub fn screen(doc: &Document, bundle: &spec::ScreenProfile) -> Option<spec::Scre
     if let Some(r) = num(s.get("refresh_rate")) {
         out.refresh_rate = r;
     }
-    out.window_outer_width = aw;
-    out.window_outer_height = ah;
-    out.window_inner_width = aw.saturating_sub(fw);
-    out.window_inner_height = ah.saturating_sub(fh);
-    out.window_screen_x = left;
-    out.window_screen_y = top;
+    if let Some(g) = s.get("color_gamut").and_then(Value::as_str) {
+        out.color_gamut = g.to_string();
+    }
+    if let Some(h) = s.get("hdr").and_then(Value::as_bool) {
+        out.hdr = h;
+    }
+    // the window: where the device says, else maximized in the available area
+    let pair = |k: &str| -> Option<(i64, i64)> {
+        let a = doc.device.get("window")?.get(k)?.as_array()?;
+        Some((int(a.first())?, int(a.get(1))?))
+    };
+    let (ow, oh) = pair("outer").map(|(w, h)| ((w as u32).min(aw), (h as u32).min(ah))).unwrap_or((aw, ah));
+    // a restored (not maximized) window on Windows keeps DWM's invisible resize borders inside its outer size: 8 px
+    // left, right and bottom, which a maximized one pushes off the screen (the bundle's frame is a maximized one's)
+    let restored = (ow, oh) != (aw, ah) && doc.os() == "windows" && doc.device.get("window").and_then(|w| w.get("frame")).is_none();
+    let (fw, fh) = if restored { (fw + 16, fh + 8) } else { (fw, fh) };
+    let (x, y) = pair("position").map(|(x, y)| (x as i32, y as i32)).unwrap_or((left, top));
+    out.window_outer_width = ow;
+    out.window_outer_height = oh;
+    out.window_inner_width = ow.saturating_sub(fw);
+    out.window_inner_height = oh.saturating_sub(fh);
+    out.window_screen_x = x;
+    out.window_screen_y = y;
+    let prefs = doc.device.get("preferences");
+    out.prefers_dark = prefs.and_then(|p| p.get("color_scheme")).and_then(Value::as_str) == Some("dark");
+    out.reduced_motion = prefs.and_then(|p| p.get("reduced_motion")).and_then(Value::as_bool) == Some(true);
     if !out.orientation_type.is_empty() {
         out.orientation_type = if w >= h { "landscape-primary".into() } else { "portrait-primary".into() };
         out.orientation_angle = 0;
@@ -428,15 +505,67 @@ pub fn screen(doc: &Document, bundle: &spec::ScreenProfile) -> Option<spec::Scre
     Some(out)
 }
 
+/// The UA-CH `platformVersion` a device's `os_version` reports over the bundle's (`bundle`), as Chrome writes it (three
+/// numbers: `10.0` is `10.0.0`), when the release can be worn on that build. The build's other surfaces -- its fonts
+/// above all -- are the capture's OS release, so a device may only claim a release whose machine shows them:
+///
+/// * Windows: the same generation. `13.0.0` and up is Windows 11, below it Windows 10; a Windows 10 claim over a
+///   Windows 11 capture lists fonts Windows 10 never shipped (and the reverse lacks ones every Windows 11 has).
+/// * macOS: the capture's major or a later one -- a later macOS keeps every font an earlier one had; an earlier claim
+///   would list fonts it did not have yet.
+///
+/// `None`: nothing to claim, or a release this build cannot be.
+pub fn platform_version(os: &str, claimed: &str, bundle: &str) -> Option<String> {
+    let nums = |v: &str| -> Option<Vec<u32>> { v.split('.').map(|p| p.trim().parse::<u32>().ok()).collect() };
+    let mut c = nums(claimed).filter(|c| !c.is_empty() && c.len() <= 3)?;
+    let b = nums(bundle).filter(|b| !b.is_empty())?;
+    let fits = match os {
+        "windows" => (c[0] >= 13) == (b[0] >= 13),
+        "macos" => c[0] >= b[0],
+        _ => false,
+    };
+    if !fits {
+        return None;
+    }
+    c.resize(3, 0);
+    Some(c.iter().map(u32::to_string).collect::<Vec<_>>().join("."))
+}
+
+/// The device's speech voices as `speechSynthesis.getVoices()` lists them: each its name and language, local, the first
+/// the default, its `voiceURI` its name (as a local voice's is).
+pub fn voices(doc: &Document) -> Option<Vec<spec::SpeechVoice>> {
+    let list = doc.device.get("voices")?.as_array()?;
+    Some(
+        list.iter()
+            .enumerate()
+            .filter_map(|(i, v)| {
+                let name = v.get("name")?.as_str()?.to_string();
+                Some(spec::SpeechVoice { voice_uri: name.clone(), name, lang: v.get("lang")?.as_str()?.to_string(), local_service: true, default: i == 0 })
+            })
+            .collect(),
+    )
+}
+
 /// The bundle's device oracle with the device's GPU strings and WebGL set in it, when the device states them; marked
 /// `_document` so the engine does not put this machine's GPU in their place (`webgl.rs` `with_device`).
 pub fn device_oracle(doc: &Document, bundle_oracle: &str) -> Option<String> {
     let gpu = doc.device.get("gpu");
     let webgl = doc.device.get("webgl");
-    if gpu.is_none() && webgl.is_none() {
+    let rate = doc.device.get("audio").and_then(|a| num(a.get("sample_rate")));
+    if gpu.is_none() && webgl.is_none() && rate.is_none() {
         return None;
     }
     let mut oracle: Value = serde_json::from_str(bundle_oracle).unwrap_or_else(|_| json!({}));
+    if let Some(r) = rate {
+        // the live `AudioContext`'s rate: the output device's
+        if !oracle.get("audio").is_some_and(Value::is_object) {
+            oracle["audio"] = json!({});
+        }
+        oracle["audio"]["sampleRate"] = json!(r);
+    }
+    if gpu.is_none() && webgl.is_none() {
+        return Some(oracle.to_string());
+    }
     if !oracle.get("webgl").is_some_and(Value::is_object) {
         oracle["webgl"] = json!({});
     }
@@ -493,6 +622,10 @@ pub fn wear(doc: &Document, base: crate::CapturedPersona, host: &spec::coherence
     use spec::Persona;
     let bundle_screen = base.screen();
     let bundle_oracle = base.device_oracle_json();
+    let bundle_platform_version = base.client_hints().platform_version;
+    let bundle_voices = base.speech_voices();
+    let bundle_adapter = base.bundle_dir().and_then(|d| std::fs::read_to_string(d.join("webgpu-adapter.json")).ok());
+    let bundle_languages = base.navigator().languages;
     let mut o = crate::Overridden::on(base).hardware_of(host);
     if let Some((cores, memory)) = hardware(doc) {
         o = o.with_hardware(cores, memory);
@@ -503,6 +636,23 @@ pub fn wear(doc: &Document, base: crate::CapturedPersona, host: &spec::coherence
     if let Some(oracle) = device_oracle(doc, &bundle_oracle) {
         o = o.with_device_oracle(oracle);
     }
+    let text = |k: &str| doc.device.get(k).and_then(Value::as_str).unwrap_or("").to_string();
+    let version = platform_version(doc.os(), &text("os_version"), &bundle_platform_version).unwrap_or_default();
+    if !version.is_empty() || !text("architecture").is_empty() || !text("bitness").is_empty() {
+        o = o.os_release(&version, &text("architecture"), &text("bitness"));
+    }
+    if let Some(kinds) = doc.device.get("media_devices").and_then(Value::as_array) {
+        o = o.media_device_kinds(kinds.iter().filter_map(Value::as_str).map(String::from).collect());
+    }
+    if let Some(q) = doc.device.get("storage").and_then(|s| num(s.get("quota"))) {
+        o = o.storage_quota(q.floor());
+    }
+    if let Some(b) = battery(doc) {
+        o = o.battery(b);
+    }
+    if let Some(a) = webgpu_adapter(doc, bundle_adapter.as_deref()) {
+        o = o.webgpu_adapter(a);
+    }
     // the session's zone and locale (a proxy's exit place, as the identity found it), else the build's
     let session = |k: &str| doc.session.as_ref().and_then(|s| s.get(k)).and_then(Value::as_str).filter(|v| !v.is_empty());
     if let Some(tz) = session("timezone") {
@@ -512,10 +662,137 @@ pub fn wear(doc: &Document, base: crate::CapturedPersona, host: &spec::coherence
     // the session's: left to the session alone, `--locale en-US` moved ICU's locale (`engine::persona_env` reads the
     // variable) while `navigator.languages` and Accept-Language kept the capture's `ko-KR` -- one page, two answers
     let explicit = std::env::var("KORVUS_LOCALE").ok().map(|l| l.trim().to_string()).filter(|l| !l.is_empty());
-    if let Some(tag) = explicit.as_deref().or_else(|| session("locale")) {
+    let tag = explicit.as_deref().or_else(|| session("locale")).map(str::to_string);
+    if let Some(tag) = &tag {
         o = o.locale(tag);
     }
-    o
+    // the device's language decides what a machine of it has installed: its voices and its supplemental fonts, and
+    // its browser's standard font -- the bundle's are the capture's language's
+    let lang = tag.clone().unwrap_or_else(|| bundle_languages.first().cloned().unwrap_or_default());
+    match voices(doc) {
+        Some(v) => o = o.voices(v.into_iter().chain(bundle_voices.iter().filter(|v| !v.local_service).cloned()).collect()),
+        None if doc.os() == "windows" && tag.is_some() => {
+            o = o.voices(windows_voices(&lang).into_iter().chain(bundle_voices.iter().filter(|v| !v.local_service).cloned()).collect());
+        }
+        None => {}
+    }
+    o.font_layer(font_layer(doc, &lang))
+}
+
+/// The device's fonts over the bundle's: the families it lists, else what its language installs. On Windows, a
+/// language's supplemental fonts come with that language (Settings > Optional features: "Korean Supplemental Fonts"
+/// -- Gulim, Dotum, Batang, Gungsuh -- for a Korean one), so a machine of another language has none of them; and the
+/// browser's standard font is its UI language's (`locale_settings_win.grd`: Times New Roman for a Latin-script UI,
+/// the bundle's own -- the capture's Korean UI's Malgun Gothic -- for Korean).
+pub fn font_layer(doc: &Document, lang: &str) -> spec::FontLayer {
+    let installed = doc.device.get("fonts").and_then(Value::as_array).map(|a| a.iter().filter_map(Value::as_str).map(String::from).collect::<Vec<_>>());
+    let primary = lang.split(['-', '_']).next().unwrap_or("").to_ascii_lowercase();
+    let mut layer = spec::FontLayer { installed, ..Default::default() };
+    if doc.os() == "windows" {
+        if primary != "ko" && !primary.is_empty() {
+            layer.absent = KOREAN_SUPPLEMENTAL.iter().map(|f| f.to_string()).collect();
+        }
+        // a CJK UI's standard font is its script's (not modelled: the bundle's stands); a Latin-script UI's is Times
+        if !primary.is_empty() && !["ko", "ja", "zh"].contains(&primary.as_str()) {
+            layer.standard = Some("Times New Roman".into());
+        }
+    }
+    layer
+}
+
+/// Windows' "Korean Supplemental Fonts" (every name a family is known by).
+const KOREAN_SUPPLEMENTAL: &[&str] = &[
+    "Gulim", "GulimChe", "Dotum", "DotumChe", "Batang", "BatangChe", "Gungsuh", "GungsuhChe", "굴림", "굴림체", "돋움", "돋움체", "바탕",
+    "바탕체", "궁서", "궁서체",
+];
+
+/// The speech voices Windows 10/11 installs with a display language (its OneCore voices, as Chrome lists them through
+/// SAPI: `Microsoft <Name> - <Language> (<Region>)`), the first the default. A language without a table speaks with
+/// the English (United States) ones.
+pub fn windows_voices(lang: &str) -> Vec<spec::SpeechVoice> {
+    let l = lang.to_ascii_lowercase();
+    let primary = l.split(['-', '_']).next().unwrap_or("");
+    let (names, tag, label): (&[&str], &str, &str) = match (primary, l.as_str()) {
+        ("en", "en-gb") => (&["George", "Hazel", "Susan"], "en-GB", "English (United Kingdom)"),
+        ("de", _) => (&["Hedda", "Katja", "Stefan"], "de-DE", "German (Germany)"),
+        ("fr", "fr-ca") => (&["Caroline", "Claude", "Nathalie"], "fr-CA", "French (Canada)"),
+        ("fr", _) => (&["Hortense", "Julie", "Paul"], "fr-FR", "French (France)"),
+        ("es", "es-mx") => (&["Raul", "Sabina"], "es-MX", "Spanish (Mexico)"),
+        ("es", _) => (&["Helena", "Laura", "Pablo"], "es-ES", "Spanish (Spain)"),
+        ("it", _) => (&["Cosimo", "Elsa"], "it-IT", "Italian (Italy)"),
+        ("pt", "pt-pt") => (&["Helia"], "pt-PT", "Portuguese (Portugal)"),
+        ("pt", _) => (&["Daniel", "Maria"], "pt-BR", "Portuguese (Brazil)"),
+        ("ja", _) => (&["Ayumi", "Haruka", "Ichiro", "Sayaka"], "ja-JP", "Japanese (Japan)"),
+        ("ko", _) => (&["Heami"], "ko-KR", "Korean (Korea)"),
+        ("zh", "zh-tw") => (&["Hanhan", "Yating", "Zhiwei"], "zh-TW", "Chinese (Traditional, Taiwan)"),
+        ("zh", "zh-hk") => (&["Danny", "Tracy"], "zh-HK", "Chinese (Traditional, Hong Kong S.A.R.)"),
+        ("zh", _) => (&["Huihui", "Kangkang", "Yaoyao"], "zh-CN", "Chinese (Simplified, PRC)"),
+        ("ru", _) => (&["Irina", "Pavel"], "ru-RU", "Russian (Russia)"),
+        ("pl", _) => (&["Paulina"], "pl-PL", "Polish (Poland)"),
+        ("nl", _) => (&["Frank"], "nl-NL", "Dutch (Netherlands)"),
+        ("tr", _) => (&["Tolga"], "tr-TR", "Turkish (Turkey)"),
+        ("vi", _) => (&["An"], "vi-VN", "Vietnamese (Vietnam)"),
+        ("th", _) => (&["Pattara"], "th-TH", "Thai (Thailand)"),
+        _ => (&["David", "Mark", "Zira"], "en-US", "English (United States)"),
+    };
+    names
+        .iter()
+        .enumerate()
+        .map(|(i, n)| {
+            let name = format!("Microsoft {n} - {label}");
+            spec::SpeechVoice { voice_uri: name.clone(), name, lang: tag.into(), local_service: true, default: i == 0 }
+        })
+        .collect()
+}
+
+/// The WebGPU adapter of a device that states its GPU's (`webgpu`: vendor, architecture, device, description): the
+/// build's captured adapter -- its features, limits and canvas format, which Chrome reports in tiers a GPU class
+/// shares -- with the device's `info`, the subgroup sizes of its vendor's architecture, and any limits it states.
+/// `None` for a device that states none (a Mac in the pool, a document without it): no adapter, as before.
+pub fn webgpu_adapter(doc: &Document, bundle: Option<&str>) -> Option<String> {
+    let w = doc.device.get("webgpu")?;
+    let mut a: Value = serde_json::from_str(bundle?).ok()?;
+    if a.get("null").and_then(Value::as_bool) == Some(true) {
+        return None;
+    }
+    let text = |k: &str| w.get(k).and_then(Value::as_str).unwrap_or("").to_string();
+    let (vendor, arch) = (text("vendor"), text("architecture"));
+    let (lo, hi) = match (vendor.as_str(), arch.as_str()) {
+        ("intel", _) => (8, 32),
+        ("amd", a) if a.starts_with("gcn") => (64, 64),
+        ("amd", _) => (32, 64),
+        ("apple", _) => (32, 32),
+        _ => (32, 32),
+    };
+    a["info"] = json!({
+        "vendor": vendor, "architecture": arch, "device": text("device"), "description": text("description"),
+        "subgroupMinSize": lo, "subgroupMaxSize": hi, "isFallbackAdapter": false,
+    });
+    if let Some(limits) = w.get("limits").and_then(Value::as_object) {
+        for (k, v) in limits {
+            a["limits"][k] = v.clone();
+        }
+    }
+    for k in ["hpInfo", "lpInfo", "wgslFeatures"] {
+        if let Some(o) = a.as_object_mut() {
+            o.remove(k);
+        }
+    }
+    Some(a.to_string())
+}
+
+/// The device's battery: a laptop's charge and whether it is on mains (`chargingTime`/`dischargingTime` unknown, as
+/// Chrome on Windows reports them until the OS estimates; 0 when full and charging).
+pub fn battery(doc: &Document) -> Option<spec::BatteryState> {
+    let b = doc.device.get("battery")?;
+    let charging = b.get("charging")?.as_bool()?;
+    let level = (num(b.get("level"))? * 100.0).round() / 100.0;
+    Some(spec::BatteryState {
+        charging,
+        level,
+        charging_time: if charging && level >= 1.0 { 0.0 } else { f64::INFINITY },
+        discharging_time: f64::INFINITY,
+    })
 }
 
 #[cfg(test)]
@@ -584,5 +861,95 @@ mod tests {
         assert_eq!(o["webgl"]["unmaskedRenderer"], "ANGLE (Intel, X Direct3D11 vs_5_0 ps_5_0, D3D11)");
         assert_eq!(o["webgl"]["precision"]["VERTEX_SHADER.LOW_FLOAT"], json!([127, 127, 23]));
         assert_eq!(o["webgl"]["_document"], "x");
+    }
+
+    #[test]
+    fn a_device_s_os_release_is_worn_only_where_the_build_can_be_it() {
+        // Windows 11 over a Windows 11 capture, written as Chrome writes it
+        assert_eq!(platform_version("windows", "15.0.0", "19.0.0").as_deref(), Some("15.0.0"));
+        assert_eq!(platform_version("windows", "19.0", "19.0.0").as_deref(), Some("19.0.0"));
+        // Windows 10 over a Windows 11 capture would list fonts it never had
+        assert_eq!(platform_version("windows", "10.0.0", "19.0.0"), None);
+        // macOS: the capture's release or a later one
+        assert_eq!(platform_version("macos", "26.4.1", "14.8.9").as_deref(), Some("26.4.1"));
+        assert_eq!(platform_version("macos", "12.7.6", "14.8.9"), None);
+        assert_eq!(platform_version("macos", "", "14.8.9"), None);
+        assert_eq!(platform_version("macos", "x.1", "14.8.9"), None);
+    }
+
+    #[test]
+    fn a_worn_device_reports_its_release_voices_and_display() {
+        use spec::Persona;
+        let doc = read(
+            r#"{"persona":1,"name":"x","device":{"os":"macos","os_version":"26.4.1","architecture":"arm","bitness":"64",
+               "voices":[{"name":"Yuna","lang":"ko-KR"},{"name":"Samantha","lang":"en-US"}],
+               "screen":{"width":1512,"height":982,"avail_height":949,"dpr":2,"color_gamut":"p3","hdr":true}}}"#,
+        )
+        .unwrap();
+        let base = crate::CapturedPersona::for_document(&doc).unwrap();
+        assert!(base.client_hints().platform_version.starts_with("14."), "the macOS bundle is a macOS 14 capture");
+        let host = spec::coherence::HostFacts { os: "macos".into(), cores: Some(8), ..Default::default() };
+        let p = wear(&doc, base, &host);
+        let ch = p.client_hints();
+        assert_eq!(ch.platform_version, "26.4.1");
+        assert_eq!((ch.architecture.as_str(), ch.bitness.as_str()), ("arm", "64"));
+        let v = p.speech_voices();
+        // the device's own voices, then the build's remote (Google) ones
+        assert_eq!(v.iter().take(2).map(|v| (v.name.as_str(), v.lang.as_str(), v.default)).collect::<Vec<_>>(), vec![("Yuna", "ko-KR", true), ("Samantha", "en-US", false)]);
+        assert!(v[2..].iter().all(|v| !v.local_service));
+        let s = Persona::screen(&p);
+        assert_eq!((s.color_gamut.as_str(), s.hdr), ("p3", true));
+    }
+
+    fn windows_doc(extra: &str) -> Document {
+        read(&format!(r#"{{"persona":1,"name":"w","device":{{"os":"windows","screen":{{"width":1920,"height":1080,"avail_height":1040}}{extra}}}}}"#)).unwrap()
+    }
+
+    #[test]
+    fn a_device_s_layers_are_worn() {
+        use spec::Persona;
+        let doc = windows_doc(
+            r#","window":{"outer":[1200,800],"position":[100,50]},"preferences":{"color_scheme":"dark","reduced_motion":true},
+               "media_devices":["audioinput","audiooutput"],"battery":{"charging":false,"level":0.437},"storage":{"quota":306953723904},
+               "audio":{"sample_rate":44100}"#,
+        );
+        let base = crate::CapturedPersona::for_document(&doc).unwrap();
+        let host = spec::coherence::HostFacts { os: "windows".into(), cores: Some(8), ..Default::default() };
+        let p = wear(&doc, base, &host);
+        let s = Persona::screen(&p);
+        assert_eq!((s.window_outer_width, s.window_outer_height, s.window_screen_x, s.window_screen_y), (1200, 800, 100, 50));
+        assert_eq!(s.window_outer_width - s.window_inner_width, 16, "a restored Windows window's invisible borders");
+        assert!(s.prefers_dark && s.reduced_motion);
+        let ch = p.client_hints();
+        assert_eq!(ch.media_device_kinds, ["audioinput", "audiooutput"]);
+        assert_eq!(ch.storage_quota.map(|q| q.0), Some(306953723904.0));
+        let b = Persona::battery(&p).unwrap();
+        assert_eq!((b.charging, b.level, b.discharging_time), (false, 0.44, f64::INFINITY));
+        let oracle: Value = serde_json::from_str(&p.device_oracle_json()).unwrap();
+        assert_eq!(oracle["audio"]["sampleRate"], 44100.0);
+    }
+
+    #[test]
+    fn a_language_decides_the_voices_the_supplemental_fonts_and_the_standard_font() {
+        let doc = windows_doc("");
+        let de = font_layer(&doc, "de-DE");
+        assert!(de.absent.iter().any(|f| f == "Gulim") && de.standard.as_deref() == Some("Times New Roman"));
+        let ko = font_layer(&doc, "ko-KR");
+        assert!(ko.absent.is_empty() && ko.standard.is_none());
+        assert_eq!(windows_voices("de-AT").iter().map(|v| v.name.as_str()).collect::<Vec<_>>(), ["Microsoft Hedda - German (Germany)", "Microsoft Katja - German (Germany)", "Microsoft Stefan - German (Germany)"]);
+        assert!(windows_voices("de-AT")[0].default && windows_voices("xx")[0].name.contains("David"));
+        let listed = windows_doc(r#","fonts":["Arial","Calibri"]"#);
+        assert_eq!(font_layer(&listed, "en-US").installed, Some(vec!["Arial".to_string(), "Calibri".to_string()]));
+    }
+
+    #[test]
+    fn the_new_device_fields_are_checked() {
+        let bad = |extra: &str| read(&format!(r#"{{"persona":1,"name":"w","device":{{"os":"windows"{extra}}}}}"#)).is_err();
+        assert!(bad(r#","media_devices":["videoinput","audioinput"]"#), "out of Chrome's order");
+        assert!(bad(r#","battery":{"charging":true,"level":2}"#));
+        assert!(bad(r#","preferences":{"color_scheme":"blue"}"#));
+        assert!(bad(r#","audio":{"sample_rate":7}"#));
+        assert!(bad(r#","window":{"position":[1,2]}"#), "a window states its frame or its size");
+        assert!(!bad(r#","window":{"outer":[800,600],"position":[1,2]},"fonts":["Arial"],"storage":{"quota":1e11}"#));
     }
 }

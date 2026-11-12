@@ -473,7 +473,7 @@ fn parse_font_parts(s: &str) -> Option<(String, f64, bool, bool)> {
 /// family list naming nothing installed falls back to (the persona's default).
 fn text_locale(scope: &mut v8::PinScope) -> (String, String) {
     let lang = crate::core::navigator::navigator::persona(scope)
-        .and_then(|p| p.navigator().languages.first().cloned())
+        .and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned())
         .unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let st = op_state.borrow();
@@ -2278,7 +2278,19 @@ pub(crate) fn cb_2d_get_image_data(scope: &mut v8::PinScope, args: v8::FunctionC
         _ => None,
     };
     let data = match converted {
-        Some(bytes) => super::pixel_format::new_raw_array(scope, fmt, bytes, (w as usize) * (h as usize) * 4),
+        Some(mut bytes) => {
+            // the perturbation the 8-bit read takes, carried onto this one: a float or another space's read of the
+            // canvas is the same device's, never the raw canvas beside a noised `toDataURL`
+            if let Some(b) = backend.as_ref().filter(|_| plugin_host::has_readback(plugin_host::READBACK_CANVAS)) {
+                let raw = {
+                    let mut st = op_state.borrow_mut();
+                    raster_memo(&mut st, id, &ops, cw, ch, || b.raster_2d(&ops, cw, ch, &params))
+                };
+                let noised = super::canvas_readback::read_back_2d(raw.clone(), &ops);
+                super::canvas_readback::carry_noise(&raw, &noised, sx, sy, w, h, read, &mut bytes);
+            }
+            super::pixel_format::new_raw_array(scope, fmt, bytes, (w as usize) * (h as usize) * 4)
+        }
         None => {
             let img = match backend {
                 Some(b) => {
@@ -2287,8 +2299,9 @@ pub(crate) fn cb_2d_get_image_data(scope: &mut v8::PinScope, args: v8::FunctionC
                 }
                 None => Rgba8::transparent(cw, ch),
             };
-            // the whole canvas as a read-back sees it, then the region: the region `toDataURL` encodes, pixel for pixel
-            let img = super::html_canvas_element::read_back(plugin_host::READBACK_CANVAS, img);
+            // the whole canvas as a read-back sees it, then the region: the region `toDataURL` encodes, pixel for
+            // pixel, with the pixels the page put there itself as it put them
+            let img = super::canvas_readback::read_back_2d(img, &ops);
             // Copy the requested region out (row-major RGBA); what lies outside the canvas is transparent black.
             let mut region = vec![0u8; (w as usize) * (h as usize) * 4];
             let (iw, ih) = (img.width as i64, img.height as i64);
@@ -2341,7 +2354,7 @@ pub(crate) fn cb_2d_measure_text(scope: &mut v8::PinScope, args: v8::FunctionCal
     let families = font_family_list(&font).unwrap_or(family);
 
     let lang = crate::core::navigator::navigator::persona(scope)
-        .and_then(|p| p.navigator().languages.first().cloned())
+        .and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned())
         .unwrap_or_else(|| "en-US".into());
     let op_state = deno_core::JsRuntime::op_state_from(scope);
     let (measured, ink) = {

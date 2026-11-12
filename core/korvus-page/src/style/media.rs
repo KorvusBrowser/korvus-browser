@@ -67,6 +67,10 @@ pub struct MediaContext {
     /// The viewport shows no scrollbars whatever its content: a frame whose `<iframe>` says `scrolling=no`. No media
     /// feature reads it either; the layout of the frame's document does.
     pub scrollbars_off: bool,
+    /// The display's gamut, `@media (color-gamut)`, as its rank: 0 `srgb`, 1 `p3`, 2 `rec2020` ([`gamut_rank`]).
+    pub color_gamut: u8,
+    /// An HDR display, `@media (dynamic-range: high)`.
+    pub hdr: bool,
 }
 
 impl Default for MediaContext {
@@ -88,6 +92,8 @@ impl Default for MediaContext {
             print: false,
             theme: spec::ThemeProfile::default(),
             scrollbars_off: false,
+            color_gamut: 0,
+            hdr: false,
         }
     }
 }
@@ -1002,6 +1008,17 @@ fn is_aspect_ratio(name: &str) -> bool {
     )
 }
 
+/// A `color-gamut` keyword's rank (each gamut contains the ones below it): `srgb` (or none named) 0, `p3` 1,
+/// `rec2020` 2.
+pub fn gamut_rank(g: &str) -> Option<u8> {
+    match g {
+        "srgb" | "" => Some(0),
+        "p3" => Some(1),
+        "rec2020" => Some(2),
+        _ => None,
+    }
+}
+
 /// `FeatureWithValidIdent`: the keyword, as Blink names it, when `feature` takes it in Chrome 150. Features behind a
 /// flag that is not stable there take none (`inverted-colors`, `video-dynamic-range`, `prefers-reduced-data`,
 /// `navigation-controls`, `display-state`, `resizable`); `fallback` is left out (its query crashes the renderer).
@@ -1216,8 +1233,9 @@ fn eval_one(name: &str, value: Option<&Val>, op: CmpOp, ctx: &MediaContext) -> b
         "display-mode" => keyword(true, &|i| i == "browser"),
         // `scan` applies to `tv` media only
         "scan" => false,
-        "color-gamut" => keyword(true, &|i| i == "srgb"),
-        "dynamic-range" => value.is_some() && keyword(false, &|i| i == "standard"),
+        // each gamut includes the narrower ones: a p3 display matches `srgb` and `p3`
+        "color-gamut" => keyword(true, &|i| gamut_rank(i).is_some_and(|r| r <= ctx.color_gamut)),
+        "dynamic-range" => value.is_some() && keyword(false, &|i| i == "standard" || (ctx.hdr && i == "high")),
         "prefers-color-scheme" => keyword(true, &|i| i == if ctx.prefers_dark { "dark" } else { "light" }),
         "prefers-contrast" => keyword(false, &|i| i == "no-preference"),
         "prefers-reduced-motion" => {
@@ -1270,6 +1288,15 @@ mod tests {
         let print = MediaContext { print: true, ..ctx() };
         assert!(matches_in("print", &print));
         assert!(!matches_in("screen", &print));
+    }
+
+    #[test]
+    fn the_display_s_gamut_and_range_are_the_worn_device_s() {
+        assert!(m("(color-gamut: srgb)") && !m("(color-gamut: p3)") && !m("(dynamic-range: high)"));
+        let p3 = MediaContext { color_gamut: 1, hdr: true, ..ctx() };
+        assert!(matches_in("(color-gamut: srgb)", &p3) && matches_in("(color-gamut: p3)", &p3));
+        assert!(!matches_in("(color-gamut: rec2020)", &p3));
+        assert!(matches_in("(dynamic-range: high)", &p3) && matches_in("(dynamic-range: standard)", &p3));
     }
 
     #[test]

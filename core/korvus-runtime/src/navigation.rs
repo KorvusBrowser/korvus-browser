@@ -698,7 +698,7 @@ impl crate::Engine {
         }
         // The device's locale is the persona's first language -- the same one `navigator.language` and
         // ICU's default locale already come from (`Engine::assemble`).
-        let locale = self.persona().navigator().languages.first().cloned().unwrap_or_default();
+        let locale = spec::devtools::navigator(self.persona().navigator()).languages.first().cloned().unwrap_or_default();
         let decoded = crate::decode::decode(bytes, Some(&ct.charset), is_xml, &locale);
         self.load_page_inner(&decoded.text, base_url, injected, &ct.mime, &policy_headers, Some(decoded.encoding), refresh)
             .await
