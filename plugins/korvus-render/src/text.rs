@@ -392,6 +392,40 @@ fn eight_bit(text: &str, canvas: bool) -> bool {
 
 /// A character's script as HarfBuzz's Unicode functions read it, `None` for Common, Inherited and Unknown: the
 /// characters Blink's `ScriptRunIterator` folds into the run around them.
+/// Is `script` written right to left (Arabic, Hebrew, Syriac, Thaana, N'Ko, ...)? HarfBuzz's own answer
+/// (`hb_script_get_horizontal_direction`), which an empty buffer given the script guesses.
+fn script_is_rtl(script: rustybuzz::Script) -> bool {
+    let mut b = rustybuzz::UnicodeBuffer::new();
+    b.set_script(script);
+    b.guess_segment_properties();
+    b.direction() == rustybuzz::Direction::RightToLeft
+}
+
+/// The order runs are drawn in, left to right, by each run's direction (`Some(true)` right to left, `Some(false)` left
+/// to right, `None` neutral): every maximal stretch that starts and ends with a right-to-left run, with only
+/// right-to-left and neutral runs inside it, reversed.
+fn visual_order(dirs: &[Option<bool>]) -> Vec<usize> {
+    let mut order: Vec<usize> = (0..dirs.len()).collect();
+    let mut i = 0;
+    while i < dirs.len() {
+        if dirs[i] != Some(true) {
+            i += 1;
+            continue;
+        }
+        let mut end = i;
+        let mut j = i + 1;
+        while j < dirs.len() && dirs[j] != Some(false) {
+            if dirs[j] == Some(true) {
+                end = j;
+            }
+            j += 1;
+        }
+        order[i..=end].reverse();
+        i = end + 1;
+    }
+    order
+}
+
 fn strong_script(ch: char) -> Option<rustybuzz::Script> {
     let mut b = rustybuzz::UnicodeBuffer::new();
     b.add(ch, 0);
@@ -632,6 +666,9 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
     // `italic 150px serif` "mmmmmmmmmmlli" measures 1611.0010986328125, the per-glyph float sum 1611.0012207).
     let mut glyph_advances: Vec<(usize, i64, usize)> = Vec::new();
     let mut run_widths: Vec<f32> = Vec::with_capacity(runs.len());
+    // Each drawn run's pen at its start (16.16), its width, whether it is right-to-left / neutral, and its ink: what
+    // the visual reordering below moves.
+    let mut placed: Vec<(i64, i64, Option<bool>, Option<[f32; 4]>)> = Vec::new();
     for (run_index, (tf, run, first, name, script)) in runs.iter().enumerate() {
         run_widths.push(0.0);
         // each byte offset's character index (a cluster is a character's first byte)
@@ -653,8 +690,15 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
         }
         // the run's script (see `latin1` above): a run of only Common characters is USCRIPT_COMMON
         buf.set_script(script.unwrap_or(rustybuzz::script::COMMON));
-        buf.set_direction(rustybuzz::Direction::LeftToRight);
+        // and its direction: a run in a right-to-left script is shaped right to left, as Blink shapes each bidi run in
+        // its resolved direction -- shaped left to right, Arabic came out reversed and unjoined (every letter its
+        // isolated form) and Hebrew reversed.
+        let rtl = script.is_some_and(script_is_rtl);
+        buf.set_direction(if rtl { rustybuzz::Direction::RightToLeft } else { rustybuzz::Direction::LeftToRight });
         let shaped = hb.shape(buf);
+        let run_start = pen;
+        let advances_from = glyph_advances.len();
+        let mut run_bounds: Option<[f32; 4]> = None;
         let (file_bold, file_italic, outline) = hb.style;
         let synthetic = (italic && !file_italic) || (bold && !file_bold);
         let mut font = Font::new(if synthetic { plain_typeface(mgr, tf) } else { tf.clone() }, Some(used));
@@ -707,7 +751,7 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
                 let x = (pen + em_mult(pos.x_offset as i64, mult)) as f32 / 65536.0;
                 let y = -(em_mult(pos.y_offset as i64, mult) as f32 / 65536.0);
                 let g = [r.left.floor() + x, r.top.floor() + y, r.right.ceil() + x, r.bottom.ceil() + y];
-                bounds = Some(match bounds {
+                run_bounds = Some(match run_bounds {
                     None => g,
                     Some(b) => [b[0].min(g[0]), b[1].min(g[1]), b[2].max(g[2]), b[3].max(g[3])],
                 });
@@ -738,7 +782,35 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
         }
         run_widths[run_index] = run_advance.max(0) as f32 / 65536.0;
         width += run_widths[run_index];
+        // a right-to-left run's glyphs come in visual order, its clusters descending: the carets below read them in
+        // logical order
+        if rtl {
+            glyph_advances[advances_from..].reverse();
+        }
+        placed.push((run_start, pen - run_start, if rtl { Some(true) } else if script.is_none() { None } else { Some(false) }, run_bounds));
         glyph_runs.push(out);
+    }
+    // THE VISUAL ORDER of the runs (UAX #9's reordering, at a left-to-right paragraph level): a stretch of
+    // right-to-left runs -- with the neutral runs between them (spaces, punctuation) -- is drawn in reverse, so a
+    // canvas's word-by-word `مرحبا بالعالم` reads right to left. Each run keeps its own width; only where it starts moves.
+    let order = visual_order(&placed.iter().map(|p| p.2).collect::<Vec<_>>());
+    let mut x = placed.first().map_or(0, |p| p.0);
+    for &i in &order {
+        let (start, w, _, ink) = placed[i];
+        let dx = (x - start) as f32 / 65536.0;
+        if dx != 0.0 {
+            for p in glyph_runs[i].points.iter_mut() {
+                p.x += dx;
+            }
+        }
+        if let Some(b) = ink {
+            let b = [b[0] + dx, b[1], b[2] + dx, b[3]];
+            bounds = Some(match bounds {
+                None => b,
+                Some(a) => [a[0].min(b[0]), a[1].min(b[1]), a[2].max(b[2]), a[3].max(b[3])],
+            });
+        }
+        x += w;
     }
     // the caret before code unit k: the runs before its run, as floats, and the glyphs of the clusters before it in
     // its run, as a 16.16 sum -- in glyph order (left to right)
@@ -865,6 +937,19 @@ pub(crate) fn base_baselines(t: &[u8]) -> [Option<i16>; 3] {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn right_to_left_runs_are_drawn_in_reverse_and_shaped_right_to_left() {
+        assert!(script_is_rtl(rustybuzz::script::ARABIC) && script_is_rtl(rustybuzz::script::HEBREW));
+        assert!(!script_is_rtl(rustybuzz::script::LATIN) && !script_is_rtl(rustybuzz::script::HAN));
+        let (r, l, n) = (Some(true), Some(false), None);
+        // "abc 123 שלום": the Hebrew word alone
+        assert_eq!(visual_order(&[l, n, n, n, r]), vec![0, 1, 2, 3, 4]);
+        // "مرحبا بالعالم" word by word: the two words swap, the space between stays between
+        assert_eq!(visual_order(&[r, n, r]), vec![2, 1, 0]);
+        // a trailing space is not pulled into the stretch, and a Latin run ends it
+        assert_eq!(visual_order(&[r, n, r, n, l, r, r]), vec![2, 1, 0, 3, 4, 6, 5]);
+    }
 
     #[test]
     fn family_lists_are_split_and_unquoted() {
