@@ -482,6 +482,21 @@ fn refresh_frame_layout(state: &mut OpState, root: u32, depth: u32) -> bool {
     if let Some((_, out)) = state.try_borrow_mut::<FrameLayouts>().and_then(|f| f.frames.get_mut(&root)) {
         out.set_scroll(scroll);
     }
+    // The frame's `transform`, `opacity` and the rest of what its boxes' styles do beyond layout, as the page's are
+    // kept ([`refresh_layout_cache`]): never read for a frame, its document painted every box untransformed and
+    // opaque -- an iframe's spinner never turned, its `opacity: .5` box painted solid -- while the client rects said
+    // otherwise.
+    let style_key = handle.0.effects_fingerprint(&state.borrow::<HostDom>().0, fingerprint);
+    let stale = state.try_borrow::<FrameLayouts>().and_then(|f| f.frames.get(&root)).is_some_and(|(_, out)| out.effects_key() != Some(style_key));
+    if stale {
+        let effects = match (state.try_borrow::<HostDom>(), state.try_borrow::<FrameLayouts>().and_then(|f| f.frames.get(&root))) {
+            (Some(dom), Some((_, out))) => Some(handle.0.box_effects(&dom.0, &media, out)),
+            _ => None,
+        };
+        if let (Some(effects), Some((_, out))) = (effects, state.try_borrow_mut::<FrameLayouts>().and_then(|f| f.frames.get_mut(&root))) {
+            out.set_effects(style_key, effects);
+        }
+    }
     true
 }
 
