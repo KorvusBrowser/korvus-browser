@@ -391,13 +391,17 @@ impl TextAlignKind {
         }
     }
 
-    /// `horizontal-tb` and `ltr` only, which is the one writing mode this engine lays out — so
-    /// `start` is `left` and `end` is `right`. The day a second direction exists this is where it
-    /// is expressed, rather than at each of the places that read the answer.
-    fn of(keyword: &str) -> TextAlignKind {
+    /// `horizontal-tb`, in the box's `direction`: `start` and `end` are the line's left and right under `ltr`, its
+    /// right and left under `rtl` (CSS Text 3 §6.1) -- `TextAlignKind` names the physical side, left being `Start`.
+    fn of(keyword: &str, rtl: bool) -> TextAlignKind {
         match keyword.trim() {
             "center" | "-webkit-center" => TextAlignKind::Center,
-            "right" | "end" | "-webkit-right" => TextAlignKind::End,
+            "right" | "-webkit-right" => TextAlignKind::End,
+            "left" | "-webkit-left" => TextAlignKind::Start,
+            "end" if !rtl => TextAlignKind::End,
+            "end" => TextAlignKind::Start,
+            // `start`, `justify` and `match-parent` (whose parent's is inherited as computed)
+            _ if rtl => TextAlignKind::End,
             _ => TextAlignKind::Start,
         }
     }
@@ -516,7 +520,7 @@ impl LayoutStyles {
         // baseline: Naver's 420px right column sat 103px down beside the 830px left one, and `float: right`
         // stayed on the left.
         self.levels.push(level(arena.value(key, PropertyId::Display)));
-        self.aligns.push(TextAlignKind::of(arena.value(key, PropertyId::TextAlign)));
+        self.aligns.push(TextAlignKind::of(arena.value(key, PropertyId::TextAlign), arena.value(key, PropertyId::Direction).trim() == "rtl"));
         self.indents.push(px_of(arena.value(key, PropertyId::TextIndent)).unwrap_or(0.0));
         let legacy = crate::style::compute::legacy_box(arena, key);
         self.legacy_flex.push(legacy == crate::style::compute::LegacyBox::Flex);
@@ -1276,6 +1280,10 @@ pub fn derive(arena: &StyleArena, key: StyleKey) -> Style {
             start: placement(v(PropertyId::GridRowStart)),
             end: placement(v(PropertyId::GridRowEnd)),
         },
+        // `direction: rtl`: a block's auto margins, a flex row's main axis and a grid's columns start at the right, as
+        // taffy lays them out under `Direction::Rtl`. Left to right only, an `<html dir="rtl">` page put every
+        // fixed-width block at the left edge (a 200px box at x 10 where Chrome puts it at 290).
+        direction: if rtl { taffy::style::Direction::Rtl } else { taffy::style::Direction::Ltr },
         ..Default::default()
     };
     // A legacy box (`style::compute::legacy_box`): a flexbox whose direction and
