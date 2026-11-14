@@ -155,14 +155,19 @@ pub(crate) fn cb_image_decode(scope: &mut v8::PinScope, args: v8::FunctionCallba
         settle(scope, resolver, false);
         return;
     };
-    if !crate::core::html::subresource::image_is_complete(scope, id) {
-        let g = v8::Global::new(scope, resolver);
+    // A CALL MADE WHILE "UPDATE THE IMAGE DATA" IS STILL QUEUED IS FOR THE REQUEST THAT UPDATE MAKES, not for the
+    // one the element has now (Blink's `DecodeRequest::kPendingMicrotask`). `img.src = next; await img.decode()`
+    // is how a page waits for the next frame (HyperFrames injects every video frame so): this answered from the
+    // PREVIOUS image, settled, and the capture after it read a blank `<img>` (`complete` false, `naturalWidth` 0).
+    let queued = crate::core::html::subresource::image_update_queued(scope, id);
+    if queued || !crate::core::html::subresource::image_is_complete(scope, id) {
+        let resolver = v8::Global::new(scope, resolver);
         let op_state = deno_core::JsRuntime::op_state_from(scope);
         let mut st = op_state.borrow_mut();
         if !st.has::<PendingDecodes>() {
             st.put(PendingDecodes::default());
         }
-        st.borrow_mut::<PendingDecodes>().0.entry(id).or_default().push(g);
+        st.borrow_mut::<PendingDecodes>().0.entry(id).or_default().push(Waiting { resolver, queued });
         return;
     }
     let ok = super::canvas_image::img_natural_size(scope, id).is_some();
@@ -171,7 +176,61 @@ pub(crate) fn cb_image_decode(scope: &mut v8::PinScope, args: v8::FunctionCallba
 
 /// The `img.decode()` promises waiting on an image's request, by node.
 #[derive(Default)]
-pub(crate) struct PendingDecodes(std::collections::HashMap<u32, Vec<v8::Global<v8::PromiseResolver>>>);
+pub(crate) struct PendingDecodes(std::collections::HashMap<u32, Vec<Waiting>>);
+
+/// One `img.decode()` promise waiting. `queued`: made while the element's "update the image data" was still queued,
+/// so it waits on the request that update makes, not on the one in flight when it was called.
+pub(crate) struct Waiting {
+    resolver: v8::Global<v8::PromiseResolver>,
+    queued: bool,
+}
+
+/// Take the `decode()` promises of image `id` that `pick` chooses, leaving the rest waiting.
+fn take_decodes(scope: &mut v8::PinScope, id: u32, pick: impl Fn(&Waiting) -> bool) -> Vec<v8::Global<v8::PromiseResolver>> {
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let mut st = op_state.borrow_mut();
+    let Some(p) = st.try_borrow_mut::<PendingDecodes>() else { return Vec::new() };
+    let Some(all) = p.0.remove(&id) else { return Vec::new() };
+    let (taken, kept): (Vec<_>, Vec<_>) = all.into_iter().partition(|w| pick(w));
+    if !kept.is_empty() {
+        p.0.insert(id, kept);
+    }
+    taken.into_iter().map(|w| w.resolver).collect()
+}
+
+fn settle_all(scope: &mut v8::PinScope, waiting: Vec<v8::Global<v8::PromiseResolver>>, available: bool) {
+    for g in waiting {
+        let r = v8::Local::new(scope, &g);
+        settle(scope, r, available);
+    }
+}
+
+/// Image `id`'s selection moved on (its `src` or `srcset` names another URL): every `decode()` promise waiting
+/// rejects with EncodingError, as HTML's `decode()` steps say ("the element's current request changes") -- one made
+/// earlier in the same task too, before the update it waited for ran. Chrome 155, measured: `src = a; p1 = decode();
+/// src = b; p2 = decode()` rejects `p1` and resolves `p2`.
+pub(crate) fn reject_superseded_decodes(scope: &mut v8::PinScope, id: u32) {
+    let waiting = take_decodes(scope, id, |_| true);
+    settle_all(scope, waiting, false);
+}
+
+/// Image `id`'s queued "update the image data" ran: the `decode()` promises made before it now wait on the request
+/// it made -- and settle at once when it made none (a source already available, or none to fetch).
+pub(crate) fn image_update_ran(scope: &mut v8::PinScope, id: u32) {
+    {
+        let op_state = deno_core::JsRuntime::op_state_from(scope);
+        let mut st = op_state.borrow_mut();
+        if let Some(w) = st.try_borrow_mut::<PendingDecodes>().and_then(|p| p.0.get_mut(&id)) {
+            w.iter_mut().for_each(|w| w.queued = false);
+        }
+    }
+    if crate::core::html::subresource::image_update_queued(scope, id) || !crate::core::html::subresource::image_is_complete(scope, id) {
+        return;
+    }
+    let available = super::canvas_image::img_natural_size(scope, id).is_some();
+    let waiting = take_decodes(scope, id, |_| true);
+    settle_all(scope, waiting, available);
+}
 
 fn settle(scope: &mut v8::PinScope, resolver: v8::Local<v8::PromiseResolver>, ok: bool) {
     if ok {
@@ -182,17 +241,11 @@ fn settle(scope: &mut v8::PinScope, resolver: v8::Local<v8::PromiseResolver>, ok
     }
 }
 
-/// Image `id`'s request settled -- `available` or broken: settle the `decode()` promises waiting on it.
+/// Image `id`'s request settled -- `available` or broken: settle the `decode()` promises waiting on it (not those
+/// made for the request a still-queued update will make).
 pub(crate) fn settle_decodes(scope: &mut v8::PinScope, id: u32, available: bool) {
-    let waiting = {
-        let op_state = deno_core::JsRuntime::op_state_from(scope);
-        let mut st = op_state.borrow_mut();
-        st.try_borrow_mut::<PendingDecodes>().and_then(|p| p.0.remove(&id)).unwrap_or_default()
-    };
-    for g in waiting {
-        let r = v8::Local::new(scope, &g);
-        settle(scope, r, available);
-    }
+    let waiting = take_decodes(scope, id, |w| !w.queued);
+    settle_all(scope, waiting, available);
 }
 // `crossOrigin` is the CORS-settings reflection every element shares (`kits::reflect_nullable_enum`):
 // ABSENT reads null and an invalid value reads "anonymous" -- the hand body that was here

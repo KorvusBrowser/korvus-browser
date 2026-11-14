@@ -1669,21 +1669,56 @@ pub(crate) fn image_is_complete(scope: &mut v8::PinScope, img: u32) -> bool {
 /// at the end of the task is requested. Measured on Chrome 150: `img.src = a; img.srcset = "b 1x"` in
 /// one task requests `b` only; the same two writes 300 ms apart request both.
 fn schedule_image_update(scope: &mut v8::PinScope, img: u32) {
+    use crate::core::dom::geometry_queries::NaturalImages;
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    // What the element selects now, resolved as `image_update` will resolve it, beside what its current request is for.
+    let selected = {
+        let st = op_state.borrow();
+        let media = crate::core::dom::geometry_queries::media_context(&st);
+        st.try_borrow::<HostDom>().and_then(|h| image_source_density(&h.0, img, &media))
+    }
+    .map(|(raw, density)| (raw.trim().to_string(), density))
+    .filter(|(raw, _)| !raw.is_empty());
+    let selected = selected.map(|(raw, density)| {
+        let home = home_of(scope, img);
+        (resolve(&base_for_detached(scope, home), &raw), density)
+    });
+    let current = op_state.borrow().try_borrow::<NaturalImages>().and_then(|n| n.sources.get(&img).cloned());
+    // The current request is replaced: the `decode()` promises waiting on it reject (EncodingError).
+    if selected.as_ref().map(|(u, _)| u) != current.as_ref().map(|(u, _)| u) {
+        crate::core::html::html_image_element::reject_superseded_decodes(scope, img);
+    }
     // AVAILABLE AT ONCE, NOT AT THE MICROTASK: HTML's "update the image data" takes an
     // entry of the list of available images synchronously, which is why a carousel that clones a
     // loaded logo and reads `scrollWidth` in the same loop sees it grow in Chrome.
-    let avail = crate::core::html::canvas_image::img_layout_size(scope, img);
+    //
+    // UNDER THE URL NOW SELECTED. The test read the image under the element's CURRENT request, so `img.src = next`
+    // on an `<img>` showing a loaded frame found that frame, called `next` available, and `complete` read `true`
+    // before `next` was even requested -- an `await img.decode()` after it resolved at once (issue #26).
+    let avail = match &selected {
+        Some(sel) => {
+            NaturalImages::set_source(&mut op_state.borrow_mut(), img, Some(sel.clone()));
+            let size = crate::core::html::canvas_image::img_layout_size(scope, img);
+            // not available: the current request stays what the element reads until the update replaces it
+            if size.is_none() {
+                NaturalImages::set_source(&mut op_state.borrow_mut(), img, current);
+            }
+            size
+        }
+        None => None,
+    };
     {
-        let op_state = deno_core::JsRuntime::op_state_from(scope);
         let mut st = op_state.borrow_mut();
-        match avail {
+        match (avail, &selected) {
             // An image this document already has is available at once with its size, and `complete`.
-            Some(size) => {
-                crate::core::dom::geometry_queries::NaturalImages::set(&mut st, img, Some(page::ImageState::Available(size.0, size.1)));
+            (Some(size), _) => {
+                NaturalImages::set(&mut st, img, Some(page::ImageState::Available(size.0, size.1)));
                 mark_image_settled(&mut st, img);
             }
             // A new selection: `complete` reads `false` from this synchronous point until it settles.
-            None => mark_image_loading(&mut st, img),
+            (None, Some(_)) => mark_image_loading(&mut st, img),
+            // None at all: `complete` reads `true` (no source), and the update settles it.
+            (None, None) => {}
         }
     }
     let fresh = {
@@ -1723,7 +1758,35 @@ fn cb_image_update(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments
         }
     }
     image_update(scope, img, false);
+    crate::core::html::html_image_element::image_update_ran(scope, img);
     undelay_load(scope, token);
+}
+
+/// Is `<img>` `img`'s "update the image data" queued for the next microtask checkpoint?
+pub(crate) fn image_update_queued(scope: &mut v8::PinScope, img: u32) -> bool {
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let st = op_state.borrow();
+    st.try_borrow::<ImageUpdates>().is_some_and(|u| u.0.contains(&img))
+}
+
+/// Is this completion an `<img>`'s fetch for a URL it no longer names? Its `src` (or selection) moved on while the
+/// fetch was in flight, which aborts that request: no `load` or `error` comes of it, and `complete` and the
+/// `decode()` promises wait for the request that replaced it. A response that ended it here fired `load` for the
+/// new `src` and resolved its `decode()` with the image not there. The URL may be named again, so its claim goes.
+fn stale_image_completion(scope: &mut v8::PinScope, id: u32, url: &str) -> bool {
+    let op_state = deno_core::JsRuntime::op_state_from(scope);
+    let st = op_state.borrow();
+    let is_img = st.try_borrow::<HostDom>().is_some_and(|h| h.0.tag_name(id).is_some_and(|t| t.eq_ignore_ascii_case("img")));
+    let current = st.try_borrow::<crate::core::dom::geometry_queries::NaturalImages>().and_then(|n| n.sources.get(&id).map(|(u, _)| u.clone()));
+    let stale = is_img && current.is_some_and(|c| c != url);
+    if stale {
+        if let Some(s) = st.try_borrow::<StartedLoads>() {
+            if let Some(set) = s.0.borrow_mut().get_mut(&id) {
+                set.remove(url);
+            }
+        }
+    }
+    stale
 }
 
 /// Select, resolve, defer or load: one `<img>`'s request, if its current state induces one.
@@ -3029,6 +3092,13 @@ fn cb_load_ok(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, _rv
         }
         return;
     }
+    // Nor does an `<img>`'s fetch for a `src` it has since replaced ([`stale_image_completion`]).
+    if !framing && !script && !style && stale_image_completion(scope, id, &raw) {
+        if let Some(t) = delay {
+            undelay_load(scope, t);
+        }
+        return;
+    }
     let resp = v8::Local::<v8::Object>::try_from(args.get(0)).ok();
     let status = resp.and_then(|r| get_prop(scope, r, "status")).and_then(|s| s.int32_value(scope)).unwrap_or(0);
     let ok = resp.is_some() && (200..300).contains(&status);
@@ -3512,6 +3582,12 @@ fn cb_load_err(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, _r
     }
     if style && delay.is_some() && !link_fetch_current(scope, id, &raw) {
         link_fetch_cancelled(scope, id, &raw);
+        if let Some(t) = delay {
+            undelay_load(scope, t);
+        }
+        return;
+    }
+    if !framing && !style && stale_image_completion(scope, id, &raw) {
         if let Some(t) = delay {
             undelay_load(scope, t);
         }
