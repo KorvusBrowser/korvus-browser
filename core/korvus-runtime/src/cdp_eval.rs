@@ -16,6 +16,21 @@
 use crate::Engine;
 use deno_core::PollEventLoopOptions;
 
+/// Set when a promise an awaited evaluation is waiting on settles ([`Engine::begin_awaited`]): a host pumping with
+/// `Engine::pump_until` stops at the next turn boundary to answer it. A `korvus serve` page whose loop never drained
+/// (a rAF loop, a ticking timer) held every awaited `Runtime.evaluate` for the rest of a 50 ms slice: `(async () =>
+/// { await 0 })()` was answered in 53 ms, Chrome 0.18 ms, and a HyperFrames frame paid it four times.
+pub(crate) struct AwaitSettled;
+
+/// Is an [`AwaitSettled`] wake waiting?
+pub(crate) fn await_settled(st: &deno_core::OpState) -> bool {
+    st.has::<AwaitSettled>()
+}
+
+fn cb_await_settled(scope: &mut deno_core::v8::PinScope, _args: deno_core::v8::FunctionCallbackArguments, _rv: deno_core::v8::ReturnValue) {
+    deno_core::JsRuntime::op_state_from(scope).borrow_mut().put(AwaitSettled);
+}
+
 /// A bigint literal's decimal digits (`-123`) as `v8::BigInt::new_from_words` takes them: the sign, and the magnitude
 /// in 64-bit words, least significant first. `None` for anything but an optional `-` and decimal digits.
 fn bigint_words(d: &str) -> Option<(bool, Vec<u64>)> {
@@ -474,7 +489,23 @@ impl Engine {
             let ctx = self.runtime.main_context();
             v8::scope_with_context!(scope, self.runtime.v8_isolate(), ctx);
             let local = v8::Local::new(scope, &global);
-            v8::Local::<v8::Promise>::try_from(local).is_ok_and(|p| p.state() == v8::PromiseState::Pending)
+            match v8::Local::<v8::Promise>::try_from(local) {
+                Ok(p) if p.state() == v8::PromiseState::Pending => {
+                    // Chrome runs the microtasks a script queued when the script returns: an `async` function that
+                    // only awaits a resolved value has settled by then, and its answer goes out at once.
+                    scope.perform_microtask_checkpoint();
+                    let pending = p.state() == v8::PromiseState::Pending;
+                    if pending {
+                        // Still pending: its settling wakes the host's pump at the next turn boundary
+                        // ([`await_settled`]), so the answer is not held for the rest of the host's slice.
+                        if let Some(f) = v8::Function::new(scope, cb_await_settled) {
+                            let _ = p.then2(scope, f, f);
+                        }
+                    }
+                    pending
+                }
+                _ => false,
+            }
         };
         if !pending {
             let id = self.next_object;
@@ -489,6 +520,11 @@ impl Engine {
         self.next_object += 1;
         self.objects.insert(id, global);
         Awaited::Pending(id)
+    }
+
+    /// Has a pending awaited evaluation settled since the last call ([`AwaitSettled`])? The flag is cleared.
+    pub fn take_await_settled(&mut self) -> bool {
+        self.runtime.op_state().borrow_mut().try_take::<AwaitSettled>().is_some()
     }
 
     /// What an [`Awaited::Pending`] handle came to: `None` while its promise is pending; else its value, or its

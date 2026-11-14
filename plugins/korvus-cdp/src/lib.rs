@@ -4600,7 +4600,11 @@ impl EvalTimeout {
 /// Answer every pending awaited evaluation that has settled -- or whose context went with its document (Chrome's
 /// "Execution context was destroyed."), or whose wait ran out -- and keep the rest.
 async fn settle_deferred(engine: &mut Lazy<'_>, ids: &mut ConnIds, pending: &mut Vec<Deferred>, write: &mut fetch::Out) -> anyhow::Result<()> {
-    if pending.is_empty() || !engine.built() {
+    if !engine.built() {
+        return Ok(());
+    }
+    engine.get().take_await_settled();
+    if pending.is_empty() {
         return Ok(());
     }
     let now = std::time::Instant::now();

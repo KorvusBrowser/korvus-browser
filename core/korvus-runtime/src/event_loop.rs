@@ -752,7 +752,12 @@ impl Engine {
         let turns = self.event_loop_turns();
         // Read between turns, while the loop's future holds the runtime: the realm's state is its own `Rc`.
         let op_state = self.runtime.op_state();
-        let asked = || stop_on_navigation && crate::navigation::navigation_requested(&op_state.borrow());
+        let asked = || {
+            stop_on_navigation && {
+                let st = op_state.borrow();
+                crate::navigation::navigation_requested(&st) || crate::cdp_eval::await_settled(&st)
+            }
+        };
         tokio::pin!(interrupt);
         // Polls still owed after a worker woke this loop (see the park below).
         let mut woken_polls = 0u8;
