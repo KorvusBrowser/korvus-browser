@@ -5248,7 +5248,12 @@ impl LaidOut {
     /// with no box, and for a non-replaced inline box, which a transform does not apply to (CSS
     /// Transforms 1 §2) -- an inline `<svg>` or `<img>` is an atomic inline and does transform.
     pub fn transforms(&self, node: NodeId) -> bool {
-        self.tree.box_of(node).is_some_and(|b| self.tree.box_transformed(b) && self.tree.box_level(b) != crate::layout::style::BoxLevel::Inline)
+        // The style the box was laid out with, or the one its effects were read from since: a `transform` written after
+        // the last layout relays nothing out (`Dom::inert_style_writes`), and the layout kept answered "none" for it.
+        self.tree.box_of(node).is_some_and(|b| {
+            self.tree.box_level(b) != crate::layout::style::BoxLevel::Inline
+                && (self.tree.box_transformed(b) || self.tree.effects().is_some_and(|fx| fx.local(b).is_some()))
+        })
     }
 
     /// Is the element a non-atomic inline box (`display: inline`) -- geometry as line-box fragments placed in its

@@ -351,6 +351,14 @@ pub fn refresh_layout_cache(state: &mut OpState) -> bool {
         if let Some(LayoutCache(Some((_, out)))) = state.try_borrow_mut::<LayoutCache>() {
             out.set_scroll(scroll);
         }
+        // The geometry is current, and what a box's style does beyond layout may not be: a `transform` or `opacity`
+        // write moves no geometry input (`Dom::inert_style_writes`), so after one rect read the next answered every
+        // later transform as none -- `scale(.5)` written after a `getBoundingClientRect` measured 207.91 x 100, Chrome
+        // 108.35 x 50 -- while the paint, which reads the effects again, drew it scaled.
+        if let Some(fingerprint) = cached {
+            let style_key = handle.0.effects_fingerprint(&state.borrow::<HostDom>().0, fingerprint);
+            refresh_effects(state, &handle.0, &media, style_key);
+        }
         return true;
     }
     push_natural_images(state, &handle.0);
@@ -408,17 +416,22 @@ pub fn refresh_layout_cache(state: &mut OpState) -> bool {
     // neither relays anything out (`Dom::inert_style_writes`), so the geometry fingerprint above does not see them, and
     // the layout fingerprint, which counts every DOM write, every sheet and every animation sample, does. The paint
     // walk, hit testing and the client rects all read what is kept here.
+    refresh_effects(state, &handle.0, &media, style_key);
+    true
+}
+
+/// The page layout's box effects read again when the style they were read from (`style_key`) has moved.
+fn refresh_effects(state: &mut OpState, page: &page::Page, media: &MediaContext, style_key: u64) {
     let stale = state.try_borrow::<LayoutCache>().and_then(|c| c.0.as_ref()).is_some_and(|(_, out)| out.effects_key() != Some(style_key));
     if stale {
         let effects = match (state.try_borrow::<HostDom>(), state.try_borrow::<LayoutCache>().and_then(|c| c.0.as_ref())) {
-            (Some(dom), Some((_, out))) => Some(handle.0.box_effects(&dom.0, &media, out)),
+            (Some(dom), Some((_, out))) => Some(page.box_effects(&dom.0, media, out)),
             _ => None,
         };
         if let (Some(effects), Some(LayoutCache(Some((_, out))))) = (effects, state.try_borrow_mut::<LayoutCache>()) {
             out.set_effects(style_key, effects);
         }
     }
-    true
 }
 
 /// Bring the layout of the FRAME document rooted at `root` up to date; `false` when no frame shows
