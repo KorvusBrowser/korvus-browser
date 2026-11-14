@@ -1579,6 +1579,20 @@ pub(crate) fn cb_2d_stroke_text(scope: &mut v8::PinScope, args: v8::FunctionCall
 /// a context that never set `font` draws in `10px sans-serif` shaped in the UI language too, and a
 /// `save`/`restore` or a reset between the setter and the draw cannot leave the backend without it.
 fn push_text_font(scope: &mut v8::PinScope, this: v8::Local<v8::Object>) {
+    // `direction: inherit` (the default) is the canvas element's own `direction` when it draws (HTML's "the
+    // directionality of the canvas element"): a canvas in an `<html dir="rtl">` page aligns `start` text to the right of
+    // its x and draws it right to left, as Chrome does. It was left to right always.
+    if read(scope, this, |s| Some(s.st.direction.clone())).as_deref().unwrap_or("inherit") == "inherit" {
+        let rtl = priv_get(scope, this, CANVAS_BACKREF_PRIV)
+            .and_then(|canvas| crate::binding::protos::unwrap_id(scope, canvas))
+            .and_then(|node| {
+                let op_state = deno_core::JsRuntime::op_state_from(scope);
+                let mut st = op_state.borrow_mut();
+                crate::core::css::cssom::computed_text(&mut st, node, page::style::property::PropertyId::Direction)
+            })
+            .is_some_and(|d| d.trim() == "rtl");
+        canvas2d_push(scope, this, Canvas2DOp::SetTextDirection { dir: if rtl { TextDirection::Rtl } else { TextDirection::Ltr } });
+    }
     let font = read(scope, this, |s| Some(s.st.font.clone())).unwrap_or_else(|| "10px sans-serif".into());
     let Some((family, size_px, bold, italic)) = parse_font(&font) else { return };
     let families = font_family_list(&font).unwrap_or_else(|| family.clone());
