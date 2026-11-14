@@ -15,7 +15,17 @@ use spec::Canvas2DOp;
 
 /// The layers' images, decoded, by URL (and the response they were decoded from, so a new one is decoded again).
 #[derive(Default)]
-struct CssImages(HashMap<String, (usize, Option<Decoded>)>);
+struct CssImages(crate::core::html::canvas_image::DecodeCache<String, (usize, Option<Decoded>)>);
+
+/// The bytes an entry of [`CssImages`] holds: its key (a `data:` URL is its own) and its pixels or markup.
+fn css_bytes(url: &str, d: &Option<Decoded>) -> usize {
+    url.len()
+        + match d {
+            Some(Decoded::Raster(r)) => r.data.len(),
+            Some(Decoded::Svg(b, _)) => b.len(),
+            None => 0,
+        }
+}
 
 /// The URLs whose fetch this document has issued.
 #[derive(Default)]
@@ -144,7 +154,8 @@ pub(crate) fn already_fetched(scope: &mut v8::PinScope, url: &str, mode: &str) -
             if !st.has::<CssImages>() {
                 st.put(CssImages::default());
             }
-            st.borrow_mut::<CssImages>().0.insert(url.to_string(), (ptr, d.clone()));
+            let bytes = css_bytes(url, &d);
+            st.borrow_mut::<CssImages>().0.insert(url.to_string(), (ptr, d.clone()), bytes);
             d
         }
     };
@@ -170,7 +181,8 @@ fn image(scope: &mut v8::PinScope, node: u32, url: &str, mode: &str) -> Option<D
         if !st.has::<CssImages>() {
             st.put(CssImages::default());
         }
-        st.borrow_mut::<CssImages>().0.insert(url.to_string(), (0, decoded.clone()));
+        let bytes = css_bytes(url, &decoded);
+        st.borrow_mut::<CssImages>().0.insert(url.to_string(), (0, decoded.clone()), bytes);
         return decoded;
     }
     let fetched = {
@@ -209,7 +221,8 @@ fn image(scope: &mut v8::PinScope, node: u32, url: &str, mode: &str) -> Option<D
     if !st.has::<CssImages>() {
         st.put(CssImages::default());
     }
-    st.borrow_mut::<CssImages>().0.insert(url.to_string(), (ptr, decoded.clone()));
+    let bytes = css_bytes(url, &decoded);
+    st.borrow_mut::<CssImages>().0.insert(url.to_string(), (ptr, decoded.clone()), bytes);
     decoded
 }
 

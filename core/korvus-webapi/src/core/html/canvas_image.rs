@@ -152,7 +152,70 @@ pub(crate) enum ImgState {
 /// re-fetch of the same url replaces the body, and the pointer says so): the frame and whether its decode
 /// completed, or `None` for bytes whose header does not parse (a broken image).
 #[derive(Default)]
-struct DecodedImages(HashMap<(String, String), (usize, Option<(Rc<Rgba8>, bool)>)>);
+struct DecodedImages(DecodeCache<(String, String), (usize, Option<(Rc<Rgba8>, bool)>)>);
+
+/// The bytes a document keeps decoded images in before the least recently used is dropped. Blink bounds its decoded
+/// images the same way (its decode cache is a byte budget, an image no longer drawn is let go and decoded again if it
+/// is drawn again); this kept every image a document had ever drawn: a page that swapped a 1080p `<img>` every frame
+/// grew 8.7 MB a frame until it was closed (2,077 MB after 200 frames, Chrome 709 MB).
+pub(crate) const DECODE_CACHE_BUDGET: usize = 256 << 20;
+
+/// Decoded pixels by key, held to [`DECODE_CACHE_BUDGET`] bytes: past it, the entries used longest ago are dropped
+/// (the newest always stays, however large). A dropped entry is only a decode to make again.
+pub(crate) struct DecodeCache<K, V> {
+    map: HashMap<K, (V, usize, std::cell::Cell<u64>)>,
+    bytes: usize,
+    tick: std::cell::Cell<u64>,
+    budget: usize,
+}
+
+impl<K, V> Default for DecodeCache<K, V> {
+    fn default() -> Self {
+        DecodeCache { map: HashMap::new(), bytes: 0, tick: std::cell::Cell::new(0), budget: DECODE_CACHE_BUDGET }
+    }
+}
+
+impl<K: std::hash::Hash + Eq + Clone, V> DecodeCache<K, V> {
+    pub(crate) fn get<Q: std::hash::Hash + Eq + ?std::marker::Sized>(&self, key: &Q) -> Option<&V>
+    where
+        K: std::borrow::Borrow<Q>,
+    {
+        let (v, _, used) = self.map.get(key)?;
+        let t = self.tick.get() + 1;
+        self.tick.set(t);
+        used.set(t);
+        Some(v)
+    }
+
+    /// Keeps `value` (`bytes` its size), dropping the least recently used entries past the budget.
+    pub(crate) fn insert(&mut self, key: K, value: V, bytes: usize) {
+        let t = self.tick.get() + 1;
+        self.tick.set(t);
+        if let Some((_, old, _)) = self.map.insert(key.clone(), (value, bytes, std::cell::Cell::new(t))) {
+            self.bytes -= old;
+        }
+        self.bytes += bytes;
+        while self.bytes > self.budget && self.map.len() > 1 {
+            let Some(oldest) = self.map.iter().filter(|(k, _)| **k != key).min_by_key(|(_, (_, _, used))| used.get()).map(|(k, _)| k.clone())
+            else {
+                break;
+            };
+            if let Some((_, b, _)) = self.map.remove(&oldest) {
+                self.bytes -= b;
+            }
+        }
+    }
+
+    #[cfg(test)]
+    fn with_budget(budget: usize) -> Self {
+        DecodeCache { budget, ..Default::default() }
+    }
+}
+
+/// The bytes an entry of [`DecodedImages`] holds: its pixels and its key (a `data:` URL is its own key).
+fn decoded_bytes(key: &(String, String), img: &Option<(Rc<Rgba8>, bool)>) -> usize {
+    key.0.len() + key.1.len() + img.as_ref().map_or(0, |(i, _)| i.data.len())
+}
 
 /// The origin of a URL, serialized, or `None` for an opaque one.
 fn origin_of(url: &str) -> Option<String> {
@@ -473,7 +536,8 @@ pub(crate) fn img_state(scope: &mut v8::PinScope, id: u32) -> ImgState {
             if !st.has::<DecodedImages>() {
                 st.put(DecodedImages::default());
             }
-            st.borrow_mut::<DecodedImages>().0.insert(key, (ptr, d.clone()));
+            let bytes = decoded_bytes(&key, &d);
+            st.borrow_mut::<DecodedImages>().0.insert(key, (ptr, d.clone()), bytes);
             d
         }
     };
@@ -1136,4 +1200,40 @@ pub fn create_window_create_image_bitmap<'s>(
     pd.set_enumerable(true);
     pd.set_configurable(true);
     global.define_property(scope, k.into(), &pd);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::DecodeCache;
+
+    #[test]
+    fn the_decode_cache_drops_the_least_recently_used_past_its_budget() {
+        let mut c: DecodeCache<u32, u32> = DecodeCache::with_budget(30);
+        c.insert(1, 1, 10);
+        c.insert(2, 2, 10);
+        c.insert(3, 3, 10);
+        assert!(c.get(&1).is_some()); // 1 is now the most recently used
+        c.insert(4, 4, 10); // 40 > 30: 2, the oldest, goes
+        assert!(c.get(&2).is_none());
+        assert!(c.get(&1).is_some() && c.get(&3).is_some() && c.get(&4).is_some());
+        assert_eq!(c.bytes, 30);
+        // one entry larger than the budget stays, alone
+        c.insert(5, 5, 100);
+        assert_eq!(c.map.len(), 1);
+        assert!(c.get(&5).is_some());
+        // replacing a key counts its new size only
+        c.insert(5, 6, 20);
+        assert_eq!((c.bytes, *c.get(&5).unwrap()), (20, 6));
+    }
+
+    #[test]
+    fn a_swapped_image_every_frame_stays_within_the_budget() {
+        let mut c: DecodeCache<String, ()> = DecodeCache::default();
+        let frame = 1920 * 1080 * 4;
+        for i in 0..200 {
+            c.insert(format!("data:image/jpeg;base64,{i}"), (), frame);
+        }
+        assert!(c.bytes <= super::DECODE_CACHE_BUDGET);
+        assert_eq!(c.map.len(), super::DECODE_CACHE_BUDGET / frame);
+    }
 }
