@@ -38,6 +38,21 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
 
+## v152.0.9
+
+- `img.decode()` waits for the image its `src` asked for. In v152.0.8 it resolved before an `http:` image had loaded,
+  so a render pipeline that awaits it before a capture (HyperFrames' video frames) captured blank frames. It rejects
+  with `EncodingError` when the load fails or `src` changes before the image completes, as Chrome does.
+- Text in a script the persona's measured tables do not cover (Arabic, Hebrew, the Indic scripts, Thai and others) is
+  laid out at the width it is drawn at. A bold 48px Arabic heading laid out 399.8 wide and drew 291 px from its left
+  edge; it now lays out 230.2 wide, as Chrome 155 does, and its glyphs end where `right` puts them. Under
+  `line-height: normal` the fonts that draw it open the line as Chrome's do (the heading's line 101, was 59).
+- On Linux, `system-ui` and `sans-serif` in an Arabic (`lang=ar`) document, and the face a character falls back to,
+  are picked as Chrome picks them: Noto Sans Arabic, emboldened for bold, not DejaVu Sans or Noto Nastaliq Urdu Bold.
+- `font-variant-numeric` (`tabular-nums` and the rest), `font-variant-ligatures`, `-caps`, `-east-asian`,
+  `-position` and `font-feature-settings` reach page text, in its layout and its paint; `font-kerning: none` turns
+  kerning off there too. A `tabular-nums` counter is laid out and drawn at the digits' common width.
+
 ## v152.0.8
 
 - Decoded images are held to a byte budget (256 MiB a document), the least recently used dropped past it: a page that
