@@ -310,6 +310,9 @@ pub struct Defaults {
     pub personas: Option<PathBuf>,
     /// `korvus serve --fresh`: every named persona's context starts clean and keeps nothing (see `ContextSpec::fresh`).
     pub fresh: bool,
+    /// `korvus serve --close-on-disconnect`: a connection that ends takes the browser contexts and the pages it made
+    /// with it. Off, as Chrome is off: a client that `disconnect()`s leaves its pages running for the next one.
+    pub close_on_disconnect: bool,
 }
 
 static DEFAULTS: std::sync::OnceLock<Defaults> = std::sync::OnceLock::new();
@@ -497,6 +500,9 @@ struct Target {
     screencast: Option<(u64, Option<String>)>,
     /// The JavaScript dialog the page is waiting on (D88 step 2): its `javascriptDialogOpening` params.
     dialog: Option<Value>,
+    /// The connection whose `Target.createTarget` made it (`None` for the endpoint's own first page and a popup):
+    /// what `--close-on-disconnect` closes when that connection ends.
+    creator: Option<u64>,
 }
 
 impl Target {
@@ -1276,6 +1282,7 @@ async fn spawn_target(launch: Arc<Launcher>, ev: mpsc::UnboundedSender<Ev>, pers
         screencast: None,
         dialog: None,
         pending_nav: None,
+        creator: None,
     })
 }
 
@@ -2029,9 +2036,19 @@ impl Browser {
         self.end_screencast(client, None);
         self.clients.remove(&client);
         self.pending.retain(|_, (c, _, _)| *c != client);
-        let doomed: Vec<String> = self.contexts.iter().filter(|c| c.owner == Some(client) && c.dispose_on_detach).map(|c| c.id.clone()).collect();
+        let close_all = DEFAULTS.get().is_some_and(|d| d.close_on_disconnect);
+        let doomed: Vec<String> =
+            self.contexts.iter().filter(|c| c.owner == Some(client) && (c.dispose_on_detach || close_all)).map(|c| c.id.clone()).collect();
         for id in doomed {
             self.remove_context(&id);
+        }
+        // and, under `--close-on-disconnect`, the pages it made in contexts it does not own (the default one): a render
+        // pipeline that `disconnect()`s after each job left four pages, and their processes, per job
+        if close_all {
+            let made: Vec<String> = self.targets.iter().filter(|t| t.creator == Some(client)).map(|t| t.id.clone()).collect();
+            for tid in made {
+                self.close_target(&tid);
+            }
         }
     }
 
@@ -2371,6 +2388,7 @@ impl Browser {
         let created = t.info(false);
         plugin_host::event("page.created", &json!({ "target": tid, "context": t.context }).to_string());
         t.counted = true;
+        t.creator = job.popup.is_none().then_some(job.client);
         self.targets.insert(0, t);
         let viewers: Vec<u64> = self.clients.keys().copied().filter(|&c| self.sees(c, &job.context)).collect();
         for &c in &viewers {
@@ -3081,6 +3099,7 @@ impl Browser {
             pending_nav: None,
             screencast: None,
             dialog: None,
+            creator: None,
         };
         let context = t.context.clone();
         let created = t.info(false);

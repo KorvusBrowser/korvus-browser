@@ -125,6 +125,14 @@ async fn main() -> anyhow::Result<()> {
         }
         None => false,
     };
+    // `--close-on-disconnect` (`korvus serve`): a connection that ends takes the contexts and pages it made with it.
+    let close_on_disconnect = match argv.iter().position(|a| a == "--close-on-disconnect") {
+        Some(i) => {
+            argv.remove(i);
+            true
+        }
+        None => false,
+    };
     let command = argv.get(1).cloned().unwrap_or_default();
     // `--help` (`-h`) after a command, or as one: what it takes, and nothing run -- `korvus serve --help` started a server.
     if matches!(command.as_str(), "--help" | "-h" | "help") || argv.iter().skip(2).any(|a| a == "--help" || a == "-h") {
@@ -228,6 +236,7 @@ async fn main() -> anyhow::Result<()> {
                         humanize: Some(s.humanize),
                         personas: settings::home().map(|h| h.join("personas")),
                         fresh,
+                        close_on_disconnect,
                     });
                     own
                 } else {

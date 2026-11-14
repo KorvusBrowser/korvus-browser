@@ -29,6 +29,9 @@ with its own persona.
   --allow-origin ORIGIN        a web page's origin that may open the endpoint (`*` for any)
   --allow-host NAME            a name the endpoint is reached by besides IPs and `localhost`
   --fresh                      every named persona starts with no cookies or storage and keeps none
+  --close-on-disconnect        a client that disconnects takes the contexts and pages it made with it
+                               (off, as in Chrome: pages outlive a disconnect, unless their context was made
+                               with `disposeOnDetach`)
   --block KINDS                drop requests of these Fetch kinds (`image`, `font`, ...) or `host:<substr>`
   --http-cache-max MB          cap the in-memory HTTP cache below 50 MB (`0` turns it off)
   --max-heap MB                cap each page's JavaScript heap (a page past it dies, as a Chrome tab does)
