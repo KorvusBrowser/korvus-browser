@@ -394,6 +394,28 @@ fn eight_bit(text: &str, canvas: bool) -> bool {
 
 /// A character's script as HarfBuzz's Unicode functions read it, `None` for Common, Inherited and Unknown: the
 /// characters Blink's `ScriptRunIterator` folds into the run around them.
+/// The OpenType feature small capitals need, when `features` asks for them, and whether every letter takes them (the
+/// `all-` forms): what [`shape`] synthesizes for a font without that feature.
+fn synthetic_caps(features: &str) -> Option<(&'static [u8; 4], bool)> {
+    let has = |f: &str| features.split(',').any(|x| x.trim() == f);
+    if has("+smcp") {
+        Some((b"smcp", has("+c2sc")))
+    } else if has("+pcap") {
+        Some((b"pcap", has("+c2pc")))
+    } else {
+        None
+    }
+}
+
+/// Does `tf`'s GSUB table have the feature `tag`?
+fn has_gsub_feature(tf: &Typeface, tag: &[u8; 4]) -> bool {
+    let tag = rustybuzz::ttf_parser::Tag::from_bytes(tag);
+    font_data(tf)
+        .and_then(|d| shaping_face(tf, &d))
+        .and_then(|hb| hb.face.tables().gsub.map(|g| g.features.find(tag).is_some()))
+        .unwrap_or(false)
+}
+
 /// Is `script` written right to left (Arabic, Hebrew, Syriac, Thaana, N'Ko, ...)? HarfBuzz's own answer
 /// (`hb_script_get_horizontal_direction`), which an empty buffer given the script guesses.
 fn script_is_rtl(script: rustybuzz::Script) -> bool {
@@ -598,7 +620,11 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
     // Layout's inline text is one item, shaped whole (`InlineNode::ShapeText`): only a font change splits it.
     let words = if req.words { word_ends(&chars) } else { std::collections::HashSet::from([0]) };
     // Each run's typeface, its text, its first character, its family name and its script (`None`: Common so far).
-    let mut runs: Vec<(Typeface, String, usize, Option<String>, Option<rustybuzz::Script>)> = Vec::new();
+    let mut runs: Vec<(Typeface, String, usize, Option<String>, Option<rustybuzz::Script>, bool)> = Vec::new();
+    // Small capitals the font cannot make (no `smcp` / `pcap`, or `c2sc` / `c2pc` for the all- forms) are synthesized
+    // as Blink synthesizes them (`SmallCapsIterator`): the letters they apply to are drawn as capitals at 70 % of the
+    // size, in runs of their own.
+    let caps = synthetic_caps(&req.features);
     let mut word_start = true;
     for (i, &ch) in chars.iter().enumerate() {
         if i > 0 && words.contains(&i) {
@@ -628,17 +654,30 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
             .or_else(|| fallback_typeface(mgr, ch, emoji, bold, italic, lang).map(|tf| (tf, None)))
             .unwrap_or_else(|| (primary.0.clone(), Some(primary.1.clone())));
         let script = if latin1 { Some(rustybuzz::script::LATIN) } else { strong_script(ch) };
+        let (ch, small) = match caps {
+            // `small-caps` takes the lowercase letters; the `all-` forms every character (a space included: Chrome 153's
+            // `48px "DejaVu Sans"` space is 10.808 under all-small-caps, 15.258 under small-caps)
+            Some((feature, all)) if (all || ch.is_lowercase()) && !has_gsub_feature(&tf, feature) => {
+                let mut up = ch.to_uppercase();
+                match (up.next(), up.next()) {
+                    (Some(u), None) => (u, true),
+                    _ => (ch, all),
+                }
+            }
+            _ => (ch, false),
+        };
         match runs.last_mut() {
             Some(last)
                 if !word_start
                     && last.0.unique_id() == tf.unique_id()
                     && last.3 == name
+                    && last.5 == small
                     && (script.is_none() || last.4.is_none() || last.4 == script) =>
             {
                 last.1.push(ch);
                 last.4 = last.4.or(script);
             }
-            _ => runs.push((tf, ch.to_string(), i, name, script)),
+            _ => runs.push((tf, ch.to_string(), i, name, script, small)),
         }
         word_start = false;
     }
@@ -671,7 +710,16 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
     // Each drawn run's pen at its start (16.16), its width, whether it is right-to-left / neutral, and its ink: what
     // the visual reordering below moves.
     let mut placed: Vec<(i64, i64, Option<bool>, Option<[f32; 4]>)> = Vec::new();
-    for (run_index, (tf, run, first, name, script)) in runs.iter().enumerate() {
+    for (run_index, (tf, run, first, name, script, small)) in runs.iter().enumerate() {
+        // a synthesized small capital's run is made at 70 % of the size (Blink's `kSmallCapsFontSizeMultiplier`), rounded
+        // to a whole pixel as Blink's scaled font data is (`PlatformCreateScaledFontData`: 48px -> 34px, not 33.6)
+        let (size, size64, used) = if *small {
+            let s = platform_size((req.size * 0.7).round());
+            let s64 = (s * 64.0).floor() as i64;
+            (s, s64, s64 as f32 / 64.0)
+        } else {
+            (size, size64, used)
+        };
         run_widths.push(0.0);
         // each byte offset's character index (a cluster is a character's first byte)
         let mut char_of_byte = vec![0usize; run.len() + 1];
