@@ -1364,6 +1364,22 @@ fn proc_sample(_pid: u32) -> Option<(u64, u64)> {
     None
 }
 
+/// Does `Target.setDiscoverTargets`'s `filter` let the browser target through? The first entry whose `type` is absent or
+/// `browser` decides (an `exclude` one refuses it); no filter at all is Chrome's default, which leaves it out.
+fn discovers_browser(params: &Value) -> bool {
+    let Some(filter) = params.get("filter").and_then(Value::as_array) else { return false };
+    filter
+        .iter()
+        .find(|f| f.get("type").and_then(Value::as_str).is_none_or(|t| t == "browser"))
+        .is_some_and(|f| !f.get("exclude").and_then(Value::as_bool).unwrap_or(false))
+}
+
+/// A process's CPU time in seconds, as `SystemInfo.getProcessInfo`'s `cpuTime` (0 where it cannot be read). `/proc`
+/// counts it in USER_HZ ticks, which Linux fixes at 100 for every program reading `/proc`.
+fn proc_cpu_seconds(pid: u32) -> f64 {
+    proc_sample(pid).map_or(0.0, |(ticks, _)| ticks as f64 / 100.0)
+}
+
 /// G6: was a page process OOM-killed? The Linux OOM killer sends SIGKILL, so a child that died on SIGKILL is
 /// reported as `page.oom` rather than a plain crash. An unknown status (not reaped yet, or a non-Unix host) reads as
 /// a crash.
@@ -2407,6 +2423,17 @@ impl Browser {
         let str_param = |k: &str| params.get(k).and_then(Value::as_str).map(String::from);
         match method {
             "Browser.getVersion" => ok(VersionInfo::of(&*self.persona).cdp()),
+            // The browser's processes as Chrome lists them: this one as the browser, each page's process as a renderer,
+            // with the CPU each has used (seconds). Puppeteer render pipelines sample memory and CPU through it.
+            "SystemInfo.getProcessInfo" => {
+                let mut list = vec![json!({ "type": "browser", "id": std::process::id(), "cpuTime": proc_cpu_seconds(std::process::id()) })];
+                for t in &self.targets {
+                    if let Some(pid) = t._child.as_ref().and_then(|c| c.id()) {
+                        list.push(json!({ "type": "renderer", "id": pid, "cpuTime": proc_cpu_seconds(pid) }));
+                    }
+                }
+                ok(json!({ "processInfo": list }))
+            }
             // The browser target as a session of its own (Playwright's `newCDPSession`, Puppeteer's
             // `browser.target().createCDPSession()`).
             "Target.attachToBrowserTarget" => {
@@ -2576,6 +2603,12 @@ impl Browser {
                 let mut events = Vec::new();
                 if let Some(c) = self.clients.get(&client) {
                     if on && !c.discover {
+                        // the browser target, when the filter lets it through (Puppeteer's `[{}]` does, Chrome's default
+                        // filter does not): Puppeteer's `browser.target()` is it, and a pipeline reads
+                        // `SystemInfo.getProcessInfo` through a session on it
+                        if discovers_browser(params) {
+                            events.push(json!({ "method": "Target.targetCreated", "params": { "targetInfo": self.browser_target_info() } }));
+                        }
                         for t in self.targets.iter().rev().filter(|t| self.sees(client, &t.context)) {
                             events.push(json!({ "method": "Target.targetCreated", "params": { "targetInfo": t.info(Self::attached(c, &t.id)) } }));
                         }
@@ -2603,6 +2636,17 @@ impl Browser {
                     c.auto_attach = on.then_some(wait);
                 }
                 (Ok(json!({})), events, Vec::new(), false)
+            }
+            // a session on the browser target, as `Target.attachToBrowserTarget` makes one
+            "Target.attachToTarget" if str_param("targetId").is_some_and(|t| t == self.uuid) => {
+                let sid = hex32();
+                if let Some(c) = self.clients.get_mut(&client) {
+                    c.sessions.insert(sid.clone(), Session::Browser);
+                }
+                let event = json!({ "method": "Target.attachedToTarget", "params": {
+                    "sessionId": sid, "targetInfo": self.browser_target_info(), "waitingForDebugger": false,
+                } });
+                (Ok(json!({ "sessionId": sid })), vec![event], Vec::new(), false)
             }
             "Target.attachToTarget" => {
                 let Some(tid) = str_param("targetId").filter(|id| self.sees_target(client, id)) else {
@@ -2632,7 +2676,11 @@ impl Browser {
                         }
                         (Ok(json!({})), events, Vec::new(), false)
                     }
-                    Some((_, Session::Child(_) | Session::Browser)) => ok(json!({})),
+                    Some((s, Session::Browser)) => {
+                        let event = json!({ "method": "Target.detachedFromTarget", "params": { "sessionId": s, "targetId": self.uuid } });
+                        (Ok(json!({})), vec![event], Vec::new(), false)
+                    }
+                    Some((_, Session::Child(_))) => ok(json!({})),
                     None => fail("No session with given id"),
                 }
             }
@@ -2655,12 +2703,15 @@ impl Browser {
                     Some(t) => ok(json!({ "targetInfo": t.info(Self::attached(&self.clients[&client], &t.id)) })),
                     None => fail("No target with given id found"),
                 },
-                None => ok(json!({ "targetInfo": {
-                    "targetId": self.uuid, "type": "browser", "title": "", "url": "", "attached": true, "canAccessOpener": false,
-                } })),
+                None => ok(json!({ "targetInfo": self.browser_target_info() })),
             },
             other => (Err(RpcError::method_not_found(other)), Vec::new(), Vec::new(), false),
         }
+    }
+
+    /// The browser target's `TargetInfo`, as Chrome gives it.
+    fn browser_target_info(&self) -> Value {
+        json!({ "targetId": self.uuid, "type": "browser", "title": "", "url": "", "attached": true, "canAccessOpener": false })
     }
 
     /// Attach `client` to page target `tid` with a fresh session: Chrome's `targetInfoChanged` (when the
