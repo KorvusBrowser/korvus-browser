@@ -266,20 +266,22 @@ fn axis_position(tf: &Typeface) -> Vec<skia_safe::font_arguments::variation_posi
 struct HbFace {
     /// [`file_style`] of the file, read once
     style: (bool, bool, bool),
-    plans: RefCell<HashMap<(rustybuzz::Direction, rustybuzz::Script, Option<rustybuzz::Language>), Rc<rustybuzz::ShapePlan>>>,
+    plans: RefCell<HashMap<(rustybuzz::Direction, rustybuzz::Script, Option<rustybuzz::Language>, String), Rc<rustybuzz::ShapePlan>>>,
     face: rustybuzz::Face<'static>,
     _data: Rc<(Vec<u8>, u32)>,
 }
 
 impl HbFace {
-    /// `rustybuzz::shape` with no features, its plan made once for the buffer's direction, script and language (the
-    /// properties `shape` itself compiles a plan for, after the same `guess_segment_properties`).
-    fn shape(&self, mut buf: rustybuzz::UnicodeBuffer) -> rustybuzz::GlyphBuffer {
+    /// `rustybuzz::shape` with `features` (HarfBuzz's syntax, comma separated; empty for the defaults), its plan made
+    /// once for the buffer's direction, script and language and the features (the properties `shape` itself compiles a
+    /// plan for, after the same `guess_segment_properties`).
+    fn shape(&self, mut buf: rustybuzz::UnicodeBuffer, features: &str) -> rustybuzz::GlyphBuffer {
         buf.guess_segment_properties();
-        let key = (buf.direction(), buf.script(), buf.language());
+        let key = (buf.direction(), buf.script(), buf.language(), features.to_string());
         let plan = self.plans.borrow().get(&key).cloned();
         let plan = plan.unwrap_or_else(|| {
-            let made = Rc::new(rustybuzz::ShapePlan::new(&self.face, key.0, Some(key.1), key.2.as_ref(), &[]));
+            let list: Vec<rustybuzz::Feature> = features.split(',').filter_map(|f| f.trim().parse().ok()).collect();
+            let made = Rc::new(rustybuzz::ShapePlan::new(&self.face, key.0, Some(key.1), key.2.as_ref(), &list));
             self.plans.borrow_mut().insert(key, made.clone());
             made
         });
@@ -695,7 +697,7 @@ pub(crate) fn shape(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Option<
         // isolated form) and Hebrew reversed.
         let rtl = script.is_some_and(script_is_rtl);
         buf.set_direction(if rtl { rustybuzz::Direction::RightToLeft } else { rustybuzz::Direction::LeftToRight });
-        let shaped = hb.shape(buf);
+        let shaped = hb.shape(buf, &req.features);
         let run_start = pen;
         let advances_from = glyph_advances.len();
         let mut run_bounds: Option<[f32; 4]> = None;

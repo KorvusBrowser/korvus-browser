@@ -784,6 +784,8 @@ pub enum Canvas2DOp {
     SetTextBaseline { baseline: TextBaseline },
     /// `direction` — the bidi base direction `start`/`end` alignment resolves against.
     SetTextDirection { dir: TextDirection },
+    /// The OpenType features `fontKerning` and `fontVariantCaps` turn on or off, as [`TextFontRequest::features`].
+    SetFontFeatures { features: String },
     /// `letterSpacing`, in CSS px (0 = the font's own advances, untouched).
     SetLetterSpacing { px: f64 },
     /// `wordSpacing`, in CSS px.
@@ -1979,6 +1981,9 @@ pub struct TextFontRequest {
     /// space); `false` shapes the text as one item, as layout's inline text is (`InlineNode::ShapeText` -- an
     /// SVG `<text>`).
     pub words: bool,
+    /// OpenType features beyond the shaper's defaults, comma separated in HarfBuzz's syntax (`-kern`, `+smcp`):
+    /// a canvas's `fontKerning = "none"` and `fontVariantCaps`. Empty for the defaults.
+    pub features: String,
 }
 
 /// A font file's metrics as layout measures text in it ([`RenderBackend::web_font_metrics`]), in ems: what

@@ -1298,7 +1298,7 @@ fn control_text_width(scope: &mut v8::PinScope, t: &page::paint::ControlText, te
     let font_map = media_context(&st).theme.font_map;
     let ctx = st.try_borrow::<spec::kernel::Context>();
     let default_family = ctx.and_then(|c| c.get::<spec::CssHandle>()).map(|c| c.0.default_family(font_map)).unwrap_or_else(|| "sans-serif".into());
-    let request = spec::TextFontRequest { families: t.family.clone(), default_family, size: t.size_px as f32, bold: t.bold, italic: t.italic, lang, words: false };
+    let request = spec::TextFontRequest { families: t.family.clone(), default_family, size: t.size_px as f32, bold: t.bold, italic: t.italic, lang, words: false, features: String::new() };
     ctx.and_then(|c| c.get::<spec::RenderHandle>()).and_then(|r| r.0.text_ink(&request, text)).map_or(0.0, |i| i.width as f64)
 }
 

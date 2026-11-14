@@ -266,6 +266,8 @@ struct State {
     /// when the op carried none (the page painter), which draws as before.
     font_families: String,
     font_lang: String,
+    /// `fontKerning` / `fontVariantCaps` as OpenType features (`spec::TextFontRequest::features`).
+    font_features: String,
     font_default: String,
     align: TextAlign,
     baseline: TextBaseline,
@@ -301,6 +303,7 @@ impl Default for State {
             font_italic: false,
             font_families: String::new(),
             font_lang: String::new(),
+            font_features: String::new(),
             font_default: String::new(),
             align: TextAlign::Start,
             baseline: TextBaseline::Alphabetic,
@@ -1106,6 +1109,7 @@ fn step(canvas: &Canvas, e: &mut Exec, op: &Canvas2DOp) {
         Canvas2DOp::SetTextAlign { align } => e.st.align = *align,
         Canvas2DOp::SetTextBaseline { baseline } => e.st.baseline = *baseline,
         Canvas2DOp::SetTextDirection { dir } => e.st.direction = *dir,
+        Canvas2DOp::SetFontFeatures { features } => e.st.font_features = features.clone(),
         Canvas2DOp::SetLetterSpacing { px } => e.st.letter_spacing = *px as f32,
         Canvas2DOp::SetWordSpacing { px } => e.st.word_spacing = *px as f32,
 
@@ -1526,6 +1530,7 @@ fn draw_shaped(canvas: &Canvas, e: &Exec, text: &str, x: f64, y: f64, max_width:
         italic: e.st.font_italic,
         lang: e.st.font_lang.clone(),
         words: true,
+        features: e.st.font_features.clone(),
     };
     let Some(shaped) = crate::text::shape(&e.font_mgr, &req, text) else { return false };
     let width = shaped.width;

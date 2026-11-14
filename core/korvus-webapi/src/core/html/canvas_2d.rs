@@ -948,11 +948,9 @@ pub(crate) fn cb_2d_attr_set(scope: &mut v8::PinScope, args: v8::FunctionCallbac
                 });
             }
         }
-        // The four typographic keywords + `lang`. These are validated, stored and reported, and
-        // they do NOT record an op — the text path here draws runs through `SkFont` advances, which
-        // has no shaper to hand a kerning or small-caps switch to. An op the backend could not
-        // execute would be the worse answer: it would make the display list claim a typography the
-        // pixels do not have. What is here is a real attribute with a real value and a named limit.
+        // The four typographic keywords + `lang`: validated, stored and reported here. `fontKerning` and
+        // `fontVariantCaps` reach the shaper as OpenType features at the next text draw or measure
+        // ([`font_features`]); `fontStretch` and `textRendering` change nothing drawn yet.
         "fontKerning" => {
             let raw = val.to_rust_string_lossy(scope);
             if let Some(k) = keyword(&raw, &["auto", "normal", "none"]) {
@@ -1578,6 +1576,27 @@ pub(crate) fn cb_2d_stroke_text(scope: &mut v8::PinScope, args: v8::FunctionCall
 /// The current font, with the family list and the shaping language, as the op before a text draw --
 /// a context that never set `font` draws in `10px sans-serif` shaped in the UI language too, and a
 /// `save`/`restore` or a reset between the setter and the draw cannot leave the backend without it.
+/// A canvas's `fontKerning` and `fontVariantCaps` as the OpenType features they ask the shaper for (HarfBuzz's syntax,
+/// comma separated): `none` turns `kern` off (`auto` and `normal` keep it, as Blink's canvas does), and each caps
+/// keyword is the feature CSS Fonts 4 maps it to. A font without the feature draws as it would without it -- Blink's
+/// synthesized small capitals for such a font are not made here.
+fn font_features(kerning: &str, caps: &str) -> String {
+    let mut f: Vec<&str> = Vec::new();
+    if kerning == "none" {
+        f.push("-kern");
+    }
+    f.extend(match caps {
+        "small-caps" => &["+smcp"][..],
+        "all-small-caps" => &["+smcp", "+c2sc"][..],
+        "petite-caps" => &["+pcap"][..],
+        "all-petite-caps" => &["+pcap", "+c2pc"][..],
+        "unicase" => &["+unic"][..],
+        "titling-caps" => &["+titl"][..],
+        _ => &[][..],
+    });
+    f.join(",")
+}
+
 fn push_text_font(scope: &mut v8::PinScope, this: v8::Local<v8::Object>) {
     // `direction: inherit` (the default) is the canvas element's own `direction` when it draws (HTML's "the
     // directionality of the canvas element"): a canvas in an `<html dir="rtl">` page aligns `start` text to the right of
@@ -1593,6 +1612,8 @@ fn push_text_font(scope: &mut v8::PinScope, this: v8::Local<v8::Object>) {
             .is_some_and(|d| d.trim() == "rtl");
         canvas2d_push(scope, this, Canvas2DOp::SetTextDirection { dir: if rtl { TextDirection::Rtl } else { TextDirection::Ltr } });
     }
+    let features = read(scope, this, |s| Some(font_features(&s.st.font_kerning, &s.st.font_variant_caps))).unwrap_or_default();
+    canvas2d_push(scope, this, Canvas2DOp::SetFontFeatures { features });
     let font = read(scope, this, |s| Some(s.st.font.clone())).unwrap_or_else(|| "10px sans-serif".into());
     let Some((family, size_px, bold, italic)) = parse_font(&font) else { return };
     let families = font_family_list(&font).unwrap_or_else(|| family.clone());
@@ -2366,6 +2387,7 @@ pub(crate) fn cb_2d_measure_text(scope: &mut v8::PinScope, args: v8::FunctionCal
     let font = read(scope, this, |s| Some(s.st.font.clone())).unwrap_or_else(|| "10px sans-serif".into());
     let (family, size_px, bold, italic) = parse_font(&font).unwrap_or_else(|| ("sans-serif".into(), 10.0, false, false));
     let families = font_family_list(&font).unwrap_or(family);
+    let features = read(scope, this, |s| Some(font_features(&s.st.font_kerning, &s.st.font_variant_caps))).unwrap_or_default();
 
     let lang = crate::core::navigator::navigator::persona(scope)
         .and_then(|p| spec::devtools::navigator(p.navigator()).languages.first().cloned())
@@ -2379,7 +2401,7 @@ pub(crate) fn cb_2d_measure_text(scope: &mut v8::PinScope, args: v8::FunctionCal
         let css = ctx.and_then(|c| c.get::<spec::CssHandle>());
         let measured = css.as_ref().map(|h| h.0.measure_text_in(font_map, &families, size_px as f32, bold, italic, &text));
         let default_family = css.as_ref().map(|h| h.0.default_family(font_map)).unwrap_or_else(|| "sans-serif".into());
-        let request = spec::TextFontRequest { families: families.clone(), default_family, size: size_px as f32, bold, italic, lang, words: true };
+        let request = spec::TextFontRequest { families: families.clone(), default_family, size: size_px as f32, bold, italic, lang, words: true, features };
         let ink = ctx.and_then(|c| c.get::<spec::RenderHandle>()).and_then(|h| h.0.text_ink(&request, &text));
         (measured, ink)
     };

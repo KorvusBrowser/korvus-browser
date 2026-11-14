@@ -287,7 +287,7 @@ impl Shaper {
 
     /// `text` shaped as one item: its advance, ink box, carets, and its primary font's ascent and descent.
     fn shape_run(&self, families: &str, size: f32, bold: bool, italic: bool, text: &str) -> Option<spec::TextInk> {
-        let request = spec::TextFontRequest { families: families.to_string(), default_family: self.default_family.clone(), size, bold, italic, lang: self.lang.clone(), words: false };
+        let request = spec::TextFontRequest { families: families.to_string(), default_family: self.default_family.clone(), size, bold, italic, lang: self.lang.clone(), words: false, features: String::new() };
         self.render.as_ref().and_then(|r| r.text_ink(&request, text)).filter(|i| i.bounds.is_some() || i.width > 0.0)
     }
 
