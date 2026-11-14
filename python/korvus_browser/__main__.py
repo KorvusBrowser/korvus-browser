@@ -19,7 +19,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-VERSION = "152.0.7"                    # kept in sync with the engine release tag (v<VERSION>)
+VERSION = "152.0.8"                    # kept in sync with the engine release tag (v<VERSION>)
 REPO = "KorvusBrowser/korvus-browser"
 
 

@@ -38,6 +38,30 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   `httpCredentials`; `page.on('websocket')` with its frames; touch emulation's `ontouchstart` and taps at the element;
   files uploaded through a form arrive with their contents.
 
+## v152.0.8
+
+- Decoded images are held to a byte budget (256 MiB a document), the least recently used dropped past it: a page that
+  swapped a 1080p `<img>` every frame grew 8.7 MB a frame until it was closed (1.9 GB after 200 frames); it now levels
+  at about 550 MB. A CSS background's images are held the same way.
+- An awaited `Runtime.evaluate` / `callFunctionOn` is answered when its promise settles, not at the end of a 50 ms
+  slice: on a page with a rAF loop or a timer, `(async () => { await 0 })()` took 55 ms (now 0.2 ms) and
+  `setTimeout(0)` 55 ms (now 0.4 ms) — a render pipeline that awaits around every frame paid it several times a frame.
+- An iframe's boxes paint with their `transform` and `opacity` (they painted untransformed and opaque).
+- `getBoundingClientRect` sees a `transform` written after an earlier geometry read.
+- `Page.captureScreenshot`'s JPEG and WebP `quality` (0–100) reaches the encoder; every JPEG was quality 92.
+- `Page.setDocumentContent` (Puppeteer 25.9+'s `page.setContent()`); `HeadlessExperimental.enable` /
+  `beginFrame` answer as Chrome does without BeginFrameControl; the browser target is discoverable and attachable
+  (Puppeteer's `browser.target()`), and answers `SystemInfo.getProcessInfo`.
+- Execution contexts are announced at `Runtime.enable`, as Chrome announces them: Puppeteer's `page.evaluate` (and
+  `setContent`) on a page it had not navigated waited forever.
+- `korvus serve --close-on-disconnect`: a client that disconnects takes the contexts and pages it made with it (off by
+  default, as in Chrome).
+- Right-to-left text: Arabic and Hebrew runs are shaped right to left (Arabic joins) and drawn in visual order;
+  `direction: rtl` lays blocks, flex rows and `text-align: start` out from the right; a canvas's `direction: inherit`
+  follows its element.
+- A canvas's `fontKerning` and `fontVariantCaps` reach the shaper, and small capitals a font cannot make are
+  synthesized as Chrome synthesizes them.
+
 ## v152.0.7
 
 - A rotated persona is a whole machine, not a pool row: a laptop or a desktop, and with it a battery, media devices,
