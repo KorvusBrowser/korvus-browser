@@ -198,6 +198,11 @@ pub struct ConnIds {
     /// session once; Playwright enables the domain again on a page it already set up, and a re-announced
     /// `frameNavigated` reads to it as a navigation that detaches every handle it holds).
     pub page_enabled: bool,
+    /// This session has been told the live execution contexts (at `Runtime.enable`, as Chrome tells them, or at
+    /// `Runtime.runIfWaitingForDebugger` with the domain already enabled): they are told once.
+    pub contexts_announced: bool,
+    /// This session has `Runtime` enabled.
+    pub runtime_enabled: bool,
     /// `Runtime.ExceptionDetails.exceptionId`: a plain counter from 1, per session. Measured over
     /// one Chrome session driven through fourteen throwing evaluates — 1, 2, 3, … with no reuse and
     /// no relation to any other id on the wire.
@@ -230,6 +235,8 @@ impl ConnIds {
             popups: Vec::new(),
             committed: false,
             page_enabled: false,
+            contexts_announced: false,
+            runtime_enabled: false,
             next_exception_id: 1,
             // Chrome's is a renderer pid; the shape (a positive decimal) is what a client parses, so
             // this is a random one in the same range rather than this process's own pid — which
@@ -278,6 +285,8 @@ impl ConnIds {
         self.session_id = hex32();
         self.next_exception_id = 1;
         self.page_enabled = false;
+        self.contexts_announced = false;
+        self.runtime_enabled = false;
     }
     pub fn target_id(&self) -> &str {
         &self.browser.target_id

@@ -2875,15 +2875,23 @@ async fn dispatch(
         // Playwright sends LATE — after it has processed Page.getFrameTree and registered the main
         // frame. Emitting it on Runtime.enable races that registration: Playwright's
         // _onExecutionContextCreated drops the context if frameManager.frame(frameId) isn't known yet.
+        // Chrome tells a session the live execution contexts when it enables the domain -- Puppeteer learns its frame
+        // from `Page.getFrameTree` first, and takes a context only for a frame it knows. Told them only at
+        // `runIfWaitingForDebugger`, before any frame, Puppeteer dropped the page's main world, and every
+        // `page.evaluate` on a page it had not navigated waited forever.
         "Runtime.enable" => {
             engine.runtime_stacks(true);
             // the page's console calls and unhandled errors are reported from now on
             webapi::devtools_log::set_capture(true);
-            (Ok(json!({})), vec![])
+            ids.runtime_enabled = true;
+            let events = if std::mem::replace(&mut ids.contexts_announced, true) { vec![] } else { live_context_events(engine, ids) };
+            (Ok(json!({})), events)
         }
         "Runtime.disable" => {
             engine.runtime_stacks(false);
             webapi::devtools_log::set_capture(false);
+            ids.runtime_enabled = false;
+            ids.contexts_announced = false;
             (Ok(json!({})), vec![])
         }
 
@@ -2894,27 +2902,11 @@ async fn dispatch(
         // late-attaching client the LIVE context -- same id, same uniqueId, same origin as the
         // client before it was given (measured, Chrome 150.0.7871.46).
         "Runtime.runIfWaitingForDebugger" => {
-            let id = ids.default_context();
-            // Chrome's `://` for a document with no origin, the initial `about:blank`'s (measured).
-            let origin = context_origin(&if engine.built() { engine.get().current_url() } else { "about:blank".to_string() });
-            let mut events = vec![json!({
-                "method": "Runtime.executionContextCreated",
-                "params": { "context": {
-                    "id": id, "origin": origin, "name": "",
-                    "uniqueId": ids.context_unique(id),
-                    "auxData": { "isDefault": true, "type": "default", "frameId": ids.frame_id() }
-                }}
-            })];
-            // and the document's isolated worlds, which a client attaching late is told about as Chrome tells it
-            // every live context
-            let frame_id = ids.frame_id().to_string();
-            for (wid, name, worigin) in ids.live_worlds() {
-                events.push(world_context_event(ids, wid, &name, &worigin, &frame_id));
-            }
-            // and every frame's
-            for c in ids.frame_contexts() {
-                events.push(frame_context_event(ids, c.id, &c.name, &c.origin, &c.frame, c.default));
-            }
+            let events = if ids.runtime_enabled && !std::mem::replace(&mut ids.contexts_announced, true) {
+                live_context_events(engine, ids)
+            } else {
+                vec![]
+            };
             (Ok(json!({})), events)
         }
 
@@ -3153,6 +3145,33 @@ async fn dispatch(
             } else {
                 (Err(RpcError::invalid_params("No entry with passed id".into())), vec![])
             }
+        }
+
+        // The frame's document replaced by `html`, as Chrome's `Page.setDocumentContent` does it: the document opened,
+        // written and closed (`document.open()` / `write()` / `close()` on the frame's document). Puppeteer 25.9 and
+        // later make `page.setContent()` of it; it was "wasn't found" here, so `setContent` failed outright.
+        "Page.setDocumentContent" => {
+            let frame = params.get("frameId").and_then(Value::as_str).unwrap_or("");
+            let Some(html) = params.get("html").and_then(Value::as_str) else {
+                return (Err(RpcError::invalid_params("Invalid parameters: html: string value expected".into())), vec![]);
+            };
+            if frame != ids.frame_id() {
+                return (Err(RpcError::server("No frame for given id found".into())), vec![]);
+            }
+            let src = format!("(() => {{ document.open(); document.write({}); document.close(); }})()", Value::String(html.to_string()));
+            let outcome = engine.get().eval_remote_details_in(None, src, true);
+            let events = devtools_events(engine.get(), ids);
+            match outcome.exception {
+                None => (Ok(json!({})), events),
+                Some(_) => (Err(RpcError::server("Sanitizing document failed".into())), events),
+            }
+        }
+
+        // Chrome answers these without `--enable-begin-frame-control` exactly so: the domain enables, and a frame can be
+        // begun only by a browser started to let its client drive the frames. This engine has no such mode yet.
+        "HeadlessExperimental.enable" | "HeadlessExperimental.disable" => (Ok(json!({})), vec![]),
+        "HeadlessExperimental.beginFrame" => {
+            (Err(RpcError::server("Command is only supported if BeginFrameControl is enabled.".into())), vec![])
         }
 
         "Page.getFrameTree" => {
@@ -4533,6 +4552,33 @@ fn ua_metadata(m: &Value) -> spec::devtools::UaMetadata {
 /// JPEG came out at the encoder's default 92, whatever the client asked for (quality 10 and 100 were the same bytes).
 fn screenshot_quality(params: &Value, format: spec::ImageFormat) -> Option<f64> {
     (format != spec::ImageFormat::Png).then(|| params.get("quality").and_then(Value::as_f64).unwrap_or(80.0).clamp(0.0, 100.0) / 100.0)
+}
+
+/// The live execution contexts as `Runtime.executionContextCreated` events: the page's default one, its isolated
+/// worlds and every frame's -- what Chrome tells a session that enables `Runtime`.
+fn live_context_events(engine: &mut Lazy<'_>, ids: &mut ConnIds) -> Vec<Value> {
+    let id = ids.default_context();
+    // Chrome's `://` for a document with no origin, the initial `about:blank`'s (measured).
+    let origin = context_origin(&if engine.built() { engine.get().current_url() } else { "about:blank".to_string() });
+    let mut events = vec![json!({
+        "method": "Runtime.executionContextCreated",
+        "params": { "context": {
+            "id": id, "origin": origin, "name": "",
+            "uniqueId": ids.context_unique(id),
+            "auxData": { "isDefault": true, "type": "default", "frameId": ids.frame_id() }
+        }}
+    })];
+    // and the document's isolated worlds, which a client attaching late is told about as Chrome tells it
+    // every live context
+    let frame_id = ids.frame_id().to_string();
+    for (wid, name, worigin) in ids.live_worlds() {
+        events.push(world_context_event(ids, wid, &name, &worigin, &frame_id));
+    }
+    // and every frame's
+    for c in ids.frame_contexts() {
+        events.push(frame_context_event(ids, c.id, &c.name, &c.origin, &c.frame, c.default));
+    }
+    events
 }
 
 struct Deferred {
