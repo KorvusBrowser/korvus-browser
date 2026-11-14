@@ -812,6 +812,11 @@ impl BoxTree {
                     v.above = v.above.max(a + h);
                     v.below = v.below.max(d + (l - h));
                 }
+                // and the fonts the shaper set a script no capture covers in (Noto Sans Arabic: issue #18)
+                for (a, b) in shaped_fallback(&spec, text) {
+                    v.above = v.above.max(a);
+                    v.below = v.below.max(b);
+                }
             }
         }
         v
@@ -830,6 +835,10 @@ impl BoxTree {
         let (mut above, mut below) = split(metrics);
         for fb in self.fallback_faces(spec, metrics, text) {
             let (a, b) = split(fb);
+            above = above.max(a);
+            below = below.max(b);
+        }
+        for (a, b) in shaped_fallback(spec, text) {
             above = above.max(a);
             below = below.max(b);
         }
@@ -857,6 +866,16 @@ impl BoxTree {
         }
         out
     }
+}
+
+/// The fallback fonts the installed shaper set `text` in, each `(above, below)` the baseline in px with its half-leading
+/// ([`crate::font::ShapedText::fallback`]) -- for text in a script the captured tables do not cover, whose fallback no
+/// capture measured ([`crate::font::needs_shaping`]); the captured scripts' fallbacks are `fallback_faces`'s.
+fn shaped_fallback(spec: &crate::layout::inline::FontSpec, text: &str) -> Vec<(f32, f32)> {
+    if !text.chars().any(crate::font::needs_shaping) {
+        return Vec::new();
+    }
+    crate::font::shaped(&spec.families, spec.weight, spec.italic, spec.size, &spec.with_kerning(&spec.features), text).map(|s| s.fallback).unwrap_or_default()
 }
 
 #[cfg(test)]
@@ -890,6 +909,66 @@ mod tests {
         (0..dom.len() as NodeId)
             .find(|&n| dom.get_attribute(n, "id") == Some(id))
             .unwrap_or_else(|| panic!("no #{id}"))
+    }
+
+    /// A stand-in for the paint's shaper: each character 10 px wide, 12 under `+tnum`; text in a script no table covers set
+    /// in a fallback font 70 px above the baseline and 40 below.
+    struct TenPxShaper;
+
+    impl crate::font::TextShaper for TenPxShaper {
+        fn shape(&self, _families: &str, _weight: u16, _italic: bool, _size: f32, features: &str, text: &str) -> Option<crate::font::ShapedText> {
+            // the last setting of a feature wins, as in HarfBuzz
+            let tnum = features.split(',').filter_map(|f| match f { "+tnum" | "tnum=1" => Some(true), "-tnum" | "tnum=0" => Some(false), _ => None }).last();
+            let per = if tnum == Some(true) { 12.0 } else { 10.0 };
+            let fallback = if text.chars().any(crate::font::needs_shaping) { vec![(70.0, 40.0)] } else { Vec::new() };
+            Some(crate::font::ShapedText { width: per * text.chars().count() as f32, fallback })
+        }
+    }
+
+    /// Lay `html` out with [`TenPxShaper`] installed.
+    fn shaped_viewport(html: &str) -> (Dom, LaidOut) {
+        crate::font::set_text_shaper(Some(std::rc::Rc::new(TenPxShaper)));
+        let laid = chrome_viewport(html);
+        crate::font::set_text_shaper(None);
+        laid
+    }
+
+    /// Text in a script the captured tables do not cover is laid out at the width the paint's shaper sets it at, and its
+    /// fallback font opens a `line-height: normal` line (issue #18: HyperFrames' 48px `مرحبا بالعالم` laid out 400 wide
+    /// from zero-advance table entries on Inter's 59 px line, where Chrome 155 lays it 230.156 wide on Noto Sans
+    /// Arabic's 101).
+    #[test]
+    fn text_no_table_covers_is_laid_out_as_the_paint_shapes_it() {
+        let (dom, out) = shaped_viewport(
+            "<html lang=ar dir=rtl><body style='margin:0;font:700 48px Arial'><div id=a style='position:absolute;right:32px'>مرحبا</div>\
+             <div id=l>Hello</div><div id=f style='line-height:60px'>مرحبا</div></body></html>",
+        );
+        let (a, l, f) = (out.bounding_rect(el(&dom, "a")), out.bounding_rect(el(&dom, "l")), out.bounding_rect(el(&dom, "f")));
+        assert_eq!(a.width, 50.0, "five letters at the shaper's 10 px: {a:?}");
+        assert_eq!(a.x, 1920.0 - 32.0 - 50.0, "ending at its inline start, the right: {a:?}");
+        assert_eq!(a.height, 110.0, "the fallback's 70 + 40: {a:?}");
+        assert!(l.height < 60.0, "Latin keeps the primary font's line: {l:?}");
+        assert_eq!(f.height, 60.0, "a fixed line-height takes no fallback: {f:?}");
+        // and without a shaper, the tables' width, as before
+        let (dom, out) = chrome_viewport("<html lang=ar><body style='margin:0;font:48px Arial'><span id=a>مرحبا</span></body></html>");
+        assert_ne!(out.bounding_rect(el(&dom, "a")).width, 50.0);
+    }
+
+    /// `font-variant-numeric` and the other font-variant properties reach the shaper as OpenType features, and their
+    /// effect on the width is laid out (issue #22: `tabular-nums` timecodes drew wider than they were laid out, and
+    /// HyperFrames' gsap-call-render-seek counter jittered).
+    #[test]
+    fn font_features_change_the_width_as_the_shaper_says() {
+        let (dom, out) = shaped_viewport(
+            "<body style='margin:0;font:20px Arial'><span id=p>0123</span><br>\
+             <span id=t style='font-variant-numeric:tabular-nums'>0123</span><br>\
+             <span id=s style='font-feature-settings:\"tnum\"'>0123</span><br>\
+             <span id=o style='font-variant-numeric:tabular-nums;font-feature-settings:\"tnum\" 0'>0123</span></body>",
+        );
+        let w = |id: &str| out.bounding_rect(el(&dom, id)).width;
+        assert_eq!(w("t") - w("p"), 8.0, "four digits 2 px wider each");
+        assert_eq!(w("s"), w("t"), "font-feature-settings asks for the same feature");
+        assert_eq!(w("o"), w("p"), "font-feature-settings comes last and turns it off");
     }
 
     /// `text-wrap: balance` breaks a paragraph of a few lines at the narrowest width that keeps their number, and still

@@ -106,7 +106,14 @@ fn family_typeface(mgr: &FontMgr, family: &str, generic: bool, bold: bool, itali
     }
     let st = style(bold, italic);
     let tf = if generic {
-        mgr.match_family_style_character(family, st, &[lang], 'A' as i32)
+        // ON LINUX the document's language picks the generic's face only in a script Chrome's settings give lists of
+        // their own ([`generic_script`]): every other script takes the global defaults, a family NAME the font service
+        // matches with no language (`FontCache::GetFontPlatformData` -> `MatchFamilyName`). Asked with `ar`, fontconfig
+        // answered `system-ui` and `sans-serif` with DejaVu Sans, whose own Arabic then drew a bold heading 295 px wide
+        // where Chrome 155 draws it in the default face (Noto Sans CJK JP Bold, no Arabic) and its Arabic from the
+        // fallback (Noto Sans Arabic, emboldened): 226 px (HyperFrames html-dir-rtl, issue #18).
+        let langs: &[&str] = if cfg!(target_os = "linux") && generic_script(lang).is_empty() { &[] } else { &[lang] };
+        mgr.match_family_style_character(family, st, langs, 'A' as i32)
             .or_else(|| mgr.legacy_make_typeface(Some(family), st))
     } else {
         crate::font_match::match_family_name(family, bold, italic)
@@ -164,13 +171,11 @@ fn blink_family(mgr: &FontMgr, family: &str, generic: bool, tf: &Typeface, lang:
     }
 }
 
-/// Chrome 150 on Linux's family for a generic in the script of `lang` (`chrome/app/resources/
-/// locale_settings_linux.grd`, read through Blink's `GenericFontFamilySettings`): a list's first family installed
-/// here, else its first. The Japanese, Korean and Han scripts and Devanagari have their own lists; every other
-/// script takes the global defaults.
-fn chrome_generic_family(mgr: &FontMgr, generic: &str, lang: &str) -> Option<String> {
+/// The script of `lang` whose generic families Chrome's settings list on their own -- Japanese, Korean, Simplified and
+/// Traditional Han, Devanagari -- or `""` for every other, which takes the global defaults.
+fn generic_script(lang: &str) -> &'static str {
     let l = lang.to_ascii_lowercase();
-    let script = if l.starts_with("ja") {
+    if l.starts_with("ja") {
         "Jpan"
     } else if l.starts_with("ko") {
         "Hang"
@@ -180,7 +185,15 @@ fn chrome_generic_family(mgr: &FontMgr, generic: &str, lang: &str) -> Option<Str
         "Deva"
     } else {
         ""
-    };
+    }
+}
+
+/// Chrome 150 on Linux's family for a generic in the script of `lang` (`chrome/app/resources/
+/// locale_settings_linux.grd`, read through Blink's `GenericFontFamilySettings`): a list's first family installed
+/// here, else its first. The Japanese, Korean and Han scripts and Devanagari have their own lists; every other
+/// script takes the global defaults.
+fn chrome_generic_family(mgr: &FontMgr, generic: &str, lang: &str) -> Option<String> {
+    let script = generic_script(lang);
     let list: &str = match (script, generic) {
         ("Jpan", "serif") => ",Noto Serif JP,Noto Serif CJK JP,Times New Roman",
         ("Jpan", "sans-serif") => ",Noto Sans JP,Noto Sans CJK JP,Arial",
@@ -217,7 +230,20 @@ fn installed_family(mgr: &FontMgr, name: &str) -> bool {
     NAMES.with(|n| n.get_or_init(|| mgr.family_names().map(|f| f.to_ascii_lowercase()).collect()).contains(&name.to_ascii_lowercase()))
 }
 
+/// A character no listed family has: the font Chrome falls back to for it.
+///
+/// ON LINUX a character outside the CJK scripts is matched by the character and the language ALONE, at the regular
+/// weight and upright: the font service's `FallbackFontForCharacter(character, locale)` takes no style
+/// (`gfx::GetFallbackFontForChar`: a charset and `FC_LANG`, then fontconfig's defaults), and Blink then synthesizes the
+/// bold or italic the face lacks (`PlatformFallbackFontForCharacter`), as [`shape`] does. A CJK character keeps the
+/// requested style. Measured on google-chrome 157 here (`CSS.getPlatformFontsForNode`, `bold 48px Arial`): `مرحبا` is
+/// NotoSansArabic-Regular, `สวัสดี` NotoSansThai-Regular, `नमस्ते` NotoSansDevanagari-Regular -- each with a Bold face
+/// installed -- while `中文` is NotoSansCJKkr-Bold and `かな` under `lang=ja` NotoSansCJKjp-Bold. Matched at the requested
+/// weight, a bold heading's Arabic was Noto Nastaliq Urdu Bold, 295 px of glyphs for Chrome's 226 (issue #18). Windows's
+/// Blink asks the font manager with the requested style (`matchFamilyStyleCharacter`), and macOS's cascades from the
+/// primary font, which keeps its weight.
 fn fallback_typeface(mgr: &FontMgr, ch: char, emoji: bool, bold: bool, italic: bool, lang: &str) -> Option<Typeface> {
+    let (bold, italic) = if cfg!(target_os = "linux") && !cjk(ch) { (false, false) } else { (bold, italic) };
     let key = (ch, emoji, bold, italic, lang.to_string());
     if let Some(hit) = FALLBACK.with(|t| t.borrow().get(&key).cloned()) {
         return hit;
@@ -226,6 +252,24 @@ fn fallback_typeface(mgr: &FontMgr, ch: char, emoji: bool, bold: bool, italic: b
     let tf = mgr.match_family_style_character("", style(bold, italic), &[tag], ch as i32);
     FALLBACK.with(|t| t.borrow_mut().insert(key, tf.clone()));
     tf
+}
+
+/// Is `ch` in a CJK script -- Han, kana, Hangul, Bopomofo, their symbols and punctuation, the fullwidth forms -- whose
+/// fallback keeps the requested weight on Linux ([`fallback_typeface`])?
+fn cjk(ch: char) -> bool {
+    matches!(ch as u32,
+        0x1100..=0x11FF // Hangul Jamo
+        | 0x2E80..=0x2FDF // CJK and Kangxi radicals
+        | 0x3000..=0x33FF // CJK symbols and punctuation, kana, Bopomofo, Hangul compatibility Jamo, enclosed and compatibility
+        | 0x3400..=0x4DBF // Han extension A
+        | 0x4E00..=0x9FFF // Han
+        | 0xA960..=0xA97F // Hangul Jamo extended A
+        | 0xAC00..=0xD7FF // Hangul syllables, Jamo extended B
+        | 0xF900..=0xFAFF // Han compatibility
+        | 0xFE30..=0xFE4F // CJK compatibility forms
+        | 0xFF00..=0xFFEF // halfwidth and fullwidth forms
+        | 0x20000..=0x3FFFF // Han extensions B and on
+    )
 }
 
 /// `tf` without fontconfig's render-time edits. A Blink renderer gets a face from the font service as a file and an
@@ -514,7 +558,33 @@ pub(crate) fn text_ink(mgr: &FontMgr, req: &TextFontRequest, text: &str) -> Opti
     let shaped = shape(mgr, req, text)?;
     let t = primary_tables(&shaped)?;
     let metrics = Some(primary_ascent_descent(&shaped));
-    Some(TextInk { bounds: shaped.bounds, width: shaped.width, units_per_em: t.0, typo: t.1, base: t.2, carets: shaped.carets, metrics })
+    let fallback = fallback_heights(&shaped);
+    Some(TextInk { bounds: shaped.bounds, width: shaped.width, units_per_em: t.0, typo: t.1, base: t.2, carets: shaped.carets, metrics, fallback })
+}
+
+/// Each font but the primary one the runs are in, as a line box unites it ([`TextInk::fallback`]): its ascent and descent
+/// rounded as `SimpleFontData` rounds them, and its line gap rounded and split, the floor of half above. Measured on
+/// Chrome 155 (`lang=ar`, `48px Inter, system-ui, sans-serif`, bold): `مرحبا بالعالم` makes a 101 px line, Noto Sans
+/// Arabic's 66 + 35, where `Hello world` makes Inter's 59; Thai makes 73 (Noto Sans Thai's 51 + 22).
+fn fallback_heights(shaped: &Shaped) -> Vec<(f32, f32)> {
+    let mut seen: Vec<(u32, u32)> = Vec::new();
+    let mut out = Vec::new();
+    for run in &shaped.runs {
+        let tf = run.font.typeface();
+        let key = (tf.unique_id(), run.font.size().to_bits());
+        if tf.unique_id() == shaped.primary.unique_id() || seen.contains(&key) {
+            continue;
+        }
+        seen.push(key);
+        let mut font = Font::new(tf, Some((run.font.size() * 64.0).floor() / 64.0));
+        font.set_hinting(FontHinting::Slight);
+        font.set_subpixel(true);
+        let (_, m) = font.metrics();
+        let (ascent, descent, gap) = ((-m.ascent).round(), m.descent.round(), m.leading.round());
+        let half = (gap / 2.0).floor();
+        out.push((ascent + half, descent + (gap - half)));
+    }
+    out
 }
 
 /// The primary font's units per em, typo ascender/descender and BASE baselines in px.

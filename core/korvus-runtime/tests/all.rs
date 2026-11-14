@@ -139,6 +139,7 @@
 #[path = "hover_live.rs"] mod hover_live;
 #[path = "html_image_live.rs"] mod html_image_live;
 #[path = "img_decode_waits_live.rs"] mod img_decode_waits_live;
+#[path = "text_shaping_live.rs"] mod text_shaping_live;
 #[path = "iface_object_live.rs"] mod iface_object_live;
 #[path = "idb_live.rs"] mod idb_live;
 #[path = "image_data_live.rs"] mod image_data_live;

@@ -1043,6 +1043,25 @@ impl Painter<'_> {
                 lang: String::new(),
                 default_family: String::new(),
             });
+            // the OpenType features its style asks for, as the layout measured it in them ([`FontSpec::advance_of`]):
+            // `tabular-nums` and the rest never reached the shaper, and `font-kerning: none` kerned
+            let features = {
+                let v = |p: PropertyId| self.cvb(index, p).unwrap_or_default();
+                let f = crate::font::css_font_features(
+                    &v(PropertyId::FontVariantLigatures),
+                    &v(PropertyId::FontVariantCaps),
+                    &v(PropertyId::FontVariantNumeric),
+                    &v(PropertyId::FontVariantEastAsian),
+                    &v(PropertyId::FontVariantPosition),
+                    &v(PropertyId::FontFeatureSettings),
+                );
+                match (v(PropertyId::FontKerning).trim().eq_ignore_ascii_case("none"), f.is_empty()) {
+                    (false, _) => f,
+                    (true, true) => "-kern".to_string(),
+                    (true, false) => format!("{f},-kern"),
+                }
+            };
+            self.ops.push(Canvas2DOp::SetFontFeatures { features });
             // drawn on the line's baseline, where the layout put it: a canvas `top` is the em box's top, which in a font
             // whose ascent is not its em box's (Noto Sans CJK: 1.16 em against 0.88) drew the glyphs 5px above the line
             self.ops.push(Canvas2DOp::SetTextBaseline { baseline: spec::TextBaseline::Alphabetic });

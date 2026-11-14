@@ -669,7 +669,7 @@ fn complete_fonts(st: &OpState, dom: &Dom, root: u32, media: &MediaContext, ui_l
 /// -- the best match for `weight` and style in each `unicode-range` subset ([`WebFaces::urls`]) -- under the family
 /// names the render backend registered their downloaded files by. A declared family is its faces alone: no installed
 /// font answers to its name, and a face whose font has not arrived draws nothing yet (its text falls to the next family).
-fn with_web_fonts(
+pub(crate) fn with_web_fonts(
     families: &str,
     weight: u16,
     italic: bool,

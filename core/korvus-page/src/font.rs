@@ -127,6 +127,151 @@ pub fn worn_font_map() -> &'static FontMap {
     font_map(WORN.with(|w| w.get()))
 }
 
+/// The paint backend's shaper, which layout measures with where the captured tables cannot answer: `text` set as the
+/// document's paint sets it -- the same fonts (a downloaded `@font-face` font's and a character's fallback included),
+/// the same shaping, in `features` (HarfBuzz's syntax: `+tnum,-liga`). `None`: no fonts here.
+///
+/// It exists because measuring and drawing went two ways (issue #18). The tables hold printable ASCII and a few sampled
+/// characters per face, so a script they do not cover -- Arabic, Hebrew, Devanagari, Thai -- was measured at the
+/// face's `0` advance per character, unjoined, while the paint shaped it: the issue's bold 48px `مرحبا بالعالم` in
+/// `system-ui, sans-serif` laid out 336 wide and drew 295 px of glyphs from the box's left edge, 38 px short of where
+/// `right: 32px` puts its end; HyperFrames' (`Inter` first) laid out 400 wide on Inter's 59 px line, where Chrome 155
+/// lays it out 230.156 wide, drawn edge to edge, on the Arabic fallback's 101.
+pub trait TextShaper {
+    fn shape(&self, families: &str, weight: u16, italic: bool, size_px: f32, features: &str, text: &str) -> Option<ShapedText>;
+}
+
+/// What a [`TextShaper`] measured of a text.
+#[derive(Debug, Clone, Default, PartialEq)]
+pub struct ShapedText {
+    /// The advance in px, in the fonts the glyphs are in.
+    pub width: f32,
+    /// The ascent and descent, in px with each its half of the line gap, of each font other than the primary one the
+    /// glyphs are in: what a `line-height: normal` line box unites with the primary font's (`spec::TextInk::fallback`).
+    pub fallback: Vec<(f32, f32)>,
+}
+
+thread_local! {
+    /// The shaper this thread's documents are laid out with ([`set_text_shaper`]); none until the engine installs one.
+    static SHAPER: std::cell::RefCell<Option<std::rc::Rc<dyn TextShaper>>> = const { std::cell::RefCell::new(None) };
+}
+
+/// Lay this thread's documents out with `shaper` from here on (the engine installs one per document before it lays it
+/// out: its language is the document's).
+pub fn set_text_shaper(shaper: Option<std::rc::Rc<dyn TextShaper>>) {
+    SHAPER.with(|s| *s.borrow_mut() = shaper);
+}
+
+/// [`TextShaper::shape`] through the installed shaper.
+pub fn shaped(families: &str, weight: u16, italic: bool, size_px: f32, features: &str, text: &str) -> Option<ShapedText> {
+    let shaper = SHAPER.with(|s| s.borrow().clone())?;
+    shaper.shape(families, weight, italic, size_px, features, text)
+}
+
+/// The advance of `text` through the installed shaper ([`shaped`]).
+pub fn shaped_width(families: &str, weight: u16, italic: bool, size_px: f32, features: &str, text: &str) -> Option<f32> {
+    shaped(families, weight, italic, size_px, features, text).map(|s| s.width)
+}
+
+/// Is `ch` in a script whose text only shaping can measure -- joined, reordered or combined into clusters -- and which no
+/// captured table samples? Hebrew, Arabic, Syriac, Thaana, N'Ko and the other right-to-left scripts of the BMP, the
+/// Indic scripts, Thai, Lao, Tibetan, Myanmar, Khmer and Mongolian, and the Hebrew and Arabic presentation forms.
+pub fn needs_shaping(ch: char) -> bool {
+    matches!(ch as u32,
+        0x0590..=0x08FF // Hebrew, Arabic, Syriac, Arabic Supplement, Thaana, N'Ko, Samaritan, Mandaic, Arabic Extended
+        | 0x0900..=0x0DFF // Devanagari to Sinhala
+        | 0x0E00..=0x0FFF // Thai, Lao, Tibetan
+        | 0x1000..=0x109F // Myanmar
+        | 0x1780..=0x18AF // Khmer, Mongolian
+        | 0xFB1D..=0xFDFF // Hebrew and Arabic presentation forms A
+        | 0xFE70..=0xFEFF // Arabic presentation forms B
+    )
+}
+
+/// The OpenType features a computed style asks the shaper for, in HarfBuzz's syntax -- CSS Fonts 4's mapping, as Blink's
+/// `FontFeatures::Initialize` makes it: `font-variant-ligatures`, `-caps`, `-numeric`, `-east-asian` and `-position`,
+/// then `font-feature-settings`, which comes last and so overrides them. Empty for all of them `normal`.
+pub fn css_font_features(ligatures: &str, caps: &str, numeric: &str, east_asian: &str, position: &str, settings: &str) -> String {
+    let mut out: Vec<String> = Vec::new();
+    let mut on = |tag: &str, value: bool| out.push(format!("{}{tag}", if value { '+' } else { '-' }));
+    for word in ligatures.split_whitespace() {
+        match word {
+            "none" => ["liga", "clig", "dlig", "hlig", "calt"].iter().for_each(|t| on(t, false)),
+            "common-ligatures" => ["liga", "clig"].iter().for_each(|t| on(t, true)),
+            "no-common-ligatures" => ["liga", "clig"].iter().for_each(|t| on(t, false)),
+            "discretionary-ligatures" => on("dlig", true),
+            "no-discretionary-ligatures" => on("dlig", false),
+            "historical-ligatures" => on("hlig", true),
+            "no-historical-ligatures" => on("hlig", false),
+            "contextual" => on("calt", true),
+            "no-contextual" => on("calt", false),
+            _ => {}
+        }
+    }
+    match caps.trim() {
+        "small-caps" => on("smcp", true),
+        "all-small-caps" => ["smcp", "c2sc"].iter().for_each(|t| on(t, true)),
+        "petite-caps" => on("pcap", true),
+        "all-petite-caps" => ["pcap", "c2pc"].iter().for_each(|t| on(t, true)),
+        "unicase" => on("unic", true),
+        "titling-caps" => on("titl", true),
+        _ => {}
+    }
+    for word in numeric.split_whitespace() {
+        let tag = match word {
+            "lining-nums" => "lnum",
+            "oldstyle-nums" => "onum",
+            "proportional-nums" => "pnum",
+            "tabular-nums" => "tnum",
+            "diagonal-fractions" => "frac",
+            "stacked-fractions" => "afrc",
+            "ordinal" => "ordn",
+            "slashed-zero" => "zero",
+            _ => continue,
+        };
+        on(tag, true);
+    }
+    for word in east_asian.split_whitespace() {
+        let tag = match word {
+            "jis78" => "jp78",
+            "jis83" => "jp83",
+            "jis90" => "jp90",
+            "jis04" => "jp04",
+            "simplified" => "smpl",
+            "traditional" => "trad",
+            "full-width" => "fwid",
+            "proportional-width" => "pwid",
+            "ruby" => "ruby",
+            _ => continue,
+        };
+        on(tag, true);
+    }
+    match position.trim() {
+        "sub" => on("subs", true),
+        "super" => on("sups", true),
+        _ => {}
+    }
+    // `"tnum"`, `"tnum" 1`, `"liga" off`, `"aalt" 2`: a four-letter tag, then on (1), off (0) or an alternate's index
+    if !settings.trim().eq_ignore_ascii_case("normal") {
+        for item in settings.split(',') {
+            let mut parts = item.split_whitespace();
+            let Some(tag) = parts.next().map(|t| t.trim_matches(|c| c == '"' || c == '\'')) else { continue };
+            if tag.len() != 4 || !tag.bytes().all(|b| (0x20..=0x7e).contains(&b)) {
+                continue;
+            }
+            match parts.next().unwrap_or("on") {
+                "on" | "1" => out.push(format!("+{tag}")),
+                "off" | "0" => out.push(format!("-{tag}")),
+                n => match n.parse::<u32>() {
+                    Ok(v) => out.push(format!("{tag}={v}")),
+                    Err(_) => continue,
+                },
+            }
+        }
+    }
+    out.join(",")
+}
+
 /// The worn device's fonts over its bundle's (`spec::FontLayer`): the families it lacks, lowercased, and the standard
 /// font its UI locale sets. Process-wide, as a process wears one persona and its workers measure with its fonts too.
 static LAYER: std::sync::RwLock<Option<(std::collections::HashSet<String>, Option<&'static str>)>> = std::sync::RwLock::new(None);

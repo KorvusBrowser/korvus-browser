@@ -1111,6 +1111,15 @@ pub fn derive_font(arena: &StyleArena, key: StyleKey) -> FontSpec {
         letter_spacing: px_of(v(PropertyId::LetterSpacing)).unwrap_or(0.0),
         word_spacing: px_of(v(PropertyId::WordSpacing)).unwrap_or(0.0),
         transform: crate::layout::inline::TextTransform::of(v(PropertyId::TextTransform)),
+        features: crate::font::css_font_features(
+            v(PropertyId::FontVariantLigatures),
+            v(PropertyId::FontVariantCaps),
+            v(PropertyId::FontVariantNumeric),
+            v(PropertyId::FontVariantEastAsian),
+            v(PropertyId::FontVariantPosition),
+            v(PropertyId::FontFeatureSettings),
+        )
+        .into(),
     }
 }
 

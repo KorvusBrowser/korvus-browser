@@ -2053,6 +2053,11 @@ pub struct TextInk {
     /// the box an SVG text's characters stand in (`FixedAscent` / `FixedDescent`), from the face the glyphs were
     /// shaped in. `None` when the backend does not shape.
     pub metrics: Option<(f32, f32)>,
+    /// Each font other than the primary one some of the glyphs are in (Blink's `ShapeResult::FallbackFonts`): its
+    /// ascent and descent in px, rounded as `SimpleFontData` rounds them, each with its half of the font's own line
+    /// gap -- what a `line-height: normal` line box unites with the primary font's (`InlineBoxState::
+    /// AccumulateUsedFonts`). Empty when the glyphs are all the primary font's, or the backend does not shape.
+    pub fallback: Vec<(f32, f32)>,
 }
 
 /// The serializations `canvas.toDataURL` / `toBlob` can be asked for. Anything else is PNG, per HTML.

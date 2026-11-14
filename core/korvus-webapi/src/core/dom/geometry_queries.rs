@@ -209,6 +209,100 @@ fn push_web_fonts(state: &OpState, page: &page::Page) {
     page.set_web_fonts(table, key);
 }
 
+/// The render backend's shaper, which layout measures text with where the persona's captured tables cannot
+/// ([`page::font::TextShaper`]): the request the document's paint makes for its text (`cssom::complete_fonts`) -- its
+/// family list with each `@font-face` family replaced by the downloaded fonts it draws in, the document's language
+/// (`<html lang>`, else the UI's), the default family, word by word -- so the width laid out is the width drawn. Each
+/// answer is kept for the shaper's life: a document's words repeat, and a new font or sheet makes a new shaper.
+struct RenderShaper {
+    render: std::sync::Arc<dyn spec::RenderBackend>,
+    lang: String,
+    default_family: String,
+    web: Option<(std::rc::Rc<crate::core::css::sheet_loads::WebFaces>, std::sync::Arc<crate::core::fonts::font_probe::FontProbes>)>,
+    shaped: std::cell::RefCell<std::collections::HashMap<(String, u16, bool, u32, String, String), Option<page::font::ShapedText>>>,
+}
+
+impl page::font::TextShaper for RenderShaper {
+    fn shape(&self, families: &str, weight: u16, italic: bool, size_px: f32, features: &str, text: &str) -> Option<page::font::ShapedText> {
+        let key = (families.to_string(), weight, italic, size_px.to_bits(), features.to_string(), text.to_string());
+        if let Some(hit) = self.shaped.borrow().get(&key) {
+            return hit.clone();
+        }
+        let families = match &self.web {
+            Some((web, bodies)) => crate::core::css::cssom::with_web_fonts(families, weight, italic, page::font::optical_size(size_px), web, bodies, &*self.render),
+            None => families.to_string(),
+        };
+        let request = spec::TextFontRequest {
+            families,
+            default_family: self.default_family.clone(),
+            size: size_px,
+            bold: weight >= 600,
+            italic,
+            lang: self.lang.clone(),
+            words: true,
+            features: features.to_string(),
+        };
+        let shaped = self.render.text_ink(&request, text).map(|i| page::font::ShapedText { width: i.width, fallback: i.fallback });
+        self.shaped.borrow_mut().insert(key, shaped.clone());
+        shaped
+    }
+}
+
+/// The shaper last installed, under what it was made from, and the document's `@font-face` faces at the sheets'
+/// generation they were read at: a document laid out again keeps its answers, and reads its rules again only when its
+/// sheets have changed.
+#[derive(Default)]
+struct InstalledShaper {
+    shaper: Option<(u64, std::rc::Rc<RenderShaper>)>,
+    faces: Option<(u64, Option<std::rc::Rc<crate::core::css::sheet_loads::WebFaces>>)>,
+}
+
+/// Install the shaper the document at arena `root` is laid out with ([`RenderShaper`]), before its layout.
+fn install_text_shaper(state: &mut OpState, page: &page::Page, root: u32) {
+    let Some(render) = state.try_borrow::<spec::kernel::Context>().and_then(|c| c.get::<spec::RenderHandle>()).map(|h| h.0.clone()) else {
+        page::font::set_text_shaper(None);
+        return;
+    };
+    let media = media_context(state);
+    let lang = state
+        .try_borrow::<HostDom>()
+        .and_then(|h| crate::core::dom::document::doc_element_child(&h.0, root).and_then(|e| h.0.get_attribute(e, "lang")).map(|l| l.trim().to_string()))
+        .filter(|l| !l.is_empty())
+        .or_else(|| crate::binding::protos::persona_handle(state).and_then(|p| spec::devtools::navigator(p.0.navigator()).languages.first().cloned()))
+        .unwrap_or_else(|| "en-US".into());
+    let default_family = state
+        .try_borrow::<spec::kernel::Context>()
+        .and_then(|c| c.get::<spec::CssHandle>())
+        .map(|c| c.0.default_family(media.theme.font_map))
+        .unwrap_or_else(|| "sans-serif".into());
+    let bodies = font_bodies(state);
+    if !state.has::<InstalledShaper>() {
+        state.put(InstalledShaper::default());
+    }
+    let sheets = page.geometry_counters().0;
+    let faces = match &state.borrow::<InstalledShaper>().faces {
+        Some((at, f)) if *at == sheets => Some(f.clone()),
+        _ => None,
+    };
+    let faces = faces.unwrap_or_else(|| {
+        let f = crate::core::css::sheet_loads::WebFaces::of(state, &media).map(std::rc::Rc::new);
+        state.borrow_mut::<InstalledShaper>().faces = Some((sheets, f.clone()));
+        f
+    });
+    let key = {
+        use std::hash::{Hash, Hasher};
+        let mut h = std::collections::hash_map::DefaultHasher::new();
+        (&lang, &default_family, sheets, faces.is_some(), bodies.as_ref().map(|b| b.generation()), std::sync::Arc::as_ptr(&render) as *const () as usize).hash(&mut h);
+        h.finish()
+    };
+    let shaper = match &state.borrow::<InstalledShaper>().shaper {
+        Some((k, s)) if *k == key => s.clone(),
+        _ => std::rc::Rc::new(RenderShaper { render, lang, default_family, web: faces.zip(bodies), shaped: Default::default() }),
+    };
+    state.borrow_mut::<InstalledShaper>().shaper = Some((key, shaper.clone()));
+    page::font::set_text_shaper(Some(shaper));
+}
+
 /// The laid-out document of every frame something has measured in, by the frame document's arena
 /// root, with the fingerprint each was laid out from; and how many documents have been laid out.
 #[derive(Default)]
@@ -363,6 +457,8 @@ pub fn refresh_layout_cache(state: &mut OpState) -> bool {
     }
     push_natural_images(state, &handle.0);
     push_web_fonts(state, &handle.0);
+    let page_root = state.borrow::<HostDom>().0.root();
+    install_text_shaper(state, &handle.0, page_root);
     let (fingerprint, style_key) = {
         let dom = &state.borrow::<HostDom>().0;
         let fingerprint = handle.0.page_geometry_fingerprint(dom, &media);
@@ -447,6 +543,7 @@ fn refresh_frame_layout(state: &mut OpState, root: u32, depth: u32) -> bool {
     let mut media = media_context(state);
     media.viewport_width = width;
     media.viewport_height = height;
+    install_text_shaper(state, &handle.0, root);
     let Some(dom) = state.try_borrow::<HostDom>() else { return false };
     // an `<iframe scrolling=no>` lays its document out with no scrollbars
     media.scrollbars_off = crate::core::html::browsing_context::frame_element_showing(state, root).is_some_and(|el| crate::core::html::remote_frame::scrolling_off(&dom.0, el));

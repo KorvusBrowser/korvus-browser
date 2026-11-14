@@ -49,6 +49,9 @@ pub struct FontSpec {
     pub word_spacing: f32,
     /// The computed `text-transform`: the case the text is laid out and painted in ([`TextTransform::apply`]).
     pub transform: TextTransform,
+    /// The OpenType features the style asks for (`font-variant-*`, `font-feature-settings`), in HarfBuzz's syntax
+    /// ([`crate::font::css_font_features`]); empty for none.
+    pub features: Box<str>,
 }
 
 /// The `text-transform` a text box's characters are laid out and painted through.
@@ -116,6 +119,7 @@ impl Default for FontSpec {
             letter_spacing: 0.0,
             word_spacing: 0.0,
             transform: TextTransform::None,
+            features: "".into(),
         }
     }
 }
@@ -123,7 +127,42 @@ impl Default for FontSpec {
 impl FontSpec {
     /// The width `text` advances in this font, as layout measures a run: [`FontMetrics::width_px_kerned`].
     pub fn advance_of(&self, metrics: &FontMetrics, text: &str) -> f32 {
-        metrics.width_px_kerned(text, self.size, self.kerning) + self.spacing(text)
+        self.shaped_advance(metrics, text) + self.spacing(text)
+    }
+
+    /// `text`'s advance before spacing. The captured tables measure it (design D10), except where they cannot:
+    ///
+    ///  - A word in a script only shaping measures ([`crate::font::needs_shaping`]: Arabic joins, Devanagari makes
+    ///    clusters) is the paint's shaped width -- the tables sample none of those scripts, and measured each character
+    ///    at the face's `0` advance.
+    ///  - Text in OpenType features (`font-variant-numeric: tabular-nums`, `font-feature-settings`) is the tables' width
+    ///    moved by what the features change in the shaper: `tnum` widens a proportional `1` to the digits' common width,
+    ///    which the tables, captured with no feature, never saw. The paint sets the same features.
+    ///
+    /// With no shaper installed (a test, a worker) both are the tables' answer.
+    /// `features` as the shaper is asked for them: with `-kern` under `font-kerning: none`.
+    pub(crate) fn with_kerning(&self, features: &str) -> String {
+        match (self.kerning, features.is_empty()) {
+            (true, _) => features.to_string(),
+            (false, true) => "-kern".to_string(),
+            (false, false) => format!("{features},-kern"),
+        }
+    }
+
+    fn shaped_advance(&self, metrics: &FontMetrics, text: &str) -> f32 {
+        let table = metrics.width_px_kerned(text, self.size, self.kerning);
+        let complex = text.chars().any(crate::font::needs_shaping);
+        if !complex && self.features.is_empty() {
+            return table;
+        }
+        let shaped = |f: &str| crate::font::shaped_width(&self.families, self.weight, self.italic, self.size, &self.with_kerning(f), text);
+        if complex {
+            return shaped(&self.features).unwrap_or(table);
+        }
+        match (shaped(&self.features), shaped("")) {
+            (Some(with), Some(without)) => table + (with - without),
+            _ => table,
+        }
     }
 
     /// The `letter-spacing` after every character of `text`, its last included, and the `word-spacing` after each
