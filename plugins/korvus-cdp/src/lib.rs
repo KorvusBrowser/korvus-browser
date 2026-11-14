@@ -2044,7 +2044,7 @@ async fn dispatch_popup(
                 "webp" => spec::ImageFormat::Webp,
                 _ => spec::ImageFormat::Png,
             };
-            let quality = params.get("quality").and_then(Value::as_f64).filter(|_| format != spec::ImageFormat::Png);
+            let quality = screenshot_quality(params, format);
             match engine.get().popup_shot(rec.bc, format, quality) {
                 Some(bytes) => {
                     use base64::Engine as _;
@@ -3622,9 +3622,6 @@ async fn dispatch(
             }
         }
 
-        // The document as the compositor paints it (what `korvus fetch --screenshot` writes), as
-        // Chrome's `{data}` -- base64 PNG. PNG is what this engine paints: a client asking for JPEG or WebP is told so,
-        // not handed PNG bytes under the wrong type (Puppeteer and Playwright ask for PNG by default).
         "Page.stopScreencast" => {
             screencast::stop();
             (Ok(json!({})), vec![])
@@ -3643,7 +3640,7 @@ async fn dispatch(
                 "webp" => spec::ImageFormat::Webp,
                 other => return (Err(RpcError::server(format!("Unsupported screenshot format: {other}"))), vec![]),
             };
-            let quality = params.get("quality").and_then(Value::as_f64).filter(|_| format != spec::ImageFormat::Png);
+            let quality = screenshot_quality(params, format);
             let clip = params.get("clip").filter(|c| c.is_object()).map(|c| {
                 let n = |k: &str| c.get(k).and_then(Value::as_f64).unwrap_or(0.0);
                 [n("x"), n("y"), n("width"), n("height"), c.get("scale").and_then(Value::as_f64).unwrap_or(1.0)]
@@ -4531,6 +4528,13 @@ fn ua_metadata(m: &Value) -> spec::devtools::UaMetadata {
 /// context it ran in, `returnByValue`, and how long it may wait. Chrome waits forever; this connection waits the
 /// `awaitPromise` budget (`KORVUS_AWAIT_PROMISE_MS`), or the evaluation's own `timeout` when that is longer, and then
 /// says so with a `-32000`.
+/// `Page.captureScreenshot`'s `quality` as the encoder takes it: CDP's is 0-100 (Chrome's default 80 when the client
+/// names none), the encoder's is a page's `toDataURL` quality, 0-1 -- so a CDP 80 was out of range there and every
+/// JPEG came out at the encoder's default 92, whatever the client asked for (quality 10 and 100 were the same bytes).
+fn screenshot_quality(params: &Value, format: spec::ImageFormat) -> Option<f64> {
+    (format != spec::ImageFormat::Png).then(|| params.get("quality").and_then(Value::as_f64).unwrap_or(80.0).clamp(0.0, 100.0) / 100.0)
+}
+
 struct Deferred {
     id: i64,
     session: Option<String>,
@@ -4832,6 +4836,16 @@ mod io_stream_tests {
 #[cfg(test)]
 mod deferred_tests {
     use super::*;
+
+    /// CDP's 0-100 screenshot quality reaches the encoder as its 0-1, 80 when none is named; PNG has none.
+    #[test]
+    fn a_screenshot_quality_is_scaled_to_the_encoders() {
+        use spec::ImageFormat::{Jpeg, Png, Webp};
+        assert_eq!(screenshot_quality(&json!({ "quality": 10 }), Jpeg), Some(0.1));
+        assert_eq!(screenshot_quality(&json!({}), Jpeg), Some(0.8));
+        assert_eq!(screenshot_quality(&json!({ "quality": 250 }), Webp), Some(1.0));
+        assert_eq!(screenshot_quality(&json!({ "quality": 50 }), Png), None);
+    }
 
     /// An awaited evaluation waits the connection's budget, or the evaluation's own `timeout` when that is longer --
     /// never less than the budget, since Chrome waits an awaited promise out whatever `timeout` says.
