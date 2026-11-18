@@ -361,3 +361,72 @@ async fn cookies_read_and_write_as_chromes() {
     })
     .await;
 }
+
+/// A synchronous XHR's pause is told to the client and answered while the page's thread is BLOCKED waiting for it.
+///
+/// A sync XHR does not keep the page's thread busy, it stops it: the thread waits on the OS for the response. The pause
+/// of that very request must still reach the client and its answer come back, as in Chrome, whose renderer waits
+/// while the browser process serves `Fetch`. Before the connection had a thread of its own (`fetch::io_runtime`), the
+/// pause was never told, and the request failed at the sync wait's 15 s bound with `NetworkError` -- what Naver's
+/// captcha did under patchright, whose session request is a sync XHR (KorvusBrowser/korvus-browser#1). Stock Chrome
+/// 157 under a raw client that enables `Fetch` and continues every pause answered such a request 200 in 11-14 ms.
+///
+/// The client and the site it loads run on a thread of their own, as a real client is a process of its own: a client
+/// on the page's thread would be blocked with it and prove nothing.
+#[tokio::test]
+async fn a_synchronous_xhr_is_paused_and_answered_while_the_page_thread_waits() {
+    let _turn = crate::navigation::ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
+    let l = TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = l.local_addr().unwrap();
+    let client = std::thread::spawn(move || {
+        let rt = tokio::runtime::Builder::new_current_thread().enable_all().build().unwrap();
+        rt.block_on(async move {
+            let port = fixture_server().await;
+            let ws = tokio_tungstenite::connect_async(format!("ws://{addr}/devtools/page/x")).await.unwrap().0;
+            // `/sync.json` is fulfilled by the client (nothing serves it: the answer can only be the client's);
+            // everything else, the second sync request included, goes on to the network
+            let rule: Rule = Box::new(|p: &Value| {
+                if p["request"]["url"].as_str().unwrap_or("").ends_with("/sync.json") {
+                    let body = "eyJ2IjoiZnJvbSB0aGUgY2xpZW50In0="; // {"v":"from the client"}
+                    vec![(
+                        "Fetch.fulfillRequest".to_string(),
+                        json!({ "requestId": p["requestId"], "responseCode": 200, "body": body,
+                                "responseHeaders": [{ "name": "Content-Type", "value": "application/json" }] }),
+                    )]
+                } else {
+                    continue_rest(p)
+                }
+            });
+            let mut c = Client { ws, next: 0, events: Vec::new(), answers: HashMap::new(), rule_answers: Vec::new(), rule_ids: Vec::new(), rule };
+            c.call("Page.enable", json!({})).await;
+            c.call("Runtime.enable", json!({})).await;
+            c.call("Network.enable", json!({})).await;
+            c.call("Fetch.enable", json!({ "patterns": [{ "urlPattern": "*" }] })).await;
+            c.call("Page.navigate", json!({ "url": format!("http://127.0.0.1:{port}/page.html") })).await;
+            c.wait_for(|e| e["method"] == "Page.loadEventFired").await;
+            let expr = "(() => { const sync = u => { const t0 = performance.now(); const x = new XMLHttpRequest(); \
+                        x.open('GET', u, false); x.send(); return { status: x.status, body: x.responseText, ms: performance.now() - t0 }; }; \
+                        return [sync('/sync.json'), sync('/other.json')]; })()";
+            let started = Instant::now();
+            let r = c.call("Runtime.evaluate", json!({ "expression": expr, "returnByValue": true })).await;
+            let wall = started.elapsed();
+            let paused: Vec<Value> = c.events.iter().filter(|e| e["method"] == "Fetch.requestPaused").map(|e| e["params"].clone()).collect();
+            c.call("Fetch.disable", json!({})).await;
+            let _ = c.ws.close(None).await;
+            (r, wall, paused)
+        })
+    });
+    let served = cdp::serve_connection(l, Engine::new(Box::new(persona::CapturedPersona::default()))).await;
+    let (r, wall, paused) = client.join().expect("the client ran");
+    served.expect("the connection is served");
+
+    let got = &r["result"]["result"]["value"];
+    assert!(r["result"]["exceptionDetails"].is_null(), "neither sync XHR threw: {r}");
+    assert_eq!((&got[0]["status"], &got[0]["body"]), (&json!(200), &json!(r#"{"v":"from the client"}"#)), "the client's answer: {got}");
+    assert_eq!((&got[1]["status"], &got[1]["body"]), (&json!(200), &json!(r#"{"v":"other"}"#)), "continued to the network: {got}");
+    assert!(wall < Duration::from_secs(5), "answered while the page waited, not at the 15 s bound: {wall:?}");
+    for path in ["/sync.json", "/other.json"] {
+        let p = paused.iter().find(|p| p["request"]["url"].as_str().unwrap_or("").ends_with(path) && p["resourceType"] == "XHR");
+        assert!(p.is_some(), "the sync request for {path} was paused as XHR, as Chrome pauses it: {paused:?}");
+    }
+}

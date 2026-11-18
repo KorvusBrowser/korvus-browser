@@ -15,6 +15,10 @@
 //!   client that pairs `Fetch.requestPaused` with `Network.requestWillBeSent` by `networkId` (Playwright pairs them
 //!   and continues an unpaired pause untouched) always has both.
 //!
+//! The socket and both tasks live on a THREAD of their own ([`io_runtime`]), not on the page's: the page's thread can
+//! stop outright, not merely be busy -- a synchronous `XMLHttpRequest` waits on the OS for its response -- and the
+//! request it waits on may be one of the pauses only this domain can tell the client about and take its answer for.
+//!
 //! The transport side is `transport::intercept`; its module comment says what each answer does to the request.
 //! Shapes, answers and messages are stock Chrome 150's, recorded (`~/bench-lean/cdp/probe/chrome150-a1s3*.json`).
 //!
@@ -33,6 +37,7 @@ use base64::Engine as _;
 use futures_util::{SinkExt, StreamExt};
 use serde_json::{json, Value};
 use tokio::net::TcpStream;
+use tokio_tungstenite::tungstenite::protocol::Role;
 use tokio_tungstenite::tungstenite::Message;
 use tokio_tungstenite::WebSocketStream;
 use transport::intercept::{AuthAnswer, AuthChallenge, AuthFuture, Fulfilment, Overrides, PauseFuture, Paused, PausedRequest};
@@ -55,18 +60,39 @@ impl Out {
     }
 
     pub(crate) async fn send(&mut self, m: Message) -> anyhow::Result<()> {
-        self.0.lock().await.send(m).await?;
-        Ok(())
+        write(&mut *self.0.lock().await, [m]).await
     }
 
     /// Several frames, with nothing of another sender's between them.
     pub(crate) async fn send_all(&self, ms: Vec<Message>) -> anyhow::Result<()> {
-        let mut sink = self.0.lock().await;
-        for m in ms {
-            sink.send(m).await?;
-        }
-        Ok(())
+        write(&mut *self.0.lock().await, ms).await
     }
+
+    /// The frames `take` makes, made while this half is held, then written. What it drains from the network reporting
+    /// reaches the wire in the order it was drained, whichever thread drains next -- the page's loop or [`announce`],
+    /// which run on two ([`io_runtime`]): a request's `requestWillBeSent` drained by the loop is written before the
+    /// announcer can write that request's pause.
+    pub(crate) async fn send_taken(&self, take: impl FnOnce() -> Vec<Message>) -> anyhow::Result<()> {
+        let mut sink = self.0.lock().await;
+        write(&mut sink, take()).await
+    }
+}
+
+/// Write `ms` in order. A client that has CLOSED takes nothing more, and that is its connection ending, not an error:
+/// [`read_socket`] reads the client's close on its own thread ([`io_runtime`]) and the closing handshake completes
+/// there, while the page's loop may be writing an event it drained a moment before; it learns of the close when the
+/// close (or the socket's end) reaches it through the [`Inbox`], and ends as for any close. A socket that FAILED is
+/// still an error.
+async fn write(sink: &mut Sink, ms: impl IntoIterator<Item = Message>) -> anyhow::Result<()> {
+    use tokio_tungstenite::tungstenite::error::{Error, ProtocolError};
+    for m in ms {
+        match sink.send(m).await {
+            Ok(()) => {}
+            Err(Error::AlreadyClosed | Error::ConnectionClosed | Error::Protocol(ProtocolError::SendAfterClosing)) => return Ok(()),
+            Err(e) => return Err(e.into()),
+        }
+    }
+    Ok(())
 }
 
 /// The page loop's side of the read half: every message [`read_socket`] did not answer itself, in order.
@@ -637,7 +663,7 @@ pub(crate) async fn read_socket(mut source: Source, to_loop: tokio::sync::mpsc::
             // (`cdp_domain_can_hold`, ABI 3 / D7). This is what releases a held INITIAL-DOCUMENT navigation: the
             // page loop is then blocked inside `begin_navigate` awaiting the very document the plugin holds
             // (lib.rs), so it cannot answer the `Korvus_hold.*` call that would resume it -- but this socket-reader
-            // task runs on the same thread while that loop is parked and answers it. Only a holding plugin can
+            // task runs on the connection's own thread ([`io_runtime`]) and answers it. Only a holding plugin can
             // block the loop this way, so only its domains are taken off-path; a non-holding page-level domain
             // (e.g. virtual-time `Korvus_time`) stays in order on the page loop and is never reordered. The
             // `continue` suppresses forwarding, so the in-order plugin block in lib.rs never double-answers. The
@@ -673,20 +699,26 @@ pub(crate) async fn read_socket(mut source: Source, to_loop: tokio::sync::mpsc::
 }
 
 /// Report each pause: the request's `Network.*` events not yet sent, then `Fetch.requestPaused` -- Chrome 150's order
-/// for every request but a preflight (whose pause it sent first; either order is one a client handles).
+/// for every request but a preflight (whose pause it sent first; either order is one a client handles). Drained and
+/// written as one ([`Out::send_taken`]), as the page's loop writes what it drains.
 pub(crate) async fn announce(mut rx: tokio::sync::mpsc::UnboundedReceiver<Announce>, rep: Rep, out: Out) {
     while let Some(a) = rx.recv().await {
-        let mut frames = flushed_messages(&rep, a.session.as_deref());
-        let (network_id, frame_id) = {
-            let r = rep_lock(&rep);
-            (r.network_id(a.req.row, &a.req.kind), r.frame_id())
-        };
-        let ev = match &a.auth {
-            Some(challenge) => auth_event(&a, challenge, frame_id),
-            None => paused_event(&a, network_id, frame_id),
-        };
-        frames.push(stamped(ev, a.session.as_deref()));
-        if out.send_all(frames).await.is_err() {
+        let sent = out
+            .send_taken(|| {
+                let mut frames = flushed_messages(&rep, a.session.as_deref());
+                let (network_id, frame_id) = {
+                    let r = rep_lock(&rep);
+                    (r.network_id(a.req.row, &a.req.kind), r.frame_id())
+                };
+                let ev = match &a.auth {
+                    Some(challenge) => auth_event(&a, challenge, frame_id),
+                    None => paused_event(&a, network_id, frame_id),
+                };
+                frames.push(stamped(ev, a.session.as_deref()));
+                frames
+            })
+            .await;
+        if sent.is_err() {
             break;
         }
     }
@@ -735,16 +767,55 @@ fn auth_event(a: &Announce, challenge: &(&'static str, String, String, String), 
     ev
 }
 
-/// Start a connection's halves: the shared writer, the reader task, the announcer, and the domain. The returned guard
-/// stops both tasks and lets every paused request go when the connection ends.
-pub(crate) fn split(ws: WebSocketStream<TcpStream>, rep: &Rep) -> (Out, futures_util::stream::Peekable<Inbox>, Halves) {
+/// The thread a page process's DevTools connection lives on: its socket, [`read_socket`] and [`announce`].
+///
+/// WHY A THREAD. Chrome serves a page's DevTools socket and the `Fetch` domain in the browser process, so neither
+/// waits on the renderer. This process's runtime is single-threaded (`korvus/src/main.rs`), and the page's thread
+/// does not only get busy, it can stop: a synchronous `XMLHttpRequest` (`op_fetch_sync`, korvus-runtime) blocks it on
+/// the OS until the response comes, for up to 15 s. While it did, no task of that runtime ran and its sockets were not
+/// polled, so the sync request's own pause was never told to the client nor its answer read: the request failed when
+/// the wait ran out. MEASURED (2026-11-19, raw CDP, `Fetch.enable` and every pause continued at once): a page's sync
+/// XHR threw `NetworkError` after 15002 ms where stock Chrome 157 answered 200 in 11-14 ms -- under every client that
+/// intercepts (patchright always does; Playwright's `route`, Puppeteer's `setRequestInterception`), and Naver's
+/// captcha, which opens its session with one, showed its error instead of its question
+/// (KorvusBrowser/korvus-browser#1). Here the socket is polled, the pause told and its answer taken while the page's
+/// thread waits, and the page resumes with the response, as Chrome's renderer does.
+///
+/// One worker: the two tasks only move frames and touch the domain's state, which is behind locks the page's thread
+/// never holds across a script (`rep_lock`, `FetchDomain::state`). A holding plugin's `on_cdp_call` runs here too,
+/// which its ABI allows ("A plugin is thread-safe"; "Runs on the endpoint's thread", `korvus_plugin.h`).
+fn io_runtime() -> &'static tokio::runtime::Runtime {
+    static IO: std::sync::OnceLock<tokio::runtime::Runtime> = std::sync::OnceLock::new();
+    IO.get_or_init(|| {
+        tokio::runtime::Builder::new_multi_thread()
+            .worker_threads(1)
+            .thread_name("korvus-devtools-io")
+            .enable_all()
+            .build()
+            .expect("the DevTools connection's runtime")
+    })
+}
+
+/// Start a connection's halves on [`io_runtime`]: the upgraded socket moves there, then the shared writer, the reader
+/// task, the announcer, and the domain. The returned guard stops both tasks and lets every paused request go when the
+/// connection ends. The page's loop keeps the writer and the [`Inbox`], which it uses from its own thread as before.
+pub(crate) async fn split(stream: TcpStream, rep: &Rep) -> anyhow::Result<(Out, futures_util::stream::Peekable<Inbox>, Halves)> {
+    let io = io_runtime();
+    // Registered again with the I/O thread's reactor: a socket is only polled while ITS runtime's driver runs, and
+    // this thread's does not run while the page's thread is blocked.
+    let stream = {
+        let std = stream.into_std()?;
+        let _on_io = io.enter();
+        TcpStream::from_std(std)?
+    };
+    let ws = WebSocketStream::from_raw_socket(stream, Role::Server, None).await;
     let (sink, source) = ws.split();
     let out = Out::new(sink);
     let (fetch, announced) = FetchDomain::new();
     let (tx, rx) = tokio::sync::mpsc::unbounded_channel();
-    let reader = tokio::spawn(read_socket(source, tx, fetch.clone(), out.clone()));
-    let announcer = tokio::spawn(announce(announced, rep.clone(), out.clone()));
-    (out, Inbox(rx).peekable(), Halves { fetch, reader, announcer })
+    let reader = io.spawn(read_socket(source, tx, fetch.clone(), out.clone()));
+    let announcer = io.spawn(announce(announced, rep.clone(), out.clone()));
+    Ok((out, Inbox(rx).peekable(), Halves { fetch, reader, announcer }))
 }
 
 /// The connection's tasks; dropping it ends them (see [`split`]).

@@ -12,9 +12,7 @@ use serde_json::{json, Value};
 use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
 use tokio::net::{TcpListener, TcpStream};
 use tokio_tungstenite::tungstenite::handshake::derive_accept_key;
-use tokio_tungstenite::tungstenite::protocol::Role;
 use tokio_tungstenite::tungstenite::Message;
-use tokio_tungstenite::WebSocketStream;
 
 use engine::{navtrace, CdpArg, Engine, EvalOutcome, ExceptionInfo, RemoteResult};
 
@@ -545,14 +543,14 @@ async fn handle_conn(
         );
         reader.get_mut().write_all(resp.as_bytes()).await?;
         reader.get_mut().flush().await?;
+        // The upgraded socket is the WebSocket from here; `fetch::split` makes it one, on the connection's own thread.
         let stream = reader.into_inner();
-        let ws = WebSocketStream::from_raw_socket(stream, Role::Server, None).await;
         // A PAGE socket's session-less commands are the page's own (Chrome treats them as the page
         // session); a browser socket's are the browser's. `Target.setAutoAttach` means different
         // things on the two.
         let page_socket = path.starts_with("/devtools/page/");
         let (lazy, resumed) = supply.lazy();
-        return message_loop(ws, lazy, resumed, browser, page_socket).await;
+        return message_loop(stream, lazy, resumed, browser, page_socket).await;
     }
 
     let host = get("host").unwrap_or_else(|| "127.0.0.1".to_string());
@@ -598,18 +596,18 @@ async fn handle_conn(
 }
 
 async fn message_loop(
-    ws: WebSocketStream<TcpStream>,
+    stream: TcpStream,
     mut engine: Lazy<'_>,
     resumed: Option<ConnIds>,
     browser: &BrowserIds,
     page_socket: bool,
 ) -> anyhow::Result<(Option<Engine>, Option<ConnIds>, ServeStats)> {
     // THE CONNECTION'S TWO HALVES, APART (`fetch.rs`): every `Fetch.*` command is answered beside the
-    // page, whatever it is running, and the rest arrive here in order through `read`; the page's loop and the `Fetch`
-    // domain share the write half and the network reporting. Dropping `_halves` stops the domain's tasks and lets every
-    // paused request go.
+    // page, on the connection's own thread, whatever the page's is doing -- even blocked in a synchronous XHR -- and the
+    // rest arrive here in order through `read`; the page's loop and the `Fetch` domain share the write half and the
+    // network reporting. Dropping `_halves` stops the domain's tasks and lets every paused request go.
     let rep: fetch::Rep = Default::default();
-    let (mut write, read, _halves) = fetch::split(ws, &rep);
+    let (mut write, read, _halves) = fetch::split(stream, &rep).await?;
     // The V8 isolate, document loader and execution contexts of the PAGE this connection drives,
     // plus this connection's own session. A client attaching to a target that already has a page
     // re-attaches to its ids; only the session is fresh (`ConnIds::reattach`).
@@ -728,7 +726,7 @@ async fn message_loop(
             }
             if committed.is_none() {
                 flushed_at = transport::ledger().revision();
-                write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
             }
             if let Some(committed) = committed {
                 let e = engine.engine.take().expect("a committed navigation built the engine");
@@ -801,7 +799,7 @@ async fn message_loop(
             let rev = transport::ledger().revision();
             if rev != flushed_at {
                 flushed_at = rev;
-                write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
             }
             for ev in quiet_events(engine.get(), &ids, &mut quiet_sent) {
                 send_event(&mut write, ev, page_session.as_deref()).await?;
@@ -868,7 +866,7 @@ async fn message_loop(
                 let rev = transport::ledger().revision();
                 if rev != flushed_at {
                     flushed_at = rev;
-                    write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                    write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
                 }
                 write.send_all(fetch::worker_console_messages(&rep)).await?;
                 settle_deferred(&mut engine, &mut ids, &mut deferred, &mut write).await?;
@@ -927,7 +925,12 @@ async fn message_loop(
                     // a script for the worker runs on its own thread (`engine::worker_devtools`)
                     let result = match method.as_deref() {
                         Some(m @ ("Runtime.evaluate" | "Runtime.callFunctionOn" | "Runtime.getProperties" | "Runtime.releaseObject" | "Runtime.releaseObjectGroup")) => {
-                            match fetch::rep_lock(&rep).child_target(idx) {
+                            // Read, and the reporting's lock let go, BEFORE the call is awaited: the `Fetch` domain's
+                            // announcer takes that lock on its own thread to tell a pause -- maybe one this very worker's
+                            // script is waiting on (a sync XHR) -- and would hold the connection's only I/O worker until
+                            // this call ended, which it then never would.
+                            let target = fetch::rep_lock(&rep).child_target(idx);
+                            match target {
                                 Some(target) => engine::worker_devtools::call(&target, m, params.clone(), ctx).await.map_err(RpcError::server),
                                 None => Err(RpcError::server("Cannot find context with specified id".to_string())),
                             }
@@ -941,7 +944,7 @@ async fn message_loop(
                     resp["sessionId"] = json!(session);
                     write.send(Message::Text(resp.to_string())).await?;
                     flushed_at = transport::ledger().revision();
-                    write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                    write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
                     write.send_all(fetch::worker_console_messages(&rep)).await?;
                     continue;
                 }
@@ -964,7 +967,7 @@ async fn message_loop(
                                 resp["sessionId"] = json!(s);
                             }
                             write.send(Message::Text(resp.to_string())).await?;
-                            write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                            write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
                             continue;
                         }
                     }
@@ -1049,7 +1052,7 @@ async fn message_loop(
                 // child's `Network.enable`), reported before its answer, as Chrome's arrive before it.
                 if committed.is_none() {
                     flushed_at = transport::ledger().revision();
-                    write.send_all(fetch::flushed_messages(&rep, page_session.as_deref())).await?;
+                    write.send_taken(|| fetch::flushed_messages(&rep, page_session.as_deref())).await?;
                 }
 
                 if let Some(d) = Deferred::of(&result, id, session.clone()) {
@@ -1297,7 +1300,7 @@ async fn reporting_network<T>(
                 if rev != flushed_at {
                     flushed_at = rev;
                     let before = loaded.get().map(|at| transport::ledger().ms_since_start(at));
-                    let _ = write.send_all(fetch::flushed_messages_before(rep, page_session, before)).await;
+                    let _ = write.send_taken(|| fetch::flushed_messages_before(rep, page_session, before)).await;
                 }
             }
         }

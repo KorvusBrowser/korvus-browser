@@ -4,6 +4,11 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- A synchronous `XMLHttpRequest` works under a client that intercepts requests (patchright always does; Playwright's
+  `route`, Puppeteer's `setRequestInterception`). Its pause reached the client only after the request had already
+  failed: the page stalled 15 s and the request threw `NetworkError`. Naver's captcha, which opens its session with
+  one, showed "작업도중 에러가 발생했습니다" instead of its question (#1). The pause is now told and answered while the
+  page waits, as in Chrome.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
