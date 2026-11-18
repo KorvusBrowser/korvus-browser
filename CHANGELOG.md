@@ -45,8 +45,6 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
   failed: the page stalled 15 s and the request threw `NetworkError`. Naver's captcha, which opens its session with
   one, showed "작업도중 에러가 발생했습니다" instead of its question (#1). The pause is now told and answered while the
   page waits, as in Chrome.
-- This release is built for Linux and macOS. On Windows, install v152.0.9:
-  `$env:KORVUS_VERSION='v152.0.9'` before `irm https://korvusbrowser.com/install.ps1 | iex`.
 
 ## v152.0.9
 
