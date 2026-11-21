@@ -1510,6 +1510,10 @@ mod plugin_tests {
             }
             let voices = v.pointer("/speech/voices").and_then(|l| l.as_array()).unwrap();
             assert!(voices.iter().any(|x| x["name"] == "Google US English" && x["localService"] == false), "{}: no Google voices", dir.display());
+            // a page load's `Accept`: a bundle naming none sends the Fetch Standard's default, which no browser sends (the
+            // macOS bundle did, on every navigation)
+            let accept = v.pointer("/nav/acceptNavigation").and_then(|a| a.as_str()).unwrap_or_else(|| panic!("{}: no nav.acceptNavigation", dir.display()));
+            assert!(accept.starts_with("text/html,") && accept.contains("application/signed-exchange"), "{}: {accept}", dir.display());
         }
         assert!(seen >= 3, "the Linux, macOS and Windows bundles: {seen}");
     }

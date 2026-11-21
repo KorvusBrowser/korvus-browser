@@ -4,6 +4,12 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- A macOS persona reads as a Mac does. `AudioContext.baseLatency` is the persona OS's own output buffer
+  (0.005333333333333333 at 48 kHz on macOS and 0.01 on Windows; every persona answered Linux's 0.0107 before). A page
+  load sends Chrome's navigation `Accept` (the macOS persona sent the Fetch Standard's default, which no browser
+  sends). A MacBook's or an iMac's own panel is HDR (`colorDepth` 30, `dynamic-range: high`) and comes with its camera
+  and microphone, and a 14- or 16-inch MacBook Pro runs at 120 Hz. Each value was measured from Google Chrome 158 on
+  an Apple M5 MacBook Pro.
 - The `--no-render` / `--render` flag is gone. It was never a memory lever (a page's cost is its V8 process either
   way — about 3 MB between the two), and a browser with no WebGL is a louder fingerprint, not a quieter one, for the
   one job korvus has. A host with no usable GPU already gets no WebGL on its own, exactly as Chrome does, so nothing
