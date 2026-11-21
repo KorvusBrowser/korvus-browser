@@ -17,6 +17,26 @@ fn handler_slot(name: &str) -> String {
 }
 
 
+/// `AudioContext.baseLatency` on the persona's OS: Blink's `base_latency_frames / sampleRate`, the frames being the
+/// output buffer the OS's audio manager chooses (it is never under one 128-frame render quantum). It follows the
+/// OS, not this host: a Mac persona worn on Linux answered Linux's 512 frames, 0.0107 where every Mac says 0.0053.
+/// - macOS: `AudioManagerMac::ChooseBufferSize`, 256 frames up to 96 kHz, 512 above. Measured 0.005333333333333333 at
+///   48 kHz by Google Chrome 158 on an Apple M5 MacBook Pro, headed and headless, and by its capture
+///   (`shared/personas/dataset/captures/mac-macbookpro14-m5.json`).
+/// - Windows: the WASAPI device period, 10 ms whatever the rate. Measured 0.01 at 48 kHz by Google Chrome 157 on the
+///   owner's Windows PC, 2026-11-21.
+/// - Linux (and anything else): PulseAudio's 512 frames. Measured 0.010666666666666666 at 48 kHz by Google Chrome 157
+///   and Brave 151 on the Linux desktop.
+pub(crate) fn base_latency(platform: &str, rate: f64) -> f64 {
+    let frames = match platform {
+        "macOS" if rate > 96000.0 => 512.0,
+        "macOS" => 256.0,
+        "Windows" => (rate / 100.0).round(),
+        _ => 512.0,
+    };
+    frames.max(128.0) / rate
+}
+
 fn num_val<'s>(scope: &mut v8::PinScope<'s, '_>, n: f64) -> v8::Local<'s, v8::Value> {
     v8::Number::new(scope, n).into()
 }
@@ -78,10 +98,8 @@ fn cb_attr_get(scope: &mut v8::PinScope, args: v8::FunctionCallbackArguments, mu
                 return;
             }
             "baseLatency" => {
-                // A render quantum block of 512 frames at the context's rate — the relation that
-                // reproduces Brave's measured 0.010666666666666666 at 48 kHz exactly, rather than
-                // that number written down.
-                rv.set(num_val(scope, 512.0 / rate as f64));
+                let platform = crate::core::navigator::navigator::client_hints(scope).platform;
+                rv.set(num_val(scope, base_latency(&platform, rate as f64)));
                 return;
             }
             "outputLatency" => {
@@ -1004,5 +1022,21 @@ webapi::interface! {
         method "setTargetAtTime" : Any len 3 required 3 = install_webaudio,
         method "setValueAtTime" : Any len 2 required 2 = install_webaudio,
         method "setValueCurveAtTime" : Any len 3 required 3 = install_webaudio
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::base_latency;
+
+    /// Each OS's rule at the rates a device runs, as Chromium's audio managers choose the buffer.
+    #[test]
+    fn base_latency_follows_the_os_s_output_buffer() {
+        assert_eq!(base_latency("macOS", 48000.0), 0.005333333333333333);
+        assert_eq!((base_latency("macOS", 44100.0), base_latency("macOS", 96000.0)), (256.0 / 44100.0, 256.0 / 96000.0));
+        assert_eq!(base_latency("macOS", 192000.0), 512.0 / 192000.0);
+        assert_eq!((base_latency("Windows", 44100.0), base_latency("Windows", 48000.0)), (0.01, 0.01));
+        assert_eq!((base_latency("Linux", 48000.0), base_latency("Linux", 44100.0)), (0.010666666666666666, 512.0 / 44100.0));
+        assert_eq!(base_latency("", 48000.0), base_latency("Linux", 48000.0));
     }
 }

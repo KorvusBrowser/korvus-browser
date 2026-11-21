@@ -132,6 +132,34 @@ async fn audio_context_attributes_are_real() {
     ]);
 }
 
+/// `baseLatency` is the persona OS's output buffer over the context's rate, not this host's: Google Chrome measured
+/// 2026-11-21 answers 0.005333333333333333 on a Mac (256 frames at 48 kHz), 0.01 on Windows (one 10 ms WASAPI period)
+/// and 0.010666666666666666 on Linux (512 frames). A Mac persona used to answer Linux's 0.0107.
+#[tokio::test]
+async fn base_latency_is_the_persona_os_s_buffer() {
+    let bundle = |name: &str| {
+        let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../plugins/korvus-persona/bundles").join(name);
+        persona::CapturedPersona::from_dir(&dir).unwrap_or_else(|e| panic!("{name}: {e}"))
+    };
+    let cases: [(persona::CapturedPersona, &str); 3] = [
+        (persona::CapturedPersona::default(), "Linux|48000|0.010666666666666666"),
+        (bundle("chrome-152-macos-20261017"), "macOS|48000|0.005333333333333333"),
+        (bundle("chrome-152-windows-20261017T0248"), "Windows|44100|0.01"),
+    ];
+    for (p, want) in cases {
+        let mut e = Engine::new(Box::new(p));
+        e.run().await.unwrap();
+        let got = e
+            .eval_value(
+                "bl",
+                "(() => { const ac = new AudioContext(); return [navigator.userAgentData.platform, ac.sampleRate, ac.baseLatency].join('|'); })()"
+                    .to_string(),
+            )
+            .unwrap();
+        assert_eq!(got.as_str(), Some(want));
+    }
+}
+
 /// The three one-expression detections the tape carried, each verified live against Brave 151 on
 /// this machine before the rewrite. All three are properties of the signal, so all three are gone
 /// the moment the signal is computed rather than tiled.
