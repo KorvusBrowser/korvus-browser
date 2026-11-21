@@ -57,6 +57,7 @@
 #[path = "font_probe_live.rs"] mod font_probe_live;
 #[path = "shadow_animations_live.rs"] mod shadow_animations_live;
 #[path = "slotted_transition_live.rs"] mod slotted_transition_live;
+#[path = "source_capabilities_live.rs"] mod source_capabilities_live;
 #[path = "classlist.rs"] mod classlist;
 #[path = "console_calls_live.rs"] mod console_calls_live;
 #[path = "client_hints.rs"] mod client_hints;

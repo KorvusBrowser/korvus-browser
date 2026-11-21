@@ -493,6 +493,23 @@ pub(crate) fn evt_slot_write_null(scope: &mut v8::PinScope, ev: v8::Local<v8::Ob
     evt_slot_write(scope, ev, name, v);
 }
 
+/// Stamp `ev`'s `sourceCapabilities` with a genuine `InputDeviceCapabilities` whose `firesTouchEvents` is false --
+/// what Chrome puts on every TRUSTED `MouseEvent`, `KeyboardEvent` and `FocusEvent` from a mouse or keyboard source
+/// (measured on headed Google Chrome 157: `mousemove`/`mousedown`/`mouseup`, `click`/`dblclick`/`auxclick`/
+/// `contextmenu`, `keydown`/`keyup`, `focus`/`blur` carry one; its `PointerEvent`, `WheelEvent` and `InputEvent`
+/// carry null, as does any script-constructed event). Every event this engine made carried null for it, so
+/// `mouseEvent.sourceCapabilities.firesTouchEvents` threw on this engine where it reads `false` in Chrome -- an
+/// automation tell a behavioural sensor reads. The slot was written null at construction (`init_ui_event`); this
+/// overwrites it on the trusted builders only.
+pub(crate) fn stamp_source_capabilities(scope: &mut v8::PinScope, ev: v8::Local<v8::Object>) {
+    let Some(ctor) = crate::binding::protos::iface_object(scope, "InputDeviceCapabilities").and_then(|v| v8::Local::<v8::Function>::try_from(v).ok()) else {
+        return;
+    };
+    // `firesTouchEvents` defaults false; a mouse/keyboard/focus input source does not fire touch events.
+    let Some(caps) = ctor.new_instance(scope, &[]) else { return };
+    evt_slot_write(scope, ev, "sourceCapabilities", caps.into());
+}
+
 // THE THREE JS-FACING SLOT/FLAG BRIDGES ARE DELETED: `cb_evt_slot_set` /
 // `op_evt_slot_set`, `cb_evt_flag_set` / `op_evt_flag_set` and `cb_evt_flag_get` /
 // `op_evt_flag_get`, which `host.js` installed as `KB.__evtSlotSet` / `__evtFlagSet` / `__evtFlagGet`.

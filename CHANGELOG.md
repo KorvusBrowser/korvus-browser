@@ -4,6 +4,10 @@ What changed in each korvus release, newest first. A release's notes on GitHub a
 
 ## Unreleased
 
+- A trusted mouse, keyboard or focus event carries an `InputDeviceCapabilities` in `sourceCapabilities`
+  (`firesTouchEvents` false), as Chrome does; its pointer, wheel and `beforeinput` events, and any script-made event,
+  carry null. Every event the engine made carried null, so a page doing `mouseEvent.sourceCapabilities.firesTouchEvents`
+  threw where Chrome answers `false` — an automation tell. Measured on headed Google Chrome 157.
 - A macOS persona reads as a Mac does. `AudioContext.baseLatency` is the persona OS's own output buffer
   (0.005333333333333333 at 48 kHz on macOS and 0.01 on Windows; every persona answered Linux's 0.0107 before). A page
   load sends Chrome's navigation `Accept` (the macOS persona sent the Fetch Standard's default, which no browser

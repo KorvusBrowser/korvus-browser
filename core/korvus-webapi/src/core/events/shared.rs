@@ -94,6 +94,8 @@ pub(crate) fn build_trusted_key_full<'s>(scope: &mut v8::PinScope<'s, '_>, kind:
     let ev = ctor.new_instance(scope, &[ty, init.into()])?;
     mark_trusted(scope, ev);
     crate::core::events::event::evt_slot_write_num(scope, ev, "timeStamp", timestamp_ms);
+    // A trusted key event carries an `InputDeviceCapabilities` in `sourceCapabilities`, as Chrome does.
+    crate::core::events::event::stamp_source_capabilities(scope, ev);
     Some(ev)
 }
 

@@ -62,8 +62,10 @@
 //!
 //! Frame-aligned (`requestAnimationFrame`-aligned) delivery of continuous input lives in the runtime's scheduler
 //! (`korvus-runtime/src/input.rs` merges a frame's samples into one move with its coalesced list); out-of-process
-//! frames (`KORVUS_OOPIF`) get no input; touch is still dispatched at the document; `sourceCapabilities` stays null
-//! (no `InputDeviceCapabilities` instance exists); drag and selection by mouse are not modelled.
+//! frames (`KORVUS_OOPIF`) get no input; touch is still dispatched at the document; a trusted MouseEvent carries an
+//! `InputDeviceCapabilities` in `sourceCapabilities` (the PointerEvent and WheelEvent carry null, as Chrome does --
+//! `event::stamp_source_capabilities`); a touch source's `firesTouchEvents`-true capabilities and drag and selection
+//! by mouse are not modelled.
 
 use std::collections::HashMap;
 
@@ -642,6 +644,12 @@ fn build<'s>(
     let ev = ctor.new_instance(scope, &[ty, init.into()])?;
     crate::core::html::html_dialog_element::mark_trusted(scope, ev);
     crate::core::events::event::evt_slot_write_num(scope, ev, "timeStamp", spec.timestamp_ms);
+    // A trusted MouseEvent (move, press, release, click/dblclick/auxclick/contextmenu and the mouse boundary events)
+    // carries an `InputDeviceCapabilities` in `sourceCapabilities`; the PointerEvent, WheelEvent and DragEvent built
+    // here carry null, as Chrome does.
+    if spec.iface == Iface::Mouse {
+        crate::core::events::event::stamp_source_capabilities(scope, ev);
+    }
     // A trusted `PointerEvent` that is no click answers `[]` for its two lists unless the input path gave it some.
     Some(ev)
 }

@@ -210,6 +210,8 @@ fn fire(
     let Some(ev) = ctor.new_instance(scope, &[ty, init.into()]) else { return };
     mark_trusted(scope, ev);
     crate::core::events::event::evt_slot_write_num(scope, ev, "timeStamp", timestamp_ms);
+    // A trusted focus event carries an `InputDeviceCapabilities` in `sourceCapabilities`, as Chrome does.
+    crate::core::events::event::stamp_source_capabilities(scope, ev);
     let evv: v8::Local<v8::Value> = ev.into();
     crate::binding::protos::engine_call(scope, target.into(), "dispatchEvent", &[evv]);
 }
